@@ -11,28 +11,47 @@
     <link rel="stylesheet" href="./index-LHtcwGgP.css">
 
     <style>
-      /* Kırık logo yazısını ve hatalı alanları kesin olarak gizler */
-      img[alt*="Mavi Basım"], 
-      img[src*="mavilogo.png"]:not([src]) { 
+      /* 1. Logoyu ve kırık resim yazısını her yerden siler */
+      img[alt*="Mavi Basım Logo"], 
+      img[src*="mavilogo"],
+      .navbar-brand img, 
+      .logo img { 
         display: none !important; 
+        width: 0 !important;
+        height: 0 !important;
         opacity: 0 !important;
       }
     </style>
   </head>
   <body>
     <div id="root"></div>
-    
     <script type="module" src="./index-BPhsPaah.js"></script>
 
     <script>
-      // Banner sıralaması karışıksa, tarayıcıya senin istediğin sırayı dayatır
-      window.addEventListener('load', function() {
-        const banners = document.querySelectorAll('img[src*="banner"]');
-        const order = ["banner1.jpg", "banner2.jpg", "banner3.jpg", "banner4.jpg", "banner5.jpg"];
-        banners.forEach((img, i) => {
-          if(order[i]) img.src = './' + order[i];
+      // 2. Banner Sıralamasını banner1.jpg ile başlatmak için zorlayıcı script
+      function fixBannerOrder() {
+        const allImages = document.querySelectorAll('img');
+        const bannerOrder = ["banner1.jpg", "banner2.jpg", "banner3.jpg", "banner4.jpg", "banner5.jpg"];
+        
+        let foundBanners = [];
+        allImages.forEach(img => {
+          if (img.src.includes('banner')) {
+            foundBanners.push(img);
+          }
         });
-      });
+
+        // Bulunan banner slotlarına sırasıyla resimleri ata
+        foundBanners.forEach((img, i) => {
+          if (bannerOrder[i]) {
+            img.src = './' + bannerOrder[i];
+          }
+        });
+      }
+
+      // Sayfa yüklendiğinde ve her 1 saniyede bir (React render sonrası için) kontrol et
+      window.addEventListener('load', fixBannerOrder);
+      setTimeout(fixBannerOrder, 1000);
+      setTimeout(fixBannerOrder, 3000);
     </script>
   </body>
 </html>
