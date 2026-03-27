@@ -11,14 +11,12 @@
     <link rel="stylesheet" href="./index-LHtcwGgP.css">
 
     <style>
-      /* 1. Logoyu ve kırık resim yazısını her yerden siler */
+      /* Logoyu ve hatalı resim yazılarını kesin olarak gizler */
       img[alt*="Mavi Basım Logo"], 
       img[src*="mavilogo"],
       .navbar-brand img, 
       .logo img { 
         display: none !important; 
-        width: 0 !important;
-        height: 0 !important;
         opacity: 0 !important;
       }
     </style>
@@ -28,30 +26,32 @@
     <script type="module" src="./index-BPhsPaah.js"></script>
 
     <script>
-      // 2. Banner Sıralamasını banner1.jpg ile başlatmak için zorlayıcı script
+      // Bannerları yeni b1, b2... isimlerine göre hızlıca sıraya sokar
       function fixBannerOrder() {
         const allImages = document.querySelectorAll('img');
-        const bannerOrder = ["banner1.jpg", "banner2.jpg", "banner3.jpg", "banner4.jpg", "banner5.jpg"];
+        const bannerOrder = ["b1.jpg", "b2.jpg", "b3.jpg", "b4.jpg", "b5.jpg"];
         
-        let foundBanners = [];
+        let bannerCount = 0;
         allImages.forEach(img => {
-          if (img.src.includes('banner')) {
-            foundBanners.push(img);
-          }
-        });
-
-        // Bulunan banner slotlarına sırasıyla resimleri ata
-        foundBanners.forEach((img, i) => {
-          if (bannerOrder[i]) {
-            img.src = './' + bannerOrder[i];
+          // Eğer resim bir banner alanındaysa veya src'sinde banner/b rakam geçiyorsa
+          if (img.src.includes('banner') || img.src.includes('/b')) {
+            if (bannerOrder[bannerCount]) {
+              // Eski resmi göstermeden hemen yenisiyle değiştirir
+              img.src = './' + bannerOrder[bannerCount];
+              bannerCount++;
+            }
           }
         });
       }
 
-      // Sayfa yüklendiğinde ve her 1 saniyede bir (React render sonrası için) kontrol et
+      // Sayfa yüklenir yüklenmez ve React render ettikçe çalıştır
       window.addEventListener('load', fixBannerOrder);
-      setTimeout(fixBannerOrder, 1000);
-      setTimeout(fixBannerOrder, 3000);
+      
+      // 2 saniyelik eski görüntü gelmesin diye sürekli (agresif) kontrol
+      const bannerInterval = setInterval(fixBannerOrder, 100); 
+      
+      // 5 saniye sonra sürekli kontrolü durdur (performans için)
+      setTimeout(() => clearInterval(bannerInterval), 5000);
     </script>
   </body>
 </html>
