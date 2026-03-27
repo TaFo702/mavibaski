@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap&subset=latin-ext');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #29abe2;
+  --color-secondary: #29abe2;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-blink: blink 1s infinite;
+  --animate-border-flow: border-flow 3s linear infinite;
+  --animate-pulse-ring: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-rotate: rotate 4s linear infinite;
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes border-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(26, 26, 26, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(26, 26, 26, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(26, 26, 26, 0); }
+  }
+}
+
+@layer utilities {
+  .border-gradient-flow {
+    background: linear-gradient(90deg, #1a1a1a, #ffffff, #1a1a1a);
+    background-size: 200% auto;
+  }
+  .conic-gradient-border {
+    background: conic-gradient(from 0deg, transparent 0%, #1a1a1a 25%, transparent 50%, #1a1a1a 75%, transparent 100%);
+  }
+  .text-shadow-strong {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+}
