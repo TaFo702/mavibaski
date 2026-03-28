@@ -64,16 +64,16 @@ const logo = null;
 // --- Constants ---
 
 const LOCAL_ASSETS: Record<string, string> = {
-  "LOGO": "./mavilogo.png", // 'M' küçük olmalı, dosya adın öyle
+  "LOGO": "./mavilogo.png",
   "afis": "./afis.jpg",
   "ambalaj": "./ambalaj.jpg",
   "amerikan_servis": "./amerikan_servis.jpg",
   "anteli_kagit": "./anteli_kagit.jpg",
-  "banner1": "./b1.jpg", // banner1 anahtarına yeni b1 dosyasını bağladık
-  "banner2": "./b2.jpg",
-  "banner3": "./b3.jpg",
-  "banner4": "./b4.jpg",
-  "banner5": "./b5.jpg",
+  "b1": "./b1.jpg", 
+  "b2": "./b2.jpg",
+  "b3": "./b3.jpg",
+  "b4": "./b4.jpg",
+  "b5": "./b5.jpg",
   "bloknot": "./bloknot.jpg",
   "brosur": "./brosur.jpg",
   "el_ilani": "./el_ilani.jpg",
@@ -88,7 +88,6 @@ const LOCAL_ASSETS: Record<string, string> = {
   "tecrube": "./tecrube.jpg",
   "zarf": "./zarf.jpg"
 };
-
 // IndexedDB Utility for Image Overrides
 const DB_NAME = 'MaviBasimDB';
 const STORE_NAME = 'ImageOverrides';
