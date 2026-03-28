@@ -166,10 +166,13 @@ const clearAllImagesFromDB = async () => {
 let imageOverridesCache: { [key: string]: string } = {};
 
 const getImageUrl = (key: string, defaultUrl: string) => {
-  if (imageOverridesCache[key]) return imageOverridesCache[key];
+  // Hafızadaki (IndexedDB) eski resimleri tamamen görmezden geliyoruz.
+  // Direkt senin hazırladığın LOCAL_ASSETS listesine bakıyoruz.
   const lowerKey = key.toLowerCase();
+  
   if (LOCAL_ASSETS[lowerKey]) return LOCAL_ASSETS[lowerKey];
   if (LOCAL_ASSETS[key]) return LOCAL_ASSETS[key];
+  
   return defaultUrl;
 };
 
