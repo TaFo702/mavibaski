@@ -7,18 +7,12 @@
     
     <link rel="icon" type="image/png" href="./mavilogo.png" />
     <link rel="apple-touch-icon" href="./mavilogo.png" />
-
     <link rel="stylesheet" href="./index-LHtcwGgP.css">
 
     <style>
-      /* Logoyu ve hatalı resim yazılarını kesin olarak gizler */
-      img[alt*="Mavi Basım Logo"], 
-      img[src*="mavilogo"],
-      .navbar-brand img, 
-      .logo img { 
+      /* Logoyu ve hatalı resim yazılarını her zaman gizli tutar */
+      img[alt*="Mavi Basım Logo"], img[src*="mavilogo"], .navbar-brand img, .logo img { 
         display: none !important; 
-        width: 0 !important;
-        height: 0 !important;
         opacity: 0 !important;
       }
     </style>
@@ -28,34 +22,34 @@
     <script type="module" src="./index-BPhsPaah.js"></script>
 
     <script>
-      function fixBannerOrder() {
-        // Sadece banner resimlerini veya eski banner adlarını içeren resimleri hedefle
-        const bannerImages = document.querySelectorAll('img[src*="banner"], img[src*="/b1"], img[src*="/b2"], img[src*="/b3"], img[src*="/b4"], img[src*="/b5"]');
-        const desiredOrder = ["b1.jpg", "b2.jpg", "b3.jpg", "b4.jpg", "b5.jpg"];
+      // Bu fonksiyon tarayıcı hafızasını atlayıp direkt senin yüklediğin dosyaları dayatır
+      function forceBanners() {
+        const images = document.querySelectorAll('img');
+        // Senin kesin listen (GitHub root dizinindeki isimler)
+        const myFiles = ["b1.jpg", "b2.jpg", "b3.jpg", "b4.jpg", "b5.jpg"];
         
-        let bannerCount = 0;
-        bannerImages.forEach((img) => {
-          // Eğer resim henüz değiştirilmemişse ve listede sıradaki resim varsa
-          if (desiredOrder[bannerCount] && !img.dataset.fixed) {
-             const newSrc = './' + desiredOrder[bannerCount];
-             if (img.src !== newSrc) {
-                img.src = newSrc;
-                // Bu resmin değiştirildiğini işaretle (sonsuz döngüyü önler)
-                img.dataset.fixed = 'true';
-             }
-             bannerCount++;
+        let foundIdx = 0;
+        images.forEach((img) => {
+          // Eğer resim bir slider içindeyse veya src'sinde "banner/b" geçiyorsa
+          if (img.src.includes('banner') || img.src.includes('/b') || img.closest('.swiper-slide') || img.closest('.slick-slide')) {
+            if (myFiles[foundIdx]) {
+              // ?v=99 ekleyerek tarayıcının eski hafızasını (cache) tamamen çöpe atıyoruz
+              const freshSrc = './' + myFiles[foundIdx] + '?v=99';
+              if (img.src !== freshSrc) {
+                img.src = freshSrc;
+              }
+              foundIdx++;
+            }
           }
         });
       }
 
-      // Sayfa yüklenince çalıştır
-      window.addEventListener('load', fixBannerOrder);
+      // Sayfa yüklenince ve React her render ettiğinde (sık aralıkla) kontrol et
+      window.addEventListener('load', forceBanners);
+      const safetyNet = setInterval(forceBanners, 500);
       
-      // React'in dinamik yüklemelerini yakalamak için daha seyrek kontrol
-      const bannerInterval = setInterval(fixBannerOrder, 1000); 
-      
-      // 10 saniye sonra sürekli kontrolü durdur (performans için)
-      setTimeout(() => clearInterval(bannerInterval), 10000);
+      // 10 saniye sonra durdur (sayfa oturduğunda)
+      setTimeout(() => clearInterval(safetyNet), 10000);
     </script>
   </body>
 </html>
