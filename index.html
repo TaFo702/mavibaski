@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./index-LHtcwGgP.css">
 
     <style>
-      /* Logoyu ve hatalı resim yazılarını kesin olarak gizler */
+      /* Logoyu ve hatalı resim yazılarını gizler */
       img[alt*="Mavi Basım Logo"], 
       img[src*="mavilogo"],
       .navbar-brand img, 
@@ -26,32 +26,32 @@
     <script type="module" src="./index-BPhsPaah.js"></script>
 
     <script>
-      // Bannerları yeni b1, b2... isimlerine göre hızlıca sıraya sokar
-      function fixBannerOrder() {
-        const allImages = document.querySelectorAll('img');
-        const bannerOrder = ["b1.jpg", "b2.jpg", "b3.jpg", "b4.jpg", "b5.jpg"];
+      function forceBanners() {
+        // Sayfadaki tüm resimleri tara
+        const images = document.querySelectorAll('img');
+        const bannerFiles = ["b1.jpg", "b2.jpg", "b3.jpg", "b4.jpg", "b5.jpg"];
         
-        let bannerCount = 0;
-        allImages.forEach(img => {
-          // Eğer resim bir banner alanındaysa veya src'sinde banner/b rakam geçiyorsa
-          if (img.src.includes('banner') || img.src.includes('/b')) {
-            if (bannerOrder[bannerCount]) {
-              // Eski resmi göstermeden hemen yenisiyle değiştirir
-              img.src = './' + bannerOrder[bannerCount];
-              bannerCount++;
-            }
+        // Önce slider içindeki resimleri hedef alalım
+        let bCount = 0;
+        images.forEach((img) => {
+          // Eğer resim slider'ın içindeyse veya src'sinde eski banner adları geçiyorsa
+          if (img.src.includes('banner') || img.src.includes('b1.jpg') || img.src.includes('b2.jpg') || img.closest('.swiper-slide') || img.closest('.slick-slide')) {
+             if (bannerFiles[bCount]) {
+                const newSrc = './' + bannerFiles[bCount];
+                if (img.src !== newSrc) {
+                   img.src = newSrc;
+                }
+                bCount++;
+             }
           }
         });
       }
 
-      // Sayfa yüklenir yüklenmez ve React render ettikçe çalıştır
-      window.addEventListener('load', fixBannerOrder);
-      
-      // 2 saniyelik eski görüntü gelmesin diye sürekli (agresif) kontrol
-      const bannerInterval = setInterval(fixBannerOrder, 100); 
-      
-      // 5 saniye sonra sürekli kontrolü durdur (performans için)
-      setTimeout(() => clearInterval(bannerInterval), 5000);
+      // React render ettikçe resimleri sürekli güncelle (her 500ms)
+      const bannerTimer = setInterval(forceBanners, 500);
+
+      // Sayfa tam yüklenince bir kez daha tetikle
+      window.addEventListener('load', forceBanners);
     </script>
   </body>
 </html>
