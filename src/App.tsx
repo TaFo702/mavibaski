@@ -64,30 +64,39 @@ const logo = null;
 // --- Constants ---
 
 const LOCAL_ASSETS: Record<string, string> = {
-  "LOGO": "./mavilogo.png?v=1",
-  "afis": "./afis.jpg?v=1",
-  "ambalaj": "./ambalaj.jpg?v=1",
-  "amerikan_servis": "./amerikan_servis.jpg?v=1",
-  "anteli_kagit": "./anteli_kagit.jpg?v=1",
-  "b1": "./b1.jpg?v=1", // ?v=1 ekleyerek tarayıcıyı tazelemeye zorluyoruz
-  "b2": "./b2.jpg?v=1",
-  "b3": "./b3.jpg?v=1",
-  "b4": "./b4.jpg?v=1",
-  "b5": "./b5.jpg?v=1",
-  "bloknot": "./bloknot.jpg?v=1",
-  "brosur": "./brosur.jpg?v=1",
-  "el_ilani": "./el_ilani.jpg?v=1",
-  "etiket": "./etiket.jpg?v=1",
-  "karton_canta": "./karton_canta.jpg?v=1",
-  "kartvizit": "./kartvizit.jpg?v=1",
-  "katalog": "./katalog.jpg?v=1",
-  "kutu": "./kutu.jpg?v=1",
-  "magnet": "./magnet.jpg?v=1",
-  "makbuz": "./makbuz.jpg?v=1",
-  "otopaspas": "./otopaspas.jpg?v=1",
-  "tecrube": "./tecrube.jpg?v=1",
-  "zarf": "./zarf.jpg?v=1"
+  "LOGO": "/mavilogo.png",
+  "afis": "/afis.jpg",
+  "ambalaj": "/ambalaj.jpg",
+  "amerikan_servis": "/amerikan_servis.jpg",
+  "anteli_kagit": "/anteli_kagit.jpg",
+  "b1": "/b1.jpg",
+  "b2": "/b2.jpg",
+  "b3": "/b3.jpg",
+  "b4": "/b4.jpg",
+  "b5": "/b5.jpg",
+  "bloknot": "/bloknot.jpg",
+  "brosur": "/brosur.jpg",
+  "el_ilani": "/el_ilani.jpg",
+  "etiket": "/etiket.jpg",
+  "karton_canta": "/karton_canta.jpg",
+  "kartvizit": "/kartvizit.jpg",
+  "katalog": "/katalog.jpg",
+  "kutu": "/kutu.jpg",
+  "magnet": "/magnet.jpg",
+  "makbuz": "/makbuz.jpg",
+  "otopaspas": "/otopaspas.jpg",
+  "tecrube": "/tecrube.jpg",
+  "zarf": "/zarf.jpg"
 };
+
+// Banner sıralamasını ve 5 saniyelik geçişi garanti eden liste
+const sortedBannerUrls = [
+  LOCAL_ASSETS.b1,
+  LOCAL_ASSETS.b2,
+  LOCAL_ASSETS.b3,
+  LOCAL_ASSETS.b4,
+  LOCAL_ASSETS.b5
+];
 // IndexedDB Utility for Image Overrides
 const DB_NAME = 'MaviBasimDB';
 const STORE_NAME = 'ImageOverrides';
