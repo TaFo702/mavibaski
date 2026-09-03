@@ -1,0 +1,358 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://mavibasdoc.com/#organization",
+      "name": "Mavi Basım Matbaa & Reklam",
+      "url": "https://mavibasdoc.com",
+      "logo": "https://mavibasdoc.com/mavilogo.png",
+      "image": "https://mavibasdoc.com/mavilogo.png",
+      "telephone": "+905325852504",
+      "priceRange": "₺₺",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Maltepe Mah. Litros Yolu Sk. 2. Matbaacılar Sitesi",
+        "addressLocality": "Zeytinburnu",
+        "addressRegion": "İstanbul",
+        "postalCode": "34010",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.025,
+        "longitude": 28.912
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:30",
+        "closes": "19:00"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://mavibasdoc.com/#website",
+      "url": "https://mavibasdoc.com",
+      "name": "Mavi Basım Matbaa",
+      "publisher": {
+        "@id": "https://mavibasdoc.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://mavibasdoc.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AFIS",
+          "item": "https://mavibasdoc.com/afis"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "AFIS Baskı",
+      "description": "Mavi Basım yüksek kaliteli AFIS baskı hizmeti. En uygun fiyat ve hızlı teslimat.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mavi Basım"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://mavibasdoc.com/afis",
+        "priceCurrency": "TRY",
+        "price": "150.00",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://mavibasdoc.com/#organization"
+        }
+      }
+    }
+  ],
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/brosur-baski.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/afis",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "50x70 cm Kampanya ve İndirim Afişi Baskısı"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/brosur-fiyatlari.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/afis",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "Konser ve Etkinlik Afişi Baskı Örneği"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/el-ilani.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/afis",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "Emlak Satılık Kiralık İlan Afişi 35x50 cm"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/katlamali-brosur.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/afis",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "Açılış ve Festival Duyuru Afişi"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/kartvizit-baski.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/afis",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "Mağaza Vitrin Afişi"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/etiket-baski.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/afis",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "Özel Tasarım Dekoratif Sanat Posteri Baskısı"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Afiş Baskı ve Büyük Boy Poster Üretim Süreci",
+    "description": "Mavi Basım Topkapı matbaa tesisinde Heidelberg ofset baskı makineleriyle 35x50 cm ve 50x70 cm afiş baskı, giyotin kesim ve paketleme aşamaları.",
+    "thumbnailUrl": "https://mavibasim.com/images/brosur-baski.webp",
+    "uploadDate": "2026-01-15T09:00:00+03:00",
+    "duration": "PT45S",
+    "contentUrl": "https://mavibasim.com/video/afis-baski-uretim.mp4",
+    "embedUrl": "https://mavibasim.com/video/afis-baski-uretim",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mavi Basım",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mavibasim.com/logo.png"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "A1 afiş baskı kaç cm ebadındadır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ISO standartlarında A1 ebadı 59.4 × 84.1 cm'dir. Matbaacılık tabaka standartlarında ise 50×70 cm (49×69 cm net kesim) ve 70×100 cm boyutlarında yüksek verimli baskı paftaları kullanılır. Vitrin ve caddeler için en popüler ebat 50×70 cm standardıdır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A2 ve A3 afiş ebatları kaç cm’dir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standart A3 ebadı 29.7 × 42 cm iken matbaa pafta kesiminde 34×49 cm tercih edilir. A2 ebadı ise 42 × 59.4 cm olup matbaada 50×70 cm (49×69 cm) baskı standardına denk düşer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Poster ile afiş baskı arasında ne fark vardır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Afiş genelde ticari duyuru, indirim ve etkinlikler için kitlesel adetlerde (250, 500, 1000 adet) basılan tanıtım ürünüdür. Poster ise daha yüksek gramajlı (170 gr), sanatsal veya dekoratif amaçlı tekil ya da az adetli çerçevelik baskılardır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afişler dış mekanda kullanılır mı, yağmura dayanıklı mıdır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kuşe kağıt afişler iç mekan, vitrin içi ve korumalı panolar için uygundur. Yağmura, neme ve dış mekan koşullarına maruz kalacak alanlarda arkası mavi engelleyici kaplamalı Blueback kağıt afiş tercih edilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afiş baskısında laminasyon veya selefon kaplama yapılır mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet. 170 gr kalınlığındaki afişlerde isteğe bağlı olarak mat veya parlak selefon kaplama yapılabilir. Selefon, renklerin solmasını önler ve afişe yırtılmaya karşı ekstra dayanıklılık kazandırır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kuşe kağıt afiş mi yoksa Blueback afiş mi tercih edilmeli?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vitrin, iç mekan panoları, mağaza içi ve düz yüzeyler için canlı renk veren 135 gr veya 170 gr Kuşe kağıt; billboard, açıkhava reklam tabelaları ve eski afişlerin üzerine yapıştırma işlemleri için arkasını göstermeyen Blueback kağıt tercih edilmelidir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afiş baskı dosyası kaç DPI çözünürlükte olmalıdır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Büyük boy afiş baskılarında pikselleşme olmaması ve yazıların net çıkması için tasarım dosyalarının birebir ebatta en az 300 DPI çözünürlükte hazırlanması önerilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afiş tasarım dosyasında PDF formatı zorunlu mudur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Font kayması, renk değişimi ve görsel kayıplarının önüne geçmek için vektörel fontları konvertlenmiş, baskıya hazır PDF, TIFF veya EPS/AI formatı tercih edilmelidir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afiş baskısı için CMYK renk modu neden şarttır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ekran renkleri RGB modundadır, ancak matbaa baskı makineleri Cyan, Magenta, Yellow ve Black (CMYK) mürekkepleriyle çalışır. Dosyanın CMYK olması baskı renklerinin ekrandakine en yakın tonda çıkmasını sağlar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afişlerde minimum baskı adedi kaçtır, tek adet basılır mı?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ofset büyük boy afiş baskılarında kalıp maliyetlerinin düşmesi için minimum ekonomik adet 250 adettir. Dijital büyük format baskı makinelerimizde ise tek adet veya az adetli özel boy afiş/poster üretimi yapılabilmektedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afişlere parlak veya mat selefon kaplama yapılabilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet. Parlak selefon afişteki renklerin daha canlı ve patlak görünmesini sağlarken, mat selefon ışık yansımalarını kırarak prestijli ve okunabilir bir görünüm katar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afiş tasarımında kesim taşma payı (bleed) ne kadar olmalıdır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Giyotin kesim aşamasında kenarlarda beyaz şerit kalmaması için tasarımın 4 kenarından en az +3 mm kesim taşması (bleed) verilmeli ve kritik metinler kenardan 5 mm içeride tutulmalıdır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afişlerde QR kod boyutu ne kadar olmalıdır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Müşterilerin cep telefonlarıyla uzaktan rahatça okutabilmesi için afiş üzerindeki QR kodun en az 2.5 × 2.5 cm boyutunda ve arka planla yüksek kontrastlı (örneğin beyaz zemin üzerine siyah) olması gerekir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "50x70 cm ve 70x100 cm afişler kargo ile nasıl gönderilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Afişleriniz kargoda kırışmaması, katlanmaması ve yıpranmaması için özel dayanıklı rulo silindir tüplere veya mukavva destekli özel kutulara sarılarak güvenle paketlenir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afiş baskı siparişi kaç günde teslim edilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tasarımları onaylanan afiş siparişleri Topkapı imalathanemizde 24-48 saat içerisinde basılarak paketlenir ve anlaşmalı kargo ile adresinize sevk edilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Özel ebatlarda afiş baskısı yapılıyor mu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet. 34x49 cm, 49x69 cm ve 70x100 cm standart ebatlar dışında müşteri talebine göre özel ölçülerde hassas giyotin kesim uygulaması gerçekleştiriyoruz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kurumsal firmalar için afiş baskısında numune basımı var mıdır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yüksek adetli kurumsal projelerde renk ve kağıt dokusu onayı için dijital baskı makinesinde gerçek boyutta prova numunesi hazırlanabilmektedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afişte uzaktan okunabilirlik için font boyutu ne olmalıdır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1 metreden okuncak detay metinler min. 24 pt, 3 metreden okunacak ana başlıklar min. 72 pt, 5 metreden okunacak sloganlar ise 120 pt ve üzeri kalın tipografide seçilmelidir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Afiş baskı fiyatları neye göre belirlenir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fiyatlar seçilen kağıt gramajı (105 gr, 135 gr, 170 gr), ebat (35x50, 50x70, 70x100), baskı adedi (250, 500, 1000 adet) ve ekstra selefon kaplama seçeneklerine göre hesaplanır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mavi Basım İstanbul dışına kargo gönderimi yapıyor mu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet. İstanbul Topkapı matbaa tesislerimizden Türkiye'nin 81 iline ve tüm ilçelerine anlaşmalı kargo firmalarıyla hızlı teslimat sağlıyoruz."
+        }
+      }
+    ]
+  }
+]

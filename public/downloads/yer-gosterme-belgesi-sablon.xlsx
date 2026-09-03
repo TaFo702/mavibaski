@@ -1,0 +1,27 @@
+"EMLAK YER GOSTERME BELGESI VE SOZLESME TASLAGI"
+"Araci Emlak Ofisi Unvani:","[Firma Adinizi Buraya Yaziniz]"
+"Tasinmaz Ticareti Yetki Belgesi No:","[Yetki Belgesi Numaraniz]"
+"Ofis Telefon / E-posta:","[Telefon ve E-posta Adresiniz]"
+"Ofis Adresi:","[Ofis Acik Adresiniz]"
+
+"MUSTERI (HIZMET ALAN) BILGILERI"
+"Musteri Adi Soyadi:","............................................................"
+"T.C. Kimlik / Pasaport No:","............................................................"
+"Telefon Numarasi:","............................................................"
+"E-posta ve Adres:","............................................................"
+
+"GOSTERILEN TASINMAZLAR (PORTFOY LISTESI)"
+"Sira No","Tasinmazin Acik Adresi ve Tapu Bilgileri (Ada / Parsel / Blok / Daire)","Gosterim Tarihi & Saati","Musteri Paraf / Imza"
+"1","................................................................................","... / ... / 202... Saat: ... : ...",""
+"2","................................................................................","... / ... / 202... Saat: ... : ...",""
+"3","................................................................................","... / ... / 202... Saat: ... : ...",""
+
+"YASAL UYARILAR VE SOZLESME MADDELERI"
+"1. Isbu yer gosterme belgesi, Tasinmaz Ticareti Hakkinda Yonetmelik Madde 19 uyarinca duzenlenmistir."
+"2. Hizmet alan (Musteri), yukarida belirtilen mullerle ilk temasi bu belge ile kurdugunu beyan ve taahhut eder."
+"3. Musterinin, bu belge tarihinden itibaren 1 (Bir) yil icerisinde soz konusu mülkü dogrudan veya dolayli olarak satin almasi veya kiralamasi durumunda, satis bedelinin %2 + KDV'si (kiralama halinde 1 aylik kira bedeli + KDV) tutarindaki hizmet bedelini (komisyonu) cezai sarti ile birlikte Emlak Ofisi'ne odemeyi gayrikabili rucu kabul eder."
+
+"HIZMET VEREN / EMLAK OFISI","HIZMET ALAN / MUSTERI"
+"Yetkili Adi Soyadi:","Musteri Adi Soyadi:"
+"Tarih:","Tarih:"
+"Imza:","Imza (El Yazisiyla):"

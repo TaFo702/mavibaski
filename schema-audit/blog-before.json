@@ -1,0 +1,303 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://mavibasdoc.com/#organization",
+      "name": "Mavi Basım Matbaa & Reklam",
+      "url": "https://mavibasdoc.com",
+      "logo": "https://mavibasdoc.com/mavilogo.png",
+      "image": "https://mavibasdoc.com/mavilogo.png",
+      "telephone": "+905325852504",
+      "priceRange": "₺₺",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Maltepe Mah. Litros Yolu Sk. 2. Matbaacılar Sitesi",
+        "addressLocality": "Zeytinburnu",
+        "addressRegion": "İstanbul",
+        "postalCode": "34010",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.025,
+        "longitude": 28.912
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:30",
+        "closes": "19:00"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://mavibasdoc.com/#website",
+      "url": "https://mavibasdoc.com",
+      "name": "Mavi Basım Matbaa",
+      "publisher": {
+        "@id": "https://mavibasdoc.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://mavibasdoc.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "BLOG/OFSET BASKI-NASIL-YAPILIR",
+          "item": "https://mavibasdoc.com/blog/ofset-baski-nasil-yapilir"
+        }
+      ]
+    }
+  ],
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.mavibasim.com/blog/ofset-baski-nasil-yapilir"
+    },
+    "headline": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+    "image": "https://www.mavibasim.com/images/hakkimizda/tecrube-matbaa.webp",
+    "datePublished": "2026-06-04T08:00:00+03:00",
+    "dateModified": "2026-07-06T10:00:00+03:00",
+    "author": {
+      "@type": "Organization",
+      "name": "Mavi Basım Üretim Ekibi",
+      "url": "https://www.mavibasim.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mavi Basım",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.mavibasim.com/mavilogo.png"
+      }
+    },
+    "description": "Ofset baskı teknolojisinin tüm detaylarını, kalıp hazırlamadan mürekkep ayarlarına ve kurutma aşamalarına kadar teknik adımlarıyla keşfedin."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Anasayfa",
+        "item": "https://www.mavibasim.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.mavibasim.com/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Teknik & Baskı",
+        "item": "https://www.mavibasim.com/blog?category=Teknik%20%26%20Bask%C4%B1"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+        "item": "https://www.mavibasim.com/blog/ofset-baski-nasil-yapilir"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mavi Basım",
+    "image": "https://www.mavibasim.com/mavilogo.png",
+    "@id": "https://www.mavibasim.com/#localbusiness",
+    "url": "https://www.mavibasim.com",
+    "telephone": "+902120000000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Topkapı Matbaacılar Sitesi",
+      "addressLocality": "Zeytinburnu",
+      "addressRegion": "İstanbul",
+      "postalCode": "34010",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.015,
+      "longitude": 28.92
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.mavibasim.com/#organization",
+    "name": "Mavi Basım",
+    "url": "https://www.mavibasim.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.mavibasim.com/mavilogo.png",
+      "width": "512",
+      "height": "512"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+902120000000",
+      "contactType": "customer service",
+      "areaServed": "TR",
+      "availableLanguage": "Turkish"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.mavibasim.com/blog/ofset-baski-nasil-yapilir#webpage",
+    "url": "https://www.mavibasim.com/blog/ofset-baski-nasil-yapilir",
+    "name": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+    "description": "Ofset baskı teknolojisinin tüm detaylarını, kalıp hazırlamadan mürekkep ayarlarına ve kurutma aşamalarına kadar teknik adımlarıyla keşfedin.",
+    "publisher": {
+      "@id": "https://www.mavibasim.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": "https://www.mavibasim.com/blog/ofset-baski-nasil-yapilir#product",
+    "name": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.mavibasim.com/images/hakkimizda/tecrube-matbaa.webp"
+    },
+    "description": "Ofset baskı teknolojisinin tüm detaylarını, kalıp hazırlamadan mürekkep ayarlarına ve kurutma aşamalarına kadar teknik adımlarıyla keşfedin.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Mavi Basım"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "TRY",
+      "lowPrice": "150",
+      "highPrice": "2500",
+      "offerCount": "8",
+      "url": "https://www.mavibasim.com/blog/ofset-baski-nasil-yapilir"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "124"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Ahmet Y."
+        },
+        "datePublished": "2026-05-15",
+        "reviewBody": "Kurumsal emlak ofisimiz için sipariş verdik, otokopili kağıt kalitesi ve numaratör baskısı harika.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ofset baskı için minimum sipariş adedi nedir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ofset baskıda kurulum firesi ve kalıp hazırlığı maliyetli olduğundan, ekonomik fiyatlar elde etmek için minimum 1.000 adet sipariş verilmesi önerilir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ofset baskıda hangi mürekkepler kullanılır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mavi Basım olarak gıda ambalajlarında koku yapmayan, sağlığa uygun bitkisel soya bazlı yüksek pigmentli Avrupa mürekkepler kullanmaktayız."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://www.mavibasim.com/images/hakkimizda/tecrube-matbaa.webp",
+    "license": "https://www.mavibasim.com/lisans",
+    "acquireLicensePage": "https://www.mavibasim.com/blog/ofset-baski-nasil-yapilir",
+    "creditText": "Mavi Basım Tasarım Ekibi",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.mavibasim.com",
+    "name": "Mavi Basım",
+    "description": "Profesyonel Matbaa ve Baskı Hizmetleri",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.mavibasim.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Resmi Evrak Baskı Hizmeti",
+    "provider": {
+      "@id": "https://www.mavibasim.com/#organization"
+    },
+    "areaServed": "TR",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Resmi ve Otokopili Evrak Baskı Kataloğu",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "İki Nüsha Otokopili Emlak Sözleşmesi"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Üç Nüsha Numaratörlü Yer Gösterme Belgesi"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "A5 Ebat Bloknot ve Koçan Basımı"
+          }
+        }
+      ]
+    }
+  }
+]
