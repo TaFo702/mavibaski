@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Emlak Yer Gösterme Belgesi Şablonu</title>
+<style>
+  body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; color: #333; }
+  h1 { text-align: center; color: #1a365d; font-size: 20pt; margin-bottom: 5px; }
+  h2 { text-align: center; color: #4a5568; font-size: 12pt; margin-top: 0; font-weight: normal; margin-bottom: 30px; }
+  .section-title { font-weight: bold; font-size: 11pt; color: #2b6cb0; border-bottom: 2px solid #2b6cb0; padding-bottom: 3px; margin-top: 20px; margin-bottom: 10px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+  th, td { border: 1px solid #cbd5e0; padding: 8px; font-size: 10pt; text-align: left; }
+  th { bg-color: #f7fafc; background-color: #f7fafc; font-weight: bold; }
+  .field-label { font-weight: bold; width: 30%; background-color: #f7fafc; }
+  .legal-text { font-size: 8.5pt; color: #4a5568; text-align: justify; margin-top: 20px; line-height: 1.4; border: 1px dashed #cbd5e0; padding: 10px; background-color: #fffaf0; }
+  .signatures { margin-top: 40px; }
+  .signature-box { width: 48%; float: left; border: 1px solid #cbd5e0; height: 120px; padding: 10px; box-sizing: border-box; }
+  .signature-box-right { width: 48%; float: right; border: 1px solid #cbd5e0; height: 120px; padding: 10px; box-sizing: border-box; }
+  .clearfix { clear: both; }
+</style>
+</head>
+<body>
+
+<h1>EMLAK YER GÖSTERME BELGESİ</h1>
+<h2>Taşınmaz Ticareti Yönetmeliği Madde 19'a Uygun Sözleşme Şablonu</h2>
+
+<div class="section-title">1. ARACI EMLAK OFİSİ BİLGİLERİ</div>
+<table>
+  <tr>
+    <td class="field-label">Firma Ticari Ünvanı:</td>
+    <td>[Firma Adınızı Buraya Yazınız]</td>
+  </tr>
+  <tr>
+    <td class="field-label">Taşınmaz Ticareti Yetki Belgesi No:</td>
+    <td>[Yetki Belgesi Numaranız]</td>
+  </tr>
+  <tr>
+    <td class="field-label">Telefon / E-posta:</td>
+    <td>[Telefon ve E-posta Adresiniz]</td>
+  </tr>
+  <tr>
+    <td class="field-label">Ofis Adresi:</td>
+    <td>[Ofis Açık Adresiniz]</td>
+  </tr>
+</table>
+
+<div class="section-title">2. HİZMET ALAN / MÜŞTERİ BİLGİLERİ</div>
+<table>
+  <tr>
+    <td class="field-label">Müşteri Adı Soyadı:</td>
+    <td>....................................................................................................</td>
+  </tr>
+  <tr>
+    <td class="field-label">T.C. Kimlik / Pasaport No:</td>
+    <td>....................................................................................................</td>
+  </tr>
+  <tr>
+    <td class="field-label">Telefon Numarası:</td>
+    <td>....................................................................................................</td>
+  </tr>
+  <tr>
+    <td class="field-label">E-posta ve Adres:</td>
+    <td>....................................................................................................</td>
+  </tr>
+</table>
+
+<div class="section-title">3. GÖSTERİLEN TAŞINMAZ / PORTFÖY BİLGİLERİ</div>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 5%;">Sıra</th>
+      <th style="width: 45%;">Taşınmazın Açık Adresi ve Tapu Bilgileri (İl/İlçe/Ada/Parsel/Daire)</th>
+      <th style="width: 25%;">Gösterim Tarihi & Saati</th>
+      <th style="width: 25%;">Müşteri Parafı</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">1</td>
+      <td>....................................................................................................</td>
+      <td>....... / ....... / 202...  Saat: ...... : ......</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">2</td>
+      <td>....................................................................................................</td>
+      <td>....... / ....... / 202...  Saat: ...... : ......</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">3</td>
+      <td>....................................................................................................</td>
+      <td>....... / ....... / 202...  Saat: ...... : ......</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="section-title">4. YASAL SÖZLEŞME VE HUKUKİ ŞARTLAR</div>
+<div class="legal-text">
+  <strong>TAŞINMAZ TİCARETİ YÖNETMELİĞİ MADDE 19 UYARINCA CEZAİ ŞARTLAR:</strong><br>
+  1. İşbu belge, yukarıda unvanı ve Taşınmaz Ticareti Yetki Belgesi numarası yazılı Emlak Ofisi tarafından, yukarıda adresi belirtilen taşınmaz(lar)ın müşteriye bizzat gezdirilerek gösterildiğini tespit etmek amacıyla, Taşınmaz Ticareti Hakkında Yönetmelik Madde 19 hükümlerine uygun olarak tanzim edilmiştir.<br>
+  2. Hizmet alan (Müşteri), işbu belgede imzası bulunan mülkleri gayrimenkul danışmanının aracılığı ile gezdiğini ve mülklerle ilk teması bu yolla kurduğunu gayrikabili rücu kabul, beyan ve taahhüt eder.<br>
+  3. Müşteri, kendisi veya eşi, çocukları, anne-babası, kardeşleri gibi üçüncü dereceye kadar kan ve sıhri hısımları veya bunların ortağı, yöneticisi olduğu şirketler aracılığı ile söz konusu taşınmazı, işbu sözleşme tarihinden itibaren 1 (Bir) yıl içerisinde Emlak Ofisi'ni devre dışı bırakarak doğrudan veya dolaylı olarak satın alır veya kiralarsa; Türk Borçlar Kanunu Madde 520 (Simsarlık Sözleşmesi) ve Taşınmaz Ticareti Yönetmeliği hükümleri gereğince, toplam mülk satış bedelinin %2 + KDV (kiralama halinde 1 aylık kira bedeli + KDV) tutarındaki hizmet bedelini (komisyonu) cezai şartı ile birlikte emlak ofisine nakden ve defaten ödemeyi kabul eder.<br>
+  4. İşbu sözleşmeden doğan uyuşmazlıklarda T.C. Mahkemeleri ve İcra Daireleri yetkilidir.
+</div>
+
+<div class="signatures">
+  <div class="signature-box">
+    <strong>HİZMET VEREN / EMLAK OFİSİ</strong><br><br>
+    Yetkili Adı Soyadı:<br>
+    İmza:<br><br>
+    Tarih: ....... / ....... / 202...
+  </div>
+  <div class="signature-box-right">
+    <strong>HİZMET ALAN / ALICI VEYA KİRACI</strong><br><br>
+    Müşteri Adı Soyadı:<br>
+    İmza (Kendi El Yazısıyla Ad-Soyad ve Islak İmza):<br><br>
+    Tarih: ....... / ....... / 202...
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+</body>
+</html>

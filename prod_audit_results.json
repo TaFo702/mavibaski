@@ -1,0 +1,58 @@
+{
+  "/": {
+    "totalScripts": 3,
+    "totalNodes": 4
+  },
+  "/kartvizit": {
+    "totalScripts": 1,
+    "totalNodes": 4
+  },
+  "/brosur": {
+    "totalScripts": 1,
+    "totalNodes": 3
+  },
+  "/afis": {
+    "totalScripts": 9,
+    "totalNodes": 12
+  },
+  "/oto-paspas": {
+    "totalScripts": 2,
+    "totalNodes": 5
+  },
+  "/karton-canta": {
+    "totalScripts": 2,
+    "totalNodes": 5
+  },
+  "/para-makbuzu": {
+    "totalScripts": 8,
+    "totalNodes": 11
+  },
+  "/tahsilat-makbuzu": {
+    "totalScripts": 9,
+    "totalNodes": 12
+  },
+  "/istanbul-matbaa": {
+    "totalScripts": 1,
+    "totalNodes": 3
+  },
+  "/ankara-matbaa": {
+    "totalScripts": 1,
+    "totalNodes": 3
+  },
+  "/sinop-matbaa": {
+    "totalScripts": 1,
+    "totalNodes": 3
+  },
+  "/duzce-matbaa": {
+    "totalScripts": 1,
+    "totalNodes": 3
+  },
+  "/sektor/restoran-brosur-baski": {
+    "totalScripts": 1,
+    "totalNodes": 3
+  },
+  "/blog/ofset-baski-nasil-yapilir": {
+    "totalScripts": 11,
+    "totalNodes": 13
+  }
+}
