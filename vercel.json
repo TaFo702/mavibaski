@@ -1,0 +1,31 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/makbuz",
+      "destination": "/makbuz-ve-formlar",
+      "permanent": true
+    },
+    {
+      "source": "/katalog",
+      "destination": "/kataloglar",
+      "permanent": true
+    },
+    {
+      "source": "/sektor/kozmetik-guzellik-saglik-baski",
+      "destination": "/sektor/kozmetik-guzellik-merkezi-baski",
+      "permanent": true
+    },
+    {
+      "source": "/sektor/e-ticaret-baski",
+      "destination": "/sektor/e-ticaret-perakende-baski",
+      "permanent": true
+    },
+    {
+      "source": "/sektor/gida-kooperatif-baski",
+      "destination": "/sektor/kutu-ambalaj-baski-cozumleri",
+      "permanent": true
+    }
+  ]
+}
