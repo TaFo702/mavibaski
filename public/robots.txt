@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mavibasim.com/sitemap.xml
