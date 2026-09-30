@@ -4734,6 +4734,41 @@ ${faqHtml}`;
 function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: string): string {
   const isKutu = slug === 'kutu-ambalaj-baski-cozumleri' || seoPage.path.includes('kutu-ambalaj');
   
+  const isETicaret = slug === 'e-ticaret-perakende-baski' || seoPage.path.includes('e-ticaret-perakende');
+  const renderETicaretImage = (
+    filename: keyof typeof SECTOR_IMAGE_MANIFEST.eTicaretPerakende,
+    alt: string,
+    width: number,
+    height: number,
+    caption: string,
+    isPriority = false
+  ): string => {
+    if (!SECTOR_IMAGE_MANIFEST.eTicaretPerakende[filename]) return "";
+    return '<figure class="mt-6 rounded-xl overflow-hidden border border-neutral-200 bg-neutral-50 p-2"><img src="/images/sektor/e-ticaret-perakende/' + filename + '" alt="' + alt + '" width="' + width + '" height="' + height + '" class="w-full h-auto rounded-lg object-contain"' + (isPriority ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"') + ' decoding="async" /><figcaption class="text-xs text-neutral-500 mt-2 text-center">' + caption + '</figcaption></figure>';
+  };
+  const eTicaretSectionImages = [
+    {
+      filename: "e-ticaret-urun-kutusu-kargo-paketleme.webp",
+      alt: "E-ticaret ürün kutuları ve kargo paketleme çözümleri",
+      caption: "E-ticaret ürün kutuları ve kargo paketleme çözümleri"
+    },
+    {
+      filename: "saten-polyester-ipli-karton-canta.webp",
+      alt: "Saten ve polyester ipli lüks karton çanta ve kraft poşet baskısı",
+      caption: "Saten ve polyester ipli lüks karton çanta ve kraft poşet baskısı"
+    },
+    {
+      filename: "baskili-ambalaj-kagidi-tesekkur-karti.webp",
+      alt: "Logo baskılı pelür ambalaj kâğıdı ve müşteri teşekkür kartları",
+      caption: "Logo baskılı pelür ambalaj kâğıdı ve müşteri teşekkür kartları"
+    },
+    {
+      filename: "barkod-koli-adres-urun-etiketleri.webp",
+      alt: "Rulo termal barkod, kuşe koli adres ve raf etiketleri",
+      caption: "Rulo termal barkod, kuşe koli adres ve raf etiketleri"
+    }
+  ] as const;
+
   const parentName = seoPage.path.includes('brosur') ? "Broşür Baskı" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "Matbaa Ürünleri" : "Kartvizit Baskı";
   const parentItem = seoPage.path.includes('brosur') ? "/brosur" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "/matbaa" : "/kartvizit";
 
@@ -4755,6 +4790,16 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
       html += `<div data-placeholder-number="1" data-aspect-ratio="1200 / 800" aria-label="Henüz yüklenmemiş görsel alanı" class="w-full border-2 border-dashed rounded-2xl flex flex-col items-center justify-center p-4 text-center bg-neutral-900/90 border-neutral-700 text-neutral-300 shadow-xl max-w-3xl mx-auto my-0"><div class="w-10 h-10 rounded-full flex items-center justify-center mb-2 bg-neutral-800 text-neutral-400"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg></div><span class="text-[11px] font-extrabold tracking-widest uppercase text-sky-400">GÖRSEL 1</span><span class="text-xs sm:text-sm font-bold mt-0.5 text-white">Kutu ve Ambalaj Baskı Çözümleri</span><span class="text-[11px] font-medium mt-1 text-neutral-400">WebP görseli daha sonra eklenecek</span></div>`;
     }
   }
+  if (isETicaret) {
+    html += renderETicaretImage(
+      "e-ticaret-perakende-baski-cozumleri.webp",
+      "E-ticaret ve perakende markaları için kargo kutusu, karton çanta, etiket ve ambalaj kâğıdı baskıları",
+      1200,
+      800,
+      "E-ticaret ve perakende markaları için baskı çözümleri",
+      true
+    );
+  }
   html += `</div></header>`;
 
   // 8 Sections
@@ -4769,6 +4814,11 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
         section.paragraphs.forEach((p: string) => {
           html += `<p class="text-neutral-700 leading-relaxed mb-4 text-base">${p}</p>`;
         });
+      }
+
+      const ecommerceImage = isETicaret ? eTicaretSectionImages[idx] : undefined;
+      if (ecommerceImage) {
+        html += renderETicaretImage(ecommerceImage.filename, ecommerceImage.alt, 900, 650, ecommerceImage.caption);
       }
 
       // Kutu Visuals injection for sections
@@ -4808,6 +4858,16 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
 
       html += `</section>`;
     });
+
+    if (isETicaret) {
+      html += renderETicaretImage(
+        "amerikan-servis-perakende-baski-urunleri.webp",
+        "Amerikan servis ve perakende işletmeleri için tamamlayıcı baskı ürünleri",
+        900,
+        650,
+        "Amerikan servis ve perakende işletmeleri için tamamlayıcı baskı ürünleri"
+      );
+    }
 
     // 9 Cluster Products
     if (isKutu) {
