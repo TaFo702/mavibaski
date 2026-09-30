@@ -2396,6 +2396,8 @@ const Navbar = () => {
   useEffect(() => {
     if (isMenuOpen) {
       navigatingRef.current = true;
+      // Intentionally close the drawer on route changes, including browser Back/Forward.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsMenuOpen(false);
     }
   }, [location.pathname]);
