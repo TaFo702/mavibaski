@@ -3844,6 +3844,7 @@ export const MakbuzFormlarPage = () => {
 
 export const GenericPriceTablePage = ({ data }: { data: any[] }) => {
   const { openProductDetail } = useCart();
+  const currentDetails = MAKBUZ_DETAILS[data[0]?.id];
   const navigate = useNavigate();
   const isSiparisFisi = data[0]?.title === "SİPARİŞ FİŞİ";
   const isAdisyon = data[0]?.title.includes("ADİSYON");
