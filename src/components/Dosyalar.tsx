@@ -178,7 +178,7 @@ export const DosyalarPage = () => {
         <meta property="og:image:secure_url" content="https://mavibasim.com/images/dosya/cepli-dosya-baski-fiyatlari.webp" />
         <meta property="og:image:type" content="image/webp" />
         <meta property="og:image:width" content="1536" />
-<meta property="og:image:height" content="1024" />>
+<meta property="og:image:height" content="1024" />
         <meta property="og:image:alt" content="Mavi Basım 350 gr ve 400 gr kuşe selefonlu cepli dosya ve sunum dosyası modelleri" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cepli Dosya Baskı Fiyatları | Kuşe ve Selefon | Mavi Basım" />
