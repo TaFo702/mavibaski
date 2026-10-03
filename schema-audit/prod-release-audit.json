@@ -1,0 +1,1906 @@
+{
+  "/": {
+    "route": "/",
+    "status": 200,
+    "title": "Mavi Basım Matbaa & Reklam | İstanbul Online Matbaa ve Baskı Hizmetleri",
+    "metaDescription": "İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren Mavi Basım Matbaa & Reklam; kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı hizmetleri sunmaktadır. Türkiye geneli hızlı kargo ve uygun fiyatlı matbaa çözümleri.",
+    "canonical": "https://mavibasim.com",
+    "robots": "",
+    "h1Count": 1,
+    "h1Text": "Online Matbaa & Baskı Hizmetleri | Türkiye Geneli Hızlı Teslimat",
+    "h2Count": 30,
+    "ogTitle": "Mavi Basım Matbaa & Reklam | En Uygun Fiyatlı Online Matbaa",
+    "ogDescription": "İstanbul profesyonel matbaa, grafik tasarım ve hızlı baskı çözümleri. Türkiye geneli kargo ile teslimat.",
+    "ogImage": "/mavilogo.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdSchemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Türkiye Geneli Matbaa ve Baskı Hizmeti Verilen Şehirler",
+        "description": "İstanbul Topkapı üretim tesisimizden Türkiye'nin 81 iline kargo teslimatlı online matbaa ve baskı hizmetleri.",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Adana Matbaa Hizmeti",
+            "url": "https://mavibasim.com/adana-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Adıyaman Matbaa Hizmeti",
+            "url": "https://mavibasim.com/adiyaman-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Afyonkarahisar Matbaa Hizmeti",
+            "url": "https://mavibasim.com/afyonkarahisar-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Ağrı Matbaa Hizmeti",
+            "url": "https://mavibasim.com/agri-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Amasya Matbaa Hizmeti",
+            "url": "https://mavibasim.com/amasya-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Ankara Matbaa Hizmeti",
+            "url": "https://mavibasim.com/ankara-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Antalya Matbaa Hizmeti",
+            "url": "https://mavibasim.com/antalya-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Artvin Matbaa Hizmeti",
+            "url": "https://mavibasim.com/artvin-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Aydın Matbaa Hizmeti",
+            "url": "https://mavibasim.com/aydin-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "Balıkesir Matbaa Hizmeti",
+            "url": "https://mavibasim.com/balikesir-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "Bilecik Matbaa Hizmeti",
+            "url": "https://mavibasim.com/bilecik-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "Bingöl Matbaa Hizmeti",
+            "url": "https://mavibasim.com/bingol-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "Bitlis Matbaa Hizmeti",
+            "url": "https://mavibasim.com/bitlis-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "name": "Bolu Matbaa Hizmeti",
+            "url": "https://mavibasim.com/bolu-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
+            "name": "Burdur Matbaa Hizmeti",
+            "url": "https://mavibasim.com/burdur-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 16,
+            "name": "Bursa Matbaa Hizmeti",
+            "url": "https://mavibasim.com/bursa-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 17,
+            "name": "Çanakkale Matbaa Hizmeti",
+            "url": "https://mavibasim.com/canakkale-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 18,
+            "name": "Çankırı Matbaa Hizmeti",
+            "url": "https://mavibasim.com/cankiri-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 19,
+            "name": "Çorum Matbaa Hizmeti",
+            "url": "https://mavibasim.com/corum-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 20,
+            "name": "Denizli Matbaa Hizmeti",
+            "url": "https://mavibasim.com/denizli-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 21,
+            "name": "Diyarbakır Matbaa Hizmeti",
+            "url": "https://mavibasim.com/diyarbakir-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 22,
+            "name": "Edirne Matbaa Hizmeti",
+            "url": "https://mavibasim.com/edirne-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 23,
+            "name": "Elazığ Matbaa Hizmeti",
+            "url": "https://mavibasim.com/elazig-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 24,
+            "name": "Erzincan Matbaa Hizmeti",
+            "url": "https://mavibasim.com/erzincan-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 25,
+            "name": "Erzurum Matbaa Hizmeti",
+            "url": "https://mavibasim.com/erzurum-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 26,
+            "name": "Eskişehir Matbaa Hizmeti",
+            "url": "https://mavibasim.com/eskisehir-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 27,
+            "name": "Gaziantep Matbaa Hizmeti",
+            "url": "https://mavibasim.com/gaziantep-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 28,
+            "name": "Giresun Matbaa Hizmeti",
+            "url": "https://mavibasim.com/giresun-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 29,
+            "name": "Gümüşhane Matbaa Hizmeti",
+            "url": "https://mavibasim.com/gumushane-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 30,
+            "name": "Hakkari Matbaa Hizmeti",
+            "url": "https://mavibasim.com/hakkari-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 31,
+            "name": "Hatay Matbaa Hizmeti",
+            "url": "https://mavibasim.com/hatay-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 32,
+            "name": "Isparta Matbaa Hizmeti",
+            "url": "https://mavibasim.com/isparta-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 33,
+            "name": "Mersin Matbaa Hizmeti",
+            "url": "https://mavibasim.com/mersin-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 34,
+            "name": "İstanbul Matbaa Hizmeti",
+            "url": "https://mavibasim.com/istanbul-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 35,
+            "name": "İzmir Matbaa Hizmeti",
+            "url": "https://mavibasim.com/izmir-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 36,
+            "name": "Kars Matbaa Hizmeti",
+            "url": "https://mavibasim.com/kars-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 37,
+            "name": "Kastamonu Matbaa Hizmeti",
+            "url": "https://mavibasim.com/kastamonu-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 38,
+            "name": "Kayseri Matbaa Hizmeti",
+            "url": "https://mavibasim.com/kayseri-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 39,
+            "name": "Kırklareli Matbaa Hizmeti",
+            "url": "https://mavibasim.com/kirklareli-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 40,
+            "name": "Kırşehir Matbaa Hizmeti",
+            "url": "https://mavibasim.com/kirsehir-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 41,
+            "name": "Kocaeli Matbaa Hizmeti",
+            "url": "https://mavibasim.com/kocaeli-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 42,
+            "name": "Konya Matbaa Hizmeti",
+            "url": "https://mavibasim.com/konya-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 43,
+            "name": "Kütahya Matbaa Hizmeti",
+            "url": "https://mavibasim.com/kutahya-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 44,
+            "name": "Malatya Matbaa Hizmeti",
+            "url": "https://mavibasim.com/malatya-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 45,
+            "name": "Manisa Matbaa Hizmeti",
+            "url": "https://mavibasim.com/manisa-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 46,
+            "name": "Kahramanmaraş Matbaa Hizmeti",
+            "url": "https://mavibasim.com/kahramanmaras-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 47,
+            "name": "Mardin Matbaa Hizmeti",
+            "url": "https://mavibasim.com/mardin-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 48,
+            "name": "Muğla Matbaa Hizmeti",
+            "url": "https://mavibasim.com/mugla-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 49,
+            "name": "Muş Matbaa Hizmeti",
+            "url": "https://mavibasim.com/mus-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 50,
+            "name": "Nevşehir Matbaa Hizmeti",
+            "url": "https://mavibasim.com/nevsehir-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 51,
+            "name": "Niğde Matbaa Hizmeti",
+            "url": "https://mavibasim.com/nigde-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 52,
+            "name": "Ordu Matbaa Hizmeti",
+            "url": "https://mavibasim.com/ordu-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 53,
+            "name": "Rize Matbaa Hizmeti",
+            "url": "https://mavibasim.com/rize-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 54,
+            "name": "Sakarya Matbaa Hizmeti",
+            "url": "https://mavibasim.com/sakarya-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 55,
+            "name": "Samsun Matbaa Hizmeti",
+            "url": "https://mavibasim.com/samsun-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 56,
+            "name": "Siirt Matbaa Hizmeti",
+            "url": "https://mavibasim.com/siirt-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 57,
+            "name": "Sinop Matbaa Hizmeti",
+            "url": "https://mavibasim.com/sinop-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 58,
+            "name": "Sivas Matbaa Hizmeti",
+            "url": "https://mavibasim.com/sivas-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 59,
+            "name": "Tekirdağ Matbaa Hizmeti",
+            "url": "https://mavibasim.com/tekirdag-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 60,
+            "name": "Tokat Matbaa Hizmeti",
+            "url": "https://mavibasim.com/tokat-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 61,
+            "name": "Trabzon Matbaa Hizmeti",
+            "url": "https://mavibasim.com/trabzon-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 62,
+            "name": "Tunceli Matbaa Hizmeti",
+            "url": "https://mavibasim.com/tunceli-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 63,
+            "name": "Şanlıurfa Matbaa Hizmeti",
+            "url": "https://mavibasim.com/sanliurfa-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 64,
+            "name": "Uşak Matbaa Hizmeti",
+            "url": "https://mavibasim.com/usak-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 65,
+            "name": "Van Matbaa Hizmeti",
+            "url": "https://mavibasim.com/van-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 66,
+            "name": "Yozgat Matbaa Hizmeti",
+            "url": "https://mavibasim.com/yozgat-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 67,
+            "name": "Zonguldak Matbaa Hizmeti",
+            "url": "https://mavibasim.com/zonguldak-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 68,
+            "name": "Aksaray Matbaa Hizmeti",
+            "url": "https://mavibasim.com/aksaray-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 69,
+            "name": "Bayburt Matbaa Hizmeti",
+            "url": "https://mavibasim.com/bayburt-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 70,
+            "name": "Karaman Matbaa Hizmeti",
+            "url": "https://mavibasim.com/karaman-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 71,
+            "name": "Kırıkkale Matbaa Hizmeti",
+            "url": "https://mavibasim.com/kirikkale-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 72,
+            "name": "Batman Matbaa Hizmeti",
+            "url": "https://mavibasim.com/batman-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 73,
+            "name": "Şırnak Matbaa Hizmeti",
+            "url": "https://mavibasim.com/sirnak-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 74,
+            "name": "Bartın Matbaa Hizmeti",
+            "url": "https://mavibasim.com/bartin-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 75,
+            "name": "Ardahan Matbaa Hizmeti",
+            "url": "https://mavibasim.com/ardahan-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 76,
+            "name": "Iğdır Matbaa Hizmeti",
+            "url": "https://mavibasim.com/igdir-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 77,
+            "name": "Yalova Matbaa Hizmeti",
+            "url": "https://mavibasim.com/yalova-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 78,
+            "name": "Karabük Matbaa Hizmeti",
+            "url": "https://mavibasim.com/karabuk-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 79,
+            "name": "Kilis Matbaa Hizmeti",
+            "url": "https://mavibasim.com/kilis-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 80,
+            "name": "Osmaniye Matbaa Hizmeti",
+            "url": "https://mavibasim.com/osmaniye-matbaa"
+          },
+          {
+            "@type": "ListItem",
+            "position": 81,
+            "name": "Düzce Matbaa Hizmeti",
+            "url": "https://mavibasim.com/duzce-matbaa"
+          }
+        ]
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "totalImages": 10,
+    "consoleErrors": []
+  },
+  "/kartvizit": {
+    "route": "/kartvizit",
+    "status": 200,
+    "title": "Kartvizit Baskı Fiyatları | Sıvama & Kabartma Laklı - Mavi Basım",
+    "metaDescription": "İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren Mavi Basım Matbaa & Reklam; kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı hizmetleri sunmaktadır. Türkiye geneli hızlı kargo ve uygun fiyatlı matbaa çözümleri.",
+    "canonical": "https://mavibasim.com/kartvizit",
+    "robots": "",
+    "h1Count": 1,
+    "h1Text": "Kartvizit Baskı Fiyatları & Kalın Sıvama Laklı Kartvizitler",
+    "h2Count": 10,
+    "ogTitle": "Mavi Basım Matbaa & Reklam | En Uygun Fiyatlı Online Matbaa",
+    "ogDescription": "İstanbul profesyonel matbaa, grafik tasarım ve hızlı baskı çözümleri. Türkiye geneli kargo ile teslimat.",
+    "ogImage": "/mavilogo.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdSchemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://mavibasim.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "KARTVIZIT",
+            "item": "https://mavibasim.com/kartvizit"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "KARTVIZIT Baskı",
+        "description": "Mavi Basım yüksek kaliteli KARTVIZIT baskı hizmeti. En uygun fiyat ve hızlı teslimat.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Mavi Basım"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://mavibasim.com/kartvizit",
+          "priceCurrency": "TRY",
+          "price": "150.00",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://mavibasim.com/#organization"
+          }
+        }
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "totalImages": 5,
+    "consoleErrors": []
+  },
+  "/afis": {
+    "route": "/afis",
+    "status": 200,
+    "title": "Afiş Baskı Fiyatları | 35x50 & 50x70 cm Kuşe Poster - Mavi Basım",
+    "metaDescription": "İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren Mavi Basım Matbaa & Reklam; kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı hizmetleri sunmaktadır. Türkiye geneli hızlı kargo ve uygun fiyatlı matbaa çözümleri.",
+    "canonical": "https://mavibasim.com/afis",
+    "robots": "",
+    "h1Count": 1,
+    "h1Text": "Büyük Boy Reklam Afişi ve Poster Baskı Fiyatları",
+    "h2Count": 13,
+    "ogTitle": "Mavi Basım Matbaa & Reklam | En Uygun Fiyatlı Online Matbaa",
+    "ogDescription": "İstanbul profesyonel matbaa, grafik tasarım ve hızlı baskı çözümleri. Türkiye geneli kargo ile teslimat.",
+    "ogImage": "/mavilogo.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdSchemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://mavibasim.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AFIS",
+            "item": "https://mavibasim.com/afis"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "AFIS Baskı",
+        "description": "Mavi Basım yüksek kaliteli AFIS baskı hizmeti. En uygun fiyat ve hızlı teslimat.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Mavi Basım"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://mavibasim.com/afis",
+          "priceCurrency": "TRY",
+          "price": "150.00",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://mavibasim.com/#organization"
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/brosur-baski.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/afis",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "50x70 cm Kampanya ve İndirim Afişi Baskısı"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/brosur-fiyatlari.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/afis",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Konser ve Etkinlik Afişi Baskı Örneği"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/el-ilani.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/afis",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Emlak Satılık Kiralık İlan Afişi 35x50 cm"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/katlamali-brosur.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/afis",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Açılış ve Festival Duyuru Afişi"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/kartvizit-baski.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/afis",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Mağaza Vitrin Afişi"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/etiket-baski.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/afis",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Özel Tasarım Dekoratif Sanat Posteri Baskısı"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Afiş Baskı ve Büyük Boy Poster Üretim Süreci",
+        "description": "Mavi Basım Topkapı matbaa tesisinde Heidelberg ofset baskı makineleriyle 35x50 cm ve 50x70 cm afiş baskı, giyotin kesim ve paketleme aşamaları.",
+        "thumbnailUrl": "https://mavibasim.com/images/brosur-baski.webp",
+        "uploadDate": "2026-01-15T09:00:00+03:00",
+        "duration": "PT45S",
+        "contentUrl": "https://mavibasim.com/video/afis-baski-uretim.mp4",
+        "embedUrl": "https://mavibasim.com/video/afis-baski-uretim",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mavi Basım",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://mavibasim.com/logo.png"
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "A1 afiş baskı kaç cm ebadındadır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ISO standartlarında A1 ebadı 59.4 × 84.1 cm'dir. Matbaacılık tabaka standartlarında ise 50×70 cm (49×69 cm net kesim) ve 70×100 cm boyutlarında yüksek verimli baskı paftaları kullanılır. Vitrin ve caddeler için en popüler ebat 50×70 cm standardıdır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A2 ve A3 afiş ebatları kaç cm’dir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standart A3 ebadı 29.7 × 42 cm iken matbaa pafta kesiminde 34×49 cm tercih edilir. A2 ebadı ise 42 × 59.4 cm olup matbaada 50×70 cm (49×69 cm) baskı standardına denk düşer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Poster ile afiş baskı arasında ne fark vardır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Afiş genelde ticari duyuru, indirim ve etkinlikler için kitlesel adetlerde (250, 500, 1000 adet) basılan tanıtım ürünüdür. Poster ise daha yüksek gramajlı (170 gr), sanatsal veya dekoratif amaçlı tekil ya da az adetli çerçevelik baskılardır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afişler dış mekanda kullanılır mı, yağmura dayanıklı mıdır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kuşe kağıt afişler iç mekan, vitrin içi ve korumalı panolar için uygundur. Yağmura, neme ve dış mekan koşullarına maruz kalacak alanlarda arkası mavi engelleyici kaplamalı Blueback kağıt afiş tercih edilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afiş baskısında laminasyon veya selefon kaplama yapılır mı?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. 170 gr kalınlığındaki afişlerde isteğe bağlı olarak mat veya parlak selefon kaplama yapılabilir. Selefon, renklerin solmasını önler ve afişe yırtılmaya karşı ekstra dayanıklılık kazandırır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kuşe kağıt afiş mi yoksa Blueback afiş mi tercih edilmeli?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vitrin, iç mekan panoları, mağaza içi ve düz yüzeyler için canlı renk veren 135 gr veya 170 gr Kuşe kağıt; billboard, açıkhava reklam tabelaları ve eski afişlerin üzerine yapıştırma işlemleri için arkasını göstermeyen Blueback kağıt tercih edilmelidir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afiş baskı dosyası kaç DPI çözünürlükte olmalıdır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Büyük boy afiş baskılarında pikselleşme olmaması ve yazıların net çıkması için tasarım dosyalarının birebir ebatta en az 300 DPI çözünürlükte hazırlanması önerilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afiş tasarım dosyasında PDF formatı zorunlu mudur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Font kayması, renk değişimi ve görsel kayıplarının önüne geçmek için vektörel fontları konvertlenmiş, baskıya hazır PDF, TIFF veya EPS/AI formatı tercih edilmelidir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afiş baskısı için CMYK renk modu neden şarttır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ekran renkleri RGB modundadır, ancak matbaa baskı makineleri Cyan, Magenta, Yellow ve Black (CMYK) mürekkepleriyle çalışır. Dosyanın CMYK olması baskı renklerinin ekrandakine en yakın tonda çıkmasını sağlar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afişlerde minimum baskı adedi kaçtır, tek adet basılır mı?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ofset büyük boy afiş baskılarında kalıp maliyetlerinin düşmesi için minimum ekonomik adet 250 adettir. Dijital büyük format baskı makinelerimizde ise tek adet veya az adetli özel boy afiş/poster üretimi yapılabilmektedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afişlere parlak veya mat selefon kaplama yapılabilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Parlak selefon afişteki renklerin daha canlı ve patlak görünmesini sağlarken, mat selefon ışık yansımalarını kırarak prestijli ve okunabilir bir görünüm katar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afiş tasarımında kesim taşma payı (bleed) ne kadar olmalıdır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Giyotin kesim aşamasında kenarlarda beyaz şerit kalmaması için tasarımın 4 kenarından en az +3 mm kesim taşması (bleed) verilmeli ve kritik metinler kenardan 5 mm içeride tutulmalıdır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afişlerde QR kod boyutu ne kadar olmalıdır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Müşterilerin cep telefonlarıyla uzaktan rahatça okutabilmesi için afiş üzerindeki QR kodun en az 2.5 × 2.5 cm boyutunda ve arka planla yüksek kontrastlı (örneğin beyaz zemin üzerine siyah) olması gerekir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "50x70 cm ve 70x100 cm afişler kargo ile nasıl gönderilir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Afişleriniz kargoda kırışmaması, katlanmaması ve yıpranmaması için özel dayanıklı rulo silindir tüplere veya mukavva destekli özel kutulara sarılarak güvenle paketlenir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afiş baskı siparişi kaç günde teslim edilir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tasarımları onaylanan afiş siparişleri Topkapı imalathanemizde 24-48 saat içerisinde basılarak paketlenir ve anlaşmalı kargo ile adresinize sevk edilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Özel ebatlarda afiş baskısı yapılıyor mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. 34x49 cm, 49x69 cm ve 70x100 cm standart ebatlar dışında müşteri talebine göre özel ölçülerde hassas giyotin kesim uygulaması gerçekleştiriyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kurumsal firmalar için afiş baskısında numune basımı var mıdır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yüksek adetli kurumsal projelerde renk ve kağıt dokusu onayı için dijital baskı makinesinde gerçek boyutta prova numunesi hazırlanabilmektedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afişte uzaktan okunabilirlik için font boyutu ne olmalıdır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "1 metreden okuncak detay metinler min. 24 pt, 3 metreden okunacak ana başlıklar min. 72 pt, 5 metreden okunacak sloganlar ise 120 pt ve üzeri kalın tipografide seçilmelidir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Afiş baskı fiyatları neye göre belirlenir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fiyatlar seçilen kağıt gramajı (105 gr, 135 gr, 170 gr), ebat (35x50, 50x70, 70x100), baskı adedi (250, 500, 1000 adet) ve ekstra selefon kaplama seçeneklerine göre hesaplanır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mavi Basım İstanbul dışına kargo gönderimi yapıyor mu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. İstanbul Topkapı matbaa tesislerimizden Türkiye'nin 81 iline ve tüm ilçelerine anlaşmalı kargo firmalarıyla hızlı teslimat sağlıyoruz."
+            }
+          }
+        ]
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "totalImages": 8,
+    "consoleErrors": []
+  },
+  "/para-makbuzu": {
+    "route": "/para-makbuzu",
+    "status": 200,
+    "title": "Numaratörlü Para Makbuzu Baskı Fiyatları 2026 | Mavi Basım",
+    "metaDescription": "İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren Mavi Basım Matbaa & Reklam; kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı hizmetleri sunmaktadır. Türkiye geneli hızlı kargo ve uygun fiyatlı matbaa çözümleri.",
+    "canonical": "https://mavibasim.com/para-makbuzu",
+    "robots": "",
+    "h1Count": 1,
+    "h1Text": "Numaratörlü Para Makbuzu Baskı Fiyatları",
+    "h2Count": 24,
+    "ogTitle": "Mavi Basım Matbaa & Reklam | En Uygun Fiyatlı Online Matbaa",
+    "ogDescription": "İstanbul profesyonel matbaa, grafik tasarım ve hızlı baskı çözümleri. Türkiye geneli kargo ile teslimat.",
+    "ogImage": "/mavilogo.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdSchemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://mavibasim.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "PARA MAKBUZU",
+            "item": "https://mavibasim.com/para-makbuzu"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "PARA MAKBUZU Baskı",
+        "description": "Mavi Basım yüksek kaliteli PARA MAKBUZU baskı hizmeti. En uygun fiyat ve hızlı teslimat.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Mavi Basım"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://mavibasim.com/para-makbuzu",
+          "priceCurrency": "TRY",
+          "price": "150.00",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://mavibasim.com/#organization"
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/para-makbuzu/numaratorlu-para-makbuzu.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/para-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Logolu numaratörlü otokopili para makbuzu baskısı 14x20 cm"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/para-makbuzu/numaratorlu-para-makbuzu.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/para-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Logolu numaratörlü otokopili para makbuzu baskısı 14x20 cm"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/para-makbuzu/otokopili-para-makbuzu.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/para-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Kendinden karbonlu otokopili para makbuzu formu"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/para-makbuzu/para-makbuzu-kocani.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/para-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Perforajlı telli cilt para makbuzu"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/para-makbuzu/para-makbuzu-ornegi.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/para-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Kırmızı numaratörlü para makbuzu koçanı"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Para Makbuzu ve Otokopili Koçan Baskı & Cilt Üretim Süreci",
+        "description": "Mavi Basım Topkapı tesisimizde CTP kalıp pozlama, Heidelberg ofset baskı, kırmızı otomatik numaratör vurumu, perforaj ve tel dikiş ciltleme imalat adımları.",
+        "thumbnailUrl": "https://mavibasim.com/images/para-makbuzu/numaratorlu-para-makbuzu.webp",
+        "uploadDate": "2026-01-15T09:00:00+03:00",
+        "duration": "PT45S",
+        "contentUrl": "https://mavibasim.com/video/para-makbuzu-uretim.mp4",
+        "embedUrl": "https://mavibasim.com/video/para-makbuzu-uretim",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mavi Basım",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://mavibasim.com/logo.png"
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Para makbuzu ile tahsilat makbuzu aynı şey midir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Benzer amaçlarla kullanılsalar da kullanım alanları farklıdır. Para makbuzu para teslimlerini kayıt altına almak için kullanılırken, tahsilat makbuzu yapılan ödeme veya tahsilat işlemini belgelemek amacıyla düzenlenir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Para makbuzu resmi evrak mıdır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Para makbuzu resmi mali fatura veya e-Fatura niteliğinde değildir. Ancak ödeme ve para teslim işlemlerinin kayıt altına alınmasında kullanılan yazılı bir ticari belgedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Para makbuzu baskısında minimum sipariş miktarı nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Para makbuzu baskılarında minimum sipariş miktarı 5 cilttir. Her cilt kendinden kopyalı 50 takımdan oluşur."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Para makbuzuna firma logosu basılabilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, para makbuzlarına firma logosu, iletişim bilgileri, adres ve IBAN bilgileri ücretsiz grafik mizanpaj desteğimizle eklenebilmektedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Para makbuzu kaç nüsha basılabilir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En çok tercih edilen seçenekler 1 Asıl + 1 Suret (2 nüsha), 1 Asıl + 2 Suret (3 nüsha) ve 1 Asıl + 3 Suret (4 nüsha) şeklindedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Para makbuzu numaratörlü olmak zorunda mıdır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Zorunlu değildir ancak evrak takibi, kayıpların önlenmesi ve arşiv düzeni açısından numaratörlü baskı standart olarak sunulmaktadır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Özel tasarım para makbuzu yaptırabilir miyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, işletmenizin özel tablo gereksinimlerine, kutucuk düzenine veya logo renklerine uygun özel mizanpaj hazırlanabilmektedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Para makbuzu ölçüleri değiştirilebilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standart ebat 14 × 20 cm'dir. Talebe göre 10 × 14 cm (küçük boy) veya A4 (20.5 × 28.5 cm) özel ebatlarda da imalat yapılmaktadır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "İstanbul dışına gönderim yapıyor musunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, İstanbul Topkapı tesisimizde üretilen para makbuzları Türkiye'nin 81 iline kargo ile ulaştırılmaktadır."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Para makbuzu kaç günde basılır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Grafik tasarım onayının ardından para makbuzu baskıları genellikle 3–5 iş günü içerisinde tamamlanarak kargoya teslim edilmektedir."
+            }
+          }
+        ]
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "totalImages": 8,
+    "consoleErrors": []
+  },
+  "/tahsilat-makbuzu": {
+    "route": "/tahsilat-makbuzu",
+    "status": 200,
+    "title": "Tahsilat Makbuzu Baskı Fiyatları | Otokopili ve Numaratörlü Tahsilat Makbuzu Basımı",
+    "metaDescription": "İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren Mavi Basım Matbaa & Reklam; kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı hizmetleri sunmaktadır. Türkiye geneli hızlı kargo ve uygun fiyatlı matbaa çözümleri.",
+    "canonical": "https://mavibasim.com/tahsilat-makbuzu",
+    "robots": "",
+    "h1Count": 1,
+    "h1Text": "Tahsilat Makbuzu Baskı Fiyatları | Otokopili ve Numaratörlü Tahsilat Makbuzu",
+    "h2Count": 20,
+    "ogTitle": "Mavi Basım Matbaa & Reklam | En Uygun Fiyatlı Online Matbaa",
+    "ogDescription": "İstanbul profesyonel matbaa, grafik tasarım ve hızlı baskı çözümleri. Türkiye geneli kargo ile teslimat.",
+    "ogImage": "/mavilogo.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdSchemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://mavibasim.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "TAHSILAT MAKBUZU",
+            "item": "https://mavibasim.com/tahsilat-makbuzu"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "TAHSILAT MAKBUZU Baskı",
+        "description": "Mavi Basım yüksek kaliteli TAHSILAT MAKBUZU baskı hizmeti. En uygun fiyat ve hızlı teslimat.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Mavi Basım"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://mavibasim.com/tahsilat-makbuzu",
+          "priceCurrency": "TRY",
+          "price": "150.00",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://mavibasim.com/#organization"
+          }
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/tahsilat-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Tahsilat makbuzu basım fiyatları"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/tahsilat-makbuzu/tahsilat-makbuzu-ornegi.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/tahsilat-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Logolu tahsilat makbuzu örneği"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/tahsilat-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Otokopili tahsilat makbuzu baskı"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/tahsilat-makbuzu/numaratorlu-tahsilat-makbuzu.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/tahsilat-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Numaratörlü tahsilat makbuzu koçanı"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/tahsilat-makbuzu/tahsilat-makbuzu-kocani.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/tahsilat-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Tahsilat makbuzu koçanı"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/tahsilat-makbuzu/kendinden-karbonlu-tahsilat-makbuzu.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/tahsilat-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Kendinden karbonlu tahsilat makbuzu"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/tahsilat-makbuzu/tahsilat-makbuzu-ornegi.webp",
+        "license": "https://mavibasim.com",
+        "acquireLicensePage": "https://mavibasim.com/tahsilat-makbuzu",
+        "creditText": "Mavi Basım Topkapı Matbaa",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık",
+        "caption": "Kurumsal tahsilat makbuzu tasarımı"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Tahsilat Makbuzu Nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tahsilat makbuzu, işletmeler tarafından kullanılan matbu evraklardan biridir. Alınan ödemelerin ve tahsilat işlemlerinin kayıt altına alınmasına yardımcı olur. İhtiyaca göre otokopili, numaratörlü ve farklı nüsha seçenekleriyle üretilebilmektedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tahsilat Makbuzu Hangi Durumlarda Kullanılır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "İşletmeler, müşterilerinden elden nakit, çek veya senet gibi ödemeler aldıklarında bu ödeme işlemini kayıt altına almak için tahsilat makbuzu düzenler."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tahsilat Makbuzu ile Tediye Makbuzu Farkı Nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tahsilat makbuzu işletmeye bir para girişi olduğunda parayı alan tarafça düzenlenir. Tediye makbuzu ise kasadan para çıkışı yapıldığında ödemeyi yapan tarafça düzenlenir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tahsilat Makbuzu Kaç Nüsha Olarak Basılır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tahsilat makbuzları genellikle 1 Asıl + 1 Suret veya 1 Asıl + 2 Suret olarak üretilmektedir. Talebe göre farklı nüsha seçenekleri de hazırlanabilmektedir. Otokopili baskı sayesinde tüm nüshalar tek seferde doldurulabilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tahsilat Makbuzunda Hangi Bilgiler Bulunmalıdır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standart tahsilat makbuzu tasarımlarında firma bilgileri, tarih alanı, seri ve sıra numarası, açıklama bölümü, tutar alanları ve imza bölümleri bulunur. İşletmenin ihtiyaçlarına göre özel alanlar da eklenebilmektedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Numaratörlü Tahsilat Makbuzu Nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Numaratörlü tahsilat makbuzu, her yaprağında sıralı numara bulunan baskı türüdür. Evrak takibini kolaylaştırır ve belge düzeninin korunmasına yardımcı olur. Özellikle yoğun evrak kullanan işletmeler tarafından tercih edilmektedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tahsilat makbuzu fiyatını hangi özellikler etkiler?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tahsilat makbuzu fiyatları; baskı adedi, nüsha sayısı, cilt miktarı, baskı özellikleri ve tasarım taleplerine göre değişiklik gösterebilir. Numaratörlü tahsilat makbuzu ve otokopili tahsilat makbuzu seçenekleri fiyatlandırmayı etkileyebilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tahsilat Makbuzu Kaç Günde Teslim Edilir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Grafik tasarım onayının ardından üretim süreci genellikle 3-5 iş günü içerisinde tamamlanmaktadır. Teslimat süresi kargo firması ve gönderim adresine göre değişiklik gösterebilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tahsilat makbuzu baskısında minimum sipariş miktarı nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tahsilat makbuzu baskılarında minimum sipariş miktarı 5 cilttir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Tahsilat makbuzlarına firma logosu basılabilir mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, tahsilat makbuzlarına firma logosu, iletişim bilgileri ve kurumsal kimlik unsurları eklenebilmektedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Özel tasarım tahsilat makbuzu yaptırabilir miyim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, işletmenizin ihtiyaçlarına uygun özel tasarımlı tahsilat makbuzları hazırlanabilmektedir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "İstanbul dışına gönderim yapıyor musunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet, tahsilat makbuzu siparişleri Türkiye'nin tüm il ve ilçelerine kargo ile gönderilmektedir."
+            }
+          }
+        ]
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "totalImages": 9,
+    "consoleErrors": []
+  },
+  "/istanbul-matbaa": {
+    "route": "/istanbul-matbaa",
+    "status": 200,
+    "title": "İstanbul Matbaa | Online Baskı, Kartvizit, Broşür, Kutu",
+    "metaDescription": "İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren Mavi Basım Matbaa & Reklam; kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı hizmetleri sunmaktadır. Türkiye geneli hızlı kargo ve uygun fiyatlı matbaa çözümleri.",
+    "canonical": "https://mavibasim.com/istanbul-matbaa",
+    "robots": "",
+    "h1Count": 1,
+    "h1Text": "İstanbul Online Matbaa ve Baskı Hizmetleri",
+    "h2Count": 6,
+    "ogTitle": "Mavi Basım Matbaa & Reklam | En Uygun Fiyatlı Online Matbaa",
+    "ogDescription": "İstanbul profesyonel matbaa, grafik tasarım ve hızlı baskı çözümleri. Türkiye geneli kargo ile teslimat.",
+    "ogImage": "/mavilogo.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdSchemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://mavibasim.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ISTANBUL MATBAA",
+            "item": "https://mavibasim.com/istanbul-matbaa"
+          }
+        ]
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "totalImages": 1,
+    "consoleErrors": []
+  },
+  "/ankara-matbaa": {
+    "route": "/ankara-matbaa",
+    "status": 200,
+    "title": "Ankara Matbaa Firmaları | Online Baskı Siparişi",
+    "metaDescription": "İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren Mavi Basım Matbaa & Reklam; kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı hizmetleri sunmaktadır. Türkiye geneli hızlı kargo ve uygun fiyatlı matbaa çözümleri.",
+    "canonical": "https://mavibasim.com/ankara-matbaa",
+    "robots": "",
+    "h1Count": 1,
+    "h1Text": "Ankara Matbaa Hizmetleri",
+    "h2Count": 3,
+    "ogTitle": "Mavi Basım Matbaa & Reklam | En Uygun Fiyatlı Online Matbaa",
+    "ogDescription": "İstanbul profesyonel matbaa, grafik tasarım ve hızlı baskı çözümleri. Türkiye geneli kargo ile teslimat.",
+    "ogImage": "/mavilogo.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdSchemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://mavibasim.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ANKARA MATBAA",
+            "item": "https://mavibasim.com/ankara-matbaa"
+          }
+        ]
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "totalImages": 1,
+    "consoleErrors": []
+  },
+  "/blog": {
+    "route": "/blog",
+    "status": 200,
+    "title": "Matbaa ve Baskı Blogu | Grafik Tasarım Rehberi - Mavi Basım",
+    "metaDescription": "İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren Mavi Basım Matbaa & Reklam; kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı hizmetleri sunmaktadır. Türkiye geneli hızlı kargo ve uygun fiyatlı matbaa çözümleri.",
+    "canonical": "https://mavibasim.com/blog",
+    "robots": "",
+    "h1Count": 1,
+    "h1Text": "Matbaa ve Tasarım Rehberi Kılavuzları",
+    "h2Count": 1,
+    "ogTitle": "Mavi Basım Matbaa & Reklam | En Uygun Fiyatlı Online Matbaa",
+    "ogDescription": "İstanbul profesyonel matbaa, grafik tasarım ve hızlı baskı çözümleri. Türkiye geneli kargo ile teslimat.",
+    "ogImage": "/mavilogo.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdSchemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "totalImages": 32,
+    "consoleErrors": []
+  },
+  "/blog/ofset-baski-nasil-yapilir": {
+    "route": "/blog/ofset-baski-nasil-yapilir",
+    "status": 200,
+    "title": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları - Mavi Basım",
+    "metaDescription": "İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren Mavi Basım Matbaa & Reklam; kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı hizmetleri sunmaktadır. Türkiye geneli hızlı kargo ve uygun fiyatlı matbaa çözümleri.",
+    "canonical": "https://mavibasim.com/blog/ofset-baski-nasil-yapilir",
+    "robots": "",
+    "h1Count": 1,
+    "h1Text": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+    "h2Count": 2,
+    "ogTitle": "Mavi Basım Matbaa & Reklam | En Uygun Fiyatlı Online Matbaa",
+    "ogDescription": "İstanbul profesyonel matbaa, grafik tasarım ve hızlı baskı çözümleri. Türkiye geneli kargo ile teslimat.",
+    "ogImage": "/mavilogo.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdSchemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://mavibasim.com/blog/ofset-baski-nasil-yapilir"
+        },
+        "headline": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+        "image": "https://mavibasim.com/images/hakkimizda/tecrube-matbaa.webp",
+        "datePublished": "2026-06-04T08:00:00+03:00",
+        "dateModified": "2026-07-06T10:00:00+03:00",
+        "author": {
+          "@type": "Organization",
+          "name": "Mavi Basım Üretim Ekibi",
+          "url": "https://mavibasim.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mavi Basım",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://mavibasim.com/mavilogo.png"
+          }
+        },
+        "description": "Ofset baskı teknolojisinin tüm detaylarını, kalıp hazırlamadan mürekkep ayarlarına ve kurutma aşamalarına kadar teknik adımlarıyla keşfedin."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Anasayfa",
+            "item": "https://mavibasim.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://mavibasim.com/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Teknik & Baskı",
+            "item": "https://mavibasim.com/blog?category=Teknik%20%26%20Bask%C4%B1"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+            "item": "https://mavibasim.com/blog/ofset-baski-nasil-yapilir"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ofset baskı için minimum sipariş adedi nedir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ofset baskıda kurulum firesi ve kalıp hazırlığı maliyetli olduğundan, ekonomik fiyatlar elde etmek için minimum 1.000 adet sipariş verilmesi önerilir."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ofset baskıda hangi mürekkepler kullanılır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mavi Basım olarak gıda ambalajlarında koku yapmayan, sağlığa uygun bitkisel soya bazlı yüksek pigmentli Avrupa mürekkepler kullanmaktayız."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "contentUrl": "https://mavibasim.com/images/hakkimizda/tecrube-matbaa.webp",
+        "license": "https://mavibasim.com/lisans",
+        "acquireLicensePage": "https://mavibasim.com/blog/ofset-baski-nasil-yapilir",
+        "creditText": "Mavi Basım Tasarım Ekibi",
+        "creator": {
+          "@type": "Organization",
+          "name": "Mavi Basım"
+        }
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "totalImages": 7,
+    "consoleErrors": []
+  },
+  "/non-existent-404-check": {
+    "route": "/non-existent-404-check",
+    "status": 200,
+    "title": "404 - Şehir Matbaa Sayfası Bulunamadı | Mavi Basım",
+    "metaDescription": "İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren Mavi Basım Matbaa & Reklam; kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı hizmetleri sunmaktadır. Türkiye geneli hızlı kargo ve uygun fiyatlı matbaa çözümleri.",
+    "canonical": "https://mavibasim.com/non-existent-404-check",
+    "robots": "noindex, follow",
+    "h1Count": 1,
+    "h1Text": "Şehir Matbaa Sayfası Bulunamadı",
+    "h2Count": 1,
+    "ogTitle": "Mavi Basım Matbaa & Reklam | En Uygun Fiyatlı Online Matbaa",
+    "ogDescription": "İstanbul profesyonel matbaa, grafik tasarım ve hızlı baskı çözümleri. Türkiye geneli kargo ile teslimat.",
+    "ogImage": "/mavilogo.png",
+    "twitterCard": "summary_large_image",
+    "jsonLdSchemas": [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://mavibasim.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "NON EXISTENT-404-CHECK",
+            "item": "https://mavibasim.com/non-existent-404-check"
+          }
+        ]
+      }
+    ],
+    "imagesWithoutAlt": 0,
+    "totalImages": 1,
+    "consoleErrors": []
+  }
+}
