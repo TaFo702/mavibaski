@@ -1,0 +1,376 @@
+n, boy ve yükseklik ölçülerini milimetrik olarak ölçmeniz yeterlidir. Müşteri temsilcilerimiz ürününüzün ağırlığına ve hassasiyetine göre Amerikan Bristol, Kromo Karton veya Mikro Oluklu Mukavva arasından en doğru malzemeyi ve kutu modelini ücretsiz olarak belirleyecektir."},{question:"Gıda ambalajlarında kullandığınız kartonlar sağlıklı mıdır?",answer:"Evet. Gıda ürünleriyle doğrudan temas eden tüm ambalaj kutularımızda, Tarım ve Orman Bakanlığı gıda temas sertifikalı, koku yapmayan, %100 saf selüloz Amerikan Bristol gıda kartonları kullanıyoruz."},{question:"Şehir dışına (İstanbul dışına) gönderimlerde ambalajlar kargoda ezilir mi?",answer:"Hayır. Mavi Basım olarak Türkiye’nin 81 iline sevkiyat yapıyoruz. Kutularınızı açık (katlanmamış) olarak, özel koruyucu paletler üzerine çift kat balonlu naylonlarla sararak veya kalın mukavemetli koli kutularıyla paketleyerek kargoya teslim ediyoruz. Kargo ve ambar taşıması sırasında en ufak bir ezilme veya deformasyon riski yaşanmaz."}]},{slug:"el-ilani-dagitimi-ise-yariyor-mu",title:"El İlanı Dağıtımı İşe Yarıyor mu? Bölgesel Reklamın Geri Dönüş Oranları",excerpt:"El ilanı dağıtımının gerçek dönüş oranları, sektörel başarı analizleri, doğru ebat seçimleri ve kampanya öncesi kontrol listesi.",date:"16 Mayıs 2026",readTime:"6 Dk Okuma",category:"Yerel Reklam",image:"/images/el-ilani/yerel-reklam-el-ilani.webp",schemaType:"Article",content:`## El İlanı Dağıtımı ve Yerel Reklamın Geri Dönüş Oranları
+
+Girişimcilerin dijital kanallardaki yüksek reklam maliyetlerine alternatif olarak tercih ettiği yerel el ilanları, dükkan etrafındaki 3 kilometrelik çemberde yaşayan potansiyel alıcıların tamamına doğrudan ulaşmanın en etkili yerel iletişim aracıdır. Doğru planlandığında, bölgesel el ilanı kampanyaları oldukça yüksek geri dönüş oranları sağlayabilir. Detaylı ürün ve ebat seçeneklerimizle bütçenizi optimize etmek için [El İlanı Fiyat Listesi](/el-ilani) sayfamızı inceleyebilirsiniz.
+
+**Stratejik El İlanı Dağıtım Planı ve Hedef Bölgeler**
+**Bölgesel tanıtım materyallerinizi bastırdıktan sonra hedefe ulaşmanın yolu plansızca sokakta dağıtmaktan değil, sektöre uygun stratejik konumlarda nokta atışı çalışmaktan geçer:**
+
+*(Lütfen dikkat: Mavi Basım olarak esnaflarımızın ve markalarımızın el ilanı, broşür, magnet ve kartvizit gibi tüm kurumsal baskı ihtiyaçlarını yüksek ofset teknolojisiyle üretmekteyiz. El ilanı dağıtım hizmetimiz bulunmamaktadır; bu rehberdeki dağıtım planlamaları ve stratejik öneriler, müşterilerimizin bastırdıkları ilanlardan maksimum geri dönüş almalarını sağlamak amacıyla hazırlanmış danışmanlık tavsiyeleridir.)*
+
+**El İlanı Dağıtımında Dikkat Edilmesi Gereken Yasal ve Etik Kurallar**
+Apartman ve site yönetimlerinin ilan bırakma kuralları farklı olabilir. Belediye tarafından ilan dağıtımı yasaklanan alanlarda çalışma yapılmamalıdır. Araç camlarına izinsiz broşür bırakılması bazı bölgelerde şikayet konusu olabilir. Çevre kirliliğine neden olacak rastgele dağıtımlar marka algısını olumsuz etkileyebilir. İzinli ve hedef odaklı dağıtım, hem marka güvenini hem dönüşüm oranını artırır.
+
+Aşağıdaki karşılaştırma tablosunda hangi işletmenin hangi lokasyonları, ne zaman hedeflemesi gerektiği özetlenmiştir:
+
+| İşletme Türü | En Etkili Dağıtım Lokasyonları | En Uygun Gün & Saat Dilimi | Stratejik Dağıtım Tüyosu |
+| :--- | :--- | :--- | :--- |
+| **Restoran / Paket Servis** | Evlerin posta kutuları, kapı askıları, yakın plazalar | Perşembe - Pazar / 16:30 - 19:30 | İlana mutlaka güncel paket servis menüsü ve özel bir kupon kodu ekleyin. |
+| **Halı Yıkama / Temizlik** | Apartman girişleri, posta kutuları, siteler | Mart - Mayıs ve Eylül - Kasım ayları | Bahar temizliği dönemlerinde cazip indirim paketleri sunarak aciliyet hissi yaratın. |
+| **Güzellik / Kuaför** | Yakın siteler, kadınların yoğun olduğu caddeler | Hafta içi / 12:00 - 16:00 | "İlk fön veya saç kesimine özel %30 tanışma indirimi" gibi deneme bariyerini düşüren teklifler sunun. |
+| **Su Bayisi / Esnaf** | Daire kapı kolları, apartman panoları | Her gün / 10:00 - 18:00 | İlanın magnet formunda olması buzdolabında kalıcı olmasını sağlar, [magnet sayfamızı inceleyin](/magnet). |
+
+**Kampanya Öncesi 6 Maddelik Altın Kontrol Listesi**
+
+Baskı siparişi vermeden ve ilanları sokaklara salmadan önce, reklam verimliliğini korumak için şu detayları mutlaka kontrol edin:
+
+1. **Telefon Numarası Kontrolü:** İlanda yazan sabit ve WhatsApp hatlarının doğru, aktif ve çağrı alabiliyor olduğundan emin olun (En sık yapılan matbaa hatasıdır!).
+2. **Adres ve Konum Doğruluğu:** Açık adresin, yol tarifinin veya gerekirse dükkanın haritadaki konumuna giden kısa bir adres bilgisinin doğruluğunu teyit edin.
+3. **QR Kod Testi:** İlana yerleştirilen QR kodun mobil cihazlarda hızlıca taranıp taranmadığını ve doğru web sitesine/sosyal medyaya yönlendirdiğini mutlaka test edin. (Eğer broşürlerinize ek olarak ürünlerinize yapıştıracağınız rulo veya tabaka etiketler de düşünüyorsanız, [Etiket Baskı](/etiket) sayfamızdaki taranabilir şık karekodlu tasarımları da inceleyebilirsiniz.)
+4. **Dil ve Yazım Kuralları Kontrolü:** İlan üzerindeki başlıklar, fiyatlar ve kampanya şartları son kez okunmalı, yazım hataları düzeltilmelidir. Hatalı basılan binlerce ilan düzeltilemez bir bütçe kaybına yol açar.
+5. **Ölçü ve Kesim Payı Güvencesi:** İlanınızın kesilirken yazılarının gitmemesi için kenarlardan en az 3 mm taşma payı verildiğinden emin olun. (Kartvizit hazırlığı yaparken yapılan benzer kritik hataları incelemek için [Kartvizit Tasarım Hataları](/blog/kartvizit-tasarlar-iken-yapilan-hatalar) rehberimize göz atabilirsiniz.)
+6. **Baskı Malzemesi ve Gramaj Uyumu:** Hedef kitleye ulaşacak ilanın yırtılmaması ve tok durması için ideal kuşe gramajının (örn. 135 gr veya 170 gr) seçildiğinden emin olun.
+`,faq:[{question:"El ilanı dağıtımında en etkili gün hangisidir?",answer:"Paket servis ve restoranlar için Perşembe-Pazar arası akşam saatleri; genel hizmet ve yerel dükkanlar için ise Cumartesi günleri en yüksek dönüşüm oranını sağlar."},{question:"10.000 adet el ilanı dağıtımından ne kadar geri dönüş alabilirim?",answer:"Yerel ve doğru hedef kitleye yapılan dağıtımlarda geri dönüş oranı sektöre bağlı olarak %1 ile %3 arasında değişmektedir."}]},{slug:"kartvizit-tasarlar-iken-yapilan-hatalar",title:"Kartvizit Tasarlar İken Yapılan En Büyük 5 Grafik Hatası ve Çözümleri",excerpt:"Tasarımcıların ve esnafların kartvizit hazırlarken düştüğü taşma payı, zayıf kontrast, yanlış harf boyutu gibi imalatı durduran temel hataların önlenmesi.",date:"12 Mayıs 2026",readTime:"7 Dk Okuma",category:"Kartvizit & Prestij",image:"/images/kartvizit/kartvizit-baski.webp",schemaType:"Article",content:`## Kartvizit Tasarlar İken Yapılan En Büyük 5 Grafik Hatası ve Çözümleri
+
+Bir kartvizit ilk el sıkışma anında kurumunuzun prestijini doğrudan aktarır. Ancak grafik tasarım süreçlerinde yapılan küçük hatalar, kartvizitin kesilirken yazıların gitmesine sebep olabilir.
+
+Hatasız [Üstün Kartvizit Baskısı](/kartvizit) yaptırabilir, kartlarınızı şıkça saklayacağınız [Kurumsal Zarflar sayfasına](/zarf) ait modelleri görebilir ve resmi yazışmalar için [Antetli Kağıt sayfasına](/antetli) yönelik tasarımları inceleyebilirsiniz.
+
+:::info-cards
+Okunamayan Küçük Fontlar
+- Tasarımı ekranda %200 büyüterek çalıştığınız için yazılar gözünüze büyük gelebilir.
+- Ancak fiziksel kartvizit ölçüleri ortalama 84x52 mm veya 85x54 mm civarındadır.
+- 6 punto ve altındaki metinler ofset baskı merdanesinde çizgiye binerek birbirine girer.
+- Metinler ve telefon numaraları en az **8 punto** ve tırnaksız (sans-serif) yazılmalıdır.
+---
+Dört Renk Siyah Karışımı
+- Küçük siyah metinleri zengin siyah (C:100 M:100 Y:100 K:100) olarak tasarlama hatası.
+- Ofset makinelerindeki dikey farklı renk ünitesi kağıda aynı noktada vururken kayma yapar.
+- Bu minimal kayma, küçük siyah yazıların etrafında renkli gölgeler (çiftleme) yaratır.
+- Küçük siyah metinleri sadece **K:100** (Pure Black) olarak tanımlamalısınız.
+---
+Yetersiz Renk Kontrastı
+- Koyu gri zemin üzerine siyah yazı veya açık mavi üzerine beyaz yazılar yerleştirmek.
+- Matbaa mürekkebinin kağıda emilme payı ekrandaki parlak zıtlığı her zaman bir miktar düşürür.
+- Okunabilirliği garanti altına almak için metin ve zemin arasında yüksek kontrast olmalıdır.
+:::
+
+---
+
+## Kartvizit Baskısında Sıkça Karşılaşılan Pitfall'lar
+
+:::warning-box
+- 350 gram altındaki fason kartonlar seçmek (Elde saniyeler içinde bükülür).
+- Güvenli alan sınırına (kesim çizgisinden en az 5 mm içeriye) yazıları yaklaştırmak.
+- Kabartma lak alanlarını çok ince ve saç kılı kalınlığında tasarlamak (Lak tutmaz).
+- Arka yüze de parlak selefon kaplatıp üzerine dolma kalemle not yazılamaması.
+:::
+
+---
+
+## Mavi Basım Kusursuz Kartvizit Baskı Teknolojisi
+
+:::importance-cards
+350g Premium Bristol | Kartvizitinizin eldeki lüks duruşunu garanti altına alan, asla bükülmeyen ve sararmayan ithal birinci sınıf Bristol mukavva kalitesi.
+Saf Siyah K:100 Teknolojisi | Küçük harf ve telefon numaralarında asla renk kayması ve gölgelenme yaşatmayan saf siyah mürekkep döküm kalibrasyonu.
+Lokal Lak & Gofre Kontrastı | Mat selefon kaplı yüzey üzerine logonuzun pürüzsüz kabartılarak parlamasını sağlayan Spot UV ünitelerimiz.
+Lazer Oval Köşe Kesimi | Cüzdanlarda ve ceplerde kartvizit köşelerinin bükülüp aşınmasını önleyen estetik oval köşe bıçakları.
+:::
+
+---
+
+## Kartvizit Tasarım Standartları Tablosu
+
+| Grafik Parametresi | YANLIŞ UYGULAMA | DOĞRU UYGULAMA (Mavi Basım Standardı) |
+| :--- | :--- | :--- |
+| **Yazı Harf Boyutu** | 6 punto ve altı (Okunamaz) | **8 punto ve üzeri** (Net ve Okunaklı) |
+| **Siyah Yazı Rengi** | C:100 M:100 Y:100 K:100 (Golgeli) | **Yalnızca K:100 (Saf Siyah)** (Keskin Baskı) |
+| **Güvenli Alan Sınırı** | Kesim çizgisine 1-2 mm yakınlık | **Kesimden en az 5 mm içeride** (Güvenli Bölge) |
+| **Arka Plan Taşması** | Tam kesim ölçüsünde bitirmek | **Kenarlardan en az +3 mm taşma payı** |
+
+---
+
+:::cta
+TITLE: Prestijli Kartvizit Baskısı
+DESC: Firmanızın kurumsal imajını en şık şekilde yansıtacak, lak kabartmalı ve çift taraflı lüks kartvizitlerin grafik tasarımından basımına kadar tüm süreçlerini yürütüyoruz. Kaliteli kartvizit siparişi vermek için hemen yazın.
+BTN_TEXT: WhatsApp Kartvizit Hattı
+BTN_LINK: https://wa.me/905321234567
+:::`,faq:[{question:"Dört renk karışımı siyah nerelerde kullanılır?",answer:"Sadece büyük ve kalın siyah arka plan alanlarında daha derin, parlak siyah elde etmek için K:100 yanına C:30, M:30 eklenerek zenginleştirilmiş siyah tercih edilmelidir."}]},{slug:"etiket-baskida-rulo-mu-tabaka-mi",title:"Rulo Etiket mi Tabaka Etiket mi? Ambalajınıza En Uygun Ürün Seçimi",excerpt:"Pastane, kozmetik, lojistik ve endüstriyel ambalajlarda kuşe ve opak etiketlerin rulo veya tabaka halinde sipariş edilmesinin maliyet, adet ve zaman avantajları.",date:"11 Mayıs 2026",readTime:"8 Dk Okuma",category:"Kutu & Ambalaj",image:"/images/etiket/yapiskanli-etiket-baski.webp",schemaType:"Article",content:`## Rulo Etiket mi Tabaka Etiket mi? Ambalajınıza En Uygun Ürün Seçimi
+
+Kozmetik ambalajları, gıda kavanozları veya kargo kutularının üzerine yapıştırılan etiketlerin formatı imalat maliyetlerinize ve operasyonel iş gücünüze doğrudan etki eder. Ambalaj yapısına göre doğru malzeme ve rulo/tabaka formatı seçimi bütçenizi korumanın temelidir. En güncel standart ölçü fiyatlarımızı saniyeler içinde karşılaştırmak ve siparişinizi bütçe limitlerinize göre planlamak için doğrudan [Yapışkanlı Etiket Fiyat Listesi](/etiket) sayfamızı ziyaret edebilirsiniz.
+
+Ayrıca ambalajlarınız için [Özel Kutu Baskı](/kutu) tasarımlarımızı inceleyebilir, şık paket taşımaları için [Karton Çanta](/karton-canta) modellerimizi görebilirsiniz.
+
+:::quick-decision
+TITLE: ⚡ 30 Saniyede Doğru Malzemeyi Bulun (Pratik Özet)
+- 📦 **Kargo Kutusu, Kuru Gıda ve Barkodlar:** En ekonomik çözüm için yarı parlak yüzeyli **Kuşe Etiket** tercih edin.
+- 💧 **Su, Nem, Yağ ve Kimyasal Teması:** Islak alanlar ve yıkanan kaplar için yırtılmaz **PP Opak Plastik** seçin.
+- 🔍 **Cam Şişe ve Kavanozlarda Şık Saydamlık:** Ürünün içini gösteren pürüzsüz görünüm için **Şeffaf Etiket** kullanın.
+- 🏷️ **Sipariş Adedi 1.000 Adet Altında ise:** Bobin makine kurulum ücretlerinden kaçınmak için plakalar halinde kesilen **Tabaka Etiket** seçilmelidir.
+- 🏭 **Sipariş Adedi 1.000 ve Üzerinde ise:** Otomatik yapıştırma makinelerine uyum ve düşük birim fiyat için bobine sarılı **Rulo Etiket** seçilmelidir.
+:::
+
+## Hızlı Karar Tablosu
+
+Aşağıdaki pratik eşleştirme tablosuyla aradığınız temel kritere göre en uygun çözümü anında belirleyebilirsiniz:
+
+| Temel İhtiyacınız | Seçmeniz Gereken Malzeme ve Formatı | Örnek Kullanım Alanları |
+| :--- | :--- | :--- |
+| **Suya ve neme ultra dayanıklı olsun** | [PP Opak Etiket Baskısı](/etiket) (Plastik) | Şampuan, duş jeli, zeytinyağı, turşu şişeleri |
+| **Cam kavanozun/sıvının içi net görünsün** | [Şeffaf Etiket Baskısı](/etiket) (Saydam) | Bal, reçel, lüks kozmetik ve serum kavanozları |
+| **En ekonomik, bütçe dostu çözüm olsun** | [Kuşe Etiket Baskısı](/etiket) (Kuşe Kağıt) | Kargo kolileri, barkodlar, kuru gıda paketleri |
+| **Otomatik makinede/seri bantta yapıştırılacak** | **Rulo Etiket** (Bobine Sarım Formatı) | Seri imalat hatları, yüksek hızlı etiketleme |
+| **Elle tek tek, butik şekilde yapıştırılacak** | **Tabaka Etiket** (Plaka Halinde Yarım Kesim)| Butik mum atölyeleri, kısıtlı adetli özel seriler |
+
+### Hangi Etiketi Seçmeliyim? Karar ve Kullanım Senaryosu Tablosu
+
+| Kullanım Senaryosu / İhtiyaç | Önerilen Etiket Türü | Tercih Nedeni |
+| :--- | :--- | :--- |
+| Otomatik etiketleme makinesiyle hızlı şişe yapıştırma | **Rulo PP Opak Plastik** | Bobin akışına uygunluk, makine hızında sıfır kopma |
+| Cam kavanoz içindeki reçel veya sosun net görünmesi | **Şeffaf Plastik Etiket** | Saydam yapısı sayesinde arkadaki ürünü mükemmel sergileme |
+| Nemli, ıslak banyo ortamındaki şampuan ve duş jeli şişeleri | **PP Opak Plastik Etiket** | Su, nem ve yağa karşı tam koruma, kabarma yapmama |
+| Kargo kolileri, sevkiyat barkodları ve lojistik etiketleri | **Tabaka Termal / Kuşe Etiket** | Çok düşük maliyet, pratik elle soyma ve hızlı kullanım |
+| Butik mum, el yapımı sabun, az adetli özel tasarımlar | **Tabaka Kuşe Etiket** | Düşük siparişlerde kalıp maliyetsiz ve çok bütçe dostu |
+| Derin dondurucuya veya soğuk dolaba girecek gıdalar | **PP Opak (Deep Freeze Tutkallı)** | Soğuk hava ve yoğuşma altında yapışkanlığını koruma |
+
+:::cta
+TITLE: Saniyeler İçinde Etiket Fiyatınızı Hesaplayın
+DESC: Karar verdiğiniz etiket türünün güncel fiyat listesine ulaşmak ve anında siparişinizi planlamak için fiyat hesaplama sayfamızı ziyaret edin.
+BTN_TEXT: Yapışkanlı Etiket Fiyat Listesi
+BTN_LINK: /etiket
+:::
+
+## Pratik Adımlarla Seçim Karar Ağacı
+
+Doğru ambalaj etiketini saniyeler içinde belirlemek için şu mantıksal karar adımlarını takip edebilirsiniz:
+
+1. **Ürününüz sıvı, su, nem veya yoğun yağ ile temas ediyor mu?**
+   - **Evet** → Suya dayanıklı polimer yapılı **PP Opak** veya **Şeffaf** malzemelere yönelin. (Bkz: [Ofset Baskı ile Dijital Baskı Farkları](/blog/ofset-baski-ile-dijital-baski-farki))
+   - **Hayır** → En ekonomik olan yarı parlak kağıt tabanlı **Kuşe** malzemeyi seçin. (Bkz: [Kuşe Kağıt ve Bristol Karton Farkları](/blog/kuve-kagit-ve-bristol-karton-farklari))
+2. **Ambalaj yüzeyinde şık bir saydamlık veya cam/sıvı netliği hedefleniyor mu?**
+   - **Evet** → Şeffaf malzeme tercih edin (arkasına renklerin kaybolmaması için örtücü beyaz astar baskı uygulanır).
+   - **Hayır** → Zemin rengini kapatan canlı beyaz yüzeyli PP Opak malzeme tercih edin.
+3. **Etiket ambalaj üzerine nasıl yapıştırılacak?**
+   - **Otomatik Makine veya Seri Bant** → Bobine sarılı, pürüzsüz taşıyıcılı **Rulo** formatını seçmelisiniz. (Minimum teknik limit: 1.000 Adet)
+   - **El ile (Manuel / Butik)** → Taşıması ve soyulması pratik olan plakalar halindeki **Tabaka** formatını seçebilirsiniz. (Minimum teknik limit: 100 Adet)
+4. **Planlanan veya hedeflediğiniz sipariş adediniz nedir?**
+   - **1.000 Adet Altı (Düşük/Butik)** → Kalıp maliyeti sıfır olan ve dijital kesim yapılan **Tabaka** her koşulda en avantajlı seçenektir.
+   - **1.000 - 5.000 Adet ve Üzeri (Yüksek/Endüstriyel)** → Birim fiyatı dramatik şekilde düşen endüstriyel **Rulo** seçilmeli ve bobin sipariş avantajlarından faydalanılmalıdır.
+
+## Kullanım Sınırları ve Kaçınılması Gerekenler
+
+Farklı etiket türlerinin ve formatlarının uygun olmadığı bazı kritik sakıncalı kullanım durumları şunlardır:
+
+- **Kuşe Kağıt Malzemeler:** Islak, nemli banyo ortamlarında veya sızma riski olan zeytinyağı, kimyasal deterjan ambalajlarında kullanılmamalıdır. Kağıt yapısı sıvıyı emerek buruşur, yırtılır ve marka kalitesine zarar verir.
+- **PP Opak Plastik Malzemeler:** Çok düşük adetli (100-200 adet) siparişlerde, rulo formatında makine kurulum maliyetleri nedeniyle bütçe dostu değildir. %100 ekolojik/doğal doku hedefleniyorsa plastik yapısından ötürü tercih edilmemelidir.
+- **Şeffaf Plastik Malzemeler:** Koyu renkli sıvı veya yüzeylerin üzerine beyaz alt astar baskısı olmadan yapıştırılmamalıdır; yazılar ve logolar okunmaz hale gelir. Çok pürüzlü yüzeylerde hava kabarcığı gösterebilir.
+
+:::info-cards
+Rulo Formattaki Ürünler
+- Şerit halinde bir bobine sarılmış, arkası pürüzsüz silikonlu taşıyıcıya sahip etiketlerdir.
+- Otomatik etiketleme makinelerine ve seri üretim bantlarına tam uyum gösterir.
+- El değmeden, saniyeler içinde binlerce ürüne yapıştırılarak iş gücünden %90 tasarruf sağlar.
+- Sıvı ambalajları ve yüksek hızlı endüstriyel hatlar için son derece verimlidir.
+---
+Tabaka Formattaki Ürünler
+- A4 veya A3 boyutlarındaki düz plakalar üzerine yarım kesimli olarak dizilmiş etiketlerdir.
+- Herhangi bir otomatik makine parkuru gerektirmez, el yardımıyla sökülüp pratik şekilde yapıştırılır.
+- Düşük adetli siparişlerde (100 - 500 adet) kalıp maliyeti olmadığı için çok hesaplıdır.
+- Butik dükkanlar, el yapımı tasarımlar ve küçük ölçekli gönderimler için idealdir.
+- Su ve neme karşı tam koruma sağlayan [PP Opak Etiket Baskı](/etiket) ve cam şişelerinize şık bir görünüm kazandıran [Şeffaf Etiket Baskı](/etiket) çözümlerimizi de inceleyebilirsiniz.
+:::
+
+## Sektörel İhtiyaçlar ve Öneriler
+
+Ürününüzün bulunduğu sektöre ve ambalajın maruz kalacağı koşullara göre doğru seçim yapmak, ürünün raftaki kalıcılığını doğrudan etkiler:
+
+- **Kozmetik ([Şampuan](/etiket), Krem, Losyon):** Kozmetik ambalajları banyo ve duş gibi ıslak alanlarda durur. Üzerine krem veya bitkisel yağ bulaşma riski yüksektir. Bu sektör için mutlaka polipropilen bazlı rulo formatlar kullanılmalıdır. Sıradan kağıt yüzeyler ıslanarak kısa sürede yırtılır veya kalkar.
+- **Gıda & Şarküteri (Peynir, Sosis, Yoğurt):** Soğutucu dolaplarda yoğuşma kaynaklı neme maruz kalan [gıda](/ambalaj) ambalajları için plastik bazlı koruyucu kaplamalar en güvenli seçenektir. Ürün dondurucuya (Deep Freeze) girecekse, özel akrilik dondurucu tutkallı çözümler tercih edilmelidir.
+- **Bal & Reçel:** Cam kavanozun içindeki bal veya reçelin net görünmesi, müşteride satın alma güvenini artırır. Bu yüzden şeffaf plastikler (arka beyaz astar baskılı) veya el yapımı butik hissi uyandıran dokulu kuşe kağıtlar en doğru seçimdir.
+- **Zeytinyağı:** Şişelerde sızan yağın etiketi lekelemesi sık yaşanır. Kağıt dokular yağı emerek lekelenirken, plastik bazlılar yağı geçirmez ve kolayca silinerek temiz kalır.
+- **Baharat & Kuruyemiş:** Kilitli [doypack](/ambalaj) ambalajlar veya kavanozlar için pürüzsüz duruşuyla kuşe malzemeler maliyet açısından son derece idealdir.
+- **Tekstil:** Ürünlerin üzerine yapıştırılan [barkod](/etiket), beden ve fiyat etiketlerinde iz bırakmayan hafif tutkallı kuşe veya karton sallama modeller tercih edilmelidir.
+- **Kargo & Lojistik:** Kargo poşetleri ve kutularında hız en önemli faktördür. Barkod yazıcılardan hızlıca çıkarılabilen tabaka termal veya kuşe modeller en ekonomik ve hızlı çözümdür.
+- **Kimyasal Ürünler (Deterjan, Endüstriyel Yağlar):** Ağır kimyasallara ve dış çevre koşullarına maruz kalan deterjan bidonları için aşınmaya dayanıklı plastikler tek seçenektir.
+
+## Baskı ve Uygulamalarda Sık Yapılan Hatalar
+
+:::warning-box
+- Nemli ve ıslak yüzeylerde sıradan kağıt bazlı kuşe seçenekler kullanmak (nem kapınca buruşur).
+- Rulo formatlarda otomatik makinenin sarım yönünü (akış yönü) yanlış sipariş etmek (doğru sarım yönünü seçerken dikkat etmeniz gereken teknik kuralları öğrenmek için aşağıdaki [Rulo Sarım Yönü Rehberi SSS](#faq) bölümümüzü okuyabilirsiniz).
+- Metal veya pürüzlü ahşap yüzeylere zayıf yapışkanlı genel akrilik tutkal uygulamak.
+- Şeffaf filmlerin altına beyaz zemin astarı (underwhite) dökülmesini talep etmemek (renklerin zayıf görünmesine yol açar).
+:::
+
+## Mavi Basım Üstün Ürün Çözümleri
+
+:::importance-cards
+Güçlü Tutkal | Cam, metal ve plastik yüzeylere yüksek tutunma sağlayan ithal akrilik yapışkan formülü.
+PP Opak | Islak zeminlerde yırtılmayan, neme ve sıvı temaslarına dayanıklı polipropilen etiket teknolojisi.
+Lazer Kesim | Arkasındaki silikon kağıdı koruyarak etiketi milimetrik kesen hassas yarım kesim sistemi.
+Şeffaf Astar | Şeffaf filmlerde renklerin net okunmasını sağlayan arka beyaz örtücü boya uygulaması.
+:::
+
+:::gallery
+/images/etiket/etiket-baski-ornegi.webp | Yarım Kesim Detayı | PP opak etiketlerimizin arkasındaki koruyucu silikon kağıdı çizmeden yapılan milimetrik yarım kesim (kiss-cut) kalitesi; manuel yapıştırmada soyulma hızını 3 kat artırarak işçilikten tasarruf sağlar.
+/images/etiket/kuse-gorsel-etiket.webp | Kuşe Etiket Baskısı | Kuşe kağıt etiketlerimizin canlı renk geçirgenliği ve pürüzsüz selefon kaplaması; kuru gıda ve kutularda premium marka algısı oluşturarak satışları destekler.
+/images/etiket/rulet-etiket-tasarimi.webp | Rulo Sarım Hattı | Otomatik etiketleme makinelerine tam uyumlu, bobine hatasız sarılmış rulo etiketler; seri üretim hatlarında sıfır kopma ve tıkanma garantisiyle duraksız imalat imkanı verir.
+/images/etiket/etiket-baski-fiyatlari.webp | Canlı Renk Doğruluğu | CMYK ve Pantone standartlarına uygun renk kalibrasyonuyla basılmış etiket ruloları; kurumsal renklerinizin her partide birebir tutarlı kalmasını sağlar.
+/images/etiket/uretim-teslimat.webp | Güvenli Ambalaj ve Sevk | İstanbul Topkapı'daki tesislerimizde basılan ve spektrofotometre ile renk doğruluğu onaylanan rulolarınız, ezilmeyi önleyici koruyucu ambalajlarla Türkiye'nin her yerine hasarsız sevk edilir.
+:::
+
+## Baskı Yöntemi Seçimi
+
+Etiketlerin imalatında kullanılan baskı teknolojisi, sipariş adedine, grafik detaylarına ve kullanım amacına göre seçilir. Hangi türde hangi baskı metodunun, hangi adetlerde ve ne tür avantajlar sağladığını aşağıdaki karşılaştırma tablomuzda özetledik:
+
+| Ürün Türü | Baskı Yöntemi | Önerilen Adet | Öne Çıkan Avantajı |
+| :--- | :--- | :--- | :--- |
+| **Tabaka Kuşe** | Profesyonel Dijital Baskı | 100 - 500 Adet | Sıfır kalıp maliyeti, butik işlerde maksimum bütçe tasarrufu |
+| **Rulo Kuşe** | Endüstriyel Flexo Baskı | 5.000 Adet ve Üzeri | Seri üretimde ultra düşük birim maliyeti, hızlı otomatik etiketleme |
+| **Tabaka PP Opak** | Dijital Lazer Baskı | 100 - 1.000 Adet | Düşük adette suya dayanıklılık, özel kesim kalıbı gerektirmez |
+| **Rulo PP Opak** | UV Flexo / Dijital Rulo | 2.000 Adet ve Üzeri | Yırtılmazlık, suya, neme ve kimyasallara karşı maksimum direnç |
+| **Şeffaf Plastik** | Beyaz Alt Astarlı UV Rulo | 1.000 Adet ve Üzeri | Cam/sıvı arkasını gösteren saydam şıklık, renklerin canlılığı |
+
+### Teknolojik Karşılaştırma Tablosu
+
+| Baskı Teknolojisi | Kalıp / Kurulum Maliyeti | Baskı Hızı ve Kapasite | İnce Detay Kalitesi | Kimyasal ve Isı Direnci |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dijital Baskı** | Sıfır (Kalıpsız) | Orta (Hızlı Başlangıç) | Ultra Yüksek (1200 dpi) | Orta (Selefon Kaplamalı) |
+| **Flexo Baskı** | Yüksek (Kalıp Gerekir) | Çok Yüksek (Endüstriyel) | Yüksek | Çok Yüksek (UV Kurutmalı) |
+| **UV Baskı** | Orta-Yüksek | Çok Yüksek (Seri Hat) | Çok Yüksek | Maksimum (Solmaz ve Aşınmaz) |
+
+Tesislerimizde ihtiyacınıza özel olarak uygulanan üç temel baskı teknolojisinin detayları şunlardır:
+
+- **Endüstriyel Flexo Baskı:** Yüksek adetli (5.000 adet ve üzeri) siparişlerde kullanılır. Kalıp hazırlık süreci olsa da seri üretimde birim maliyeti inanılmaz derecede düşürür. Çok renkli ve yüksek hızlı etiketleme hatları için en ideal çözümdür. (Bkz: [Broşür Kağıt Seçim Rehberi](/blog/brosur-baskida-en-dogru-kagit-nasil-secilir))
+- **Profesyonel Dijital Baskı:** Düşük veya orta adetli (100 - 1.000 adet) butik işlerde, özel bıçaklı ve değişken datalı projelerde tercih edilir. Kalıp maliyeti olmadığı için üretime hızlıca başlanır, küçük işletmeler için ilk sipariş bütçesini minimize eder.
+- **Yüksek Dayanıklı UV Baskı:** Özellikle kozmetik, şampuan ve kimyasal deterjan etiketleri gibi sıvı temasının, güneş ışığının ve sürtünmenin yoğun olduğu durumlarda tercih edilir. Ultra-Viyole ışıkla anında kürlenen özel boyalar sayesinde, renklerin solması veya kimyasallarla aşınması engellenir. Hem rulo flexo hem de rulo dijital hatlarımızda UV kurutmalı baskı kalitesini uygulamaktayız.
+
+## Üretim Kalitesi ve Teknik Standartlarımız
+
+Mavi Basım İstanbul Topkapı matbaa tesislerimizde, ambalaj etiketlerinizin kusursuz ve profesyonel kalitede basılabilmesi için tüm üretim süreçleri uluslararası baskı ve kalite standartlarına (ISO 12647-2) uygun olarak yürütülür:
+
+- **Gelişmiş Makine Parkurumuz:** Yüksek hızlı 8 renkli **Gallus Flexo Bobin Baskı** sistemleri, milimetrik renk doğruluğu sunan **HP Indigo Digital Rulo** baskı makineleri ve hassas **Heidelberg Giyotin ve Lazer** kesim üniteleri.
+- **Sertifikalı Birinci Sınıf Malzemeler:** Baskılarımızda yalnızca dünya lideri olan **Avery Dennison (FASSON)** ve **UPM Raflatac** marka kendinden yapışkanlı kağıt ve polipropilen substratlar kullanılmaktadır. Sararma, kalkma veya tutkal akması kesinlikle yaşanmaz.
+- **Milimetrik Kesim Toleransı (±0.2 mm):** Yüksek teknoloji kesim bıçakları ve lazer sistemlerimiz sayesinde, etiketlerin kesim sapma toleransı en fazla **±0.2 mm** düzeyindedir. Bu sayede taşıyıcı silikon kağıt zarar görmez ve otomatik makinelerde kopma yaşanmaz.
+- **X-Rite Spektrofotometre ile %100 Renk Tutarlılığı:** Tüm baskı partilerinde renk doğruluğu dijital ölçüm cihazlarıyla denetlenir. Farklı sipariş dönemlerindeki kurumsal renkleriniz arasında hiçbir ton sapması olmaz.
+
+### Adım Adım Etiket Üretim Sürecimiz
+
+1. **Dosya ve Bıçak Kontrolü (Pre-press):** Grafik ekibimiz gönderdiğiniz tasarımı çözünürlük, CMYK renk doğruluğu ve milimetrik kesim bıçak payları açısından inceler ve onayınız için dijital PDF prova hazırlar.
+2. **Baskı Öncesi Hazırlık ve Kalıp (Flexo/UV için):** Onaylanan tasarımlar için yüksek hassasiyetli klişeler (kalıplar) hazırlanır veya dijital baskı makinesi kalibrasyonları yapılır.
+3. **Yüksek Çözünürlüklü Baskı:** Avery Dennison ve UPM Raflatac marka birinci sınıf kağıt/plastik malzemeler üzerine son teknoloji Gallus ve HP Indigo ünitelerimizde baskı işlemi gerçekleştirilir.
+4. **Yüzey Koruma (Selefon/Lak):** Etiketlerin dış etkenlere dayanıklılığını artırmak amacıyla mat/parlak selefon kaplama veya UV koruyucu lak uygulaması yapılır.
+5. **Hassas Lazer veya Bıçak Kesimi (Kiss-Cut):** Etiketler taşıyıcı silikon kağıda zarar vermeden milimetrik hassasiyetle (±0.2 mm toleransla) yarım kesilir.
+6. **Kalite Kontrol ve Sevkiyat:** Spektrofotometre ile renk doğruluğu denetlenen etiket ruloları/tabakaları, koruyucu ambalajlarla sarılarak Türkiye'nin 81 iline kargolanır.
+
+## Teknik Özellik ve Malzeme Mukayesesi
+
+### Genel Özellik Karşılaştırma Tablosu
+
+| Özellik / Parametre | Kuşe Kağıt Etiket | PP Opak Plastik Etiket | Şeffaf Plastik Etiket |
+| :--- | :--- | :--- | :--- |
+| **Malzeme Yapısı** | Kağıt Tabanlı (Yırtılır) | Plastik Tabanlı (Yırtılmaz) | Saydam Plastik (Yırtılmaz) |
+| **Suya ve Neme Dayanıklılık**| Dayanıksız (Nem kapınca buruşur)| Dayanıklı ve Su Geçirmez | Dayanıklı ve Su Geçirmez |
+| **En Sık Kullanım Alanı** | Kargo kutuları, kuru gıda paketleri| Kozmetik, şampuan, zeytinyağı | Cam kavanozlar, pencereler, kapılar |
+| **Yüzey Görünümü** | Yarı Mat veya Yarı Parlak | Opak Canlı Beyaz | Tamamen Şeffaf / Arka Planı Gösteren |
+
+### Yüzeye Göre Malzeme ve Yapışkan Seçimi Tablosu
+
+Doğru yapışkanlı performans için yapıştırılacak yüzeyin yapısı ile malzemenin uyumlu olması gerekir. Aşağıdaki tablo hangi yüzeye hangi malzemenin uygulanacağını göstermektedir:
+
+| Uygulama Yüzeyi | Önerilen Malzeme / Yapışkan Türü | Dikkat Edilmesi Gereken Hususlar |
+| :--- | :--- | :--- |
+| **Cam Şişe / Kavanoz** | Şeffaf Plastik veya PP Opak (Akrilik Yapışkan) | Yüzeyin tamamen kuru ve pürüzsüz olması gerekir. |
+| **Plastik / PE Bidon** | PP Opak Plastik Etiket (Güçlü Akrilik) | Plastik yüzeylerin esnemesine karşı yırtılmayan PP opak idealdir. |
+| **Karton / Oluklu Koli** | Kuşe Kağıt Etiket (Genel Akrilik veya Hotmelt) | Emici kağıt yüzeylerde standart akrilik veya hotmelt mükemmel tutunur. |
+| **Pürüzlü / Metal Yüzey**| Kalın PP Opak (Kuvvetli Hotmelt / Non-Perm) | Pürüzlü yüzeylerde boşlukları doldurabilen yoğun tutkallı etiket seçilmelidir. |
+| **Dondurulmuş Gıda** | PP Opak Plastik (Deep Freeze / Özel Don Tutkallı) | Standart yapışkanlar soğukta kristalize olup düşer, özel tutkal şarttır. |
+
+## Başarı Hikayeleri
+
+Teknik özellikleri gerçek hayattaki satın alma senaryolarına bağlayarak bütçe kararlarınızı daha kolay verebilirsiniz:
+
+- **Natura Kozmetik - Şampuan Üreticisi (Rulo PP Opak):** "Banyo zeminindeki yoğun buhara ve sızan saç bakım yağlarına dayanması için yırtılmayan **Rulo PP Opak Etiket** tercih ettik. 10.000 adetlik siparişimiz, otomatik dolum makinelerimizin sarım hızıyla kusursuz uyum sağlayarak etiketleme sürelerimizi %85 düşürdük."
+- **Toroslar Apiterapi - Organik Bal Üreticisi (Şeffaf Etiket):** "Kavanozlarımızın içindeki kehribar süzme bal renginin dışarıdan tam görünmesi bizim için kritikti. Mavi Basım grafik ekibinin logomuzun arkasına uyguladığı beyaz astar baskı sayesinde yazılar cam üzerinde silikleşmedi. 2.500 adetlik **Şeffaf Etiket** siparişimiz ambalajımıza son derece şık ve üst segment bir hava kattı."
+- **Aura Candle Studio - Butik Mum Atölyesi (Tabaka Kuşe):** "Sınırlı sayıda ürettiğimiz el yapımı soya mumları için yüksek adetli bütçe ayırmak istemedik. 200 adetlik butik sipariş imkanı sunan **Tabaka Kuşe Etiket** ile sıfır kalıp maliyetiyle her kokulu mum serisi için ayrı renklerde etiketlerimizi bütçemizi sarsmadan bastırdık."
+
+## Sipariş ve Maliyet Planlaması
+
+### Yaklaşık Sipariş Bütçe Planlaması
+- **100 - 500 Adet (Butik Başlangıç):** Sadece **Tabaka Etiket** formatı rasyoneldir. Kalıp maliyeti yoktur, toplam bütçe ortalama **400 TL - 1.500 TL** arasındadır (İlk yatırım bütçesini minimumda tutmak için idealdir).
+- **1.000 Adet (Eşik Değer):** Rulo veya Tabaka etiket arasındaki geçiş sınırıdır. Eğer el ile yapıştırma yapılacaksa Tabaka Etiket daha avantajlıdır.
+- **5.000 Adet ve Üzeri (Seri Üretim):** **Rulo Etiket** açık ara en ekonomik format haline gelir. Etiket başına birim maliyet kuruş seviyelerine iner, toplam bütçe seçilen malzemeye göre **3.500 TL - 7.500 TL** aralığındadır.
+
+### Fiyatı Etkileyen Temel Parametreler
+
+| Maliyet Parametresi | Fiyatı Nasıl Etkiler? | Bütçe Tasarrufu İçin Önerimiz |
+| :--- | :--- | :--- |
+| **Sipariş Adedi** | Adet arttıkça birim maliyet çok sert düşer. | Yıllık tüketiminizi tek seferde sipariş ederek yüksek adet avantajından yararlanın. |
+| **Malzeme Türü** | PP Opak / Şeffaf plastikler, kuşe kağıda göre %30-45 daha maliyetlidir. | Sıvı veya nem teması yoksa PP opak yerine ekonomik **Kuşe** malzeme seçin. |
+| **Baskı Formatı** | Rulo etiket kurulum maliyeti düşük adetlerde fiyatı yükseltir. | 1.000 adetin altındaki tüm butik ve elle yapıştırılacak işlerde **Tabaka Etiket** tercih edin. |
+| **Özel Bıçak Kesimi** | Standart kare/daire dışındaki özel kıvrımlı bıçaklar ek kalıp maliyeti getirebilir. | Matbaa arşivimizde hazır bulunan binlerce milimetrik standart bıçak şablonunu tercih ederek kalıp ücretinden kurtulun. |
+
+:::cta
+TITLE: Ürününüz İçin Özel Fiyat Teklifi Alın
+DESC: İhtiyacınız olan adet ve ölçülere göre en avantajlı fiyat teklifini uzman ekibimizden dakikalar içinde almak için WhatsApp üzerinden hemen bizimle iletişime geçin.
+BTN_TEXT: WhatsApp ile Hızlı Teklif Al
+BTN_LINK: https://wa.me/905321234567
+:::
+
+## İstanbul Merkezli Türkiye Geneline Hızlı Teslimat
+
+Tüm etiket imalat süreçlerimiz, **İstanbul Zeytinburnu Topkapı 2. Matbaacılar Sitesi**'ndeki entegre fabrikamızda gerçekleştirilmektedir. Mavi Basım olarak geliştirdiğimiz lojistik altyapı sayesinde, İstanbul içindeki üreticilerden Anadolu'nun dört bir yanındaki kooperatif, sanayi bölgesi ve butik işletmelere kadar Türkiye'nin 81 iline kesintisiz teslimat sağlıyoruz.
+
+## Anadolu'daki Üreticiler İçin Lojistik ve Tedarik
+
+Türkiye'nin dört bir yanındaki kooperatifler, yerel tarım işletmeleri ve KOBİ'ler için ambalaj kalitesi, ulusal market raflarına çıkabilmenin en önemli anahtarıdır. Örneğin:
+- **Ege ve Akdeniz'deki Zeytinyağı Kooperatifleri:** Sızan yağdan etkilenmeyen, pürüzsüz duruşuyla **PP Opak Rulo Etiketler** ile markalarını premium segmentte konumlandırıyor.
+- **Doğu Anadolu ve Karadeniz'deki Arıcılık Birlikleri:** Bal kavanozlarının içindeki doğallığı sergileyen, beyaz alt astar baskılı **Şeffaf Etiketler** ile sahteciliğin önüne geçip güven aşılıyor.
+- **Güneydoğu ve İç Anadolu'daki Kurutulmuş Gıda ve Baharat Girişimleri:** Düşük bütçelerle pazara girmelerini sağlayan **Tabaka Kuşe Etiket** modellerimizle şık doypack ambalajlar tasarlıyor.
+
+Sadece büyük şehirlere değil, Türkiye genelindeki tüm küçük ve büyük işletmelere şu güvenceleri sunuyoruz:
+
+- **PDF Prova ve Hızlı Onay Sistemi:** Gönderdiğiniz tasarımlar grafik ekibimizce ücretsiz olarak bıçak payı, CMYK renk doğruluğu ve çözünürlük açısından kontrol edilir. Onayınız için hazırlanan dijital PDF prova sizden tam onay almadan baskı makinelerimiz çalıştırılmaz.
+- **24 Saatte Üretime Başlama ve Hızlı Teslimat:** Prova onayınız alındıktan sonra 24 saat içinde üretime başlanır. Siparişiniz adet ve malzemeye bağlı olarak genellikle **2-4 iş günü** içinde tamamlanır.
+- **Güvenli ve Korumalı Ambalajlama:** Rulo ve tabaka etiketleriniz taşıma esnasında nem kapmayacak ve ezilmeyecek şekilde kalın koruyucu bobin ambalajları ve mukavemetli kutularda paketlenir. Anlaşmalı kargo firmalarımızla hasarsız şekilde kapınıza teslim edilir.
+- **Bıçak Arşivi Güvencesi:** Ürününüz için bir kez hazırlanan özel kesim bıçakları ve lazer kalıpları arşivimizde 5 yıl boyunca güvenle saklanır. Tekrar siparişlerinizde yeni kalıp ücreti ödemezsiniz.
+
+## Teklif Talebi İçin Gerekli Bilgiler
+
+Size en uygun fiyat teklifini dakikalar içinde hazırlayabilmemiz için aşağıdaki bilgileri bizimle paylaşabilirsiniz:
+
+1. **Ölçü Bilgisi (En x Boy):** Milimetre (mm) cinsinden etiketinizin nihai kesim ölçüleri.
+2. **Sipariş Adedi:** Kaç adet etiket basılmasını istediğiniz (Örn: 500 adet, 5.000 adet).
+3. **Malzeme Türü:** Kuşe kağıt mı yoksa suya dayanıklı PP opak plastik mi?
+4. **Sarım Yönü (Rulo ise):** Otomatik yapıştırma makinenizin akış yönü şablonu (Elle yapıştırılacaksa bu bilgi gerekli değildir).
+5. **Kullanım Alanı:** Yapıştırılacak yüzey (Cam şişe, plastik bidon, karton koli vb.) ve saklama koşulları.
+
+### Örnek Sipariş Teklifi Talebi
+
+Teklif sürecini hızlandırmak için bizimle aşağıdaki gibi pratik bir örnek mesaj paylaşabilirsiniz:
+> **Örnek Teklif Talebi:**
+> "Merhaba, 50x80 mm ölçülerinde, suya dayanıklı PP Opak plastik malzemeden üretilecek şampuan etiketimiz için 2.000 adet fiyat teklifi almak istiyoruz. Ürünlerimiz banyo ortamında duracak, dolayısıyla güçlü yapışkanlı akrilik tutkal tercih etmekteyiz. Rulo sarım yönü 3. pozisyon (sağdan akışlı) olacaktır. Grafik tasarımımız PDF olarak hazırdır. Fiyat ve teslimat süresi hakkında bilgi alabilir miyiz?"
+
+### Sipariş Öncesi Son Kontrol Listesi
+
+Hatalı baskı ve zaman kaybını önlemek için siparişinizi tamamlamadan önce şu teknik detayları kontrol ettiğinizden emin olun:
+- [ ] **Çözünürlük ve Format:** Tasarım dosyanızın en az 300 DPI çözünürlükte ve baskıya uygun vektörel formatta (PDF, AI, CDR) olduğundan emin olun.
+- [ ] **Kesim Payı (Taşma Payı):** Etiket kenarlarında kesim esnasında kayma riskine karşı en az 2 mm taşma (kesim payı) bırakıldığını teyit edin.
+- [ ] **Renk Modu:** Çalışmanızın RGB değil, matbaa standartlarına uygun **CMYK** renk modunda hazırlandığından emin olun.
+- [ ] **Yüzey Uyumluluğu:** Yapıştırılacak yüzeyin (cam, metal, plastik, pürüzlü) ve saklama sıcaklığının (oda sıcaklığı, nem, derin dondurucu) seçilen etiket malzemesi ve tutkal türüyle eşleştiğini kontrol edin.
+- [ ] **Sarım Yönü (Rulo Etiketler İçin):** Otomatik yapıştırma makinenizin teknik kılavuzundaki sarım yönü numarasıyla siparişinizin uyuştuğunu doğrulayın.
+
+:::cta
+TITLE: Markanıza Özel Profesyonel Etiket Teklifi
+DESC: Ürünlerinize değer katacak rulo veya tabaka halinde kuşe, PP opak ve şeffaf etiketleri logonuzla üretiyoruz. Şişe ve kavanoz ölçülerinize uygun bıçak tasarımı hazırlatmak için hemen ekibimize yazın.
+BTN_TEXT: WhatsApp Etiket Desteği
+BTN_LINK: https://wa.me/905321234567
+:::`,faq:[{question:"Tasarım dosyam hazır değil, yine de baskı yaptırabilir miyim?",answer:"Evet, tasarımınız hazır olmasa bile uzman grafik ekibimiz etiketinizin yerleşiminde, bıçak paylarının düzenlenmesinde ve kurumsal kimliğinize uygun şablonun oluşturulmasında size teknik destek sağlar. Sipariş öncesi logonuzu yüksek çözünürlüklü olarak iletmeniz yeterlidir."},{question:"PP Opak Etiket nedir ve sudan etkilenir mi?",answer:"PP Opak, polipropilen bazlı plastik bir etiket malzemesidir. Suya, neme, yağa, güneşe ve yırtılmaya karşı %100 dayanıklıdır. Kozmetik, şampuan, deterjan ve zeytinyağı ambalajları için en ideal çözümdür."},{question:"Minimum ve maksimum sipariş adetleri nedir?",answer:"Tabaka etiketlerde minimum siparişimiz 100 adettir ve butik işler için son derece ekonomiktir. Rulo etiketlerde ise bobin kurulum maliyetleri ve makine ayar fireleri nedeniyle minimum sipariş limitimiz 1.000 adettir (optimum bütçe için 5.000 adet önerilir). Herhangi bir maksimum adet sınırımız bulunmamaktadır."},{question:"PP Opak ile Şeffaf Etiket arasındaki farklar nelerdir?",answer:"PP Opak etiket beyaz plastik tabanlıdır, yapıştırıldığı yüzeyin altını tamamen kapatır. Şeffaf etiket ise tamamen saydam (şeffaf) plastik malzemeden üretilir; cam kavanoz veya şeffaf şişelerde içerideki sıvıyı doğrudan göstererek ambalaja entegre ve şık bir görünüm kazandırır."},{question:"Rulo etiket siparişinde sarım yönü neden önemlidir?",answer:"Eğer etiketleriniz otomatik etiketleme makinesiyle şişe veya kavanozlara yapıştırılacaksa, makinenizin rulo akış yönüne uygun sarım yönü (sarım pozisyonu) seçilmelidir. Yanlış sarım yönü etiketlerin şişelere ters, yan veya kayık yapışmasına neden olur. Elle yapıştırmalarda ise sarım yönü önemsizdir."},{question:"Farklı şehirlerden verilen siparişlerde lojistik süreç nasıl ilerler?",answer:"Zeytinburnu Topkapı 2. Matbaacılar Sitesi ndeki fabrikamızda üretilen etiketleriniz, rulo bobin koruyucularıyla özenle paketlenip hasar görmeyecek şekilde ambalajlanır. İzmir den Gaziantep e, Ankara dan Trabzon a kadar Türkiye nin tüm 81 iline anlaşmalı kargo firmalarımızla sigortalı ve güvenli şekilde sevk edilir."},{question:"Siparişlerin üretim ve teslimat süresi ne kadardır?",answer:"Tasarımınız grafik ekibimiz tarafından kontrol edildikten sonra hazırlanan PDF prova onayınız alınır. Prova onayının ardından 24 saat içinde üretime geçilir. Siparişinizin adet ve teknik özelliklerine göre üretim genellikle 2-4 iş günü içinde tamamlanır ve kargoya teslim edilir."},{question:"Sipariş süreci nasıl işler, adımları nelerdir?",answer:"Süreç oldukça basittir: 1) Talebinizi (ölçü, adet, malzeme) bize iletirsiniz. 2) Size özel fiyat teklifimizi sunarız. 3) Grafik ekibimiz tasarımınızı ücretsiz kontrol edip PDF onay provası gönderir. 4) Onayınızın ardından ödeme alınır ve üretime başlanır. 5) 2-4 iş günü içinde üretim tamamlanarak adresinize sevk edilir."}]},{slug:"kuve-kagit-ve-bristol-karton-farklari",title:"Kuşe Kağıt ile Bristol Karton Arasındaki Dokusal ve Teknik Farklar",excerpt:"Broşür ve cepli dosyalarda hangisi tercih edilmeli? Bristol kartonun sıvama dayanıklılığı ile kuşe kağıdın renk geçirgenliğinin karşılaştırması.",date:"10 Mayıs 2026",readTime:"6 Dk Okuma",category:"Matbaa Teknik",image:"/images/dosya/cepli-dosya-tasarimi.webp",schemaType:"Article",content:`## Kuşe Kağıt ile Bristol Karton Arasındaki Dokusal ve Teknik Farklar
+
+Matbaada doğru malzeme seçimi hem görselliği belirler hem de bütçenizi optimize eder. Çoğu zaman birbirine karıştırılan **Kuşe Kağıt** ile **Amerikan Bristol Karton** arasındaki yapısal farklar ve kullanım sahaları, Mavi Basım teknik analizleri ile karşınızda.
+
+Siparişleriniz için [Cepli Dosya sayfasına](/dosyalar) giderek şık klasörleri inceleyebilir, kuşe kağıttan üretilen [Broşür sayfasına](/brosur) ait modelleri görebilir ya da çok sayfalı [Katalog sayfasına](/kataloglar) ait kapak seçeneklerini inceleyebilirsiniz.
+
+:::info-cards
+Kuşe Kağıt Özellikleri
+- Her iki yüzeyi de pürüzsüz mineral sıvamayla kaplanmış kuşe kâğıt kalitesi.
+- Mürekkep emilim oranı son derece 

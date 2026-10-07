@@ -1,0 +1,254 @@
+{
+  "route": "/blog/ofset-baski-nasil-yapilir",
+  "timestamp": "2026-08-01T16:45:41.825Z",
+  "totalScripts": 5,
+  "totalParsedNodes": 6,
+  "typeCounts": {
+    "LocalBusiness": 1,
+    "WebSite": 1,
+    "Article": 1,
+    "BreadcrumbList": 1,
+    "FAQPage": 1,
+    "ImageObject": 1
+  },
+  "rawScripts": [
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam",
+        "url": "https://mavibasim.com",
+        "logo": "https://mavibasim.com/mavilogo.png",
+        "image": "https://mavibasim.com/mavilogo.png",
+        "telephone": "+905366022373",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+          "addressLocality": "Zeytinburnu",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website",
+        "url": "https://mavibasim.com",
+        "name": "Mavi Basım Matbaa",
+        "publisher": {
+          "@id": "https://mavibasim.com/#organization"
+        }
+      }
+    ],
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://mavibasim.com/blog/ofset-baski-nasil-yapilir"
+      },
+      "headline": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+      "image": "https://mavibasim.com/images/hakkimizda/tecrube-matbaa.webp",
+      "datePublished": "2026-06-04T08:00:00+03:00",
+      "dateModified": "2026-07-06T10:00:00+03:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Mavi Basım Üretim Ekibi",
+        "url": "https://mavibasim.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mavi Basım",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mavibasim.com/mavilogo.png"
+        }
+      },
+      "description": "Ofset baskı teknolojisinin tüm detaylarını, kalıp hazırlamadan mürekkep ayarlarına ve kurutma aşamalarına kadar teknik adımlarıyla keşfedin."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Anasayfa",
+          "item": "https://mavibasim.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://mavibasim.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Teknik & Baskı",
+          "item": "https://mavibasim.com/blog?category=Teknik%20%26%20Bask%C4%B1"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+          "item": "https://mavibasim.com/blog/ofset-baski-nasil-yapilir"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ofset baskı için minimum sipariş adedi nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ofset baskıda kurulum firesi ve kalıp hazırlığı maliyetli olduğundan, ekonomik fiyatlar elde etmek için minimum 1.000 adet sipariş verilmesi önerilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ofset baskıda hangi mürekkepler kullanılır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mavi Basım olarak gıda ambalajlarında koku yapmayan, sağlığa uygun bitkisel soya bazlı yüksek pigmentli Avrupa mürekkepler kullanmaktayız."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "https://mavibasim.com/images/hakkimizda/tecrube-matbaa.webp",
+      "license": "https://mavibasim.com/lisans",
+      "acquireLicensePage": "https://mavibasim.com/blog/ofset-baski-nasil-yapilir",
+      "creditText": "Mavi Basım Tasarım Ekibi",
+      "creator": {
+        "@type": "Organization",
+        "name": "Mavi Basım"
+      }
+    }
+  ],
+  "parsedNodes": [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://mavibasim.com/#organization",
+      "name": "Mavi Basım Matbaa & Reklam",
+      "url": "https://mavibasim.com",
+      "logo": "https://mavibasim.com/mavilogo.png",
+      "image": "https://mavibasim.com/mavilogo.png",
+      "telephone": "+905366022373",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+        "addressLocality": "Zeytinburnu",
+        "addressRegion": "İstanbul",
+        "addressCountry": "TR"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://mavibasim.com/#website",
+      "url": "https://mavibasim.com",
+      "name": "Mavi Basım Matbaa",
+      "publisher": {
+        "@id": "https://mavibasim.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://mavibasim.com/blog/ofset-baski-nasil-yapilir"
+      },
+      "headline": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+      "image": "https://mavibasim.com/images/hakkimizda/tecrube-matbaa.webp",
+      "datePublished": "2026-06-04T08:00:00+03:00",
+      "dateModified": "2026-07-06T10:00:00+03:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Mavi Basım Üretim Ekibi",
+        "url": "https://mavibasim.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mavi Basım",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mavibasim.com/mavilogo.png"
+        }
+      },
+      "description": "Ofset baskı teknolojisinin tüm detaylarını, kalıp hazırlamadan mürekkep ayarlarına ve kurutma aşamalarına kadar teknik adımlarıyla keşfedin."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Anasayfa",
+          "item": "https://mavibasim.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://mavibasim.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Teknik & Baskı",
+          "item": "https://mavibasim.com/blog?category=Teknik%20%26%20Bask%C4%B1"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları",
+          "item": "https://mavibasim.com/blog/ofset-baski-nasil-yapilir"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ofset baskı için minimum sipariş adedi nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ofset baskıda kurulum firesi ve kalıp hazırlığı maliyetli olduğundan, ekonomik fiyatlar elde etmek için minimum 1.000 adet sipariş verilmesi önerilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ofset baskıda hangi mürekkepler kullanılır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mavi Basım olarak gıda ambalajlarında koku yapmayan, sağlığa uygun bitkisel soya bazlı yüksek pigmentli Avrupa mürekkepler kullanmaktayız."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentUrl": "https://mavibasim.com/images/hakkimizda/tecrube-matbaa.webp",
+      "license": "https://mavibasim.com/lisans",
+      "acquireLicensePage": "https://mavibasim.com/blog/ofset-baski-nasil-yapilir",
+      "creditText": "Mavi Basım Tasarım Ekibi",
+      "creator": {
+        "@type": "Organization",
+        "name": "Mavi Basım"
+      }
+    }
+  ]
+}
