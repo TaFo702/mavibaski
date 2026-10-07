@@ -12,7 +12,19 @@ async function validateSEONavigation() {
     const page = await browser.newPage();
     page.setDefaultTimeout(15000);
     const errors: string[] = [];
-    page.on('pageerror', error => errors.push(`JavaScript: ${error.message}`));
+    page.on('pageerror', error => errors.push(`JavaScript: ${error.stack || error.message}`));
+    const navigateWithHistory = async (pathname: string) => {
+      const marker = await page.evaluate(path => {
+        const token = document.documentElement.dataset.seoAuditDocumentId ||= crypto.randomUUID();
+        history.pushState({}, '', path);
+        return token;
+      }, pathname);
+      // Let the browser emit genuine PopStateEvents with the entry's state.
+      // A synthetic event with its default null state is not a back/forward visit.
+      await page.goBack();
+      await page.goForward();
+      assert.equal(await page.evaluate(() => document.documentElement.dataset.seoAuditDocumentId), marker, 'History navigation must keep the same document');
+    };
     const isApplicationAsset = (url: string, type: string) => new URL(url).origin === new URL(baseURL).origin && ['script', 'stylesheet'].includes(type);
     page.on('requestfailed', request => {
       if (isApplicationAsset(request.url(), request.resourceType())) errors.push(`${request.url()}: ${request.failure()?.errorText}`);
@@ -49,10 +61,7 @@ async function validateSEONavigation() {
       };
       dom.window.close();
       // Browser back/forward route updates, without replacing the document.
-      await page.evaluate(path => {
-        history.pushState({}, '', path);
-        window.dispatchEvent(new PopStateEvent('popstate'));
-      }, pathname);
+      await navigateWithHistory(pathname);
       await page.waitForFunction(expected => {
         const titles = document.querySelectorAll('title');
         const descriptions = document.querySelectorAll('meta[name="description"]');
@@ -97,10 +106,7 @@ async function validateSEONavigation() {
           failure === 'network-abort'
             ? page.waitForEvent('requestfailed', { predicate: request => request.url() === kartvizitURL && request.resourceType() === 'fetch' })
             : page.waitForEvent('requestfinished', { predicate: request => request.url() === kartvizitURL && request.resourceType() === 'fetch' }),
-          page.evaluate(() => {
-            history.pushState({}, '', '/kartvizit');
-            window.dispatchEvent(new PopStateEvent('popstate'));
-          })
+          navigateWithHistory('/kartvizit')
         ]);
         await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
         assert.equal(intercepted, 1, `${failure}: metadata request was not intercepted exactly once`);
