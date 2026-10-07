@@ -11,6 +11,7 @@ import { BLOKNOTLAR_SEO_METADATA, BLOKNOTLAR_SCHEMAS, generateBloknotlarSSRBodyC
 import { ANTETLI_SEO_METADATA, ANTETLI_SCHEMAS, generateAntetliSSRBodyContent } from "../data/antetliPageContent";
 import { KATALOG_FAQS, KATALOG_DATA, KARTON_CANTA_DATA, ZARF_DATA, ZARF_FAQS } from "../data/extraProductData";
 import { DOSYALAR_DATA } from "../data/productData";
+import { renderETicaretImage } from './eTicaretImages';
 export const citySlugs = new Set(CITIES_DATA.map(c => c.slug));
 
 export const knownStaticRoutes = new Set([
@@ -59,10 +60,17 @@ export const knownStaticRoutes = new Set([
   '/iletisim',
   '/blog',
   '/makine-parkuru',
-  '/teslimat-sartlari'
+  '/teslimat-sartlari',
+  '/kullanim-sartlari',
+  '/gizlilik-politikasi',
+  '/cerez-politikasi',
+  '/mesafeli-satis-sozlesmesi',
+  '/iptal-ve-iade-sartlari'
 ]);
 
 export const URL_REDIRECTS: Record<string, string> = {
+  "/bloknot": "/bloknotlar",
+  "/teslimat-ve-iade": "/teslimat-sartlari",
   "/makbuz": "/makbuz-ve-formlar",
   "/katalog": "/kataloglar",
   "/sektor/kozmetik-guzellik-saglik-baski": "/sektor/kozmetik-guzellik-merkezi-baski",
@@ -105,6 +113,26 @@ export function isKnownRoute(pathname: string): boolean {
 
 // Predefined Static SEO Pages Dictionary
 export const staticPages: Record<string, { title: string; desc: string }> = {
+  "/kullanim-sartlari": {
+    title: "Kullanım Şartları ve Hizmet Sözleşmesi | Mavi Basım Matbaa",
+    desc: "Mavi Basım Matbaa & Reklam mavibasim.com web sitesi kullanım şartları, online sipariş kuralları, fikri mülkiyet hakları, grafik tasarım onay süreçleri ve yasal sorumluluklar."
+  },
+  "/gizlilik-politikasi": {
+    title: "Gizlilik Politikası ve KVKK Aydınlatma Metni | Mavi Basım Matbaa",
+    desc: "Mavi Basım Matbaa & Reklam mavibasim.com KVKK 6698 sayılı kanun kapsamında kişisel verilerin korunması, gizlilik politikası, veri güvenliği ve müşteri hakları aydınlatma metni."
+  },
+  "/cerez-politikasi": {
+    title: "Çerez Politikası ve Cookie Yönetimi | Mavi Basım Matbaa",
+    desc: "Mavi Basım Matbaa & Reklam mavibasim.com web sitesinde kullanılan çerez türleri, zorunlu ve analitik çerezler, saklanma süreleri ve tarayıcı çerez ayarları rehberi."
+  },
+  "/mesafeli-satis-sozlesmesi": {
+    title: "Mesafeli Satış Sözleşmesi | Mavi Basım Matbaa & Reklam",
+    desc: "Mavi Basım Matbaa & Reklam mavibasim.com mesafeli satış sözleşmesi, online matbaa sipariş şartları, 6502 sayılı kanun kişiselleştirilmiş ürün yönetmeliği ve cayma hakkı istisnası."
+  },
+  "/iptal-ve-iade-sartlari": {
+    title: "İptal ve İade Şartları | Mavi Basım Matbaa & Reklam",
+    desc: "Mavi Basım Matbaa & Reklam sipariş iptali, ücret iadesi şartları, matbaa ve ambalaj ürünlerinde imalat hatası iadesi ve geri ödeme prosedürleri rehberi."
+  },
   "/": {
     title: "Matbaa ve Baskı Çözümleri | Mavi Basım",
     desc: "Kartvizit, broşür, kutu, etiket, makbuz, ambalaj ve kurumsal baskı ürünleri için Mavi Basım'dan baskı çözümleri ve teklif alın."
@@ -5004,6 +5032,7 @@ ${faqHtml}`;
 
 function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: string): string {
   const isKutu = slug === 'kutu-ambalaj-baski-cozumleri' || seoPage.path.includes('kutu-ambalaj');
+  const isETicaret = slug === 'e-ticaret-perakende-baski';
   
   const parentName = seoPage.path.includes('brosur') ? "Broşür Baskı" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "Matbaa Ürünleri" : "Kartvizit Baskı";
   const parentItem = seoPage.path.includes('brosur') ? "/brosur" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "/matbaa" : "/kartvizit";
@@ -5026,6 +5055,7 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
       html += `<div data-placeholder-number="1" data-aspect-ratio="1200 / 800" aria-label="Henüz yüklenmemiş görsel alanı" class="w-full border-2 border-dashed rounded-2xl flex flex-col items-center justify-center p-4 text-center bg-neutral-900/90 border-neutral-700 text-neutral-300 shadow-xl max-w-3xl mx-auto my-0"><div class="w-10 h-10 rounded-full flex items-center justify-center mb-2 bg-neutral-800 text-neutral-400"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg></div><span class="text-[11px] font-extrabold tracking-widest uppercase text-sky-400">GÖRSEL 1</span><span class="text-xs sm:text-sm font-bold mt-0.5 text-white">Kutu ve Ambalaj Baskı Çözümleri</span><span class="text-[11px] font-medium mt-1 text-neutral-400">WebP görseli daha sonra eklenecek</span></div>`;
     }
   }
+  if (isETicaret) html += renderETicaretImage(0);
   html += `</div></header>`;
 
   // 8 Sections
@@ -5041,6 +5071,9 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
           html += `<p class="text-neutral-700 leading-relaxed mb-4 text-base">${p}</p>`;
         });
       }
+
+      // Keep the first HTML response consistent with the existing client images.
+      if (isETicaret && idx < 4) html += renderETicaretImage(idx + 1);
 
       // Kutu Visuals injection for sections
       if (isKutu) {
@@ -5079,6 +5112,8 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
 
       html += `</section>`;
     });
+
+    if (isETicaret) html += renderETicaretImage(5);
 
     // 9 Cluster Products
     if (isKutu) {

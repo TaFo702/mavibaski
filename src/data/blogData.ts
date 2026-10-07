@@ -88,13 +88,13 @@ Yerel işletmeler, restoranlar ve mağazalar için hedef bölgedeki müşteriler
 Buzdolabı ve metal yüzeylere yapışan [Magnet](/magnet) baskılar, müşterilerinizin evinde ve ofisinde aylar boyunca göz önünde kalarak markanızın akılda kalıcılığını sağlar.
 
 ### Katalog ve Cepli Dosya ile Kurumsal Tanıtım
-Ürün gamınızı detaylı sergilemek için hazırlanan bir [Katalog](/kataloglar) ve sunum klasörünüz olan [Cepli Dosya](/cepli-dosya), kurumsal müşterilerinizin satın alma kararlarını doğrudan etkiler.
+Ürün gamınızı detaylı sergilemek için hazırlanan bir [Katalog](/kataloglar) ve sunum klasörünüz olan [Cepli Dosya](/dosyalar), kurumsal müşterilerinizin satın alma kararlarını doğrudan etkiler.
 
 ### Etiket ve Ambalaj Baskılarının Satışa Etkisi
 Raftaki ürünün albenisini belirleyen en temel unsur [Etiket](/etiket) ve ürün kutusudur. Özel tasarımlı kaliteli ambalaj baskıları, ürünün algılanan değerini ve satış fiyatını artırır.
 
 ### Restoranlar İçin Amerikan Servis ve Menü Baskıları
-Gıda sektöründeki işletmeler için masada hijyen sağlayan [Amerikan Servis](/amerikan-servis) ve iştah kabartan [Menü Baskıları](/menu-baski), müşteri memnuniyetini yükseltir.
+Gıda sektöründeki işletmeler için masada hijyen sağlayan [Amerikan Servis](/amerikan-servis) ve iştah kabartan Menü Baskıları, müşteri memnuniyetini yükseltir.
 
 ### İşletmeniz İçin Doğru Baskılı Ürün Nasıl Seçilir?
 Bütçenize ve sektörünüze uygun ürün grubunu belirlerken hedef kitlenizin kullanım alışkanlıklarını analiz etmeli ve doğrudan üretici matbaa firmalarından toptan fiyat avantajı almalısınız.
@@ -701,9 +701,9 @@ Tek başına reklam ürünleri yerel tanıtımda başarılı olsa da, birlikte k
 • [Karton Çanta](/karton-canta)
 • [Adisyon](/adisyon)
 • [Sipariş Fişi](/siparis-fisi)
-• [Cepli Dosya](/cepli-dosya)
+• [Cepli Dosya](/dosyalar)
 • [Bloknot](/bloknot)
-• [Antetli Kağıt](/antetli-kagit)
+• [Antetli Kağıt](/antetli)
 
 ürünleriyle birlikte sipariş verdiğinde marka görünürlüğünü artırabilir.
 
@@ -3027,9 +3027,9 @@ Aşağıda, tesislerimizde gayrimenkul firmaları için ürettiğimiz gerçek ot
 Kendi yazıcınızdan **yer gösterme belgesi çıktısı** almak veya dijital arşiv oluşturmak istiyorsanız, aşağıda yer alan **yer gösterme belgesi ücretsiz** indirme bağlantılarından yararlanabilirsiniz. Ancak profesyonel bir marka imajı ve pratik saha kullanımı için kendinden karbonlu koçan siparişi vermenizi öneririz.
 
 :::downloads
-PDF | Yer Gösterme Belgesi Şablonu (PDF) | Boş, kullanıma hazır standart A5 PDF şablonu (yer gösterme belgesi örneği pdf) | /downloads/yer-gosterme-belgesi-bos-sablon.pdf | Hemen İndir (PDF)
-Word | Yer Gösterme Belgesi Şablonu (Word) | Üzerinde düzenleme yapabileceğiniz kurumsal şablon (yer gösterme belgesi word) | /downloads/yer-gosterme-belgesi-bos-sablon.docx | Düzenle & İndir (Word)
-Excel | Portföy Gösterim Çizelgesi (Excel) | Dijital ortamda portföy listeleme ve gösterim takip tablosu (yer gösterme belgesi excel) | /downloads/portfoy-gosterim-takip-cetveli.xlsx | Excel İndir (Excel)
+PDF | Yer Gösterme Belgesi Şablonu (PDF) | Boş, kullanıma hazır standart A5 PDF şablonu (yer gösterme belgesi örneği pdf) | | Hemen İndir (PDF)
+Word | Yer Gösterme Belgesi Şablonu (Word) | Üzerinde düzenleme yapabileceğiniz kurumsal şablon (yer gösterme belgesi word) | | Düzenle & İndir (Word)
+Excel | Portföy Gösterim Çizelgesi (Excel) | Dijital ortamda portföy listeleme ve gösterim takip tablosu (yer gösterme belgesi excel) | | Excel İndir (Excel)
 :::
 
 ---

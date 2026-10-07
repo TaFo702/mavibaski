@@ -493,7 +493,7 @@ export const KatalogPage = () => {
                     </div>
                   </div>
 
-                  <div className="overflow-visible rounded-2xl border border-gray-200">
+                  <div className="overflow-x-auto rounded-2xl border border-gray-200">
                     <table className="w-full text-center text-xs">
                       <caption className="sr-only">{row.label} - {row.total} Katalog Baskı Fiyat Tablosu</caption>
                       <thead>

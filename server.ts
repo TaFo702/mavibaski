@@ -64,13 +64,14 @@ async function startServer() {
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
-      appType: "spa",
+      // Express owns HTML responses, including the status of unknown routes.
+      appType: "custom",
     });
     app.use(vite.middlewares);
 
     // Dynamic SEO pre-injection fallback for any direct routing matching a client screen in development
     app.get("*", async (req, res, next) => {
-      if (req.path.includes(".") || req.path.startsWith("/api/")) {
+      if ((req.path.includes(".") && !isKnownRoute(req.path)) || req.path.startsWith("/api/")) {
         return next();
       }
       try {
@@ -101,7 +102,7 @@ async function startServer() {
 
     // Dynamic SEO pre-injection fallback for any client path in production
     app.get("*", (req, res, next) => {
-      if (req.path.includes(".") || req.path.startsWith("/api/")) {
+      if ((req.path.includes(".") && !isKnownRoute(req.path)) || req.path.startsWith("/api/")) {
         return next();
       }
       try {
@@ -110,12 +111,12 @@ async function startServer() {
           cleanPath = cleanPath.substring(0, cleanPath.length - 1);
         }
         const cleanSlug = cleanPath.replace(/^\//, "");
-        const prerenderedPath = cleanSlug ? path.join(distPath, cleanSlug, "index.html") : null;
+        const prerenderedPath = path.join(distPath, cleanSlug, "index.html");
         if (prerenderedPath && fs.existsSync(prerenderedPath)) {
           return res.status(200).set({ "Content-Type": "text/html" }).sendFile(prerenderedPath);
         }
 
-        const indexPath = path.join(distPath, "index.html");
+        const indexPath = path.join(distPath, ".seo-template.html");
         if (fs.existsSync(indexPath)) {
           const template = fs.readFileSync(indexPath, "utf-8");
           const known = isKnownRoute(req.path);

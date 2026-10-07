@@ -1,6 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { PHONE_NUMBER, PHONE_LINK, WHATSAPP_LINK, ADDRESS } from '../constants/contact';
 
 export const IletisimPage = () => {

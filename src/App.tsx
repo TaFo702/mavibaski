@@ -64,7 +64,7 @@ import {
 } from 'lucide-react';
 import Fuse from 'fuse.js';
 import ReactMarkdown from 'react-markdown';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider, RouteHead } from './components/PageHead';
 import { PRODUCT_DESCRIPTIONS } from './constants/productTexts';
 import { useProductSearch } from './components/HeaderActions';
 import { CityLinksSection } from './components/CityLinksSection';
@@ -2134,7 +2134,7 @@ const prodSchemaDesc =
 }
 
   return (
-    <Helmet>
+    <Helmet priority={0}>
       <link rel="canonical" href={canonicalUrl} />
       <meta property="og:url" content={canonicalUrl} />
     </Helmet>
@@ -5787,6 +5787,7 @@ export default function App() {
     }}>
       <HelmetProvider>
         <BrowserRouter>
+          <RouteHead />
           <ScrollToTop />
           <CanonicalLink />
           <SEOMetadataManager />

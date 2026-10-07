@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { 
   ShoppingCart, 
   Truck, 

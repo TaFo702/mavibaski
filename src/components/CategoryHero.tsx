@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { ChevronRight, ShieldCheck, Printer, Truck, CheckCircle2 } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants/contact';
 import { WhatsAppIcon } from './WhatsAppIcon';

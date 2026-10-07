@@ -384,13 +384,6 @@ export const BloknotlarPage = () => {
               >
                 NUMUNE İSTİYORUM
               </a>
-              <a 
-                href="/Mavi-Basim-Fiyat-Listesi.pdf"
-                target="_blank" 
-                className="inline-flex items-center justify-center gap-1.5 bg-primary/10 text-primary hover:bg-primary/25 border border-primary/20 px-4 py-2.5 rounded-xl font-black uppercase tracking-wider text-[11px] transition-all text-center"
-              >
-                FİYAT LİSTESİNİ İNDİR (PDF)
-              </a>
             </div>
           </div>
         </div>

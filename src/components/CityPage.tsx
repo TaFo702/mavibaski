@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { 
   Truck, 
   ShieldCheck, 

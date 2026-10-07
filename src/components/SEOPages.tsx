@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { useParams, useLocation, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { 
   CheckCircle, 
   HelpCircle, 
@@ -455,24 +455,25 @@ export const SEOPages = () => {
     return CLUSTERS[activeClusterKey];
   }, [activeClusterKey]);
 
-  const canonicalUrl = `https://mavibasim.com${page.path}`;
+  const canonicalUrl = `https://mavibasim.com${page?.path || location.pathname}`;
 
   const featuredPaths = useMemo(() => {
     const paths = new Set<string>();
+    if (!page) return paths;
     paths.add(page.path);
     paths.add(`/sektor/${activeKey}`);
     if (cluster) {
       cluster.popularPrints.forEach(p => paths.add(p.path));
     }
     return paths;
-  }, [page.path, activeKey, cluster]);
+  }, [page, activeKey, cluster]);
 
   const siblingLinks = useMemo(() => {
     if (!cluster) return [];
     return cluster.siblings.filter(sib => !featuredPaths.has(sib.path));
   }, [cluster, featuredPaths]);
 
-  const serviceSchema = useMemo(() => ({
+  const serviceSchema = useMemo(() => page ? ({
     "@context": "https://schema.org",
     "@type": "Service",
     "name": page.h1,
@@ -496,9 +497,9 @@ export const SEOPages = () => {
     "areaServed": "Türkiye",
     "description": page.metaDesc,
     "url": canonicalUrl
-  }), [page.h1, page.metaDesc, activeKey, canonicalUrl]);
+  }) : null, [page, activeKey, canonicalUrl]);
 
-  const breadcrumbSchema = useMemo(() => ({
+  const breadcrumbSchema = useMemo(() => page ? ({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -530,10 +531,10 @@ export const SEOPages = () => {
         }
       ])
     ]
-  }), [cluster, page.path, page.h1, activeKey, canonicalUrl]);
+  }) : null, [cluster, page, activeKey, canonicalUrl]);
 
   const faqSchema = useMemo(() => {
-    if (!page.faqs || page.faqs.length === 0) return null;
+    if (!page?.faqs || page.faqs.length === 0) return null;
     return {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -546,7 +547,7 @@ export const SEOPages = () => {
         }
       }))
     };
-  }, [page.faqs]);
+  }, [page?.faqs]);
 
   if (!page) {
     return (

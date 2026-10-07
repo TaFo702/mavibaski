@@ -740,7 +740,7 @@ export const KartonCantaPage = () => {
             {[
               { title: "Katalog", desc: "Ürünlerinizi detaylı tanıtın.", path: "/kataloglar" },
               { title: "Kartvizit", desc: "Profesyonel imaj yaratın.", path: "/kartvizit" },
-              { title: "Antetli Kağıt", desc: "Resmi yazışmalarınız için.", path: "/antetli-kagit" },
+              { title: "Antetli Kağıt", desc: "Resmi yazışmalarınız için.", path: "/antetli" },
               { title: "Zarf", desc: "Kurumsal gönderileriniz için.", path: "/zarf" }
             ].map((product, idx) => (
               <Link key={idx} to={product.path} className="group bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all text-black">

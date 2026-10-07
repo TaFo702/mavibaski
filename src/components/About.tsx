@@ -23,7 +23,7 @@ import {
   CheckCircle,
   Sparkles
 } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { PHONE_LINK, PHONE_NUMBER, WHATSAPP_LINK } from '../constants/contact';
 
 export const HakkimizdaPage = () => {

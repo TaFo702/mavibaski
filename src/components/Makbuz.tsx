@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { ShoppingCart, ChevronLeft, X, Zap, ChevronDown, ShieldCheck, Truck, Paintbrush, Hash, HeartHandshake, Timer, Phone, Play } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCart, FireWarning } from '../App';
@@ -2333,16 +2333,16 @@ export const MakbuzFormlarPage = () => {
                         Gider makbuzu, işletmelerin harcama ve ödeme kayıtlarını düzenli şekilde takip etmesini sağlayan önemli bir matbu evrak türüdür. Ancak günlük iş akışlarında yalnızca gider makbuzu kullanımı yeterli olmayabilir. Muhasebe, finans, satış ve operasyon süreçlerinde farklı amaçlara hizmet eden tamamlayıcı matbu formlara da ihtiyaç duyulur.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/tahsilat-makbuzu" className="font-extrabold text-primary hover:underline">Tahsilat Makbuzu</Link></strong>, müşterilerden alınan nakit, çek veya havale ödemelerinin kayıt altına alınması amacıyla kullanılır. Özellikle düzenli tahsilat yapan işletmeler için belge takibi ve arşivleme açısından önemli avantajlar sağlar. Otokopili ve numaratörlü olarak hazırlanabilen tahsilat makbuzu koçanları, ön muhasebe süreçlerinin daha düzenli yürütülmesine yardımcı olur.
+                        <strong><Link to="/tahsilat-makbuzu" className="font-extrabold text-primary hover:underline">Tahsilat Makbuzu</Link></strong>, müşterilerden alınan nakit, çek veya havale ödemelerinin kayıt altına alınması amacıyla kullanılır. Özellikle düzenli tahsilat yapan işletmeler için belge takibi ve arşivleme açısından önemli avantajlar sağlar. Otokopili ve numaratörlü olarak hazırlanabilen tahsilat makbuzu koçanları, ön muhasebe süreçlerinin daha düzenli yürütülmesine yardımcı olur.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/tediye-makbuzu" className="font-extrabold text-primary hover:underline">Tediye Makbuzu</Link></strong> ise şirket kasasından yapılan ödemelerin teslim edildiğini belgelemek amacıyla kullanılır. Tedarikçilere, çalışanlara veya iş ortaklarına yapılan ödemelerin kayıt altına alınmasını sağlayan bu formlar, şirket içi mali kontrol açısından önemli bir evraktır.
+                        <strong><Link to="/tediye-makbuzu" className="font-extrabold text-primary hover:underline">Tediye Makbuzu</Link></strong> ise şirket kasasından yapılan ödemelerin teslim edildiğini belgelemek amacıyla kullanılır. Tedarikçilere, çalışanlara veya iş ortaklarına yapılan ödemelerin kayıt altına alınmasını sağlayan bu formlar, şirket içi mali kontrol açısından önemli bir evraktır.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/para-makbuzu" className="font-extrabold text-primary hover:underline">Para Makbuzu</Link></strong>, daha küçük ölçekli nakit teslimlerinde tercih edilen pratik bir belgedir. Personel avansları, emanet para teslimleri veya günlük nakit işlemlerinde kullanılabilir. Düzenli kayıt tutulmasını sağlayarak olası karışıklıklerin önüne geçer.
+                        <strong><Link to="/para-makbuzu" className="font-extrabold text-primary hover:underline">Para Makbuzu</Link></strong>, daha küçük ölçekli nakit teslimlerinde tercih edilen pratik bir belgedir. Personel avansları, emanet para teslimleri veya günlük nakit işlemlerinde kullanılabilir. Düzenli kayıt tutulmasını sağlayarak olası karışıklıklerin önüne geçer.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/makbuz/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ürünleri ise restoran, kafe, lokanta ve perakende işletmelerinde yoğun olarak kullanılmaktadır. Müşteri siparişlerinin eksiksiz alınması, ürün adetlerinin takip edilmesi ve servis süreçlerinin düzenli ilerlemesi açısından önemli bir görev üstlenirler.
+                        <strong><Link to="/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ürünleri ise restoran, kafe, lokanta ve perakende işletmelerinde yoğun olarak kullanılmaktadır. Müşteri siparişlerinin eksiksiz alınması, ürün adetlerinin takip edilmesi ve servis süreçlerinin düzenli ilerlemesi açısından önemli bir görev üstlenirler.
                       </p>
                       <p>
                         Mavi Basım, otokopili gider makbuzu, numaratörlü gider makbuzu ve logolu gider makbuzu üretimlerinde uzmanlaşmış bir matbaa firmasıdır. İşletmenize özel hazırlanan gider makbuzu koçanı tasarımları, kullanım alışkanlıklarınıza göre düzenlenebilmektedir. Gider makbuzu basımı sürecinde ücretsiz tasarım desteği sağlanırken, onaylanan çalışmalar kısa sürede baskıya alınmaktadır. Türkiye'nin her yerinden gider makbuzu siparişi verebilir ve ürünlerinizi güvenli şekilde teslim alabilirsiniz.
@@ -2354,10 +2354,10 @@ export const MakbuzFormlarPage = () => {
                         Tahsilat makbuzu, işletmelerin müşterilerinden aldıkları ödeme ve tahsilatları düzenli şekilde kayıt altına almasını sağlayan vazgeçilmez bir matbu evraktır. Günlük iş akışlarında finansal süreçlerin sağlıklı takibi için sadece tahsilat makbuzu değil, diğer tamamlayıcı muhasebe ve kayıt belgelerine de ihtiyaç duyulmaktadır.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/gider-makbuzu" className="font-extrabold text-primary hover:underline">Gider Makbuzu</Link></strong>, işletme dışı yapılan harcamaları ve nakit ödemeleri belgelemek için düzenlenirken; <strong><Link to="/makbuz/tediye-makbuzu" className="font-extrabold text-primary hover:underline">Tediye Makbuzu</Link></strong>, kasadan çıkan nakit ödemelerin alıcısı tarafından teslim alındığını kayıt altına almak üzere düzenlenir.
+                        <strong><Link to="/gider-makbuzu" className="font-extrabold text-primary hover:underline">Gider Makbuzu</Link></strong>, işletme dışı yapılan harcamaları ve nakit ödemeleri belgelemek için düzenlenirken; <strong><Link to="/tediye-makbuzu" className="font-extrabold text-primary hover:underline">Tediye Makbuzu</Link></strong>, kasadan çıkan nakit ödemelerin alıcısı tarafından teslim alındığını kayıt altına almak üzere düzenlenir.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/para-makbuzu" className="font-extrabold text-primary hover:underline">Para Makbuzu</Link></strong>, personelden personele veya anlık küçük emanet nakit akışlarında pratik bir kayıt çözümü sunar. <strong><Link to="/makbuz/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/makbuz/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ise hizmet sektöründeki sipariş ve servis süreçlerinin noksansız takibini sağlar.
+                        <strong><Link to="/para-makbuzu" className="font-extrabold text-primary hover:underline">Para Makbuzu</Link></strong>, personelden personele veya anlık küçük emanet nakit akışlarında pratik bir kayıt çözümü sunar. <strong><Link to="/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ise hizmet sektöründeki sipariş ve servis süreçlerinin noksansız takibini sağlar.
                       </p>
                       <p>
                         Mavi Basım olarak; kurumsal logolu, kendinden karbonlu otokopili ve seri numaralı tahsilat makbuzu koçanlarının basımında uzman kadromuz ve grafik desteğimizle hizmet veriyoruz. İstanbul Topkapı'daki tesisimizde üretilen kaliteli evraklarınızı Türkiye'nin tüm bölgelerine güvenli kargo ile ulaştırıyoruz.
@@ -3705,19 +3705,19 @@ export const MakbuzFormlarPage = () => {
                     Kurumunuzun tüm matbuat ve kağıt baskı ihtiyaçları için tesisimizde sunulan tamamlayıcı ürünler:
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-                    <Link to="/antetli-kagit" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
+                    <Link to="/antetli" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
                       <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Antetli Kağıt</span>
                     </Link>
                     <Link to="/kartvizit" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
                       <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Klinik Kartvizit</span>
                     </Link>
-                    <Link to="/cepli-dosya" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
+                    <Link to="/dosyalar" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
                       <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Cepli Dosya</span>
                     </Link>
-                    <Link to="/tutkalli-bloknot" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
+                    <Link to="/bloknotlar" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
                       <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Tutkallı Bloknot</span>
                     </Link>
-                    <Link to="/diplomat-zarf" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
+                    <Link to="/zarf" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
                       <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Diplomat Zarf</span>
                     </Link>
                     <Link to="/brosur" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
@@ -3939,8 +3939,8 @@ export const GenericPriceTablePage = ({ data }: { data: any[] }) => {
             >
               <ChevronLeft size={20} className="text-secondary" />
             </button>
-            <div className="flex items-center gap-3">
-              <h1 className="text-xl md:text-2xl font-black uppercase tracking-tight text-secondary whitespace-nowrap">
+            <div className="flex min-w-0 max-w-full flex-wrap items-center gap-x-3 gap-y-1">
+              <h1 className="text-xl md:text-2xl font-black uppercase tracking-tight text-secondary">
                 {displayH1}
               </h1>
               <span className="hidden md:block text-gray-300 text-2xl font-light">|</span>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { 
   ShoppingCart, 
   ShieldCheck, 
@@ -152,13 +152,6 @@ const DynamicImageContainer = ({
 export const DosyalarPage = () => {
 
   const { openProductDetail } = useCart();
-
-  React.useEffect(() => {
-    const prerenderedMetadata = document.head.querySelectorAll(
-      'title:not([data-rh]), link[rel="canonical"]:not([data-rh]), meta[name="description"]:not([data-rh]), meta[property^="og:"]:not([data-rh])'
-    );
-    prerenderedMetadata.forEach(node => node.remove());
-  }, []);
 
   const openWhatsApp = (item: any) => {
     openProductDetail(item, "Dosyalar");
@@ -786,4 +779,3 @@ export const DosyalarPage = () => {
 };
 
 export default DosyalarPage;
-

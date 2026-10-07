@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { ChevronRight, Check } from 'lucide-react';
 import { AgencyDiscountCTA } from '../App';
 

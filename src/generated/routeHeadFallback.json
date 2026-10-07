@@ -1,0 +1,3463 @@
+{
+  "defaults": {
+    "og:image": "https://mavibasim.com/mavilogo.png",
+    "og:image:alt": "Dönerci Magnet Baskı Fiyatları | Figürlü Özel Kesim Buzdolabı Magneti",
+    "og:image:height": "630",
+    "og:image:secure_url": "https://mavibasim.com/mavilogo.png",
+    "og:image:type": "image/png",
+    "og:image:width": "1200",
+    "og:locale": "tr_TR",
+    "og:site_name": "Mavi Basım Matbaa & Reklam",
+    "og:type": "website",
+    "robots": "index, follow",
+    "twitter:card": "summary_large_image",
+    "twitter:image": "https://mavibasim.com/mavilogo.png"
+  },
+  "routes": {
+    "/": [
+      "Matbaa ve Baskı Çözümleri | Mavi Basım",
+      "Kartvizit, broşür, kutu, etiket, makbuz, ambalaj ve kurumsal baskı ürünleri için Mavi Basım'dan baskı çözümleri ve teklif alın.",
+      "https://mavibasim.com/",
+      {
+        "og:image:alt": "Matbaa ve Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/adana-brosur-baski": [
+      "Adana Broşür Baskı Fiyatları | Adana Online Matbaa",
+      "Adana genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/adana-brosur-baski",
+      {
+        "og:image:alt": "Adana Broşür Baskı Fiyatları | Adana Online Matbaa"
+      }
+    ],
+    "/adana-etiket-baski": [
+      "Adana Etiket Baskı Fiyatları | Adana Online Matbaa",
+      "Adana genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/adana-etiket-baski",
+      {
+        "og:image:alt": "Adana Etiket Baskı Fiyatları | Adana Online Matbaa"
+      }
+    ],
+    "/adana-kartvizit-baski": [
+      "Adana’ya Özel Kartvizit Baskı Fiyatları | Mat Selefonlu Kalın Kartvizit",
+      "Adana’daki narenciye kooperatifleri, inşaat, mühendislik, eczane ve emlak danışmanları için en uygun fiyatlı, profesyonel kartvizit baskı çözümleri Mavi Basım’da.",
+      "https://mavibasim.com/adana-kartvizit-baski",
+      {
+        "og:image:alt": "Adana’ya Özel Kartvizit Baskı Fiyatları | Mat Selefonlu Kalın Kartvizit"
+      }
+    ],
+    "/adana-katalog-baski": [
+      "Adana Katalog Baskı Fiyatları | Adana Online Matbaa",
+      "Adana genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/adana-katalog-baski",
+      {
+        "og:image:alt": "Adana Katalog Baskı Fiyatları | Adana Online Matbaa"
+      }
+    ],
+    "/adana-kutu-baski": [
+      "Adana Kutu Baskı Fiyatları | Adana Online Matbaa",
+      "Adana genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/adana-kutu-baski",
+      {
+        "og:image:alt": "Adana Kutu Baskı Fiyatları | Adana Online Matbaa"
+      }
+    ],
+    "/adana-magnet-baski": [
+      "Adana Magnet Baskı Fiyatları | Adana Online Matbaa",
+      "Adana genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/adana-magnet-baski",
+      {
+        "og:image:alt": "Adana Magnet Baskı Fiyatları | Adana Online Matbaa"
+      }
+    ],
+    "/adana-matbaa": [
+      "Adana Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Adana ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Adana adresinize hızlı teslimat.",
+      "https://mavibasim.com/adana-matbaa",
+      {
+        "og:image:alt": "Adana Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/adisyon": [
+      "Adisyon Fişi Baskı ve Numaratörlü Adisyon Koçanı Fiyatları | Mavi Basım",
+      "Restoran, kafe ve lokantalar için logolu, numaratörlü adisyon fişi baskısı. Güncel adisyon fiyatlarımızı inceleyin, WhatsApp üzerinden hızlıca sipariş verin.",
+      "https://mavibasim.com/adisyon",
+      {
+        "og:image:alt": "Adisyon Fişi Baskı ve Numaratörlü Adisyon Koçanı Fiyatları | Mavi Basım"
+      }
+    ],
+    "/adiyaman-matbaa": [
+      "Adıyaman Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Adıyaman ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Adıyaman adresinize hızlı teslimat.",
+      "https://mavibasim.com/adiyaman-matbaa",
+      {
+        "og:image:alt": "Adıyaman Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/afis": [
+      "Afiş Baskı Fiyatları | 35x50 - 50x70 - 70x100 cm",
+      "35x50, 50x70 ve 70x100 cm afiş baskı fiyatlarını inceleyin. 105, 135, 170 gr kuşe ve Blueback afiş poster baskı seçenekleri için teklif alın.",
+      "https://mavibasim.com/afis",
+      {
+        "og:image": "https://mavibasim.com/images/afis/afis-baski-fiyatlari.webp",
+        "og:image:alt": "Mavi Basım 35x50, 50x70 ve 70x100 cm kuşe afiş poster baskı fiyatları",
+        "og:image:height": "533",
+        "og:image:secure_url": "https://mavibasim.com/images/afis/afis-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "800",
+        "twitter:image": "https://mavibasim.com/images/afis/afis-baski-fiyatlari.webp"
+      }
+    ],
+    "/afyonkarahisar-matbaa": [
+      "Afyonkarahisar Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Afyonkarahisar ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Afyonkarahisar adresinize hızlı teslimat.",
+      "https://mavibasim.com/afyonkarahisar-matbaa",
+      {
+        "og:image:alt": "Afyonkarahisar Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/agri-matbaa": [
+      "Ağrı Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Ağrı ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Ağrı adresinize hızlı teslimat.",
+      "https://mavibasim.com/agri-matbaa",
+      {
+        "og:image:alt": "Ağrı Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/aksaray-matbaa": [
+      "Aksaray Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Aksaray ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Aksaray adresinize hızlı teslimat.",
+      "https://mavibasim.com/aksaray-matbaa",
+      {
+        "og:image:alt": "Aksaray Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/amasya-matbaa": [
+      "Amasya Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Amasya ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Amasya adresinize hızlı teslimat.",
+      "https://mavibasim.com/amasya-matbaa",
+      {
+        "og:image:alt": "Amasya Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/ambalaj": [
+      "Ambalaj Kağıdı Baskısı | Pelür ve Sülfit Kağıt | Mavi Basım",
+      "Baskılı ambalaj kağıdı; 70 gr sülfit, 135 gr kuşe ve 30 gr pelür seçenekleriyle hazırlanır. Ölçü, adet veya kilogram bilgisine göre teklif alın.",
+      "https://mavibasim.com/ambalaj",
+      {
+        "og:image": "https://mavibasim.com/images/ambalaj/baskili-ambalaj-kagidi.webp",
+        "og:image:alt": "Mavi Basım baskılı ambalaj kâğıdı, sülfit ve pelür kâğıt örnekleri",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/ambalaj/baskili-ambalaj-kagidi.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1024",
+        "twitter:image": "https://mavibasim.com/images/ambalaj/baskili-ambalaj-kagidi.webp"
+      }
+    ],
+    "/amerikan-servis": [
+      "Amerikan Servis Baskı Fiyatları | Kağıt Servis Altlığı",
+      "2.000 adet Amerikan servis baskı fiyatlarını inceleyin. 90 gr ve 120 gr 1. hamur ile 100 gr kuşe kağıt servis altlığı seçenekleri.",
+      "https://mavibasim.com/amerikan-servis",
+      {
+        "og:image": "https://mavibasim.com/images/amerikan-servis/amerikan-servis-baski.webp",
+        "og:image:alt": "Mavi Basım restoran ve kafe için kağıt Amerikan servis baskı çeşitleri",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/amerikan-servis/amerikan-servis-baski.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1536",
+        "twitter:image": "https://mavibasim.com/images/amerikan-servis/amerikan-servis-baski.webp"
+      }
+    ],
+    "/ankara-brosur-baski": [
+      "Ankara Broşür Baskı | Uygun Fiyatlı Tanıtım El İlanı",
+      "Ankara’daki danışmanlık büroları, sürücü kursları, kafeler ve sürücü kursları için 135 gr kuşe katlamalı broşür baskısı. Topkapı matbaa kalitesi ve hızlı kargo!",
+      "https://mavibasim.com/ankara-brosur-baski",
+      {
+        "og:image:alt": "Ankara Broşür Baskı | Uygun Fiyatlı Tanıtım El İlanı"
+      }
+    ],
+    "/ankara-etiket-baski": [
+      "Ankara Etiket Baskı Fiyatları | Ankara Online Matbaa",
+      "Ankara genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/ankara-etiket-baski",
+      {
+        "og:image:alt": "Ankara Etiket Baskı Fiyatları | Ankara Online Matbaa"
+      }
+    ],
+    "/ankara-kartvizit-baski": [
+      "Ankara Kartvizit Baskı Fiyatları | Ankara Online Matbaa",
+      "Ankara genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/ankara-kartvizit-baski",
+      {
+        "og:image:alt": "Ankara Kartvizit Baskı Fiyatları | Ankara Online Matbaa"
+      }
+    ],
+    "/ankara-katalog-baski": [
+      "Ankara Katalog Baskı Fiyatları | Ankara Online Matbaa",
+      "Ankara genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/ankara-katalog-baski",
+      {
+        "og:image:alt": "Ankara Katalog Baskı Fiyatları | Ankara Online Matbaa"
+      }
+    ],
+    "/ankara-kutu-baski": [
+      "Ankara Kutu Baskı Fiyatları | Ankara Online Matbaa",
+      "Ankara genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/ankara-kutu-baski",
+      {
+        "og:image:alt": "Ankara Kutu Baskı Fiyatları | Ankara Online Matbaa"
+      }
+    ],
+    "/ankara-magnet-baski": [
+      "Ankara Magnet Baskı Fiyatları | Kamu ve Lokanta Magnetleri",
+      "Ankara’daki lokanta, su bayisi, veteriner ve kurumlar için 0.40 mm güçlü buzdolabı magneti modelleri. Topkapı’dan Ankara kapınıza 24 saatte hızlı sevkiyat!",
+      "https://mavibasim.com/ankara-magnet-baski",
+      {
+        "og:image:alt": "Ankara Magnet Baskı Fiyatları | Kamu ve Lokanta Magnetleri"
+      }
+    ],
+    "/ankara-matbaa": [
+      "Ankara Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Ankara ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Ankara adresinize hızlı teslimat.",
+      "https://mavibasim.com/ankara-matbaa",
+      {
+        "og:image:alt": "Ankara Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/antalya-brosur-baski": [
+      "Antalya Broşür Baskı Fiyatları | Antalya Online Matbaa",
+      "Antalya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/antalya-brosur-baski",
+      {
+        "og:image:alt": "Antalya Broşür Baskı Fiyatları | Antalya Online Matbaa"
+      }
+    ],
+    "/antalya-emlakci-kartvizit-baski": [
+      "Antalya Emlakçı Kartvizit Baskı | Gayrimenkul Danışmanı Randevu Kartı",
+      "Antalya'daki emlak ofisleri ve gayrimenkul danışmanları için lüks kabartma laklı, altın varaklı ve kalın karton emlakçı kartvizit siparişi.",
+      "https://mavibasim.com/antalya-emlakci-kartvizit-baski",
+      {
+        "og:image:alt": "Antalya Emlakçı Kartvizit Baskı | Gayrimenkul Danışmanı Randevu Kartı"
+      }
+    ],
+    "/antalya-etiket-baski": [
+      "Antalya Etiket Baskı Fiyatları | Antalya Online Matbaa",
+      "Antalya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/antalya-etiket-baski",
+      {
+        "og:image:alt": "Antalya Etiket Baskı Fiyatları | Antalya Online Matbaa"
+      }
+    ],
+    "/antalya-kartvizit-baski": [
+      "Antalya Kartvizit Baskı Fiyatları | Antalya Online Matbaa",
+      "Antalya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/antalya-kartvizit-baski",
+      {
+        "og:image:alt": "Antalya Kartvizit Baskı Fiyatları | Antalya Online Matbaa"
+      }
+    ],
+    "/antalya-katalog-baski": [
+      "Antalya Katalog Baskı | Turizm ve İnşaat Katalogları",
+      "Antalya’daki imalat sanayi, tarım, turizm, inşaat ve butik oteller için lüks tel spiral veya Amerikan ciltli katalog baskı çözümleri. Doğrudan fabrikadan kargo!",
+      "https://mavibasim.com/antalya-katalog-baski",
+      {
+        "og:image:alt": "Antalya Katalog Baskı | Turizm ve İnşaat Katalogları"
+      }
+    ],
+    "/antalya-kutu-baski": [
+      "Antalya Kutu Baskı Fiyatları | Antalya Online Matbaa",
+      "Antalya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/antalya-kutu-baski",
+      {
+        "og:image:alt": "Antalya Kutu Baskı Fiyatları | Antalya Online Matbaa"
+      }
+    ],
+    "/antalya-magnet-baski": [
+      "Antalya Magnet Baskı Fiyatları | Antalya Online Matbaa",
+      "Antalya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/antalya-magnet-baski",
+      {
+        "og:image:alt": "Antalya Magnet Baskı Fiyatları | Antalya Online Matbaa"
+      }
+    ],
+    "/antalya-matbaa": [
+      "Antalya Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Antalya ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Antalya adresinize hızlı teslimat.",
+      "https://mavibasim.com/antalya-matbaa",
+      {
+        "og:image:alt": "Antalya Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/antetli": [
+      "Antetli Kağıt Baskı Fiyatları | A4 ve A5 | Mavi Basım",
+      "A4 ve A5 antetli kağıt baskı fiyatlarını inceleyin. Logolu ve kurumsal antetli kağıt için 80 gr ve 90 gr 1. hamur seçeneklerini inceleyip sipariş verin.",
+      "https://mavibasim.com/antetli",
+      {
+        "og:image": "https://mavibasim.com/images/antetli-kagit/antetli-kagit-baski-fiyatlari.webp",
+        "og:image:alt": "A4 ve A5 logolu antetli kağıt baskı fiyatları",
+        "og:image:height": "533",
+        "og:image:secure_url": "https://mavibasim.com/images/antetli-kagit/antetli-kagit-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "800",
+        "og:site_name": "Mavi Basım",
+        "twitter:image": "https://mavibasim.com/images/antetli-kagit/antetli-kagit-baski-fiyatlari.webp"
+      }
+    ],
+    "/arac-kiralama": [
+      "Araç Kiralama Sözleşmesi & Rent A Car Sözleşmesi Baskısı | Mavi Basım",
+      "Kurumsal oto kiralama evrakları, rent a car sözleşmesi, araç kiralama sözleşmesi baskısı ve araç teslim tutanağı hasar tespit formu üretimi. Otokopili, sıralı numaratörlü.",
+      "https://mavibasim.com/arac-kiralama",
+      {
+        "og:image": "https://mavibasim.com/images/arac-kiralama/arac-kiralama-sozlesmesi-baski.webp",
+        "og:image:alt": "Araç Kiralama Sözleşmesi & Rent A Car Sözleşmesi Baskısı | Mavi Basım",
+        "og:image:height": "533",
+        "og:image:secure_url": "https://mavibasim.com/images/arac-kiralama/arac-kiralama-sozlesmesi-baski.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "800",
+        "twitter:image": "https://mavibasim.com/images/arac-kiralama/arac-kiralama-sozlesmesi-baski.webp"
+      }
+    ],
+    "/ardahan-matbaa": [
+      "Ardahan Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Ardahan ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Ardahan adresinize hızlı teslimat.",
+      "https://mavibasim.com/ardahan-matbaa",
+      {
+        "og:image:alt": "Ardahan Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/artvin-matbaa": [
+      "Artvin Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Artvin ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Artvin adresinize hızlı teslimat.",
+      "https://mavibasim.com/artvin-matbaa",
+      {
+        "og:image:alt": "Artvin Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/aydin-matbaa": [
+      "Aydın Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Aydın ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Aydın adresinize hızlı teslimat.",
+      "https://mavibasim.com/aydin-matbaa",
+      {
+        "og:image:alt": "Aydın Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/balikesir-matbaa": [
+      "Balıkesir Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Balıkesir ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Balıkesir adresinize hızlı teslimat.",
+      "https://mavibasim.com/balikesir-matbaa",
+      {
+        "og:image:alt": "Balıkesir Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/bartin-matbaa": [
+      "Bartın Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Bartın ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Bartın adresinize hızlı teslimat.",
+      "https://mavibasim.com/bartin-matbaa",
+      {
+        "og:image:alt": "Bartın Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/batman-matbaa": [
+      "Batman Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Batman ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Batman adresinize hızlı teslimat.",
+      "https://mavibasim.com/batman-matbaa",
+      {
+        "og:image:alt": "Batman Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/bayburt-matbaa": [
+      "Bayburt Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Bayburt ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Bayburt adresinize hızlı teslimat.",
+      "https://mavibasim.com/bayburt-matbaa",
+      {
+        "og:image:alt": "Bayburt Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/bilecik-matbaa": [
+      "Bilecik Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Bilecik ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Bilecik adresinize hızlı teslimat.",
+      "https://mavibasim.com/bilecik-matbaa",
+      {
+        "og:image:alt": "Bilecik Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/bingol-matbaa": [
+      "Bingöl Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Bingöl ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Bingöl adresinize hızlı teslimat.",
+      "https://mavibasim.com/bingol-matbaa",
+      {
+        "og:image:alt": "Bingöl Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/bitlis-kutu-baski": [
+      "Bitlis Kutu Baskı | Markalı Bal ve Kurabiye Ambalajı",
+      "Bitlis bal üreticileri, kuruyemiş firmaları, pastaneler ve lokal butik üreticiler için neme dayanıklı gıda uyumlu şık karton kutu üretimi.",
+      "https://mavibasim.com/bitlis-kutu-baski",
+      {
+        "og:image:alt": "Bitlis Kutu Baskı | Markalı Bal ve Kurabiye Ambalajı"
+      }
+    ],
+    "/bitlis-matbaa": [
+      "Bitlis Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Bitlis ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Bitlis adresinize hızlı teslimat.",
+      "https://mavibasim.com/bitlis-matbaa",
+      {
+        "og:image:alt": "Bitlis Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/bitlis-restaurant-siparis-fisi": [
+      "Bitlis Restoran Sipariş Fişi Baskı | Numaratörlü Otokopi Fişi",
+      "Bitlis'teki restoran, kebap salonları ve lokantalar için 2 veya 3 nüshalı, logolu, numaratörlü, kendinden karbonlu adisyon ve sipariş fişi baskısı.",
+      "https://mavibasim.com/bitlis-restaurant-siparis-fisi",
+      {
+        "og:image:alt": "Bitlis Restoran Sipariş Fişi Baskı | Numaratörlü Otokopi Fişi"
+      }
+    ],
+    "/blog": [
+      "Kurumsal Matbaacılık ve Baskı Çözümleri Bloğu | Mavi Basım",
+      "Doğru kağıt gramajı seçimi, CMYK ve taşma payı rehberliği, otokopili evrak tasarımı ve ofset printing teknolojileri hakkında profesyonel makaleler.",
+      "https://mavibasim.com/blog",
+      {
+        "og:image:alt": "Kurumsal Matbaacılık ve Baskı Çözümleri Bloğu | Mavi Basım"
+      }
+    ],
+    "/blog/115-gr-mi-135-gr-mi": [
+      "115 gr Kuşe mi 135 gr Kuşe mi? Broşür ve El İlanı Kağıt Seçim Rehberi - Mavi Basım",
+      "Broşür ve el ilanı baskılarında 115 gr ile 135 gr kuşe kağıt arasındaki farklar, maliyet avantajları, gramaj hissiyatı ve dağıtım tavsiyeleri.",
+      "https://mavibasim.com/blog/115-gr-mi-135-gr-mi",
+      {
+        "og:image:alt": "115 gr Kuşe mi 135 gr Kuşe mi? Broşür ve El İlanı Kağıt Seçim Rehberi - Mavi Basım"
+      }
+    ],
+    "/blog/135-gr-ve-170-gr-kuse-farklari": [
+      "135 gr ile 170 gr Kuşe Arasındaki Farklar: Hangi Gramaj Nerede Kullanılır? - Mavi Basım",
+      "Broşür, katalog ve kurumsal tanıtım materyallerinde 135 gr standart kuşe ile 170 gr tok kuşe kağıt arasındaki doku, katlama ve prestij karşılaştırması.",
+      "https://mavibasim.com/blog/135-gr-ve-170-gr-kuse-farklari",
+      {
+        "og:image:alt": "135 gr ile 170 gr Kuşe Arasındaki Farklar: Hangi Gramaj Nerede Kullanılır? - Mavi Basım"
+      }
+    ],
+    "/blog/adisyon-ve-makbuzlarda-otokopili-kagit": [
+      "Resmi Evraklarda Otokopili (Kendinden Karbonlu) Kağıt Teknolojisi - Mavi Basım",
+      "Adisyon koçanları, tahsilat makbuzları ve teslimat fişlerinde alttaki nüshaya karbon kağıtsız yazıyı pürüzsüz geçiren mikrokapsül sırrı.",
+      "https://mavibasim.com/blog/adisyon-ve-makbuzlarda-otokopili-kagit",
+      {
+        "og:image:alt": "Resmi Evraklarda Otokopili (Kendinden Karbonlu) Kağıt Teknolojisi - Mavi Basım"
+      }
+    ],
+    "/blog/amerikan-bristol-ile-kroma-karton-farki": [
+      "Amerikan Bristol ile Kroma Karton Arasındaki Farklar Nelerdir? - Mavi Basım",
+      "Ambalaj kutusu imalatında en çok kullanılan iki temel kağıt türü olan Amerikan Bristol ile Kroma Karton farkları, maliyet analizi ve doğru kullanım alanları.",
+      "https://mavibasim.com/blog/amerikan-bristol-ile-kroma-karton-farki",
+      {
+        "og:image:alt": "Amerikan Bristol ile Kroma Karton Arasındaki Farklar Nelerdir? - Mavi Basım"
+      }
+    ],
+    "/blog/antetli-kagit-baskisinda-80gr-1.hamur": [
+      "Kurumsal Kimliğin Temeli: Antetli Kağıt Baskısında 80 gr 1. Hamur Standardı - Mavi Basım",
+      "Lazer yazıcılarla tam uyumlu, sıkışma ve mürekkep dağıtma yapmayan logolu dikey kurumsal yazışma kağıdı seçerken bilinmesi gerekenler.",
+      "https://mavibasim.com/blog/antetli-kagit-baskisinda-80gr-1.hamur",
+      {
+        "og:image:alt": "Kurumsal Kimliğin Temeli: Antetli Kağıt Baskısında 80 gr 1. Hamur Standardı - Mavi Basım"
+      }
+    ],
+    "/blog/baski-kalitesini-etkileyen-faktorler": [
+      "Baskı Kalitesini Etkileyen Faktörler ve Teknik Detaylar - Mavi Basım",
+      "Çözünürlük, CMYK renk yönetimi, makine parkuru kalitesi ve mücellit sonlandırma işlemlerinin nihai baskı kalitesine olan doğrudan etkileri.",
+      "https://mavibasim.com/blog/baski-kalitesini-etkileyen-faktorler",
+      {
+        "og:image:alt": "Baskı Kalitesini Etkileyen Faktörler ve Teknik Detaylar - Mavi Basım"
+      }
+    ],
+    "/blog/baski-sonrasi-islemler-nelerdir": [
+      "Baskı Sonrası İşlemler Nelerdir? Mücellit Süreçleri - Mavi Basım",
+      "Baskıdan çıkan kağıtların nihai ürüne dönüşmesini sağlayan kesim, kırım, harmanlama, ciltleme ve koruma süreçlerinin tüm detayları.",
+      "https://mavibasim.com/blog/baski-sonrasi-islemler-nelerdir",
+      {
+        "og:image:alt": "Baskı Sonrası İşlemler Nelerdir? Mücellit Süreçleri - Mavi Basım"
+      }
+    ],
+    "/blog/baskili-urunlerle-pazarlama-markanizi-buyuten-matbaa-urunleri": [
+      "Baskılı Ürünlerle Pazarlama: Markanızı Büyüten Etkili Matbaa Ürünleri - Mavi Basım",
+      "Baskılı ürünlerle pazarlama stratejileri: Kartvizit, broşür, magnet, katalog ve ambalaj baskılarının satış artışına ve marka imajına doğrudan katkıları.",
+      "https://mavibasim.com/blog/baskili-urunlerle-pazarlama-markanizi-buyuten-matbaa-urunleri",
+      {
+        "og:image:alt": "Baskılı Ürünlerle Pazarlama: Markanızı Büyüten Etkili Matbaa Ürünleri - Mavi Basım"
+      }
+    ],
+    "/blog/baskiya-uygun-tasarim-nasil-hazirlanir": [
+      "Baskıya Uygun Tasarım Nasıl Hazırlanır? Matbaa İçin Eksiksiz Rehber - Mavi Basım",
+      "Baskıya uygun tasarım hazırlamanın tüm püf noktaları: CMYK renk modu, taşma payı (bleed), 300 DPI çözünürlük, PDF/X formatı ve yazıları eğriye çevirme kılavuzu.",
+      "https://mavibasim.com/blog/baskiya-uygun-tasarim-nasil-hazirlanir",
+      {
+        "og:image:alt": "Baskıya Uygun Tasarım Nasıl Hazırlanır? Matbaa İçin Eksiksiz Rehber - Mavi Basım"
+      }
+    ],
+    "/blog/brosur-baskida-en-dogru-kagit-nasil-secilir": [
+      "Broşür İçin En Uygun Kağıt Hangisi? Ölçüler, Gramajlar ve Baskı Rehberi - Mavi Basım",
+      "Tanıtım materyallerinin tasarım ve üretim süreçlerinde 115 gr, 135 gr ve 170 gr kuşe kağıtlar arasındaki farkları, kullanım alanlarını ve doğru dosya hazırlama detaylarını öğrenin.",
+      "https://mavibasim.com/blog/brosur-baskida-en-dogru-kagit-nasil-secilir",
+      {
+        "og:image:alt": "Broşür İçin En Uygun Kağıt Hangisi? Ölçüler, Gramajlar ve Baskı Rehberi - Mavi Basım"
+      }
+    ],
+    "/blog/brosur-katlama-kirim-modelleri-nelerdir": [
+      "Broşür Katlama (Kırım) Modelleri Nelerdir? Katlama Akış Kılavuzu - Mavi Basım",
+      "A4 ve A3 broşürlerde akordeon, c-kırım, kapı kırım, pilyajlı çift kırım ve tek kırım katlama sanatı hakkında merak ettikleriniz.",
+      "https://mavibasim.com/blog/brosur-katlama-kirim-modelleri-nelerdir",
+      {
+        "og:image:alt": "Broşür Katlama (Kırım) Modelleri Nelerdir? Katlama Akış Kılavuzu - Mavi Basım"
+      }
+    ],
+    "/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi": [
+      "Matbaa Baskı Öncesi Dosya Hazırlama: CMYK Renk, 300 DPI ve Taşma Payı Rehberi - Mavi Basım",
+      "Grafik tasarımcılar ve işletmeler için CMYK renk ayrımı, 300 DPI çözünürlük, en az 3 mm taşma payı (bleed) ve güvenli alan teknik rehberi.",
+      "https://mavibasim.com/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi",
+      {
+        "og:image:alt": "Matbaa Baskı Öncesi Dosya Hazırlama: CMYK Renk, 300 DPI ve Taşma Payı Rehberi - Mavi Basım"
+      }
+    ],
+    "/blog/e-ticaret-ve-kargo-gonderi-kutusu-tasarimi": [
+      "E-Ticaret ve Kargo Gönderi Kutusu Tasarımı: Dayanıklı ve Şık Unboxing - Mavi Basım",
+      "E-ticaret markalarının müşterilerine unutulmaz bir kutu açma tecrübesi yaşatmasını sağlayan sağlam kargo gönderi ve hediye kutuları.",
+      "https://mavibasim.com/blog/e-ticaret-ve-kargo-gonderi-kutusu-tasarimi",
+      {
+        "og:image:alt": "E-Ticaret ve Kargo Gönderi Kutusu Tasarımı: Dayanıklı ve Şık Unboxing - Mavi Basım"
+      }
+    ],
+    "/blog/el-ilani-dagitimi-ise-yariyor-mu": [
+      "El İlanı Dağıtımı İşe Yarıyor mu? Bölgesel Reklamın Geri Dönüş Oranları - Mavi Basım",
+      "El ilanı dağıtımının gerçek dönüş oranları, sektörel başarı analizleri, doğru ebat seçimleri ve kampanya öncesi kontrol listesi.",
+      "https://mavibasim.com/blog/el-ilani-dagitimi-ise-yariyor-mu",
+      {
+        "og:image:alt": "El İlanı Dağıtımı İşe Yarıyor mu? Bölgesel Reklamın Geri Dönüş Oranları - Mavi Basım"
+      }
+    ],
+    "/blog/emlak-yer-gosterme-belgesi-nedir": [
+      "Yer Gösterme Belgesi Baskısı | Otokopili NCR Koçan Baskı - Mavi Basım",
+      "Yer Gösterme Belgesi, emlak danışmanlarının müşterilerine gösterdikleri taşınmazları kayıt altına almak amacıyla kullanılan resmi bir evraktır. Satılık ve kiralık gayrimenkul gösterimlerinde düzenlenen bu belge; müşteri bilgileri, taşınmaz bilgileri, gösterim tarihi ve tarafların imzalarını içerir. Düzenli şekilde hazırlanan Yer Gösterme Belgesi, gösterim sürecinin kayıt altına alınmasına yardımcı olur ve emlak ofislerinin evrak düzenini destekler.\n\nBu rehberde Yer Gösterme Belgesi hakkında en çok merak edilen soruların cevaplarını bulabilirsiniz. Yer Gösterme Belgesi nedir, nereden alınır, nasıl hazırlanır, nasıl doldurulur, örnekleri nelerdir, PDF, Word ve Excel formatları nasıl kullanılır, kaç nüsha hazırlanmalıdır, numaratör neden tercih edilir ve otokopili NCR koçan baskılarında dikkat edilmesi gereken teknik detaylar bu içerikte kapsamlı şekilde açıklanmaktadır.\n\nAyrıca firmanıza özel logolu, numaratörlü ve otokopili Yer Gösterme Belgesi baskı seçenekleri, A4 ve A5 ebat alternatifleri, teknik özellikler, baskı süreci, teslimat bilgileri ve sipariş aşamaları hakkında da ayrıntılı bilgiler yer almaktadır.",
+      "https://mavibasim.com/blog/emlak-yer-gosterme-belgesi-nedir",
+      {
+        "og:image:alt": "Yer Gösterme Belgesi Baskısı | Otokopili NCR Koçan Baskı - Mavi Basım"
+      }
+    ],
+    "/blog/etiket-baskida-rulo-mu-tabaka-mi": [
+      "Rulo Etiket mi Tabaka Etiket mi? Ambalajınıza En Uygun Ürün Seçimi - Mavi Basım",
+      "Pastane, kozmetik, lojistik ve endüstriyel ambalajlarda kuşe ve opak etiketlerin rulo veya tabaka halinde sipariş edilmesinin maliyet, adet ve zaman avantajları.",
+      "https://mavibasim.com/blog/etiket-baskida-rulo-mu-tabaka-mi",
+      {
+        "og:image:alt": "Rulo Etiket mi Tabaka Etiket mi? Ambalajınıza En Uygun Ürün Seçimi - Mavi Basım"
+      }
+    ],
+    "/blog/etiketlerin-yapisan-yuzeylerin-mukavemeti": [
+      "PP Opak, Şeffaf ve Kuşe Etiketlerde Yapışkan Mukavemeti Analizleri - Mavi Basım",
+      "Plastik şampuan şişeleri, zeytinyağı cam şişeleri ve kargo kolileri için akrilik tutkal, hotmelt ve nonperm yapışkan standart farkları.",
+      "https://mavibasim.com/blog/etiketlerin-yapisan-yuzeylerin-mukavemeti",
+      {
+        "og:image:alt": "PP Opak, Şeffaf ve Kuşe Etiketlerde Yapışkan Mukavemeti Analizleri - Mavi Basım"
+      }
+    ],
+    "/blog/fast-food-ve-restoran-ambalaj-kutulari-secim-rehberi": [
+      "Fast Food ve Restoran Ambalaj Kutuları Seçim Rehberi: Hamburger, Dürüm, Tatlı ve Cips Kutusu - Mavi Basım",
+      "Restoran ve paket servis işletmeleri için gıda uyumlu Amerikan Bristol kartondan hamburger, dürüm, cips, noodle ve salata kutusu imalat rehberi.",
+      "https://mavibasim.com/blog/fast-food-ve-restoran-ambalaj-kutulari-secim-rehberi",
+      {
+        "og:image:alt": "Fast Food ve Restoran Ambalaj Kutuları Seçim Rehberi: Hamburger, Dürüm, Tatlı ve Cips Kutusu - Mavi Basım"
+      }
+    ],
+    "/blog/gida-kutularinda-karton-secimi": [
+      "Gıda Kutularında Sağlıklı ve Hijyenik Karton Seçimi - Mavi Basım",
+      "Baklava, çikolata, pastane ve fast food kutularında gıda güvenliği sertifikalı, koku yapmayan karton seçimi.",
+      "https://mavibasim.com/blog/gida-kutularinda-karton-secimi",
+      {
+        "og:image:alt": "Gıda Kutularında Sağlıklı ve Hijyenik Karton Seçimi - Mavi Basım"
+      }
+    ],
+    "/blog/hizli-uretim-sureci-nasil-planlanir": [
+      "Hızlı Üretim Süreci Nasıl Planlanır? Acil Matbaa ve Hızlı Baskı Çözümleri - Mavi Basım",
+      "İşletmeler için zaman kazandıran hızlı dijital baskı çözümleri, grafik mizanpaj hızı ve aynı gün PDF onay süreçlerinin planlanması.",
+      "https://mavibasim.com/blog/hizli-uretim-sureci-nasil-planlanir",
+      {
+        "og:image:alt": "Hızlı Üretim Süreci Nasıl Planlanır? Acil Matbaa ve Hızlı Baskı Çözümleri - Mavi Basım"
+      }
+    ],
+    "/blog/istanbul-topkapi-karton-kutu-ureticisi-toptan-imalat": [
+      "İstanbul Topkapı Karton Kutu Üreticisi ile Toptan Ambalaj İmalat Avantajları - Mavi Basım",
+      "Topkapı matbaa ve ambalaj sanayinde imalatçıdan direk kutu bastırmanın sunduğu fiyat, kalite ve hızlı teslimat avantajları.",
+      "https://mavibasim.com/blog/istanbul-topkapi-karton-kutu-ureticisi-toptan-imalat",
+      {
+        "og:image:alt": "İstanbul Topkapı Karton Kutu Üreticisi ile Toptan Ambalaj İmalat Avantajları - Mavi Basım"
+      }
+    ],
+    "/blog/kabartma-lak-ve-gofre-baski-nedir": [
+      "Kabartma Lak, Gofre ve Varak Yaldız Nedir? Premium Kartvizit Detayları - Mavi Basım",
+      "Markanıza lüks ve elit bir imaj katmak amacıyla kartvizit, katalog ve dosya kapaklarında uygulanan gofre (kabartma) ve folyo yaldız sırlar.",
+      "https://mavibasim.com/blog/kabartma-lak-ve-gofre-baski-nedir",
+      {
+        "og:image:alt": "Kabartma Lak, Gofre ve Varak Yaldız Nedir? Premium Kartvizit Detayları - Mavi Basım"
+      }
+    ],
+    "/blog/kaliteli-baski-nasil-anlasilir": [
+      "Kaliteli Baskı Nasıl Anlaşılır? Profesyonel Matbaa Seçim Rehberi - Mavi Basım",
+      "Kurumsal tanıtım evraklarında kaliteli baskıyı anlamanın pratik yollarını, renk doğruluğu, kağıt seçimi ve mürekkep detaylarıyla inceleyin.",
+      "https://mavibasim.com/blog/kaliteli-baski-nasil-anlasilir",
+      {
+        "og:image:alt": "Kaliteli Baskı Nasıl Anlaşılır? Profesyonel Matbaa Seçim Rehberi - Mavi Basım"
+      }
+    ],
+    "/blog/kartvizit-tasarimi-ve-baski-rehberi": [
+      "Profesyonel Kartvizit Tasarımı ve Baskı Rehberi: Standart Ölçüler ve Kağıt Seçimi - Mavi Basım",
+      "84x52 mm standart kartvizit ebatları, 350 gr mat kuşe kağıt, kurumsal tipografi ve tasarım püf noktaları.",
+      "https://mavibasim.com/blog/kartvizit-tasarimi-ve-baski-rehberi",
+      {
+        "og:image:alt": "Profesyonel Kartvizit Tasarımı ve Baskı Rehberi: Standart Ölçüler ve Kağıt Seçimi - Mavi Basım"
+      }
+    ],
+    "/blog/kartvizit-tasarlar-iken-yapilan-hatalar": [
+      "Kartvizit Tasarlarken Yapılan En Sık 7 Hata ve Çözüm Yolları - Mavi Basım",
+      "Baskı öncesinde yapılan çözünürlük, RGB renk modu, taşma payı ve font convert hatalarını önleyerek kusursuz kurumsal kartvizit hazırlama rehberi.",
+      "https://mavibasim.com/blog/kartvizit-tasarlar-iken-yapilan-hatalar",
+      {
+        "og:image:alt": "Kartvizit Tasarlarken Yapılan En Sık 7 Hata ve Çözüm Yolları - Mavi Basım"
+      }
+    ],
+    "/blog/kartvizitte-mat-mi-parlak-mi": [
+      "Kartvizit Baskısında Mat Selefon mu Parlak Selefon mu Tercih Edilmeli? - Mavi Basım",
+      "Kartvizitiniz ilk izleniminizdir. Kurumsal kimliğinizi en doğru yansıtacak laminasyon türünün, selefonun, lak ve gofre uygulamalarının sırları bu makalede.",
+      "https://mavibasim.com/blog/kartvizitte-mat-mi-parlak-mi",
+      {
+        "og:image:alt": "Kartvizit Baskısında Mat Selefon mu Parlak Selefon mu Tercih Edilmeli? - Mavi Basım"
+      }
+    ],
+    "/blog/kozmetik-kutusu-tasarim-rehberi": [
+      "Kozmetik Kutusu Tasarım Rehberi: Lüks ve Şık Ambalaj Sırları - Mavi Basım",
+      "Rafta albenisi yüksek, Soft Touch selefonlu, gofre kabartmalı ve altın varaklı kozmetik kutusu imalatı ipuçları.",
+      "https://mavibasim.com/blog/kozmetik-kutusu-tasarim-rehberi",
+      {
+        "og:image:alt": "Kozmetik Kutusu Tasarım Rehberi: Lüks ve Şık Ambalaj Sırları - Mavi Basım"
+      }
+    ],
+    "/blog/kutu-baskida-en-cok-tercih-edilen-modeller": [
+      "Kutu Baskıda En Çok Tercih Edilen Karton Modelleri ve Kalite Farkları - Mavi Basım",
+      "Pastaneler, tekstil markaları, e-ticaret siteleri ve hediyelik eşya kutuları için Amerikan Bristol ve Kromo Karton seçim rehberi.",
+      "https://mavibasim.com/blog/kutu-baskida-en-cok-tercih-edilen-modeller",
+      {
+        "og:image:alt": "Kutu Baskıda En Çok Tercih Edilen Karton Modelleri ve Kalite Farkları - Mavi Basım"
+      }
+    ],
+    "/blog/kutu-bicak-izi-nedir-nasil-hazirlanir": [
+      "Kutu Bıçak İzi Nedir ve Baskıya Hazır Bıçak Şablonu Nasıl Hazırlanır? - Mavi Basım",
+      "Kutunun düzgün katlanması ve kilitlenmesi için gereken kırmızı kırım, yeşil kesim ve pilyaj hatlarını çizme rehberi.",
+      "https://mavibasim.com/blog/kutu-bicak-izi-nedir-nasil-hazirlanir",
+      {
+        "og:image:alt": "Kutu Bıçak İzi Nedir ve Baskıya Hazır Bıçak Şablonu Nasıl Hazırlanır? - Mavi Basım"
+      }
+    ],
+    "/blog/kutu-gramaji-nasil-secilir": [
+      "Kutu Gramajı Nasıl Seçilir? 230gr - 400gr Karton Seçim Rehberi - Mavi Basım",
+      "Ürününüzün ağırlığına, ebadına ve kargo dayanımına göre 230 gr, 250 gr, 300 gr, 350 gr veya 400 gr karton gramajı seçme teknikleri.",
+      "https://mavibasim.com/blog/kutu-gramaji-nasil-secilir",
+      {
+        "og:image:alt": "Kutu Gramajı Nasıl Seçilir? 230gr - 400gr Karton Seçim Rehberi - Mavi Basım"
+      }
+    ],
+    "/blog/kutu-tasima-dayanimi-nasil-hesaplanir": [
+      "Kutu Taşıma Dayanımı ve Karton Mukavemeti Nasıl Hesaplanır? - Mavi Basım",
+      "Ürününüzün kargoda veya rafta ezilmemesi için karton gramajı, dip kilit yapısı ve istifleme dayanımı hesaplama.",
+      "https://mavibasim.com/blog/kutu-tasima-dayanimi-nasil-hesaplanir",
+      {
+        "og:image:alt": "Kutu Taşıma Dayanımı ve Karton Mukavemeti Nasıl Hesaplanır? - Mavi Basım"
+      }
+    ],
+    "/blog/kuve-kagit-ve-bristol-karton-farklari": [
+      "Kuşe Kağıt ile Bristol Karton Arasındaki Dokusal ve Teknik Farklar - Mavi Basım",
+      "Broşür ve cepli dosyalarda hangisi tercih edilmeli? Bristol kartonun sıvama dayanıklılığı ile kuşe kağıdın renk geçirgenliğinin karşılaştırması.",
+      "https://mavibasim.com/blog/kuve-kagit-ve-bristol-karton-farklari",
+      {
+        "og:image:alt": "Kuşe Kağıt ile Bristol Karton Arasındaki Dokusal ve Teknik Farklar - Mavi Basım"
+      }
+    ],
+    "/blog/lak-cesitleri-lokal-uv-drip-off": [
+      "Kutu Baskıda Lak Çeşitleri: Lokal UV, Drip Off ve Dispersiyon Lak - Mavi Basım",
+      "Kutu ambalajınızda görsel derinlik katan lak uygulamaları: Lokal UV (Spot Lak), Drip Off kabarcıklı lak ve koruyucu laklar.",
+      "https://mavibasim.com/blog/lak-cesitleri-lokal-uv-drip-off",
+      {
+        "og:image:alt": "Kutu Baskıda Lak Çeşitleri: Lokal UV, Drip Off ve Dispersiyon Lak - Mavi Basım"
+      }
+    ],
+    "/blog/lak-nedir": [
+      "Lak Nedir? Lokal Lak ve Kabartma Lak Uygulamaları - Mavi Basım",
+      "Katalog kapaklarında, kartvizitlerde ve lüks kutularda kullanılan lokal lak ve kabartma lak tekniklerinin detayları ve estetik katkıları.",
+      "https://mavibasim.com/blog/lak-nedir",
+      {
+        "og:image:alt": "Lak Nedir? Lokal Lak ve Kabartma Lak Uygulamaları - Mavi Basım"
+      }
+    ],
+    "/blog/lakli-kabartmali-kartvizit-rehberi": [
+      "Lüks ve Kabartma Laklı Kartvizit Baskı Rehberi: Özel Efektler ve Fiyatlar - Mavi Basım",
+      "Mat selefon üzeri kısmi kabartma lak, gofre kabartma ve altın varak yaldız uygulamalarıyla prestijli kartvizit oluşturma rehberi.",
+      "https://mavibasim.com/blog/lakli-kabartmali-kartvizit-rehberi",
+      {
+        "og:image:alt": "Lüks ve Kabartma Laklı Kartvizit Baskı Rehberi: Özel Efektler ve Fiyatlar - Mavi Basım"
+      }
+    ],
+    "/blog/lokantalar-icin-amerikan-servis-ebatlari": [
+      "Lokantalar ve Kafeler İçin İdeal Amerikan Servis Ebatları ve Kağıt Türleri - Mavi Basım",
+      "Masada hijyeni pürüzsüz sağlarken marka gücünü şahlandıran tek kullanımlık Amerikan servislerin 1. Hamur ve Kraft kağıt özellikleri.",
+      "https://mavibasim.com/blog/lokantalar-icin-amerikan-servis-ebatlari",
+      {
+        "og:image:alt": "Lokantalar ve Kafeler İçin İdeal Amerikan Servis Ebatları ve Kağıt Türleri - Mavi Basım"
+      }
+    ],
+    "/blog/luks-parfum-ve-taki-kutularinda-sicak-varak-yaldiz-ve-gofre": [
+      "Lüks Parfüm, Kozmetik ve Takı Kutularında Sıcak Varak Yaldiz ve Gofre - Mavi Basım",
+      "Altın yaldız, gümüş yaldız, 3D gofre kabartma ve Soft Touch kadife selefon birleşimiyle premium lüks kutu imalatı.",
+      "https://mavibasim.com/blog/luks-parfum-ve-taki-kutularinda-sicak-varak-yaldiz-ve-gofre",
+      {
+        "og:image:alt": "Lüks Parfüm, Kozmetik ve Takı Kutularında Sıcak Varak Yaldiz ve Gofre - Mavi Basım"
+      }
+    ],
+    "/blog/magnet-baski-musteri-kazandirir-mi": [
+      "Magnet Baskı Müşteri Kazandırır mı? Doğrudan Lokasyon Pazarlaması - Mavi Basım",
+      "Doğrudan lokasyon pazarlamasında buzdolabı magnetlerinin gücünü, kalınlık ve ebat seçimlerini, sektör analizlerini ve tasarım püf noktalarını keşfedin.",
+      "https://mavibasim.com/blog/magnet-baski-musteri-kazandirir-mi",
+      {
+        "og:image:alt": "Magnet Baskı Müşteri Kazandırır mı? Doğrudan Lokasyon Pazarlaması - Mavi Basım"
+      }
+    ],
+    "/blog/magnet-baski-olculeri-ve-tasarim-rehberi": [
+      "Buzdolabı Magneti Ölçüleri, Bıçak Çizgileri ve Tasarım Rehberi - Mavi Basım",
+      "48x68 mm standart ölçü, oval kesim ve özel figürlü mıknatıslı magnetlerde taşma payı, mıknatıs mikron kalınlığı ve okunabilirlik kuralları.",
+      "https://mavibasim.com/blog/magnet-baski-olculeri-ve-tasarim-rehberi",
+      {
+        "og:image:alt": "Buzdolabı Magneti Ölçüleri, Bıçak Çizgileri ve Tasarım Rehberi - Mavi Basım"
+      }
+    ],
+    "/blog/matbaa-fiyatlarini-neler-belirler": [
+      "Matbaa Fiyatlarını Neler Belirler? Uygun Maliyetli Baskı İpuçları - Mavi Basım",
+      "Tiraj, ebat, kağıt gramajı ve sonlandırma işçiliklerinin matbaa fiyatları üzerindeki etkisi ve bütçe dostu, doğrudan üretim avantajları.",
+      "https://mavibasim.com/blog/matbaa-fiyatlarini-neler-belirler",
+      {
+        "og:image:alt": "Matbaa Fiyatlarını Neler Belirler? Uygun Maliyetli Baskı İpuçları - Mavi Basım"
+      }
+    ],
+    "/blog/ofset-baski-ile-dijital-baski-farklari": [
+      "Dijital Baskı ile Ofset Baskı Arasındaki Farklar - Mavi Basım",
+      "Düşük ve yüksek tirajlı siparişlerinizde hangi baskı teknolojisini seçmelisiniz? Maliyet, hız ve kalite karşılaştırması.",
+      "https://mavibasim.com/blog/ofset-baski-ile-dijital-baski-farklari",
+      {
+        "og:image:alt": "Dijital Baskı ile Ofset Baskı Arasındaki Farklar - Mavi Basım"
+      }
+    ],
+    "/blog/ofset-baski-nasil-yapilir": [
+      "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları - Mavi Basım",
+      "Ofset baskı teknolojisinin tüm detaylarını, kalıp hazırlamadan mürekkep ayarlarına ve kurutma aşamalarına kadar teknik adımlarıyla keşfedin.",
+      "https://mavibasim.com/blog/ofset-baski-nasil-yapilir",
+      {
+        "og:image:alt": "Ofset Baskı Nasıl Yapılır? Teknik Üretim Aşamaları - Mavi Basım"
+      }
+    ],
+    "/blog/ofset-kutu-baski-nasil-yapilir": [
+      "Ofset Kutu Baskı Nasıl Yapılır? Adım Adım Ambalaj İmalat Süreci - Mavi Basım",
+      "Tasarım aşamasından Heidelberg baskı makinelerine, selefon kaplamadan Otomatik Bıçak kesim ve yapıştırmaya kutu üretim rehberi.",
+      "https://mavibasim.com/blog/ofset-kutu-baski-nasil-yapilir",
+      {
+        "og:image:alt": "Ofset Kutu Baskı Nasıl Yapılır? Adım Adım Ambalaj İmalat Süreci - Mavi Basım"
+      }
+    ],
+    "/blog/online-matbaa-siparislerinde-nakliye-surecleri": [
+      "Online Matbaacılık Siparişlerinde Topkapı’dan Kapıya Nakliye Kriterleri - Mavi Basım",
+      "İstanbul Topkapı 2. Matbaacılar Sitesindeki fabrikamızdan 81 ile yapılan sevkiyatlarda hasarsız paketleme ve koli mukavemet analizleri.",
+      "https://mavibasim.com/blog/online-matbaa-siparislerinde-nakliye-surecleri",
+      {
+        "og:image:alt": "Online Matbaacılık Siparişlerinde Topkapı’dan Kapıya Nakliye Kriterleri - Mavi Basım"
+      }
+    ],
+    "/blog/oto-paspas-baskida-emici-kraft-farki": [
+      "Oto Paspas Baskısında Emici Kraft Kağıt ve Sülfit Kağıt Farkları - Mavi Basım",
+      "Oto yıkama ve teknik servislerin kullandığı kağıt oto paspas siparişlerinde emici kraft kağıdın çamuru tutması ve yırtılmama mukavemeti.",
+      "https://mavibasim.com/blog/oto-paspas-baskida-emici-kraft-farki",
+      {
+        "og:image:alt": "Oto Paspas Baskısında Emici Kraft Kağıt ve Sülfit Kağıt Farkları - Mavi Basım"
+      }
+    ],
+    "/blog/otomatik-kilit-dip-ve-ters-kilit-dip-kutu-farklari": [
+      "Otomatik Kilit Dip (Oto Kilit) ile Ters Kilit Dip Kutu Farkları - Mavi Basım",
+      "Kutu alt kapanış mekanizmalarından oto kilit, kilitli dip, düz dip ve ters kilit dip modellerinin dayanıklılık ve dolum hızı karşılaştırması.",
+      "https://mavibasim.com/blog/otomatik-kilit-dip-ve-ters-kilit-dip-kutu-farklari",
+      {
+        "og:image:alt": "Otomatik Kilit Dip (Oto Kilit) ile Ters Kilit Dip Kutu Farkları - Mavi Basım"
+      }
+    ],
+    "/blog/paket-servis-icin-magnet-rehberi": [
+      "Paket Servis Yapan İşletmeler İçin Adım Adım Magnet Tasarım Rehberi - Mavi Basım",
+      "Sucular, tüpçüler, restoranlar ve lokantalar için çöpe atılmayacak, dolapta daima en üst sırada kalacak özel kesimli magnet dizayn etmenin kuralları.",
+      "https://mavibasim.com/blog/paket-servis-icin-magnet-rehberi",
+      {
+        "og:image:alt": "Paket Servis Yapan İşletmeler İçin Adım Adım Magnet Tasarım Rehberi - Mavi Basım"
+      }
+    ],
+    "/blog/pencereli-asetatli-kutu-uretim-teknikleri": [
+      "Pencereli Asetatlı Kutu Üretim Teknikleri: Kurabiye, Sabun ve Hediyelik Kutusu - Mavi Basım",
+      "İçindeki ürünü sergileyen şeffaf PVC ve Asetat pencereli karton kutuların üretim aşamaları, pencereli kilit sistemleri ve avantajları.",
+      "https://mavibasim.com/blog/pencereli-asetatli-kutu-uretim-teknikleri",
+      {
+        "og:image:alt": "Pencereli Asetatlı Kutu Üretim Teknikleri: Kurabiye, Sabun ve Hediyelik Kutusu - Mavi Basım"
+      }
+    ],
+    "/blog/restoran-ve-paket-servis-icin-magnet-baski-onemi": [
+      "Paket Servis ve Restoranlarda Magnet Baskının Önemi ve Satış Etkisi - Mavi Basım",
+      "Restoran, kafe, su ve paket servis işletmelerinin buzdolabında yer alarak tekrarlayan müşteri siparişlerini ve ciroyu artırma yöntemleri.",
+      "https://mavibasim.com/blog/restoran-ve-paket-servis-icin-magnet-baski-onemi",
+      {
+        "og:image:alt": "Paket Servis ve Restoranlarda Magnet Baskının Önemi ve Satış Etkisi - Mavi Basım"
+      }
+    ],
+    "/blog/restoranlar-icin-en-etkili-reklam-urunleri": [
+      "Restoranlar İçin En Etkili Çevrimdışı Reklam Ürünleri ve Kombinasyonları - Mavi Basım",
+      "Yemek ve paket servis dükkanlarında broşür, magnet, Amerikan servis ve logolu karton çantaların bütünleşik gücü cirolarınızı nasıl katlar?",
+      "https://mavibasim.com/blog/restoranlar-icin-en-etkili-reklam-urunleri",
+      {
+        "og:image:alt": "Restoranlar İçin En Etkili Çevrimdışı Reklam Ürünleri ve Kombinasyonları - Mavi Basım"
+      }
+    ],
+    "/blog/selefon-cesitleri-ve-ozellikleri": [
+      "Ambalaj ve Kutularda Selefon Çeşitleri: Mat, Parlak ve Soft Touch Farkı - Mavi Basım",
+      "Kutunuzun ömrünü uzatan, su ve nemden koruyan mat, parlak, Soft Touch, tek yüz ve çift yüz selefon laminasyonu.",
+      "https://mavibasim.com/blog/selefon-cesitleri-ve-ozellikleri",
+      {
+        "og:image:alt": "Ambalaj ve Kutularda Selefon Çeşitleri: Mat, Parlak ve Soft Touch Farkı - Mavi Basım"
+      }
+    ],
+    "/blog/selefon-nedir": [
+      "Selefon Nedir? Mat ve Parlak Selefon Farkları - Mavi Basım",
+      "Baskılı ürünlerinizin dayanıklılığını ve estetik görünümünü artıran ince koruyucu selefon tabakasının özellikleri ve kullanım alanları.",
+      "https://mavibasim.com/blog/selefon-nedir",
+      {
+        "og:image:alt": "Selefon Nedir? Mat ve Parlak Selefon Farkları - Mavi Basım"
+      }
+    ],
+    "/blog/varak-baski-nedir": [
+      "Varak Baskı Nedir? Altın ve Gümüş Yaldız Teknikleri - Mavi Basım",
+      "Sıcak varak yaldız uygulamalarıyla baskı ürünlerine prestij ve lüks katan metalik varak baskı tekniğinin özellikleri.",
+      "https://mavibasim.com/blog/varak-baski-nedir",
+      {
+        "og:image:alt": "Varak Baskı Nedir? Altın ve Gümüş Yaldız Teknikleri - Mavi Basım"
+      }
+    ],
+    "/blog/zarf-baskisinda-diplomat-ve-torba-zarf": [
+      "Zarf Baskısında Diplomat Zarf, Torba Zarf ve Silikon Yapışkan Çeşitleri - Mavi Basım",
+      "Muhasebe fatura gönderilerinde penceresiz diplomat zarfların ofset üretimi ve 1. Hamur torba zarflarda silikon yapışkan şerit ömrü.",
+      "https://mavibasim.com/blog/zarf-baskisinda-diplomat-ve-torba-zarf",
+      {
+        "og:image:alt": "Zarf Baskısında Diplomat Zarf, Torba Zarf ve Silikon Yapışkan Çeşitleri - Mavi Basım"
+      }
+    ],
+    "/bloknotlar": [
+      "Bloknot Baskı Fiyatları | Kapaklı ve Tutkallı Bloknot - Mavi Basım",
+      "A5 ve A6 promosyon bloknot baskı fiyatları. Kapaklı, kapaksız ve tutkallı kurumsal bloknot defter modellerini 500 ve 1.000 adet seçenekleriyle inceleyin.",
+      "https://mavibasim.com/bloknotlar",
+      {
+        "og:image": "https://mavibasim.com/images/bloknot/bloknot-baski-fiyatlari.webp",
+        "og:image:alt": "Mavi Basım promosyon ve kapaklı bloknot baskı fiyatları",
+        "og:image:secure_url": "https://mavibasim.com/images/bloknot/bloknot-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "twitter:image": "https://mavibasim.com/images/bloknot/bloknot-baski-fiyatlari.webp"
+      }
+    ],
+    "/bolu-matbaa": [
+      "Bolu Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Bolu ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Bolu adresinize hızlı teslimat.",
+      "https://mavibasim.com/bolu-matbaa",
+      {
+        "og:image:alt": "Bolu Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/brosur": [
+      "Broşür Baskı Fiyatları | A4, A5 ve Katlamalı Broşür",
+      "A4, A5 ve A3 broşür baskı fiyatlarını; 115, 130 ve 200 gr kuşe seçeneklerini inceleyin. Katlama, ölçü ve baskı dosyası bilgilerini öğrenin.",
+      "https://mavibasim.com/brosur",
+      {
+        "og:image": "https://mavibasim.com/images/brosur/brosur-baski-fiyatlari.webp",
+        "og:image:alt": "Mavi Basım broşür baskı fiyatları, A4, A5 ve katlamalı broşür çeşitleri",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/brosur/brosur-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1536",
+        "twitter:image": "https://mavibasim.com/images/brosur/brosur-baski-fiyatlari.webp"
+      }
+    ],
+    "/brosur-baski-fiyatlari": [
+      "Kuşe Broşür Baskı Fiyatları | 115 gr & 135 gr Katlama Seçenekleri",
+      "Broşür fiyatlarını etkileyen kağıt gramajı, ebat, adet kırımları ve selefon laminasyon farkları. En ucuz 1000 adet el ilanı fiyat tablosu kuralları.",
+      "https://mavibasim.com/brosur-baski-fiyatlari",
+      {
+        "og:image:alt": "Kuşe Broşür Baskı Fiyatları | 115 gr & 135 gr Katlama Seçenekleri"
+      }
+    ],
+    "/burdur-matbaa": [
+      "Burdur Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Burdur ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Burdur adresinize hızlı teslimat.",
+      "https://mavibasim.com/burdur-matbaa",
+      {
+        "og:image:alt": "Burdur Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/bursa-brosur-baski": [
+      "Bursa Broşür Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/bursa-brosur-baski",
+      {
+        "og:image:alt": "Bursa Broşür Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/bursa-etiket-baski": [
+      "Bursa Etiket Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/bursa-etiket-baski",
+      {
+        "og:image:alt": "Bursa Etiket Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/bursa-kartvizit-baski": [
+      "Bursa Kartvizit Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/bursa-kartvizit-baski",
+      {
+        "og:image:alt": "Bursa Kartvizit Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/bursa-katalog-baski": [
+      "Bursa Katalog Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/bursa-katalog-baski",
+      {
+        "og:image:alt": "Bursa Katalog Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/bursa-kutu-baski": [
+      "Bursa Kutu Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/bursa-kutu-baski",
+      {
+        "og:image:alt": "Bursa Kutu Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/bursa-magnet-baski": [
+      "Bursa Magnet Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/bursa-magnet-baski",
+      {
+        "og:image:alt": "Bursa Magnet Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/bursa-matbaa": [
+      "Bursa Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Bursa ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Bursa adresinize hızlı teslimat.",
+      "https://mavibasim.com/bursa-matbaa",
+      {
+        "og:image:alt": "Bursa Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/canakkale-matbaa": [
+      "Çanakkale Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Çanakkale ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Çanakkale adresinize hızlı teslimat.",
+      "https://mavibasim.com/canakkale-matbaa",
+      {
+        "og:image:alt": "Çanakkale Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/cankiri-matbaa": [
+      "Çankırı Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Çankırı ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Çankırı adresinize hızlı teslimat.",
+      "https://mavibasim.com/cankiri-matbaa",
+      {
+        "og:image:alt": "Çankırı Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/cerez-politikasi": [
+      "Çerez Politikası ve Cookie Yönetimi | Mavi Basım Matbaa",
+      "Mavi Basım Matbaa & Reklam mavibasim.com web sitesinde kullanılan çerez türleri, zorunlu ve analitik çerezler, saklanma süreleri ve tarayıcı çerez ayarları rehberi.",
+      "https://mavibasim.com/cerez-politikasi",
+      {
+        "og:image:alt": "Çerez Politikası ve Cookie Yönetimi | Mavi Basım Matbaa"
+      }
+    ],
+    "/cilt-isleri": [
+      "Cilt İşleri ve Mücellit Hizmetleri | Mavi Basım Topkapı",
+      "Tel dikiş, Amerikan cilt, iplik dikiş, sert kapak ve spiralleme gibi tüm mücellit ve ciltleme işlemleri Topkapı matbaa hizmet ve koordinasyon noktamız üzerinden yapılmaktadır.",
+      "https://mavibasim.com/cilt-isleri",
+      {
+        "og:image:alt": "Cilt İşleri ve Mücellit Hizmetleri | Mavi Basım Topkapı"
+      }
+    ],
+    "/corum-matbaa": [
+      "Çorum Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Çorum ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Çorum adresinize hızlı teslimat.",
+      "https://mavibasim.com/corum-matbaa",
+      {
+        "og:image:alt": "Çorum Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/denizli-matbaa": [
+      "Denizli Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Denizli ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Denizli adresinize hızlı teslimat.",
+      "https://mavibasim.com/denizli-matbaa",
+      {
+        "og:image:alt": "Denizli Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/diyarbakir-matbaa": [
+      "Diyarbakır Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Diyarbakır ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Diyarbakır adresinize hızlı teslimat.",
+      "https://mavibasim.com/diyarbakir-matbaa",
+      {
+        "og:image:alt": "Diyarbakır Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/donerci-magnet-baski": [
+      "Dönerci Magnet Baskı Fiyatları | Figürlü Özel Kesim Buzdolabı Magneti",
+      "Kebapçı ve dönerciler için en ucuz oval, özel kesimli dönerci buzdolabı magnetleri. 0.40 mm yüksek çekim gücü ve lüks parlak selefon kaplamasıyla doğrudan imalattan!",
+      "https://mavibasim.com/donerci-magnet-baski",
+      {}
+    ],
+    "/dosyalar": [
+      "Cepli Dosya Baskı Fiyatları | Kuşe ve Selefon | Mavi Basım",
+      "Kuşe cepli dosya baskı fiyatlarını; 500 ve 1.000 adet, tek veya çift yön baskı, mat/parlak selefon ve lak seçenekleriyle inceleyin.",
+      "https://mavibasim.com/dosyalar",
+      {
+        "og:image": "https://mavibasim.com/images/dosya/cepli-dosya-tasarimi.webp",
+        "og:image:alt": "Mavi Basım 350 gr ve 400 gr kuşe selefonlu cepli dosya ve sunum dosyası modelleri",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/dosya/cepli-dosya-tasarimi.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1536",
+        "twitter:image": "https://mavibasim.com/images/dosya/cepli-dosya-tasarimi.webp"
+      }
+    ],
+    "/duzce-matbaa": [
+      "Düzce Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Düzce ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Düzce adresinize hızlı teslimat.",
+      "https://mavibasim.com/duzce-matbaa",
+      {
+        "og:image:alt": "Düzce Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/e-ticaret-perakende-baski": [
+      "E-Ticaret ve Perakende Baskı Çözümleri | Mavi Basım",
+      "E-ticaret ve perakende markaları için ürün kutusu, karton çanta, teşekkür kartı, ambalaj kâğıdı, Amerikan servis, barkod ve koli etiketi baskısı.",
+      "https://mavibasim.com/e-ticaret-perakende-baski",
+      {
+        "og:image:alt": "E-Ticaret ve Perakende Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/eczane-el-ilani-baski": [
+      "Eczane ve Sağlık Bilgilendirme İlanı Baskısı | Medikal El İlanları",
+      "Eczaneler, klinikler ve sağlık kuruluşları için nöbetçi eczane duyuruları, hasta bilgilendirme broşürleri ve medikal tanıtım el ilanları.",
+      "https://mavibasim.com/eczane-el-ilani-baski",
+      {
+        "og:image:alt": "Eczane ve Sağlık Bilgilendirme İlanı Baskısı | Medikal El İlanları"
+      }
+    ],
+    "/edirne-matbaa": [
+      "Edirne Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Edirne ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Edirne adresinize hızlı teslimat.",
+      "https://mavibasim.com/edirne-matbaa",
+      {
+        "og:image:alt": "Edirne Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/egitim-kurumlari-baski": [
+      "Eğitim Kurumları Baskı Çözümleri | Mavi Basım",
+      "Eğitim kurumları için deneme sınavı kitapçığı, soru kitapçığı, fasikül, yaprak test, kayıt formu, broşür, katalog, dosya ve eğitim seti baskısı.",
+      "https://mavibasim.com/egitim-kurumlari-baski",
+      {
+        "og:image:alt": "Eğitim Kurumları Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/el-ilani": [
+      "El İlanı Baskı Fiyatları | A3, A4, A5 ve Dar Ebat",
+      "A3, A4, A5 ve dar ebat el ilanı baskı fiyatlarını inceleyin. 105 gr kuşe fiyatları ile farklı gramaj, ölçü, baskı yönü ve adet teklifleri.",
+      "https://mavibasim.com/el-ilani",
+      {
+        "og:image": "https://mavibasim.com/images/el-ilani/el-ilani-baski-fiyatlari.webp",
+        "og:image:alt": "Mavi Basım A5 ve A4 el ilanı baskı fiyatları ve kuşe kağıt modelleri",
+        "og:image:height": "533",
+        "og:image:secure_url": "https://mavibasim.com/images/el-ilani/el-ilani-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "800",
+        "twitter:image": "https://mavibasim.com/images/el-ilani/el-ilani-baski-fiyatlari.webp"
+      }
+    ],
+    "/elazig-magnet-baski": [
+      "Elazığ Magnet Baskı | Orcik Üreticileri & Yöresel Peynirciler",
+      "Elazığ orcik-pestil üreticileri, yöresel peynirciler, bakırcılar ve hızlı paket servis esnafları için 0.40 mm yüksek çekimli buzdolabı magnet baskısı. Ucuz kargolu imalat!",
+      "https://mavibasim.com/elazig-magnet-baski",
+      {
+        "og:image:alt": "Elazığ Magnet Baskı | Orcik Üreticileri & Yöresel Peynirciler"
+      }
+    ],
+    "/elazig-matbaa": [
+      "Elazığ Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Elazığ ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Elazığ adresinize hızlı teslimat.",
+      "https://mavibasim.com/elazig-matbaa",
+      {
+        "og:image:alt": "Elazığ Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/emlak-afis-baski": [
+      "Emlak Afiş Baskı | Yırtılmaz Branda ve Bez Emlak Afişleri",
+      "Emlak ofisleri için pencerelere ve dış cephelere asılabilen yırtılmayan paslanmaz kuşgözü delikli güneşe, don ayazına ve rüzgara dayanıklı solvent-dışı UV branda afişler.",
+      "https://mavibasim.com/emlak-afis-baski",
+      {
+        "og:image:alt": "Emlak Afiş Baskı | Yırtılmaz Branda ve Bez Emlak Afişleri"
+      }
+    ],
+    "/emlakci-kartvizit": [
+      "Emlakçı Kartvizit Baskı | Lüks Kabartmalı Gayrimenkul Kartları",
+      "Emlak danışmanları ve emlak ofisleri için lüks dokulu kalın kağıt, mat kadife selefon, gümüş/altın yaldız ve kabartma lak laklı emlakçı kartvizit çözümleri.",
+      "https://mavibasim.com/emlakci-kartvizit",
+      {
+        "og:image:alt": "Emlakçı Kartvizit Baskı | Lüks Kabartmalı Gayrimenkul Kartları"
+      }
+    ],
+    "/emlakci-kartvizit-baski": [
+      "Emlakçı Kartvizit Baskı Fiyatları | Cam Filmi ve Branda Afişleri",
+      "Gayrimenkul danışmanları için lüks kabartma laklı kalın kartvizitler, kiralık/satılık emlak dış mekan yırtılmaz branda afiş dökümleri. Topkapı imalatından!",
+      "https://mavibasim.com/emlakci-kartvizit-baski",
+      {
+        "og:image:alt": "Emlakçı Kartvizit Baskı Fiyatları | Cam Filmi ve Branda Afişleri"
+      }
+    ],
+    "/erzincan-matbaa": [
+      "Erzincan Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Erzincan ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Erzincan adresinize hızlı teslimat.",
+      "https://mavibasim.com/erzincan-matbaa",
+      {
+        "og:image:alt": "Erzincan Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/erzurum-emlakci-katalog-baski": [
+      "Erzurum Halı ve Koltuk Yıkama Baskı | Lüks Konut Portföy Kitapçığı",
+      "Erzurum gayrimenkul ofisleri ve inşaat firmaları için lüks metal dikişli, kalın kuşe kapaklı, 170 gr iç sayfa lüks konut ve arsa katalog döküm hizmetleri.",
+      "https://mavibasim.com/erzurum-emlakci-katalog-baski",
+      {
+        "og:image:alt": "Erzurum Halı ve Koltuk Yıkama Baskı | Lüks Konut Portföy Kitapçığı"
+      }
+    ],
+    "/erzurum-katalog-baski": [
+      "Erzurum Katalog Baskı | Palandöken Otelleri & Oltu Kuyumcuları",
+      "Erzurum'daki Palandöken kayak otelleri, cağ kebabı üreticileri ve Oltutaşı kuyumcuları için lüks kuşe kağıda Amerikan ciltli katalog ve broşür basımı. Doğrudan imalattan!",
+      "https://mavibasim.com/erzurum-katalog-baski",
+      {
+        "og:image:alt": "Erzurum Katalog Baskı | Palandöken Otelleri & Oltu Kuyumcuları"
+      }
+    ],
+    "/erzurum-matbaa": [
+      "Erzurum Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Erzurum ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Erzurum adresinize hızlı teslimat.",
+      "https://mavibasim.com/erzurum-matbaa",
+      {
+        "og:image:alt": "Erzurum Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/eskisehir-matbaa": [
+      "Eskişehir Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Eskişehir ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Eskişehir adresinize hızlı teslimat.",
+      "https://mavibasim.com/eskisehir-matbaa",
+      {
+        "og:image:alt": "Eskişehir Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/etiket": [
+      "Yapışkanlı Etiket ve Sticker Baskı Fiyatları | Mavi Basım",
+      "Kuşe, PP opak, şeffaf ve özel kesim yapışkanlı etiket baskı fiyatlarını inceleyin. Ambalaj etiketi ve sticker baskı seçenekleri için teklif alın.",
+      "https://mavibasim.com/etiket",
+      {
+        "og:image": "https://mavibasim.com/images/etiket/etiket-baski-fiyatlari.webp",
+        "og:image:alt": "Mavi Basım yapışkanlı etiket ve sticker baskı fiyatları",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/etiket/etiket-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1536",
+        "twitter:image": "https://mavibasim.com/images/etiket/etiket-baski-fiyatlari.webp"
+      }
+    ],
+    "/etiket-baski": [
+      "Yapışkanlı Etiket Baskı Fiyatları | PP Opak ve Şeffaf Rulolar",
+      "Su, gıda, kimya ve kozmetik ürünleri için neme ve yırtılmaya karşı %100 dayanıklı PP Opak plastik etiket, kuşe etiket imalatı. Sıcak pres bıçaklı kesimle!",
+      "https://mavibasim.com/etiket-baski",
+      {
+        "og:image:alt": "Yapışkanlı Etiket Baskı Fiyatları | PP Opak ve Şeffaf Rulolar"
+      }
+    ],
+    "/etiket-baski-fiyatlari": [
+      "Yapışkanlı Etiket Fiyatları | PP Opak vs Tabaka Kuşe Etiketler",
+      "Etiket fiyat tablosunda plastik bazlı PP Opak, şeffaf selefonlu etiketler ve kağıt bazlı kuşe etiket m2 fiyat farkları. Sıfır bıçak masrafıyla yarım kesim!",
+      "https://mavibasim.com/etiket-baski-fiyatlari",
+      {
+        "og:image:alt": "Yapışkanlı Etiket Fiyatları | PP Opak vs Tabaka Kuşe Etiketler"
+      }
+    ],
+    "/fast-food-cips-kutusu": [
+      "Fast Food Cips Kutusu | Çevre Dostu Logolu Karton Ambalajlar",
+      "Kafeler ve büfeler için sızdırmaz gıda cilalı, kolay katlanır kilitli taban, sıcak patates ve soğan halkası servis karton cips kutusu üretimi. Hemen sipariş verin.",
+      "https://mavibasim.com/fast-food-cips-kutusu",
+      {
+        "og:image:alt": "Fast Food Cips Kutusu | Çevre Dostu Logolu Karton Ambalajlar"
+      }
+    ],
+    "/fast-food-cips-kutusu-baski": [
+      "Fast Food Cips Kutusu Modelleri | Logolu Patates ve Atıştırmalık Ambalajı",
+      "Restoranlar, büfeler ve fast food zincirleri için koku yapmayan, yağı sızdırmayan kilitli tabanlı logolu karton patates cips kutuları imalatı. Toptan fiyatlar!",
+      "https://mavibasim.com/fast-food-cips-kutusu-baski",
+      {
+        "og:image:alt": "Fast Food Cips Kutusu Modelleri | Logolu Patates ve Atıştırmalık Ambalajı"
+      }
+    ],
+    "/fast-food-kampanya-brosuru": [
+      "Fast Food Kampanya Broşürü | Lokanta ve Büfe Menü Dağıtımları",
+      "Fast food büfeleri, dönerciler ve pizzacılar için cazip menü fiyatlarını, kampanya paketlerini duyuran el ilanı ve dağıtımlı katlamalı broşür baskısı.",
+      "https://mavibasim.com/fast-food-kampanya-brosuru",
+      {
+        "og:image:alt": "Fast Food Kampanya Broşürü | Lokanta ve Büfe Menü Dağıtımları"
+      }
+    ],
+    "/gaziantep-brosur-baski": [
+      "Gaziantep Broşür Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/gaziantep-brosur-baski",
+      {
+        "og:image:alt": "Gaziantep Broşür Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/gaziantep-etiket-baski": [
+      "Gaziantep Etiket Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/gaziantep-etiket-baski",
+      {
+        "og:image:alt": "Gaziantep Etiket Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/gaziantep-kartvizit-baski": [
+      "Gaziantep Kartvizit Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/gaziantep-kartvizit-baski",
+      {
+        "og:image:alt": "Gaziantep Kartvizit Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/gaziantep-katalog-baski": [
+      "Gaziantep Katalog Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/gaziantep-katalog-baski",
+      {
+        "og:image:alt": "Gaziantep Katalog Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/gaziantep-kutu-baski": [
+      "Gaziantep Kutu Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/gaziantep-kutu-baski",
+      {
+        "og:image:alt": "Gaziantep Kutu Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/gaziantep-magnet-baski": [
+      "Gaziantep Magnet Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/gaziantep-magnet-baski",
+      {
+        "og:image:alt": "Gaziantep Magnet Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/gaziantep-matbaa": [
+      "Gaziantep Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Gaziantep ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Gaziantep adresinize hızlı teslimat.",
+      "https://mavibasim.com/gaziantep-matbaa",
+      {
+        "og:image:alt": "Gaziantep Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/gebze-eczane-etiket-baski": [
+      "Gebze Eczane Etiket Baskı | Reçete ve Sağlık Şişesi Yapışkanları",
+      "Gebze eczaneleri için özel kesim, rulo veya tabaka, ilaç ve şurup şişelerine uyumlu gıda onaylı yapışkanlı kağıt etiket basımları. Online sipariş.",
+      "https://mavibasim.com/gebze-eczane-etiket-baski",
+      {
+        "og:image:alt": "Gebze Eczane Etiket Baskı | Reçete ve Sağlık Şişesi Yapışkanları"
+      }
+    ],
+    "/gebze-kutu-baski": [
+      "Gebze Kutu Baskı | Logolu Yaprak ve Gıda Ambalajı",
+      "Gebze yaprağı paketleme firmaları, yöresel gıda üreticileri ve pastaneler için pencereli, koku yapmayan karton kutu ve ambalaj imalatı. Topkapı matbaa güvencesiyle!",
+      "https://mavibasim.com/gebze-kutu-baski",
+      {
+        "og:image:alt": "Gebze Kutu Baskı | Logolu Yaprak ve Gıda Ambalajı"
+      }
+    ],
+    "/gider-makbuzu": [
+      "Gider Makbuzu Baskı Fiyatları | Otokopili ve Numaratörlü Gider Makbuzu Basımı",
+      "Gider makbuzu baskı fiyatları. Otokopili ve numaratörlü gider makbuzu koçanları. Logolu özel tasarım, hızlı üretim ve Türkiye geneli kargo.",
+      "https://mavibasim.com/gider-makbuzu",
+      {
+        "og:image": "https://mavibasim.com/images/gider-makbuzu/numaratorlu-gider-makbuzu.webp",
+        "og:image:alt": "Gider Makbuzu Baskı Fiyatları | Otokopili ve Numaratörlü Gider Makbuzu Basımı",
+        "og:image:height": "533",
+        "og:image:secure_url": "https://mavibasim.com/images/gider-makbuzu/numaratorlu-gider-makbuzu.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "800",
+        "twitter:image": "https://mavibasim.com/images/gider-makbuzu/numaratorlu-gider-makbuzu.webp"
+      }
+    ],
+    "/giresun-fast-food-cips-kutusu-baski": [
+      "Giresun Fast Food Cips Kutusu Baskı | Logolu Atıştırmalık Ambalajı",
+      "Giresun'daki dönerci, restoran ve büfeler için sızdırmaz iç bariyerli, sıcak patates cips kutusu üretimi. Kaliteli ofset baskı seçenekleriyle Topkapı'dan Giresun'a teslim.",
+      "https://mavibasim.com/giresun-fast-food-cips-kutusu-baski",
+      {
+        "og:image:alt": "Giresun Fast Food Cips Kutusu Baskı | Logolu Atıştırmalık Ambalajı"
+      }
+    ],
+    "/giresun-kartvizit-baski": [
+      "Giresun Kartvizit Baskı | Kalın Bristol & Fındık Ambalaj",
+      "Giresun’daki fındık markaları, yerel işletmeler ve esnaflar için çift taraflı mat selefonlu bristol kalın kartvizit baskı. En uygun fiyatlarla kargo imkanı!",
+      "https://mavibasim.com/giresun-kartvizit-baski",
+      {
+        "og:image:alt": "Giresun Kartvizit Baskı | Kalın Bristol & Fındık Ambalaj"
+      }
+    ],
+    "/giresun-matbaa": [
+      "Giresun Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Giresun ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Giresun adresinize hızlı teslimat.",
+      "https://mavibasim.com/giresun-matbaa",
+      {
+        "og:image:alt": "Giresun Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/giris-bileti": [
+      "Numaratörlü Giriş Bileti / Etkinlik Bileti Baskısı | Mavi Basım",
+      "Etkinlik, konser, sinema ve tiyatrolar için seri numaralı koçanlı giriş bileti basımı. 1. sınıf hamur kağıt, kolay koparılabilir perforeli bilet fiyatları.",
+      "https://mavibasim.com/giris-bileti",
+      {
+        "og:image:alt": "Numaratörlü Giriş Bileti / Etkinlik Bileti Baskısı | Mavi Basım"
+      }
+    ],
+    "/gizlilik-politikasi": [
+      "Gizlilik Politikası ve KVKK Aydınlatma Metni | Mavi Basım Matbaa",
+      "Mavi Basım Matbaa & Reklam mavibasim.com KVKK 6698 sayılı kanun kapsamında kişisel verilerin korunması, gizlilik politikası, veri güvenliği ve müşteri hakları aydınlatma metni.",
+      "https://mavibasim.com/gizlilik-politikasi",
+      {
+        "og:image:alt": "Gizlilik Politikası ve KVKK Aydınlatma Metni | Mavi Basım Matbaa"
+      }
+    ],
+    "/grafik-tasarim": [
+      "Grafik Tasarım Hizmetleri | Mavi Basım Matbaa & Reklam",
+      "Kurumsal kimliğinizi yansıtan profesyonel grafik tasarım, logo yerleşimi, taşma payı kontrolü ve baskı öncesi onay süreçlerimiz hakkında geniş detaylar.",
+      "https://mavibasim.com/grafik-tasarim",
+      {
+        "og:image:alt": "Grafik Tasarım Hizmetleri | Mavi Basım Matbaa & Reklam"
+      }
+    ],
+    "/gumushane-matbaa": [
+      "Gümüşhane Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Gümüşhane ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Gümüşhane adresinize hızlı teslimat.",
+      "https://mavibasim.com/gumushane-matbaa",
+      {
+        "og:image:alt": "Gümüşhane Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/hakkari-matbaa": [
+      "Hakkari Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Hakkari ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Hakkari adresinize hızlı teslimat.",
+      "https://mavibasim.com/hakkari-matbaa",
+      {
+        "og:image:alt": "Hakkari Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/hakkimizda": [
+      "Hakkımızda | Mavi Basım Matbaa & Reklam",
+      "İstanbul Topkapı'da faaliyet gösteren Mavi Basım Matbaa & Reklam'ın kuruluş felsefesi, teknolojik kalite standartları ve sürdürülebilir baskı çözümleri.",
+      "https://mavibasim.com/hakkimizda",
+      {
+        "og:image:alt": "Hakkımızda | Mavi Basım Matbaa & Reklam"
+      }
+    ],
+    "/hali-koltuk-yikama-baski": [
+      "Halı ve Koltuk Yıkama Baskı | Broşür, El İlanı ve Magnet Çözümleri",
+      "Halı yıkama, koltuk yıkama ve temizlik firmaları için suya dayanıklı kapı kolu askılı broşürler, magnetler, servis formları ve el ilanları en uygun fiyatlarla.",
+      "https://mavibasim.com/hali-koltuk-yikama-baski",
+      {
+        "og:image:alt": "Halı ve Koltuk Yıkama Baskı | Broşür, El İlanı ve Magnet Çözümleri"
+      }
+    ],
+    "/hatay-matbaa": [
+      "Hatay Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Hatay ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Hatay adresinize hızlı teslimat.",
+      "https://mavibasim.com/hatay-matbaa",
+      {
+        "og:image:alt": "Hatay Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/igdir-matbaa": [
+      "Iğdır Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Iğdır ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Iğdır adresinize hızlı teslimat.",
+      "https://mavibasim.com/igdir-matbaa",
+      {
+        "og:image:alt": "Iğdır Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/iletisim": [
+      "İleitişim | Mavi Basım Matbaa & Reklam Topkapı İstanbul",
+      "Mavi Basım Matbaa & Reklam Topkapı İstanbul adresi, telefon numaralarımız, WhatsApp sipariş hattımız ve e-posta adreslerimizle yol tarifi bilgilendirmeleri.",
+      "https://mavibasim.com/iletisim",
+      {
+        "og:image:alt": "İleitişim | Mavi Basım Matbaa & Reklam Topkapı İstanbul"
+      }
+    ],
+    "/iptal-ve-iade-sartlari": [
+      "İptal ve İade Şartları | Mavi Basım Matbaa & Reklam",
+      "Mavi Basım Matbaa & Reklam sipariş iptali, ücret iadesi şartları, matbaa ve ambalaj ürünlerinde imalat hatası iadesi ve geri ödeme prosedürleri rehberi.",
+      "https://mavibasim.com/iptal-ve-iade-sartlari",
+      {
+        "og:image:alt": "İptal ve İade Şartları | Mavi Basım Matbaa & Reklam"
+      }
+    ],
+    "/isparta-matbaa": [
+      "Isparta Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Isparta ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Isparta adresinize hızlı teslimat.",
+      "https://mavibasim.com/isparta-matbaa",
+      {
+        "og:image:alt": "Isparta Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/istanbul-brosur-baski": [
+      "İstanbul Broşür Baskı Fiyatları | Topkapı Matbaacılar Sitesi İmalatı",
+      "İstanbul içi aynı gün kuryeyle teslim, 135 gr kuşe katlamalı el ilanları ve dikey broşür baskısı. Zeytinburnu Topkapı aracı dükkansız doğrudan fabrikadan!",
+      "https://mavibasim.com/istanbul-brosur-baski",
+      {
+        "og:image:alt": "İstanbul Broşür Baskı Fiyatları | Topkapı Matbaacılar Sitesi İmalatı"
+      }
+    ],
+    "/istanbul-matbaa": [
+      "İstanbul Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "İstanbul ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan İstanbul adresinize hızlı teslimat.",
+      "https://mavibasim.com/istanbul-matbaa",
+      {
+        "og:image:alt": "İstanbul Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/izmir-brosur-baski": [
+      "İzmir Broşür Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/izmir-brosur-baski",
+      {
+        "og:image:alt": "İzmir Broşür Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/izmir-etiket-baski": [
+      "İzmir Etiket Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/izmir-etiket-baski",
+      {
+        "og:image:alt": "İzmir Etiket Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/izmir-kartvizit-baski": [
+      "İzmir Kartvizit Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/izmir-kartvizit-baski",
+      {
+        "og:image:alt": "İzmir Kartvizit Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/izmir-katalog-baski": [
+      "İzmir Katalog Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/izmir-katalog-baski",
+      {
+        "og:image:alt": "İzmir Katalog Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/izmir-kutu-baski": [
+      "İzmir Kutu Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/izmir-kutu-baski",
+      {
+        "og:image:alt": "İzmir Kutu Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/izmir-magnet-baski": [
+      "İzmir Magnet Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/izmir-magnet-baski",
+      {
+        "og:image:alt": "İzmir Magnet Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/izmir-matbaa": [
+      "İzmir Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "İzmir ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan İzmir adresinize hızlı teslimat.",
+      "https://mavibasim.com/izmir-matbaa",
+      {
+        "og:image:alt": "İzmir Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/kafe-menu-baski": [
+      "Kafe Menü Baskı Fiyatları | Logolu Amerikan Servis ve Masa Kartı",
+      "Kafeler için kalın sıvama kapaklı, metal spiral ciltli, suya dayanıklı yırtılmaz sentetik menü, masa üstü QR kod kartları ve logolu el ilanları. Mavi Basımla!",
+      "https://mavibasim.com/kafe-menu-baski",
+      {
+        "og:image:alt": "Kafe Menü Baskı Fiyatları | Logolu Amerikan Servis ve Masa Kartı"
+      }
+    ],
+    "/kahramanmaras-matbaa": [
+      "Kahramanmaraş Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Kahramanmaraş ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Kahramanmaraş adresinize hızlı teslimat.",
+      "https://mavibasim.com/kahramanmaras-matbaa",
+      {
+        "og:image:alt": "Kahramanmaraş Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/karabuk-matbaa": [
+      "Karabük Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Karabük ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Karabük adresinize hızlı teslimat.",
+      "https://mavibasim.com/karabuk-matbaa",
+      {
+        "og:image:alt": "Karabük Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/karaman-matbaa": [
+      "Karaman Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Karaman ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Karaman adresinize hızlı teslimat.",
+      "https://mavibasim.com/karaman-matbaa",
+      {
+        "og:image:alt": "Karaman Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/kars-matbaa": [
+      "Kars Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Kars ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Kars adresinize hızlı teslimat.",
+      "https://mavibasim.com/kars-matbaa",
+      {
+        "og:image:alt": "Kars Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/karton-canta": [
+      "Karton Çanta Baskı Fiyatları | İpli Poşet - Mavi Basım",
+      "210 gr Amerikan Bristol ipli karton çanta baskı fiyatlarını inceleyin. 4 ebatta 500 ve 1.000 adet seçenekleri, mat veya parlak selefon ve Mavi Basım’dan teklif alın.",
+      "https://mavibasim.com/karton-canta",
+      {
+        "og:image": "https://mavibasim.com/images/karton-canta/karton-canta-baski-fiyatlari.webp",
+        "og:image:alt": "Mavi Basım lüks ipli karton çanta baskı fiyatları ve mağaza poşeti imalatı",
+        "og:image:height": "533",
+        "og:image:secure_url": "https://mavibasim.com/images/karton-canta/karton-canta-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "800",
+        "twitter:image": "https://mavibasim.com/images/karton-canta/karton-canta-baski-fiyatlari.webp"
+      }
+    ],
+    "/kartvizit": [
+      "Kartvizit Baskı Fiyatları | 1.000 Adet ve Kalın Kartvizit",
+      "1.000 adet kartvizit baskı fiyatlarını inceleyin. 250–800 gr, mat veya parlak selefon, kabartma lak, sıvama, özel kesim ve PVC seçenekleri.",
+      "https://mavibasim.com/kartvizit",
+      {
+        "og:image": "https://mavibasim.com/images/kartvizit/kartvizit-baski.webp",
+        "og:image:alt": "Mavi Basım 1000 adet kabartma laklı, sıvamalı ve kalın kartvizit baskı çeşitleri",
+        "og:image:height": "533",
+        "og:image:secure_url": "https://mavibasim.com/images/kartvizit/kartvizit-baski.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "800",
+        "twitter:image": "https://mavibasim.com/images/kartvizit/kartvizit-baski.webp"
+      }
+    ],
+    "/kartvizit-fiyatlari": [
+      "Kartvizit Baskı Fiyatları | Kabartma Lak, Şeffaf ve Sıvama Kartlar",
+      "Kartvizit fiyatlarını etkileyen kabartma lak, gofre, varak yaldız, 350 gr kuşe vs 700 gr kabartma lüks sıvama farkları. Profesyonel kart rehberi.",
+      "https://mavibasim.com/kartvizit-fiyatlari",
+      {
+        "og:image:alt": "Kartvizit Baskı Fiyatları | Kabartma Lak, Şeffaf ve Sıvama Kartlar"
+      }
+    ],
+    "/kastamonu-matbaa": [
+      "Kastamonu Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Kastamonu ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Kastamonu adresinize hızlı teslimat.",
+      "https://mavibasim.com/kastamonu-matbaa",
+      {
+        "og:image:alt": "Kastamonu Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/kataloglar": [
+      "Katalog Baskı Fiyatları | Çok Sayfalı Ürün Kataloğu - Mavi Basım",
+      "Ürün vitrininizi tanıtan spiralsiz tel dikişli, iplik dikişli veya Amerikan cilt lüks katalog ve dergi baskısı. Topkapı matbaasından toptan katalog imalatı.",
+      "https://mavibasim.com/kataloglar",
+      {
+        "og:image": "https://mavibasim.com/images/katalog/katalog-baski-fiyatlari.webp",
+        "og:image:alt": "Mavi Basım A4 ve A5 tel dikişli ile Amerikan ciltli kurumsal ürün katalog baskısı",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/katalog/katalog-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1536",
+        "twitter:image": "https://mavibasim.com/images/katalog/katalog-baski-fiyatlari.webp"
+      }
+    ],
+    "/kayseri-brosur-baski": [
+      "Kayseri Broşür Baskı Fiyatları | Kayseri Online Matbaa",
+      "Kayseri genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/kayseri-brosur-baski",
+      {
+        "og:image:alt": "Kayseri Broşür Baskı Fiyatları | Kayseri Online Matbaa"
+      }
+    ],
+    "/kayseri-emlakci-afis-baski": [
+      "Kayseri Emlakçı Afiş Baskı | Satılık Kiralık Branda ve Bez Afişler",
+      "Kayseri'deki emlak danışmanları ve emlak ofisleri için dış mekana dayanıklı, delikli kuşgözlü satılık/kiralık branda afiş basımı. Akma ve solma yapmayan dijital baskılar.",
+      "https://mavibasim.com/kayseri-emlakci-afis-baski",
+      {
+        "og:image:alt": "Kayseri Emlakçı Afiş Baskı | Satılık Kiralık Branda ve Bez Afişler"
+      }
+    ],
+    "/kayseri-etiket-baski": [
+      "Kayseri Etiket Baskı Fiyatları | Kayseri Online Matbaa",
+      "Kayseri genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/kayseri-etiket-baski",
+      {
+        "og:image:alt": "Kayseri Etiket Baskı Fiyatları | Kayseri Online Matbaa"
+      }
+    ],
+    "/kayseri-kartvizit-baski": [
+      "Kayseri Kartvizit Baskı Fiyatları | Kayseri Online Matbaa",
+      "Kayseri genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/kayseri-kartvizit-baski",
+      {
+        "og:image:alt": "Kayseri Kartvizit Baskı Fiyatları | Kayseri Online Matbaa"
+      }
+    ],
+    "/kayseri-katalog-baski": [
+      "Kayseri Katalog Baskı Fiyatları | Kayseri Online Matbaa",
+      "Kayseri genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/kayseri-katalog-baski",
+      {
+        "og:image:alt": "Kayseri Katalog Baskı Fiyatları | Kayseri Online Matbaa"
+      }
+    ],
+    "/kayseri-kutu-baski": [
+      "Kayseri Kutu Baskı | Sucuk, Pastırma & Mobilya Ambalajı",
+      "Kayseri sucuk-pastırma üreticileri, mantı imalatçıları, mobilya fabrikaları ve e-ticaret markaları için yüksek mukavemetli koku yapmayan karton ambalaj kutuları imalatı.",
+      "https://mavibasim.com/kayseri-kutu-baski",
+      {
+        "og:image:alt": "Kayseri Kutu Baskı | Sucuk, Pastırma & Mobilya Ambalajı"
+      }
+    ],
+    "/kayseri-magnet-baski": [
+      "Kayseri Magnet Baskı Fiyatları | Kayseri Online Matbaa",
+      "Kayseri genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/kayseri-magnet-baski",
+      {
+        "og:image:alt": "Kayseri Magnet Baskı Fiyatları | Kayseri Online Matbaa"
+      }
+    ],
+    "/kayseri-matbaa": [
+      "Kayseri Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Kayseri ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Kayseri adresinize hızlı teslimat.",
+      "https://mavibasim.com/kayseri-matbaa",
+      {
+        "og:image:alt": "Kayseri Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/kilis-matbaa": [
+      "Kilis Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Kilis ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Kilis adresinize hızlı teslimat.",
+      "https://mavibasim.com/kilis-matbaa",
+      {
+        "og:image:alt": "Kilis Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/kirikkale-matbaa": [
+      "Kırıkkale Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Kırıkkale ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Kırıkkale adresinize hızlı teslimat.",
+      "https://mavibasim.com/kirikkale-matbaa",
+      {
+        "og:image:alt": "Kırıkkale Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/kirklareli-matbaa": [
+      "Kırklareli Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Kırklareli ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Kırklareli adresinize hızlı teslimat.",
+      "https://mavibasim.com/kirklareli-matbaa",
+      {
+        "og:image:alt": "Kırklareli Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/kirsehir-matbaa": [
+      "Kırşehir Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Kırşehir ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Kırşehir adresinize hızlı teslimat.",
+      "https://mavibasim.com/kirsehir-matbaa",
+      {
+        "og:image:alt": "Kırşehir Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/kitap-ayraci": [
+      "Kitap Ayracı Baskı Fiyatları | 350 gr Kuşe - Mavi Basım",
+      "Özel tasarımlı 350 gr kuşe mat selefonlu püsküllü kitap ayracı baskısı. Topkapı koordinasyon noktamızdan kitap ayracı çözümleri ile hemen sipariş verin.",
+      "https://mavibasim.com/kitap-ayraci",
+      {
+        "og:image:alt": "Kitap Ayracı Baskı Fiyatları | 350 gr Kuşe - Mavi Basım"
+      }
+    ],
+    "/kocaeli-matbaa": [
+      "Kocaeli Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Kocaeli ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Kocaeli adresinize hızlı teslimat.",
+      "https://mavibasim.com/kocaeli-matbaa",
+      {
+        "og:image:alt": "Kocaeli Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/konya-brosur-baski": [
+      "Konya Broşür Baskı Fiyatları | Konya Online Matbaa",
+      "Konya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/konya-brosur-baski",
+      {
+        "og:image:alt": "Konya Broşür Baskı Fiyatları | Konya Online Matbaa"
+      }
+    ],
+    "/konya-etiket-baski": [
+      "Konya Etiket Baskı Fiyatları | Konya Online Matbaa",
+      "Konya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/konya-etiket-baski",
+      {
+        "og:image:alt": "Konya Etiket Baskı Fiyatları | Konya Online Matbaa"
+      }
+    ],
+    "/konya-kartvizit-baski": [
+      "Konya Kartvizit Baskı Fiyatları | Konya Online Matbaa",
+      "Konya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/konya-kartvizit-baski",
+      {
+        "og:image:alt": "Konya Kartvizit Baskı Fiyatları | Konya Online Matbaa"
+      }
+    ],
+    "/konya-katalog-baski": [
+      "Konya Katalog Baskı | Tarım Makineleri & Sanayi Kataloğu",
+      "Konya'daki tarım makineleri üreticileri, ağır sanayi dükkanları, değirmen sistemleri ve unlu mamul fabrikaları için kaliteli Amerikan ciltli katalog basımı.",
+      "https://mavibasim.com/konya-katalog-baski",
+      {
+        "og:image:alt": "Konya Katalog Baskı | Tarım Makineleri & Sanayi Kataloğu"
+      }
+    ],
+    "/konya-kutu-baski": [
+      "Konya Kutu Baskı Fiyatları | Konya Online Matbaa",
+      "Konya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/konya-kutu-baski",
+      {
+        "og:image:alt": "Konya Kutu Baskı Fiyatları | Konya Online Matbaa"
+      }
+    ],
+    "/konya-magnet-baski": [
+      "Konya Magnet Baskı Fiyatları | Konya Online Matbaa",
+      "Konya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/konya-magnet-baski",
+      {
+        "og:image:alt": "Konya Magnet Baskı Fiyatları | Konya Online Matbaa"
+      }
+    ],
+    "/konya-matbaa": [
+      "Konya Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Konya ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Konya adresinize hızlı teslimat.",
+      "https://mavibasim.com/konya-matbaa",
+      {
+        "og:image:alt": "Konya Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/kozmetik-guzellik-merkezi-baski": [
+      "Güzellik Merkezi ve Kozmetik Baskı Çözümleri | Mavi Basım",
+      "Güzellik merkezleri ve kozmetik markaları için parfüm kutusu, sözleşme, onam formu, seans takip formu, randevu kartı, broşür ve etiket baskısı.",
+      "https://mavibasim.com/kozmetik-guzellik-merkezi-baski",
+      {
+        "og:image:alt": "Güzellik Merkezi ve Kozmetik Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/kuafor-kartvizit-baski": [
+      "Kuaför Kartvizit Baskı | Berber ve Güzellik Salonu",
+      "Kuaför, berber ve güzellik salonları için 350 gr kuşe kartvizit baskısı. Mat-parlak selefon, çift yön baskı, PDF prova ve Türkiye geneli kargo.",
+      "https://mavibasim.com/kuafor-kartvizit-baski",
+      {
+        "og:image:alt": "Kuaför Kartvizit Baskı | Berber ve Güzellik Salonu"
+      }
+    ],
+    "/kullanim-sartlari": [
+      "Kullanım Şartları ve Hizmet Sözleşmesi | Mavi Basım Matbaa",
+      "Mavi Basım Matbaa & Reklam mavibasim.com web sitesi kullanım şartları, online sipariş kuralları, fikri mülkiyet hakları, grafik tasarım onay süreçleri ve yasal sorumluluklar.",
+      "https://mavibasim.com/kullanim-sartlari",
+      {
+        "og:image:alt": "Kullanım Şartları ve Hizmet Sözleşmesi | Mavi Basım Matbaa"
+      }
+    ],
+    "/kup-bloknot": [
+      "Küp Bloknot Baskı Fiyatları | Logolu Promosyon Küp Bloknot",
+      "Küp bloknot baskı fiyatlarını, logolu ve promosyon küp bloknot seçeneklerini inceleyin. 250 ve 500 yapraklı masaüstü modeller için teklif alın.",
+      "https://mavibasim.com/kup-bloknot",
+      {
+        "og:image": "https://mavibasim.com/images/kup-bloknot/kup-bloknot-baski-fiyatlari.webp",
+        "og:image:alt": "Mavi Basım küp bloknot baskı fiyatları ve logolu promosyon küp notluk modelleri",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/kup-bloknot/kup-bloknot-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1536",
+        "twitter:image": "https://mavibasim.com/images/kup-bloknot/kup-bloknot-baski-fiyatlari.webp"
+      }
+    ],
+    "/kutahya-matbaa": [
+      "Kütahya Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Kütahya ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Kütahya adresinize hızlı teslimat.",
+      "https://mavibasim.com/kutahya-matbaa",
+      {
+        "og:image:alt": "Kütahya Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/kutu": [
+      "Karton Kutu Baskı | Özel Kesim Ambalaj | Mavi Basım",
+      "Karton kutu baskı fiyatlarını inceleyin. Amerikan Bristol ve kroma karton seçenekleri, standart ölçü tablosu ve özel ambalaj kutuları için hemen teklif alın.",
+      "https://mavibasim.com/kutu",
+      {
+        "og:image": "https://mavibasim.com/images/kutu/ozel-kesim-kutu-tasarimi.webp",
+        "og:image:alt": "Mavi Basım özel kesim karton kutu ve ambalaj baskı örnekleri",
+        "og:image:height": "533",
+        "og:image:secure_url": "https://mavibasim.com/images/kutu/ozel-kesim-kutu-tasarimi.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "800",
+        "twitter:image": "https://mavibasim.com/images/kutu/ozel-kesim-kutu-tasarimi.webp"
+      }
+    ],
+    "/kutu-ambalaj-baski-cozumleri": [
+      "Kutu ve Ambalaj Baskı Çözümleri | Mavi Basım",
+      "İlaç, parfüm, kozmetik ve gıda ürünleri için baskılı kutu çözümleri. Zurna dürüm, taco, popcorn, cips, baklava ve özel ölçülü ambalaj kutuları.",
+      "https://mavibasim.com/kutu-ambalaj-baski-cozumleri",
+      {
+        "og:image:alt": "Kutu ve Ambalaj Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/kutu-baski-fiyatlari": [
+      "Karton Kutu Baskı Fiyatları | Baklava, Pasta ve Ambalaj Kolileri",
+      "Kalkanlı karton kutu fiyatlarında Bristol vs Kromo karton seçimi, asetat pencereli kesim işçilikleri ve kalkanlı gıda koruyucu yağ bariyer laminasyon fiyatları.",
+      "https://mavibasim.com/kutu-baski-fiyatlari",
+      {
+        "og:image:alt": "Karton Kutu Baskı Fiyatları | Baklava, Pasta ve Ambalaj Kolileri"
+      }
+    ],
+    "/lokanta-amerikan-servis": [
+      "Lokanta Amerikan Servis Baskı | Kağıt Masa Örtüsü",
+      "Restoran ve lokantalar için tek kullanımlık, gıda onaylı biyolojik boyalı, 80 gr 1. hamur veya şık kraft kağıda logolu amerikan servis basımı. En ucuz fiyatlar.",
+      "https://mavibasim.com/lokanta-amerikan-servis",
+      {
+        "og:image:alt": "Lokanta Amerikan Servis Baskı | Kağıt Masa Örtüsü"
+      }
+    ],
+    "/lokanta-amerikan-servis-baski": [
+      "Lokanta Amerikan Servis Baskı Fiyatları | Logolu Kağıt Servis",
+      "Lokanta ve steakhouse masalarına şık 80 gr kraft kağıt ve 1. hamur logolu tek kullanımlık dikey kağıt amerikan servis basımı. Topkapı fabrikasından hızlı kargoyla!",
+      "https://mavibasim.com/lokanta-amerikan-servis-baski",
+      {
+        "og:image:alt": "Lokanta Amerikan Servis Baskı Fiyatları | Logolu Kağıt Servis"
+      }
+    ],
+    "/magnet": [
+      "Magnet Baskı Fiyatları | Buzdolabı ve Özel Kesim Magnet",
+      "1.000 adet magnet baskı fiyatlarını inceleyin. 0.50 mm mıknatıslı, parlak selefonlu buzdolabı, oval ve özel kesim magnet seçenekleri.",
+      "https://mavibasim.com/magnet",
+      {
+        "og:image": "https://mavibasim.com/images/magnet/magnet-baski-fiyatlari.webp",
+        "og:image:alt": "Mavi Basım buzdolabı magnet baskı fiyatları ve özel kesim magnet modelleri",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/magnet/magnet-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1536",
+        "twitter:image": "https://mavibasim.com/images/magnet/magnet-baski-fiyatlari.webp"
+      }
+    ],
+    "/magnet-baski-fiyatlari": [
+      "Buzdolabı Magnet Baskı Fiyatları | 0.40 mm Mıknatıs Levha Baremi",
+      "Magnet fiyatlarında oval kesim, dikey kesim, figürlü kalıp masrafları ve mıknatıs hammadde etkenleri. En ucuz dökülmeyen magnet sipariş kriterleri!",
+      "https://mavibasim.com/magnet-baski-fiyatlari",
+      {
+        "og:image:alt": "Buzdolabı Magnet Baskı Fiyatları | 0.40 mm Mıknatıs Levha Baremi"
+      }
+    ],
+    "/makbuz-ve-formlar": [
+      "Makbuz ve Form Baskı Fiyatları | Mavi Basım",
+      "Adisyon, sipariş fişi, makbuz ve matbu form fiyatlarını; cilt, nüsha ve baskı seçenekleriyle tek sayfada inceleyin.",
+      "https://mavibasim.com/makbuz-ve-formlar",
+      {
+        "og:image:alt": "Makbuz ve Form Baskı Fiyatları | Mavi Basım"
+      }
+    ],
+    "/makine-parkuru": [
+      "Makine Parkurumuz | Ofset, Dijital & Mücellit Çözümlerimiz - Mavi Basım",
+      "Mavi Basım Topkapı makine parkurundaki Heidelberg ofset baskı makineleri, dijital baskı sistemleri, giyotin ve kesim otomasyonları hakkında detaylar.",
+      "https://mavibasim.com/makine-parkuru",
+      {
+        "og:image:alt": "Makine Parkurumuz | Ofset, Dijital & Mücellit Çözümlerimiz - Mavi Basım"
+      }
+    ],
+    "/malatya-brosur-baski": [
+      "Malatya Broşür Baskı | Kayısı Entegre & Yerel Kafeler",
+      "Malatya'daki kayısı ihracat firmaları, kuruyemiş-fıstık paketleme tesisleri, düğün salonları ve cafeler için 135 gr parlak kuşe broşür ve el ilanı baskısı. En ucuz Topkapı fiyatlarıyla!",
+      "https://mavibasim.com/malatya-brosur-baski",
+      {
+        "og:image:alt": "Malatya Broşür Baskı | Kayısı Entegre & Yerel Kafeler"
+      }
+    ],
+    "/malatya-matbaa": [
+      "Malatya Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Malatya ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Malatya adresinize hızlı teslimat.",
+      "https://mavibasim.com/malatya-matbaa",
+      {
+        "og:image:alt": "Malatya Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/manisa-matbaa": [
+      "Manisa Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Manisa ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Manisa adresinize hızlı teslimat.",
+      "https://mavibasim.com/manisa-matbaa",
+      {
+        "og:image:alt": "Manisa Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/mardin-matbaa": [
+      "Mardin Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Mardin ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Mardin adresinize hızlı teslimat.",
+      "https://mavibasim.com/mardin-matbaa",
+      {
+        "og:image:alt": "Mardin Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/matbaa": [
+      "Biz Kimiz? | Mavi Basım Matbaa & Reklam ve Topkapı Fabrikamız",
+      "Mavi Basım Matbaa & Reklam'ın kurumsal geçmişi, basım vizyonu, Topkapı tesislerimizdeki makine parkurumuz ve üretim felsefemiz hakkında kapsamlı bilgiler.",
+      "https://mavibasim.com/matbaa",
+      {
+        "og:image:alt": "Biz Kimiz? | Mavi Basım Matbaa & Reklam ve Topkapı Fabrikamız"
+      }
+    ],
+    "/mersin-matbaa": [
+      "Mersin Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Mersin ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Mersin adresinize hızlı teslimat.",
+      "https://mavibasim.com/mersin-matbaa",
+      {
+        "og:image:alt": "Mersin Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/mesafeli-satis-sozlesmesi": [
+      "Mesafeli Satış Sözleşmesi | Mavi Basım Matbaa & Reklam",
+      "Mavi Basım Matbaa & Reklam mavibasim.com mesafeli satış sözleşmesi, online matbaa sipariş şartları, 6502 sayılı kanun kişiselleştirilmiş ürün yönetmeliği ve cayma hakkı istisnası.",
+      "https://mavibasim.com/mesafeli-satis-sozlesmesi",
+      {
+        "og:image:alt": "Mesafeli Satış Sözleşmesi | Mavi Basım Matbaa & Reklam"
+      }
+    ],
+    "/mugla-kartvizit-baski": [
+      "Muğla Kartvizit Baskı Fiyatları | Tuale ve Sıvamalı Kalın Kartlar",
+      "Muğla’daki ajans, kuaför ve işletmeler için kabartma laklı, şeffaf veya dokulu tuale fantezi kartvizit imalatı. Topkapı’dan Muğla’ya 1 günde teslim!",
+      "https://mavibasim.com/mugla-kartvizit-baski",
+      {
+        "og:image:alt": "Muğla Kartvizit Baskı Fiyatları | Tuale ve Sıvamalı Kalın Kartlar"
+      }
+    ],
+    "/mugla-kutu-baski": [
+      "Muğla Kutu Baskı | Markalı Ambalaj & Hediyelik Sabun-Çam Balı Kutusu",
+      "Muğla'daki e-ticaret markaları, tekstil butikleri, butik sabun ve çam balı atölyeleri için şık pencereli gıda temas onaylı kaliteli karton kutu ve ambalaj imalatı.",
+      "https://mavibasim.com/mugla-kutu-baski",
+      {
+        "og:image:alt": "Muğla Kutu Baskı | Markalı Ambalaj & Hediyelik Sabun-Çam Balı Kutusu"
+      }
+    ],
+    "/mugla-matbaa": [
+      "Muğla Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Muğla ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Muğla adresinize hızlı teslimat.",
+      "https://mavibasim.com/mugla-matbaa",
+      {
+        "og:image:alt": "Muğla Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/mus-matbaa": [
+      "Muş Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Muş ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Muş adresinize hızlı teslimat.",
+      "https://mavibasim.com/mus-matbaa",
+      {
+        "og:image:alt": "Muş Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/nevsehir-matbaa": [
+      "Nevşehir Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Nevşehir ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Nevşehir adresinize hızlı teslimat.",
+      "https://mavibasim.com/nevsehir-matbaa",
+      {
+        "og:image:alt": "Nevşehir Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/nigde-matbaa": [
+      "Niğde Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Niğde ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Niğde adresinize hızlı teslimat.",
+      "https://mavibasim.com/nigde-matbaa",
+      {
+        "og:image:alt": "Niğde Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/ordu-findik-firmasi-katalog-baski": [
+      "Ordu Fındık Firması Katalog Baskı | İhracat Kalite Ürün Kataloğu",
+      "Ordu fındık üreticileri, ihracatçıları ve tarım sanayicileri için lüks ciltli, tel dikişli veya iplik dikişli fındık ürün tanıtım kataloğu basımı.",
+      "https://mavibasim.com/ordu-findik-firmasi-katalog-baski",
+      {
+        "og:image:alt": "Ordu Fındık Firması Katalog Baskı | İhracat Kalite Ürün Kataloğu"
+      }
+    ],
+    "/ordu-magnet-baski": [
+      "Ordu Magnet Baskı | Fındık Firmaları & Paket Servis",
+      "Ordu’daki fındık paketleme firmaları, yöresel şarküteriler ve hızlı paket servis dükkanları için 0.40 mm güçlü buzdolabı magnet baskısı. En ucuz fiyatlarla kapınızda!",
+      "https://mavibasim.com/ordu-magnet-baski",
+      {
+        "og:image:alt": "Ordu Magnet Baskı | Fındık Firmaları & Paket Servis"
+      }
+    ],
+    "/ordu-matbaa": [
+      "Ordu Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Ordu ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Ordu adresinize hızlı teslimat.",
+      "https://mavibasim.com/ordu-matbaa",
+      {
+        "og:image:alt": "Ordu Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/osmaniye-matbaa": [
+      "Osmaniye Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Osmaniye ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Osmaniye adresinize hızlı teslimat.",
+      "https://mavibasim.com/osmaniye-matbaa",
+      {
+        "og:image:alt": "Osmaniye Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/oto-paspas": [
+      "Oto Paspas Baskı Fiyatları | Logolu Kağıt Oto Paspas",
+      "1.000, 2.000 ve 5.000 adet logolu oto paspas baskı fiyatlarını inceleyin. 34x49 cm, 80 gr kraft kağıt ve tek renk baskı seçenekleri.",
+      "https://mavibasim.com/oto-paspas",
+      {
+        "og:image": "https://mavibasim.com/images/oto-paspas/oto-paspas-baski-fiyatlari.webp",
+        "og:image:alt": "Oto Paspas Baskı Fiyatları ve 80 gr Kraft Kağıt Paspas Modelleri",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/oto-paspas/oto-paspas-baski-fiyatlari.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1536",
+        "twitter:image": "https://mavibasim.com/images/oto-paspas/oto-paspas-baski-fiyatlari.webp"
+      }
+    ],
+    "/para-makbuzu": [
+      "Numaratörlü Para Makbuzu Baskı Fiyatları | Mavi Basım Matbaa",
+      "14×20 cm numaratörlü, otokopili para makbuzu baskı fiyatlarını; 2, 3 ve 4 nüsha seçenekleriyle 5 ciltten itibaren inceleyin.",
+      "https://mavibasim.com/para-makbuzu",
+      {
+        "og:image:alt": "Numaratörlü Para Makbuzu Baskı Fiyatları | Mavi Basım Matbaa"
+      }
+    ],
+    "/pastane-kutu-baski": [
+      "Pastane Kutu Baskı Fiyatları | Logolu Baklava ve Pasta Kutusu",
+      "Baklava, kurabiye, çikolata ve pasta ambalajları için gıda temas onaylı koku yapmayan pencereli pastane kutu imalatı. Topkapı fabrikasından toptan fiyatlarla!",
+      "https://mavibasim.com/pastane-kutu-baski",
+      {
+        "og:image:alt": "Pastane Kutu Baskı Fiyatları | Logolu Baklava ve Pasta Kutusu"
+      }
+    ],
+    "/perakende-satis-fisi": [
+      "Perakende Satış Fişi Koçanı Baskı Fiyatları | Mavi Basım",
+      "Otokopili kendinden karbonlu perakende satış fişi baskısı. Küçük boy (10x14 cm), numaratörlü ve firma logolu koçanlı perakende satış fişi siparişi.",
+      "https://mavibasim.com/perakende-satis-fisi",
+      {
+        "og:image:alt": "Perakende Satış Fişi Koçanı Baskı Fiyatları | Mavi Basım"
+      }
+    ],
+    "/recete": [
+      "Reçete Baskı Fiyatları 2026 | Numaratörlü Reçete Koçanı Baskısı",
+      "Sağlık kuruluşlarına özel numaratörlü reçete koçanı baskısı. 14x20 cm ve A5 ölçülerde, otokopili veya 1. hamur reçete baskı seçenekleri.",
+      "https://mavibasim.com/recete",
+      {
+        "og:image:alt": "Reçete Baskı Fiyatları 2026 | Numaratörlü Reçete Koçanı Baskısı"
+      }
+    ],
+    "/referanslar": [
+      "Referanslarımız | Mavi Basım Matbaa & Reklam",
+      "Mavi Basım Matbaa & Reklam olarak bugüne kadar başarıyla tamamladığımız kurumsal referanslarımız, matbaa baskı işlerimiz ve müşteri memnuniyeti mesajları.",
+      "https://mavibasim.com/referanslar",
+      {
+        "og:image:alt": "Referanslarımız | Mavi Basım Matbaa & Reklam"
+      }
+    ],
+    "/restaurant-siparis-fisi": [
+      "Restoran Sipariş Fişi Baskı | Otokopili Numaratörlü Fişler",
+      "Restoranlar ve lokantalar için 2 veya 3 nüshalı, numaratörlü, kendinden karbonlu (otokopili) şık porsiyon ve hesap sipariş fişi baskısı. En ucuz fiyatlı imalat.",
+      "https://mavibasim.com/restaurant-siparis-fisi",
+      {
+        "og:image:alt": "Restoran Sipariş Fişi Baskı | Otokopili Numaratörlü Fişler"
+      }
+    ],
+    "/restoran-brosur-baski": [
+      "Restoran Broşür Baskı | Paket Servis Menü Broşürü",
+      "Restoran, lokanta ve paket servis işletmeleri için katlamalı broşür baskısı. Güncel kâğıt, ölçü ve katlama seçeneklerini inceleyerek sipariş verin.",
+      "https://mavibasim.com/restoran-brosur-baski",
+      {
+        "og:image:alt": "Restoran Broşür Baskı | Paket Servis Menü Broşürü"
+      }
+    ],
+    "/rize-brosur-baski": [
+      "Rize Broşür Baskı | Çay Fabrikaları & Bungalov Otelleri",
+      "Rize'deki çay fabrikaları, rafting kulüpleri, bungalov ve doğa turizmi tesisleri için yüksek kaliteli, neme dayanıklı 135 gr kuşe broşür. Doğrudan Topkapı'dan!",
+      "https://mavibasim.com/rize-brosur-baski",
+      {
+        "og:image:alt": "Rize Broşür Baskı | Çay Fabrikaları & Bungalov Otelleri"
+      }
+    ],
+    "/rize-lokanta-amerikan-servis": [
+      "Rize Lokanta Amerikan Servis Baskı | Tek Kullanımlık Kağıt Altlık",
+      "Rize'deki restoran, pide salonu ve oteller için gıda mürekkepli tek kullanımlık Amerikan servis kağıt altlık basımı. Topkapı fabrikasından doğrudan imalat.",
+      "https://mavibasim.com/rize-lokanta-amerikan-servis",
+      {
+        "og:image:alt": "Rize Lokanta Amerikan Servis Baskı | Tek Kullanımlık Kağıt Altlık"
+      }
+    ],
+    "/rize-matbaa": [
+      "Rize Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Rize ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Rize adresinize hızlı teslimat.",
+      "https://mavibasim.com/rize-matbaa",
+      {
+        "og:image:alt": "Rize Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/sakarya-matbaa": [
+      "Sakarya Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Sakarya ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Sakarya adresinize hızlı teslimat.",
+      "https://mavibasim.com/sakarya-matbaa",
+      {
+        "og:image:alt": "Sakarya Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/samsun-brosur-baski": [
+      "Samsun Broşür Baskı Fiyatları | Samsun Online Matbaa",
+      "Samsun genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/samsun-brosur-baski",
+      {
+        "og:image:alt": "Samsun Broşür Baskı Fiyatları | Samsun Online Matbaa"
+      }
+    ],
+    "/samsun-etiket-baski": [
+      "Samsun Etiket Baskı Fiyatları | Samsun Online Matbaa",
+      "Samsun genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/samsun-etiket-baski",
+      {
+        "og:image:alt": "Samsun Etiket Baskı Fiyatları | Samsun Online Matbaa"
+      }
+    ],
+    "/samsun-kartvizit-baski": [
+      "Samsun Kartvizit Baskı | Uygun Fiyatlı Online Matbaa",
+      "Samsun’daki restoranlar, Bafra pidesi salonları, eczaneler ve gayrimenkul ofisleri için kaliteli, ucuz kartvizit baskı. Topkapı fabrikasından doğrudan kapınıza kargo!",
+      "https://mavibasim.com/samsun-kartvizit-baski",
+      {
+        "og:image:alt": "Samsun Kartvizit Baskı | Uygun Fiyatlı Online Matbaa"
+      }
+    ],
+    "/samsun-katalog-baski": [
+      "Samsun Katalog Baskı Fiyatları | Samsun Online Matbaa",
+      "Samsun genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/samsun-katalog-baski",
+      {
+        "og:image:alt": "Samsun Katalog Baskı Fiyatları | Samsun Online Matbaa"
+      }
+    ],
+    "/samsun-kutu-baski": [
+      "Samsun Kutu Baskı Fiyatları | Samsun Online Matbaa",
+      "Samsun genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/samsun-kutu-baski",
+      {
+        "og:image:alt": "Samsun Kutu Baskı Fiyatları | Samsun Online Matbaa"
+      }
+    ],
+    "/samsun-magnet-baski": [
+      "Samsun Magnet Baskı Fiyatları | Samsun Online Matbaa",
+      "Samsun genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/samsun-magnet-baski",
+      {
+        "og:image:alt": "Samsun Magnet Baskı Fiyatları | Samsun Online Matbaa"
+      }
+    ],
+    "/samsun-matbaa": [
+      "Samsun Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Samsun ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Samsun adresinize hızlı teslimat.",
+      "https://mavibasim.com/samsun-matbaa",
+      {
+        "og:image:alt": "Samsun Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/samsun-restoran-brosur-baski": [
+      "Samsun Restoran Broşür Baskı | Katlamalı Restoran Sipariş Fişleri",
+      "Samsun'daki lokanta ve restoranlar için yüksek kaliteli katlamalı paket servis broşürleri ve menü basımı. 135 gr parlak kuşe kağıda tam ofset baskı.",
+      "https://mavibasim.com/samsun-restoran-brosur-baski",
+      {
+        "og:image:alt": "Samsun Restoran Broşür Baskı | Katlamalı Restoran Sipariş Fişleri"
+      }
+    ],
+    "/sanliurfa-matbaa": [
+      "Şanlıurfa Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Şanlıurfa ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Şanlıurfa adresinize hızlı teslimat.",
+      "https://mavibasim.com/sanliurfa-matbaa",
+      {
+        "og:image:alt": "Şanlıurfa Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/sektor/adana-brosur-baski": [
+      "Adana Broşür Baskı Fiyatları | Adana Online Matbaa",
+      "Adana genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/adana-brosur-baski",
+      {
+        "og:image:alt": "Adana Broşür Baskı Fiyatları | Adana Online Matbaa"
+      }
+    ],
+    "/sektor/adana-etiket-baski": [
+      "Adana Etiket Baskı Fiyatları | Adana Online Matbaa",
+      "Adana genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/adana-etiket-baski",
+      {
+        "og:image:alt": "Adana Etiket Baskı Fiyatları | Adana Online Matbaa"
+      }
+    ],
+    "/sektor/adana-kartvizit-baski": [
+      "Adana’ya Özel Kartvizit Baskı Fiyatları | Mat Selefonlu Kalın Kartvizit",
+      "Adana’daki narenciye kooperatifleri, inşaat, mühendislik, eczane ve emlak danışmanları için en uygun fiyatlı, profesyonel kartvizit baskı çözümleri Mavi Basım’da.",
+      "https://mavibasim.com/sektor/adana-kartvizit-baski",
+      {
+        "og:image:alt": "Adana’ya Özel Kartvizit Baskı Fiyatları | Mat Selefonlu Kalın Kartvizit"
+      }
+    ],
+    "/sektor/adana-katalog-baski": [
+      "Adana Katalog Baskı Fiyatları | Adana Online Matbaa",
+      "Adana genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/adana-katalog-baski",
+      {
+        "og:image:alt": "Adana Katalog Baskı Fiyatları | Adana Online Matbaa"
+      }
+    ],
+    "/sektor/adana-kutu-baski": [
+      "Adana Kutu Baskı Fiyatları | Adana Online Matbaa",
+      "Adana genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/adana-kutu-baski",
+      {
+        "og:image:alt": "Adana Kutu Baskı Fiyatları | Adana Online Matbaa"
+      }
+    ],
+    "/sektor/adana-magnet-baski": [
+      "Adana Magnet Baskı Fiyatları | Adana Online Matbaa",
+      "Adana genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/adana-magnet-baski",
+      {
+        "og:image:alt": "Adana Magnet Baskı Fiyatları | Adana Online Matbaa"
+      }
+    ],
+    "/sektor/ankara-brosur-baski": [
+      "Ankara Broşür Baskı | Uygun Fiyatlı Tanıtım El İlanı",
+      "Ankara’daki danışmanlık büroları, sürücü kursları, kafeler ve sürücü kursları için 135 gr kuşe katlamalı broşür baskısı. Topkapı matbaa kalitesi ve hızlı kargo!",
+      "https://mavibasim.com/sektor/ankara-brosur-baski",
+      {
+        "og:image:alt": "Ankara Broşür Baskı | Uygun Fiyatlı Tanıtım El İlanı"
+      }
+    ],
+    "/sektor/ankara-etiket-baski": [
+      "Ankara Etiket Baskı Fiyatları | Ankara Online Matbaa",
+      "Ankara genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/ankara-etiket-baski",
+      {
+        "og:image:alt": "Ankara Etiket Baskı Fiyatları | Ankara Online Matbaa"
+      }
+    ],
+    "/sektor/ankara-kartvizit-baski": [
+      "Ankara Kartvizit Baskı Fiyatları | Ankara Online Matbaa",
+      "Ankara genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/ankara-kartvizit-baski",
+      {
+        "og:image:alt": "Ankara Kartvizit Baskı Fiyatları | Ankara Online Matbaa"
+      }
+    ],
+    "/sektor/ankara-katalog-baski": [
+      "Ankara Katalog Baskı Fiyatları | Ankara Online Matbaa",
+      "Ankara genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/ankara-katalog-baski",
+      {
+        "og:image:alt": "Ankara Katalog Baskı Fiyatları | Ankara Online Matbaa"
+      }
+    ],
+    "/sektor/ankara-kutu-baski": [
+      "Ankara Kutu Baskı Fiyatları | Ankara Online Matbaa",
+      "Ankara genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/ankara-kutu-baski",
+      {
+        "og:image:alt": "Ankara Kutu Baskı Fiyatları | Ankara Online Matbaa"
+      }
+    ],
+    "/sektor/ankara-magnet-baski": [
+      "Ankara Magnet Baskı Fiyatları | Kamu ve Lokanta Magnetleri",
+      "Ankara’daki lokanta, su bayisi, veteriner ve kurumlar için 0.40 mm güçlü buzdolabı magneti modelleri. Topkapı’dan Ankara kapınıza 24 saatte hızlı sevkiyat!",
+      "https://mavibasim.com/sektor/ankara-magnet-baski",
+      {
+        "og:image:alt": "Ankara Magnet Baskı Fiyatları | Kamu ve Lokanta Magnetleri"
+      }
+    ],
+    "/sektor/antalya-brosur-baski": [
+      "Antalya Broşür Baskı Fiyatları | Antalya Online Matbaa",
+      "Antalya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/antalya-brosur-baski",
+      {
+        "og:image:alt": "Antalya Broşür Baskı Fiyatları | Antalya Online Matbaa"
+      }
+    ],
+    "/sektor/antalya-emlakci-kartvizit-baski": [
+      "Antalya Emlakçı Kartvizit Baskı | Gayrimenkul Danışmanı Randevu Kartı",
+      "Antalya'daki emlak ofisleri ve gayrimenkul danışmanları için lüks kabartma laklı, altın varaklı ve kalın karton emlakçı kartvizit siparişi.",
+      "https://mavibasim.com/sektor/antalya-emlakci-kartvizit-baski",
+      {
+        "og:image:alt": "Antalya Emlakçı Kartvizit Baskı | Gayrimenkul Danışmanı Randevu Kartı"
+      }
+    ],
+    "/sektor/antalya-etiket-baski": [
+      "Antalya Etiket Baskı Fiyatları | Antalya Online Matbaa",
+      "Antalya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/antalya-etiket-baski",
+      {
+        "og:image:alt": "Antalya Etiket Baskı Fiyatları | Antalya Online Matbaa"
+      }
+    ],
+    "/sektor/antalya-kartvizit-baski": [
+      "Antalya Kartvizit Baskı Fiyatları | Antalya Online Matbaa",
+      "Antalya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/antalya-kartvizit-baski",
+      {
+        "og:image:alt": "Antalya Kartvizit Baskı Fiyatları | Antalya Online Matbaa"
+      }
+    ],
+    "/sektor/antalya-katalog-baski": [
+      "Antalya Katalog Baskı | Turizm ve İnşaat Katalogları",
+      "Antalya’daki imalat sanayi, tarım, turizm, inşaat ve butik oteller için lüks tel spiral veya Amerikan ciltli katalog baskı çözümleri. Doğrudan fabrikadan kargo!",
+      "https://mavibasim.com/sektor/antalya-katalog-baski",
+      {
+        "og:image:alt": "Antalya Katalog Baskı | Turizm ve İnşaat Katalogları"
+      }
+    ],
+    "/sektor/antalya-kutu-baski": [
+      "Antalya Kutu Baskı Fiyatları | Antalya Online Matbaa",
+      "Antalya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/antalya-kutu-baski",
+      {
+        "og:image:alt": "Antalya Kutu Baskı Fiyatları | Antalya Online Matbaa"
+      }
+    ],
+    "/sektor/antalya-magnet-baski": [
+      "Antalya Magnet Baskı Fiyatları | Antalya Online Matbaa",
+      "Antalya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/antalya-magnet-baski",
+      {
+        "og:image:alt": "Antalya Magnet Baskı Fiyatları | Antalya Online Matbaa"
+      }
+    ],
+    "/sektor/bitlis-kutu-baski": [
+      "Bitlis Kutu Baskı | Markalı Bal ve Kurabiye Ambalajı",
+      "Bitlis bal üreticileri, kuruyemiş firmaları, pastaneler ve lokal butik üreticiler için neme dayanıklı gıda uyumlu şık karton kutu üretimi.",
+      "https://mavibasim.com/sektor/bitlis-kutu-baski",
+      {
+        "og:image:alt": "Bitlis Kutu Baskı | Markalı Bal ve Kurabiye Ambalajı"
+      }
+    ],
+    "/sektor/bitlis-restaurant-siparis-fisi": [
+      "Bitlis Restoran Sipariş Fişi Baskı | Numaratörlü Otokopi Fişi",
+      "Bitlis'teki restoran, kebap salonları ve lokantalar için 2 veya 3 nüshalı, logolu, numaratörlü, kendinden karbonlu adisyon ve sipariş fişi baskısı.",
+      "https://mavibasim.com/sektor/bitlis-restaurant-siparis-fisi",
+      {
+        "og:image:alt": "Bitlis Restoran Sipariş Fişi Baskı | Numaratörlü Otokopi Fişi"
+      }
+    ],
+    "/sektor/brosur-baski-fiyatlari": [
+      "Kuşe Broşür Baskı Fiyatları | 115 gr & 135 gr Katlama Seçenekleri",
+      "Broşür fiyatlarını etkileyen kağıt gramajı, ebat, adet kırımları ve selefon laminasyon farkları. En ucuz 1000 adet el ilanı fiyat tablosu kuralları.",
+      "https://mavibasim.com/sektor/brosur-baski-fiyatlari",
+      {
+        "og:image:alt": "Kuşe Broşür Baskı Fiyatları | 115 gr & 135 gr Katlama Seçenekleri"
+      }
+    ],
+    "/sektor/bursa-brosur-baski": [
+      "Bursa Broşür Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/bursa-brosur-baski",
+      {
+        "og:image:alt": "Bursa Broşür Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/sektor/bursa-etiket-baski": [
+      "Bursa Etiket Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/bursa-etiket-baski",
+      {
+        "og:image:alt": "Bursa Etiket Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/sektor/bursa-kartvizit-baski": [
+      "Bursa Kartvizit Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/bursa-kartvizit-baski",
+      {
+        "og:image:alt": "Bursa Kartvizit Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/sektor/bursa-katalog-baski": [
+      "Bursa Katalog Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/bursa-katalog-baski",
+      {
+        "og:image:alt": "Bursa Katalog Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/sektor/bursa-kutu-baski": [
+      "Bursa Kutu Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/bursa-kutu-baski",
+      {
+        "og:image:alt": "Bursa Kutu Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/sektor/bursa-magnet-baski": [
+      "Bursa Magnet Baskı Fiyatları | Bursa Online Matbaa",
+      "Bursa genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/bursa-magnet-baski",
+      {
+        "og:image:alt": "Bursa Magnet Baskı Fiyatları | Bursa Online Matbaa"
+      }
+    ],
+    "/sektor/donerci-magnet-baski": [
+      "Dönerci Magnet Baskı Fiyatları | Figürlü Özel Kesim Buzdolabı Magneti",
+      "Kebapçı ve dönerciler için en ucuz oval, özel kesimli dönerci buzdolabı magnetleri. 0.40 mm yüksek çekim gücü ve lüks parlak selefon kaplamasıyla doğrudan imalattan!",
+      "https://mavibasim.com/sektor/donerci-magnet-baski",
+      {}
+    ],
+    "/sektor/e-ticaret-perakende-baski": [
+      "E-Ticaret ve Perakende Baskı Çözümleri | Mavi Basım",
+      "E-ticaret ve perakende markaları için ürün kutusu, karton çanta, teşekkür kartı, ambalaj kâğıdı, Amerikan servis, barkod ve koli etiketi baskısı.",
+      "https://mavibasim.com/sektor/e-ticaret-perakende-baski",
+      {
+        "og:image:alt": "E-Ticaret ve Perakende Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/sektor/eczane-el-ilani-baski": [
+      "Eczane ve Sağlık Bilgilendirme İlanı Baskısı | Medikal El İlanları",
+      "Eczaneler, klinikler ve sağlık kuruluşları için nöbetçi eczane duyuruları, hasta bilgilendirme broşürleri ve medikal tanıtım el ilanları.",
+      "https://mavibasim.com/sektor/eczane-el-ilani-baski",
+      {
+        "og:image:alt": "Eczane ve Sağlık Bilgilendirme İlanı Baskısı | Medikal El İlanları"
+      }
+    ],
+    "/sektor/egitim-kurumlari-baski": [
+      "Eğitim Kurumları Baskı Çözümleri | Mavi Basım",
+      "Eğitim kurumları için deneme sınavı kitapçığı, soru kitapçığı, fasikül, yaprak test, kayıt formu, broşür, katalog, dosya ve eğitim seti baskısı.",
+      "https://mavibasim.com/sektor/egitim-kurumlari-baski",
+      {
+        "og:image:alt": "Eğitim Kurumları Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/sektor/elazig-magnet-baski": [
+      "Elazığ Magnet Baskı | Orcik Üreticileri & Yöresel Peynirciler",
+      "Elazığ orcik-pestil üreticileri, yöresel peynirciler, bakırcılar ve hızlı paket servis esnafları için 0.40 mm yüksek çekimli buzdolabı magnet baskısı. Ucuz kargolu imalat!",
+      "https://mavibasim.com/sektor/elazig-magnet-baski",
+      {
+        "og:image:alt": "Elazığ Magnet Baskı | Orcik Üreticileri & Yöresel Peynirciler"
+      }
+    ],
+    "/sektor/emlak-afis-baski": [
+      "Emlak Afiş Baskı | Yırtılmaz Branda ve Bez Emlak Afişleri",
+      "Emlak ofisleri için pencerelere ve dış cephelere asılabilen yırtılmayan paslanmaz kuşgözü delikli güneşe, don ayazına ve rüzgara dayanıklı solvent-dışı UV branda afişler.",
+      "https://mavibasim.com/sektor/emlak-afis-baski",
+      {
+        "og:image:alt": "Emlak Afiş Baskı | Yırtılmaz Branda ve Bez Emlak Afişleri"
+      }
+    ],
+    "/sektor/emlakci-kartvizit": [
+      "Emlakçı Kartvizit Baskı | Lüks Kabartmalı Gayrimenkul Kartları",
+      "Emlak danışmanları ve emlak ofisleri için lüks dokulu kalın kağıt, mat kadife selefon, gümüş/altın yaldız ve kabartma lak laklı emlakçı kartvizit çözümleri.",
+      "https://mavibasim.com/sektor/emlakci-kartvizit",
+      {
+        "og:image:alt": "Emlakçı Kartvizit Baskı | Lüks Kabartmalı Gayrimenkul Kartları"
+      }
+    ],
+    "/sektor/emlakci-kartvizit-baski": [
+      "Emlakçı Kartvizit Baskı Fiyatları | Cam Filmi ve Branda Afişleri",
+      "Gayrimenkul danışmanları için lüks kabartma laklı kalın kartvizitler, kiralık/satılık emlak dış mekan yırtılmaz branda afiş dökümleri. Topkapı imalatından!",
+      "https://mavibasim.com/sektor/emlakci-kartvizit-baski",
+      {
+        "og:image:alt": "Emlakçı Kartvizit Baskı Fiyatları | Cam Filmi ve Branda Afişleri"
+      }
+    ],
+    "/sektor/erzurum-emlakci-katalog-baski": [
+      "Erzurum Halı ve Koltuk Yıkama Baskı | Lüks Konut Portföy Kitapçığı",
+      "Erzurum gayrimenkul ofisleri ve inşaat firmaları için lüks metal dikişli, kalın kuşe kapaklı, 170 gr iç sayfa lüks konut ve arsa katalog döküm hizmetleri.",
+      "https://mavibasim.com/sektor/erzurum-emlakci-katalog-baski",
+      {
+        "og:image:alt": "Erzurum Halı ve Koltuk Yıkama Baskı | Lüks Konut Portföy Kitapçığı"
+      }
+    ],
+    "/sektor/erzurum-katalog-baski": [
+      "Erzurum Katalog Baskı | Palandöken Otelleri & Oltu Kuyumcuları",
+      "Erzurum'daki Palandöken kayak otelleri, cağ kebabı üreticileri ve Oltutaşı kuyumcuları için lüks kuşe kağıda Amerikan ciltli katalog ve broşür basımı. Doğrudan imalattan!",
+      "https://mavibasim.com/sektor/erzurum-katalog-baski",
+      {
+        "og:image:alt": "Erzurum Katalog Baskı | Palandöken Otelleri & Oltu Kuyumcuları"
+      }
+    ],
+    "/sektor/etiket-baski": [
+      "Yapışkanlı Etiket Baskı Fiyatları | PP Opak ve Şeffaf Rulolar",
+      "Su, gıda, kimya ve kozmetik ürünleri için neme ve yırtılmaya karşı %100 dayanıklı PP Opak plastik etiket, kuşe etiket imalatı. Sıcak pres bıçaklı kesimle!",
+      "https://mavibasim.com/sektor/etiket-baski",
+      {
+        "og:image:alt": "Yapışkanlı Etiket Baskı Fiyatları | PP Opak ve Şeffaf Rulolar"
+      }
+    ],
+    "/sektor/etiket-baski-fiyatlari": [
+      "Yapışkanlı Etiket Fiyatları | PP Opak vs Tabaka Kuşe Etiketler",
+      "Etiket fiyat tablosunda plastik bazlı PP Opak, şeffaf selefonlu etiketler ve kağıt bazlı kuşe etiket m2 fiyat farkları. Sıfır bıçak masrafıyla yarım kesim!",
+      "https://mavibasim.com/sektor/etiket-baski-fiyatlari",
+      {
+        "og:image:alt": "Yapışkanlı Etiket Fiyatları | PP Opak vs Tabaka Kuşe Etiketler"
+      }
+    ],
+    "/sektor/fast-food-cips-kutusu": [
+      "Fast Food Cips Kutusu | Çevre Dostu Logolu Karton Ambalajlar",
+      "Kafeler ve büfeler için sızdırmaz gıda cilalı, kolay katlanır kilitli taban, sıcak patates ve soğan halkası servis karton cips kutusu üretimi. Hemen sipariş verin.",
+      "https://mavibasim.com/sektor/fast-food-cips-kutusu",
+      {
+        "og:image:alt": "Fast Food Cips Kutusu | Çevre Dostu Logolu Karton Ambalajlar"
+      }
+    ],
+    "/sektor/fast-food-cips-kutusu-baski": [
+      "Fast Food Cips Kutusu Modelleri | Logolu Patates ve Atıştırmalık Ambalajı",
+      "Restoranlar, büfeler ve fast food zincirleri için koku yapmayan, yağı sızdırmayan kilitli tabanlı logolu karton patates cips kutuları imalatı. Toptan fiyatlar!",
+      "https://mavibasim.com/sektor/fast-food-cips-kutusu-baski",
+      {
+        "og:image:alt": "Fast Food Cips Kutusu Modelleri | Logolu Patates ve Atıştırmalık Ambalajı"
+      }
+    ],
+    "/sektor/fast-food-kampanya-brosuru": [
+      "Fast Food Kampanya Broşürü | Lokanta ve Büfe Menü Dağıtımları",
+      "Fast food büfeleri, dönerciler ve pizzacılar için cazip menü fiyatlarını, kampanya paketlerini duyuran el ilanı ve dağıtımlı katlamalı broşür baskısı.",
+      "https://mavibasim.com/sektor/fast-food-kampanya-brosuru",
+      {
+        "og:image:alt": "Fast Food Kampanya Broşürü | Lokanta ve Büfe Menü Dağıtımları"
+      }
+    ],
+    "/sektor/gaziantep-brosur-baski": [
+      "Gaziantep Broşür Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/gaziantep-brosur-baski",
+      {
+        "og:image:alt": "Gaziantep Broşür Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/sektor/gaziantep-etiket-baski": [
+      "Gaziantep Etiket Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/gaziantep-etiket-baski",
+      {
+        "og:image:alt": "Gaziantep Etiket Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/sektor/gaziantep-kartvizit-baski": [
+      "Gaziantep Kartvizit Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/gaziantep-kartvizit-baski",
+      {
+        "og:image:alt": "Gaziantep Kartvizit Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/sektor/gaziantep-katalog-baski": [
+      "Gaziantep Katalog Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/gaziantep-katalog-baski",
+      {
+        "og:image:alt": "Gaziantep Katalog Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/sektor/gaziantep-kutu-baski": [
+      "Gaziantep Kutu Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/gaziantep-kutu-baski",
+      {
+        "og:image:alt": "Gaziantep Kutu Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/sektor/gaziantep-magnet-baski": [
+      "Gaziantep Magnet Baskı Fiyatları | Gaziantep Online Matbaa",
+      "Gaziantep genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/gaziantep-magnet-baski",
+      {
+        "og:image:alt": "Gaziantep Magnet Baskı Fiyatları | Gaziantep Online Matbaa"
+      }
+    ],
+    "/sektor/gebze-eczane-etiket-baski": [
+      "Gebze Eczane Etiket Baskı | Reçete ve Sağlık Şişesi Yapışkanları",
+      "Gebze eczaneleri için özel kesim, rulo veya tabaka, ilaç ve şurup şişelerine uyumlu gıda onaylı yapışkanlı kağıt etiket basımları. Online sipariş.",
+      "https://mavibasim.com/sektor/gebze-eczane-etiket-baski",
+      {
+        "og:image:alt": "Gebze Eczane Etiket Baskı | Reçete ve Sağlık Şişesi Yapışkanları"
+      }
+    ],
+    "/sektor/gebze-kutu-baski": [
+      "Gebze Kutu Baskı | Logolu Yaprak ve Gıda Ambalajı",
+      "Gebze yaprağı paketleme firmaları, yöresel gıda üreticileri ve pastaneler için pencereli, koku yapmayan karton kutu ve ambalaj imalatı. Topkapı matbaa güvencesiyle!",
+      "https://mavibasim.com/sektor/gebze-kutu-baski",
+      {
+        "og:image:alt": "Gebze Kutu Baskı | Logolu Yaprak ve Gıda Ambalajı"
+      }
+    ],
+    "/sektor/giresun-fast-food-cips-kutusu-baski": [
+      "Giresun Fast Food Cips Kutusu Baskı | Logolu Atıştırmalık Ambalajı",
+      "Giresun'daki dönerci, restoran ve büfeler için sızdırmaz iç bariyerli, sıcak patates cips kutusu üretimi. Kaliteli ofset baskı seçenekleriyle Topkapı'dan Giresun'a teslim.",
+      "https://mavibasim.com/sektor/giresun-fast-food-cips-kutusu-baski",
+      {
+        "og:image:alt": "Giresun Fast Food Cips Kutusu Baskı | Logolu Atıştırmalık Ambalajı"
+      }
+    ],
+    "/sektor/giresun-kartvizit-baski": [
+      "Giresun Kartvizit Baskı | Kalın Bristol & Fındık Ambalaj",
+      "Giresun’daki fındık markaları, yerel işletmeler ve esnaflar için çift taraflı mat selefonlu bristol kalın kartvizit baskı. En uygun fiyatlarla kargo imkanı!",
+      "https://mavibasim.com/sektor/giresun-kartvizit-baski",
+      {
+        "og:image:alt": "Giresun Kartvizit Baskı | Kalın Bristol & Fındık Ambalaj"
+      }
+    ],
+    "/sektor/hali-koltuk-yikama-baski": [
+      "Halı ve Koltuk Yıkama Baskı | Broşür, El İlanı ve Magnet Çözümleri",
+      "Halı yıkama, koltuk yıkama ve temizlik firmaları için suya dayanıklı kapı kolu askılı broşürler, magnetler, servis formları ve el ilanları en uygun fiyatlarla.",
+      "https://mavibasim.com/sektor/hali-koltuk-yikama-baski",
+      {
+        "og:image:alt": "Halı ve Koltuk Yıkama Baskı | Broşür, El İlanı ve Magnet Çözümleri"
+      }
+    ],
+    "/sektor/istanbul-brosur-baski": [
+      "İstanbul Broşür Baskı Fiyatları | Topkapı Matbaacılar Sitesi İmalatı",
+      "İstanbul içi aynı gün kuryeyle teslim, 135 gr kuşe katlamalı el ilanları ve dikey broşür baskısı. Zeytinburnu Topkapı aracı dükkansız doğrudan fabrikadan!",
+      "https://mavibasim.com/sektor/istanbul-brosur-baski",
+      {
+        "og:image:alt": "İstanbul Broşür Baskı Fiyatları | Topkapı Matbaacılar Sitesi İmalatı"
+      }
+    ],
+    "/sektor/izmir-brosur-baski": [
+      "İzmir Broşür Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/izmir-brosur-baski",
+      {
+        "og:image:alt": "İzmir Broşür Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/sektor/izmir-etiket-baski": [
+      "İzmir Etiket Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/izmir-etiket-baski",
+      {
+        "og:image:alt": "İzmir Etiket Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/sektor/izmir-kartvizit-baski": [
+      "İzmir Kartvizit Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/izmir-kartvizit-baski",
+      {
+        "og:image:alt": "İzmir Kartvizit Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/sektor/izmir-katalog-baski": [
+      "İzmir Katalog Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/izmir-katalog-baski",
+      {
+        "og:image:alt": "İzmir Katalog Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/sektor/izmir-kutu-baski": [
+      "İzmir Kutu Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/izmir-kutu-baski",
+      {
+        "og:image:alt": "İzmir Kutu Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/sektor/izmir-magnet-baski": [
+      "İzmir Magnet Baskı Fiyatları | İzmir Online Matbaa",
+      "İzmir genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/izmir-magnet-baski",
+      {
+        "og:image:alt": "İzmir Magnet Baskı Fiyatları | İzmir Online Matbaa"
+      }
+    ],
+    "/sektor/kafe-menu-baski": [
+      "Kafe Menü Baskı Fiyatları | Logolu Amerikan Servis ve Masa Kartı",
+      "Kafeler için kalın sıvama kapaklı, metal spiral ciltli, suya dayanıklı yırtılmaz sentetik menü, masa üstü QR kod kartları ve logolu el ilanları. Mavi Basımla!",
+      "https://mavibasim.com/sektor/kafe-menu-baski",
+      {
+        "og:image:alt": "Kafe Menü Baskı Fiyatları | Logolu Amerikan Servis ve Masa Kartı"
+      }
+    ],
+    "/sektor/kartvizit-fiyatlari": [
+      "Kartvizit Baskı Fiyatları | Kabartma Lak, Şeffaf ve Sıvama Kartlar",
+      "Kartvizit fiyatlarını etkileyen kabartma lak, gofre, varak yaldız, 350 gr kuşe vs 700 gr kabartma lüks sıvama farkları. Profesyonel kart rehberi.",
+      "https://mavibasim.com/sektor/kartvizit-fiyatlari",
+      {
+        "og:image:alt": "Kartvizit Baskı Fiyatları | Kabartma Lak, Şeffaf ve Sıvama Kartlar"
+      }
+    ],
+    "/sektor/kayseri-brosur-baski": [
+      "Kayseri Broşür Baskı Fiyatları | Kayseri Online Matbaa",
+      "Kayseri genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/kayseri-brosur-baski",
+      {
+        "og:image:alt": "Kayseri Broşür Baskı Fiyatları | Kayseri Online Matbaa"
+      }
+    ],
+    "/sektor/kayseri-emlakci-afis-baski": [
+      "Kayseri Emlakçı Afiş Baskı | Satılık Kiralık Branda ve Bez Afişler",
+      "Kayseri'deki emlak danışmanları ve emlak ofisleri için dış mekana dayanıklı, delikli kuşgözlü satılık/kiralık branda afiş basımı. Akma ve solma yapmayan dijital baskılar.",
+      "https://mavibasim.com/sektor/kayseri-emlakci-afis-baski",
+      {
+        "og:image:alt": "Kayseri Emlakçı Afiş Baskı | Satılık Kiralık Branda ve Bez Afişler"
+      }
+    ],
+    "/sektor/kayseri-etiket-baski": [
+      "Kayseri Etiket Baskı Fiyatları | Kayseri Online Matbaa",
+      "Kayseri genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/kayseri-etiket-baski",
+      {
+        "og:image:alt": "Kayseri Etiket Baskı Fiyatları | Kayseri Online Matbaa"
+      }
+    ],
+    "/sektor/kayseri-kartvizit-baski": [
+      "Kayseri Kartvizit Baskı Fiyatları | Kayseri Online Matbaa",
+      "Kayseri genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/kayseri-kartvizit-baski",
+      {
+        "og:image:alt": "Kayseri Kartvizit Baskı Fiyatları | Kayseri Online Matbaa"
+      }
+    ],
+    "/sektor/kayseri-katalog-baski": [
+      "Kayseri Katalog Baskı Fiyatları | Kayseri Online Matbaa",
+      "Kayseri genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/kayseri-katalog-baski",
+      {
+        "og:image:alt": "Kayseri Katalog Baskı Fiyatları | Kayseri Online Matbaa"
+      }
+    ],
+    "/sektor/kayseri-kutu-baski": [
+      "Kayseri Kutu Baskı | Sucuk, Pastırma & Mobilya Ambalajı",
+      "Kayseri sucuk-pastırma üreticileri, mantı imalatçıları, mobilya fabrikaları ve e-ticaret markaları için yüksek mukavemetli koku yapmayan karton ambalaj kutuları imalatı.",
+      "https://mavibasim.com/sektor/kayseri-kutu-baski",
+      {
+        "og:image:alt": "Kayseri Kutu Baskı | Sucuk, Pastırma & Mobilya Ambalajı"
+      }
+    ],
+    "/sektor/kayseri-magnet-baski": [
+      "Kayseri Magnet Baskı Fiyatları | Kayseri Online Matbaa",
+      "Kayseri genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/kayseri-magnet-baski",
+      {
+        "og:image:alt": "Kayseri Magnet Baskı Fiyatları | Kayseri Online Matbaa"
+      }
+    ],
+    "/sektor/konya-brosur-baski": [
+      "Konya Broşür Baskı Fiyatları | Konya Online Matbaa",
+      "Konya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/konya-brosur-baski",
+      {
+        "og:image:alt": "Konya Broşür Baskı Fiyatları | Konya Online Matbaa"
+      }
+    ],
+    "/sektor/konya-etiket-baski": [
+      "Konya Etiket Baskı Fiyatları | Konya Online Matbaa",
+      "Konya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/konya-etiket-baski",
+      {
+        "og:image:alt": "Konya Etiket Baskı Fiyatları | Konya Online Matbaa"
+      }
+    ],
+    "/sektor/konya-kartvizit-baski": [
+      "Konya Kartvizit Baskı Fiyatları | Konya Online Matbaa",
+      "Konya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/konya-kartvizit-baski",
+      {
+        "og:image:alt": "Konya Kartvizit Baskı Fiyatları | Konya Online Matbaa"
+      }
+    ],
+    "/sektor/konya-katalog-baski": [
+      "Konya Katalog Baskı | Tarım Makineleri & Sanayi Kataloğu",
+      "Konya'daki tarım makineleri üreticileri, ağır sanayi dükkanları, değirmen sistemleri ve unlu mamul fabrikaları için kaliteli Amerikan ciltli katalog basımı.",
+      "https://mavibasim.com/sektor/konya-katalog-baski",
+      {
+        "og:image:alt": "Konya Katalog Baskı | Tarım Makineleri & Sanayi Kataloğu"
+      }
+    ],
+    "/sektor/konya-kutu-baski": [
+      "Konya Kutu Baskı Fiyatları | Konya Online Matbaa",
+      "Konya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/konya-kutu-baski",
+      {
+        "og:image:alt": "Konya Kutu Baskı Fiyatları | Konya Online Matbaa"
+      }
+    ],
+    "/sektor/konya-magnet-baski": [
+      "Konya Magnet Baskı Fiyatları | Konya Online Matbaa",
+      "Konya genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/konya-magnet-baski",
+      {
+        "og:image:alt": "Konya Magnet Baskı Fiyatları | Konya Online Matbaa"
+      }
+    ],
+    "/sektor/kozmetik-guzellik-merkezi-baski": [
+      "Güzellik Merkezi ve Kozmetik Baskı Çözümleri | Mavi Basım",
+      "Güzellik merkezleri ve kozmetik markaları için parfüm kutusu, sözleşme, onam formu, seans takip formu, randevu kartı, broşür ve etiket baskısı.",
+      "https://mavibasim.com/sektor/kozmetik-guzellik-merkezi-baski",
+      {
+        "og:image:alt": "Güzellik Merkezi ve Kozmetik Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/sektor/kuafor-kartvizit-baski": [
+      "Kuaför Kartvizit Baskı | Berber ve Güzellik Salonu",
+      "Kuaför, berber ve güzellik salonları için 350 gr kuşe kartvizit baskısı. Mat-parlak selefon, çift yön baskı, PDF prova ve Türkiye geneli kargo.",
+      "https://mavibasim.com/sektor/kuafor-kartvizit-baski",
+      {
+        "og:image:alt": "Kuaför Kartvizit Baskı | Berber ve Güzellik Salonu"
+      }
+    ],
+    "/sektor/kutu-ambalaj-baski-cozumleri": [
+      "Kutu ve Ambalaj Baskı Çözümleri | Mavi Basım",
+      "İlaç, parfüm, kozmetik ve gıda ürünleri için baskılı kutu çözümleri. Zurna dürüm, taco, popcorn, cips, baklava ve özel ölçülü ambalaj kutuları.",
+      "https://mavibasim.com/sektor/kutu-ambalaj-baski-cozumleri",
+      {
+        "og:image:alt": "Kutu ve Ambalaj Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/sektor/kutu-baski-fiyatlari": [
+      "Karton Kutu Baskı Fiyatları | Baklava, Pasta ve Ambalaj Kolileri",
+      "Kalkanlı karton kutu fiyatlarında Bristol vs Kromo karton seçimi, asetat pencereli kesim işçilikleri ve kalkanlı gıda koruyucu yağ bariyer laminasyon fiyatları.",
+      "https://mavibasim.com/sektor/kutu-baski-fiyatlari",
+      {
+        "og:image:alt": "Karton Kutu Baskı Fiyatları | Baklava, Pasta ve Ambalaj Kolileri"
+      }
+    ],
+    "/sektor/lokanta-amerikan-servis": [
+      "Lokanta Amerikan Servis Baskı | Kağıt Masa Örtüsü",
+      "Restoran ve lokantalar için tek kullanımlık, gıda onaylı biyolojik boyalı, 80 gr 1. hamur veya şık kraft kağıda logolu amerikan servis basımı. En ucuz fiyatlar.",
+      "https://mavibasim.com/sektor/lokanta-amerikan-servis",
+      {
+        "og:image:alt": "Lokanta Amerikan Servis Baskı | Kağıt Masa Örtüsü"
+      }
+    ],
+    "/sektor/lokanta-amerikan-servis-baski": [
+      "Lokanta Amerikan Servis Baskı Fiyatları | Logolu Kağıt Servis",
+      "Lokanta ve steakhouse masalarına şık 80 gr kraft kağıt ve 1. hamur logolu tek kullanımlık dikey kağıt amerikan servis basımı. Topkapı fabrikasından hızlı kargoyla!",
+      "https://mavibasim.com/sektor/lokanta-amerikan-servis-baski",
+      {
+        "og:image:alt": "Lokanta Amerikan Servis Baskı Fiyatları | Logolu Kağıt Servis"
+      }
+    ],
+    "/sektor/magnet-baski-fiyatlari": [
+      "Buzdolabı Magnet Baskı Fiyatları | 0.40 mm Mıknatıs Levha Baremi",
+      "Magnet fiyatlarında oval kesim, dikey kesim, figürlü kalıp masrafları ve mıknatıs hammadde etkenleri. En ucuz dökülmeyen magnet sipariş kriterleri!",
+      "https://mavibasim.com/sektor/magnet-baski-fiyatlari",
+      {
+        "og:image:alt": "Buzdolabı Magnet Baskı Fiyatları | 0.40 mm Mıknatıs Levha Baremi"
+      }
+    ],
+    "/sektor/malatya-brosur-baski": [
+      "Malatya Broşür Baskı | Kayısı Entegre & Yerel Kafeler",
+      "Malatya'daki kayısı ihracat firmaları, kuruyemiş-fıstık paketleme tesisleri, düğün salonları ve cafeler için 135 gr parlak kuşe broşür ve el ilanı baskısı. En ucuz Topkapı fiyatlarıyla!",
+      "https://mavibasim.com/sektor/malatya-brosur-baski",
+      {
+        "og:image:alt": "Malatya Broşür Baskı | Kayısı Entegre & Yerel Kafeler"
+      }
+    ],
+    "/sektor/mugla-kartvizit-baski": [
+      "Muğla Kartvizit Baskı Fiyatları | Tuale ve Sıvamalı Kalın Kartlar",
+      "Muğla’daki ajans, kuaför ve işletmeler için kabartma laklı, şeffaf veya dokulu tuale fantezi kartvizit imalatı. Topkapı’dan Muğla’ya 1 günde teslim!",
+      "https://mavibasim.com/sektor/mugla-kartvizit-baski",
+      {
+        "og:image:alt": "Muğla Kartvizit Baskı Fiyatları | Tuale ve Sıvamalı Kalın Kartlar"
+      }
+    ],
+    "/sektor/mugla-kutu-baski": [
+      "Muğla Kutu Baskı | Markalı Ambalaj & Hediyelik Sabun-Çam Balı Kutusu",
+      "Muğla'daki e-ticaret markaları, tekstil butikleri, butik sabun ve çam balı atölyeleri için şık pencereli gıda temas onaylı kaliteli karton kutu ve ambalaj imalatı.",
+      "https://mavibasim.com/sektor/mugla-kutu-baski",
+      {
+        "og:image:alt": "Muğla Kutu Baskı | Markalı Ambalaj & Hediyelik Sabun-Çam Balı Kutusu"
+      }
+    ],
+    "/sektor/ordu-findik-firmasi-katalog-baski": [
+      "Ordu Fındık Firması Katalog Baskı | İhracat Kalite Ürün Kataloğu",
+      "Ordu fındık üreticileri, ihracatçıları ve tarım sanayicileri için lüks ciltli, tel dikişli veya iplik dikişli fındık ürün tanıtım kataloğu basımı.",
+      "https://mavibasim.com/sektor/ordu-findik-firmasi-katalog-baski",
+      {
+        "og:image:alt": "Ordu Fındık Firması Katalog Baskı | İhracat Kalite Ürün Kataloğu"
+      }
+    ],
+    "/sektor/ordu-magnet-baski": [
+      "Ordu Magnet Baskı | Fındık Firmaları & Paket Servis",
+      "Ordu’daki fındık paketleme firmaları, yöresel şarküteriler ve hızlı paket servis dükkanları için 0.40 mm güçlü buzdolabı magnet baskısı. En ucuz fiyatlarla kapınızda!",
+      "https://mavibasim.com/sektor/ordu-magnet-baski",
+      {
+        "og:image:alt": "Ordu Magnet Baskı | Fındık Firmaları & Paket Servis"
+      }
+    ],
+    "/sektor/pastane-kutu-baski": [
+      "Pastane Kutu Baskı Fiyatları | Logolu Baklava ve Pasta Kutusu",
+      "Baklava, kurabiye, çikolata ve pasta ambalajları için gıda temas onaylı koku yapmayan pencereli pastane kutu imalatı. Topkapı fabrikasından toptan fiyatlarla!",
+      "https://mavibasim.com/sektor/pastane-kutu-baski",
+      {
+        "og:image:alt": "Pastane Kutu Baskı Fiyatları | Logolu Baklava ve Pasta Kutusu"
+      }
+    ],
+    "/sektor/restaurant-siparis-fisi": [
+      "Restoran Sipariş Fişi Baskı | Otokopili Numaratörlü Fişler",
+      "Restoranlar ve lokantalar için 2 veya 3 nüshalı, numaratörlü, kendinden karbonlu (otokopili) şık porsiyon ve hesap sipariş fişi baskısı. En ucuz fiyatlı imalat.",
+      "https://mavibasim.com/sektor/restaurant-siparis-fisi",
+      {
+        "og:image:alt": "Restoran Sipariş Fişi Baskı | Otokopili Numaratörlü Fişler"
+      }
+    ],
+    "/sektor/restoran-brosur-baski": [
+      "Restoran Broşür Baskı | Paket Servis Menü Broşürü",
+      "Restoran, lokanta ve paket servis işletmeleri için katlamalı broşür baskısı. Güncel kâğıt, ölçü ve katlama seçeneklerini inceleyerek sipariş verin.",
+      "https://mavibasim.com/sektor/restoran-brosur-baski",
+      {
+        "og:image:alt": "Restoran Broşür Baskı | Paket Servis Menü Broşürü"
+      }
+    ],
+    "/sektor/rize-brosur-baski": [
+      "Rize Broşür Baskı | Çay Fabrikaları & Bungalov Otelleri",
+      "Rize'deki çay fabrikaları, rafting kulüpleri, bungalov ve doğa turizmi tesisleri için yüksek kaliteli, neme dayanıklı 135 gr kuşe broşür. Doğrudan Topkapı'dan!",
+      "https://mavibasim.com/sektor/rize-brosur-baski",
+      {
+        "og:image:alt": "Rize Broşür Baskı | Çay Fabrikaları & Bungalov Otelleri"
+      }
+    ],
+    "/sektor/rize-lokanta-amerikan-servis": [
+      "Rize Lokanta Amerikan Servis Baskı | Tek Kullanımlık Kağıt Altlık",
+      "Rize'deki restoran, pide salonu ve oteller için gıda mürekkepli tek kullanımlık Amerikan servis kağıt altlık basımı. Topkapı fabrikasından doğrudan imalat.",
+      "https://mavibasim.com/sektor/rize-lokanta-amerikan-servis",
+      {
+        "og:image:alt": "Rize Lokanta Amerikan Servis Baskı | Tek Kullanımlık Kağıt Altlık"
+      }
+    ],
+    "/sektor/samsun-brosur-baski": [
+      "Samsun Broşür Baskı Fiyatları | Samsun Online Matbaa",
+      "Samsun genelindeki esnaflar, şirketler ve kurumlar için avantajlı Broşür Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/samsun-brosur-baski",
+      {
+        "og:image:alt": "Samsun Broşür Baskı Fiyatları | Samsun Online Matbaa"
+      }
+    ],
+    "/sektor/samsun-etiket-baski": [
+      "Samsun Etiket Baskı Fiyatları | Samsun Online Matbaa",
+      "Samsun genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/samsun-etiket-baski",
+      {
+        "og:image:alt": "Samsun Etiket Baskı Fiyatları | Samsun Online Matbaa"
+      }
+    ],
+    "/sektor/samsun-kartvizit-baski": [
+      "Samsun Kartvizit Baskı | Uygun Fiyatlı Online Matbaa",
+      "Samsun’daki restoranlar, Bafra pidesi salonları, eczaneler ve gayrimenkul ofisleri için kaliteli, ucuz kartvizit baskı. Topkapı fabrikasından doğrudan kapınıza kargo!",
+      "https://mavibasim.com/sektor/samsun-kartvizit-baski",
+      {
+        "og:image:alt": "Samsun Kartvizit Baskı | Uygun Fiyatlı Online Matbaa"
+      }
+    ],
+    "/sektor/samsun-katalog-baski": [
+      "Samsun Katalog Baskı Fiyatları | Samsun Online Matbaa",
+      "Samsun genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/samsun-katalog-baski",
+      {
+        "og:image:alt": "Samsun Katalog Baskı Fiyatları | Samsun Online Matbaa"
+      }
+    ],
+    "/sektor/samsun-kutu-baski": [
+      "Samsun Kutu Baskı Fiyatları | Samsun Online Matbaa",
+      "Samsun genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/samsun-kutu-baski",
+      {
+        "og:image:alt": "Samsun Kutu Baskı Fiyatları | Samsun Online Matbaa"
+      }
+    ],
+    "/sektor/samsun-magnet-baski": [
+      "Samsun Magnet Baskı Fiyatları | Samsun Online Matbaa",
+      "Samsun genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/samsun-magnet-baski",
+      {
+        "og:image:alt": "Samsun Magnet Baskı Fiyatları | Samsun Online Matbaa"
+      }
+    ],
+    "/sektor/samsun-restoran-brosur-baski": [
+      "Samsun Restoran Broşür Baskı | Katlamalı Restoran Sipariş Fişleri",
+      "Samsun'daki lokanta ve restoranlar için yüksek kaliteli katlamalı paket servis broşürleri ve menü basımı. 135 gr parlak kuşe kağıda tam ofset baskı.",
+      "https://mavibasim.com/sektor/samsun-restoran-brosur-baski",
+      {
+        "og:image:alt": "Samsun Restoran Broşür Baskı | Katlamalı Restoran Sipariş Fişleri"
+      }
+    ],
+    "/sektor/sektor/donerci-magnet-baski": [
+      "Dönerci Magnet Baskı Fiyatları | Figürlü Özel Kesim Buzdolabı Magneti",
+      "Kebapçı ve dönerciler için en ucuz oval, özel kesimli dönerci buzdolabı magnetleri. 0.40 mm yüksek çekim gücü ve lüks parlak selefon kaplamasıyla doğrudan imalattan!",
+      "https://mavibasim.com/sektor/sektor/donerci-magnet-baski",
+      {}
+    ],
+    "/sektor/sektor/e-ticaret-perakende-baski": [
+      "E-Ticaret ve Perakende Baskı Çözümleri | Mavi Basım",
+      "E-ticaret ve perakende markaları için ürün kutusu, karton çanta, teşekkür kartı, ambalaj kâğıdı, Amerikan servis, barkod ve koli etiketi baskısı.",
+      "https://mavibasim.com/sektor/sektor/e-ticaret-perakende-baski",
+      {
+        "og:image:alt": "E-Ticaret ve Perakende Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/sektor/sektor/eczane-el-ilani-baski": [
+      "Eczane ve Sağlık Bilgilendirme İlanı Baskısı | Medikal El İlanları",
+      "Eczaneler, klinikler ve sağlık kuruluşları için nöbetçi eczane duyuruları, hasta bilgilendirme broşürleri ve medikal tanıtım el ilanları.",
+      "https://mavibasim.com/sektor/sektor/eczane-el-ilani-baski",
+      {
+        "og:image:alt": "Eczane ve Sağlık Bilgilendirme İlanı Baskısı | Medikal El İlanları"
+      }
+    ],
+    "/sektor/sektor/egitim-kurumlari-baski": [
+      "Eğitim Kurumları Baskı Çözümleri | Mavi Basım",
+      "Eğitim kurumları için deneme sınavı kitapçığı, soru kitapçığı, fasikül, yaprak test, kayıt formu, broşür, katalog, dosya ve eğitim seti baskısı.",
+      "https://mavibasim.com/sektor/sektor/egitim-kurumlari-baski",
+      {
+        "og:image:alt": "Eğitim Kurumları Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/sektor/sektor/emlakci-kartvizit-baski": [
+      "Emlakçı Kartvizit Baskı Fiyatları | Cam Filmi ve Branda Afişleri",
+      "Gayrimenkul danışmanları için lüks kabartma laklı kalın kartvizitler, kiralık/satılık emlak dış mekan yırtılmaz branda afiş dökümleri. Topkapı imalatından!",
+      "https://mavibasim.com/sektor/sektor/emlakci-kartvizit-baski",
+      {
+        "og:image:alt": "Emlakçı Kartvizit Baskı Fiyatları | Cam Filmi ve Branda Afişleri"
+      }
+    ],
+    "/sektor/sektor/fast-food-cips-kutusu-baski": [
+      "Fast Food Cips Kutusu Modelleri | Logolu Patates ve Atıştırmalık Ambalajı",
+      "Restoranlar, büfeler ve fast food zincirleri için koku yapmayan, yağı sızdırmayan kilitli tabanlı logolu karton patates cips kutuları imalatı. Toptan fiyatlar!",
+      "https://mavibasim.com/sektor/sektor/fast-food-cips-kutusu-baski",
+      {
+        "og:image:alt": "Fast Food Cips Kutusu Modelleri | Logolu Patates ve Atıştırmalık Ambalajı"
+      }
+    ],
+    "/sektor/sektor/kafe-menu-baski": [
+      "Kafe Menü Baskı Fiyatları | Logolu Amerikan Servis ve Masa Kartı",
+      "Kafeler için kalın sıvama kapaklı, metal spiral ciltli, suya dayanıklı yırtılmaz sentetik menü, masa üstü QR kod kartları ve logolu el ilanları. Mavi Basımla!",
+      "https://mavibasim.com/sektor/sektor/kafe-menu-baski",
+      {
+        "og:image:alt": "Kafe Menü Baskı Fiyatları | Logolu Amerikan Servis ve Masa Kartı"
+      }
+    ],
+    "/sektor/sektor/kozmetik-guzellik-merkezi-baski": [
+      "Güzellik Merkezi ve Kozmetik Baskı Çözümleri | Mavi Basım",
+      "Güzellik merkezleri ve kozmetik markaları için parfüm kutusu, sözleşme, onam formu, seans takip formu, randevu kartı, broşür ve etiket baskısı.",
+      "https://mavibasim.com/sektor/sektor/kozmetik-guzellik-merkezi-baski",
+      {
+        "og:image:alt": "Güzellik Merkezi ve Kozmetik Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/sektor/sektor/kuafor-kartvizit-baski": [
+      "Kuaför Kartvizit Baskı | Berber ve Güzellik Salonu",
+      "Kuaför, berber ve güzellik salonları için 350 gr kuşe kartvizit baskısı. Mat-parlak selefon, çift yön baskı, PDF prova ve Türkiye geneli kargo.",
+      "https://mavibasim.com/sektor/sektor/kuafor-kartvizit-baski",
+      {
+        "og:image:alt": "Kuaför Kartvizit Baskı | Berber ve Güzellik Salonu"
+      }
+    ],
+    "/sektor/sektor/kutu-ambalaj-baski-cozumleri": [
+      "Kutu ve Ambalaj Baskı Çözümleri | Mavi Basım",
+      "İlaç, parfüm, kozmetik ve gıda ürünleri için baskılı kutu çözümleri. Zurna dürüm, taco, popcorn, cips, baklava ve özel ölçülü ambalaj kutuları.",
+      "https://mavibasim.com/sektor/sektor/kutu-ambalaj-baski-cozumleri",
+      {
+        "og:image:alt": "Kutu ve Ambalaj Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/sektor/sektor/lokanta-amerikan-servis-baski": [
+      "Lokanta Amerikan Servis Baskı Fiyatları | Logolu Kağıt Servis",
+      "Lokanta ve steakhouse masalarına şık 80 gr kraft kağıt ve 1. hamur logolu tek kullanımlık dikey kağıt amerikan servis basımı. Topkapı fabrikasından hızlı kargoyla!",
+      "https://mavibasim.com/sektor/sektor/lokanta-amerikan-servis-baski",
+      {
+        "og:image:alt": "Lokanta Amerikan Servis Baskı Fiyatları | Logolu Kağıt Servis"
+      }
+    ],
+    "/sektor/sektor/pastane-kutu-baski": [
+      "Pastane Kutu Baskı Fiyatları | Logolu Baklava ve Pasta Kutusu",
+      "Baklava, kurabiye, çikolata ve pasta ambalajları için gıda temas onaylı koku yapmayan pencereli pastane kutu imalatı. Topkapı fabrikasından toptan fiyatlarla!",
+      "https://mavibasim.com/sektor/sektor/pastane-kutu-baski",
+      {
+        "og:image:alt": "Pastane Kutu Baskı Fiyatları | Logolu Baklava ve Pasta Kutusu"
+      }
+    ],
+    "/sektor/sektor/restoran-brosur-baski": [
+      "Restoran Broşür Baskı | Paket Servis Menü Broşürü",
+      "Restoran, lokanta ve paket servis işletmeleri için katlamalı broşür baskısı. Güncel kâğıt, ölçü ve katlama seçeneklerini inceleyerek sipariş verin.",
+      "https://mavibasim.com/sektor/sektor/restoran-brosur-baski",
+      {
+        "og:image:alt": "Restoran Broşür Baskı | Paket Servis Menü Broşürü"
+      }
+    ],
+    "/sektor/sinop-magnet-baski": [
+      "Sinop Magnet Baskı | Turizm ve Yerel Lezzetler",
+      "Sinop’taki butik pansiyonlar, restoran, kafe ve müze dükkanları için 0.40 mm güçlü buzdolabı magnet baskısı. En ucuz fiyatlarla Sinop'ta!",
+      "https://mavibasim.com/sektor/sinop-magnet-baski",
+      {
+        "og:image:alt": "Sinop Magnet Baskı | Turizm ve Yerel Lezzetler"
+      }
+    ],
+    "/sektor/trabzon-brosur-baski": [
+      "Trabzon Broşür Baskı | Katlamalı Kafe ve Otel Menüleri",
+      "Trabzon’daki turizm acenteleri, çay işletmeleri, oteller ve rent a car firmaları için yüksek kaliteli 135 gr kuşe broşür baskısı. Uygun fiyatlarla kapınızda!",
+      "https://mavibasim.com/sektor/trabzon-brosur-baski",
+      {
+        "og:image:alt": "Trabzon Broşür Baskı | Katlamalı Kafe ve Otel Menüleri"
+      }
+    ],
+    "/sektor/trabzon-etiket-baski": [
+      "Trabzon Etiket Baskı Fiyatları | Trabzon Online Matbaa",
+      "Trabzon genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/trabzon-etiket-baski",
+      {
+        "og:image:alt": "Trabzon Etiket Baskı Fiyatları | Trabzon Online Matbaa"
+      }
+    ],
+    "/sektor/trabzon-kafe-menu-baski": [
+      "Trabzon Kafe Menü Baskı | Kraft Kalın Menü ve Amerikan Servis",
+      "Trabzon'daki kafe ve pastaneler için kalın lüks kağıtlara laklı ve özel kesim masa üstü menü basımı. Hızlı kargo, doğrudan matbaadan uygun fiyatlar.",
+      "https://mavibasim.com/sektor/trabzon-kafe-menu-baski",
+      {
+        "og:image:alt": "Trabzon Kafe Menü Baskı | Kraft Kalın Menü ve Amerikan Servis"
+      }
+    ],
+    "/sektor/trabzon-kartvizit-baski": [
+      "Trabzon Kartvizit Baskı Fiyatları | Trabzon Online Matbaa",
+      "Trabzon genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/trabzon-kartvizit-baski",
+      {
+        "og:image:alt": "Trabzon Kartvizit Baskı Fiyatları | Trabzon Online Matbaa"
+      }
+    ],
+    "/sektor/trabzon-katalog-baski": [
+      "Trabzon Katalog Baskı Fiyatları | Trabzon Online Matbaa",
+      "Trabzon genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/trabzon-katalog-baski",
+      {
+        "og:image:alt": "Trabzon Katalog Baskı Fiyatları | Trabzon Online Matbaa"
+      }
+    ],
+    "/sektor/trabzon-kutu-baski": [
+      "Trabzon Kutu Baskı Fiyatları | Trabzon Online Matbaa",
+      "Trabzon genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/trabzon-kutu-baski",
+      {
+        "og:image:alt": "Trabzon Kutu Baskı Fiyatları | Trabzon Online Matbaa"
+      }
+    ],
+    "/sektor/trabzon-magnet-baski": [
+      "Trabzon Magnet Baskı Fiyatları | Trabzon Online Matbaa",
+      "Trabzon genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/sektor/trabzon-magnet-baski",
+      {
+        "og:image:alt": "Trabzon Magnet Baskı Fiyatları | Trabzon Online Matbaa"
+      }
+    ],
+    "/sektor/van-kutu-baski": [
+      "Van Kutu Baskı | Şık Otlu Peynir & Yöresel Ürün Kutusu",
+      "Van otlu peynir imalatçıları, bal üreticileri, kuruyemiş ve pastane dükkanları için gıda temas onaylı koku yapmayan şık karton kutu üretimi.",
+      "https://mavibasim.com/sektor/van-kutu-baski",
+      {
+        "og:image:alt": "Van Kutu Baskı | Şık Otlu Peynir & Yöresel Ürün Kutusu"
+      }
+    ],
+    "/sigorta-policeleri": [
+      "Sigorta Poliçesi ve Teklif Formu Baskısı | Mavi Basım",
+      "Anlaşmalı indirimli kargo imkanıyla, sigorta acentelerine özel otokopili ve numaratörlü sigorta poliçe teklif formu koçanı baskısı. Hızlı teslimat.",
+      "https://mavibasim.com/sigorta-policeleri",
+      {
+        "og:image:alt": "Sigorta Poliçesi ve Teklif Formu Baskısı | Mavi Basım"
+      }
+    ],
+    "/siirt-matbaa": [
+      "Siirt Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Siirt ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Siirt adresinize hızlı teslimat.",
+      "https://mavibasim.com/siirt-matbaa",
+      {
+        "og:image:alt": "Siirt Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/sikca-sorulan": [
+      "Sıkça Sorulan Sorular | Mavi Basım Matbaa & Reklam",
+      "Sipariş süreçleri, tasarım onay aşaması, minimum üretim adetleri, yangın ve kayıp toleransı, kargo teslimatı ve ödeme yöntemleri hakkında tüm detaylar.",
+      "https://mavibasim.com/sikca-sorulan",
+      {
+        "og:image:alt": "Sıkça Sorulan Sorular | Mavi Basım Matbaa & Reklam"
+      }
+    ],
+    "/sinop-magnet-baski": [
+      "Sinop Magnet Baskı | Turizm ve Yerel Lezzetler",
+      "Sinop’taki butik pansiyonlar, restoran, kafe ve müze dükkanları için 0.40 mm güçlü buzdolabı magnet baskısı. En ucuz fiyatlarla Sinop'ta!",
+      "https://mavibasim.com/sinop-magnet-baski",
+      {
+        "og:image:alt": "Sinop Magnet Baskı | Turizm ve Yerel Lezzetler"
+      }
+    ],
+    "/sinop-matbaa": [
+      "Sinop Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Sinop ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Sinop adresinize hızlı teslimat.",
+      "https://mavibasim.com/sinop-matbaa",
+      {
+        "og:image:alt": "Sinop Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/siparis-fisi": [
+      "Sipariş Fişi Baskı Fiyatları 2026 | Otokopili ve Numaratörlü",
+      "Firmaya özel logolu, otokopili ve numaratörlü sipariş fişi baskısı. 5 ciltten başlayan güncel fiyatları inceleyin, ücretsiz tasarım ve PDF prova ile sipariş verin.",
+      "https://mavibasim.com/siparis-fisi",
+      {
+        "og:image:alt": "Sipariş Fişi Baskı Fiyatları 2026 | Otokopili ve Numaratörlü"
+      }
+    ],
+    "/siparis-fisi-baski-fiyatlari": [
+      "Sipariş Fişi Baskı Fiyatları 2026 | Otokopili Sipariş Fişi - Mavi Basım",
+      "Firmalara özel otokopili kendinden karbonlu koçanlı sipariş fişi baskı fiyatları. Numaratörlü ve perforeli sipariş koçanları Topkapı hizmet noktamızdan.",
+      "https://mavibasim.com/siparis-fisi-baski-fiyatlari",
+      {
+        "og:image:alt": "Sipariş Fişi Baskı Fiyatları 2026 | Otokopili Sipariş Fişi - Mavi Basım"
+      }
+    ],
+    "/sirnak-matbaa": [
+      "Şırnak Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Şırnak ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Şırnak adresinize hızlı teslimat.",
+      "https://mavibasim.com/sirnak-matbaa",
+      {
+        "og:image:alt": "Şırnak Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/sivas-matbaa": [
+      "Sivas Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Sivas ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Sivas adresinize hızlı teslimat.",
+      "https://mavibasim.com/sivas-matbaa",
+      {
+        "og:image:alt": "Sivas Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/sozlesme-baski": [
+      "Matbaa ve Baskı Çözümleri | Mavi Basım",
+      "Kartvizit, broşür, kutu, etiket, makbuz, ambalaj ve kurumsal baskı ürünleri için Mavi Basım'dan baskı çözümleri ve teklif alın.",
+      "https://mavibasim.com/sozlesme-baski",
+      {
+        "og:image:alt": "Matbaa ve Baskı Çözümleri | Mavi Basım"
+      }
+    ],
+    "/tahsilat-makbuzu": [
+      "Tahsilat Makbuzu Baskı Fiyatları | Otokopili ve Numaratörlü",
+      "Logolu, otokopili ve numaratörlü tahsilat makbuzu baskı seçeneklerini ve mevcut fiyat tablosunu inceleyin. İstanbul Topkapı'dan Türkiye geneline gönderim.",
+      "https://mavibasim.com/tahsilat-makbuzu",
+      {
+        "og:image": "https://mavibasim.com/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp",
+        "og:image:alt": "Tahsilat Makbuzu Baskı Fiyatları | Otokopili ve Numaratörlü",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1536",
+        "twitter:image": "https://mavibasim.com/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp"
+      }
+    ],
+    "/tediye-makbuzu": [
+      "Tediye Makbuzu Baskı Fiyatları 2026 | Numaratörlü ve Otokopili",
+      "Numaratörlü ve otokopili tediye makbuzu baskı fiyatları. 14x20 cm A5 ölçü, ücretsiz tasarım, PDF prova ve Türkiye geneli hızlı teslimat.",
+      "https://mavibasim.com/tediye-makbuzu",
+      {
+        "og:image": "https://mavibasim.com/images/tediye-makbuzu/tediye-baski.webp",
+        "og:image:alt": "Tediye Makbuzu Baskı Fiyatları 2026 | Numaratörlü ve Otokopili",
+        "og:image:height": "533",
+        "og:image:secure_url": "https://mavibasim.com/images/tediye-makbuzu/tediye-baski.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "800",
+        "twitter:image": "https://mavibasim.com/images/tediye-makbuzu/tediye-baski.webp"
+      }
+    ],
+    "/tekirdag-matbaa": [
+      "Tekirdağ Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Tekirdağ ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Tekirdağ adresinize hızlı teslimat.",
+      "https://mavibasim.com/tekirdag-matbaa",
+      {
+        "og:image:alt": "Tekirdağ Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/teslimat-sartlari": [
+      "Teslimat Şartları ve Kargo Gönderim Rehberi | Mavi Basım Matbaa",
+      "Mavi Basım Matbaa & Reklam Türkiye geneli 81 il kargo teslimat şartları, matbaa ürün paketleme standartları, kargo süreleri ve hasarlı kargo süreçleri rehberi.",
+      "https://mavibasim.com/teslimat-sartlari",
+      {
+        "og:image:alt": "Teslimat Şartları ve Kargo Gönderim Rehberi | Mavi Basım Matbaa"
+      }
+    ],
+    "/tokat-matbaa": [
+      "Tokat Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Tokat ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Tokat adresinize hızlı teslimat.",
+      "https://mavibasim.com/tokat-matbaa",
+      {
+        "og:image:alt": "Tokat Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/trabzon-brosur-baski": [
+      "Trabzon Broşür Baskı | Katlamalı Kafe ve Otel Menüleri",
+      "Trabzon’daki turizm acenteleri, çay işletmeleri, oteller ve rent a car firmaları için yüksek kaliteli 135 gr kuşe broşür baskısı. Uygun fiyatlarla kapınızda!",
+      "https://mavibasim.com/trabzon-brosur-baski",
+      {
+        "og:image:alt": "Trabzon Broşür Baskı | Katlamalı Kafe ve Otel Menüleri"
+      }
+    ],
+    "/trabzon-etiket-baski": [
+      "Trabzon Etiket Baskı Fiyatları | Trabzon Online Matbaa",
+      "Trabzon genelindeki esnaflar, şirketler ve kurumlar için avantajlı Etiket Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/trabzon-etiket-baski",
+      {
+        "og:image:alt": "Trabzon Etiket Baskı Fiyatları | Trabzon Online Matbaa"
+      }
+    ],
+    "/trabzon-kafe-menu-baski": [
+      "Trabzon Kafe Menü Baskı | Kraft Kalın Menü ve Amerikan Servis",
+      "Trabzon'daki kafe ve pastaneler için kalın lüks kağıtlara laklı ve özel kesim masa üstü menü basımı. Hızlı kargo, doğrudan matbaadan uygun fiyatlar.",
+      "https://mavibasim.com/trabzon-kafe-menu-baski",
+      {
+        "og:image:alt": "Trabzon Kafe Menü Baskı | Kraft Kalın Menü ve Amerikan Servis"
+      }
+    ],
+    "/trabzon-kartvizit-baski": [
+      "Trabzon Kartvizit Baskı Fiyatları | Trabzon Online Matbaa",
+      "Trabzon genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kartvizit Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/trabzon-kartvizit-baski",
+      {
+        "og:image:alt": "Trabzon Kartvizit Baskı Fiyatları | Trabzon Online Matbaa"
+      }
+    ],
+    "/trabzon-katalog-baski": [
+      "Trabzon Katalog Baskı Fiyatları | Trabzon Online Matbaa",
+      "Trabzon genelindeki esnaflar, şirketler ve kurumlar için avantajlı Katalog Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/trabzon-katalog-baski",
+      {
+        "og:image:alt": "Trabzon Katalog Baskı Fiyatları | Trabzon Online Matbaa"
+      }
+    ],
+    "/trabzon-kutu-baski": [
+      "Trabzon Kutu Baskı Fiyatları | Trabzon Online Matbaa",
+      "Trabzon genelindeki esnaflar, şirketler ve kurumlar için avantajlı Kutu Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/trabzon-kutu-baski",
+      {
+        "og:image:alt": "Trabzon Kutu Baskı Fiyatları | Trabzon Online Matbaa"
+      }
+    ],
+    "/trabzon-magnet-baski": [
+      "Trabzon Magnet Baskı Fiyatları | Trabzon Online Matbaa",
+      "Trabzon genelindeki esnaflar, şirketler ve kurumlar için avantajlı Magnet Baskı baskı fiyatları. 1. Sınıf malzeme ve kaliteli ofset basımıyla kapınıza hızlı teslim!",
+      "https://mavibasim.com/trabzon-magnet-baski",
+      {
+        "og:image:alt": "Trabzon Magnet Baskı Fiyatları | Trabzon Online Matbaa"
+      }
+    ],
+    "/trabzon-matbaa": [
+      "Trabzon Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Trabzon ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Trabzon adresinize hızlı teslimat.",
+      "https://mavibasim.com/trabzon-matbaa",
+      {
+        "og:image:alt": "Trabzon Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/tunceli-matbaa": [
+      "Tunceli Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Tunceli ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Tunceli adresinize hızlı teslimat.",
+      "https://mavibasim.com/tunceli-matbaa",
+      {
+        "og:image:alt": "Tunceli Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/usak-matbaa": [
+      "Uşak Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Uşak ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Uşak adresinize hızlı teslimat.",
+      "https://mavibasim.com/usak-matbaa",
+      {
+        "og:image:alt": "Uşak Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/van-kutu-baski": [
+      "Van Kutu Baskı | Şık Otlu Peynir & Yöresel Ürün Kutusu",
+      "Van otlu peynir imalatçıları, bal üreticileri, kuruyemiş ve pastane dükkanları için gıda temas onaylı koku yapmayan şık karton kutu üretimi.",
+      "https://mavibasim.com/van-kutu-baski",
+      {
+        "og:image:alt": "Van Kutu Baskı | Şık Otlu Peynir & Yöresel Ürün Kutusu"
+      }
+    ],
+    "/van-matbaa": [
+      "Van Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Van ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Van adresinize hızlı teslimat.",
+      "https://mavibasim.com/van-matbaa",
+      {
+        "og:image:alt": "Van Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/yag-karti": [
+      "Yağ Değişim Kartı Baskı Fiyatları | 350 gr Kuşe - Mavi Basım",
+      "Oto servisler için 350 gr kuşe veya 700 gr sıvama yağ kartı baskısı. Üretim ve kargo planı teklif veya sipariş aşamasında netleştirilir.",
+      "https://mavibasim.com/yag-karti",
+      {
+        "og:image": "https://mavibasim.com/images/yag-karti/yag-karti-baski.webp",
+        "og:image:alt": "Mavi Basım oto servis bakım ve yağ değişim takip kartı baskı fiyatları",
+        "og:image:height": "1024",
+        "og:image:secure_url": "https://mavibasim.com/images/yag-karti/yag-karti-baski.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "1536",
+        "twitter:image": "https://mavibasim.com/images/yag-karti/yag-karti-baski.webp"
+      }
+    ],
+    "/yalova-matbaa": [
+      "Yalova Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Yalova ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Yalova adresinize hızlı teslimat.",
+      "https://mavibasim.com/yalova-matbaa",
+      {
+        "og:image:alt": "Yalova Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/yozgat-matbaa": [
+      "Yozgat Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Yozgat ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Yozgat adresinize hızlı teslimat.",
+      "https://mavibasim.com/yozgat-matbaa",
+      {
+        "og:image:alt": "Yozgat Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ],
+    "/zarf": [
+      "Zarf Baskı Fiyatları | Diplomat ve Torba Zarf - Mavi Basım",
+      "Diplomat ve torba zarf baskı fiyatlarını inceleyin. Pencereli, penceresiz ve logolu zarf seçenekleri için ölçü, adet ve baskı bilgilerinize göre teklif alın.",
+      "https://mavibasim.com/zarf",
+      {
+        "og:image": "https://mavibasim.com/images/zarf/kurumsal-zarf-baski.webp",
+        "og:image:alt": "Mavi Basım pencereli ve penceresiz diplomat zarf ile torba zarf baskı modelleri",
+        "og:image:height": "533",
+        "og:image:secure_url": "https://mavibasim.com/images/zarf/kurumsal-zarf-baski.webp",
+        "og:image:type": "image/webp",
+        "og:image:width": "800",
+        "twitter:image": "https://mavibasim.com/images/zarf/kurumsal-zarf-baski.webp"
+      }
+    ],
+    "/zonguldak-matbaa": [
+      "Zonguldak Matbaa & Baskı Hizmetleri | Mavi Basım",
+      "Zonguldak ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan Zonguldak adresinize hızlı teslimat.",
+      "https://mavibasim.com/zonguldak-matbaa",
+      {
+        "og:image:alt": "Zonguldak Matbaa & Baskı Hizmetleri | Mavi Basım"
+      }
+    ]
+  }
+}

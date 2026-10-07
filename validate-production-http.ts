@@ -17,7 +17,14 @@ interface RouteTestConfig {
 }
 
 const ROUTES_TO_TEST: RouteTestConfig[] = [
-  { path: '/', expectedStatus: 200, expectedTitleSubstring: 'Matbaa ve Baskı Çözümleri | Mavi Basım' },
+  { path: '/', expectedStatus: 200, expectedTitleSubstring: 'Mavi Basım Matbaa & Reklam | İstanbul Online Matbaa' },
+  { path: '/bloknot', expectedStatus: 301, expectedLocation: '/bloknotlar' },
+  { path: '/teslimat-ve-iade', expectedStatus: 301, expectedLocation: '/teslimat-sartlari' },
+  { path: '/kullanim-sartlari', expectedStatus: 200 },
+  { path: '/gizlilik-politikasi', expectedStatus: 200 },
+  { path: '/cerez-politikasi', expectedStatus: 200 },
+  { path: '/mesafeli-satis-sozlesmesi', expectedStatus: 200 },
+  { path: '/iptal-ve-iade-sartlari', expectedStatus: 200 },
   { path: '/kartvizit', expectedStatus: 200, expectedTitleSubstring: 'Kartvizit Baskı Fiyatları' },
   { path: '/el-ilani', expectedStatus: 200, expectedTitleSubstring: 'El İlanı Baskı Fiyatları' },
   { path: '/brosur', expectedStatus: 200, expectedTitleSubstring: 'Broşür Baskı Fiyatları' },
@@ -26,11 +33,11 @@ const ROUTES_TO_TEST: RouteTestConfig[] = [
   { path: '/magnet', expectedStatus: 200, expectedTitleSubstring: 'Magnet Baskı Fiyatları' },
   { path: '/recete', expectedStatus: 200, expectedTitleSubstring: 'Reçete Baskı Fiyatları' },
   { path: '/tediye-makbuzu', expectedStatus: 200, expectedTitleSubstring: 'Tediye Makbuzu Baskı Fiyatları' },
-  { path: '/matbaa', expectedStatus: 200, expectedTitleSubstring: 'Biz Kimiz?' },
+  { path: '/matbaa', expectedStatus: 200, expectedTitleSubstring: 'Matbaa Hizmetleri ve Üretim Tesisimiz' },
   { path: '/istanbul-matbaa', expectedStatus: 200, expectedTitleSubstring: 'İstanbul Matbaa' },
-  { path: '/ankara-matbaa', expectedStatus: 200, expectedTitleSubstring: 'Ankara Matbaa' },
-  { path: '/sinop-matbaa', expectedStatus: 200, expectedTitleSubstring: 'Sinop Matbaa' },
-  { path: '/izmir-matbaa', expectedStatus: 200, expectedTitleSubstring: 'İzmir Matbaa' },
+  { path: '/ankara-matbaa', expectedStatus: 200, expectedTitleSubstring: 'Ankara’ya Kargo ile Kurumsal Matbaa Baskı' },
+  { path: '/sinop-matbaa', expectedStatus: 200, expectedTitleSubstring: 'Sinop’a Kargo ile Matbaa, Turizm ve Gıda Ambalaj Baskı' },
+  { path: '/izmir-matbaa', expectedStatus: 200, expectedTitleSubstring: 'İzmir’e Kargo ile Matbaa, Etiket ve Ambalaj Baskı' },
   { path: '/sektor/restoran-brosur-baski', expectedStatus: 200, expectedTitleSubstring: 'Restoran Broşür Baskı' },
   { path: '/sektor/kuafor-kartvizit-baski', expectedStatus: 200, expectedTitleSubstring: 'Kuaför Kartvizit Baskı' },
   { path: '/sektor/kozmetik-guzellik-saglik-baski', expectedStatus: 301, expectedLocation: '/sektor/kozmetik-guzellik-merkezi-baski' },
@@ -117,12 +124,12 @@ async function validateProductionHTTP() {
         cleanPath = cleanPath.substring(0, cleanPath.length - 1);
       }
       const cleanSlug = cleanPath.replace(/^\//, '');
-      const prerenderedPath = cleanSlug ? path.join(distPath, cleanSlug, 'index.html') : null;
+      const prerenderedPath = path.join(distPath, cleanSlug, 'index.html');
       if (prerenderedPath && fs.existsSync(prerenderedPath)) {
         return res.status(200).set({ 'Content-Type': 'text/html' }).sendFile(prerenderedPath);
       }
 
-      const template = fs.readFileSync(indexPath, 'utf-8');
+      const template = fs.readFileSync(path.join(distPath, '.seo-template.html'), 'utf-8');
       const known = isKnownRoute(req.path);
       const statusCode = known ? 200 : 404;
 

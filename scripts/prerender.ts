@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
-import { getRouteSEO, injectSEOMetadata, URL_REDIRECTS } from "../src/utils/seoGenerator";
+import { getRouteSEO, injectSEOMetadata, URL_REDIRECTS, knownStaticRoutes } from "../src/utils/seoGenerator";
+import { createRouteRenderer } from './render-route';
 
 async function prerender() {
   console.log("--- Starting Static HTML Metadata Prerendering ---");
@@ -9,8 +10,7 @@ async function prerender() {
   const sitemapPath = path.join(process.cwd(), "public", "sitemap.xml");
 
   if (!fs.existsSync(templatePath)) {
-    console.error("CRITICAL ERROR: dist/index.html not found! Run vite build before prerender.");
-    process.exit(1);
+    throw new Error("dist/index.html not found! Run vite build before prerender.");
   }
 
   if (!fs.existsSync(sitemapPath)) {
@@ -24,8 +24,7 @@ async function prerender() {
   }
 
   if (!fs.existsSync(sitemapPath)) {
-    console.error("CRITICAL ERROR: public/sitemap.xml not found!");
-    process.exit(1);
+    throw new Error("public/sitemap.xml not found!");
   }
 
   const rawTemplate = fs.readFileSync(templatePath, "utf-8");
@@ -33,13 +32,14 @@ async function prerender() {
     .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/gi, "")
     .replace(/<div id="root">[\s\S]*?<\/div>/i, '<div id="root"></div>');
   const sitemapXml = fs.readFileSync(sitemapPath, "utf-8");
+  // Fallback responses must use the empty template, not the rendered homepage.
+  fs.writeFileSync(path.join(distDir, '.seo-template.html'), template, 'utf-8');
 
   // Extract all <loc> URLs from sitemap.xml
   const locMatches = [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim());
 
   if (locMatches.length === 0) {
-    console.error("CRITICAL ERROR: No URLs found in sitemap.xml!");
-    process.exit(1);
+    throw new Error("No URLs found in sitemap.xml!");
   }
 
   console.log(`Found ${locMatches.length} URLs in public/sitemap.xml`);
@@ -47,9 +47,11 @@ async function prerender() {
   let generatedCount = 0;
   const redirectKeys = new Set(Object.keys(URL_REDIRECTS).map(k => k.toLowerCase()));
 
-  const additionalUrls = ["https://mavibasim.com/teslimat-sartlari"];
+  const additionalUrls = [...knownStaticRoutes].map(route => `https://mavibasim.com${route}`);
   const targetUrls = Array.from(new Set([...locMatches, ...additionalUrls]));
+  const renderer = await createRouteRenderer(distDir);
 
+  try {
   for (const fullUrl of targetUrls) {
     let pathname = fullUrl.replace(/^https?:\/\/[^/]+/i, "");
     if (!pathname) pathname = "/";
@@ -65,7 +67,7 @@ async function prerender() {
 
     try {
       const seo = getRouteSEO(pathname);
-      const html = injectSEOMetadata(
+      const metadataHTML = injectSEOMetadata(
         template,
         seo.title,
         seo.desc,
@@ -76,6 +78,7 @@ async function prerender() {
         seo.bodyContent,
         seo.ogImage
       );
+      const html = await renderer.render(pathname, metadataHTML);
 
       let targetPath: string;
       if (pathname === "/" || pathname === "") {
@@ -92,8 +95,11 @@ async function prerender() {
       generatedCount++;
     } catch (err) {
       console.error(`FAILED to prerender route: ${pathname}`, err);
-      process.exit(1);
+      throw err;
     }
+  }
+  } finally {
+    renderer.dispose();
   }
 
   console.log(`Prerender completed successfully: ${generatedCount} static HTML files generated.`);
@@ -101,5 +107,5 @@ async function prerender() {
 
 prerender().catch((err) => {
   console.error("Fatal prerender execution error:", err);
-  process.exit(1);
+  process.exitCode = 1;
 });

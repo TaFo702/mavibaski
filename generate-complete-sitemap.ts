@@ -29,7 +29,6 @@ const staticRoutes = [
   '/makbuz-ve-formlar',
   '/adisyon',
   '/siparis-fisi',
-  '/siparis-fisi-baski-fiyatlari',
   '/perakende-satis-fisi',
   '/para-makbuzu',
   '/sozlesme-baski',

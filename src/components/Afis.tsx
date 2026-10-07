@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { Link } from 'react-router-dom';
 import { 
   Printer, 

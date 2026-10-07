@@ -3,6 +3,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/bloknot",
+      "destination": "/bloknotlar",
+      "permanent": true
+    },
+    {
+      "source": "/teslimat-ve-iade",
+      "destination": "/teslimat-sartlari",
+      "permanent": true
+    },
+    {
       "source": "/makbuz",
       "destination": "/makbuz-ve-formlar",
       "permanent": true

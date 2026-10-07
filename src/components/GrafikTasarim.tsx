@@ -23,7 +23,7 @@ import {
   RefreshCw,
   Star
 } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { Link } from 'react-router-dom';
 import { ProductSEOSection, FireWarning } from '../App';
 import { WhatsAppIcon } from './WhatsAppIcon';

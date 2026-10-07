@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { Clock, User, ArrowLeft, ChevronRight, ArrowRight, ShieldCheck, Truck, FileText, FileSpreadsheet, Download, ExternalLink } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants/contact';
 import { BLOG_POSTS, BlogPost } from '../data/blogData';
@@ -882,7 +882,12 @@ export const BlogPage = () => {
             )}
 
             <div className="prose prose-lg max-w-none text-neutral-800 space-y-6">
-              {activePost.content.split('\n\n').map((pRaw, index) => {
+              {activePost.content.split('\n\n').flatMap(block => {
+                // A heading may be followed by a paragraph without a blank line.
+                // Render that paragraph separately so its links remain clickable.
+                const headingAndBody = /^(#{2,4} [^\n]+)\n([\s\S]+)$/.exec(block.trim());
+                return headingAndBody ? [headingAndBody[1], headingAndBody[2]] : [block];
+              }).map((pRaw, index) => {
                 const paragraph = pRaw.trim();
                 if (!paragraph) return null;
                 if (paragraph.startsWith('## ')) {
@@ -1066,7 +1071,7 @@ export const BlogPage = () => {
                       type: parts[0] || 'PDF',
                       title: parts[1] || '',
                       desc: parts[2] || '',
-                      link: parts[3] || '#',
+                      link: parts[3] || '',
                       btnText: parts[4] || 'İndir'
                     };
                   });
@@ -1124,14 +1129,16 @@ export const BlogPage = () => {
                                   {item.desc}
                                 </p>
                               </div>
-                              <a 
-                                href={item.link} 
-                                download={item.link.startsWith('/downloads/')}
-                                className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-neutral-900 hover:bg-primary text-white text-xs font-black uppercase tracking-wider rounded-xl shadow-xs transition-all duration-300 cursor-pointer"
-                              >
-                                <Download className="w-3.5 h-3.5" />
-                                {item.btnText}
-                              </a>
+                              {item.link && (
+                                <a
+                                  href={item.link}
+                                  download={item.link.startsWith('/downloads/')}
+                                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-neutral-900 hover:bg-primary text-white text-xs font-black uppercase tracking-wider rounded-xl shadow-xs transition-all duration-300 cursor-pointer"
+                                >
+                                  <Download className="w-3.5 h-3.5" />
+                                  {item.btnText}
+                                </a>
+                              )}
                             </div>
                           );
                         })}

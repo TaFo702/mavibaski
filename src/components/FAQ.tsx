@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from './PageHead';
 import { ChevronDown } from 'lucide-react';
 
 const WHATSAPP_NUMBER = "905366022373";

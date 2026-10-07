@@ -552,7 +552,7 @@ Reçete baskı çözümlerimiz; doktor muayenehaneleri, diş hekimleri, poliklin
 * **Doktor Muayenehaneleri & Klinikler:** Kurumsal logolu ve unvanlı reçete koçanı hazırlamak isteyen sağlık kuruluşları.
 * **Diş Hekimleri & Poliklinikler:** Kurumsal kimliği tamamlayan reçete kağıdı baskısı tercih eden sağlık merkezleri.
 
-Kurumsal kimliğinizi tamamlayan [Kartvizit Baskı](/kartvizit), [Antetli Kağıt](/antetli-kagit), [Diplomat Zarf](/diplomat-zarf), [Tutkalli Bloknot](/tutkalli-bloknot) ve [Cepli Dosya](/cepli-dosya) modellerimizi inceleyebilirsiniz.`,
+Kurumsal kimliğinizi tamamlayan [Kartvizit Baskı](/kartvizit), [Antetli Kağıt](/antetli), [Diplomat Zarf](/zarf), [Tutkalli Bloknot](/bloknotlar) ve [Cepli Dosya](/dosyalar) modellerimizi inceleyebilirsiniz.`,
 
   "senet": ``,
 
