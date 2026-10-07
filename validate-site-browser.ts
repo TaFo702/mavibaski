@@ -32,7 +32,7 @@ const baseURL = new URL(process.env.TEST_BASE_URL || 'http://127.0.0.1:3000');
 const inventoryPath = process.env.SITE_BROWSER_INVENTORY || 'reports/seo-after.json';
 const timeout = 15000;
 
-// Every accepted production URL is checked against the local server, never the live site.
+// TEST_BASE_URL selects either the local production server or the live site.
 function localTarget(href: string): string | null {
   if (!href.startsWith('/') && !href.startsWith('https://mavibasim.com') && !href.startsWith(baseURL.origin)) return null;
   const url = new URL(href, baseURL);
@@ -212,7 +212,16 @@ async function validateSiteBrowser() {
             result.status = response.status();
             result.finalPath = current.pathname;
             const location = response.headers().location;
+            const contentType = response.headers()['content-type'] || '';
             await response.dispose();
+            if (result.status === 200 && contentType.includes('text/html')) {
+              // Vercel publishes the static build, not Express's dynamic fallback.
+              // A local HTTP 200 must not hide a page missing from that build.
+              const pathname = decodeURIComponent(current.pathname);
+              const outputPath = path.resolve('dist', `.${pathname}`, pathname.endsWith('.html') ? '' : 'index.html');
+              assert.ok(outputPath.startsWith(path.resolve('dist') + path.sep), `HTML target leaves dist: ${target}`);
+              assert.ok(existsSync(outputPath), `HTTP 200 HTML is missing from the Vercel build: ${current.pathname}`);
+            }
             if (result.status < 300 || result.status >= 400 || !location) break;
             assert.ok(hops < 10, `Too many redirects for ${target}`);
             const redirected = new URL(location, current);
@@ -235,7 +244,7 @@ async function validateSiteBrowser() {
     || (check.status >= 400 && !(unresolvedTargets.has(check.target) && check.status === 404)));
   const report = {
     generatedAt: new Date().toISOString(),
-    scope: 'Local Chromium rendering and GET requests; no live-site or search-ranking claims',
+    scope: `${['localhost', '127.0.0.1'].includes(baseURL.hostname) ? 'Local' : 'Live'} Chromium rendering and GET requests; static HTML coverage checked; no search-ranking claims`,
     baseURL: baseURL.href,
     inventoryPath,
     concurrency: 2,

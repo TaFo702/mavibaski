@@ -193,7 +193,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
     ],
     internalLinks: [
       { text: 'Uzun Ömürlü Magnet Seçenekleri', path: '/magnet' },
-      { text: 'Lokanta Amerikan Servis Baskısı', path: '/lokanta-amerikan-servis-baski' },
+      { text: 'Lokanta Amerikan Servis Baskısı', path: '/sektor/lokanta-amerikan-servis-baski' },
       { text: 'Dönerci Paket El İlanları', path: '/el-ilani' },
       { text: 'Resmi Adisyon ve Sipariş Koçanları', path: '/makbuz-ve-formlar' }
     ],
@@ -787,7 +787,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
       { question: 'Masaüstü QR menü kartonu yapıyor musunuz?', answer: 'Evet, masaların ortasında dik duracak şık lüks şeffaf pleksiler içine ya da kalın laklı kromo üçgen ayaklı kartonlara QR kod baskısı sağlıyoruz.' }
     ],
     internalLinks: [
-      { text: 'Sıvama ve Spiral Menü Çeşitleri', path: '/kafe-menu-baski' },
+      { text: 'Sıvama ve Spiral Menü Çeşitleri', path: '/sektor/kafe-menu-baski' },
       { text: 'Masalara Özel Kağıt Servis', path: '/amerikan-servis' },
       { text: 'Karton Bardak Altlığı', path: '/fiyat-sor' },
       { text: 'Kafeler İçin Broşür Menüler', path: '/brosur' }

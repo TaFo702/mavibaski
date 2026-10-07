@@ -4557,10 +4557,10 @@ const HomePage = () => {
       <section id="products" className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
         <div className="flex flex-col items-center justify-center text-center mb-8 md:mb-12 gap-4">
           <div className="w-full text-center">
-            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-slate-900">
-              <span className="text-primary">Matbaa Hizmetlerimiz</span>
-              <span className="mx-3 text-slate-300 font-light">&amp;</span>
-              <span>Matbaa Ürünleri</span>
+            <h2 className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-2xl md:text-3xl font-black uppercase tracking-tight text-slate-900">
+              <span className="max-w-full text-primary">Matbaa Hizmetlerimiz</span>
+              <span className="max-w-full text-slate-300 font-light">&amp;</span>
+              <span className="max-w-full">Matbaa Ürünleri</span>
             </h2>
           </div>
         </div>

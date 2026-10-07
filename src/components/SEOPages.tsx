@@ -106,7 +106,7 @@ const CLUSTERS: Record<string, {
     icon: Coffee,
     parentPath: "/sektor/kafe-menu-baski",
     siblings: [
-      { path: "/kafe-menu-baski", text: "Kafe Klasik Menü Baskısı" },
+      { path: "/sektor/kafe-menu-baski", text: "Kafe Klasik Menü Baskısı" },
       { path: "/amerikan-servis", text: "Logolu Kafe Servis Kağıdı" },
       { path: "/trabzon-kafe-menu-baski", text: "Trabzon Kafe Menü Baskı" }
     ],

@@ -83,6 +83,24 @@ async function validateTechnicalBrowser() {
     await page.getByText('Sepetiniz boş.', { exact: true }).waitFor();
     console.log('PASS mobile product selection, cart, matching order details and cart clear');
 
+    await page.goto(new URL('/', baseURL).href);
+    await page.locator('#root main h1').first().waitFor();
+    // Different system fonts exposed the 372px overflow in the Ubuntu runner.
+    // Check the visible layout with both the default font and that fallback.
+    for (const font of [null, 'DejaVu Sans']) {
+      const style = font ? await page.addStyleTag({ content: `#root, #root * { font-family: "${font}" !important; }` }) : null;
+      try {
+        for (const width of [360, 390, 768, 1440]) {
+          await page.setViewportSize({ width, height: 900 });
+          await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
+          const scrollWidth = await page.evaluate(() => Math.max(document.documentElement.scrollWidth, document.body.scrollWidth));
+          assert.ok(scrollWidth <= width + 2, `Homepage overflow at ${width}px with ${font || 'default'} font: ${scrollWidth}px`);
+          await page.getByRole('heading', { name: /^Matbaa Hizmetlerimiz\s*&\s*Matbaa Ürünleri$/ }).waitFor();
+        }
+      } finally { await style?.evaluate(node => node.parentNode?.removeChild(node)); }
+    }
+    console.log('PASS homepage without overflow at four viewport widths and two font settings');
+
     for (const width of [360, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 });
       await page.goto(new URL('/kataloglar', baseURL).href);

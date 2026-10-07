@@ -46,14 +46,29 @@ jobs:
 
       - name: Run Full Quality Gate
         run: |
-          npm run quality
-          npm run validate:head-registry
-          npm run validate:prerender-cleanup
-          npm run validate:seo-navigation
-          npm run validate:invalid
-          npm run validate:technical
-          npm run validate:site-browser
-          npm run validate:seo
+          set -o pipefail
+          {
+            npm run quality
+            npm run validate:head-registry
+            npm run validate:prerender-cleanup
+            npm run validate:seo-navigation
+            npm run validate:invalid
+            npm run validate:technical
+            npm run validate:site-browser
+            npm run validate:seo
+          } 2>&1 | tee /tmp/mavibaski-quality-gate.log
+
+      - name: Report quality failure details
+        if: failure()
+        run: |
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          log = Path('/tmp/mavibaski-quality-gate.log')
+          if log.exists():
+              detail = '\n'.join(log.read_text(errors='replace').splitlines()[-60:])[-10000:]
+              message = detail.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A')
+              print(f'::error title=Quality gate failure details::{message}')
+          PYTHON
 
       - name: Verify Vercel production release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
