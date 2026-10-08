@@ -20,14 +20,8 @@ type PageCheck = {
 };
 type LinkCheck = { target: string; sources: string[]; status?: number; finalPath?: string; error?: string };
 
-// The user confirmed that these targets are unknown and must stay unchanged.
-// Report their 404 responses explicitly; do not describe them as working links.
-const unresolvedTargets = new Set([
-  '/reklam-urunleri',
-  '/lisans',
-  '/servis-formu',
-  '/fiyat-sor',
-]);
+// No unresolved internal targets are exempted from the browser link check.
+const unresolvedTargets = new Set<string>();
 const baseURL = new URL(process.env.TEST_BASE_URL || 'http://127.0.0.1:3000');
 const inventoryPath = process.env.SITE_BROWSER_INVENTORY || 'reports/seo-after.json';
 const timeout = 15000;
@@ -197,8 +191,6 @@ async function validateSiteBrowser() {
     }));
 
     for (const [target, sources] of licenses) for (const source of sources) recordTarget(links, target, `${source} (JSON-LD license)`);
-    // Include unresolved addresses explicitly even if no current DOM links to one.
-    for (const target of unresolvedTargets) if (!links.has(target)) links.set(target, new Set(['explicit unresolved-target check']));
     const targets = [...links.keys()].sort();
     index = 0;
     await Promise.all(Array.from({ length: 2 }, async () => {
@@ -273,7 +265,7 @@ async function validateSiteBrowser() {
   } else console.log(JSON.stringify(report, null, 2));
   assert.equal(pageFailures.length, 0, 'Some pages failed rendering or responsive checks; inspect pageFailures');
   assert.equal(linkFailures.length, 0, 'New or unexpected internal-link failures; inspect linkFailures');
-  console.log('PASS site browser checks. The explicitly listed unresolved 404 targets remain unresolved.');
+  console.log('PASS site browser checks.');
 }
 
 validateSiteBrowser().catch((error: unknown) => {
