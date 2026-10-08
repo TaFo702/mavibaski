@@ -954,7 +954,7 @@ export const AfisPage: React.FC = () => {
               { title: "Magnet Baskı", path: "/magnet", desc: "Buzdolabı paket servis magneti" },
               { title: "Etiket Baskı", path: "/etiket", desc: "Çıkartma ve ambalaj etiketleri" },
               { title: "Kartvizit Baskı", path: "/kartvizit", desc: "Sıvama ve kabartma laklı kartlar" },
-              { title: "Roll Up Banner", path: "/reklam-urunleri", desc: "Açılır kapanır mekanizmalı banner" },
+              { title: "Katalog Baskı", path: "/kataloglar", desc: "Kurumsal katalog baskı seçenekleri" },
               { title: "Karton Çanta", path: "/karton-canta", desc: "Lüks ipli kurumsal ambalaj çantası" },
               { title: "Zarf Baskı", path: "/zarf", desc: "Pencereli ve penceresiz antetli zarf" },
               { title: "Amerikan Servis", path: "/amerikan-servis", desc: "Restoranlar için kağıt masa örtüsü" },
