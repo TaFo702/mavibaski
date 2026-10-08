@@ -50,7 +50,8 @@ async function startServer() {
     if (cleanPath.length > 1 && cleanPath.endsWith("/")) {
       cleanPath = cleanPath.substring(0, cleanPath.length - 1);
     }
-    const redirectTarget = URL_REDIRECTS[cleanPath] || URL_REDIRECTS[req.path];
+    const redirectTarget = URL_REDIRECTS[cleanPath] || URL_REDIRECTS[req.path]
+      || (cleanPath === "/favicon.ico" ? "/mavilogo.png" : undefined);
     if (redirectTarget) {
       const rawUrl = req.originalUrl || req.url;
       const queryIdx = rawUrl.indexOf('?');

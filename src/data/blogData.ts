@@ -1658,7 +1658,7 @@ Eğer ürününüz gıda ile doğrudan temas edecekse veya lüks kozmetik algıs
     schemaType: 'Article',
     content: `## Doğru Kutu Gramajı Seçiminin Önemi
 
-Ambalaj kutusunun ürününüzü taşıyamayıp yırtılması veya tam tersi hafif bir ürün için gereksiz yüksek gramaj seçip maliyet artışı yaşamak sık yapılan hatalardandır. Mavi Basım olarak Topkapı imalat tesislerimizde ürettiğimiz karton gramajları şunlardır:
+[Ambalaj kutusunun](/kutu) ürününüzü taşıyamayıp yırtılması veya tam tersi hafif bir ürün için gereksiz yüksek gramaj seçip maliyet artışı yaşamak sık yapılan hatalardandır. Mavi Basım olarak Topkapı imalat tesislerimizde ürettiğimiz karton gramajları şunlardır:
 
 ### Gramajına Göre Kullanım Kılavuzu:
 * **230 gr - 250 gr Karton:** Hafif kozmetik tüpleri, sabun, eşarp, ilaç ve küçük elektronik aksesuar kutuları.
@@ -1707,7 +1707,7 @@ Kozmetik ürünlerinde tüketicinin satın alma kararını %70 oranında dış a
     schemaType: 'Article',
     content: `## Gıda Ambalajında Hijyen ve Standartlar
 
-Gıda kutusu baskısında en kritik nokta kartonun gıda ile doğrudan temasa uygun olması ve kimyasal koku yaymamasıdır.
+[Gıda kutusu baskısında](/kutu) en kritik nokta kartonun gıda ile doğrudan temasa uygun olması ve kimyasal koku yaymamasıdır.
 
 * **%100 Saf Selüloz Yapı:** Geri dönüştürülmüş atık kağıt içermeyen saf beyaz Amerikan Bristol.
 * **Yağ ve Nem Bariyeri:** Baklava, tatlı ve burger kutularında iç çeper nem direnci.
@@ -1730,7 +1730,7 @@ Gıda kutusu baskısında en kritik nokta kartonun gıda ile doğrudan temasa uy
     schemaType: 'Article',
     content: `## Karton Kutu Üretim Aşamaları
 
-Karton kutu imalatı yüksek hassasiyet gerektiren endüstriyel bir süreçtir:
+[Karton kutu imalatı](/kutu) yüksek hassasiyet gerektiren endüstriyel bir süreçtir:
 
 1. **Bıçak İzi Çizimi ve Tasarım Oturtma:** Ürünün milimetrik ebatlarına göre vektörel şablon hazırlanır.
 2. **CMYK Off-Set Baskı:** Heidelberg makinelerde yüksek kalitede tabaka baskı yapılır.
@@ -1801,7 +1801,7 @@ Selefon, baskılı kartonun üzerine termal ısı ile yapıştırılan mikron in
     schemaType: 'Article',
     content: `## Kutu Bıçak İzi Çizim Standartları
 
-Kutu bıçak izi, kartonun nereden kesileceğini, nereden katlanacağını (pilyaj) gösteren mimari vektörel şablondur.
+[Kutu](/kutu) bıçak izi, kartonun nereden kesileceğini, nereden katlanacağını (pilyaj) gösteren mimari vektörel şablondur.
 
 * **Kesim Çizgisi (Kırmızı / Düz):** Çelik bıçağın kartonu tamamen keseceği sınır.
 * **Pilyaj / Katlama Çizgisi (Mavi / Kesikli):** Kartonun kolay katlanması için ezileceği çizgi.

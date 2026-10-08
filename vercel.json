@@ -3,6 +3,21 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/cepli-dosya",
+      "destination": "/dosyalar",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/ofset-baski-ile-dijital-baski-farki",
+      "destination": "/blog/ofset-baski-ile-dijital-baski-farklari",
+      "statusCode": 301
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/mavilogo.png",
+      "statusCode": 301
+    },
+    {
       "source": "/bloknot",
       "destination": "/bloknotlar",
       "permanent": true

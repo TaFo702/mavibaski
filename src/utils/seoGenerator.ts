@@ -69,6 +69,8 @@ export const knownStaticRoutes = new Set([
 ]);
 
 export const URL_REDIRECTS: Record<string, string> = {
+  "/cepli-dosya": "/dosyalar",
+  "/blog/ofset-baski-ile-dijital-baski-farki": "/blog/ofset-baski-ile-dijital-baski-farklari",
   "/bloknot": "/bloknotlar",
   "/teslimat-ve-iade": "/teslimat-sartlari",
   "/makbuz": "/makbuz-ve-formlar",
@@ -258,7 +260,7 @@ export const staticPages: Record<string, { title: string; desc: string }> = {
     desc: "İstanbul Topkapı'da faaliyet gösteren Mavi Basım Matbaa & Reklam'ın kuruluş felsefesi, teknolojik kalite standartları ve sürdürülebilir baskı çözümleri."
   },
   "/iletisim": {
-    title: "İleitişim | Mavi Basım Matbaa & Reklam Topkapı İstanbul",
+    title: "İletişim | Mavi Basım Matbaa & Reklam Topkapı İstanbul",
     desc: "Mavi Basım Matbaa & Reklam Topkapı İstanbul adresi, telefon numaralarımız, WhatsApp sipariş hattımız ve e-posta adreslerimizle yol tarifi bilgilendirmeleri."
   },
   "/blog": {
