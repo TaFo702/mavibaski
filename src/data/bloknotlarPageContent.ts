@@ -254,7 +254,7 @@ export function generateBloknotlarSSRBodyContent(): string {
   </div>
   <div class="max-w-[1200px] mx-auto text-slate-700 text-sm md:text-[15px] leading-relaxed font-semibold text-justify space-y-4 mb-10">
     <p>
-      Bloknot baskısı; kurumsal tanıtım, toplantı ve günlük not alma ihtiyaçları için kullanılabilen basılı ürünlerdir. Kapaklı veya kapaksız modeller; A5 ve A6 ölçüleri, iç sayfa özellikleri ve sipariş adedine göre değerlendirilir. Mavi Basım, İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktasından kurumsal bloknot çözümleri sunmaktadır. Logolu bloknot ve firmaya özel bloknot talepleriniz için WhatsApp üzerinden bilgi alabilirsiniz.
+      Bloknotlar, kurumsal tanıtım, toplantı ve günlük not alma ihtiyaçları için kullanılabilen basılı ürünlerdir. Kapaklı veya kapaksız modeller; A5 ve A6 ölçüleri, iç sayfa özellikleri ve sipariş adedine göre değerlendirilir. Mavi Basım, İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktasından kurumsal bloknot çözümleri sunmaktadır. Logolu bloknot ve firmaya özel bloknot talepleriniz için WhatsApp üzerinden bilgi alabilirsiniz.
     </p>
     <p>
       Kurumsal bloknot baskı çözümlerini A5 ve A6 ölçülerinde, kapaklı veya kapaksız modellerle planlayabilirsiniz. Firmanızın logosuna ve tasarımına göre baskılı bloknot, logolu bloknot ve firmaya özel bloknot seçenekleri sunulur.

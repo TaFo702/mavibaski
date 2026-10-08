@@ -97,7 +97,7 @@ const DOSYALAR_GALLERY = [
     src: "/images/dosya/sunum-ve-cepli-dosya.webp",
     alt: "cift-cepli-kurumsal-dosya",
     title: "Çift Cepli Dosya",
-    desc: "Evrak tutucu cepler bulunduran geniş kapasiteli kurumsal dosya seçeneği. Kullanım Alanı: Kurum kayıt evrakları ve çoklu departman dökümanları.",
+    desc: "Evrak tutucu cepler bulunduran geniş kapasiteli kurumsal dosya seçeneği. Kullanım Alanı: Kurum kayıt evrakları ve çoklu departman dokümanları.",
     width: 1536,
     height: 1024
   },
@@ -419,11 +419,11 @@ export const DosyalarPage = () => {
                 </div>
                 <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-2">
                   <h3 className="font-black text-black uppercase text-xs sm:text-sm">🚗 Otomotiv & Sanayi</h3>
-                  <p className="text-xs text-gray-600 font-semibold">Araç teslim ve servis dökümanlarını, şartnameleri ve sertifikaları gruplayanlar.</p>
+                  <p className="text-xs text-gray-600 font-semibold">Araç teslim ve servis dokümanlarını, şartnameleri ve sertifikaları gruplayanlar.</p>
                 </div>
                 <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-2">
                   <h3 className="font-black text-black uppercase text-xs sm:text-sm">🏛️ Kurumlar & Kuruluşlar</h3>
-                  <p className="text-xs text-gray-600 font-semibold">Bültenleri, stratejik raporları ve resmi dökümanları takdim eden birimler.</p>
+                  <p className="text-xs text-gray-600 font-semibold">Bültenleri, stratejik raporları ve resmi dokümanları takdim eden birimler.</p>
                 </div>
               </div>
             </div>

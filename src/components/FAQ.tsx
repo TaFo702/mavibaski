@@ -292,7 +292,7 @@ export const SikcaSorulanPage = () => {
           </h1>
           
           <p className="text-gray-400 font-bold uppercase text-xs tracking-[0.3em] max-w-xl mx-auto leading-relaxed">
-            <strong>Mavi Basım Matbaa &amp; Reklam</strong> ile ilgili tüm merak ettiklerinize buradan ulaşabilirsiniz.
+            <strong>Mavi Basım Matbaa &amp; Reklam</strong> hakkında merak ettiğiniz soruların yanıtlarını burada bulabilirsiniz.
           </p>
         </div>
 
@@ -301,7 +301,7 @@ export const SikcaSorulanPage = () => {
           <div className="text-center mb-8">
             <span className="text-primary font-black uppercase text-xs tracking-widest block mb-2">HIZLI SÜREÇ</span>
             <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight">Siparişiniz Adım Adım Nasıl Hazırlanıyor?</h2>
-            <p className="text-gray-400 font-medium text-xs md:text-sm mt-1">Siparişimizi talep anından kapınıza ulaşana kadar titizlikle takip ediyoruz.</p>
+            <p className="text-gray-400 font-medium text-xs md:text-sm mt-1">Siparişinizi talep anından kapınıza ulaşana kadar titizlikle takip ediyoruz.</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-6 gap-6 relative">

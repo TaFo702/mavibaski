@@ -31,14 +31,14 @@ const getRelatedProducts = (slug: string, category: string) => {
       bullets: [
         "Bu ürünle birlikte en çok tercih edilen matbaa ürünleri: Yer Gösterme Belgesi siparişi veren emlak danışmanlarımızın en çok birlikte talep ettiği tamamlayıcı kurumsal sözleşmeler ve evrak formları.",
         "Siparişinizi tek seferde tamamlayabileceğiniz tamamlayıcı baskılar: Para akışını belgelemek için Otokopili Tahsilat Makbuzu ve markanızın prestijini yansıtan Cepli Sunum Dosyaları.",
-        "Aynı tasarım ve üretim sürecinde birlikte hazırlanabilecek kurumsal dökümanlar: Markanıza özel tasarlanmış Premium Kartvizit ve ilan tanıtımlarınızı yapabileceğiniz Broşürler."
+        "Aynı tasarım ve üretim sürecinde birlikte hazırlanabilecek kurumsal dokümanlar: Markanıza özel tasarlanmış Premium Kartvizit ve ilan tanıtımlarınızı yapabileceğiniz Broşürler."
       ],
       products: [
-        { name: "Sözleşme Baskısı", desc: "Otokopili & Numaratörlü", reason: "Resmi işlemlerinizi otokopili ve seri numaralı nüshalarla belgelendirmek için geçebilirsiniz.", path: "/sozlesme-baski", img: "/images/sozlesme/numaratorlu-sozlesme-baski.webp", alt: "Sözleşme Baskısı", title: "Otokopili Sözleşme Baskısı" },
+        { name: "Sözleşme Baskısı", desc: "Otokopili & Numaratörlü", reason: "Resmi işlemlerinizi otokopili ve seri numaralı nüshalarla belgelendirmek için bu ürünü inceleyebilirsiniz.", path: "/sozlesme-baski", img: "/images/sozlesme/numaratorlu-sozlesme-baski.webp", alt: "Sözleşme Baskısı", title: "Otokopili Sözleşme Baskısı" },
         { name: "Tahsilat Makbuzu", desc: "Karbonlu Para Makbuzu", reason: "Para akışını ve makbuz takibini kurumsal hale getirmek için tercih edin.", path: "/tahsilat-makbuzu", img: "/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp", alt: "Tahsilat Makbuzu Baskısı", title: "Otokopili Tahsilat Makbuzu Baskısı" },
         { name: "Kartvizit", desc: "Premium Kartvizitler", reason: "Emlak danışmanlığında müşterilerinizde prestijli bir ilk izlenim bırakmak için seçin.", path: "/kartvizit", img: "/images/kartvizit/kartvizit-baski.webp", alt: "Premium Kartvizit Baskısı", title: "Emlakçı Premium Kartvizit Baskısı" },
         { name: "Tanıtım Broşürü", desc: "Katlamalı ve Düz Seçenekler", reason: "Emlak portföyü ve proje lansmanı tanıtımları yapmak için yönelin.", path: "/brosur", img: "/images/brosur/brosur-tasarimi-ve-baski.webp", alt: "Tanıtım Broşürü", title: "Katlamalı Tanıtım Broşürü" },
-        { name: "Cepli Dosya", desc: "Sunum Dosyaları", reason: "Müşterilerinize resmi sözleşme ve tapu dökümanlarını şık bir klasörde sunmak için kullanın.", path: "/dosyalar", img: "/images/dosya/cepli-dosya-tasarimi.webp", alt: "Cepli Dosya Baskısı", title: "Emlak Sunum Cepli Dosya Baskısı" }
+        { name: "Cepli Dosya", desc: "Sunum Dosyaları", reason: "Müşterilerinize resmi sözleşme ve tapu dokümanlarını şık bir klasörde sunmak için kullanın.", path: "/dosyalar", img: "/images/dosya/cepli-dosya-tasarimi.webp", alt: "Cepli Dosya Baskısı", title: "Emlak Sunum Cepli Dosya Baskısı" }
       ]
     };
   }
@@ -58,7 +58,7 @@ const getRelatedProducts = (slug: string, category: string) => {
       introTitle: "Restoran ve Kafelerin En Çok Sipariş Ettiği Reklam Ürünleri",
       introDesc: (
         <span>
-          Restoran veya kafe işletmenizin prestijini, temizliğini ve profesyonelliğini sahada yansıtacak tüm <Link to="/amerikan-servis" className="text-primary hover:underline font-bold">Amerikan Servis</Link>, <Link to="/brosur" className="text-primary hover:underline font-bold">Broşür Baskı</Link>, <Link to="/magnet" className="text-primary hover:underline font-bold">Magnet Baskı</Link>, <Link to="/karton-canta" className="text-primary hover:underline font-bold">Karton Çanta</Link> ve <Link to="/adisyon" className="text-primary hover:underline font-bold">Adisyon Baskısı</Link> dökümanlarını gıdaya uygun bitkisel soya bazlı Heidelberg mürekkepleriyle üretiyoruz:
+          Restoran veya kafe işletmenizin prestijini, temizliğini ve profesyonelliğini sahada yansıtacak tüm <Link to="/amerikan-servis" className="text-primary hover:underline font-bold">Amerikan Servis</Link>, <Link to="/brosur" className="text-primary hover:underline font-bold">Broşür Baskı</Link>, <Link to="/magnet" className="text-primary hover:underline font-bold">Magnet Baskı</Link>, <Link to="/karton-canta" className="text-primary hover:underline font-bold">Karton Çanta</Link> ve <Link to="/adisyon" className="text-primary hover:underline font-bold">Adisyon Baskısı</Link> dokümanlarını gıdaya uygun bitkisel soya bazlı Heidelberg mürekkepleriyle üretiyoruz:
         </span>
       ),
       bullets: [
@@ -89,7 +89,7 @@ const getRelatedProducts = (slug: string, category: string) => {
   ) {
     return {
       introTitle: "Tanıtım ve Reklam Kampanyalarında Birlikte Kullanılan Ürünler",
-      introDesc: "Firmanızın yeni kampanyasını duyururken veya ürün tanıtımı yaparken, hedef kitlenizin dikkatini çekmek için birlikte koordine edilen en popüler reklam dökümanları şunlardır:",
+      introDesc: "Firmanızın yeni kampanyasını duyururken veya ürün tanıtımı yaparken, hedef kitlenizin dikkatini çekmek için birlikte kullanılan en popüler reklam dokümanları şunlardır:",
       bullets: [
         "Yüksek adetli sokak ve posta kutusu dağıtımları için: İnce gramajlı (115gr veya 135gr kuşe) yüksek kaliteli ekonomik El İlanı ve Broşür alternatifleri.",
         "Vitrin, sokak ve bayi duvarlarında dikkat çeken duyurular: Firmanızın kampanyasını büyük ölçekte sergileyen 300gr kuşe veya blueback Afiş baskıları.",
@@ -118,15 +118,15 @@ const getRelatedProducts = (slug: string, category: string) => {
   ) {
     return {
       introTitle: "Kurumsal Markanızın Profesyonel Kimliğini Tamamlayan Setler",
-      introDesc: "Ofis içi yazışmalardan müşteri sunumlarına kadar markanızın prestijini en üst seviyeye taşıyacak, tasarım dilleri birbiriyle tam uyumlu kurumsal dökümanlar:",
+      introDesc: "Ofis içi yazışmalardan müşteri sunumlarına kadar markanızın prestijini en üst seviyeye taşıyacak, tasarım dilleri birbiriyle tam uyumlu kurumsal dokümanlar:",
       bullets: [
         "İlk tanışmada kalıcı bir iz bırakmak için: Kabartma laklı, kalın ve mat selefonlu lüks ve kurumsal Kartvizitler.",
         "Resmi yazışmalar ve teklif gönderimleri için: Kurumsal logonuzun basılı olduğu 80gr 1. Hamur Antetli Kağıt ve Diplomat Zarf takımı.",
-        "Sözleşme, fatura ve teklif dökümanlarını şık sunmak için: Mat selefonlu ve cepli kurumsal Sunum Dosyaları ile ofis içi Bloknotlar."
+        "Sözleşme, fatura ve teklif dokümanlarını şık sunmak için: Mat selefonlu ve cepli kurumsal Sunum Dosyaları ile ofis içi Bloknotlar."
       ],
       products: [
         { name: "Kartvizit", desc: "Premium Laklı Kartvizitler", reason: "Kurumsal ilk tanışmalarda markanız adına kalıcı bir iz bırakmak için geçin.", path: "/kartvizit", img: "/images/kartvizit/kartvizit-baski-detayi.webp", alt: "Kartvizit Baskısı", title: "Lüks Mat Selefonlu Kartvizit" },
-        { name: "Antetli Kağıt", desc: "80gr Kurumsal Logolu Kağıt", reason: "Resmi yazışmalarınızı ve teklif dökümanlarınızı kurumsal kimliğe kavuşturun.", path: "/antetli", img: "/images/antetli-kagit/antetli-kagit-baski-fiyatlari.webp", alt: "Antetli Kağıt Baskısı", title: "Kurumsal Logolu Antetli Kağıt" },
+        { name: "Antetli Kağıt", desc: "80gr Kurumsal Logolu Kağıt", reason: "Resmi yazışmalarınızı ve teklif dokümanlarınızı kurumsal kimliğe kavuşturun.", path: "/antetli", img: "/images/antetli-kagit/antetli-kagit-baski-fiyatlari.webp", alt: "Antetli Kağıt Baskısı", title: "Kurumsal Logolu Antetli Kağıt" },
         { name: "Diplomat Zarf", desc: "Pencereli & Penceresiz Zarf", reason: "Teklif, fatura ve kurumsal evraklarınızı müşteriye şık bir zarfla ulaştırın.", path: "/zarf", img: "/images/zarf/kurumsal-zarf-baski.webp", alt: "Diplomat Zarf Baskısı", title: "Logolu Diplomat Zarf Baskısı" },
         { name: "Cepli Dosya", desc: "Sunum ve Teklif Klasörleri", reason: "Teklif, sözleşme ve kurumsal evraklarınızı düzenli ve prestijli bir klasörde sunun.", path: "/dosyalar", img: "/images/dosya/cepli-dosya-tasarimi.webp", alt: "Cepli Dosya Baskısı", title: "Kurumsal Cepli Sunum Dosyası" },
         { name: "Küp Bloknot", desc: "Logolu Masaüstü Bloknotu", reason: "Müşterilerinizin çalışma masalarında her gün göz önünde olacak kalıcı promosyon.", path: "/kup-bloknot", img: "/images/kup-bloknot/kup-bloknot-baski-fiyatlari.webp", alt: "Küp Bloknot Baskısı", title: "Logolu Promosyon Küp Bloknot" }

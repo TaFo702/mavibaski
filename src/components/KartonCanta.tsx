@@ -640,7 +640,7 @@ export const KartonCantaPage = () => {
               {[
                 { size: "16x25x6 cm", desc: "Küçük boy ipli karton poşet", items: "Takı kutuları, parfümler, kozmetik setleri ve hafif promosyon hediyelikleri için en çok tercih edilen ideal ebattır." },
                 { size: "27x16x6 cm", desc: "Yatay orta boy baskılı karton poşet", items: "Cüzdanlar, fularlar, şallar, gözlük kutuları ve yatay formdaki şık butik hediyeleri için mükemmel bir seçimdir." },
-                { size: "25x37x8 cm", desc: "Dikey standart boy karton çanta", items: "Gömlek, bluz, katalog, promosyon dökümanları ve standart kitap-dergi boylarındaki ürünler için en popüler ebatımızdır." },
+                { size: "25x37x8 cm", desc: "Dikey standart boy karton çanta", items: "Gömlek, bluz, katalog, promosyon dokümanları ve standart kitap-dergi boylarındaki ürünler için en popüler ebatımızdır." },
                 { size: "51x33x13 cm", desc: "Büyük boy lüks taşıma poşeti", items: "Mont, ceket, ayakkabı kutusu, büyük boy oyuncak veya kalın kurumsal hediyelik setlerin taşınmasında yırtılma direnciyle öne çıkar." }
               ].map((item, idx) => (
                 <div key={idx} className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm">

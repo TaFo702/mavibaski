@@ -870,7 +870,7 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
                   )}
                   {isRestrictedQuantityProduct(category, product.miktar || product.desc) && !isMakbuzVeForm && (
                     <p className="text-[10px] text-red-500 font-bold text-center mt-1 uppercase tracking-tight">
-                      * Bu ürün sadece liste paketleri şeklinde sipariş edilebilir.
+                      * Bu ürün sadece listedeki paketler halinde sipariş edilebilir.
                     </p>
                   )}
                   
@@ -3530,7 +3530,7 @@ const HOME_FAQS = [
   },
   {
     question: "Baskıda renk farklılığı veya ton kayması yaşanır mı?",
-    answer: "Bilgisayar ve telefon ekranları ışıklı RGB renk uzayını kullanırken, matbaa baskı makineleri fiziksel mürekkeplerden oluşan CMYK renk uzayını kullanır. Bu teknik farktan dolayı ekrandaki renkler ile kağıttaki renkler arasında %5-10 oranında minimal ton farkları olabilir. Mavi Basım olarak bu farkı önlemek adına tüm makinelerimizi spektofotometre cihazlarıyla uluslararası standartlarda kalibre etmekteyiz."
+    answer: "Bilgisayar ve telefon ekranları ışıklı RGB renk uzayını kullanırken, matbaa baskı makineleri fiziksel mürekkeplerden oluşan CMYK renk uzayını kullanır. Bu teknik farktan dolayı ekrandaki renkler ile kağıttaki renkler arasında %5-10 oranında minimal ton farkları olabilir. Mavi Basım olarak bu farkı önlemek adına tüm makinelerimizi spektrofotometre cihazlarıyla uluslararası standartlarda kalibre etmekteyiz."
   },
   {
     question: "Rulo etiket siparişi verirken sarım yönü neden önemlidir?",
@@ -4370,7 +4370,7 @@ const HomePage = () => {
               Matbaa ve Baskı Teknolojileri <span className="text-primary">Uzman Rehberi</span>
             </h2>
             <p className="text-slate-600 font-semibold leading-relaxed text-sm md:text-base">
-              Baskı siparişiniz için en doğru kağıt gramajını, makine teknolojisini, ölçü standartlarını ve baskı sonrası işlemleri sekmentlere ayrılmış rehberimizden detaylıca inceleyebilirsiniz.
+              Baskı siparişiniz için en doğru kağıt gramajını, makine teknolojisini, ölçü standartlarını ve baskı sonrası işlemleri bölümlere ayrılmış rehberimizden detaylıca inceleyebilirsiniz.
             </p>
 
             {/* Tab Control Buttons */}

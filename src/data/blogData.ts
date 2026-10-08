@@ -844,7 +844,7 @@ Tamamlayıcı paketleme ürünlerini birlikte sipariş etmenin işletmenize kaza
 Sektörünüzün dinamiklerine uygun doğru tasarım ve dağıtım kurgusunu seçmek dönüşüm oranınızı katlar. Türkiye genelinde en yüksek geri dönüş alan sektörlere ve kurumsal kullanım senaryolarına özel stratejiler şunlardır:
 
 - **B2B Kurumsal Bayi Ağları:** Marka standardını korumak isteyen distribütörler, ana bayiler ve tüm Türkiye genelindeki franchise zincir restoran şubeleri için toplu imalat, ortak grafik kurgusu ve merkezi sevkiyat çözümleriyle her şubeye entegre yerel tanıtım gücü sağlıyoruz.
-- **Beyaz Eşya & Kombi Teknik Servisleri:** Kombi ve klima arızalarında ilk aranacak numara olmak üzere, beyaz eşyaların üzerine doğrudan yapışan ve teknik özellikleri içeren sade, dikkat çekici renk kontrastlı tasarımlar. Bu hizmeti veren firmalar, servis sonrasında müşteriye resmi evrak niteliğinde teslim edecekleri [Adisyon Baskısı](/adisyon) veya [Sipariş Fişi](/siparis-fisi) gibi otokopili NCR dökümanları da magnet siparişiyle birlikte kurumsal set olarak tamamlamaktadır.
+- **Beyaz Eşya & Kombi Teknik Servisleri:** Kombi ve klima arızalarında ilk aranacak numara olmak üzere, beyaz eşyaların üzerine doğrudan yapışan ve teknik özellikleri içeren sade, dikkat çekici renk kontrastlı tasarımlar. Bu hizmeti veren firmalar, servis sonrasında müşteriye resmi evrak niteliğinde teslim edecekleri [Adisyon Baskısı](/adisyon) veya [Sipariş Fişi](/siparis-fisi) gibi otokopili NCR dokümanları da magnet siparişiyle birlikte kurumsal set olarak tamamlamaktadır.
 - **Pet Shop & Veterinerler:** Evcil hayvan sahiplerinin acil mama veya sağlık ihtiyaçlarında anında araması için sevimli pati veya kedi/köpek figürlü özel kesim magnet modelleri. Klinikler ve pet shoplar, müşteri sadakatini artırmak için aşı kartları veya mama paketlerinin üzerine yapıştırılacak dayanıklı [Etiket Baskı](/etiket) çeşitlerini ve bilgilendirici [Broşür Baskı](/brosur) ürünlerini birlikte sipariş etmektedir.
 - **Su & Tüp Bayileri:** Kayseri Melikgazi örneğinde olduğu gibi, acil ihtiyaç anında ilk akla gelen numarayı arayan müşteriler için buzdolabında her an el altında bulunması gereken, üzerinde büyük puntolarla acil telefon numarasının yer aldığı standart ebat magnet modelleri.
 - **Pide, Kebap & Pizza Salonları:** Gaziantep Şahinbey örneğinde olduğu gibi, lezzet görselleri ve tanıdık amblemler barındıran, kurye ile doğrudan sipariş paketine eklenebilen fantezi kesimli ve dikkat çekici modeller.
@@ -3340,7 +3340,7 @@ Tasarım dosyalarınız grafik ekibimizce kontrol edildikten sonra lazer kalıp 
 Hazırlanan metal kalıplar yüksek hassasiyetli ofset baskı makinelerinin ilgili ünitelerine monte edilir. Mürekkep merdanelerinin hazne ayarları, su-alkol dengesi ve kağıt ebat ayarları (giyotin hizalama) bilgisayarlı konsoldan hassas bir şekilde kalibre edilir.
 
 #### 3. Baskı İşlemi (Üretim)
-Kağıt tabakaları yüksek hızda besleme ünitesinden girer. Her üniteden geçerken sırasıyla mavi, kırmızı, sarı ve siyah renkler milimetrik hassasiyetle üst üste basılır (CMYK). Bu süreçte renklerin kaymaması için spektofotometrik ayarlar sürekli izlenir.
+Kağıt tabakaları yüksek hızda besleme ünitesinden girer. Her üniteden geçerken sırasıyla mavi, kırmızı, sarı ve siyah renkler milimetrik hassasiyetle üst üste basılır (CMYK). Bu süreçte renklerin kaymaması için spektrofotometrik ayarlar sürekli izlenir.
 
 #### 4. Baskı Sonrası (Mücellit ve Sonlandırma)
 Makinelerden çıkan ıslak baskılı tabakalar kurutulduktan sonra kesim, selefon kaplama, kırım, harmanlama, ciltleme ve paketleme gibi baskı sonrası işlemlere sevk edilir.
@@ -3469,8 +3469,8 @@ Selefon, matbaa üretiminde basımı tamamlanmış kağıt veya karton yüzeyler
 
 ### Mat Selefon ve Parlak Selefon Farkı
 
-* **Mat Selefon:** Işığı yansıtmaz, son derece sade, şık ve ağır bir görünüm sunar. Kurumsal dökümanlar, lüks kataloglar ve prestijli kartvizitler için idealdir. Özellikle üzerine kabartma lak uygulandığında lakın parlamasını belirginleştirerek mükemmel bir kontrast yaratır.
-* **Parlak Selefon:** Renkleri çok daha canlı, parlak ve doygun gösterir. Ürün fotoğraflarının ve canlı renk tonlarının ön planda olduğu yemek menüleri, çocuk kitapları, kutular ve dikkat çekici broşürler için mükemmeldir. Dust ve parmak izini mat selefona göre daha az belli eder.`,
+* **Mat Selefon:** Işığı yansıtmaz, son derece sade, şık ve ağır bir görünüm sunar. Kurumsal dokümanlar, lüks kataloglar ve prestijli kartvizitler için idealdir. Özellikle üzerine kabartma lak uygulandığında lakın parlamasını belirginleştirerek mükemmel bir kontrast yaratır.
+* **Parlak Selefon:** Renkleri çok daha canlı, parlak ve doygun gösterir. Ürün fotoğraflarının ve canlı renk tonlarının ön planda olduğu yemek menüleri, çocuk kitapları, kutular ve dikkat çekici broşürler için mükemmeldir. Toz ve parmak izini mat selefona göre daha az belli eder.`,
     faq: [
       {
         question: 'İnce kağıtlara selefon kaplanır mı?',
