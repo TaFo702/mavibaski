@@ -20,12 +20,8 @@ type PageCheck = {
 };
 type LinkCheck = { target: string; sources: string[]; status?: number; finalPath?: string; error?: string };
 
-// The user confirmed that these targets are unknown and must stay unchanged.
-// Report their 404 responses explicitly; do not describe them as working links.
-const unresolvedTargets = new Set([
-  '/reklam-urunleri',
-  '/lisans',
-]);
+// The remaining broken targets have been resolved; no HTTP404 exception remains.
+const unresolvedTargets = new Set<string>();
 const baseURL = new URL(process.env.TEST_BASE_URL || 'http://127.0.0.1:3000');
 const inventoryPath = process.env.SITE_BROWSER_INVENTORY || 'reports/seo-after.json';
 const timeout = 15000;
@@ -120,7 +116,7 @@ async function validateSiteBrowser() {
               if (Array.isArray(value)) pending.push(...value);
               else if (value && typeof value === 'object') {
                 for (const [key, child] of Object.entries(value)) {
-                  if (key === 'license' && typeof child === 'string') licenses.push(child);
+                  if (['license', 'acquireLicensePage'].includes(key) && typeof child === 'string') licenses.push(child);
                   pending.push(child);
                 }
               }

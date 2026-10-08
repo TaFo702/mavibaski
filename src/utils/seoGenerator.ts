@@ -3828,8 +3828,8 @@ ${faqHtml}`;
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Reklam Ürünleri",
-          "item": "https://mavibasim.com/reklam-urunleri"
+          "name": "Matbaa Ürünleri",
+          "item": "https://mavibasim.com/matbaa"
         },
         {
           "@type": "ListItem",
@@ -3937,7 +3937,7 @@ ${faqHtml}`;
         <li>
           <div class="flex items-center">
             <span class="mx-2 text-gray-400" aria-hidden="true">/</span>
-            <a href="/reklam-urunleri" class="text-gray-600 hover:text-primary transition-colors">Reklam Ürünleri</a>
+            <a href="/matbaa" class="text-gray-600 hover:text-primary transition-colors">Matbaa Ürünleri</a>
           </div>
         </li>
         <li>

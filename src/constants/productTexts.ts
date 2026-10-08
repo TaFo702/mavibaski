@@ -146,7 +146,7 @@ Mavi Basım bünyesinde gelişmiş ofset ve dijital baskı teknolojileriyle **34
 ### Sektörel Afiş Uygulamaları
 Mağaza afişi, vitrin afişi, kampanya afişi, indirim afişi, emlak afişi, konser afişi, etkinlik afişi, seçim afişi, festival afişi, açılış afişi, reklam afişi, iç mekan afiş ve dış mekan afiş gibi farklı kullanım alanları için tek yön renkli afiş ve büyük boy poster baskı ihtiyaçlarınızı karşılamaktayız.
 
-Afiş siparişlerinizi tamamlamak için [Broşür Baskı](/brosur), [El İlanı Baskı](/el-ilani), [Magnet Baskı](/magnet) ve [Reklam Ürünleri / Roll Up](/reklam-urunleri) kategorilerimizi de inceleyebilirsiniz.`,
+Afiş siparişlerinizi tamamlamak için [Broşür Baskı](/brosur), [El İlanı Baskı](/el-ilani), [Magnet Baskı](/magnet) ve [Matbaa Ürünleri](/matbaa) kategorilerimizi de inceleyebilirsiniz.`,
 
   "amerikan_servis": `## Masa Sunumlarında Kağıt Amerikan Servis Çözümleri
 

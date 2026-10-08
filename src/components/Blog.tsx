@@ -451,8 +451,6 @@ export const BlogPage = () => {
         "@context": "https://schema.org",
         "@type": "ImageObject",
         "contentUrl": `https://mavibasim.com${activePost.image}`,
-        "license": "https://mavibasim.com/lisans",
-        "acquireLicensePage": `https://mavibasim.com/blog/${activePost.slug}`,
         "creditText": "Mavi Basım Tasarım Ekibi",
         "creator": {
           "@type": "Organization",

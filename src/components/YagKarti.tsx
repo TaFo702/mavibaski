@@ -212,7 +212,7 @@ export const YagKartiPage = () => {
         <nav className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-6 bg-slate-50 px-4 py-2.5 rounded-xl border border-slate-200/80">
           <Link to="/" className="hover:text-primary transition-colors">Anasayfa</Link>
           <ChevronRight size={14} className="text-slate-400" />
-          <Link to="/reklam-urunleri" className="text-slate-500 hover:text-primary transition-colors">Reklam Ürünleri</Link>
+          <Link to="/matbaa" className="text-slate-500 hover:text-primary transition-colors">Matbaa Ürünleri</Link>
           <ChevronRight size={14} className="text-slate-400" />
           <span className="text-primary font-bold" aria-current="page">Yağ Kartı Baskı</span>
         </nav>
