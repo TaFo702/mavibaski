@@ -253,6 +253,36 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://mavibasim.com/kullanim-sartlari</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mavibasim.com/gizlilik-politikasi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mavibasim.com/cerez-politikasi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mavibasim.com/mesafeli-satis-sozlesmesi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mavibasim.com/teslimat-sartlari</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mavibasim.com/iptal-ve-iade-sartlari</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://mavibasim.com/blog/baskiya-uygun-tasarim-nasil-hazirlanir</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>

@@ -76,6 +76,7 @@ jobs:
           LIVE_BASE_URL: https://mavibasim.com
         run: |
           npm run validate:live-release
+          TEST_BASE_URL=https://mavibasim.com npm run validate:crawlability
           TEST_BASE_URL=https://mavibasim.com npm run validate:technical
           echo "## Live browser checks passed" >> "$GITHUB_STEP_SUMMARY"
           echo "Desktop/mobile order flow, menu text, removed download buttons and six e-commerce images passed on mavibasim.com. No order or WhatsApp message was sent." >> "$GITHUB_STEP_SUMMARY"

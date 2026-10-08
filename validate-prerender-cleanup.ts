@@ -16,7 +16,8 @@ const appPath = path.join(fixtureDir, 'src', 'App.tsx');
 const template = '<!doctype html><html><head><title>Fallback</title></head><body><div id="root"></div></body></html>';
 const safeApp = `import { createElement } from 'react';
 export function TestWrapper({ children }) { return children; }
-export function AppRoutes() { return createElement('main', null, 'Rendered fixture'); }`;
+export function AppRoutes() { return createElement('main', null, 'Rendered fixture'); }
+export function FooterPageLinks() { return createElement('nav', null, 'Fixture footer'); }`;
 const rendererFiles = () => fs.readdirSync(distDir).filter(name => name.startsWith('.seo-renderer'));
 const noRendererFiles = () => assert.deepEqual(rendererFiles(), [], 'Temporary SSR bundles must be removed.');
 let passed = 0;
@@ -62,7 +63,9 @@ export function injectSEOMetadata(template: string) { return template; }`);
     const second = await createRouteRenderer(distDir);
     try {
       assert.equal(rendererFiles().length, 2);
-      assert.match(await first.render('/', template), /Rendered fixture/);
+      const firstHTML = await first.render('/', template);
+      assert.match(firstHTML, /Rendered fixture/);
+      assert.match(firstHTML, /<footer><nav>Fixture footer<\/nav><\/footer>/);
       first.dispose();
       assert.equal(rendererFiles().length, 1);
       assert.match(await second.render('/', template), /Second fixture/);
@@ -76,7 +79,7 @@ export function injectSEOMetadata(template: string) { return template; }`);
   });
 
   await check('render error clears its timeout and rejects promptly', async () => {
-    fs.writeFileSync(appPath, 'export function TestWrapper({children}) { return children; } export function AppRoutes() { throw new Error("INJECTED_RENDER_FAILURE"); }');
+    fs.writeFileSync(appPath, 'export function TestWrapper({children}) { return children; } export function AppRoutes() { throw new Error("INJECTED_RENDER_FAILURE"); } export function FooterPageLinks() { return null; }');
     const timeoutMs = 5000;
     const timers = new Set<ReturnType<typeof setTimeout>>();
     const originalSetTimeout = globalThis.setTimeout;
@@ -105,7 +108,7 @@ export function injectSEOMetadata(template: string) { return template; }`);
   });
 
   await check('suspended render times out and disposal cancels an active render', async () => {
-    fs.writeFileSync(appPath, 'const pending = new Promise(() => {}); export function TestWrapper({children}) { return children; } export function AppRoutes() { throw pending; }');
+    fs.writeFileSync(appPath, 'const pending = new Promise(() => {}); export function TestWrapper({children}) { return children; } export function AppRoutes() { throw pending; } export function FooterPageLinks() { return null; }');
     const renderer = await createRouteRenderer(distDir, { timeoutMs: 40 });
     try {
       await assert.rejects(renderer.render('/', template), /SSR zaman aşımı/);
@@ -147,7 +150,7 @@ export function injectSEOMetadata(template: string) { return template; }`);
   });
 
   await check('prerender process fails without skipping bundle cleanup or overwriting the page', () => {
-    fs.writeFileSync(appPath, 'export function TestWrapper({children}) { return children; } export function AppRoutes() { throw new Error("INJECTED_ROUTE_FAILURE"); }');
+    fs.writeFileSync(appPath, 'export function TestWrapper({children}) { return children; } export function AppRoutes() { throw new Error("INJECTED_ROUTE_FAILURE"); } export function FooterPageLinks() { return null; }');
     const result = spawnSync(process.execPath, [path.join(repoDir, 'node_modules', 'tsx', 'dist', 'cli.mjs'), 'scripts/prerender.ts'], { cwd: fixtureDir, encoding: 'utf8', timeout: 15000 });
     assert.ifError(result.error);
     assert.equal(result.status, 1);

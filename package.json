@@ -27,12 +27,13 @@
     "validate:spinner": "npx tsx validate-no-infinite-spinner.ts",
     "validate:invalid": "tsx validate-invalid-routes.ts",
     "validate:technical": "tsx validate-technical-browser.ts",
-    "quality": "npm run typecheck && npm run lint && npm run build && npm run validate:routes && npm run validate:sitemap && npm run validate:metadata && npm run validate:links && npm run validate:content && npm run validate:http && npm run validate:mutations && npm run validate:spinner",
+    "quality": "npm run typecheck && npm run lint && npm run build && npm run validate:routes && npm run validate:sitemap && npm run validate:metadata && npm run validate:links && npm run validate:content && npm run validate:http && npm run validate:mutations && npm run validate:spinner && npm run validate:crawlability",
     "validate:seo": "tsx scripts/audit-seo.mjs",
     "validate:seo-navigation": "tsx validate-seo-navigation.ts",
     "validate:head-registry": "tsx validate-head-registry.ts",
     "validate:prerender-cleanup": "tsx validate-prerender-cleanup.ts",
     "validate:site-browser": "tsx validate-site-browser.ts",
+    "validate:crawlability": "tsx validate-crawlability.ts",
     "validate:live-release": "tsx scripts/verify-live-release.ts"
   },
   "dependencies": {

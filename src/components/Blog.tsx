@@ -1621,7 +1621,7 @@ export const BlogPage = () => {
                   );
                 }
                 if (paragraph.startsWith(':::gallery')) {
-                  const contentWithoutContainer = paragraph.replace(':::gallery\n', '').replace('\n:::', '').trim();
+                  const contentWithoutContainer = paragraph.replace(/^:::gallery(?:\r?\n|$)/, '').replace(/(?:^|\r?\n):::\s*$/, '').trim();
                   let items = activePost.slug === 'emlak-yer-gosterme-belgesi-nedir' ? [
                     { src: '/images/sozlesme/yer-gosterme-belgesi-otokopili.webp', alt: 'Yer Gösterme Belgesi Baskısı', desc: 'Otokopili Yer Gösterme Belgesi Baskısı', link: '' },
                     { src: '/images/sozlesme/yer-gosterme-belgesi-numaratorlu-ornek.webp', alt: 'Numaratörlü Yer Gösterme Belgesi', desc: 'Numaratörlü Yer Gösterme Belgesi', link: '' },

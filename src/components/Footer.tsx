@@ -5,6 +5,20 @@ import { FACEBOOK_URL, INSTAGRAM_URL, PHONE_LINK, PHONE_NUMBER, WHATSAPP_LINK } 
 import { LegalPolicyModal, PolicyType } from './LegalPolicies';
 import { WhatsAppIcon } from './WhatsAppIcon';
 
+export const FooterPageLinks = () => (
+  <nav aria-label="Sayfa bağlantıları" className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-gray-300">
+          <Link to="/matbaa" className="hover:text-white">Matbaa</Link>
+          <Link to="/makine-parkuru" className="hover:text-white">Makine Parkuru</Link>
+          <Link to="/sikca-sorulan" className="hover:text-white">Sıkça Sorulan Sorular</Link>
+          <Link to="/kullanim-sartlari" className="hover:text-white">Kullanım Şartları</Link>
+          <Link to="/gizlilik-politikasi" className="hover:text-white">Gizlilik Politikası</Link>
+          <Link to="/cerez-politikasi" className="hover:text-white">Çerez Politikası</Link>
+          <Link to="/mesafeli-satis-sozlesmesi" className="hover:text-white">Mesafeli Satış Sözleşmesi</Link>
+          <Link to="/teslimat-sartlari" className="hover:text-white">Teslimat Şartları</Link>
+          <Link to="/iptal-ve-iade-sartlari" className="hover:text-white">İptal ve İade Şartları</Link>
+        </nav>
+);
+
 export const Footer = () => {
   const location = useLocation();
   const isGiderMakbuzu = location.pathname.includes('gider-makbuzu');
@@ -174,6 +188,8 @@ export const Footer = () => {
             <button onClick={() => setActivePolicy('delivery')} className="hover:text-[#00E5FF] transition-colors py-1 px-1.5">Teslimat Koşulları</button>
           </div>
         </div>
+
+        <FooterPageLinks />
 
         {/* Legal Modal */}
         <LegalPolicyModal 

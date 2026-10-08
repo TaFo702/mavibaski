@@ -13,6 +13,7 @@ export async function createRouteRenderer(distDir: string, { timeoutMs = 30000 }
   const bundlePath = path.join(bundleDir, 'renderer.mjs');
   let routeComponents: {
     AppRoutes: ComponentType;
+    FooterPageLinks: ComponentType;
     TestWrapper: ComponentType<{ initialPath: string; children?: ReactNode }>;
   };
   try {
@@ -22,7 +23,7 @@ export async function createRouteRenderer(distDir: string, { timeoutMs = 30000 }
     fs.rmSync(bundleDir, { recursive: true, force: true });
     throw error;
   }
-  const { AppRoutes, TestWrapper } = routeComponents;
+  const { AppRoutes, FooterPageLinks, TestWrapper } = routeComponents;
   const activeRenders = new Set<() => void>();
   let disposed = false;
   return {
@@ -59,7 +60,8 @@ export async function createRouteRenderer(distDir: string, { timeoutMs = 30000 }
         output.on('error', error => finish(error));
         const timeout = setTimeout(() => finish(new Error(`SSR zaman aşımı: ${pathname}`)), timeoutMs);
         try {
-          stream = renderToPipeableStream(createElement(TestWrapper, { initialPath: pathname }, createElement(AppRoutes)), {
+          stream = renderToPipeableStream(createElement(TestWrapper, { initialPath: pathname },
+            createElement('div', null, createElement(AppRoutes), createElement('footer', null, createElement(FooterPageLinks)))), {
             onAllReady: () => { if (!settled) stream?.pipe(output); },
             onError: error => finish(error),
             onShellError: error => finish(error)

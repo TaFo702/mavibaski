@@ -186,6 +186,7 @@ const MesafeliSatisSozlesmesiPage = React.lazy(() => import('./components/Mesafe
 const TeslimatSartlariPage = React.lazy(() => import('./components/TeslimatSartlari').then(m => ({ default: m.TeslimatSartlariPage })));
 const IptalVeiadeSartlariPage = React.lazy(() => import('./components/IptalVeiadeSartlari').then(m => ({ default: m.IptalVeiadeSartlariPage })));
 import { Footer } from './components/Footer';
+export { FooterPageLinks } from './components/Footer';
 import { 
   PHONE_NUMBER, 
   PHONE_LINK, 

@@ -47,7 +47,13 @@ const staticRoutes = [
   '/hakkimizda',
   '/iletisim',
   '/blog',
-  '/makine-parkuru'
+  '/makine-parkuru',
+  '/kullanim-sartlari',
+  '/gizlilik-politikasi',
+  '/cerez-politikasi',
+  '/mesafeli-satis-sozlesmesi',
+  '/teslimat-sartlari',
+  '/iptal-ve-iade-sartlari'
 ];
 
 async function generateSitemap() {
@@ -68,7 +74,14 @@ async function generateSitemap() {
     ...cityRoutes
   ]));
 
-  const today = new Date().toISOString().split('T')[0];
+  // Keep recorded dates. A generation run is not evidence of a page update.
+  const previousXML = fs.existsSync('./public/sitemap.xml') ? fs.readFileSync('./public/sitemap.xml', 'utf8') : '';
+  const lastModified = new Map<string, string>();
+  for (const entry of previousXML.matchAll(/<url>[\s\S]*?<\/url>/g)) {
+    const loc = entry[0].match(/<loc>([^<]+)<\/loc>/)?.[1];
+    const date = entry[0].match(/<lastmod>([^<]+)<\/lastmod>/)?.[1];
+    if (loc && date) lastModified.set(loc, date);
+  }
 
   const xmlUrls = allRoutes.map(route => {
     let priority = '0.8';
@@ -93,8 +106,7 @@ async function generateSitemap() {
 
     return `  <url>
     <loc>${BASE_URL}${route}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${changefreq}</changefreq>
+${lastModified.has(`${BASE_URL}${route}`) ? `    <lastmod>${lastModified.get(`${BASE_URL}${route}`)}</lastmod>\n` : ''}    <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
   });

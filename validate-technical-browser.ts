@@ -103,6 +103,22 @@ async function validateTechnicalBrowser() {
 
     for (const width of [360, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 });
+      await page.goto(new URL('/matbaa', baseURL).href);
+      await page.locator('#root main h1').first().waitFor();
+      const directory = page.getByRole('navigation', { name: 'Ürün ve bölge sayfaları', exact: true });
+      await directory.locator('summary').click();
+      assert.ok(await directory.locator('a[href="/cilt-isleri"]').isVisible());
+      assert.ok(await directory.locator('a[href="/sektor/donerci-magnet-baski"]').isVisible());
+      const widthAfterOpen = await page.evaluate(() => Math.max(document.documentElement.scrollWidth, document.body.scrollWidth));
+      assert.ok(widthAfterOpen <= width + 2, `Matbaa overflow with open directory at ${width}px: ${widthAfterOpen}px`);
+      await directory.getByRole('link', { name: 'Cilt İşleri', exact: true }).click();
+      await page.waitForURL('**/cilt-isleri');
+      await page.locator('#root main h1').first().waitFor();
+    }
+    console.log('PASS open Matbaa directory and real product navigation without overflow at four widths');
+
+    for (const width of [360, 390, 768, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
       await page.goto(new URL('/kataloglar', baseURL).href);
       await page.locator('#root h1').first().waitFor();
       const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
@@ -166,6 +182,11 @@ async function validateTechnicalBrowser() {
         }
         assert.equal(await page.getByRole('link', { name: 'FİYAT LİSTESİNİ İNDİR (PDF)', exact: true }).count(), 0);
         if (routePath.startsWith('/blog/')) {
+          assert.equal(await page.locator('img[src=":::"]').count(), 0);
+          for (const file of ['yer-gosterme-belgesi-otokopili', 'yer-gosterme-belgesi-numaratorlu-ornek', 'yer-gosterme-belgesi-doldurulmus-ornek', 'yer-gosterme-belgesi-bos-sablon', 'otokopili-sozlesme-basimi', 'sozlesme-taslagi-baski']) {
+            const image = page.locator(`img[src="/images/sozlesme/${file}.webp"]`).first();
+            await image.evaluate(async node => { const img = node as HTMLImageElement; img.loading = 'eager'; await img.decode(); });
+          }
           for (const title of ['Yer Gösterme Belgesi Şablonu (PDF)', 'Yer Gösterme Belgesi Şablonu (Word)', 'Portföy Gösterim Çizelgesi (Excel)']) {
             await page.getByRole('heading', { name: title, exact: true }).waitFor();
           }

@@ -18,6 +18,7 @@ import {
   KUSE_115_DATA 
 } from '../data/extraProductData';
 import { WHATSAPP_LINK } from '../constants/contact';
+import { SEO_PAGES_DATA } from '../data/seoPagesData';
 
 export const MatbaaPage = () => {
   const { openProductDetail } = useCart();
@@ -307,7 +308,7 @@ export const MatbaaPage = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-8 -right-8 bg-primary text-white p-8 rounded-3xl shadow-xl hidden md:block">
+            <div className="absolute -bottom-8 right-0 lg:-right-8 bg-primary text-white p-8 rounded-3xl shadow-xl hidden md:block">
               <div className="text-4xl font-black mb-1">20+</div>
               <div className="text-sm font-bold uppercase tracking-widest opacity-80">Yıllık Tecrübe</div>
             </div>
@@ -437,6 +438,19 @@ export const MatbaaPage = () => {
           </div>
         </div>
       </section>
+      <nav aria-label="Ürün ve bölge sayfaları" className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <details className="rounded-2xl border border-slate-200 bg-white p-5">
+          <summary className="cursor-pointer font-bold">Ürün ve Bölge Sayfaları</summary>
+          <ul className="mt-4 grid min-w-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
+            <li><Link to="/cilt-isleri" className="text-primary hover:underline">Cilt İşleri</Link></li>
+            {Object.values(SEO_PAGES_DATA).map(page => (
+              <li key={page.path} className="min-w-0">
+                <Link to={page.path} className="block break-words text-primary hover:underline">{page.h1}</Link>
+              </li>
+            ))}
+          </ul>
+        </details>
+      </nav>
     </div>
   );
 };
