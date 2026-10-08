@@ -171,7 +171,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     orderProcessItems: [
       { step: "01", title: "Cilt Adedi Seçimi", desc: "Fiyat tablosundan işletmenizin ihtiyacına uygun cilt adedini belirleyin." },
       { step: "02", title: "WhatsApp İletişim", desc: "Sipariş butonuna tıklayarak firmanıza ait logo ve iletişim detaylarını bize iletin." },
-      { step: "03", title: "Ücretsiz Tasarım Onayı", desc: "Grafik ekibimizin hazırladığı adisyon taslağını ve numaratör aralığını kontrol ederek onaylayın." },
+      { step: "03", title: "Tasarım Onayı", desc: "Grafik ekibimizin hazırladığı adisyon taslağını ve numaratör aralığını kontrol ederek onaylayın." },
       { step: "04", title: "Üretim ve Teslimat", desc: "Onaylanan adisyon koçanları 3–5 iş günü içinde basılarak adresinize kargolanır." }
     ],
     thingsToConsiderTitle: "Adisyon Baskısında Dikkat Edilmesi Gerekenler",
@@ -201,10 +201,10 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
   },
   "siparis-fisi": {
     seoTitle: "Sipariş Fişi Baskı Fiyatları 2026 | Otokopili ve Numaratörlü",
-    seoDescription: "Firmaya özel logolu, otokopili ve numaratörlü sipariş fişi baskısı. 5 ciltten başlayan güncel fiyatları inceleyin, ücretsiz tasarım ve PDF prova ile sipariş verin.",
+    seoDescription: "Firmaya özel logolu, otokopili ve numaratörlü sipariş fişi baskısı. 5 ciltten başlayan güncel fiyatları inceleyin, PDF prova ile sipariş verin.",
     breadcrumbTitle: "Sipariş Fişi",
     h1Title: "Numaratörlü Sipariş Fişi Baskı Fiyatları",
-    subtitle: "Mağaza, atölye, üretici, toptancı, teknik servis ve sipariş üzerine çalışan işletmeler için firmaya özel logolu, otokopili ve numaratörlü sipariş fişi basıyoruz.\n\nSipariş fişleri; müşteri bilgilerini, ürün veya hizmet detaylarını, miktarı, fiyatı, teslim tarihini, ödeme koşullarını ve sipariş notlarını düzenli biçimde kayıt altına almanıza yardımcı olur.\n\n5 ciltten başlayan üretim seçenekleri, ücretsiz mizanpaj desteği ve baskı öncesi PDF prova onayıyla sipariş verebilirsiniz.",
+    subtitle: "Mağaza, atölye, üretici, toptancı, teknik servis ve sipariş üzerine çalışan işletmeler için firmaya özel logolu, otokopili ve numaratörlü sipariş fişi basıyoruz.\n\nSipariş fişleri; müşteri bilgilerini, ürün veya hizmet detaylarını, miktarı, fiyatı, teslim tarihini, ödeme koşullarını ve sipariş notlarını düzenli biçimde kayıt altına almanıza yardımcı olur.\n\n5 ciltten başlayan üretim seçenekleri, mizanpaj desteği ve baskı öncesi PDF prova onayıyla sipariş verebilirsiniz.",
     featureImage: "/images/siparis-fisi/siparis-fisi-basimi.webp",
     featureImageAlt: "14 × 20 cm numaratörlü otokopili sipariş fişi baskı örneği",
     gallery: [
@@ -275,7 +275,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     howToFillContent: [
       "1. Adet ve nüsha seçeneğinizi belirleyin: Fiyat tablosundan ihtiyacınıza uygun cilt adedini ve nüsha sayısını seçin.",
       "2. Logo ve firma bilgilerinizi gönderin: Firma logonuzu, iletişim bilgilerinizi ve fişte bulunmasını istediğiniz alanları WhatsApp üzerinden iletin. PDF, Word, Excel veya daha önce kullandığınız eski sipariş fişinin fotoğrafını gönderebilirsiniz.",
-      "3. Tasarımınız hazırlansın: Mevcut logonuz ve firma bilgileriniz kullanılarak sipariş fişi mizanpajı hazırlanır. Standart mizanpaj ve en fazla üç revizyon ücretsizdir. Yeni logo tasarımı ve kapsamlı kurumsal kimlik çalışmaları ayrıca fiyatlandırılır.",
+      "3. Tasarımınız hazırlansın: Mevcut logonuz ve firma bilgileriniz kullanılarak sipariş fişi mizanpajı hazırlanır. En fazla üç revizyon ücretsizdir. Yeni logo tasarımı ve kapsamlı kurumsal kimlik çalışmaları ayrıca fiyatlandırılır.",
       "4. PDF provayı kontrol edin: Baskıya girmeden önce hazırlanmış PDF prova size gönderilir. Firma bilgilerini, telefon numaralarını, sipariş alanlarını, numaratörü ve metinleri kontrol ederek onay verirsiniz.",
       "5. Üretim ve kargo: Yazılı onayınızın ardından üretim başlatılır. Standart üretim süresi 3–5 iş günüdür. Tamamlanan ürünler özenle paketlenerek adresinize gönderilir."
     ],
@@ -309,7 +309,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { label: "Fatura yerine geçme", col1: "Hayır", col2: "Evet" }
     ],
     importanceTitle: "Mavi Basım Üretim ve Tasarım Güvencesi",
-    importanceContent: "Sipariş fişleri İstanbul Topkapı’daki üretim tesisimizde hazırlanır. Yıllara dayanan matbaa üretim deneyimi, baskı öncesi PDF prova onayı, ücretsiz standart mizanpaj desteği, numaratör dahil fiyatlandırma, düşük adetli ve toptan üretim seçenekleri, Türkiye’nin 81 iline gönderim ve baskı öncesi dosya kontrolü ile sunulmaktadır. PDF prova onayınız alınmadan üretime başlanmaz.",
+    importanceContent: "Sipariş fişleri İstanbul Topkapı’daki üretim tesisimizde hazırlanır. Yıllara dayanan matbaa üretim deneyimi, baskı öncesi PDF prova onayı, standart mizanpaj desteği, numaratör dahil fiyatlandırma, düşük adetli ve toptan üretim seçenekleri, Türkiye’nin 81 iline gönderim ve baskı öncesi dosya kontrolü ile sunulmaktadır. PDF prova onayınız alınmadan üretime başlanmaz.",
     otokopiTitle: "Baskıya Uygun Dosya Nasıl Gönderilir?",
     otokopiContent: "Hazır tasarımınız bulunuyorsa PDF, Adobe Illustrator veya yüksek çözünürlüklü görsel formatında gönderebilirsiniz. Yazıların okunabilir büyüklükte olması, kesim kenarlarına çok yakın bilgi yerleştirilmemesi ve logonun vektörel olması önerilir. Hazır tasarımınız yoksa eski fişinizin fotoğrafını, Word veya Excel örneğini göndermeniz yeterlidir. Baskıya uygun sayfa düzeni tarafımızdan hazırlanır.",
     faqList: [
@@ -323,7 +323,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         q: "Tasarım hizmeti ücretli mi?",
-        a: "Mevcut logonuz ve firma bilgileriniz kullanılarak hazırlanan standart mizanpaj ile en fazla üç revizyon ücretsizdir. Kapsamlı logo çizimi çalışmaları ayrıca fiyatlandırılır."
+        a: "Mevcut logonuz ve firma bilgileriniz kullanılarak standart mizanpaj hazırlanır. Ücretsiz tasarım hizmetimiz bulunmuyor. En fazla üç revizyon ücretsizdir. Kapsamlı logo çizimi çalışmaları ayrıca fiyatlandırılır."
       },
       {
         q: "Kaç nüshalı sipariş fişi bastırabilirim?",
@@ -643,7 +643,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { q: "Sözleşme koçanları kaç nüsha üretilebilir?", a: "İhtiyaca göre 1 asıl 1 suret, 1 asıl 2 suret veya 1 asıl 3 suret seçenekleriyle üretilebilmektedir." },
       { q: "Sözleşme baskılarında perfore uygulanıyor mu?", a: "Evet. Talep edilmesi halinde kolay koparma amaçlı perfore uygulaması yapılabilmektedir." },
       { q: "Türkiye'nin her iline gönderim yapıyor musunuz?", a: "Evet. İstanbul'daki üretim tesisimizden Türkiye'nin tüm illerine kargo gönderimi yapılmaktadır." },
-      { q: "Sözleşme koçanı tasarımı ücretsiz mi?", a: "Mevcut logonuz ve firma bilgileriniz kullanılarak hazırlanan baskı tasarımları ücretsiz olarak hazırlanabilmektedir." },
+      { q: "Sözleşme koçanı tasarımı ücretsiz mi?", a: "Ücretsiz tasarım hizmetimiz bulunmuyor. Mevcut logonuz ve firma bilgileriniz kullanılarak baskı tasarımları hazırlanabilir." },
       { q: "Sözleşmelerde numaratör numarası hangi renkte basılmaktadır?", a: "Sözleşme koçanlarımızda numaratör baskısı, yasal koruyuculuğu ve takibi kolaylaştırması açısından standart olarak kırmızı renkte ve otomatik sıralı olarak basılmaktadır." },
       { q: "Sözleşmelerde perfore seçeneği var mı, ücretli mi?", a: "Evet, sayfaların koçandan pürüzsüz ve kolayca yırtılabilmesi için talebinize bağlı olarak perfore (tırtıklı çizgi) seçeneği eklemekteyiz ve bu işlem için ek bir ücret talep etmiyoruz." },
       { q: "Kendi özel sözleşme tasarımımızı gönderebilir miyiz?", a: "Tabii ki. Mevcut Word, PDF, Excel veya taranmış sözleşme taslağınızı bize iletebilirsiniz. Grafik ekibimiz logonuzu ekleyerek baskıya uygun hale getirir ve PDF prova gönderir." },
@@ -1202,7 +1202,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
   },
   "tahsilat-ve-tediye-makbuzu": {
     seoTitle: "Tediye Makbuzu Baskı Fiyatları 2026 | Numaratörlü ve Otokopili",
-    seoDescription: "Numaratörlü ve otokopili tediye makbuzu baskı fiyatları. 14x20 cm A5 ölçü, ücretsiz tasarım, PDF prova ve Türkiye geneli hızlı teslimat.",
+    seoDescription: "Numaratörlü ve otokopili tediye makbuzu baskı fiyatları. 14x20 cm A5 ölçü, PDF prova ve Türkiye geneli hızlı teslimat.",
     breadcrumbTitle: "Tediye Makbuzu",
     h1Title: "Numaratörlü ve Otokopili Tediye Makbuzu Baskı Fiyatları",
     subtitle: "Firmanıza özel numaratörlü ve otokopili tediye makbuzu baskısı için bizimle iletişime geçebilirsiniz.",

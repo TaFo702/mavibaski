@@ -1114,9 +1114,9 @@ export const MakbuzFormlarPage = () => {
               <div className="flex gap-3">
                 <span className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-base shrink-0 font-bold">✓</span>
                 <div>
-                  <h3 className="text-sm font-black text-black uppercase mb-0.5">Ücretsiz Tasarım</h3>
+                  <h3 className="text-sm font-black text-black uppercase mb-0.5">Tasarım Desteği</h3>
                   <p className="text-[11px] text-gray-500 font-medium leading-relaxed">
-                    Mevcut logonuzla hazırlanan mizanpaj şablonu ve baskı provaları (en fazla 3 revizyona kadar) tamamen <strong>ücretsizdir</strong> (yeni logo ve kurumsal kimlik çizimi hariç).
+                    Mevcut logonuzla hazırlanan mizanpaj şablonu onayınıza sunulur. Baskı provaları ve en fazla 3 revizyon <strong>ücretsizdir</strong> (yeni logo ve kurumsal kimlik çizimi hariç).
                   </p>
                 </div>
               </div>
@@ -1266,7 +1266,7 @@ export const MakbuzFormlarPage = () => {
                       <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> Kırmızı otomatik seri numaratör baskısı dahil</li>
                       <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> 1 asıl + 1, 2 veya 3 suret nüsha seçenekleri</li>
                       <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> Üstten tırtıklı perfore ve telli dikişli cilt</li>
-                      <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> Ücretsiz mizanpaj ve baskı öncesi PDF prova</li>
+                      <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> Mizanpaj ve ücretsiz baskı öncesi PDF prova</li>
                       <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> Türkiye geneli hızlı kargo teslimatı</li>
                     </ul>
                   ) : (
@@ -1424,7 +1424,7 @@ export const MakbuzFormlarPage = () => {
                       { key: "Baskı Yöntemi", val: "Heidelberg Ofset Baskı (Siyah, Lacivert veya Özel Renk)" },
                       { key: "Numaratör", val: "Kırmızı Otomatik Seri Numarası Baskısı (Dahil)" },
                       { key: "Cilt ve Perforaj", val: "Üstten Tel Dikişli & Tırtıklı Koparma Hattı" },
-                      { key: "Tasarım Desteği", val: "Ücretsiz Mizanpaj ve PDF Prova Onayı" },
+                      { key: "Tasarım Desteği", val: "Mizanpaj ve Ücretsiz PDF Prova Onayı" },
                       { key: "İmalat Süresi", val: "PDF Onayından Sonra 3–5 İş Günü" },
                       { key: "Minimum Sipariş", val: "5 Cilt" },
                       { key: "Teslimat", val: "Çift Oluklu Kolilerle Türkiye Geneli Kargo" }
@@ -1437,7 +1437,7 @@ export const MakbuzFormlarPage = () => {
                       { key: "Baskı Yöntemi", val: "Heidelberg Ofset Baskı (1 Renk veya Özel Pantone)" },
                       { key: "Numaratör", val: "Kırmızı Otomatik Seri Numarası Baskısı (Dahil)" },
                       { key: "Cilt ve Perforaj", val: "Üstten Tel Dikişli & Tırtıklı Koparma Hattı" },
-                      { key: "Tasarım Desteği", val: "Ücretsiz Mizanpaj ve PDF Prova Onayı" },
+                      { key: "Tasarım Desteği", val: "Mizanpaj ve Ücretsiz PDF Prova Onayı" },
                       { key: "İmalat Süresi", val: "PDF Onayından Sonra 3–5 İş Günü" },
                       { key: "Minimum Sipariş", val: "5 Cilt" },
                       { key: "Teslimat", val: "Çift Oluklu Kolilerle Türkiye Geneli Kargo" }
@@ -1540,7 +1540,7 @@ export const MakbuzFormlarPage = () => {
                     <>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-3">
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
-                          <span className="text-primary font-extrabold text-xs sm:text-sm">Ücretsiz Tasarım</span>
+                          <span className="text-primary font-extrabold text-xs sm:text-sm">Tasarım Desteği</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
                           <span className="text-emerald-600 font-extrabold text-xs sm:text-sm">24 Saat İçinde PDF Prova</span>
@@ -1576,7 +1576,7 @@ export const MakbuzFormlarPage = () => {
                           <span className="text-[11px] text-slate-500 font-medium mt-0.5">İmalatçı Garantisi</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center col-span-2 sm:col-span-1">
-                          <span className="text-indigo-600 font-extrabold text-xs sm:text-sm">Ücretsiz Tasarım</span>
+                          <span className="text-indigo-600 font-extrabold text-xs sm:text-sm">Tasarım Desteği</span>
                           <span className="text-[11px] text-slate-500 font-medium mt-0.5">Kurumsal Logolu</span>
                         </div>
                       </div>
@@ -1620,7 +1620,7 @@ export const MakbuzFormlarPage = () => {
                         </div>
                         <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
                           <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">3</div>
-                          <h3 className="text-sm font-black text-black uppercase mb-1">Ücretsiz Tasarım Onayı</h3>
+                          <h3 className="text-sm font-black text-black uppercase mb-1">Tasarım Onayı</h3>
                           <p className="text-xs text-slate-600 font-medium leading-relaxed">Grafik ekibimizin hazırladığı adisyon taslağını onaylayın.</p>
                         </div>
                         <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
@@ -2341,7 +2341,7 @@ export const MakbuzFormlarPage = () => {
                         <strong><Link to="/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ürünleri ise restoran, kafe, lokanta ve perakende işletmelerinde yoğun olarak kullanılmaktadır. Müşteri siparişlerinin eksiksiz alınması, ürün adetlerinin takip edilmesi ve servis süreçlerinin düzenli ilerlemesi açısından önemli bir görev üstlenirler.
                       </p>
                       <p>
-                        Mavi Basım, otokopili gider makbuzu, numaratörlü gider makbuzu ve logolu gider makbuzu üretimlerinde uzmanlaşmış bir matbaa firmasıdır. İşletmenize özel hazırlanan gider makbuzu koçanı tasarımları, kullanım alışkanlıklarınıza göre düzenlenebilmektedir. Gider makbuzu basımı sürecinde ücretsiz tasarım desteği sağlanırken, onaylanan çalışmalar kısa sürede baskıya alınmaktadır. Türkiye'nin her yerinden gider makbuzu siparişi verebilir ve ürünlerinizi güvenli şekilde teslim alabilirsiniz.
+                        Mavi Basım, otokopili gider makbuzu, numaratörlü gider makbuzu ve logolu gider makbuzu üretimlerinde uzmanlaşmış bir matbaa firmasıdır. İşletmenize özel hazırlanan gider makbuzu koçanı tasarımları, kullanım alışkanlıklarınıza göre düzenlenebilmektedir. Gider makbuzu basımı sürecinde tasarım desteği sağlanırken, onaylanan çalışmalar kısa sürede baskıya alınmaktadır. Türkiye'nin her yerinden gider makbuzu siparişi verebilir ve ürünlerinizi güvenli şekilde teslim alabilirsiniz.
                       </p>
                     </>
                   ) : (
@@ -2724,7 +2724,7 @@ export const MakbuzFormlarPage = () => {
                     {[
                       "İstanbul Topkapı Matbaacılar Sitesi üretimi",
                       "5 ciltten başlayan düşük adet baskı imkanı",
-                      "Ücretsiz grafik düzenleme desteği",
+                      "Grafik düzenleme desteği",
                       "PDF prova onayı sonrası üretim",
                       "Numaratör ve perfore seçenekleri",
                       "Türkiye geneli kargo gönderimi",
@@ -3808,7 +3808,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center col-span-2 sm:col-span-1">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
-                  <span className="text-xs font-bold text-white">Ücretsiz Grafik Desteği</span>
+                  <span className="text-xs font-bold text-white">Grafik Desteği</span>
                 </div>
               </div>
             </div>

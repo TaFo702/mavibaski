@@ -3105,7 +3105,7 @@ const TrustBar = () => {
     { 
       icon: <ShieldCheck size={20} />, 
       title: "Güvenli Alışveriş", 
-      desc: "Kişisel verilerinizi koruyor, ödemelerde 3D secure seçeneği sunarak ödemelerinizi güvende yapmanızı sağlıyoruz." 
+      desc: "Kişisel verilerinizi koruyoruz."
     },
   ];
 
@@ -3502,7 +3502,7 @@ const HOME_FAQS = [
   },
   {
     question: "Kendi tasarımım hazır değil, tasarım desteği veriyor musunuz?",
-    answer: "Evet, tasarımınız hazır olmasa bile uzman grafik ekibimiz logonuzu yerleştirme, yazılarınızı düzenleme, taşma paylarını ayarlama ve matbaa standartlarına uygun şık şablonlar oluşturma konularında size ücretsiz teknik destek sunar. Sipariş vermeden önce logonuzu yüksek çözünürlüklü olarak iletmeniz yeterlidir."
+    answer: "Evet, tasarımınız hazır olmasa bile uzman grafik ekibimiz logonuzu yerleştirme, yazılarınızı düzenleme, taşma paylarını ayarlama ve matbaa standartlarına uygun şık şablonlar oluşturma konularında size teknik destek sunar. Sipariş vermeden önce logonuzu yüksek çözünürlüklü olarak iletmeniz yeterlidir."
   },
   {
     question: "Baskı öncesi PDF onay provası nedir, neden önemlidir?",
@@ -3522,7 +3522,7 @@ const HOME_FAQS = [
   },
   {
     question: "Ödeme seçenekleri ve şartlarınız nelerdir?",
-    answer: "Kurumsal sipariş süreçlerimizde, onay provasının ardından banka havalesi/EFT veya 3D Secure güvenli ödeme altyapımız üzerinden kredi kartıyla (tek çekim veya taksit seçenekleriyle) ödemenizi kolayca gerçekleştirebilirsiniz. Ödeme teyidinin ardından siparişiniz anında üretim planlamasına alınır."
+    answer: "Kurumsal sipariş süreçlerimizde, onay provasının ardından banka havalesi/EFT ile ödemenizi kolayca gerçekleştirebilirsiniz. Ödeme teyidinin ardından siparişiniz anında üretim planlamasına alınır."
   },
   {
     question: "Kendi hazır tasarımımızı hangi formatlarda göndermeliyiz?",
@@ -3814,8 +3814,8 @@ const HomePage = () => {
                 {
                   step: "02",
                   title: "Tasarım Gönder",
-                  desc: "Hazır tasarımınızı (PDF, AI, CDR) iletin. Tasarımınız yoksa kurumsal logonuz ve bilgilerinizle grafik ekibimizden ücretsiz teknik destek alın.",
-                  badge: "Ücretsiz Grafik"
+                  desc: "Hazır tasarımınızı (PDF, AI, CDR) iletin. Tasarımınız yoksa kurumsal logonuz ve bilgilerinizle grafik ekibimizden teknik destek alın.",
+                  badge: "Grafik Desteği"
                 },
                 {
                   step: "03",

@@ -441,7 +441,7 @@ BTN_LINK_2: /brosur
     faq: [
       {
         question: 'Tasarım desteği veriyor musunuz?',
-        answer: 'Evet. Deneyimli grafik tasarım ekibimiz, sipariş veren tüm müşterilerimiz için mizanpaj ve teknik düzenleme desteğini ücretsiz olarak sunmaktadır.'
+        answer: 'Evet. Deneyimli grafik tasarım ekibimiz, sipariş veren tüm müşterilerimiz için mizanpaj ve teknik düzenleme desteğini sunmaktadır.'
       },
       {
         question: 'Minimum sipariş miktarı nedir?',
@@ -457,7 +457,7 @@ BTN_LINK_2: /brosur
       },
       {
         question: 'Tasarım dosyam hazır değil. Sadece logo ve içeriklerimi göndererek sipariş verebilir miyim?',
-        answer: 'Kesinlikle evet. Hazır bir tasarım dosyanız yoksa hiç dert etmeyin. Bize sadece logonuzu, broşürde yer almasını istediğiniz yazılı metinleri ve varsa ürün fotoğraflarınızı iletmeniz yeterlidir. Uzman grafik tasarım ekibimiz, kurumsal kimliğinize ve renklerine uygun, modern ve dikkat çekici broşür mizanpajını tamamen ücretsiz olarak hazırlar ve baskı öncesinde onayınız için size dijital prova olarak sunar.'
+        answer: 'Kesinlikle evet. Hazır bir tasarım dosyanız yoksa hiç dert etmeyin. Bize sadece logonuzu, broşürde yer almasını istediğiniz yazılı metinleri ve varsa ürün fotoğraflarınızı iletmeniz yeterlidir. Uzman grafik tasarım ekibimiz, kurumsal kimliğinize ve renklerine uygun, modern ve dikkat çekici broşür mizanpajını hazırlar ve baskı öncesinde onayınız için size dijital prova olarak sunar.'
       },
       {
         question: 'Türkiye’nin her iline kargo gönderimi yapıyor musunuz?',
@@ -855,7 +855,7 @@ Sektörünüzün dinamiklerine uygun doğru tasarım ve dağıtım kurgusunu se�
 
 ---
 
-## Çevrimiçi Sipariş, Ücretsiz Tasarım Desteği ve Güvenli Sevkiyat
+## Çevrimiçi Sipariş, Tasarım Desteği ve Güvenli Sevkiyat
 
 Mavi Basım olarak Anadolu'nun her köşesindeki organize sanayi bölgelerine, bayi ağlarına, zincir restoran şubelerine ve yerel esnaflara kesintisiz, hızlı ve güvenli bir online matbaa hizmeti sunuyoruz. Başta **Ankara**, **İzmir**, **Bursa**, **Konya**, **Gaziantep**, **Kayseri**, **Samsun** ve **Antalya** olmak üzere Türkiye'nin dört bir yanındaki büyükşehirlerden düzenli olarak yüksek adetli siparişler alıyor; İstanbul Topkapı merkezli modern tesisimizde üretilen magnetleri, en uzak bölgelere dahi aynı üretim hassasiyeti, özenli paketleme ve güvenli kargo süreçleriyle ulaştırıyoruz.
 
@@ -870,7 +870,7 @@ Fuar, açılış veya acil kampanya gibi durumlarda **Ekspres Üretim** program�
 
 :::cta
 TITLE: Sınırsız Revizyonlu & Kolay Magnet Siparişi
-DESC: İşletmenize özel tasarlanmış, buzdolabından asla düşmeyen yüksek çekim gücüne sahip mıknatıslı modellerimiz için hemen sipariş verin! Grafik tasarım ve dijital PDF prova desteği tamamen ücretsizdir.
+DESC: İşletmenize özel tasarlanmış, buzdolabından asla düşmeyen yüksek çekim gücüne sahip mıknatıslı modellerimiz için hemen sipariş verin! Grafik tasarım desteği sunulur. Dijital PDF prova ücretsizdir.
 BTN_TEXT: WhatsApp ile Sipariş Ver
 BTN_LINK: https://wa.me/905366022373
 :::
@@ -1153,7 +1153,7 @@ BTN_LINK: https://wa.me/905366022373
       },
       {
         question: 'Grafik tasarım desteği veriyor musunuz?',
-        answer: 'Evet, profesyonel grafik tasarım ekibimiz logonuzu, unvanınızı ve iletişim bilgilerinizi en estetik ve okunabilir şekilde konumlandırarak sektörel standartlara uygun kartvizit mizanpajınızı tamamen ücretsiz olarak hazırlamaktadır.'
+        answer: 'Evet, profesyonel grafik tasarım ekibimiz logonuzu, unvanınızı ve iletişim bilgilerinizi en estetik ve okunabilir şekilde konumlandırarak sektörel standartlara uygun kartvizit mizanpajınızı hazırlamaktadır.'
       },
       {
         question: 'Elimde sadece logo var, kartvizit tasarımı yapabilir misiniz?',
@@ -1323,7 +1323,7 @@ BTN_LINK_2: https://wa.me/905366022373
       },
       {
         question: 'Tasarımımız hazır değilse ambalaj veya matbaa siparişi verebilir miyiz?',
-        answer: 'Kesinlikle evet. Menü fiyat listenizi, logonuzu ve varsa ürün fotoğraflarınızı bize WhatsApp veya e-posta ile iletmeniz yeterlidir. Uzman grafik tasarım kadromuz, restoranınızın kurumsal renklerine uygun mizanpajları tamamen ücretsiz olarak hazırlar ve baskıya girmeden önce onayınıza sunar.'
+        answer: 'Kesinlikle evet. Menü fiyat listenizi, logonuzu ve varsa ürün fotoğraflarınızı bize WhatsApp veya e-posta ile iletmeniz yeterlidir. Uzman grafik tasarım kadromuz, restoranınızın kurumsal renklerine uygun mizanpajları hazırlar ve baskıya girmeden önce onayınıza sunar.'
       },
       {
         question: 'Sipariş ettiğimiz ambalaj ve matbaa ürünleri gıda ile temasa uygun mudur?',
@@ -1586,7 +1586,7 @@ Hasarsız Paletli Sevk | Üretimi tamamlanan kutular düz (açık) şekilde, az 
 
 :::cta
 TITLE: Markanıza Özel Kutu Tasarımı ve Üretimi
-DESC: Ürünlerinize değer katacak, sağlamlığı tescilli ve yüksek çözünürlüklü ofset baskılı karton kutular imal ediyoruz. Ücretsiz bıçak şablonu ve numune desteği için hemen WhatsApp hattımızdan bizimle iletişime geçin.
+DESC: Ürünlerinize değer katacak, sağlamlığı tescilli ve yüksek çözünürlüklü ofset baskılı karton kutular imal ediyoruz. Bıçak şablonu ve ücretsiz numune desteği için hemen WhatsApp hattımızdan bizimle iletişime geçin.
 BTN_TEXT: Özel Kutu Fiyatlarını Alın
 BTN_LINK: /kutu
 BTN_TEXT_2: WhatsApp Müşteri Temsilcisi
@@ -1809,8 +1809,8 @@ Kutu bıçak izi, kartonun nereden kesileceğini, nereden katlanacağını (pily
 * **Emniyet Payı:** Bıçak çizgisinden içeriye 3 mm mesafe.`,
     faqList: [
       {
-        question: 'Bıçak izini Mavi Basım ücretsiz hazırlıyor mu?',
-        answer: 'Evet. Sipariş veren müşterilerimize milimetrik ebatlarına uygun bıçak izini PDF olarak ücretsiz gönderiyoruz.'
+        question: 'Bıçak izini Mavi Basım hazırlıyor mu?',
+        answer: 'Evet. Sipariş veren müşterilerimize milimetrik ebatlarına uygun bıçak izini PDF olarak gönderiyoruz.'
       }
     ]
   },

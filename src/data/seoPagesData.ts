@@ -1919,7 +1919,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
       }
     ],
     faqs: [
-      { question: 'Tasarım logosunu nasıl ekletebiliyoruz?', answer: 'Kendi logonuzu ve adres bilgilerinizi bize PDF, JPEG veya PNG formatında ilettiğinizde tasarım ekibimiz şablonu ücretsiz düzenleyip onayınıza sunar.' },
+      { question: 'Tasarım logosunu nasıl ekletebiliyoruz?', answer: 'Kendi logonuzu ve adres bilgilerinizi bize PDF, JPEG veya PNG formatında ilettiğinizde tasarım ekibimiz şablonu düzenleyip onayınıza sunar.' },
       { question: 'Bitlis kargo teslim süreci nedir?', answer: 'Fiş baskısı ve numaratör işlemleri 3-4 iş gününde tamamlanarak Bitlis adresinize korunaklı ambalajlar içerisinde hızlı kargo ile sevk edilir.' }
     ],
     internalLinks: [
@@ -2086,7 +2086,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
     ],
     faqs: [
       { question: 'Halı yıkama magnetlerinde asgari sipariş adedi nedir?', answer: 'Bütçe dostu fiyat avantajından faydalanmanız için magnet siparişlerimiz asgari 1000 adetten başlamaktadır.' },
-      { question: 'Kapı askılı broşürler için tasarım desteği veriyor musunuz?', answer: 'Evet, halı ve koltuk yıkama şablonlarımızdan dilediğinizi seçebilir, logonuzu ve iletişim bilgilerinizi ekibimizle tamamen ücretsiz paylaşarak tasarımınızı tamamlayabilirsiniz.' }
+      { question: 'Kapı askılı broşürler için tasarım desteği veriyor musunuz?', answer: 'Evet, halı ve koltuk yıkama şablonlarımızdan dilediğinizi seçebilir, logonuzu ve iletişim bilgilerinizi ekibimizle paylaşarak tasarımınızı tamamlayabilirsiniz.' }
     ],
     internalLinks: [
       { text: 'Broşür Baskı Sayfası', path: '/brosur' },

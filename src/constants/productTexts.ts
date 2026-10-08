@@ -345,8 +345,8 @@ Kutunun nemden, kirden ve çizilmelerden korunması için şu selefon çeşitler
   Hayır, aynı işlem değildir. Selefon, kartonun üzerine lamine edilen koruyucu bir ince plastiktir (film). Lak ise baskı üzerine sürülen sıvı ciladır. Görsel etki ve estetik görünüm için mat selefon üzeri lokal UV lak sıklıkla uygulanır.
 * **Pencereli (asetatlı) kutu imalatı yapıyor musunuz?**
   Evet, gıda, kurabiye, hediyelik ve kozmetik kutularında ürünün içerisinin görünmesini sağlayan özel bıçak kesimli ve şeffaf asetat yapıştırmalı pencereli kutu imalatı yapmaktayız.
-* **Kutu bıçak izi (çizimi) şablonu ücretsiz mi sağlanıyor?**
-  Evet, Mavi Basım'dan sipariş veren müşterilerimize, belirttikleri ölçülere uygun vektörel PDF/AI kutu bıçak izi şablonunu ücretsiz teslim ediyoruz.
+* **Kutu bıçak izi (çizimi) şablonu sağlanıyor mu?**
+  Evet, Mavi Basım'dan sipariş veren müşterilerimize, belirttikleri ölçülere uygun vektörel PDF/AI kutu bıçak izi şablonunu teslim ediyoruz.
 * **Seri üretim öncesi numune (maket) yapıyor musunuz?**
   Evet, yüksek adetli siparişlerde numune kesim sistemlerimizde birebir ölçüde baskısız veya dijital baskılı maket numune hazırlayarak onayınıza sunuyoruz.
 * **İstanbul içi ve şehir dışı teslimat süreciniz nasıldır?**

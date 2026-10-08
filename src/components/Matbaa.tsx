@@ -34,7 +34,7 @@ export const MatbaaPage = () => {
     },
     {
       title: "1.000 Adet A5 Broşür Sadece 1.300\u00A0₺!",
-      subtitle: "115gr Parlak Kuşe Kağıt • Çift Yön Renkli Baskı • Ücretsiz Tasarım Desteği • Matbaadan Direkt Hizmet",
+      subtitle: "115gr Parlak Kuşe Kağıt • Çift Yön Renkli Baskı • Tasarım Desteği • Matbaadan Direkt Hizmet",
       image: "/b2.webp",
       blueBtn: { text: "Hemen Sipariş Ver", link: "/brosur" },
       outlineBtn: { text: "Ürünlerimizi İnceleyin", link: "/brosur" }
@@ -357,7 +357,7 @@ export const MatbaaPage = () => {
             { id: "4", title: "Yüksek Kalite", desc: "Güncel Komori & Heidelberg makineleri." },
             { id: "5", title: "Hızlı Onay", desc: "Tasarım onayı sonrası üretim." },
             { id: "6", title: "Ekonomik Çözümler", desc: "Rekabetçi fiyatlarla en kaliteli baskı." },
-            { id: "7", title: "Ücretsiz Destek", desc: "Profesyonel grafik tasarım ekibi." },
+            { id: "7", title: "Grafik Desteği", desc: "Profesyonel grafik tasarım ekibi." },
             { id: "8", title: "Tam Kontrol", desc: "Tüm süreçler kendi bünyemizde." }
           ].map((item, idx) => (
             <div key={idx} className="flex gap-4">

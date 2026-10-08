@@ -55,7 +55,7 @@ export const SikcaSorulanPage = () => {
           <ul className="list-disc pl-5 space-y-1.5 text-sm text-gray-500">
             <li><strong>Revizyon Sınırı:</strong> Taslak tasarım hazırlandıktan sonra, beğeninize göre yazı tipi, renk, yerleşim ve logo boyutlarında <strong>en fazla 3 kez ücretsiz revizyon</strong> hakkınız bulunmaktadır.</li>
             <li><strong>Onay Verilmezse Süreç:</strong> Hazırlanan tasarımlara dijital imza/PDF onayı vermediğiniz sürece işiniz kesinlikle basılmaz. Tasarım aşamasında anlaşma sağlanamazsa, baskı üretime geçmediği için siparişinizi iptal edebilir ve ödemenizi kesintisiz geri alabilirsiniz.</li>
-            <li><strong>Tasarım Hazırlama:</strong> Kurumsal logonuzun vektörel formatını (PDF, AI, CDR, SVG) iletmeniz durumunda standart yerleşim tasarımları ücretsizdir.</li>
+            <li><strong>Tasarım Hazırlama:</strong> Kurumsal logonuzun vektörel formatını (PDF, AI, CDR, SVG) iletmeniz durumunda standart yerleşim tasarımları hazırlanabilir. Ücretsiz tasarım hizmetimiz bulunmuyor.</li>
           </ul>
 
           <div className="mt-4">
@@ -256,7 +256,7 @@ export const SikcaSorulanPage = () => {
       a: (
         <div className="space-y-4">
           <p className="text-gray-500 text-sm font-medium leading-relaxed">
-            Banka hesap numaralarımıza Havale/EFT yapabilir veya web sitemiz üzerinden 256-bit SSL korumalı 3D Secure güvenli ödeme sistemini kullanarak tüm kredi kartları veya banka kartları ile ödemenizi hızlıca tamamlayabilirsiniz.
+            Banka hesap numaralarımıza Havale/EFT yapabilirsiniz.
           </p>
           <div className="mt-6 pt-4 border-t border-gray-100">
             <span className="block text-xs font-black text-black uppercase mb-2">İlgili Sayfalar</span>
@@ -308,7 +308,7 @@ export const SikcaSorulanPage = () => {
             {[
               { num: "01", title: "Talep", desc: "Ürün & adet seçimi yapın" },
               { num: "02", title: "Teklif", desc: "Anında net fiyat alın" },
-              { num: "03", title: "Tasarım", desc: "Ücretsiz grafik desteği" },
+              { num: "03", title: "Tasarım", desc: "Grafik desteği" },
               { num: "04", title: "PDF Onayı", desc: "Baskı öncesi son prova" },
               { num: "05", title: "Baskı", desc: "Topkapı'da yüksek kalite" },
               { num: "06", title: "Kargo", desc: "81 ile kapıya teslimat" }

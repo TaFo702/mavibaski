@@ -922,7 +922,7 @@ export const GrafikTasarimPage = () => {
                   </div>
                 </div>
                 <div className="mt-4 bg-primary/5 text-primary text-[10.5px] p-3 rounded-lg font-bold border border-primary/10">
-                  💡 <strong>Sanayici Tarifesi Avantajı:</strong> OSB'lerde yer alan üretim tesislerinin yüksek hacimli etiket, koli, kutu ve katalog baskı siparişlerinde tasarım sürecini tamamen ücretsiz yürütüyor ve ambar sevkiyatlarında özel nakliye indirimleri uyguluyoruz.
+                  💡 <strong>Sanayici Tarifesi Avantajı:</strong> OSB'lerde yer alan üretim tesislerinin yüksek hacimli etiket, koli, kutu ve katalog baskı siparişlerinde tasarım sürecini yürütüyor ve ambar sevkiyatlarında özel nakliye indirimleri uyguluyoruz.
                 </div>
               </div>
 

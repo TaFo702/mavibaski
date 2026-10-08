@@ -540,7 +540,7 @@ export const HakkimizdaPage = () => {
             </h2>
             <p className="text-xs md:text-sm text-gray-300 leading-relaxed mb-8">
               Projenize özel ölçü, farklı adet veya spesifik kağıt gramajları için anında en avantajlı fiyat teklifini hazırlayalım. 
-              Gerekli tüm şablon hazırlama ve teknik dosya kontrolü işlemleriniz grafik ekibimizce ücretsiz gerçekleştirilir.
+              Şablon hazırlama işlemleriniz grafik ekibimizce gerçekleştirilir. Teknik dosya kontrolü ücretsizdir.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
