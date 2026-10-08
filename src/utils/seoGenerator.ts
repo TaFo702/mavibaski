@@ -4181,6 +4181,7 @@ ${faqHtml}`;
       "@context": "https://schema.org",
       "@type": "ImageObject",
       "contentUrl": `https://mavibasim.com${g.src}`,
+      "copyrightNotice": "Mavi Basım Matbaacılık",
       "caption": g.alt || g.title
     }));
 

@@ -150,8 +150,8 @@ async function validateSiteBrowser() {
       }
       for (const href of result.hrefs) recordTarget(links, href, entry.path);
       for (const license of result.licenses) recordTarget(licenses, license, entry.path);
-      if (entry.path.startsWith('/blog/') && result.imageObjectsMissingCopyrightNotice.length) {
-        check.issues.push('blog-image-copyright-notice-missing');
+      if (result.imageObjectsMissingCopyrightNotice.length) {
+        check.issues.push('image-copyright-notice-missing');
       }
     } catch (error) {
       check.issues.push(`incomplete: ${String(error)}`);
