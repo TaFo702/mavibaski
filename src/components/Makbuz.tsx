@@ -3259,7 +3259,7 @@ export const MakbuzFormlarPage = () => {
                       { name: "Tediye Makbuzu Baskı", path: "/tediye-makbuzu", desc: "Kasadan yapılan ödeme ve avans kayıt formları." },
                       { name: "Gider Makbuzu Baskı", path: "/gider-makbuzu", desc: "İşletme içi masraf ve gider takip belgeleri." },
                       { name: "Sözleşme Koçanı Baskı", path: "/sozlesme-baski", desc: "Hizmet ve satış sözleşmeleri için otokopili formlar." },
-                      { name: "Servis Formu Baskı", path: "/servis-formu", desc: "Teknik servis cihaz teslim ve bakım formları." }
+                      { name: "Makbuz & Formlar", path: "/makbuz-ve-formlar", desc: "İşletmeler için farklı makbuz ve matbu evrak seçenekleri." }
                     ].map((prod, pIdx) => (
                       <Link 
                         to={prod.path} 
