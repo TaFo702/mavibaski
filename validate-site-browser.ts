@@ -108,6 +108,7 @@ async function validateSiteBrowser() {
             return { element: element.tagName.toLowerCase() + (element.id ? `#${element.id}` : '') + '.' + String(element.className).trim().split(/\s+/).slice(0, 5).join('.'), left: Math.round(rect.left), right: Math.round(rect.right), width: Math.round(rect.width) };
           });
         const licenses: string[] = [];
+        const imageObjectsMissingCopyrightNotice: string[] = [];
         for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
           try {
             const pending: unknown[] = [JSON.parse(script.textContent || '')];
@@ -115,7 +116,12 @@ async function validateSiteBrowser() {
               const value = pending.pop();
               if (Array.isArray(value)) pending.push(...value);
               else if (value && typeof value === 'object') {
-                for (const [key, child] of Object.entries(value)) {
+                const object = value as Record<string, unknown>;
+                if (object['@type'] === 'ImageObject' && typeof object.contentUrl === 'string'
+                  && (typeof object.copyrightNotice !== 'string' || !object.copyrightNotice.trim())) {
+                  imageObjectsMissingCopyrightNotice.push(object.contentUrl);
+                }
+                for (const [key, child] of Object.entries(object)) {
                   if (['license', 'acquireLicensePage'].includes(key) && typeof child === 'string') licenses.push(child);
                   pending.push(child);
                 }
@@ -130,6 +136,7 @@ async function validateSiteBrowser() {
           overflowElements,
           hrefs: [...document.querySelectorAll('[href]')].map(element => element.getAttribute('href') || ''),
           licenses,
+          imageObjectsMissingCopyrightNotice,
         };
       });
       check.rootCharacters = result.rootCharacters;
@@ -143,6 +150,9 @@ async function validateSiteBrowser() {
       }
       for (const href of result.hrefs) recordTarget(links, href, entry.path);
       for (const license of result.licenses) recordTarget(licenses, license, entry.path);
+      if (entry.path.startsWith('/blog/') && result.imageObjectsMissingCopyrightNotice.length) {
+        check.issues.push('blog-image-copyright-notice-missing');
+      }
     } catch (error) {
       check.issues.push(`incomplete: ${String(error)}`);
     } finally {
