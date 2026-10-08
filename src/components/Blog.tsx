@@ -455,7 +455,8 @@ export const BlogPage = () => {
         "creator": {
           "@type": "Organization",
           "name": "Mavi Basım"
-        }
+        },
+        "copyrightNotice": "Mavi Basım Matbaacılık"
       },
       activePost.slug === 'emlak-yer-gosterme-belgesi-nedir' ? {
         "@context": "https://schema.org",
