@@ -2194,7 +2194,6 @@ export const GrafikTasarimPage = () => {
                       Neden Teklif İsteyiniz?
                     </h4>
                     <ul className="space-y-1.5 text-[11px] text-gray-500 font-semibold list-disc pl-4 leading-normal">
-                      <li><strong>Hacim İndirimi:</strong> Yüksek adetli baskı siparişlerinizde tasarım bedelini tamamen siliyoruz.</li>
                       <li><strong>Özel Kağıtlar:</strong> Fantezi mukavvalar, gofre kabartmalar için doğru kalıp maliyetlerini çıkarıyoruz.</li>
                       <li><strong>Toplu Kurumsal Setler:</strong> Tüm evraklarınızın toplu yenilenmesinde özel paket iskontoları uyguluyoruz.</li>
                     </ul>
