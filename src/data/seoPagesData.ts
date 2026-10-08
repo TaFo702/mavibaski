@@ -789,7 +789,6 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
     internalLinks: [
       { text: 'Sıvama ve Spiral Menü Çeşitleri', path: '/sektor/kafe-menu-baski' },
       { text: 'Masalara Özel Kağıt Servis', path: '/amerikan-servis' },
-      { text: 'Karton Bardak Altlığı', path: '/fiyat-sor' },
       { text: 'Kafeler İçin Broşür Menüler', path: '/brosur' }
     ],
     offers: { lowPrice: '850', highPrice: '7200', count: '11' },

@@ -25,8 +25,6 @@ type LinkCheck = { target: string; sources: string[]; status?: number; finalPath
 const unresolvedTargets = new Set([
   '/reklam-urunleri',
   '/lisans',
-  '/servis-formu',
-  '/fiyat-sor',
 ]);
 const baseURL = new URL(process.env.TEST_BASE_URL || 'http://127.0.0.1:3000');
 const inventoryPath = process.env.SITE_BROWSER_INVENTORY || 'reports/seo-after.json';
