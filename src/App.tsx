@@ -1221,13 +1221,13 @@ const getCategoryPath = (cat: string) => {
   if (cat === "Sipariş Fişi Baskı") return "/siparis-fisi";
   if (cat === "Para Makbuzu Baskı") return "/para-makbuzu";
   if (cat === "Sözleşme Baskı") return "/sozlesme-baski";
-  if (cat === "Sigorta Poliçeleri Baskı") return "/sozlesme-baski";
-  if (cat === "Tahsilat Makbuzu Baskı") return "/para-makbuzu";
-  if (cat === "Araç Kiralama Baskı") return "/sozlesme-baski";
-  if (cat === "Gider Makbuzu Baskı") return "/para-makbuzu";
-  if (cat === "Giriş Bileti Baskı") return "/adisyon";
-  if (cat === "Reçete Baskı") return "/adisyon";
-  if (cat === "Tediye Makbuzu Baskı") return "/para-makbuzu";
+  if (cat === "Sigorta Poliçeleri Baskı") return "/sigorta-policeleri";
+  if (cat === "Tahsilat Makbuzu Baskı") return "/tahsilat-makbuzu";
+  if (cat === "Araç Kiralama Baskı") return "/arac-kiralama";
+  if (cat === "Gider Makbuzu Baskı") return "/gider-makbuzu";
+  if (cat === "Giriş Bileti Baskı") return "/giris-bileti";
+  if (cat === "Reçete Baskı") return "/recete";
+  if (cat === "Tediye Makbuzu Baskı") return "/tediye-makbuzu";
   return "/";
 };
 

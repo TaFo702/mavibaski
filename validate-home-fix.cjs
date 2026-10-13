@@ -122,6 +122,32 @@ async function go(w, href, label) {
   await go(home.w,'/kartvizit');assert(home.w.document.querySelector('h1').textContent.includes('Kartvizit'));
   await go(home.w,'/','MAVİ BASIM');checkHome(home.w,await waitHome(home.w));
   results.homeProductHome='passed';
+  const categoryCases=[
+    ['Sigorta Poliçeleri Baskı','/sigorta-policeleri','Sigorta Poliçesi'],
+    ['Tahsilat Makbuzu Baskı','/tahsilat-makbuzu','Tahsilat Makbuzu'],
+    ['Araç Kiralama Baskı','/arac-kiralama','Araç Kiralama'],
+    ['Gider Makbuzu Baskı','/gider-makbuzu','Gider Makbuzu'],
+    ['Giriş Bileti Baskı','/giris-bileti','Giriş'],
+    ['Reçete Baskı','/recete','Reçete'],
+    ['Tediye Makbuzu Baskı','/tediye-makbuzu','Tediye Makbuzu'],
+  ];
+  results.categoryProductReturns=[];
+  for(const [label,path,heading] of categoryCases) {
+    const link=[...home.w.document.querySelectorAll('#products a')].find(n=>n.textContent.trim()===label);
+    assert(link,'Missing category '+label);assert.equal(link.getAttribute('href'),path,label);
+    assert.equal(home.dom.window.location.pathname,'/');
+    link.dispatchEvent(new home.w.MouseEvent('click',{bubbles:true,cancelable:true,button:0}));
+    for(let i=0;i<100;i++) {
+      if(home.w.location.pathname===path && home.w.document.querySelector('h1')?.textContent.includes(heading)) break;
+      await sleep(100);
+    }
+    assert.equal(home.w.location.pathname,path,label);
+    assert(home.w.document.querySelector('h1')?.textContent.includes(heading),'Wrong product content: '+label);
+    await go(home.w,'/','MAVİ BASIM');checkHome(home.w,await waitHome(home.w));
+    // Client remounts omit React's empty SSR separator comments; compare all remaining markup exactly.
+    assert.equal(home.w.document.querySelector('#fiyatlar').outerHTML.replace(/<!-- -->/g,''),home.prices.replace(/<!-- -->/g,''),'Price section changed after '+label);
+    results.categoryProductReturns.push(path);
+  }
   const productPaths=[...new Set([...home.w.document.querySelectorAll('#featured-products a[href]')].map(n=>n.getAttribute('href')).filter(href=>href.startsWith('/')&&!href.includes('#')))];
   results.featuredProductReturns=[];
   for(const path of productPaths) {
