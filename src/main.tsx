@@ -1,10 +1,17 @@
 import {StrictMode} from 'react';
-import {createRoot} from 'react-dom/client';
+import {createRoot, hydrateRoot} from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-createRoot(document.getElementById('root')!).render(
+const container = document.getElementById('root')!;
+const application = (
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
 );
+
+if (container.dataset.prerendered === 'home' && window.location.pathname === '/') {
+  hydrateRoot(container, application);
+} else {
+  createRoot(container).render(application);
+}

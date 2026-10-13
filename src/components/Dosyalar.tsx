@@ -155,7 +155,7 @@ export const DosyalarPage = () => {
 
   React.useEffect(() => {
     const prerenderedMetadata = document.head.querySelectorAll(
-      'title:not([data-rh]), link[rel="canonical"]:not([data-rh]), meta[name="description"]:not([data-rh]), meta[property^="og:"]:not([data-rh])'
+      'title[data-prerender-seo], link[rel="canonical"][data-prerender-seo], meta[name="description"][data-prerender-seo], meta[property^="og:"][data-prerender-seo]'
     );
     prerenderedMetadata.forEach(node => node.remove());
   }, []);

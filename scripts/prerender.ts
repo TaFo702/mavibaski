@@ -1,6 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { getRouteSEO, injectSEOMetadata, URL_REDIRECTS } from "../src/utils/seoGenerator";
+import { build } from "esbuild";
+import { createRequire } from "node:module";
 
 async function prerender() {
   console.log("--- Starting Static HTML Metadata Prerendering ---");
@@ -28,11 +30,26 @@ async function prerender() {
     process.exit(1);
   }
 
-  const rawTemplate = fs.readFileSync(templatePath, "utf-8");
+  const shellPath = path.join(distDir, '.prerender-template.html');
+  const builtTemplate = fs.readFileSync(templatePath, "utf-8");
+  const rawTemplate = builtTemplate.includes('data-prerendered="home"')
+    ? fs.readFileSync(shellPath, 'utf-8') : builtTemplate;
+  fs.writeFileSync(shellPath, rawTemplate, 'utf-8');
   const template = rawTemplate
     .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/gi, "")
     .replace(/<div id="root">[\s\S]*?<\/div>/i, '<div id="root"></div>');
   const sitemapXml = fs.readFileSync(sitemapPath, "utf-8");
+
+  // Bundle the existing homepage renderer with the project's existing esbuild.
+  // CJS interop also supports react-helmet-async's Node package exports.
+  const rendererPath = path.join(distDir, '.prerender-home.cjs');
+  let homeContent: string;
+  try {
+    await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
+      bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
+    const { prerenderHome } = createRequire(import.meta.url)(rendererPath);
+    homeContent = prerenderHome();
+  } finally { fs.rmSync(rendererPath, { force: true }); }
 
   // Extract all <loc> URLs from sitemap.xml
   const locMatches = [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim());
@@ -73,7 +90,7 @@ async function prerender() {
         false,
         seo.extraHead,
         seo.h1Text,
-        seo.bodyContent,
+        pathname === '/' ? homeContent : seo.bodyContent,
         seo.ogImage
       );
 
@@ -88,7 +105,10 @@ async function prerender() {
         targetPath = path.join(routeDir, "index.html");
       }
 
-      fs.writeFileSync(targetPath, html, "utf-8");
+      const output = pathname === '/'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
+        : html;
+      fs.writeFileSync(targetPath, output, "utf-8");
       generatedCount++;
     } catch (err) {
       console.error(`FAILED to prerender route: ${pathname}`, err);
