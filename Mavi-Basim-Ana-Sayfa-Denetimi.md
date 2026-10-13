@@ -1,5 +1,8 @@
 # Mavi Basım Ana Sayfa Denetimi
 
+
+> **Güncel durum — 13 Ekim 2026:** Kullanıcının açık canlı yayın talimatıyla PR #14 `main` dalına birleştirildi. Vercel yayını başarılı; `https://mavibasim.com/` yeni prerender çıktısını sunuyor. Aşağıdaki eski aşamalarda yer alan “merge/deploy yapılmadı” ve onay bekleme kayıtları tarihsel durumdur; son yayın kaydı bu paragraf ve rapor sonundaki yayın doğrulamasıdır.
+
 **İşlem:** Ana sayfanın kaynak kodda düzeltilmesi — 13 Ekim 2026.
 
 **Geçici puan: 92/100.** Önceki denetim: 44/100. Yeni puan, düzeltilmiş kaynak ve yerel test çıktısı içindir; canlı sitenin yayınlanmış durumunu veya Google sıralamasını göstermez. Yayınlama/deploy yapılmadı. Google’da ilk sayfa konumu garanti edilmez.
@@ -171,3 +174,30 @@ Bu dalda bulunan test edilmiş düzeltmeleri esas al. Aynı işi yeniden yazma. 
 ### ÇÖZÜM PROMPTU — yayın adımı
 
 Yalnız açık kullanıcı onayından sonra, `TaFo702/mavibaski` deposundaki PR #14'ün güncel head SHA'sını ve kalite kontrolünü doğrula; bu PR'ı `main` dalına birleştir. Mevcut Vercel yayın sürecinin sonucunu ve `https://mavibasim.com/` yanıtını kontrol et. Yayınlandığını yalnız gerçek domainin yeni prerender çıktısını sunmasıyla doğrula. Fiyat listeleri ve tablolarının verilerine, başlıklarına, satırlarına, HTML'sine, stillerine, bağlantılarına ve düğmelerine kesinlikle müdahale etme. Yeni kaynak düzeltmesi veya yeni yayın sistemi ekleme.
+
+
+## Canlı yayın ve son doğrulama — 13 Ekim 2026
+
+- PR #14 birleştirildi: https://github.com/TaFo702/mavibaski/pull/14
+- Merge commit'i: `1d40be5e6ed469d2eaab8808e520134bd7f68d47`; yayınlanan kaynak düzeltmesi: `3b5b6250c57efa5c8359b3653f5da290521a953e`. Kaynak kod tekrar yazılmadı.
+- PR'ın güncel head'i `9263cba5fbce00701d87b3e6e7cbe90a6f106247` için `Production Quality Gate` run 128 / `38461300189`: tamamlandı, başarılı. Birleştirme öncesinde bu sonuç doğrulandı.
+- Merge commit'inin Vercel durumu `success`: https://vercel.com/kolay-basim/mavibaski/DAsyGqsatU3ncHTmKbKSSeuUebhz
+- Ana domain 13 Ekim 2026 23:18:56 Türkiye saati HTTP yanıtında `200` ve yeni HTML'yi sundu; yeni istemci asset'i `/assets/index-DwG38kyG.js`. Yalnız commit durumu esas alınmadı; gerçek domainin cevabı doğrulandı.
+- İlk HTML: `#root` 361.211 karakter, `data-prerendered="home"`, 369 gerçek bağlantı, tek H1, tek title, tek description, canonical `https://mavibasim.com/`. Başlık 38 karakter: `Matbaa ve Baskı Çözümleri | Mavi Basım`.
+- İlk HTML'nin normalize edilmiş ana sayfa metni test edilen yerel dist metniyle birebir eşleşti. `#fiyatlar` bölümünün tüm HTML'si test edilmiş, değişmeden korunan sürümle birebir eşleşti; 7 veri satırı mevcut. Fiyat listeleri/tablo verileri, başlıkları, satırları, stilleri, bağlantıları ve düğmeleri için hiçbir yeni düzenleme yapılmadı.
+- İlk HTML'deki JSON-LD parse edildi: Organization/LocalBusiness, WebSite, 17 görünür soru ile FAQPage ve iki farklı ItemList. Ana sayfada PrintingService, Product, BreadcrumbList veya SearchAction kalmadı.
+- Gerçek Chrome'da doğrudan açılış, ana sayfa → `/dosyalar` → geri dönüş ve ana sayfa yenileme kontrol edildi. Dönüşte title/description/canonical tekil ve ana sayfaya ait; tek H1, 369 bağlantı ve 7 fiyat veri satırı korundu. Ürün şeması ana sayfada kalmadı.
+- İzlenen açılış/dönüş/yenileme sırasında site kaynaklı hata kaydı görülmedi. Görülen `Error sending browser metadata to extension` kaydı `chrome-extension://.../content-script.bundle.js` kaynaklıdır; site hatası olarak raporlanmadı.
+
+### Kalan doğrulanmış sorunlar ve sınırlamalar
+
+1. Fiyat koruma alanındaki genel “Online Sipariş Ver” bağlantısı `/kataloglar` hedefini koruyor. Bu bağlantı değiştirilmedi.
+2. Korunan “Fiyat Listesi” menüsündeki sayfa düğmeleri gerçek href üretmiyor. Koruma kuralı nedeniyle değiştirilmedi.
+3. Gerçek Chrome testi yalnız belirtilen masaüstü açılış/dönüş/yenileme kapsamındadır. Tüm ürün rotaları için canlı tarayıcı testi, mobil ekran geometrisi, tüm lazy görseller ve klavye sırası tamamlanmış sayılmadı. Önceki 20 rota testi React/JSDOM ortamındadır.
+4. LCP, CLS ve INP ölçülmedi; Search Console indeksleme/sıralama sonucu ve müşteri dönüşümü doğrulanmadı.
+
+Geçici denetim puanı: **92/100**. Bu puan Google sıralaması veya tüm alt sayfaların tam değerlendirmesi değildir.
+
+### ÇÖZÜM PROMPTU — canlı yayın sonrası
+
+Canlıya alınan mevcut kaynak düzeltmesini koru. Fiyat listeleri ve tablolarının verilerine, başlıklarına, satırlarına, HTML'sine, stillerine, bağlantılarına ve düğmelerine kesinlikle dokunma. Korunan iki bağlantı sorunu rapor olarak kalacak. Doğrulanmış yeni kapsam içi kaynak hatası bulunmadığı için ek değişiklik yapma; aynı düzeltmeleri yeniden uygulama. Diğer sayfaların içeriklerini, tarifelerini ve URL'lerini koru. Eksik mobil, tüm lazy görseller ve performans kontrollerini yalnız gerçekten test edersen rapora ekle; ölçülmemiş sonuç veya Google ilk sayfa garantisi üretme.
