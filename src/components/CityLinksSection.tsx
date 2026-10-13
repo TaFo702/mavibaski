@@ -151,7 +151,7 @@ export const CityLinksSection: React.FC = () => {
                   <p className="text-[11px] font-bold text-primary group-hover:text-white/90 transition-colors mb-2">
                     Matbaa ve baskı hizmetleri
                   </p>
-                  <p className="text-[11px] font-medium text-slate-500 group-hover:text-white/80 transition-colors leading-snug line-clamp-2">
+                  <p className="text-[11px] font-medium text-slate-500 group-hover:text-white/80 transition-colors leading-snug">
                     {city.sectorNote}
                   </p>
                 </div>
