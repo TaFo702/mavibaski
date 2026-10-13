@@ -155,3 +155,19 @@ Doğrulama: Mevcut 20 rota dönüşü, React/JSDOM hydration, geliştirme/üreti
 ### ÇÖZÜM PROMPTU — GitHub işlemi
 
 Bu dalda bulunan test edilmiş düzeltmeleri esas al. Aynı işi yeniden yazma. Fiyat listeleri ve tablolarının verilerine, başlıklarına, satırlarına, HTML’sine, stillerine, bağlantılarına ve düğmelerine dokunma. Diğer sayfa içeriklerini ve URL’lerini koru. Kanıtlanmış yeni hata olmadan ek değişiklik yapma; merge/deploy yapma.
+
+
+## Yayın öncesi kontrol — 13 Ekim 2026
+
+- PR #14: https://github.com/TaFo702/mavibaski/pull/14
+- Kaynak düzeltme commit'i: `3b5b6250c57efa5c8359b3653f5da290521a953e`.
+- GitHub Actions `Production Quality Gate`, run 127 / `38460539045`: `completed`, `success`. `Run Full Quality Gate` adımı başarıyla tamamlandı. Bu sonuç, önceki yerel ortamda tam quality komutunun doğrulanamamış olmasından ayrı bir GitHub CI kanıtıdır.
+- Vercel'in düzeltme dalı için commit durumu `success`; bu tek başına ana domainin güncellendiği anlamına gelmez.
+- `https://mavibasim.com/` için 13 Ekim 2026 23:13 Türkiye saati kontrolünde HTTP 200, ilk HTML'de `#root` 55 karakter, 0 gerçek bağlantı, `data-prerendered` işareti ve `#fiyatlar` bölümü yok. İstemci asset'i `/assets/index-W5OUHuw1.js`. Bu kontrol, hazırlanan ana sayfa prerender düzeltmesinin henüz bu domainin ilk HTML'sinde görülmediğini doğrular.
+- PR incelemeye hazır duruma getirildi. `main` dalına merge girişimi otomatik onay denetimince reddedildi: önceki açık yayınlama yasağı nedeniyle sonraki şikâyet kesin merge/deploy onayı kabul edilmedi. Reddedilen işlem uygulanmadı; canlı yayın başlatılamadı. Kesin PR/main/canlı yayın onayı bekleniyor.
+- Bu aşamada yalnız rapor güncellendi; kaynak düzeltmeler yeniden yazılmadı. Fiyat listeleri, tablolar, görseller, diğer sayfaların içerikleri ve URL'leri için mevcut koruma kuralları devam ediyor.
+- Gerçek tarayıcı/mobil/CWV test sınırlamaları sürüyor; geçici puan 92/100.
+
+### ÇÖZÜM PROMPTU — yayın adımı
+
+Yalnız açık kullanıcı onayından sonra, `TaFo702/mavibaski` deposundaki PR #14'ün güncel head SHA'sını ve kalite kontrolünü doğrula; bu PR'ı `main` dalına birleştir. Mevcut Vercel yayın sürecinin sonucunu ve `https://mavibasim.com/` yanıtını kontrol et. Yayınlandığını yalnız gerçek domainin yeni prerender çıktısını sunmasıyla doğrula. Fiyat listeleri ve tablolarının verilerine, başlıklarına, satırlarına, HTML'sine, stillerine, bağlantılarına ve düğmelerine kesinlikle müdahale etme. Yeni kaynak düzeltmesi veya yeni yayın sistemi ekleme.
