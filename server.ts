@@ -65,6 +65,7 @@ async function startServer() {
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "custom",
+      ssr: { noExternal: ['react-helmet-async'] },
     });
     app.use(vite.middlewares);
 
@@ -86,7 +87,11 @@ async function startServer() {
               desc: "Aradığınız sayfa veya dijital matbaa ürünü bulunamadı.",
               canonical: `https://mavibasim.com${req.path}`
             };
-        const html = injectSEOMetadata(template, seo.title, seo.desc, seo.canonical, !known, seo.extraHead, seo.h1Text, seo.bodyContent, seo.ogImage);
+        const homeContent = req.path === '/'
+          ? (await vite.ssrLoadModule('/src/prerenderHome.tsx')).prerenderHome()
+          : seo.bodyContent;
+        let html = injectSEOMetadata(template, seo.title, seo.desc, seo.canonical, !known, seo.extraHead, seo.h1Text, homeContent, seo.ogImage);
+        if (req.path === '/') html = html.replace('<div id="root">', '<div id="root" data-prerendered="home">');
         res.status(statusCode).set({ "Content-Type": "text/html" }).end(html);
       } catch (e) {
         next(e);
@@ -110,14 +115,15 @@ async function startServer() {
           cleanPath = cleanPath.substring(0, cleanPath.length - 1);
         }
         const cleanSlug = cleanPath.replace(/^\//, "");
-        const prerenderedPath = cleanSlug ? path.join(distPath, cleanSlug, "index.html") : null;
+        const prerenderedPath = path.join(distPath, cleanSlug, "index.html");
         if (prerenderedPath && fs.existsSync(prerenderedPath)) {
           return res.status(200).set({ "Content-Type": "text/html" }).sendFile(prerenderedPath);
         }
 
         const indexPath = path.join(distPath, "index.html");
         if (fs.existsSync(indexPath)) {
-          const template = fs.readFileSync(indexPath, "utf-8");
+          const shellPath = path.join(distPath, '.prerender-template.html');
+          const template = fs.readFileSync(fs.existsSync(shellPath) ? shellPath : indexPath, "utf-8");
           const known = isKnownRoute(req.path);
           const statusCode = known ? 200 : 404;
           const seo = known

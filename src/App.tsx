@@ -69,6 +69,8 @@ import { PRODUCT_DESCRIPTIONS } from './constants/productTexts';
 import { useProductSearch } from './components/HeaderActions';
 import { CityLinksSection } from './components/CityLinksSection';
 import { WhatsAppIcon } from './components/WhatsAppIcon';
+import { HOME_FAQS } from './data/homePageContent';
+import { RouteSEOHead } from './components/RouteSEOHead';
 
 // Route Pages lazy loading
 const SikcaSorulanPage = React.lazy(() => import('./components/FAQ').then(m => ({ default: m.SikcaSorulanPage })));
@@ -1234,10 +1236,14 @@ const getCategoryPath = (cat: string) => {
 // --- Components ---
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash, key } = useLocation();
   useEffect(() => {
+    if (pathname === '/' && hash) {
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+      if (target) { target.scrollIntoView({ behavior: 'smooth' }); return; }
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash, key]);
   return null;
 };
 
@@ -1286,6 +1292,11 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 };
 
 export const CanonicalLink = () => {
+  const { pathname } = useLocation();
+  return pathname === '/' ? null : <LegacyCanonicalLink />;
+};
+
+const LegacyCanonicalLink = () => {
   const location = useLocation();
   
   // Rule 8: Standart Trailing Slash standardı (Hepsi non-trailing slash ile bitecek, ana sayfa hariç)
@@ -1494,164 +1505,6 @@ if (path !== '/zarf' && path !== '/oto-paspas' && path !== '/kataloglar' && path
   };
   schemas.push(orgSchema);
 
-  // 2. LocalBusiness (PrintingService), WebSite, WebPage, FAQ, Product, Service, Navigation, Image Schemas (Homepage only)
-  if (!path || path === '/') {
-
-    const localSchema = {
-      "@context": "https://schema.org",
-      "@type": ["Organization", "LocalBusiness", "PrintingService"],
-      "@id": "https://mavibasim.com/#organization",
-      "name": "Mavi Basım Matbaa & Reklam",
-      "image": "https://mavibasim.com/mavilogo.png",
-      "telephone": "+90 536 602 23 73",
-      "email": "info@mavibasim.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
-        "addressLocality": "Zeytinburnu",
-        "addressRegion": "İstanbul",
-        "postalCode": "34010",
-        "addressCountry": "TR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "41.0189",
-        "longitude": "28.9161"
-      },
-      "url": "https://mavibasim.com",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:30",
-          "closes": "18:30"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Saturday"],
-          "opens": "09:00",
-          "closes": "14:00"
-        }
-      ],
-      "areaServed": {
-        "@type": "Country",
-        "name": "Türkiye"
-      },
-      "priceRange": "₺₺",
-      "knowsAbout": "Matbaa ve Baskı Hizmetleri"
-    };
-
-    const websiteSchema = {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": "https://mavibasim.com/#website",
-      "name": "Mavi Basım",
-      "url": "https://mavibasim.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://mavibasim.com/?s={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    };
-
-    const webpageSchema = {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": "https://mavibasim.com/#webpage",
-      "url": "https://mavibasim.com",
-      "name": "Matbaa ve Baskı Çözümleri | Mavi Basım",
-      "description": "Kartvizit, broşür, kutu, etiket, makbuz, ambalaj ve kurumsal baskı ürünleri için Mavi Basım'dan baskı çözümleri ve teklif alın.",
-      "publisher": {
-        "@id": "https://mavibasim.com/#organization"
-      },
-      "inLanguage": "tr"
-    };
-
-    const homeFaqs = [
-      {
-        q: "Online matbaa siparişi nasıl verilir?",
-        a: "Ürün sayfasından istediğiniz özellikleri (ebat, kağıt gramajı, adet) belirledikten sonra WhatsApp hattımız (+90 536 602 23 73) veya e-posta üzerinden tasarım dosyanızı bize ileterek hızlıca sipariş oluşturabilirsiniz. Ücretsiz teknik dosya kontrolü ve dijital PDF prova onayınızın ardından üretime başlanır."
-      },
-      {
-        q: "Baskı öncesi dijital PDF prova onayı veriliyor mu?",
-        a: "Evet. Gönderdiğiniz tasarımların çözünürlüğü, renk modu (CMYK), taşma ve kesim payları grafik ekibimizce kontrol edilir. Onayınız için dijital PDF prova hazırlanır; sizin yazılı onayınız olmadan baskıya geçilmez."
-      },
-      {
-        q: "Türkiye geneline kargo gönderimi var mı?",
-        a: "Evet. İstanbul Topkapı hizmet ve koordinasyon merkezimizden Türkiye'nin 81 iline anlaşmalı kargo firmaları ve koruyucu paketleme ile güvenli gönderim sağlıyoruz."
-      },
-      {
-        q: "Kurumsal ve toptan matbaa siparişlerinde avantaj sağlanıyor mu?",
-        a: "Evet. Ajanslar, kurumsal firmalar ve yüksek adetli siparişler için şeffaf birim maliyet avantajları ve sözleşmeli kurumsal faturalama imkanları sunulmaktadır."
-      },
-      {
-        q: "Hangi baskı ve matbaa ürünleri üretilmektedir?",
-        a: "Kartvizit, broşür, el ilanı, katalog, magnet, etiket, kutu, ambalaj, karton çanta, antetli kağıt, cepli dosya, bloknot, otokopili makbuz ve sipariş fişleri dahil tüm kurumsal matbaa ürünleri üretilmektedir."
-      }
-    ];
-
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "@id": "https://mavibasim.com/#faq",
-      "mainEntity": homeFaqs.map(f => ({
-        "@type": "Question",
-        "name": f.q,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": f.a
-        }
-      }))
-    };
-
-    const serviceSchema = {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Online Matbaa ve Baskı Hizmetleri",
-      "serviceType": "Printing Service",
-      "provider": {
-        "@id": "https://mavibasim.com/#organization"
-      },
-      "areaServed": "TR",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Online Matbaa Hizmet Kataloğu",
-        "itemListElement": [
-          { "@type": "OfferCatalog", "name": "Kartvizit ve Kurumsal Baskı" },
-          { "@type": "OfferCatalog", "name": "Broşür ve Katalog Baskı" },
-          { "@type": "OfferCatalog", "name": "Kutu ve Ambalaj Baskı" },
-          { "@type": "OfferCatalog", "name": "Magnet ve Etiket Baskı" },
-          { "@type": "OfferCatalog", "name": "Makbuz ve Resmi Form Basımı" }
-        ]
-      }
-    };
-
-    const navigationSchema = {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Ana Menü",
-      "itemListElement": [
-        { "@type": "SiteNavigationElement", "position": 1, "name": "Ana Sayfa", "url": "https://mavibasim.com/" },
-        { "@type": "SiteNavigationElement", "position": 2, "name": "Kartvizit", "url": "https://mavibasim.com/kartvizit" },
-        { "@type": "SiteNavigationElement", "position": 3, "name": "Broşür", "url": "https://mavibasim.com/brosur" },
-        { "@type": "SiteNavigationElement", "position": 4, "name": "El İlanı", "url": "https://mavibasim.com/el-ilani" },
-        { "@type": "SiteNavigationElement", "position": 5, "name": "Katalog", "url": "https://mavibasim.com/kataloglar" },
-        { "@type": "SiteNavigationElement", "position": 6, "name": "Magnet", "url": "https://mavibasim.com/magnet" },
-        { "@type": "SiteNavigationElement", "position": 7, "name": "Etiket", "url": "https://mavibasim.com/etiket" },
-        { "@type": "SiteNavigationElement", "position": 8, "name": "Kutu", "url": "https://mavibasim.com/kutu" },
-        { "@type": "SiteNavigationElement", "position": 9, "name": "Ambalaj", "url": "https://mavibasim.com/ambalaj" },
-        { "@type": "SiteNavigationElement", "position": 10, "name": "Makbuz & Formlar", "url": "https://mavibasim.com/makbuz-ve-formlar" },
-        { "@type": "SiteNavigationElement", "position": 11, "name": "İletişim", "url": "https://mavibasim.com/iletisim" }
-      ]
-    };
-
-    schemas.push(localSchema, websiteSchema, webpageSchema, faqSchema, serviceSchema, navigationSchema);
-  }
-
-  // 3. Dynamic Price Sync Engine & Rule-Based Structured Data Router
   // We strictly pair Product schemas ONLY with pages where a real pricing grid/table is visible on-screen.
   // All other pages (e.g., /kutu, /ambalaj, custom packaging, doorway sectors, city SEO endpoints) use Service schema.
   const getPricesForPath = (targetPath: string): number[] => {
@@ -2448,7 +2301,7 @@ const Navbar = () => {
             <div className="hidden xl:flex items-center gap-4">
               <div className="flex items-center gap-1.5 whitespace-nowrap text-[12px] font-black">
                 <Truck size={16} className="stroke-[2.5px]" />
-                <span className="uppercase">TÜRKİYENİN HER YERİNE KARGO</span>
+                <span className="uppercase">TÜRKİYE’NİN HER YERİNE KARGO</span>
               </div>
             </div>
           </div>
@@ -2477,7 +2330,7 @@ const Navbar = () => {
                 >
                   <button 
                     id="matbaa-urunleri-btn"
-                    onClick={() => setIsAllProductsOpen(prev => !prev)}
+                    onClick={(event) => setIsAllProductsOpen(prev => event.detail === 0 ? !prev : true)}
                     aria-expanded={isAllProductsOpen}
                     aria-haspopup="true"
                     aria-controls="matbaa-urunleri-dropdown-menu"
@@ -2505,17 +2358,17 @@ const Navbar = () => {
                               </h4>
                               <div className="flex flex-col divide-y divide-gray-100">
                                 {section.items.map((item, iIdx) => (
-                                  <button
+                                  <Link
                                     key={iIdx}
+                                    to={item.path}
                                     onClick={() => {
-                                      navigate(item.path);
                                       setIsAllProductsOpen(false);
                                     }}
                                     className="py-1.5 px-2 text-[12.5px] font-medium text-slate-700 hover:text-primary hover:bg-primary/5 transition-all text-left flex items-center justify-between group rounded"
                                   >
                                     <span className="group-hover:translate-x-1 transition-transform">{item.name}</span>
                                     <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 text-primary transition-opacity shrink-0" />
-                                  </button>
+                                  </Link>
                                 ))}
                               </div>
                             </div>
@@ -2534,7 +2387,7 @@ const Navbar = () => {
                 >
                   <button 
                     id="fiyat-listesi-btn"
-                    onClick={() => setIsPriceListOpen(prev => !prev)}
+                    onClick={(event) => setIsPriceListOpen(prev => event.detail === 0 ? !prev : true)}
                     aria-expanded={isPriceListOpen}
                     aria-haspopup="true"
                     aria-controls="fiyat-listesi-dropdown-menu"
@@ -2972,7 +2825,7 @@ const Hero = () => {
 
   return (
     <div className="relative w-full min-h-[300px] sm:min-h-[340px] md:h-[380px] lg:h-[400px] bg-slate-900 group flex items-center overflow-hidden py-3 sm:py-5">
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={current}
           initial={{ opacity: 0 }}
@@ -2992,14 +2845,14 @@ const Hero = () => {
         </motion.div>
       </AnimatePresence>
       
-      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center">
+      <div className="relative max-w-[1440px] mx-auto px-16 sm:px-20 w-full h-full flex items-center pb-12 sm:pb-14">
         <div className="max-w-3xl py-1 sm:py-2 pr-2 sm:pr-0 w-full overflow-hidden">
           {/* Statik, Tekil ve Türkiye Geneli Odaklı Ana SEO H1 Başlığı */}
           <h1 className="text-sm min-[380px]:text-base sm:text-2xl md:text-3xl font-black text-white leading-tight mb-2 uppercase tracking-tight text-shadow-strong break-words">
             Matbaa ve Baskı Çözümleri
           </h1>
 
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div 
               key={current}
               initial={{ opacity: 0, x: -15 }}
@@ -3406,7 +3259,7 @@ const ProductCard = (props: any) => {
             </h3>
           </div>
           
-          <p className="text-xs text-slate-600 font-medium leading-relaxed mb-3 line-clamp-2 min-h-[36px] flex items-center">
+          <p className="text-xs text-slate-600 font-medium leading-relaxed mb-3 min-h-[36px] flex items-center">
             {seoInfo.seoDesc}
           </p>
 
@@ -3415,7 +3268,7 @@ const ProductCard = (props: any) => {
             {seoInfo.features.map((feature: string, fIdx: number) => (
               <span key={fIdx} className="text-[10px] font-bold text-slate-700 leading-tight flex items-start gap-1.5 min-w-0">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1" />
-                <span className="break-words line-clamp-1" title={feature}>{feature}</span>
+                <span className="break-words min-w-0" title={feature}>{feature}</span>
               </span>
             ))}
           </div>
@@ -3454,9 +3307,9 @@ const ProductCard = (props: any) => {
           title={`${product.name} Fiyat Listesi ve Sipariş Sayfası`}
           className="w-full py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl font-extrabold flex items-center justify-between transition-all duration-300 bg-secondary text-white hover:bg-secondary/90 shadow-sm hover:shadow-md group-hover:bg-primary"
         >
-          <div className="flex flex-col text-left truncate min-w-0">
+          <div className="flex flex-col text-left min-w-0">
             <span className="text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-white/80">MAVİ BASIM MATBAA</span>
-            <span className="truncate text-[11px] sm:text-xs font-black mt-0.5">{seoInfo.pricingKey} &amp; Sipariş</span>
+            <span className="text-[11px] sm:text-xs font-black mt-0.5 break-words">{seoInfo.pricingKey} &amp; Sipariş</span>
           </div>
           <ArrowRight size={14} className="flex-shrink-0 ml-1.5 group-hover:translate-x-1 transition-transform duration-300" />
         </Link>
@@ -3466,7 +3319,6 @@ const ProductCard = (props: any) => {
 };
 
 const CategoryList = () => {
-  const navigate = useNavigate();
   return (
     <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8">
       <h2 className="text-xl font-bold text-black mb-8 flex items-center gap-3">
@@ -3475,92 +3327,21 @@ const CategoryList = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {ALL_PRODUCTS_CATEGORIES.map((cat, idx) => (
-          <button 
+          <Link 
             key={idx} 
-            onClick={() => navigate(getCategoryPath(cat))}
+            to={getCategoryPath(cat)}
             className="flex items-center gap-3 p-4 rounded-2xl hover:bg-secondary/5 border border-transparent hover:border-secondary/10 transition-all group text-left w-full"
           >
             <div className="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-colors">
               <ChevronRight size={16} />
             </div>
             <span className="text-xs font-medium text-black group-hover:text-black">{cat}</span>
-          </button>
+          </Link>
         ))}
       </div>
     </div>
   );
 };
-
-const HOME_FAQS = [
-  {
-    question: "Tasarım onayı ne kadar sürer?",
-    answer: "Grafik tasarım dosyanızı veya logonuzu WhatsApp ya da e-posta ile iletmenizin ardından, uzman grafik ekibimiz çalışmayı teknik (kesim payları, CMYK renk uyumu vb.) olarak inceleyip onayınıza sunulacak dijital PDF provayı ortalama 1-2 saat içinde hazırlar. Aynı gün PDF prova onayı sistemimiz sayesinde süreç son derece hızlıdır."
-  },
-  {
-    question: "Baskı süreci ne zaman başlar?",
-    answer: "Siparişlerinizin baskı makinelerimize alınması, hazırlanan PDF prova onayına WhatsApp veya yazılı kanallar üzerinden basılı onay vermeniz ve ödeme teyidinin yapılmasıyla birlikte 24 saat içinde gerçekleşir. Onayınız ve ödeme teyidi alınmadan hiçbir sipariş fiziksel olarak basılmaz."
-  },
-  {
-    question: "Mavi Basım online matbaa sipariş süreci nasıl işler?",
-    answer: "Süreç oldukça basittir: 1) İhtiyacınız olan ürün, ölçü ve adet bilgisini WhatsApp veya telefonla bize iletirsiniz. 2) Uzman ekibimiz en uygun fiyat teklifini sunar. 3) Grafik ekibimiz gönderdiğiniz tasarımı teknik (kesim payı, CMYK vb.) olarak ücretsiz kontrol edip dijital PDF prova hazırlar. 4) PDF provaya onay vermenizin ardından ödeme alınır ve üretime başlanır. 5) 2-4 iş günü içinde üretim tamamlanıp adresinize sevk edilir."
-  },
-  {
-    question: "Kargo ücretli mi, teslimat süreci nasıl işler?",
-    answer: "5.000 TL ve üzeri (KDV Hariç) siparişlerinizde kargo ücretsizdir. Baskısı tamamlanan tüm ürünleriniz, kargoda ezilme, ıslanma ve bükülmeyi önleyici koruyucu özel ambalajlar ve çift oluklu kalın kolilerle paketlenir. Anlaşmalı kargo firmalarımız aracılığıyla Türkiye'nin 81 ilindeki adresinize sigortalı ve güvenli şekilde sevk edilir."
-  },
-  {
-    question: "Kendi tasarımım hazır değil, tasarım desteği veriyor musunuz?",
-    answer: "Evet, tasarımınız hazır olmasa bile uzman grafik ekibimiz logonuzu yerleştirme, yazılarınızı düzenleme, taşma paylarını ayarlama ve matbaa standartlarına uygun şablonlar oluşturma konularında size kapsamlı tasarım desteği ve teknik danışmanlık sunar. Sipariş vermeden önce logonuzu yüksek çözünürlüklü olarak iletmeniz yeterlidir."
-  },
-  {
-    question: "Baskı öncesi PDF onay provası nedir, neden önemlidir?",
-    answer: "PDF onay provası, tasarımınızın matbaa kesim çizgilerine ve taşma paylarına göre fiziksel olarak nasıl basılacağını gösteren son dijital önizlemedir. Yazım hatalarını, telefon numaralarını veya görsel kaymalarını son kez kontrol etmenizi sağlayarak hatalı basımları %100 engeller. Siz onay provasına yazılı 'BASKI ONAYI' vermeden üretim makinelerimiz kesinlikle çalıştırılmaz."
-  },
-  {
-    question: "Siparişlerimin imalatı ne kadar sürer ve ne zaman teslim edilir?",
-    answer: "Yazılı PDF prova onayınız alındıktan sonra 24 saat içinde üretime başlanır. Kartvizit, broşür, etiket, magnet gibi standart tanıtım ürünlerinin üretimi genellikle 2-3 iş günü; kutu, ambalaj ve katalog gibi özel işçilik (lak, gofre, özel kesim bıçağı) gerektiren ürünler ise 3-5 iş günü içinde tamamlanarak kargoya teslim edilir."
-  },
-  {
-    question: "İstanbul dışından (Anadolu'dan) sipariş verebilir miyim?",
-    answer: "Kesinlikle! Mavi Basım olarak İstanbul Topkapı 2. Matbaacılar Sitesi'ndeki hizmet ve koordinasyon noktamız üzerinden online sistemimiz sayesinde tüm Türkiye geneline ulaştırıyoruz. Ankara, İzmir, Bursa, Antalya, Samsun, Gaziantep, Trabzon ve Van dahil 81 ile her gün korunaklı paketlerle sevkiyat yapmaktayız."
-  },
-  {
-    question: "Minimum sipariş adetleriniz ne kadardır?",
-    answer: "Tabaka kuşe etiket, kartvizit ve tanıtım ürünlerinde minimum siparişimiz 100 adet olup butik işletmeler için son derece ekonomiktir. Ancak endüstriyel bobine sarılı rulo etiketler, özel ambalaj kutuları ve kataloglar gibi yüksek kurulum ve makine ayar firesi olan ürünlerde minimum üretim limitimiz 1.000 adettir (optimum bütçe için 5.000 adet önerilir)."
-  },
-  {
-    question: "Ödeme seçenekleri ve şartlarınız nelerdir?",
-    answer: "Kurumsal sipariş süreçlerimizde, onay provasının ardından kurumsal banka hesaplarımıza Havale/EFT yaparak ödemenizi kolayca gerçekleştirebilirsiniz. Ödeme teyidinin ardından siparişiniz anında üretim planlamasına alınır."
-  },
-  {
-    question: "Kendi hazır tasarımımızı hangi formatlarda göndermeliyiz?",
-    answer: "Baskı kalitesinin kusursuz çıkması için tasarımlarınızı vektörel formatlarda (PDF, AI, CDR) veya yüksek çözünürlüklü PSD katmanları şeklinde göndermenizi tercih ederiz. Eğer görsel (JPEG, PNG) gönderecekseniz, tasarımın çözünürlüğünün en az 300 DPI ve renk modunun baskıya uyumlu CMYK olmasına dikkat etmelisiniz."
-  },
-  {
-    question: "Baskıda renk farklılığı veya ton kayması yaşanır mı?",
-    answer: "Bilgisayar ve telefon ekranları ışıklı RGB renk uzayını kullanırken, matbaa baskı makineleri fiziksel mürekkeplerden oluşan CMYK renk uzayını kullanır. Bu teknik farktan dolayı ekrandaki renkler ile kağıttaki renkler arasında %5-10 oranında minimal ton farkları olabilir. Mavi Basım olarak bu farkı önlemek adına tüm makinelerimizi spektrofotometre cihazlarıyla uluslararası standartlarda kalibre etmekteyiz."
-  },
-  {
-    question: "Rulo etiket siparişi verirken sarım yönü neden önemlidir?",
-    answer: "Eğer bastırdığınız yapışkanlı etiketleri el ile tek tek yapıştıracaksanız sarım yönünün bir önemi yoktur. Ancak etiketleri otomatik etiketleme makinesiyle kavanoz veya şişelere yapıştıracaksanız, makinenizin rulo akış yönüne (sarım pozisyonu) uygun bir yön seçmelisiniz. Yanlış sarım yönü, etiketlerin makineden ters veya yan çıkmasına sebob olur."
-  },
-  {
-    question: "Gıda ambalajlarında kullanılan kartonlar gıda temasına uygun mudur?",
-    answer: "Doğrudan gıda temasının bulunduğu projelerde kullanılacak karton, kaplama ve mürekkep özellikleri; ürünün sıcaklık, yağ, nem ve tüketim koşulları ile hammadde tedarikçi belgelerine göre proje bazında değerlendirilir. Standart kutu modellerimiz genellikle dış ambalaj ve ikincil paketleme amaçlıdır; doğrudan gıda teması gerektiren özel taleplerde teknik gereksinimler sipariş öncesinde netleştirilir."
-  },
-  {
-    question: "Matbaa fiyatlarınız neden diğer yerlere göre daha uygun?",
-    answer: "Mavi Basım, İstanbul Zeytinburnu Topkapı 2. Matbaacılar Sitesi'ndeki koordinasyon ve hizmet noktası üzerinden doğrudan matbaa ve baskı süreçlerini yönetmektedir. Gereksiz aracı maliyetlerini ortadan kaldırarak kurumsal ve perakende müşterilerimize şeffaf, avantajlı fiyatlar sunuyoruz."
-  },
-  {
-    question: "Baskıda hata, kayma veya üretim kusuru olması durumunda ne yapıyorsunuz?",
-    answer: "Mavi Basım olarak ürettiğimiz her basılı materyalde %100 müşteri memnuniyeti garantisi sunuyoruz. Bizden kaynaklanan herhangi bir kesim kayması, hatalı gofre/lak uygulaması veya bariz renk hatası durumunda, hatalı ürünlerinizi hızla sıfırdan yeniden basarak adresinize ücretsiz olarak sevk ediyoruz."
-  },
-  {
-    question: "Daha önce bastırdığımız ürünün tekrar siparişinde kalıp ücreti alınıyor mu?",
-    answer: "Hayır. Ürünleriniz için hazırlanan özel kesim bıçakları, kabartma klişeleri ve lazer kalıpları teknik arşivimizde 5 yıl boyunca güvenle muhafaza edilir. Aynı ürünü tekrar bastırmak istediğinizde sistemimiz eski kalıpları otomatik eşleştirir ve sizden kesinlikle yeni bir kalıp veya bıçak ücreti talep edilmez."
-  }
-];
 
 const HomePage = () => {
   const randomProducts = PRODUCTS.slice(0, 18);
@@ -3568,11 +3349,6 @@ const HomePage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Mavi Basım Matbaa &amp; Reklam | İstanbul Online Matbaa ve Baskı Hizmetleri</title>
-        <meta name="description" content="İstanbul Topkapı Matbaacılar Sitesi’ndeki hizmet ve koordinasyon merkezimizde kartvizit, broşür, magnet, katalog, kutu ve ambalaj baskı çözümleri sunuyoruz. Türkiye genelinde hızlı teslimat ve bütçe dostu matbaa çözümleri." />
-        <meta name="keywords" content="mavi basım, matbaa, baskı, kartvizit, broşür, magnet, kutu baskı, ambalaj, reklam" />
-      </Helmet>
       <Hero />
       <SEOQuickCategoryBar />
 
@@ -3640,13 +3416,13 @@ const HomePage = () => {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3 border border-primary/20">
-              E-E-A-T ŞEFFAFLIK &amp; ÜRETİM STANDARTLARI
+              BASKI VE ÜRETİM STANDARTLARI
             </div>
             <h2 className="text-2xl md:text-3.5xl font-black text-slate-900 uppercase tracking-tight mb-4">
-              Topkapı Hizmet ve <span className="text-primary">Koordinasyon Noktamızdan Kareler</span>
+              Baskı Teknikleri ve <span className="text-primary">Üretim Süreçlerinden Örnekler</span>
             </h2>
             <p className="text-slate-600 font-semibold leading-relaxed text-xs md:text-sm">
-              Tüm siparişlerinizi Topkapı 2. Matbaacılar Sitesi'ndeki hizmet noktamız koordinasyonunda ofset ve dijital baskı makineleri, hassas giyotinler, otomatik selefon kaplama ve kırım-ciltleme parkurumuzla yönetiyoruz.
+              Baskı kalitesi, yüzey kaplama, baskı sonrası işlemler ve dosya hazırlığı hakkında görsel örnekler.
             </p>
           </div>
 
@@ -3656,20 +3432,20 @@ const HomePage = () => {
               <div className="aspect-[16/10] overflow-hidden relative">
                 <img 
                   src="/images/hakkimizda/baski-kalitesini-etkileyen-faktorler-teknik-detaylar.webp" 
-                  alt="Ofset Baskı Parkuru" 
+                  alt="Baskı kalitesi, çözünürlük ve renk karşılaştırmaları" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
                 <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/10">
-                  OFSET BASKI PARKURU
+                  BASKI KALİTESİ
                 </span>
               </div>
               <div className="p-5">
                 <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
-                  Çok Renkli Ofset Baskı Parkuru
+                  Baskı Kalitesini Etkileyen Faktörler
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                  Yüksek tirajlı broşür, katalog ve ambalaj siparişlerinizde yüksek renk doğruluğu sağlayan çok renkli ofset baskı sistemlerimiz.
+                  Çözünürlük, renk ve görsel ayrıntıların baskı kalitesine etkisini gösteren teknik karşılaştırmalar.
                 </p>
               </div>
             </div>
@@ -3702,7 +3478,7 @@ const HomePage = () => {
               <div className="aspect-[16/10] overflow-hidden relative">
                 <img 
                   src="/images/hakkimizda/selefon-nedir-mat-parlak-selefon-farklari.webp" 
-                  alt="Selefon Kaplama Makinesi" 
+                  alt="Mat ve parlak selefon yüzey örnekleri" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
@@ -3715,7 +3491,7 @@ const HomePage = () => {
                   Mat &amp; Parlak Selefon Kaplama
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                  Kartvizit, cepli dosya ve kutu yüzeylerini suya, çizilmeye ve yırtılmaya karşı koruyan termal lüks selefon hattı.
+                  Mat ve parlak selefonun basılı yüzeylerde oluşturduğu görünüm ve yansıma farklarından örnekler.
                 </p>
               </div>
             </div>
@@ -3748,7 +3524,7 @@ const HomePage = () => {
               <div className="aspect-[16/10] overflow-hidden relative">
                 <img 
                   src="/images/hakkimizda/hizli-uretim-sureci-acil-matbaa-baski.webp" 
-                  alt="Deneyimli Üretim Ekibimiz" 
+                  alt="Bilgisayar ekranında grafik tasarım ve baskı hazırlığı" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                 />
@@ -3758,10 +3534,10 @@ const HomePage = () => {
               </div>
               <div className="p-5">
                 <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
-                  20+ Yıllık Usta Ekip Tecrübesi
+                  Grafik Tasarım ve Baskı Hazırlığı
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                  Matbaa ustalarımız ve grafik uzmanlarımızla basım öncesinden teslimata kadar tüm süreci denetliyoruz.
+                  Bilgisayar ortamında tasarımın düzenlenmesi ve baskı öncesi dosya hazırlığı.
                 </p>
               </div>
             </div>
@@ -3935,11 +3711,11 @@ const HomePage = () => {
               <div className="flex items-center gap-3">
                 <ShieldCheck className="text-emerald-600 w-6 h-6 shrink-0" />
                 <div className="text-xs sm:text-sm font-bold text-slate-800">
-                  <span className="text-emerald-700 font-black uppercase">Sıfır Hatalı Baskı Güvencesi:</span> Tasarımlarınız üretime girmeden önce grafik ekibimizce ücretsiz incelenir ve PDF onayınız alınır.
+                  <span className="text-emerald-700 font-black uppercase">Baskı Öncesi Dosya Kontrolü:</span> Tasarımlarınız üretime girmeden önce grafik ekibimizce ücretsiz incelenir ve PDF onayınız alınır.
                 </div>
               </div>
               <a 
-                href={WHATSAPP_LINK}
+                href="https://wa.me/905366022373?text=Merhaba%2C%20tasar%C4%B1m%C4%B1m%C4%B1%20bask%C4%B1%20%C3%B6ncesi%20%C3%BCcretsiz%20teknik%20kontrol%20i%C3%A7in%20iletmek%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-black text-xs px-4 py-2 rounded-xl transition-all inline-flex items-center gap-1.5 shadow-sm shrink-0"
@@ -4568,7 +4344,7 @@ const HomePage = () => {
           <div className="w-full text-center">
             <h2 className="text-lg min-[380px]:text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-tight text-slate-900 break-words">
               <span className="text-primary">Matbaa Hizmetlerimiz</span>
-              <span className="mx-2 sm:mx-3 text-slate-300 font-light">&amp;</span>
+              <span className="mx-2 sm:mx-3 text-slate-300 font-light">{' & '}</span>
               <span>Matbaa Ürünleri</span>
             </h2>
           </div>
@@ -4602,7 +4378,7 @@ const HomePage = () => {
                 items: ["Gıda ve Paket Servis Kutuları", "Lüks Karton Çantalar", "PP Opak ve Şeffaf Etiketler", "Özel Üretim Ambalajlar"]
               },
               {
-                title: "Sektörel Matbuu Formlar",
+                title: "Sektörel Matbu Formlar",
                 desc: "İşletmenizin operasyonel iş akışını düzenleyen otokopili tahsilat makbuzları, sipariş fişleri, adisyonlar, Amerikan servisler ve oto paspasları.",
                 items: ["Otokopili Sipariş Fişi", "Tediye & Para Makbuzu", "Kağıt Amerikan Servisler", "Oto Paspas & Yağ Kartları"]
               }
@@ -4845,9 +4621,7 @@ const HomePage = () => {
                   İnternetten 7/24 kesintisiz kurumsal baskı siparişi vermenin, dosya yükleme ve dijital prova kontrolü süreçlerinin detayları. <strong className="text-slate-900">Online Matbaa Nedir?</strong> ve geleneksel matbaacılıktan farkları nelerdir, tüm detaylarıyla keşfedin.
                 </p>
               </div>
-              <Link to="/brosur" className="text-xs font-black text-primary hover:text-secondary uppercase tracking-wider flex items-center gap-1 mt-auto">
-                Yazıyı Oku <span>→</span>
-              </Link>
+
             </div>
 
             {/* Card 2 */}
@@ -4861,9 +4635,7 @@ const HomePage = () => {
                   Ofisinizden çıkmadan kartvizit, broşür, katalog veya kutu imalatı siparişlerinizi vermenin yolları. <strong className="text-slate-900">Online Matbaa Siparişi Nasıl Verilir?</strong> ve basım onayına kadar geçen dijital prova süreçleri hakkında ipuçları.
                 </p>
               </div>
-              <Link to="/brosur" className="text-xs font-black text-primary hover:text-secondary uppercase tracking-wider flex items-center gap-1 mt-auto">
-                Yazıyı Oku <span>→</span>
-              </Link>
+
             </div>
 
             {/* Card 3 */}
@@ -4877,9 +4649,7 @@ const HomePage = () => {
                   Fiziki olarak matbaa aramaktansa internet üzerinden sipariş vermenin bütçe ve zaman kazançları. <strong className="text-slate-900">Online Matbaa mı Yerel Matbaa mı?</strong> sorusuna yanıt arıyor, imalatçı hızı ve <strong className="text-slate-900">Online Baskı Avantajları</strong> değerlendirmesi yapıyoruz.
                 </p>
               </div>
-              <Link to="/brosur" className="text-xs font-black text-primary hover:text-secondary uppercase tracking-wider flex items-center gap-1 mt-auto">
-                Yazıyı Oku <span>→</span>
-              </Link>
+
             </div>
 
             {/* Card 4 */}
@@ -4893,7 +4663,7 @@ const HomePage = () => {
                   Baskı bütçenizi belirleyen temel etkenler: Ebat, sayfa sayısı, kağıt cinsi ve tiraj oranları. <strong className="text-slate-900">Matbaa Fiyatları Nasıl Hesaplanır?</strong> ve kuşe gramajı ile selefon tercihlerinin <strong className="text-slate-900">Online Matbaa Fiyatları</strong> üzerindeki doğrudan etkisi.
                 </p>
               </div>
-              <Link to="/brosur" className="text-xs font-black text-primary hover:text-secondary uppercase tracking-wider flex items-center gap-1 mt-auto">
+              <Link to="/blog/matbaa-fiyatlarini-neler-belirler" className="text-xs font-black text-primary hover:text-secondary uppercase tracking-wider flex items-center gap-1 mt-auto">
                 Yazıyı Oku <span>→</span>
               </Link>
             </div>
@@ -4909,9 +4679,7 @@ const HomePage = () => {
                   Broşürde katlama ve kırım sayısı, kartvizitte ise lokal lak, kabartma yaldız ve bıçaklı kesim özellikleri maliyeti etkiler. <strong className="text-slate-900">Broşür Baskı Fiyatlarını Etkileyen Faktörler</strong> ile <strong className="text-slate-900">Kartvizit Baskı Fiyatları Neye Göre Değişir?</strong> sorusunun yanıtı bu rehberimizde.
                 </p>
               </div>
-              <Link to="/brosur" className="text-xs font-black text-primary hover:text-secondary uppercase tracking-wider flex items-center gap-1 mt-auto">
-                Yazıyı Oku <span>→</span>
-              </Link>
+
             </div>
 
             {/* Card 6 */}
@@ -4925,9 +4693,7 @@ const HomePage = () => {
                   İyi bir üreticiyle çalışarak sorunsuz baskı almanın püf noktaları. <strong className="text-slate-900">İstanbul'da Matbaa Firmaları Arasında Seçim Rehberi</strong> ve <strong className="text-slate-900">Kurumsal Matbaa Firması Seçerken Dikkat Edilecekler</strong>. <strong className="text-slate-900">Uygun Fiyatlı Matbaa Seçerken Nelere Dikkat Edilmeli?</strong> sorusuna profesyonel bakış.
                 </p>
               </div>
-              <Link to="/brosur" className="text-xs font-black text-primary hover:text-secondary uppercase tracking-wider flex items-center gap-1 mt-auto">
-                Yazıyı Oku <span>→</span>
-              </Link>
+
             </div>
           </div>
         </div>
@@ -5015,13 +4781,13 @@ const HomePage = () => {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-[#00E5FF]/10 text-[#00E5FF] px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-3 border border-[#00E5FF]/20">
-              HIZLI ERİŞİM &amp; İÇ LİNKLEME MERKEZİ
+              HIZLI ERİŞİM
             </div>
             <h2 className="text-2xl md:text-3.5xl font-black text-white uppercase tracking-tight mb-4">
               En Çok Aranan <span className="text-[#00E5FF]">Matbaa Ürünleri</span>
             </h2>
             <p className="text-slate-300 font-medium leading-relaxed text-xs md:text-sm max-w-4xl mx-auto">
-              Mavi Basım, işletmeniz için en kaliteli <strong className="text-white">Matbaa Ürünleri</strong> sunan Türkiye'nin lider <strong className="text-[#00E5FF]">Online Matbaa</strong> ve <strong className="text-[#00E5FF]">Online Baskı</strong> merkezidir. İhtiyacınıza özel bütçe dostu <strong className="text-white">Matbaa Fiyatları</strong> ile profesyonel <strong className="text-white">Baskı Hizmetleri</strong> alabilir, hızlı online siparişinizi güvenle verebilirsiniz.
+              Mavi Basım, işletmeniz için en kaliteli <strong className="text-white">Matbaa Ürünleri</strong> sunan, Türkiye geneline hizmet veren <strong className="text-[#00E5FF]">Online Matbaa</strong> ve <strong className="text-[#00E5FF]">Online Baskı</strong> merkezidir. İhtiyacınıza özel bütçe dostu <strong className="text-white">Matbaa Fiyatları</strong> ile profesyonel <strong className="text-white">Baskı Hizmetleri</strong> alabilir, hızlı online siparişinizi güvenle verebilirsiniz.
             </p>
           </div>
 
@@ -5165,13 +4931,13 @@ const HomePage = () => {
                 <Link to="/amerikan-servis" className="text-slate-300 hover:text-white hover:translate-x-1 transition-all flex items-center justify-between py-1 border-b border-slate-700/40">
                   <span>Amerikan Servis Fiyatları</span> <span className="text-[10px] text-slate-500">→</span>
                 </Link>
-                <Link to="/kataloglar" className="text-[#00E5FF] hover:text-white hover:translate-x-1 transition-all flex items-center justify-between py-1 border-b border-slate-700/40 font-black">
+                <Link to="/#fiyatlar" className="text-[#00E5FF] hover:text-white hover:translate-x-1 transition-all flex items-center justify-between py-1 border-b border-slate-700/40 font-black">
                   <span>Matbaa Fiyatları</span> <span className="text-[10px] text-[#00E5FF]">★</span>
                 </Link>
-                <Link to="/brosur" className="text-[#00E5FF] hover:text-white hover:translate-x-1 transition-all flex items-center justify-between py-1 border-b border-slate-700/40 font-black">
+                <Link to="/#siparis-sureci" className="text-[#00E5FF] hover:text-white hover:translate-x-1 transition-all flex items-center justify-between py-1 border-b border-slate-700/40 font-black">
                   <span>Online Matbaa</span> <span className="text-[10px] text-[#00E5FF]">★</span>
                 </Link>
-                <Link to="/kartvizit" className="text-[#00E5FF] hover:text-white hover:translate-x-1 transition-all flex items-center justify-between py-1 font-black">
+                <Link to="/#products" className="text-[#00E5FF] hover:text-white hover:translate-x-1 transition-all flex items-center justify-between py-1 font-black">
                   <span>Online Baskı</span> <span className="text-[10px] text-[#00E5FF]">★</span>
                 </Link>
               </div>
@@ -5201,7 +4967,7 @@ const HomePage = () => {
                 <span>WhatsApp ile Sipariş</span>
               </a>
               <Link
-                to="/kataloglar"
+                to="/#products"
                 className="bg-white text-slate-900 hover:bg-slate-100 font-black text-xs md:text-sm uppercase px-5 py-3.5 rounded-xl transition-all shadow-md"
               >
                 Online Sipariş Ver
@@ -5657,6 +5423,11 @@ export const AppRoutes = () => {
 };
 
 const SEOMetadataManager = () => {
+  const { pathname } = useLocation();
+  return pathname === '/' ? null : <LegacySEOMetadataManager />;
+};
+
+const LegacySEOMetadataManager = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -5760,7 +5531,7 @@ pathname === '/kartvizit' ||
   return null;
 };
 
-export default function App() {
+export default function App({ Router = BrowserRouter }: { Router?: React.ComponentType<{ children: React.ReactNode }> } = {}) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [detailProduct, setDetailProduct] = useState<{product: any, category: string} | null>(null);
@@ -5797,7 +5568,8 @@ export default function App() {
       openProductDetail
     }}>
       <HelmetProvider>
-        <BrowserRouter>
+        <Router>
+          <RouteSEOHead />
           <ScrollToTop />
           <CanonicalLink />
           <SEOMetadataManager />
@@ -5820,7 +5592,7 @@ export default function App() {
               onAddToCart={addToCart}
             />
           </div>
-        </BrowserRouter>
+        </Router>
       </HelmetProvider>
     </CartContext.Provider>
   );
