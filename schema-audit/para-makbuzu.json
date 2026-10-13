@@ -1,0 +1,264 @@
+[
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://mavibasdoc.com/#organization",
+      "name": "Mavi Basım Matbaa & Reklam",
+      "url": "https://mavibasdoc.com",
+      "logo": "https://mavibasdoc.com/mavilogo.png",
+      "image": "https://mavibasdoc.com/mavilogo.png",
+      "telephone": "+905325852504",
+      "priceRange": "₺₺",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Maltepe Mah. Litros Yolu Sk. 2. Matbaacılar Sitesi",
+        "addressLocality": "Zeytinburnu",
+        "addressRegion": "İstanbul",
+        "postalCode": "34010",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.025,
+        "longitude": 28.912
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:30",
+        "closes": "19:00"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://mavibasdoc.com/#website",
+      "url": "https://mavibasdoc.com",
+      "name": "Mavi Basım Matbaa",
+      "publisher": {
+        "@id": "https://mavibasdoc.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://mavibasdoc.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "PARA MAKBUZU",
+          "item": "https://mavibasdoc.com/para-makbuzu"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "PARA MAKBUZU Baskı",
+      "description": "Mavi Basım yüksek kaliteli PARA MAKBUZU baskı hizmeti. En uygun fiyat ve hızlı teslimat.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Mavi Basım"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://mavibasdoc.com/para-makbuzu",
+        "priceCurrency": "TRY",
+        "price": "150.00",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://mavibasdoc.com/#organization"
+        }
+      }
+    }
+  ],
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/para-makbuzu/numaratorlu-para-makbuzu.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/para-makbuzu",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "Logolu numaratörlü otokopili para makbuzu baskısı 14x20 cm"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/para-makbuzu/numaratorlu-para-makbuzu.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/para-makbuzu",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "Logolu numaratörlü otokopili para makbuzu baskısı 14x20 cm"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/para-makbuzu/otokopili-para-makbuzu.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/para-makbuzu",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "Kendinden karbonlu otokopili para makbuzu formu"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/para-makbuzu/para-makbuzu-kocani.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/para-makbuzu",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "Perforajlı telli cilt para makbuzu"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "contentUrl": "https://mavibasim.com/images/para-makbuzu/para-makbuzu-ornegi.webp",
+    "license": "https://mavibasim.com",
+    "acquireLicensePage": "https://mavibasim.com/para-makbuzu",
+    "creditText": "Mavi Basım Topkapı Matbaa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Mavi Basım"
+    },
+    "copyrightNotice": "Mavi Basım Matbaacılık",
+    "caption": "Kırmızı numaratörlü para makbuzu koçanı"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Para Makbuzu ve Otokopili Koçan Baskı & Cilt Üretim Süreci",
+    "description": "Mavi Basım Topkapı tesisimizde CTP kalıp pozlama, Heidelberg ofset baskı, kırmızı otomatik numaratör vurumu, perforaj ve tel dikiş ciltleme imalat adımları.",
+    "thumbnailUrl": "https://mavibasim.com/images/para-makbuzu/numaratorlu-para-makbuzu.webp",
+    "uploadDate": "2026-01-15T09:00:00+03:00",
+    "duration": "PT45S",
+    "contentUrl": "https://mavibasim.com/video/para-makbuzu-uretim.mp4",
+    "embedUrl": "https://mavibasim.com/video/para-makbuzu-uretim",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mavi Basım",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mavibasim.com/logo.png"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Para makbuzu ile tahsilat makbuzu aynı şey midir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Benzer amaçlarla kullanılsalar da kullanım alanları farklıdır. Para makbuzu para teslimlerini kayıt altına almak için kullanılırken, tahsilat makbuzu yapılan ödeme veya tahsilat işlemini belgelemek amacıyla düzenlenir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Para makbuzu resmi evrak mıdır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para makbuzu resmi mali fatura veya e-Fatura niteliğinde değildir. Ancak ödeme ve para teslim işlemlerinin kayıt altına alınmasında kullanılan yazılı bir ticari belgedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Para makbuzu baskısında minimum sipariş miktarı nedir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para makbuzu baskılarında minimum sipariş miktarı 5 cilttir. Her cilt kendinden kopyalı 50 takımdan oluşur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Para makbuzuna firma logosu basılabilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, para makbuzlarına firma logosu, iletişim bilgileri, adres ve IBAN bilgileri ücretsiz grafik mizanpaj desteğimizle eklenebilmektedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Para makbuzu kaç nüsha basılabilir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En çok tercih edilen seçenekler 1 Asıl + 1 Suret (2 nüsha), 1 Asıl + 2 Suret (3 nüsha) ve 1 Asıl + 3 Suret (4 nüsha) şeklindedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Para makbuzu numaratörlü olmak zorunda mıdır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zorunlu değildir ancak evrak takibi, kayıpların önlenmesi ve arşiv düzeni açısından numaratörlü baskı standart olarak sunulmaktadır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Özel tasarım para makbuzu yaptırabilir miyim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, işletmenizin özel tablo gereksinimlerine, kutucuk düzenine veya logo renklerine uygun özel mizanpaj hazırlanabilmektedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Para makbuzu ölçüleri değiştirilebilir mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standart ebat 14 × 20 cm'dir. Talebe göre 10 × 14 cm (küçük boy) veya A4 (20.5 × 28.5 cm) özel ebatlarda da imalat yapılmaktadır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "İstanbul dışına gönderim yapıyor musunuz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, İstanbul Topkapı tesisimizde üretilen para makbuzları Türkiye'nin 81 iline kargo ile ulaştırılmaktadır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Para makbuzu kaç günde basılır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grafik tasarım onayının ardından para makbuzu baskıları genellikle 3–5 iş günü içerisinde tamamlanarak kargoya teslim edilmektedir."
+        }
+      }
+    ]
+  }
+]

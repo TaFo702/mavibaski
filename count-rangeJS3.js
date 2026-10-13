@@ -1,0 +1,26 @@
+import * as fs from 'fs';
+
+const code = fs.readFileSync('./src/components/Makbuz.tsx', 'utf8');
+const lines = code.split('\n');
+
+let bDepth = 0;
+let pDepth = 0;
+
+for (let i = 0; i < lines.length; i++) {
+  const line = lines[i];
+  if (i >= 1249 && i <= 1284) {
+    console.log(`${i + 1} | ${bDepth} | ${pDepth} | ${line}`);
+  }
+  
+  if (line.trim().startsWith('//') || line.trim().startsWith('{/*')) {
+    continue;
+  }
+
+  for (let j = 0; j < line.length; j++) {
+    const char = line[j];
+    if (char === '{') bDepth++;
+    else if (char === '}') bDepth--;
+    else if (char === '(') pDepth++;
+    else if (char === ')') pDepth--;
+  }
+}

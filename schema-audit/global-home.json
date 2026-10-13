@@ -1,0 +1,560 @@
+{
+  "route": "/",
+  "scriptCount": 2,
+  "parsedNodesCount": 3,
+  "websites": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://mavibasim.com/#website",
+      "url": "https://mavibasim.com",
+      "name": "Mavi Basım Matbaa",
+      "publisher": {
+        "@id": "https://mavibasim.com/#organization"
+      }
+    }
+  ],
+  "orgs": [],
+  "localBusinesses": [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://mavibasim.com/#organization",
+      "name": "Mavi Basım Matbaa & Reklam",
+      "url": "https://mavibasim.com",
+      "logo": "https://mavibasim.com/mavilogo.png",
+      "image": "https://mavibasim.com/mavilogo.png",
+      "telephone": "+905366022373",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+        "addressLocality": "Zeytinburnu",
+        "addressRegion": "İstanbul",
+        "addressCountry": "TR"
+      }
+    }
+  ],
+  "allParsedNodes": [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://mavibasim.com/#organization",
+      "name": "Mavi Basım Matbaa & Reklam",
+      "url": "https://mavibasim.com",
+      "logo": "https://mavibasim.com/mavilogo.png",
+      "image": "https://mavibasim.com/mavilogo.png",
+      "telephone": "+905366022373",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+        "addressLocality": "Zeytinburnu",
+        "addressRegion": "İstanbul",
+        "addressCountry": "TR"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://mavibasim.com/#website",
+      "url": "https://mavibasim.com",
+      "name": "Mavi Basım Matbaa",
+      "publisher": {
+        "@id": "https://mavibasim.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Türkiye Geneli Matbaa ve Baskı Hizmeti Verilen Şehirler",
+      "description": "İstanbul Topkapı üretim tesisimizden Türkiye'nin 81 iline kargo teslimatlı online matbaa ve baskı hizmetleri.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Adana Matbaa Hizmeti",
+          "url": "https://mavibasim.com/adana-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Adıyaman Matbaa Hizmeti",
+          "url": "https://mavibasim.com/adiyaman-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Afyonkarahisar Matbaa Hizmeti",
+          "url": "https://mavibasim.com/afyonkarahisar-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Ağrı Matbaa Hizmeti",
+          "url": "https://mavibasim.com/agri-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Amasya Matbaa Hizmeti",
+          "url": "https://mavibasim.com/amasya-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Ankara Matbaa Hizmeti",
+          "url": "https://mavibasim.com/ankara-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Antalya Matbaa Hizmeti",
+          "url": "https://mavibasim.com/antalya-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Artvin Matbaa Hizmeti",
+          "url": "https://mavibasim.com/artvin-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Aydın Matbaa Hizmeti",
+          "url": "https://mavibasim.com/aydin-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Balıkesir Matbaa Hizmeti",
+          "url": "https://mavibasim.com/balikesir-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Bilecik Matbaa Hizmeti",
+          "url": "https://mavibasim.com/bilecik-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Bingöl Matbaa Hizmeti",
+          "url": "https://mavibasim.com/bingol-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Bitlis Matbaa Hizmeti",
+          "url": "https://mavibasim.com/bitlis-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Bolu Matbaa Hizmeti",
+          "url": "https://mavibasim.com/bolu-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Burdur Matbaa Hizmeti",
+          "url": "https://mavibasim.com/burdur-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Bursa Matbaa Hizmeti",
+          "url": "https://mavibasim.com/bursa-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "Çanakkale Matbaa Hizmeti",
+          "url": "https://mavibasim.com/canakkale-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "Çankırı Matbaa Hizmeti",
+          "url": "https://mavibasim.com/cankiri-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "Çorum Matbaa Hizmeti",
+          "url": "https://mavibasim.com/corum-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "Denizli Matbaa Hizmeti",
+          "url": "https://mavibasim.com/denizli-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "Diyarbakır Matbaa Hizmeti",
+          "url": "https://mavibasim.com/diyarbakir-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "Edirne Matbaa Hizmeti",
+          "url": "https://mavibasim.com/edirne-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "Elazığ Matbaa Hizmeti",
+          "url": "https://mavibasim.com/elazig-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "Erzincan Matbaa Hizmeti",
+          "url": "https://mavibasim.com/erzincan-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "Erzurum Matbaa Hizmeti",
+          "url": "https://mavibasim.com/erzurum-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "Eskişehir Matbaa Hizmeti",
+          "url": "https://mavibasim.com/eskisehir-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "Gaziantep Matbaa Hizmeti",
+          "url": "https://mavibasim.com/gaziantep-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "Giresun Matbaa Hizmeti",
+          "url": "https://mavibasim.com/giresun-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "Gümüşhane Matbaa Hizmeti",
+          "url": "https://mavibasim.com/gumushane-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "Hakkari Matbaa Hizmeti",
+          "url": "https://mavibasim.com/hakkari-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "Hatay Matbaa Hizmeti",
+          "url": "https://mavibasim.com/hatay-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "Isparta Matbaa Hizmeti",
+          "url": "https://mavibasim.com/isparta-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "Mersin Matbaa Hizmeti",
+          "url": "https://mavibasim.com/mersin-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "İstanbul Matbaa Hizmeti",
+          "url": "https://mavibasim.com/istanbul-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "İzmir Matbaa Hizmeti",
+          "url": "https://mavibasim.com/izmir-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "Kars Matbaa Hizmeti",
+          "url": "https://mavibasim.com/kars-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "Kastamonu Matbaa Hizmeti",
+          "url": "https://mavibasim.com/kastamonu-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "Kayseri Matbaa Hizmeti",
+          "url": "https://mavibasim.com/kayseri-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "Kırklareli Matbaa Hizmeti",
+          "url": "https://mavibasim.com/kirklareli-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "Kırşehir Matbaa Hizmeti",
+          "url": "https://mavibasim.com/kirsehir-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "Kocaeli Matbaa Hizmeti",
+          "url": "https://mavibasim.com/kocaeli-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "Konya Matbaa Hizmeti",
+          "url": "https://mavibasim.com/konya-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "Kütahya Matbaa Hizmeti",
+          "url": "https://mavibasim.com/kutahya-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "Malatya Matbaa Hizmeti",
+          "url": "https://mavibasim.com/malatya-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "Manisa Matbaa Hizmeti",
+          "url": "https://mavibasim.com/manisa-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "Kahramanmaraş Matbaa Hizmeti",
+          "url": "https://mavibasim.com/kahramanmaras-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "Mardin Matbaa Hizmeti",
+          "url": "https://mavibasim.com/mardin-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "Muğla Matbaa Hizmeti",
+          "url": "https://mavibasim.com/mugla-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "Muş Matbaa Hizmeti",
+          "url": "https://mavibasim.com/mus-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "Nevşehir Matbaa Hizmeti",
+          "url": "https://mavibasim.com/nevsehir-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "Niğde Matbaa Hizmeti",
+          "url": "https://mavibasim.com/nigde-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "Ordu Matbaa Hizmeti",
+          "url": "https://mavibasim.com/ordu-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "Rize Matbaa Hizmeti",
+          "url": "https://mavibasim.com/rize-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "Sakarya Matbaa Hizmeti",
+          "url": "https://mavibasim.com/sakarya-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "Samsun Matbaa Hizmeti",
+          "url": "https://mavibasim.com/samsun-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "Siirt Matbaa Hizmeti",
+          "url": "https://mavibasim.com/siirt-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 57,
+          "name": "Sinop Matbaa Hizmeti",
+          "url": "https://mavibasim.com/sinop-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 58,
+          "name": "Sivas Matbaa Hizmeti",
+          "url": "https://mavibasim.com/sivas-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 59,
+          "name": "Tekirdağ Matbaa Hizmeti",
+          "url": "https://mavibasim.com/tekirdag-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 60,
+          "name": "Tokat Matbaa Hizmeti",
+          "url": "https://mavibasim.com/tokat-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 61,
+          "name": "Trabzon Matbaa Hizmeti",
+          "url": "https://mavibasim.com/trabzon-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 62,
+          "name": "Tunceli Matbaa Hizmeti",
+          "url": "https://mavibasim.com/tunceli-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 63,
+          "name": "Şanlıurfa Matbaa Hizmeti",
+          "url": "https://mavibasim.com/sanliurfa-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 64,
+          "name": "Uşak Matbaa Hizmeti",
+          "url": "https://mavibasim.com/usak-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 65,
+          "name": "Van Matbaa Hizmeti",
+          "url": "https://mavibasim.com/van-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 66,
+          "name": "Yozgat Matbaa Hizmeti",
+          "url": "https://mavibasim.com/yozgat-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 67,
+          "name": "Zonguldak Matbaa Hizmeti",
+          "url": "https://mavibasim.com/zonguldak-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 68,
+          "name": "Aksaray Matbaa Hizmeti",
+          "url": "https://mavibasim.com/aksaray-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 69,
+          "name": "Bayburt Matbaa Hizmeti",
+          "url": "https://mavibasim.com/bayburt-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 70,
+          "name": "Karaman Matbaa Hizmeti",
+          "url": "https://mavibasim.com/karaman-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 71,
+          "name": "Kırıkkale Matbaa Hizmeti",
+          "url": "https://mavibasim.com/kirikkale-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 72,
+          "name": "Batman Matbaa Hizmeti",
+          "url": "https://mavibasim.com/batman-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 73,
+          "name": "Şırnak Matbaa Hizmeti",
+          "url": "https://mavibasim.com/sirnak-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 74,
+          "name": "Bartın Matbaa Hizmeti",
+          "url": "https://mavibasim.com/bartin-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 75,
+          "name": "Ardahan Matbaa Hizmeti",
+          "url": "https://mavibasim.com/ardahan-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 76,
+          "name": "Iğdır Matbaa Hizmeti",
+          "url": "https://mavibasim.com/igdir-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 77,
+          "name": "Yalova Matbaa Hizmeti",
+          "url": "https://mavibasim.com/yalova-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 78,
+          "name": "Karabük Matbaa Hizmeti",
+          "url": "https://mavibasim.com/karabuk-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 79,
+          "name": "Kilis Matbaa Hizmeti",
+          "url": "https://mavibasim.com/kilis-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 80,
+          "name": "Osmaniye Matbaa Hizmeti",
+          "url": "https://mavibasim.com/osmaniye-matbaa"
+        },
+        {
+          "@type": "ListItem",
+          "position": 81,
+          "name": "Düzce Matbaa Hizmeti",
+          "url": "https://mavibasim.com/duzce-matbaa"
+        }
+      ]
+    }
+  ]
+}

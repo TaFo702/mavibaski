@@ -1,0 +1,412 @@
+
+/app/applet/audit-dom-schemas.ts
+  67:26  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/App.tsx
+    10:3   warning  'Phone' is defined but never used. Allowed unused vars must match /^_/u                                                                                                          @typescript-eslint/no-unused-vars
+    16:3   warning  'ChevronUp' is defined but never used. Allowed unused vars must match /^_/u                                                                                                      @typescript-eslint/no-unused-vars
+    25:3   warning  'Info' is defined but never used. Allowed unused vars must match /^_/u                                                                                                           @typescript-eslint/no-unused-vars
+    38:3   warning  'Download' is defined but never used. Allowed unused vars must match /^_/u                                                                                                       @typescript-eslint/no-unused-vars
+    39:3   warning  'Upload' is defined but never used. Allowed unused vars must match /^_/u                                                                                                         @typescript-eslint/no-unused-vars
+    40:3   warning  'RefreshCw' is defined but never used. Allowed unused vars must match /^_/u                                                                                                      @typescript-eslint/no-unused-vars
+    44:3   warning  'Maximize' is defined but never used. Allowed unused vars must match /^_/u                                                                                                       @typescript-eslint/no-unused-vars
+    45:12  warning  'ImageIcon' is defined but never used. Allowed unused vars must match /^_/u                                                                                                      @typescript-eslint/no-unused-vars
+    46:3   warning  'Eye' is defined but never used. Allowed unused vars must match /^_/u                                                                                                            @typescript-eslint/no-unused-vars
+    47:3   warning  'EyeOff' is defined but never used. Allowed unused vars must match /^_/u                                                                                                         @typescript-eslint/no-unused-vars
+    48:3   warning  'AlertCircle' is defined but never used. Allowed unused vars must match /^_/u                                                                                                    @typescript-eslint/no-unused-vars
+    49:3   warning  'User' is defined but never used. Allowed unused vars must match /^_/u                                                                                                           @typescript-eslint/no-unused-vars
+    50:3   warning  'Lock' is defined but never used. Allowed unused vars must match /^_/u                                                                                                           @typescript-eslint/no-unused-vars
+    53:3   warning  'HelpCircle' is defined but never used. Allowed unused vars must match /^_/u                                                                                                     @typescript-eslint/no-unused-vars
+    61:3   warning  'Clock' is defined but never used. Allowed unused vars must match /^_/u                                                                                                          @typescript-eslint/no-unused-vars
+    62:3   warning  'Sparkles' is defined but never used. Allowed unused vars must match /^_/u                                                                                                       @typescript-eslint/no-unused-vars
+    65:8   warning  'Fuse' is defined but never used. Allowed unused vars must match /^_/u                                                                                                           @typescript-eslint/no-unused-vars
+   104:32  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+   107:14  warning  Fast refresh only works when a file only exports components. Move your React context(s) to a separate file                                                                       react-refresh/only-export-components
+   109:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                   react-refresh/only-export-components
+   149:7   warning  'getImageUrl' is assigned a value but never used. Allowed unused vars must match /^_/u                                                                                           @typescript-eslint/no-unused-vars
+   182:3   warning  'ADDRESS' is defined but never used. Allowed unused vars must match /^_/u                                                                                                        @typescript-eslint/no-unused-vars
+   196:7   warning  'getBrosurBaseQuantity' is assigned a value but never used. Allowed unused vars must match /^_/u                                                                                 @typescript-eslint/no-unused-vars
+   471:93  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+   528:63  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+   539:70  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+   566:63  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+   575:70  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+   783:61  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  1008:29  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  1249:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                   react-refresh/only-export-components
+  1306:9   warning  The 'schemas' array makes the dependencies of useEffect Hook (at line 2179) change on every render. To fix this, wrap the initialization of 'schemas' in its own useMemo() Hook  react-hooks/exhaustive-deps
+  1306:18  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  1309:26  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  1839:27  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  1840:28  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  1846:27  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  1847:28  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  1861:29  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  1862:30  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  2399:10  warning  'isMakbuzOpen' is assigned a value but never used. Allowed unused vars must match /^_/u                                                                                          @typescript-eslint/no-unused-vars
+  2399:24  warning  'setIsMakbuzOpen' is assigned a value but never used. Allowed unused vars must match /^_/u                                                                                       @typescript-eslint/no-unused-vars
+  3185:7   warning  'TrustBar' is assigned a value but never used. Allowed unused vars must match /^_/u                                                                                              @typescript-eslint/no-unused-vars
+  3247:11  warning  'ProductCardProps' is defined but never used. Allowed unused vars must match /^_/u                                                                                               @typescript-eslint/no-unused-vars
+  3425:29  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  6065:20  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  6130:64  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  6148:39  warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+  6204:8   warning  Unexpected any. Specify a different type                                                                                                                                         @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/About.tsx
+   5:3  warning  'Printer' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+   8:3  warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  10:3  warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  14:3  warning  'Check' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  16:3  warning  'Users' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  17:3  warning  'Building2' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  19:3  warning  'TrendingUp' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  21:3  warning  'Eye' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  22:3  warning  'Percent' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+  23:3  warning  'CheckCircle' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  24:3  warning  'Sparkles' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/Afis.tsx
+    8:3   warning  'HelpCircle' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+   11:3   warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   19:3   warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+   20:3   warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   21:3   warning  'Truck' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  240:31  warning  Unexpected any. Specify a different type                                       @typescript-eslint/no-explicit-any
+  389:33  warning  Unexpected any. Specify a different type                                       @typescript-eslint/no-explicit-any
+  390:37  warning  Unexpected any. Specify a different type                                       @typescript-eslint/no-explicit-any
+  391:33  warning  Unexpected any. Specify a different type                                       @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/Ambalaj.tsx
+  14:31  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/AmerikanServis.tsx
+    4:18  warning  'AnimatePresence' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+    7:3   warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+    9:3   warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+   10:3   warning  'X' is defined but never used. Allowed unused vars must match /^_/u                @typescript-eslint/no-unused-vars
+   12:3   warning  'Truck' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+   13:3   warning  'Paintbrush' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   14:3   warning  'HeartHandshake' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+   15:3   warning  'Timer' is defined but never used. Allowed unused vars must match /^_/u            @typescript-eslint/no-unused-vars
+   23:3   warning  'WHATSAPP_LINK' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  126:31  warning  Unexpected any. Specify a different type                                           @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/Antetli.tsx
+    8:3   warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+    9:3   warning  'Truck' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+   13:3   warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   14:3   warning  'Clock' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  138:31  warning  Unexpected any. Specify a different type                                       @typescript-eslint/no-explicit-any
+  147:20  warning  Unexpected any. Specify a different type                                       @typescript-eslint/no-explicit-any
+  148:34  warning  Unexpected any. Specify a different type                                       @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/Blog.tsx
+    4:60   warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+    4:73   warning  'Truck' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+    4:117  warning  'ExternalLink' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  230:9    warning  'navigate' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/Bloknotlar.tsx
+    4:10  warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u                                                  @typescript-eslint/no-unused-vars
+    4:51  warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u                                                   @typescript-eslint/no-unused-vars
+    4:64  warning  'Truck' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+    4:71  warning  'Phone' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+    7:10  warning  'WHATSAPP_LINK' is defined but never used. Allowed unused vars must match /^_/u                                                 @typescript-eslint/no-unused-vars
+   10:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  250:31  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  274:9   warning  'schemaMarkup' is assigned a value but never used. Allowed unused vars must match /^_/u                                         @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/Brosur.tsx
+    5:3   warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u                                                  @typescript-eslint/no-unused-vars
+    7:3   warning  'ArrowRight' is defined but never used. Allowed unused vars must match /^_/u                                                    @typescript-eslint/no-unused-vars
+   11:3   warning  'Clock' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   15:3   warning  'FileText' is defined but never used. Allowed unused vars must match /^_/u                                                      @typescript-eslint/no-unused-vars
+   17:3   warning  'BookOpen' is defined but never used. Allowed unused vars must match /^_/u                                                      @typescript-eslint/no-unused-vars
+   32:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+   58:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+   76:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+   99:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  105:40  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  178:21  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  247:37  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  252:32  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  316:31  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  320:58  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  320:71  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  353:41  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  353:76  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  442:33  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  443:37  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/CategoryHero.tsx
+  3:10  warning  'Helmet' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/CityLinksSection.tsx
+   4:3  warning  'MapPin' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   8:3  warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  12:3  warning  'MessageCircle' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/CityPage.tsx
+   16:3   warning  'PackageCheck' is defined but never used. Allowed unused vars must match /^_/u               @typescript-eslint/no-unused-vars
+   22:3   warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u                     @typescript-eslint/no-unused-vars
+   23:3   warning  'ArrowRight' is defined but never used. Allowed unused vars must match /^_/u                 @typescript-eslint/no-unused-vars
+   26:37  warning  'PHONE_NUMBER' is defined but never used. Allowed unused vars must match /^_/u               @typescript-eslint/no-unused-vars
+  446:9   warning  'defaultFaqSchema' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/Dosyalar.tsx
+   11:3   warning  'FileText' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+   12:3   warning  'Palette' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+   13:3   warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+   14:3   warning  'AlertTriangle' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  152:31  warning  Unexpected any. Specify a different type                                         @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/ElIlani.tsx
+   4:10  warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  17:31  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  98:53  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  98:88  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/Etiket.tsx
+   4:10  warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  19:31  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/FAQ.tsx
+   8:3  warning  'User' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  13:3  warning  'Info' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+  14:3  warning  'BadgePercent' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  15:3  warning  'FileCheck' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/Footer.tsx
+  3:46  warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+  3:81  warning  'BookOpen' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+  9:9   warning  'navigate' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/GrafikTasarim.tsx
+   8:3  warning  'Settings' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+   9:3  warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+  11:3  warning  'Globe' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  13:3  warning  'Coins' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+  17:3  warning  'HelpCircle' is defined but never used. Allowed unused vars must match /^_/u    @typescript-eslint/no-unused-vars
+  20:3  warning  'CheckCircle2' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  23:3  warning  'RefreshCw' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/HeaderActions.tsx
+   1:27  warning  'useEffect' is defined but never used. Allowed unused vars must match /^_/u                                                     @typescript-eslint/no-unused-vars
+   2:10  warning  'motion' is defined but never used. Allowed unused vars must match /^_/u                                                        @typescript-eslint/no-unused-vars
+   2:18  warning  'AnimatePresence' is defined but never used. Allowed unused vars must match /^_/u                                               @typescript-eslint/no-unused-vars
+   4:10  warning  'Search' is defined but never used. Allowed unused vars must match /^_/u                                                        @typescript-eslint/no-unused-vars
+   4:18  warning  'User' is defined but never used. Allowed unused vars must match /^_/u                                                          @typescript-eslint/no-unused-vars
+  49:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  51:54  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/KartonCanta.tsx
+    7:3   warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u                                                  @typescript-eslint/no-unused-vars
+    9:3   warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u                                                   @typescript-eslint/no-unused-vars
+   10:3   warning  'Truck' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   11:3   warning  'HeartHandshake' is defined but never used. Allowed unused vars must match /^_/u                                                @typescript-eslint/no-unused-vars
+   12:3   warning  'Timer' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   13:3   warning  'Phone' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   14:3   warning  'Scale' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   15:3   warning  'Settings' is defined but never used. Allowed unused vars must match /^_/u                                                      @typescript-eslint/no-unused-vars
+   16:3   warning  'HelpCircle' is defined but never used. Allowed unused vars must match /^_/u                                                    @typescript-eslint/no-unused-vars
+   17:3   warning  'Clock' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   18:3   warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u                                                        @typescript-eslint/no-unused-vars
+   19:3   warning  'Sparkles' is defined but never used. Allowed unused vars must match /^_/u                                                      @typescript-eslint/no-unused-vars
+   20:3   warning  'Scissors' is defined but never used. Allowed unused vars must match /^_/u                                                      @typescript-eslint/no-unused-vars
+   21:3   warning  'CheckCircle' is defined but never used. Allowed unused vars must match /^_/u                                                   @typescript-eslint/no-unused-vars
+   22:3   warning  'AlertTriangle' is defined but never used. Allowed unused vars must match /^_/u                                                 @typescript-eslint/no-unused-vars
+   27:10  warning  'WHATSAPP_LINK' is defined but never used. Allowed unused vars must match /^_/u                                                 @typescript-eslint/no-unused-vars
+   31:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  202:31  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  207:20  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/Kartvizit.tsx
+    5:3   warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   54:29  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  129:40  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  186:35  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  187:29  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  279:21  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  280:31  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  281:32  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  494:31  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  538:45  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  540:48  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+  563:58  warning  Unexpected any. Specify a different type                                        @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/Katalog.tsx
+    1:27  warning  'useEffect' is defined but never used. Allowed unused vars must match /^_/u                                                     @typescript-eslint/no-unused-vars
+    2:18  warning  'AnimatePresence' is defined but never used. Allowed unused vars must match /^_/u                                               @typescript-eslint/no-unused-vars
+    6:3   warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u                                                  @typescript-eslint/no-unused-vars
+    7:3   warning  'RefreshCw' is defined but never used. Allowed unused vars must match /^_/u                                                     @typescript-eslint/no-unused-vars
+   21:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+   40:7   warning  'SmartKatalogFinder' is assigned a value but never used. Allowed unused vars must match /^_/u                                   @typescript-eslint/no-unused-vars
+   79:31  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  191:10  warning  'showFinder' is assigned a value but never used. Allowed unused vars must match /^_/u                                           @typescript-eslint/no-unused-vars
+  191:22  warning  'setShowFinder' is assigned a value but never used. Allowed unused vars must match /^_/u                                        @typescript-eslint/no-unused-vars
+  192:31  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/KupBloknot.tsx
+    4:10  warning  'motion' is defined but never used. Allowed unused vars must match /^_/u                                                        @typescript-eslint/no-unused-vars
+    5:23  warning  'Phone' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+    6:19  warning  'ProductSEOSection' is defined but never used. Allowed unused vars must match /^_/u                                             @typescript-eslint/no-unused-vars
+    8:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  120:31  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/Kutu.tsx
+    4:8   warning  'ReactMarkdown' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+    8:3   warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u          @typescript-eslint/no-unused-vars
+   10:3   warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u           @typescript-eslint/no-unused-vars
+   11:3   warning  'Truck' is defined but never used. Allowed unused vars must match /^_/u                 @typescript-eslint/no-unused-vars
+   16:10  warning  'PRODUCT_DESCRIPTIONS' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   23:40  warning  Unexpected any. Specify a different type                                                @typescript-eslint/no-explicit-any
+  119:31  warning  Unexpected any. Specify a different type                                                @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/LegalPolicies.tsx
+   1:17  warning  'useState' is defined but never used. Allowed unused vars must match /^_/u                                                      @typescript-eslint/no-unused-vars
+  11:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/app/applet/src/components/Magnet.tsx
+    7:3   warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+    9:3   warning  'Zap' is defined but never used. Allowed unused vars must match /^_/u                @typescript-eslint/no-unused-vars
+   11:3   warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u        @typescript-eslint/no-unused-vars
+   12:3   warning  'Truck' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+   13:3   warning  'Paintbrush' is defined but never used. Allowed unused vars must match /^_/u         @typescript-eslint/no-unused-vars
+   14:3   warning  'HeartHandshake' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+   15:3   warning  'Timer' is defined but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+   18:32  warning  'AgencyDiscountCTA' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+   18:51  warning  'FeatureTooltip' is defined but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+   19:10  warning  'WHATSAPP_LINK' is defined but never used. Allowed unused vars must match /^_/u      @typescript-eslint/no-unused-vars
+   21:10  warning  'ProductSEOSection' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  163:52  warning  Unexpected any. Specify a different type                                             @typescript-eslint/no-explicit-any
+  171:31  warning  Unexpected any. Specify a different type                                             @typescript-eslint/no-explicit-any
+  171:49  warning  Unexpected any. Specify a different type                                             @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/Makbuz.tsx
+     4:58   warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u                                                   @typescript-eslint/no-unused-vars
+     4:71   warning  'Truck' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+     4:78   warning  'Paintbrush' is defined but never used. Allowed unused vars must match /^_/u                                                    @typescript-eslint/no-unused-vars
+     4:90   warning  'Hash' is defined but never used. Allowed unused vars must match /^_/u                                                          @typescript-eslint/no-unused-vars
+     4:96   warning  'HeartHandshake' is defined but never used. Allowed unused vars must match /^_/u                                                @typescript-eslint/no-unused-vars
+     4:112  warning  'Timer' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+     4:126  warning  'Play' is defined but never used. Allowed unused vars must match /^_/u                                                          @typescript-eslint/no-unused-vars
+     5:18   warning  'AnimatePresence' is defined but never used. Allowed unused vars must match /^_/u                                               @typescript-eslint/no-unused-vars
+     8:10   warning  'WHATSAPP_LINK' is defined but never used. Allowed unused vars must match /^_/u                                                 @typescript-eslint/no-unused-vars
+   213:14   warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+   229:14   warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+   239:55   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   244:151  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   292:40   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   292:93   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   312:175  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   322:40   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   322:92   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   351:65   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   371:89   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   371:138  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   377:120  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   377:169  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   382:68   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   384:54   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   386:51   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   399:47   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   432:38   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   451:39   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   452:68   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   544:7    warning  'SiparisFisiCalculatorModal' is assigned a value but never used. Allowed unused vars must match /^_/u                           @typescript-eslint/no-unused-vars
+   544:110  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   738:38   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   739:37   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   740:37   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+   752:11   warning  'productSchema' is assigned a value but never used. Allowed unused vars must match /^_/u                                        @typescript-eslint/no-unused-vars
+  1471:67   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4176:57   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4189:34   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4189:44   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4190:48   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4200:43   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4200:54   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4253:75   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4275:49   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4277:56   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4277:109  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4283:74   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4283:174  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4315:65   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4323:56   warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  4323:108  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/MakineParkuru.tsx
+  11:3  warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  16:3  warning  'FolderOpen' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/Matbaa.tsx
+  5:59  warning  'FileText' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/OtoPaspas.tsx
+    7:3   warning  'ChevronRight' is defined but never used. Allowed unused vars must match /^_/u                                                  @typescript-eslint/no-unused-vars
+    9:3   warning  'ShieldCheck' is defined but never used. Allowed unused vars must match /^_/u                                                   @typescript-eslint/no-unused-vars
+   10:3   warning  'Truck' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   11:3   warning  'HeartHandshake' is defined but never used. Allowed unused vars must match /^_/u                                                @typescript-eslint/no-unused-vars
+   12:3   warning  'Timer' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   13:3   warning  'Phone' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   14:3   warning  'Scale' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   15:3   warning  'Settings' is defined but never used. Allowed unused vars must match /^_/u                                                      @typescript-eslint/no-unused-vars
+   16:3   warning  'HelpCircle' is defined but never used. Allowed unused vars must match /^_/u                                                    @typescript-eslint/no-unused-vars
+   17:3   warning  'Clock' is defined but never used. Allowed unused vars must match /^_/u                                                         @typescript-eslint/no-unused-vars
+   18:3   warning  'Layers' is defined but never used. Allowed unused vars must match /^_/u                                                        @typescript-eslint/no-unused-vars
+   19:3   warning  'Sparkles' is defined but never used. Allowed unused vars must match /^_/u                                                      @typescript-eslint/no-unused-vars
+   20:3   warning  'Scissors' is defined but never used. Allowed unused vars must match /^_/u                                                      @typescript-eslint/no-unused-vars
+   22:3   warning  'AlertTriangle' is defined but never used. Allowed unused vars must match /^_/u                                                 @typescript-eslint/no-unused-vars
+   27:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  118:7   warning  'SECTORS' is assigned a value but never used. Allowed unused vars must match /^_/u                                              @typescript-eslint/no-unused-vars
+  170:31  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  175:20  warning  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/ReklamUrunleri.tsx
+  22:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  35:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/app/applet/src/components/SEOPages.tsx
+  206:9  warning  'detectedCity' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/Zarf.tsx
+  25:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/app/applet/validate-all-routes.ts
+  129:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/validate-city-routes.ts
+   64:26  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  132:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/validate-controlled-failures.ts
+  33:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/validate-controlled-mutations.ts
+  62:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/validate-internal-links.ts
+  62:9  warning  'validRoutesSet' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/app/applet/validate-no-infinite-spinner.ts
+  48:17  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/validate-parity.ts
+    9:9   warning  'HelmetProvider' is assigned a value but never used. Allowed unused vars must match /^_/u     @typescript-eslint/no-unused-vars
+    9:55  warning  Unexpected any. Specify a different type                                                      @typescript-eslint/no-explicit-any
+   10:9   warning  'MemoryRouter' is assigned a value but never used. Allowed unused vars must match /^_/u       @typescript-eslint/no-unused-vars
+  216:44  warning  Unexpected any. Specify a different type                                                      @typescript-eslint/no-explicit-any
+  261:25  warning  Unexpected any. Specify a different type                                                      @typescript-eslint/no-explicit-any
+  265:43  warning  'isExpectedProduct' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  281:23  warning  Unexpected any. Specify a different type                                                      @typescript-eslint/no-explicit-any
+  329:22  warning  Unexpected any. Specify a different type                                                      @typescript-eslint/no-explicit-any
+  466:41  warning  Unexpected any. Specify a different type                                                      @typescript-eslint/no-explicit-any
+  711:15  warning  'isSim' is assigned a value but never used. Allowed unused vars must match /^_/u              @typescript-eslint/no-unused-vars
+
+/app/applet/validate-sitemap-routes.ts
+  49:9  warning  'AppMod' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+✖ 325 problems (0 errors, 325 warnings)
+
