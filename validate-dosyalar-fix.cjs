@@ -52,7 +52,7 @@ function checkDosyalar(doc) {
   assert(!data.some(n=>['Product','Offer','AggregateOffer'].includes(n['@type'])));
   const breadcrumb=data.filter(n=>n['@type']==='BreadcrumbList');assert.equal(breadcrumb.length,1);
   assert.equal(breadcrumb[0].itemListElement.at(-1).name,'Cepli Dosya Baskı');
-  const faq=data.filter(n=>n['@type']==='FAQPage');assert.equal(faq.length,1);assert.equal(faq[0].mainEntity.length,9);
+  const faq=data.filter(n=>n['@type']==='FAQPage');assert.equal(faq.length,1);assert.equal(faq[0].mainEntity.length,10);
   for(const item of faq[0].mainEntity){assert(doc.body.textContent.includes(item.name));assert(doc.body.textContent.includes(item.acceptedAnswer.text));}
   const headings=[...doc.querySelectorAll('main h1,main h2,main h3,main h4')];
   for(let i=1;i<headings.length;i++)assert(Number(headings[i].tagName[1])<=Number(headings[i-1].tagName[1])+1,'Heading level skipped');
