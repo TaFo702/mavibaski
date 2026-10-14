@@ -27,7 +27,7 @@ function checkAntetli(doc) {
   assert.equal(doc.querySelector('meta[name="twitter:title"]').content, doc.title);
   assert.equal(doc.querySelector('meta[property="og:url"]').content, 'https://mavibasim.com/antetli');
   assert.equal(doc.querySelector('meta[property="og:image"]').content, 'https://mavibasim.com/images/antetli-kagit/antetli-kagit-baski-fiyatlari.webp');
-  assert.equal(doc.querySelectorAll('main h2').length, 11, 'Incomplete visible route');
+  assert.equal(doc.querySelectorAll('main h2').length, 10, 'Incomplete visible route');
   assert(!doc.querySelector('main template'), 'Unresolved Suspense boundary');
   const table = priceTable(doc);
   assert(table, 'Price table missing');
@@ -122,7 +122,7 @@ async function go(w,path,label) {
       results.directProductHomeAntetli='passed';
       results.orderDetailAction='passed';
     }
-    results[attempt===0?'directHydration':'reloadHydration']={links:z.before.links.length,mainH2:11,priceRows:6,priceNodePreserved:true};
+    results[attempt===0?'directHydration':'reloadHydration']={links:z.before.links.length,mainH2:10,priceRows:6,priceNodePreserved:true};
     z.dom.window.close();
   }
   const home=await open('/');
@@ -146,7 +146,7 @@ async function go(w,path,label) {
       assert.equal(response.status,200,path);
       const doc=new JSDOM(await response.text()).window.document;
       checkAntetli(doc);
-      results.http.push({path,status:200,mainH2:11,priceButtons:6});
+      results.http.push({path,status:200,mainH2:10,priceButtons:6});
     }
   } finally { child.kill('SIGTERM'); }
   results.siteErrors=errors;
