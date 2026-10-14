@@ -45,12 +45,14 @@ async function prerender() {
   const rendererPath = path.join(distDir, '.prerender-home.cjs');
   let homeContent: string;
   let zarfContent: string;
+  let zarfBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
+    zarfBlogContent = prerenderZarfBlog();
   } finally { fs.rmSync(rendererPath, { force: true }); }
 
   // Extract all <loc> URLs from sitemap.xml
@@ -92,7 +94,8 @@ async function prerender() {
         false,
         seo.extraHead,
         seo.h1Text,
-        pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent : seo.bodyContent,
+        pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent
+          : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent : seo.bodyContent,
         seo.ogImage
       );
 
