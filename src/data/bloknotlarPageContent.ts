@@ -41,7 +41,7 @@ export const BLOKNOTLAR_FAQS: BloknotlarFaqItem[] = [
   },
   {
     q: "Bloknot ölçüleri ve ebat seçenekleri nelerdir?",
-    a: "Standart üretim seçeneklerimiz 9,4 × 14,3 cm (A6) ve 14 × 20 cm (A5) ölçüleridir. Kurumsal not defteri baskı ve özel ebat talepleri için ayrıca teklif alabilirsiniz."
+    a: "Fiyat listesinde A6 grubunda 9,4 × 14,3 cm, A5 grubunda 14 × 20 cm kesim ölçüleri yer alır. Siparişte grubun adıyla birlikte santimetre cinsinden kesim ölçüsünü esas alın. Kurumsal not defteri baskı ve özel ebat talepleri için ayrıca teklif alabilirsiniz."
   },
   {
     q: "Özel kesim kapak yaptırabilir miyim?",
@@ -115,26 +115,6 @@ export const BLOKNOTLAR_SCHEMAS = {
         "item": "https://mavibasim.com/bloknotlar"
       }
     ]
-  },
-  productSchema: {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Promosyon ve Kapaklı Bloknot Baskısı",
-    "image": "https://mavibasim.com/images/bloknot/bloknot-baski-fiyatlari.webp",
-    "description": "A5 ve A6 ebatlarında, 50 yapraklı, kuşe kapaklı veya tutkallı kapaksız kurumsal bloknot baskısı. 500 ve 1.000 cilt seçenekleriyle toptan bloknot defter imalatı.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Mavi Basım"
-    },
-    "category": "Bloknot Baskı",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "TRY",
-      "lowPrice": "7400",
-      "highPrice": "21900",
-      "offerCount": "20",
-      "url": "https://mavibasim.com/bloknotlar"
-    }
   },
   faqSchema: {
     "@context": "https://schema.org",
