@@ -7,7 +7,19 @@ const client = require('esbuild').buildSync({ entryPoints: ['src/main.tsx'], bun
 const errors = [];
 const crypto = require('node:crypto');
 const initial = new JSDOM(fs.readFileSync('dist/dosyalar/index.html','utf8')).window.document;
-assert.deepEqual([...initial.querySelectorAll('main table')].map(n=>crypto.createHash('sha256').update(n.outerHTML).digest('hex')),
+const categoryHeader = initial.querySelector('main table thead th');
+assert.equal(categoryHeader.getAttribute('scope'), 'col');
+assert.equal(categoryHeader.getAttribute('aria-label'), 'Kategori');
+// The only authorized table change is the category header's accessible name/scope.
+const preservedTables = [...initial.querySelectorAll('main table')].map(n => {
+  const copy = n.cloneNode(true);
+  if (n === initial.querySelector('main table')) {
+    copy.querySelector('thead th').removeAttribute('scope');
+    copy.querySelector('thead th').removeAttribute('aria-label');
+  }
+  return crypto.createHash('sha256').update(copy.outerHTML).digest('hex');
+});
+assert.deepEqual(preservedTables,
   ['ec3e1077ebf58703a1544d1f7ae17c48f53cbc186433b43c88569e2374e23596','768a5ab308b75f9199937e7caaf17edd0c97c92f6eabc22cd202082b59e976dd'], 'Existing tables changed');
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const normalize = text => text.replace(/\s+/g, ' ').trim();

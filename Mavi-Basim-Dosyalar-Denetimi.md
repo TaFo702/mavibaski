@@ -41,3 +41,9 @@ Mevcut fiyat tablosu kaynağı karakter karakter korunuyor. Yeni ilk HTML’deki
 - Model karşılaştırma SHA-256: 768a5ab308b75f9199937e7caaf17edd0c97c92f6eabc22cd202082b59e976dd
 
 Gerçek tarayıcı mobil ekran, klavye görsel odak kontrolü ve Core Web Vitals ölçülmedi; DOM kontrolleri gerçek tarayıcı ölçümü olarak sunulmadı. Google seçili canonical, URL denetimi ve Rich Results Test oturum sonucu alınmadı. Fiyat tablosu koruması yüzünden kalan erişilebilirlik sınırlamaları yukarıda açıklandı.
+
+## Kategori başlığı — özel kullanıcı onayı
+
+14 Ekim 2026: Kullanıcı, fiyat tablosunun boş kategori başlığının düzeltilmesine açıkça onay verdi. Yalnız ilk th hücresine aria-label="Kategori" ve scope="col" eklendi. Görünür metin, sınıflar, stiller ve tablo ölçüleri korunuyor. Fiyatlar, veriler, açıklamalar, sıra ve düğmeler değişmedi; caption eklenmedi. Önceki koruma kuralının bu başlık hücresiyle ilgili kısmına verilen özel izin esas alındı.
+
+Doğrulama, yeni izinli iki niteliği çıkardıktan sonra tablonun önceki SHA-256 değeriyle aynı olduğunu kontrol ediyor. Model karşılaştırma tablosu da aynı hash ile korunuyor.
