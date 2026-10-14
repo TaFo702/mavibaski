@@ -5334,7 +5334,7 @@ export const ProductSEOSection = ({ categoryKey, hideTrustFooter }: { categoryKe
 
 
 
-export const AppRoutes = () => {
+export const AppRoutes = ({ ZarfComponent = ZarfPage }: { ZarfComponent?: React.ComponentType } = {}) => {
   return (
     <React.Suspense fallback={
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
@@ -5361,7 +5361,7 @@ export const AppRoutes = () => {
       <Route path="/bloknot" element={<Navigate to="/bloknotlar" replace />} />
       <Route path="/amerikan-servis" element={<AmerikanServisPage />} />
       <Route path="/karton-canta" element={<KartonCantaPage />} />
-      <Route path="/zarf" element={<ZarfPage />} />
+      <Route path="/zarf" element={<ZarfComponent />} />
       <Route path="/kataloglar" element={<KatalogPage />} />
       <Route path="/katalog" element={<Navigate to="/kataloglar" replace />} />
       <Route path="/makbuz-ve-formlar" element={<MakbuzFormlarPage />} />
@@ -5531,7 +5531,10 @@ pathname === '/kartvizit' ||
   return null;
 };
 
-export default function App({ Router = BrowserRouter }: { Router?: React.ComponentType<{ children: React.ReactNode }> } = {}) {
+export default function App({ Router = BrowserRouter, ZarfComponent }: {
+  Router?: React.ComponentType<{ children: React.ReactNode }>;
+  ZarfComponent?: React.ComponentType;
+} = {}) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [detailProduct, setDetailProduct] = useState<{product: any, category: string} | null>(null);
@@ -5577,7 +5580,7 @@ export default function App({ Router = BrowserRouter }: { Router?: React.Compone
             <Navbar />
             
             <main className="flex-grow">
-              <AppRoutes />
+              <AppRoutes ZarfComponent={ZarfComponent} />
             </main>
 
             <Footer />

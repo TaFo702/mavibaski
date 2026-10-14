@@ -40,15 +40,17 @@ async function prerender() {
     .replace(/<div id="root">[\s\S]*?<\/div>/i, '<div id="root"></div>');
   const sitemapXml = fs.readFileSync(sitemapPath, "utf-8");
 
-  // Bundle the existing homepage renderer with the project's existing esbuild.
+  // Bundle the existing React renderers with the project's existing esbuild.
   // CJS interop also supports react-helmet-async's Node package exports.
   const rendererPath = path.join(distDir, '.prerender-home.cjs');
   let homeContent: string;
+  let zarfContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
+    zarfContent = prerenderZarf();
   } finally { fs.rmSync(rendererPath, { force: true }); }
 
   // Extract all <loc> URLs from sitemap.xml
@@ -90,7 +92,7 @@ async function prerender() {
         false,
         seo.extraHead,
         seo.h1Text,
-        pathname === '/' ? homeContent : seo.bodyContent,
+        pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent : seo.bodyContent,
         seo.ogImage
       );
 
@@ -107,6 +109,8 @@ async function prerender() {
 
       const output = pathname === '/'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
+        : pathname === '/zarf'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="zarf">')
         : html;
       fs.writeFileSync(targetPath, output, "utf-8");
       generatedCount++;
