@@ -12,7 +12,7 @@ export const DOSYALAR_DETAILS = {
     },
     {
       q: "Cepli dosyanın içine hangi belgeler konulabilir?",
-      a: "Teklif dosyaları, sözleşmeler, antetli kağıtlar, kataloglar, broşürler, fiyat listeleri ve kurumsal evraklar yerleştirilebilir."
+      a: "Teklif dosyaları, sözleşmeler, antetli kağıtlar, kataloglar, broşürler, fiyat listeleri ve kurumsal evraklar yerleştirilebilir. A4 evrakı katlamadan kullanmak istiyorsanız seçtiğiniz modelin iç alanı, cep ve kapalı ölçüsüyle uyumunu sipariş öncesinde netleştirin; birlikte yerleştirilecek belgelerin adedini ve diğer basılı ürünleri de belirtin."
     },
     {
       q: "Cepli dosya üzerine kabartma lak uygulanabilir mi?",
@@ -37,6 +37,10 @@ export const DOSYALAR_DETAILS = {
     {
       q: "Baskı öncesinde tasarım kontrolü yapılıyor mu?",
       a: "Evet. Üretime geçilmeden önce tasarımınız kontrol edilerek onayınız doğrultusunda baskı süreci yürütülür."
+    },
+    {
+      q: "Cepli dosya tasarımında bıçak izi neden gereklidir?",
+      a: "Bıçak izi, seçilen modelin kesim, katlama ve cep yerleşimini gösterir. Tasarımın bu çizime göre hazırlanması, yazı ve logoların kesim ya da katlama alanlarına denk gelmesini önlemeye yardımcı olur. Tasarıma başlamadan önce model şablonunu ekibimizle netleştirin; baskı öncesi onayda iç ve dış yüzlerin yönünü ve cep yerleşimini kontrol edin."
     }
   ]
 };

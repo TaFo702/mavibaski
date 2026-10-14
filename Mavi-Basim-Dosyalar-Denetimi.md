@@ -47,3 +47,17 @@ Gerçek tarayıcı mobil ekran, klavye görsel odak kontrolü ve Core Web Vitals
 14 Ekim 2026: Kullanıcı, fiyat tablosunun boş kategori başlığının düzeltilmesine açıkça onay verdi. Yalnız ilk th hücresine aria-label="Kategori" ve scope="col" eklendi. Görünür metin, sınıflar, stiller ve tablo ölçüleri korunuyor. Fiyatlar, veriler, açıklamalar, sıra ve düğmeler değişmedi; caption eklenmedi. Önceki koruma kuralının bu başlık hücresiyle ilgili kısmına verilen özel izin esas alındı.
 
 Doğrulama, yeni izinli iki niteliği çıkardıktan sonra tablonun önceki SHA-256 değeriyle aynı olduğunu kontrol ediyor. Model karşılaştırma tablosu da aynı hash ile korunuyor.
+
+## Planner ve GSC analizi sonrası içerik uygulaması — 15 Ekim 2026
+
+Kullanıcının uygulama onayıyla yalnız `/dosyalar` sayfasının doğrulanmış bilgi eksikleri tamamlandı:
+
+- Mevcut teknik özellikler bölümüne A4 evrak uyumu, açık/kapalı ölçü ayrımı, cep alanı ve belge adedini sipariş öncesinde netleştirme açıklaması eklendi. Ürünün doğrulanmış net ölçüleri kaynakta bulunmadığı için cm değeri, evrak kapasitesi veya A4 uyum garantisi yazılmadı.
+- Mevcut tasarım bölümüne galeri örneklerini değerlendirme, hazır baskı dosyası veya yalnız logo/firma bilgileriyle başvuru ayrımı eklendi.
+- Bıçak izi, kesim/katlama/cep yerleşimi, güvenli alan ve baskı öncesi onay açıklaması eklendi. Model şablonunun sipariş öncesinde netleştirilmesi istendi; ücretsiz indirilebilir şablon veya yeni hizmet vaadi eklenmedi.
+- Tasarım bölümünden mevcut `/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi` yazısına bağlamsal bağlantı eklendi.
+- Belgelerle ilgili mevcut SSS cevabı A4 kullanım kontrolüyle genişletildi; bıçak izi hakkında bir yeni soru eklendi. Görünür SSS ile JSON-LD aynı ortak veri kaynağını kullanıyor; toplam 10 soru.
+
+Toplam: iki H3, altı açıklama paragrafı, bir mevcut SSS cevabına ek, bir yeni SSS ve bir bağlamsal bağlantı. Fiyat ve model karşılaştırma tabloları, adetler, teslimat metinleri, title/meta/H1, galeri dosyaları ve diğer ürün içerikleri korunuyor. Yeni sayfa/blog açılmadı; GSC kapsam farkı site metni değiştirilerek çözüldü sayılmadı.
+
+Doğrulama: TypeScript ve değişen içerik dosyalarının ESLint kontrolü başarılı. Vite build, 294 URL için prerender ve sunucu build başarılı. Mevcut JSDOM/HTTP denetimi; doğrudan açılış, yenileme, hydration sırasında içerik ve fiyat tablosu düğümünün korunması, sayfalar arası geçiş, sipariş detayının açılıp kapanması, tekil metadata ve görünür SSS/şema eşleşmesini doğruladı. İki mevcut tablonun önceki hash kontrolü başarılı; site kaynaklı hata kaydedilmedi. Bu kontrol gerçek tarayıcı mobil/CWV ölçümü değildir.

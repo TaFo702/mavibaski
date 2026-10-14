@@ -437,6 +437,16 @@ export const DosyalarPage = () => {
               </div>
             </div>
 
+            <div className="pt-2 space-y-2">
+              <h3 className="font-black text-primary uppercase text-sm">A4 Evrak İçin Dosya Ölçüsü</h3>
+              <p>
+                A4 cepli dosya seçerken yalnız dış görünümü değil, evrakın yerleşeceği iç alanı da değerlendirin. A4 belgelerin katlanmadan yerleşmesi ve dosyanın rahat kapanması için seçtiğiniz modelin kapalı ölçüsünü, cep alanını ve katlama yerlerini sipariş öncesinde netleştirin.
+              </p>
+              <p>
+                Cepli dosyanın açık ölçüsü, kapaklar ve cep parçaları açılmış durumdaki tasarım alanını; kapalı ölçüsü ise kullanım sırasında katlanmış dosyanın dış boyutunu ifade eder. Evrak adedini ve birlikte yerleştireceğiniz kartvizit, broşür veya katalogları da model seçimi sırasında paylaşın.
+              </p>
+            </div>
+
             {/* HANGİ SEÇENEĞİ TERCİH ETMELİYİM? ÖZET KARAR KUTUSU */}
             <div className="mt-8 p-6 bg-amber-50/70 border border-amber-200 rounded-3xl text-black">
               <div className="flex items-center gap-2.5 mb-3">
@@ -545,6 +555,9 @@ export const DosyalarPage = () => {
               </h2>
             </div>
           </div>
+          <p className="text-xs sm:text-sm text-gray-650 font-semibold leading-relaxed mb-6 px-2">
+            Galerideki cepli dosya tasarım örnekleri, logo, iletişim bilgileri ve iç cep yerleşimini değerlendirmenize yardımcı olur. Hazır baskı dosyanız varsa seçtiğiniz modelle birlikte iletin; yalnız logonuz varsa firma unvanı, iletişim bilgileri ve dosyada yer almasını istediğiniz içerikleri tasarım desteği talebinizle paylaşın.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { title: "Kapak Düzeni", desc: "Ön kapakta kurumsal logo ile şirketin ana unvanını sade bir hiyerarşiyle konumlandırın. Aşırı metin kalabalığından kaçının." },
@@ -557,6 +570,18 @@ export const DosyalarPage = () => {
                 <p className="text-xs text-gray-650 font-semibold leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-6 bg-gray-50 border border-gray-150 rounded-2xl p-5 space-y-3 text-xs sm:text-sm text-gray-650 font-semibold leading-relaxed">
+            <h3 className="text-sm font-black text-black uppercase">Bıçak İzi ve Baskıya Hazırlık</h3>
+            <p>
+              Cepli dosya bıçak izi, modelin kesim, katlama ve cep yerleşimini gösteren teknik çizimdir. Tasarıma başlamadan önce kullanılacak modelin şablonunu ekibimizle netleştirin; başka bir dosyaya ait çizimi yalnızca büyütüp küçülterek kullanmayın.
+            </p>
+            <p>
+              Logo ve önemli yazıları şablondaki güvenli alanlara yerleştirin; kesim, katlama ve yapıştırma alanlarını kontrol edin. Baskı öncesi onayda kapak, iç yüz ve cep grafiklerinin yönünü, firma bilgilerini ve evrak yerleşimini birlikte gözden geçirin.
+            </p>
+            <p>
+              Renk modu, görsel çözünürlüğü ve taşma payının genel hazırlık ilkeleri için <Link to="/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi" className="text-primary hover:underline font-bold">CMYK ve baskı öncesi dosya hazırlama rehberini</Link> inceleyebilirsiniz. Modele özgü kesim ve katlama yerleşiminde cepli dosyanın kendi şablonunu esas alın.
+            </p>
           </div>
         </div>
 
