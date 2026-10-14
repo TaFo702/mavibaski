@@ -6,6 +6,7 @@ import ZarfPage from './components/Zarf';
 import { DosyalarPage } from './components/Dosyalar';
 import { BloknotlarPage } from './components/Bloknotlar';
 import { AntetliPage } from './components/Antetli';
+import { KatalogPage } from './components/Katalog';
 import { BlogPage } from './components/Blog';
 
 export function prerenderHome() {
@@ -56,4 +57,11 @@ export function prerenderBloknotlar() {
     <MemoryRouter initialEntries={['/bloknotlar']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={BloknotlarRouter} BloknotlarComponent={BloknotlarPage} />);
+}
+
+export function prerenderKatalog() {
+  const KatalogRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/kataloglar']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={KatalogRouter} KatalogComponent={KatalogPage} />);
 }

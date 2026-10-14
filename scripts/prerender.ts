@@ -48,17 +48,19 @@ async function prerender() {
   let antetliContent: string;
   let dosyalarContent: string;
   let bloknotlarContent: string;
+  let katalogContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
     dosyalarContent = prerenderDosyalar();
     bloknotlarContent = prerenderBloknotlar();
+    katalogContent = prerenderKatalog();
     zarfBlogContent = prerenderZarfBlog();
     antetliBlogContent = prerenderZarfBlog('/blog/antetli-kagit-baskisinda-80gr-1.hamur');
   } finally { fs.rmSync(rendererPath, { force: true }); }
@@ -106,6 +108,7 @@ async function prerender() {
           : pathname === '/antetli' ? antetliContent
           : pathname === '/dosyalar' ? dosyalarContent
           : pathname === '/bloknotlar' ? bloknotlarContent
+          : pathname === '/kataloglar' ? katalogContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
           : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent : seo.bodyContent,
         seo.ogImage
@@ -132,6 +135,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="dosyalar">')
         : pathname === '/bloknotlar'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="bloknotlar">')
+        : pathname === '/kataloglar'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="kataloglar">')
         : html;
       fs.writeFileSync(targetPath, output, "utf-8");
       generatedCount++;

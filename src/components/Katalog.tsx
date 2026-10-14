@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { 
@@ -23,7 +23,6 @@ import { useCart, FireWarning } from '../App';
 import { WHATSAPP_LINK, PHONE_LINK, PHONE_NUMBER } from '../constants/contact';
 import { CategoryHero } from './CategoryHero';
 import { RelatedBlogPosts } from './RelatedBlogPosts';
-import { DeliveryBadge } from './DeliveryBadge';
 import { KATALOG_DATA, KATALOG_FAQS } from '../data/extraProductData';
 
 export { KATALOG_DATA, KATALOG_FAQS };
@@ -237,36 +236,7 @@ const KATALOG_GALLERY = [
 export const KatalogPage = () => {
   const { openProductDetail } = useCart();
 
-  useEffect(() => {
-    document.title = "Katalog Baskı Fiyatları | Çok Sayfalı Ürün Kataloğu - Mavi Basım";
-
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": KATALOG_FAQS.map(item => ({
-        "@type": "Question",
-        "name": item.q,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": item.a
-        }
-      }))
-    };
-
-    let el = document.getElementById('katalog-faq-schema') as HTMLScriptElement | null;
-    if (!el) {
-      el = document.createElement('script');
-      el.id = 'katalog-faq-schema';
-      el.type = 'application/ld+json';
-      document.head.appendChild(el);
-    }
-    el.textContent = JSON.stringify(faqSchema);
-
-    return () => {
-      const script = document.getElementById('katalog-faq-schema');
-      if (script) script.remove();
-    };
-  }, []);
+  // RouteSEOHead owns metadata and the FAQ schema for this route.
 
   const openWhatsApp = (item: any) => {
     openProductDetail(item, "Kataloglar");
@@ -317,7 +287,7 @@ export const KatalogPage = () => {
           badge="A4 / A5 Ebat - Tel Dikiş &amp; Amerikan Cilt"
           description={
             <p>
-              Katalog baskı ve katalog basım fiyatları; seçilen ebat, sayfa sayısı, kuşe kâğıt, cilt türü ve adet bilgilerine göre belirlenir. A4 ve A5 ebatlarında, 135 gr kuşe iç sayfalar ve 300 gr mat/parlak selefonlu kapak alternatifiyle tel dikiş veya Amerikan ciltli profesyonel <strong className="text-slate-900">ürün katalog baskı</strong> çözümleri sunuyoruz. Kurumsal tanıtım materyalleriniz için <Link to="/brosur" className="text-primary hover:underline font-bold">broşür</Link>, <Link to="/karton-canta" className="text-primary hover:underline font-bold">karton çanta</Link>, <Link to="/dosyalar" className="text-primary hover:underline">cepli dosya</Link> ve <Link to="/kartvizit" className="text-primary hover:underline">kartvizit</Link> ürünlerini fabrikamızdan sipariş edebilirsiniz.
+              Katalog baskı ve katalog basım fiyatları; seçilen ebat, sayfa sayısı, kuşe kâğıt, cilt türü ve adet bilgilerine göre belirlenir. A4 ve A5 ebatlarında, 135 gr kuşe iç sayfalar ve 300 gr mat/parlak selefonlu kapak alternatifiyle tel dikiş veya Amerikan ciltli profesyonel <strong className="text-slate-900">ürün katalog baskı</strong> çözümleri sunuyoruz. Kurumsal tanıtım materyalleriniz için <Link to="/brosur" className="text-primary hover:underline font-bold">broşür</Link>, <Link to="/karton-canta" className="text-primary hover:underline font-bold">karton çanta</Link>, <Link to="/dosyalar" className="text-primary hover:underline">cepli dosya</Link> ve <Link to="/kartvizit" className="text-primary hover:underline">kartvizit</Link> ürünleri için de sipariş talebinizi iletebilirsiniz.
             </p>
           }
           relatedLinks={[
@@ -327,10 +297,19 @@ export const KatalogPage = () => {
             { label: "Kartvizit", path: "/kartvizit" }
           ]}
           customCtaText="Özel Katalog Teklifi Al"
+          trustSignals={[
+            { text: "Topkapı Hizmet ve Koordinasyon Noktası" },
+            { text: "Baskıya Hazır Dosya İçin Teknik Kontrol" },
+            { text: "Türkiye Geneline Kargo Gönderimi" },
+            { text: "Farklı Ebat ve Gramaj İçin Özel Teklif" }
+          ]}
         />
 
         {/* Dynamic Delivery Date Banner */}
-        <DeliveryBadge categoryKey="katalog" days={5} variant="banner" className="my-6" />
+        <div className="my-6 rounded-2xl border border-slate-200 bg-white p-5">
+          <p className="font-bold text-slate-900">Katalog Üretim ve Teslim Süresi</p>
+          <p className="mt-2 text-sm text-slate-600">Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.</p>
+        </div>
 
         {/* 🎬 DEDICATED YOUTUBE SHORTS VIDEO SHOWCASE SECTION */}
         <div className="my-12 bg-white rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 border border-slate-200/80 shadow-xl overflow-hidden relative">
@@ -380,10 +359,10 @@ export const KatalogPage = () => {
               <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
                 <div className="flex items-center gap-2 text-slate-900 font-black text-xs uppercase">
                   <MapPin size={16} className="text-primary" />
-                  <span>Üretim Tesisi: Topkapı / İstanbul</span>
+                  <span>Hizmet ve Koordinasyon: Topkapı / İstanbul</span>
                 </div>
                 <p className="text-xs text-slate-600 font-medium">
-                  İstanbul Topkapı 2. Matbaacılar Sitesi bünyesindeki modern ofset tesislerimizde matbaacılar sitesi katalog baskı güvencesiyle yüksek kaliteli üretim yapıyoruz.
+                  İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktası üzerinden katalog baskı taleplerinizi alıyor; dosya kontrolü, PDF prova ve sipariş sürecini takip ediyoruz.
                 </p>
               </div>
 
@@ -709,16 +688,16 @@ export const KatalogPage = () => {
             </div>
           </section>
 
-          {/* Tahmini 5 İş Gününde Kargoya Teslim */}
+          {/* Katalog Üretim ve Kargo Planlaması */}
           <section className="bg-black rounded-[40px] p-8 md:p-16 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full -mr-48 -mt-48 blur-3xl" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full -ml-48 -mb-48 blur-3xl" />
             <div className="relative z-10 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter leading-tight">
-                Tahmini 5 İş Gününde Kargoya Teslim
+                Katalog Üretim ve Kargo Planlaması
               </h2>
               <p className="text-xl text-gray-400 mb-10 font-medium leading-relaxed">
-                <span className="text-white"><strong>Mavi Basım Matbaa & Reklam</strong></span> bünyesinde baskıya uygun dosya, ödeme ve PDF prova onayı tamamlandığında katalog siparişleri tahmini olarak 5 iş gününde kargoya verilir. Kargo teslim süresi gönderim adresine ve kargo firmasına göre değişebilir. Her projeye %100 özgün tasarım ve yüksek baskı kalitesi sunuyoruz. Matbaa ve reklam ajanslarına özel indirimlerimiz için hemen iletişime geçin!
+                <span className="text-white"><strong>Mavi Basım Matbaa & Reklam</strong></span> ile katalog siparişinizin üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır. Kargo teslim süresi gönderim adresine ve kargo firmasına göre değişebilir. Grafik desteği var. Kurumsal sipariş ve teklif talepleriniz için iletişime geçebilirsiniz.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a 
@@ -751,29 +730,10 @@ export const KatalogPage = () => {
             <p className="text-gray-600 font-medium mb-8 text-sm md:text-base">Mavi Basım olarak Türkiye genelinde kaliteli ve hızlı üretim çözümleri sunuyoruz.</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
               {[
-                { path: "/samsun-restoran-brosur-baski", text: "Samsun Restoran Broşür Baskı" },
-                { path: "/trabzon-kafe-menu-baski", text: "Trabzon Kafe Menü Baskı" },
                 { path: "/ordu-findik-firmasi-katalog-baski", text: "Ordu Fındık Firması Katalog" },
-                { path: "/antalya-emlakci-kartvizit-baski", text: "Antalya Emlakçı Kartvizit" },
-                { path: "/rize-lokanta-amerikan-servis", text: "Rize Lokanta Amerikan Servis" },
-                { path: "/samsun-kartvizit-baski", text: "Samsun Kartvizit Baskı" },
-                { path: "/giresun-kartvizit-baski", text: "Giresun Kartvizit Baskı" },
-                { path: "/adana-kartvizit-baski", text: "Adana Kartvizit Baskı" },
-                { path: "/trabzon-brosur-baski", text: "Trabzon Broşür Baskı" },
-                { path: "/rize-brosur-baski", text: "Rize Broşür Baskı" },
-                { path: "/malatya-brosur-baski", text: "Malatya Broşür Baskı" },
-                { path: "/ankara-brosur-baski", text: "Ankara Broşür Baskı" },
-                { path: "/ordu-magnet-baski", text: "Ordu Magnet Baskı" },
-                { path: "/sinop-magnet-baski", text: "Sinop Magnet Baskı" },
-                { path: "/elazig-magnet-baski", text: "Elazığ Magnet Baskı" },
                 { path: "/antalya-katalog-baski", text: "Antalya Katalog Baskı" },
                 { path: "/erzurum-katalog-baski", text: "Erzurum Katalog Baskı" },
                 { path: "/konya-katalog-baski", text: "Konya Katalog Baskı" },
-                { path: "/gebze-kutu-baski", text: "Gebze Kutu Baskı" },
-                { path: "/bitlis-kutu-baski", text: "Bitlis Kutu Baskı" },
-                { path: "/kayseri-kutu-baski", text: "Kayseri Kutu Baskı" },
-                { path: "/van-kutu-baski", text: "Van Kutu Baskı" },
-                { path: "/mugla-kutu-baski", text: "Muğla Kutu Baskı" }
               ].map((city, idx) => (
                 <Link
                   key={idx}
@@ -804,7 +764,7 @@ const KatalogSEOSection = () => {
             DOĞRUDAN TESLİMAT
           </div>
           <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-4 text-white">
-            İstanbul Topkapı Tesisimizden <span className="text-[#00E5FF]">Katalog Çözümleri</span> Hizmeti
+            İstanbul Topkapı Noktamızdan <span className="text-[#00E5FF]">Katalog Çözümleri</span> Hizmeti
           </h2>
           <p className="text-gray-300 font-bold text-base md:text-lg leading-relaxed mb-0">
             Katalog baskı süreçleriniz profesyonel olarak tamamlanmaktadır. Siparişleriniz özenle basılarak paketlenmekte ve kargo ile adresinize sevk edilmektedir.
@@ -870,7 +830,7 @@ const KatalogSEOSection = () => {
             Tasarım Onayı, Üretim ve Kargo Süreçleri
           </h3>
           <p className="text-slate-600 font-semibold text-xs md:text-sm mt-2">
-            Siparişinizin her adımı Topkapı üretim tesisimizde titizlikle takip edilir. Hata riskini en aza indirmek ve yüksek kalite standardı sunmak için uyguladığımız standart iş akışımız:
+            Sipariş süreciniz İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktası üzerinden takip edilir. Dosya kontrolü, dijital onay ve sevkiyat aşamaları aşağıdaki şekilde ilerler:
           </p>
         </div>
 
@@ -879,16 +839,16 @@ const KatalogSEOSection = () => {
             {
               title: "Tasarım Onayı",
               desc: "Gönderdiğiniz grafik dosyaları teknik kontrolümüzden geçer. Hataları önlemek için hazırladığımız PDF prova onayınızı almadan üretime başlamayız.",
-              badge: "Aynı Gün Prova"
+              badge: "PDF Prova Kontrolü"
             },
             {
               title: "Üretim ve Kargolama",
-              desc: "Baskıya uygun dosya, ödeme ve PDF prova onayı tamamlandığında katalog siparişleri tahmini olarak 5 iş gününde kargoya verilir. Kargo teslim süresi gönderim adresine ve kargo firmasına göre değişebilir.",
-              badge: "Tahmini 5 İş Günü"
+              desc: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır. Dijital onay alınmadan baskıya başlanmaz.",
+              badge: "Teklife Göre Planlama"
             },
             {
               title: "Kargo ve Sevkiyat",
-              desc: "Kataloglar kalın çift oluklu mukavva kolilerde özenle paketlenir. Türkiye geneli 81 ile anlaşmalı kargo ağımızla güvenle adresinize sevk edilir.",
+              desc: "Katalog siparişleri koruyucu ambalajlarla paketlenerek Türkiye geneline kargo ile gönderilir. Sevkiyat bilgileri sipariş aşamasında paylaşılır.",
               badge: "81 İl Sevk"
             }
           ].map((item, idx) => (
@@ -921,7 +881,7 @@ const KatalogSEOSection = () => {
                 Tasarım onayı ne kadar sürer?
               </h5>
               <p className="text-[11px] md:text-xs text-slate-600 font-semibold leading-relaxed">
-                Logonuzu ve hazır çalışmanızı iletmenizin ardından, grafik ekibimiz en geç 1-2 saat içinde teknik kontrolü tamamlar. Baskı hatalarını en aza indirmek ve yüksek kalite standardı sunmak amacıyla size dijital PDF prova sunar. "Aynı Gün PDF Prova Onayı" sistemimiz sayesinde iş akışınız aksamaz.
+                Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Kontrol ve onay süresi dosyanın durumuna ve revizyon ihtiyacına göre paylaşılır. Dijital onay alınmadan baskıya başlanmaz.
               </p>
             </div>
             <div className="bg-white p-5 rounded-xl border border-slate-100 shadow-sm">
@@ -929,7 +889,7 @@ const KatalogSEOSection = () => {
                 Baskı süreci ne zaman başlar?
               </h5>
               <p className="text-[11px] md:text-xs text-slate-600 font-semibold leading-relaxed">
-                Siparişinizin fiziksel üretimi, hazırlanan PDF prova mizanpajına WhatsApp veya e-posta üzerinden yazılı "BASKI ONAYI" vermeniz ve ödeme teyidinin alınmasıyla birlikte 24 saat içinde otomatik olarak başlar.
+                PDF prova için yazılı baskı onayınız ve ödeme teyidi alındıktan sonra üretim planlaması yapılır. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.
               </p>
             </div>
           </div>
@@ -964,7 +924,7 @@ const KatalogSEOSection = () => {
             <h3 className="text-xl md:text-2xl font-bold text-black mb-3">Teknik Özellikler ve Cilt Seçenekleri</h3>
             <ul className="list-disc pl-5 space-y-2 text-gray-700 font-medium">
               <li><strong>Lüks Amerikan Cilt (Tutkallı):</strong> Sayfaların sırttan özel sıcak tutkalla birleştirilip kapakla bütünleştirildiği şık kitap benzeri profesyonel cilt sistemi.</li>
-              <li><strong>Tel Dikiş (Broşür Cilt):</strong> Sayfa sayısı az (8-32 sayfa arası) kataloglar için son derece ekonomik, esnek ve ortadan zımbalı kompakt ciltleme.</li>
+              <li><strong>Tel Dikiş (Broşür Cilt):</strong> Mevcut fiyat listesinde toplam 8–40 sayfalık katalog seçenekleri bulunur. Sayfalar ortadan tel dikişle birleştirilir; uygunluk, sayfa sayısı ve kâğıt kalınlığına göre değerlendirilir.</li>
               <li><strong>Kağıt Özellikleri:</strong> Kapak kısmı için 300 gr kuşe (mat veya parlak selefon kaplamalı); iç sayfalar için 135 gr kuşe kağıt kullanılmaktadır.</li>
             </ul>
           </div>
@@ -972,7 +932,7 @@ const KatalogSEOSection = () => {
           <div>
             <h3 className="text-xl md:text-2xl font-bold text-black mb-3">Katalog Tasarım Rehberi</h3>
             <ul className="list-disc pl-5 space-y-2 text-gray-700 font-medium">
-              <li><strong>Kapak Çapı:</strong> Kapağı mat selefon ve bölgesel parlak logo kabartması (Spot UV) ile kurumsal ağırlığa kavuşturun. İlk dokunuş hissi satışı tetikler.</li>
+              <li><strong>Kapak Tasarımı:</strong> Kapağı mat selefon ve bölgesel parlak logo kabartması (Spot UV) ile kurumsal ağırlığa kavuşturun. İlk dokunuş hissi satışı tetikler.</li>
               <li><strong>Yüksek Çözünürlüklü Baskı Dosyası:</strong> Ürün resimlerinizin pürüzsüz çıkması için katalog tasarımlarındaki tüm görsellerin en az 300-350 DPI çözünürlükte olmasına özen gösterin.</li>
               <li><strong>Temiz Mizanpaj:</strong> Sayfaları teknik verilerle boğmak yerine beyaz boşlukları dengeli bırakın; her sayfada tek bir ana ürüne odaklanarak gözü yönlendirin.</li>
             </ul>
@@ -1020,8 +980,8 @@ const KatalogSEOSection = () => {
               <Truck size={24} />
             </div>
             <div>
-              <h4 className="font-bold text-black">Türkiye Geneli Hızlı Sevkiyat</h4>
-              <p className="text-sm font-medium text-black">Anlaşmalı Kargo Sevkiyatı</p>
+              <h4 className="font-bold text-black">Türkiye Geneli Kargo</h4>
+              <p className="text-sm font-medium text-black">Kargo ile Gönderim</p>
             </div>
           </div>
         </div>
