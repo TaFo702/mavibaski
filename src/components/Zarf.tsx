@@ -184,7 +184,7 @@ export const ZarfPage = () => {
           description={
             <div className="space-y-2">
               <p>
-                Mavi Basım olarak pencereli ve penceresiz diplomat zarf ile 24x32 cm A4 torba <strong className="text-slate-900">zarf baskı</strong> seçeneklerini İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden planlıyoruz. Kurumsal evrak ve yazışma gönderimleriniz için diplomat veya torba zarf seçeneklerini değerlendirebilirsiniz.
+                Mavi Basım olarak pencereli ve penceresiz diplomat zarf ile 24x32 cm A4 torba <strong className="text-slate-900">zarf baskı</strong> seçeneklerini İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden planlıyoruz. Kurumsal evrak ve yazışma gönderimlerinizde kullanacağınız baskılı zarf için diplomat veya torba zarf seçeneklerini değerlendirebilirsiniz.
               </p>
             </div>
           }
@@ -414,7 +414,9 @@ export const ZarfPage = () => {
 </div>
 
 <p className="text-center font-bold text-gray-800 bg-primary/10 p-3 rounded-xl mt-4">
-  İhtiyacınıza uygun ölçü ve baskı türünü tablodaki ürün kodlarına göre belirleyebilirsiniz.
+  Baskılı diplomat zarf fiyatları ile torba zarf baskı fiyatları, ebat, baskı türü ve sipariş adedine göre mevcut fiyat listesinden karşılaştırılabilir. Model seçimi için{' '}
+  <Link to="/blog/zarf-baskisinda-diplomat-ve-torba-zarf" className="underline underline-offset-2 hover:text-primary">diplomat ve torba zarf seçim rehberini</Link>{' '}
+  inceleyebilirsiniz.
 </p>
             </div>
           </div>
@@ -796,7 +798,7 @@ export const ZarfPage = () => {
               </p>
 
               <p>
-                Zarf baskısı siparişinden önce logo, ölçü, zarf modeli ve adet bilgilerinin netleştirilmesi gerekir. Logo ve tasarım dosyalarının baskıya uygun formatta iletilmesi önerilir.
+                Zarf bastırma talebinizden önce logo, ölçü, zarf modeli ve adet bilgilerini netleştirin. Logo ve tasarım dosyalarının baskıya uygun formatta iletilmesi önerilir.
               </p>
 
               <p>
