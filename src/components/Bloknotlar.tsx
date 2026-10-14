@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart, ChevronDown } from 'lucide-react';
 import { useCart, ProductSEOSection, FireWarning } from '../App';
 import RelatedBlogPosts from './RelatedBlogPosts';
-import { BLOKNOTLAR_FAQS, BLOKNOTLAR_SCHEMAS } from '../data/bloknotlarPageContent';
+import { BLOKNOTLAR_FAQS } from '../data/bloknotlarPageContent';
 import { BLOKNOTLAR_DATA } from '../data/extraProductData';
 
 export { BLOKNOTLAR_DATA };
@@ -15,33 +15,33 @@ const BLOKNOT_DETAILS = {
   gallery: [
     {
       src: "/images/bloknot/bloknot-baski-fiyatlari.webp",
-      alt: "Kapaklı promosyon bloknot baskı örneği ve sırt dikiş kalitesi",
-      title: "Promosyon Bloknot Baskısı",
-      desc: "Kalın kuşe kapaklı promosyon bloknot baskı örneği."
+      alt: "Logo ve kareli sayfa düzeni bulunan kapaksız bloknot örneği",
+      title: "Kapaksız Bloknot Örneği",
+      desc: "Tıp merkezi logosu ve iletişim bilgileri bulunan kareli not sayfaları."
     },
     {
       src: "/images/bloknot/bloknot-ornegi.webp",
-      alt: "Tutkallı kapaksız bloknot not defteri baskısı ve yaprak yapısı",
-      title: "Tutkallı Kapaksız Bloknot",
-      desc: "Üstten tutkallı kapaksız bloknotlar, pratik not alma amacıyla tercih edilebilir."
+      alt: "Turizm firması için kapaklı bloknotun açık kapak ve kareli iç sayfa görünümü",
+      title: "Kapaklı Bloknot Örneği",
+      desc: "Turizm firması tasarımıyla hazırlanan kapaklı bloknotun açık görünümü."
     },
     {
       src: "/images/bloknot/bloknot-tasarimi.webp",
-      alt: "Özel tasarım kurumsal logolu bloknot baskı detayı",
-      title: "Özel Tasarımlı Bloknot",
-      desc: "Özel tasarımlı bloknotlar, kurumsal kimliğinize uygun baskı ve cilt seçenekleriyle hazırlanabilir."
+      alt: "Emlak firması için logolu kutulu masaüstü notluk ve kareli not sayfaları",
+      title: "Kutulu Masaüstü Notluk Örneği",
+      desc: "Logolu kutu, masaüstü dayanak ve kareli notluk tasarımının birlikte görünümü."
     },
     {
       src: "/images/bloknot/kocanli-bloknot-baski.webp",
-      alt: "Koçanlı bloknot baskısı ve 80 gr 1. hamur kağıt kalitesi",
-      title: "Koçanlı Bloknot Baskısı",
-      desc: "80 gr 1. hamur kağıt üzerine hazırlanan koçanlı bloknot baskısı."
+      alt: "Muhasebe firması tasarımlı, farklı boyutlarda üstten spiralli bloknot örnekleri",
+      title: "Spiralli Bloknot Örnekleri",
+      desc: "Farklı boyutlardaki spiralli bloknot tasarımları. Görseldeki ebatlar fiyat listesindeki kesim ölçülerini temsil etmez."
     },
     {
       src: "/images/bloknot/spiralli-bloknot-baski.webp",
-      alt: "Spiralli kurumsal promosyon bloknot modeli",
-      title: "Spiralli Bloknot Modelleri",
-      desc: "Logo baskısı ve spiralli cilt seçeneğiyle hazırlanan kurumsal not defterleri."
+      alt: "Kapaklı bloknot, kutulu notluk ve spiralli modelleri birlikte gösteren tasarım örnekleri",
+      title: "Bloknot ve Notluk Tasarımları",
+      desc: "Kapaklı, spiralli ve kutulu notluk tasarımlarının birlikte gösterildiği örnekler."
     },
     {
       src: "/images/kup-bloknot/promosyon-kup-bloknot-ornegi.webp",
@@ -84,42 +84,6 @@ const DynamicImageContainer = ({
 
 export const BloknotlarPage = () => {
   const { openProductDetail } = useCart();
-
-  useEffect(() => {
-    const schemasToManage = [
-      {
-        id: 'bloknotlar-breadcrumb-schema',
-        data: BLOKNOTLAR_SCHEMAS.breadcrumbSchema
-      },
-      {
-        id: 'bloknotlar-product-schema',
-        data: BLOKNOTLAR_SCHEMAS.productSchema
-      },
-      {
-        id: 'bloknotlar-faq-schema',
-        data: BLOKNOTLAR_SCHEMAS.faqSchema
-      }
-    ];
-
-    schemasToManage.forEach(({ id, data }) => {
-      let element = document.getElementById(id) as HTMLScriptElement | null;
-
-      if (!element) {
-        element = document.createElement('script');
-        element.id = id;
-        element.type = 'application/ld+json';
-        document.head.appendChild(element);
-      }
-
-      element.textContent = JSON.stringify(data);
-    });
-
-    return () => {
-      schemasToManage.forEach(({ id }) => {
-        document.getElementById(id)?.remove();
-      });
-    };
-  }, []);
 
   const openWhatsApp = (
     item: any,
@@ -464,7 +428,7 @@ export const BloknotlarPage = () => {
                 </div>
                 <h3 className="font-black text-sm text-emerald-900 uppercase mt-1 mb-2">Ciltli Yarı-Parlak (Parlak Selefonlu)</h3>
                 <p className="text-[11px] text-gray-650 font-medium leading-relaxed">
-                  Bloknotlar, kurumsal tanıtım ve günlük not alma süreçlerinde kullanılabilen basılı ürünlerdir. Kapaklı veya kapaksız modeller, firmanın kullanım amacına ve sipariş detaylarına göre değerlendirilebilir.
+                  CYP modelinde kuşe kapak üzerine parlak selefon uygulanır. Parlak yüzey tercih edenler, bu seçeneği mat selefonlu CYM modeliyle karşılaştırabilir.
                 </p>
               </div>
               <div className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-400 font-bold">Fiyat Seviyesi: Ekonomik (+%10)</div>
@@ -711,7 +675,7 @@ export const BloknotlarPage = () => {
                 <div>
                   <h3 className="text-sm font-black text-black uppercase mb-3">80 gr 1. Hamur</h3>
                   <ul className="text-xs text-gray-750 space-y-2 list-none font-semibold">
-                    <li><strong className="text-black">Yaprak kağıt kalınlığı:</strong> 80 gr/m²</li>
+                    <li><strong className="text-black">İç sayfa gramajı:</strong> 80 gr/m²</li>
                     <li><strong className="text-black">Yazım konforu:</strong> Tükenmez, kurşun ve dolma kalemle pürüzsüz yazım</li>
                     <li><strong className="text-black">Yüzey kalitesi:</strong> Parlak beyaz zemin üzerine yüksek kontrastlı ofset baskı</li>
                   </ul>

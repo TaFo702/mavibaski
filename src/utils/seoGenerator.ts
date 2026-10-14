@@ -10,7 +10,7 @@ import { KUTU_SEO_METADATA, KUTU_FAQS, KUTU_SCHEMAS, generateKutuSSRBodyContent 
 import { AMBALAJ_SEO_METADATA, AMBALAJ_SCHEMAS, generateAmbalajSSRBodyContent } from "../data/ambalajPageContent";
 import { KUP_BLOKNOT_SEO_METADATA, KUP_BLOKNOT_SCHEMAS, generateKupBloknotSSRBodyContent } from "../data/kupBloknotPageContent";
 import { ETIKET_SEO_METADATA, ETIKET_SCHEMAS, generateEtiketSSRBodyContent } from "../data/etiketPageContent";
-import { BLOKNOTLAR_SEO_METADATA, BLOKNOTLAR_SCHEMAS, generateBloknotlarSSRBodyContent } from "../data/bloknotlarPageContent";
+import { BLOKNOTLAR_SEO_METADATA, BLOKNOTLAR_SCHEMAS } from "../data/bloknotlarPageContent";
 import { ANTETLI_SEO_METADATA, ANTETLI_SCHEMAS } from "../data/antetliPageContent";
 import { KATALOG_FAQS, KATALOG_DATA, KARTON_CANTA_DATA, ZARF_FAQS } from "../data/extraProductData";
 import { DOSYALAR_DETAILS } from "../data/dosyalarPageContent";
@@ -1859,7 +1859,6 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
   // 1.12. Bloknotlar Page Dedicated Route
   if (p === '/bloknotlar') {
     const breadcrumbSchema = BLOKNOTLAR_SCHEMAS.breadcrumbSchema;
-    const productSchema = BLOKNOTLAR_SCHEMAS.productSchema;
     const faqSchema = BLOKNOTLAR_SCHEMAS.faqSchema;
 
     const ogImage = BLOKNOTLAR_SEO_METADATA.ogImage;
@@ -1869,8 +1868,8 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
     extraHead += `  <meta property="og:image" content="${ogImage}" />\n`;
     extraHead += `  <meta property="og:image:secure_url" content="${ogImage}" />\n`;
     extraHead += `  <meta property="og:image:type" content="image/webp" />\n`;
-    extraHead += `  <meta property="og:image:width" content="1200" />\n`;
-    extraHead += `  <meta property="og:image:height" content="630" />\n`;
+    extraHead += `  <meta property="og:image:width" content="1536" />\n`;
+    extraHead += `  <meta property="og:image:height" content="1024" />\n`;
     extraHead += `  <meta property="og:image:alt" content="Mavi Basım promosyon ve kapaklı bloknot baskı fiyatları" />\n`;
     extraHead += `  <meta name="twitter:card" content="summary_large_image" />\n`;
     extraHead += `  <meta name="twitter:title" content="${BLOKNOTLAR_SEO_METADATA.title}" />\n`;
@@ -1906,9 +1905,8 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
 
     extraHead += `  <script id="app-seo-metadata-jsonld" type="application/ld+json">${JSON.stringify([orgSchema, websiteSchema])}</script>\n`;
     extraHead += `  <script id="bloknotlar-breadcrumb-schema" type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n`;
-    extraHead += `  <script id="bloknotlar-product-schema" type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;
     extraHead += `  <script id="bloknotlar-faq-schema" type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n`;
-    const bodyContent = generateBloknotlarSSRBodyContent();
+    const bodyContent = ""; // Build renders the unchanged React page instead of a separate table copy.
 
     return {
       title: BLOKNOTLAR_SEO_METADATA.title,

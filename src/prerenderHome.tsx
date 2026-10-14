@@ -4,6 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 import ZarfPage from './components/Zarf';
 import { DosyalarPage } from './components/Dosyalar';
+import { BloknotlarPage } from './components/Bloknotlar';
 import { AntetliPage } from './components/Antetli';
 import { BlogPage } from './components/Blog';
 
@@ -48,4 +49,11 @@ export function prerenderDosyalar() {
     <MemoryRouter initialEntries={['/dosyalar']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={DosyalarRouter} DosyalarComponent={DosyalarPage} />);
+}
+
+export function prerenderBloknotlar() {
+  const BloknotlarRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/bloknotlar']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={BloknotlarRouter} BloknotlarComponent={BloknotlarPage} />);
 }
