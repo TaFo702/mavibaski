@@ -189,7 +189,7 @@ export const DosyalarPage = () => {
               <table className="w-full border-collapse text-[11px] md:text-[13px]">
                 <thead>
                   <tr className="bg-black text-white border-b border-black">
-                    <th className="p-4 w-10"></th>
+                    <th scope="col" aria-label="Kategori" className="p-4 w-10"></th>
                     <th className="p-4 w-24 font-black uppercase tracking-tight text-[14px] md:text-[16px] border-r border-white/10">KOD</th>
                     <th className="p-4 text-center font-black uppercase tracking-tight text-[14px] md:text-[16px] border-r border-white/10">ADET</th>
                     <th className="p-4 text-center font-black uppercase tracking-tight text-[14px] md:text-[16px] border-r border-white/10">ÖZELLİKLER</th>
