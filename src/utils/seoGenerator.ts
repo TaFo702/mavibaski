@@ -11,7 +11,7 @@ import { AMBALAJ_SEO_METADATA, AMBALAJ_SCHEMAS, generateAmbalajSSRBodyContent } 
 import { KUP_BLOKNOT_SEO_METADATA, KUP_BLOKNOT_SCHEMAS, generateKupBloknotSSRBodyContent } from "../data/kupBloknotPageContent";
 import { ETIKET_SEO_METADATA, ETIKET_SCHEMAS, generateEtiketSSRBodyContent } from "../data/etiketPageContent";
 import { BLOKNOTLAR_SEO_METADATA, BLOKNOTLAR_SCHEMAS, generateBloknotlarSSRBodyContent } from "../data/bloknotlarPageContent";
-import { ANTETLI_SEO_METADATA, ANTETLI_SCHEMAS, generateAntetliSSRBodyContent } from "../data/antetliPageContent";
+import { ANTETLI_SEO_METADATA, ANTETLI_SCHEMAS } from "../data/antetliPageContent";
 import { KATALOG_FAQS, KATALOG_DATA, KARTON_CANTA_DATA, ZARF_FAQS } from "../data/extraProductData";
 import { DOSYALAR_DATA } from "../data/productData";
 export const citySlugs = new Set(CITIES_DATA.map(c => c.slug));
@@ -1923,7 +1923,6 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
   // 1.13. Antetli Kağıt Page Dedicated Route
   if (p === '/antetli') {
     const breadcrumbSchema = ANTETLI_SCHEMAS.breadcrumbSchema;
-    const productSchema = ANTETLI_SCHEMAS.productSchema;
     const faqSchema = ANTETLI_SCHEMAS.faqSchema;
 
     const ogImage = ANTETLI_SEO_METADATA.ogImage;
@@ -1947,18 +1946,14 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
 
     extraHead += `  <script id="app-seo-metadata-jsonld" type="application/ld+json">${JSON.stringify([orgSchema, websiteSchema])}</script>\n`;
     extraHead += `  <script id="antetli-breadcrumb-schema" type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n`;
-    extraHead += `  <script id="antetli-product-schema" type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;
     extraHead += `  <script id="antetli-faq-schema" type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n`;
-
-    const bodyContent = generateAntetliSSRBodyContent();
 
     return {
       title: ANTETLI_SEO_METADATA.title,
       desc: ANTETLI_SEO_METADATA.desc,
       canonical,
       extraHead,
-      bodyContent,
-      h1Text: "Logolu Antetli Kağıt Baskı Fiyatları & Kurumsal Yazışma Kağıtları",
+      h1Text: "Antetli Kağıt Baskı Fiyatları",
       ogImage
     };
   }

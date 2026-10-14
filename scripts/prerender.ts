@@ -45,13 +45,15 @@ async function prerender() {
   const rendererPath = path.join(distDir, '.prerender-home.cjs');
   let homeContent: string;
   let zarfContent: string;
+  let antetliContent: string;
   let zarfBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
+    antetliContent = prerenderAntetli();
     zarfBlogContent = prerenderZarfBlog();
   } finally { fs.rmSync(rendererPath, { force: true }); }
 
@@ -95,6 +97,7 @@ async function prerender() {
         seo.extraHead,
         seo.h1Text,
         pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent
+          : pathname === '/antetli' ? antetliContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent : seo.bodyContent,
         seo.ogImage
       );
@@ -114,6 +117,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
         : pathname === '/zarf'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="zarf">')
+        : pathname === '/antetli'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="antetli">')
         : html;
       fs.writeFileSync(targetPath, output, "utf-8");
       generatedCount++;
