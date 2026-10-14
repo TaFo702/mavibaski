@@ -29,7 +29,7 @@ export const ANTETLI_GALLERY_DATA = [
   },
   {
     src: "/images/antetli-kagit/antetli-kagit-tasarimi.webp",
-    alt: "Profesyonel antetli kağıt tasarımı ve watermark (filigran) ayarı",
+    alt: "Logo ve iletişim bilgileri içeren antetli kağıt tasarım örneği",
     title: "Antetli Kağıt Tasarım Örneği",
     desc: "Logo ve firma bilgileri içeren antetli kağıt tasarım örneği.",
     width: 1536,
@@ -37,17 +37,17 @@ export const ANTETLI_GALLERY_DATA = [
   },
   {
     src: "/images/antetli-kagit/antetli-kagit-baski-detayi.webp",
-    alt: "90 gr 1. hamur kağıt üzerine yüksek hassasiyetli ofset baskı detayı",
-    title: "Antetli Kağıt Baskı Detayı",
-    desc: "Antetli kağıt baskı detayını gösteren görsel örneği.",
+    alt: "Baskı makinesinde çoklu antetli kağıt tasarımları",
+    title: "Antetli Kağıt Baskı Süreci",
+    desc: "Baskı makinesindeki antetli kağıt tasarımlarını gösteren görsel örneği.",
     width: 1536,
     height: 1024
   },
   {
     src: "/images/antetli-kagit/tasarimli-antetli-kagit.webp",
-    alt: "Baskı öncesi hazırlık ve matbaa kalıp dosya kontrol süreci",
+    alt: "Bilgisayar ekranında logo tasarımı ve baskı öncesi hazırlık",
     title: "Antetli Kağıt Dosya Hazırlığı",
-    desc: "Logo, firma bilgileri ve baskı dosyası detaylarını gösteren örnek.",
+    desc: "Grafik tasarım ekranında logo ve renk hazırlığını gösteren örnek.",
     width: 1536,
     height: 1024
     }
@@ -149,28 +149,6 @@ export const ANTETLI_SCHEMAS = {
         "item": "https://mavibasim.com/antetli"
       }
     ]
-  },
-    productSchema: {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": "https://mavibasim.com/antetli",
-    "url": "https://mavibasim.com/antetli",
-    "name": "Antetli Kağıt Baskı Fiyatları | A4 ve A5 | Mavi Basım",
-    "description": "A4 ve A5 antetli kağıt baskı fiyatlarını inceleyin. Logolu ve kurumsal antetli kağıt için 80 gr ve 90 gr 1. hamur seçeneklerini inceleyip sipariş verin.",
-    "category": "Antetli Kağıt Baskı",
-    "image": "https://mavibasim.com/images/antetli-kagit/antetli-kagit-baski-fiyatlari.webp",
-    "brand": {
-      "@type": "Brand",
-      "name": "Mavi Basım"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "TRY",
-      "lowPrice": 2350,
-      "highPrice": 5000,
-      "offerCount": 6,
-      "url": "https://mavibasim.com/antetli"
-    }
   },
   faqSchema: {
     "@context": "https://schema.org",

@@ -273,7 +273,7 @@ export const AntetliPage = () => {
               </h3>
 
               <p className="text-xs text-slate-650 font-semibold leading-relaxed">
-                Fiyat listesinden ürün kodu, ebat ve adet seçimini yaptıktan sonra <strong>Hemen Sipariş Ver</strong> butonuyla WhatsApp sipariş hattımıza ulaşabilirsiniz. Logo, firma bilgileri ve sipariş detaylarını paylaşmanız yeterlidir. Baskı süreci sipariş bilgilerine göre planlanır.
+                Fiyat listesinden ürün kodu, ebat ve adet seçimini yaptıktan sonra <strong>Hemen Sipariş Ver</strong> butonuyla ürün detayını açabilirsiniz. Açılan penceredeki <strong>WhatsApp ile İletişim</strong> bağlantısından logo, firma bilgileri ve sipariş detaylarını paylaşabilirsiniz. Baskı süreci sipariş bilgilerine göre planlanır.
               </p>
             </div>
           </div>

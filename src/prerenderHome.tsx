@@ -3,6 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 import ZarfPage from './components/Zarf';
+import { AntetliPage } from './components/Antetli';
 import { BlogPage } from './components/Blog';
 
 export function prerenderHome() {
@@ -31,4 +32,12 @@ export function prerenderZarfBlog() {
     .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
     .replace(/<meta\b[^>]*\/?>/gi, '')
     .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
+}
+
+
+export function prerenderAntetli() {
+  const AntetliRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/antetli']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={AntetliRouter} AntetliComponent={AntetliPage} />);
 }
