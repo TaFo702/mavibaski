@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { 
   ChevronDown, 
   ShoppingCart, 
-  CheckCircle, 
   Printer, 
   FileText
 } from 'lucide-react';
@@ -309,50 +308,6 @@ export const AntetliPage = () => {
             </div>
           </div>
         </div>
-          {/* NEDEN BİZ TERCİH EDİLİYORUZ? */}
-        <div className="mb-12 text-black scroll-mt-24">
-          <div className="flex items-center gap-3 mb-6 px-2">
-            <div className="w-2.5 h-6 bg-primary rounded-full shrink-0" />
-            <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight">
-              Antetli Kağıt Baskıda Öne Çıkan Bilgiler
-            </h2>
-          </div>
-          <div className="bg-gray-50 border border-gray-200 rounded-3xl p-6 md:p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-                            {[
-                {
-                  title: "A4 ve A5 Seçenekleri",
-                  desc: "Fiyat tablosunda A4 ve A5 antetli kağıt seçenekleri yer almaktadır."
-                },
-                {
-                  title: "80 gr / 90 gr Seçenekleri",
-                  desc: "Antetli kağıt ürünlerinde 80 gr ve 90 gr 1. hamur seçenekleri sunulmaktadır."
-                },
-                {
-                  title: "Ürün Kodlarıyla Sipariş",
-                  desc: "ANT1–ANT6 ürün kodları üzerinden ebat, adet ve fiyat bilgileri incelenebilir."
-                },
-                {
-                  title: "Kurumsal Antetli Kağıt",
-                  desc: "Logo, firma bilgileri ve kurumsal iletişim unsurları antetli kağıt tasarımında kullanılabilir."
-                },
-                {
-                  title: "WhatsApp Sipariş Hattı",
-                  desc: "Ürün kodu ve sipariş bilgileri WhatsApp hattı üzerinden paylaşılabilir."
-                }
-                ].map((item, idx) => (
-                <div key={idx} className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm flex flex-col gap-2">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="text-primary w-5 h-5 shrink-0" />
-                    <h3 className="font-black text-black uppercase text-[12px] leading-tight">{item.title}</h3>
-                  </div>
-                  <p className="text-xs text-gray-650 font-semibold leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* FİYATI ETKİLEYEN FAKTÖRLER */}
         <div className="mb-12 text-black scroll-mt-24">
           <div className="flex items-center gap-3 mb-6 px-2">
@@ -369,19 +324,19 @@ export const AntetliPage = () => {
               {[
                 {
                   title: "Sipariş Adedi",
-                  desc: "Fiyat tablosundaki adet seçenekleri sipariş miktarının belirlenmesine yardımcı olur."
+                  desc: "Karşılaştırırken toplam fiyatın hangi sipariş adedi için verildiğini birlikte inceleyin."
                 },
                 {
                   title: "Ebat Seçeneği",
-                  desc: "A4 ve A5 ebatları ürün kodlarına göre ayrı seçenekler olarak listelenmiştir."
+                  desc: "Önce belgenizin metin ve imza alanını belirleyin; ardından uygun ebatın ürün kodunu seçin."
                 },
                 {
                   title: "Kağıt Gramajı",
-                  desc: "80 gr ve 90 gr 1. hamur seçenekleri ürün ve sipariş detaylarına göre değerlendirilir."
+                  desc: "Tablodaki standart gramajdan farklı bir kağıt talebini teklif aşamasında ayrıca belirtin."
                 },
                 {
                   title: "Baskı Detayı",
-                  desc: "Baskı rengi ve tasarım bilgileri sipariş sırasında paylaşılabilir."
+                  desc: "Teklif karşılaştırmasında baskı yönü ve renk tercihi gibi detayların aynı olduğundan emin olun."
                 }
               ].map((item, idx) => (
                 <div key={idx} className="bg-white p-4 rounded-xl border border-gray-150 shadow-sm">
@@ -433,7 +388,7 @@ export const AntetliPage = () => {
                     {item.step}
                   </div>
                   <div>
-                    <h4 className="font-black text-black uppercase text-xs mb-1">{item.title}</h4>
+                    <h3 className="font-black text-black uppercase text-xs mb-1">{item.title}</h3>
                     <p className="text-xs text-gray-650 font-semibold leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -459,7 +414,7 @@ export const AntetliPage = () => {
                 </h3>
 
                 <p className="text-xs text-gray-650 mb-4 font-semibold">
-                  Fiyat tablosunda A4 ve A5 antetli kağıt seçenekleri yer almaktadır. Ebat tercihi ürün kodu ve sipariş detaylarına göre belirlenir.
+                  Antetli kağıt ebatını seçerken yazışmanın uzunluğunu, logo ve iletişim bilgileri için ayrılan alanı, imza bölümünü ve kullanacağınız dosya veya zarfı birlikte değerlendirin.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-semibold leading-relaxed mb-4">
@@ -469,14 +424,13 @@ export const AntetliPage = () => {
                     </h4>
 
                     <p className="text-slate-650 mb-2 leading-relaxed">
-                      A4, antetli kağıt ürünlerinde kullanılan ebat seçeneklerinden biridir.
+                      A4, uzun yazışmalar, ayrıntılı teklifler ve birden fazla metin bölümü bulunan belgelerde daha geniş çalışma alanı sağlar.
                     </p>
 
                     <ul className="space-y-1 text-slate-700">
-                      <li>✓ A4 ebat seçeneği</li>
-                      <li>✓ Logo ve firma bilgileri için kullanılabilir</li>
-                      <li>✓ Kurumsal yazışma tasarımlarında değerlendirilebilir</li>
-                      <li>✓ Fiyat tablosundaki ürün kodlarıyla incelenebilir</li>
+                      <li>✓ Uzun metin ve ek açıklamalar için geniş alan</li>
+                      <li>✓ Logo, iletişim bilgileri ve imza alanını birlikte planlama</li>
+                      <li>✓ A4 belgeyle kullanılacak dosya veya zarf ölçüsünü kontrol etme</li>
                     </ul>
                   </div>
 
@@ -486,14 +440,13 @@ export const AntetliPage = () => {
                     </h4>
 
                     <p className="text-slate-650 mb-2 leading-relaxed">
-                      A5, antetli kağıt ürünlerinde kullanılan diğer ebat seçeneğidir.
+                      A5, kısa yazışmalar, bilgilendirme notları ve az metinli kurumsal belgeler için daha kompakt bir seçenektir.
                     </p>
 
                     <ul className="space-y-1 text-slate-700">
-                      <li>✓ A5 ebat seçeneği</li>
-                      <li>✓ Logo ve firma bilgileri için kullanılabilir</li>
-                      <li>✓ Kurumsal doküman tasarımlarında değerlendirilebilir</li>
-                      <li>✓ Fiyat tablosundaki ürün kodlarıyla incelenebilir</li>
+                      <li>✓ Kısa metinli belgeler için kompakt alan</li>
+                      <li>✓ Dar alanda okunabilir yazı boyutunu koruma</li>
+                      <li>✓ Logo ve imza bölümünü metinle dengeli yerleştirme</li>
                     </ul>
                   </div>
                 </div>
@@ -520,7 +473,7 @@ export const AntetliPage = () => {
                       </h4>
 
                       <p className="text-xs text-gray-650 font-semibold leading-relaxed">
-                        Antetli kağıt ürünlerinde 80 gr ve 90 gr 1. hamur seçenekleri bulunmaktadır; fiyat tablosunda 90 gr standart ürünler listelenir.
+                        Antetli kağıdı ofis yazıcısında kullanacaksanız cihazın desteklediği gramaj aralığını ve baskılı kağıt kullanım talimatlarını kontrol edin.
                       </p>
                     </div>
                   </div>
@@ -534,7 +487,7 @@ export const AntetliPage = () => {
                       </h4>
 
                       <p className="text-xs text-gray-650 font-semibold leading-relaxed">
-                        Logo, firma bilgileri ve baskı detayları sipariş sırasında paylaşılabilir.
+                        Tekrar siparişte firma unvanı, adres ve iletişim bilgilerinin güncelliğini kontrol edin; eski baskı dosyasındaki değişiklikleri ayrıca belirtin.
                       </p>
                     </div>
                   </div>

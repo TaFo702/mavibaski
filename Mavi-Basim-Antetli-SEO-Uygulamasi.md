@@ -26,3 +26,12 @@ Yazıcılarla %100 uyum, sıkışmama garantisi, belgelenmeyen Pantone kalibrasy
 - Yerel lint: 0 hata; mevcut 21 uyarı.
 
 GSC/Planner hesabına veri yazılmadı veya yeni veri çekilmedi. Analiz paneli bu repo kapsamında değil; primary URL ve tekrarlı sorgu kayıtları burada değiştirilemedi. Mobil ekran ve Core Web Vitals ölçülmedi. İlk 10 garantisi verilmez.
+
+## İçerik sadeleştirme ve başlık tamamlaması
+
+- “Antetli Kağıt Baskı Süreci” altındaki dört H4, görsel sınıfları korunarak H3 yapıldı.
+- Aynı ebat/gramaj/sipariş bilgilerini yineleyen beş “Öne Çıkan Bilgiler” kartı kaldırıldı; fiyat veya sipariş işlevi kaldırılmadı.
+- Fiyat etkenleri açıklamaları ürün bilgilerini tekrar etmek yerine teklif karşılaştırmasında hangi detayların kontrol edileceğini anlatıyor.
+- Mevcut A4/A5 karşılaştırması uzun/kısa metin, imza alanı, okunabilirlik ve dosya/zarf uyumu üzerinden seçim rehberine dönüştürüldü. Ürün ölçüleri korunuyor.
+- Tekrarlanan gramaj ve logo cümleleri yerine yazıcı talimatı ve tekrar siparişte firma bilgisi kontrolü açıklandı.
+- Ürün title/meta/H1, fiyat tablosu, miktarlar ve teslimat bilgileri değişmedi. Önceki dosya hazırlama açıklaması, SSS ve rehber bağlantısı korundu.
