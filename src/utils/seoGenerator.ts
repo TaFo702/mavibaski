@@ -72,6 +72,7 @@ export const knownStaticRoutes = new Set([
 ]);
 
 export const URL_REDIRECTS: Record<string, string> = {
+  "/antetli-kagit": "/antetli",
   "/cepli-dosya": "/dosyalar",
   "/favicon.ico": "/mavilogo.png",
   "/blog/ofset-baski-ile-dijital-baski-farki": "/blog/ofset-baski-ile-dijital-baski-farklari",

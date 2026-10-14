@@ -580,7 +580,7 @@ export const BlogPage = () => {
     // Render Detail View
     return (
       <div className="bg-neutral-50 min-h-screen pb-24">
-        {activePost.slug !== 'zarf-baskisinda-diplomat-ve-torba-zarf' && <Helmet>
+        {!['zarf-baskisinda-diplomat-ve-torba-zarf', 'antetli-kagit-baskisinda-80gr-1.hamur'].includes(activePost.slug) && <Helmet>
           <title>{displayTitle}</title>
           <meta name="description" content={displayDesc} />
           <meta property="og:title" content={displayTitle} />

@@ -80,7 +80,7 @@ export const ANTETLI_FAQ_DATA = [
   },
     {
     q: "Antetli kağıt baskısı için hangi bilgiler gerekir?",
-    a: "Logo, firma bilgileri, ürün kodu, ebat ve adet bilgileri sipariş sırasında paylaşılabilir."
+    a: "Logo, firma bilgileri, ürün kodu, ebat ve adet bilgilerini sipariş sırasında paylaşabilirsiniz. Hazır baskı dosyanızı PDF, AI veya CDR formatında iletin; PDF provasında firma bilgilerini, yerleşimi ve ebatı kontrol ederek onay verin."
   },
     {
     q: "Antetli kağıt baskısı ne zaman hazırlanır?",

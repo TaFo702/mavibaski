@@ -2772,7 +2772,7 @@ BTN_LINK: https://wa.me/905366022373
   {
     slug: 'antetli-kagit-baskisinda-80gr-1.hamur',
     title: 'Kurumsal Kimliğin Temeli: Antetli Kağıt Baskısında 80 gr 1. Hamur Standardı',
-    excerpt: 'Lazer yazıcılarla tam uyumlu, sıkışma ve mürekkep dağıtma yapmayan logolu dikey kurumsal yazışma kağıdı seçerken bilinmesi gerekenler.',
+    excerpt: 'Logolu kurumsal yazışma kağıdı için 80 gr ve 90 gr 1. hamur seçenekleri, baskı dosyası ve yazıcı kullanımında dikkat edilmesi gerekenler.',
     date: '05 Mayıs 2026',
     readTime: '6 Dk Okuma',
     category: 'Kartvizit & Prestij',
@@ -2787,11 +2787,11 @@ Kurumsal belgeleriniz için [Antetli Kağıt Baskısı](/antetli) fiyatlarımız
 :::info-cards
 Lazer Yazıcı Dostu Yapı
 - Ofis içi standart yazıcılarda (inkjet veya laserjet) kullanılan antetli kağıtların pürüzsüz bir yüzeye ve dengeli bir nem oranına sahip olması kritik önem taşır.
-- Matbaamızda üretilen antetli kağıtlar, çift taraflı yüksek kaliteli 1. hamur selülozdan üretilmekte olup, yazıcı besleme tepsilerinde kayma veya sıkışma yapmadan pürüzsüz bir geçiş sağlar.
+- Kağıt gramajının yazıcınızın desteklediği aralıkta olması ve baskılı kağıt kullanımına ilişkin üretici talimatlarına uyulması gerekir. Uyum, yazıcı modeli ve besleme ayarlarına göre değerlendirilmelidir.
 ---
 Baskı Hassasiyeti
 - Logonuzun ve kurumsal çizgilerinizin orijinal renklerini koruyan CMYK yüksek çözünürlüklü ofset baskı teknolojisi.
-- Kurumsal renklerinizin birebir yakalanması amacıyla Pantone kalibrasyonu yapılır.
+- Renk profili ve logo dosyası baskı öncesinde kontrol edilmelidir; ekran görüntüsü ile basılı renk arasında farklılık oluşabilir.
 ---
 Standart Ebat
 - Resmi belgelerin evrensel standardı olan **A4 Ebat (21x29,7 cm)** kesim.
@@ -2803,8 +2803,8 @@ Standart Ebat
 ## Antetli Kağıt Tasarımında En Sık Yapılan Hatalar
 
 :::warning-box
-- Yazıcılarda sıkışma yapan fason kağıtlar tercih etmek.
-- 1. Hamur dışındaki pürüzlü fantezi kağıtlar kullanıp lazer tonerin dökülmesine yol açmak.
+- Yazıcının desteklediği gramaj aralığını kontrol etmeden kağıt seçmek.
+- Baskılı kağıt kullanımına ilişkin yazıcı üreticisinin talimatlarını dikkate almamak.
 - Logonun renk profillerini RGB formatında bırakıp baskıda soluk tonlar elde etmek.
 - Taşma payı bırakmayıp kenar çizgilerinin kesim esnasında yok olmasına sebep olmak.
 :::
@@ -2814,9 +2814,9 @@ Standart Ebat
 ## Mavi Basım Yüksek Kaliteli Antetli Kağıt Avantajları
 
 :::importance-cards
-1. Sınıf 80g Selüloz | Tüm inkjet ve laserjet ofis yazıcılarıyla %100 uyumlu çalışan, yazıcı silindirlerinde bükülüp sıkışmayan saf selüloz antetli kağıtlar.
-Yüksek Renk Hassasiyeti | Ofset parkurumuzda logonuzun orijinal kurumsal tonlarını (Pantone kalibrasyonlu) kağıda jilet gibi keskin aktaran dikey baskı ünitelerimiz.
-A4 Evrensel Standart | Resmi evrak arşivlerine, sunum klasörlerine ve zarflara kusursuz sığan milimetrik A4 dikey kesim garantisi.
+80 gr / 90 gr Seçenekleri | Ürün sayfasında 90 gr 1. hamur standart seçenekler listelenir; 80 gr talepleri ayrıca değerlendirilir.
+Baskı Öncesi Dosya Kontrolü | Logo, firma bilgileri, ebat ve baskı detayları sipariş hazırlığında değerlendirilir.
+A4 ve A5 Ürün Seçenekleri | Mevcut fiyat listesindeki ebat, gramaj ve adet seçeneklerini ürün koduyla karşılaştırabilirsiniz.
 :::
 
 ---
@@ -2825,27 +2825,27 @@ A4 Evrensel Standart | Resmi evrak arşivlerine, sunum klasörlerine ve zarflara
 
 | Özellik / Parametre | 80 gr 1. Hamur Antetli Kağıt | 90 gr 1. Hamur Antetli Kağıt | Fotokopi Kağıdı (Baskısız) |
 | :--- | :--- | :--- | :--- |
-| **Yazıcı Uyumluluğu** | %100 Kusursuz (Standart Lazer) | %100 Kusursuz (Premium Lazer) | Değişken (Sıkışma riski yüksektir) |
-| **Elde Yarattığı Tokluk**| İdeal Orta Kalınlık | Ağır ve Oldukça Tok Yapı | İnce ve Güvensiz Basit Yapı |
+| **Yazıcı Uyumluluğu** | Yazıcı modeline göre kontrol edilmeli | Yazıcı modeline göre kontrol edilmeli | Yazıcının desteklediği kağıt türüne göre |
+| **Elde Yarattığı Tokluk**| İdeal Orta Kalınlık | Ağır ve Oldukça Tok Yapı | Gramajına ve kağıt türüne göre değişir |
 | **Baskı Kalitesi** | Canlı Ofset Renkler | Canlı Ofset Renkler | Baskısız Sade |
-| **Kurumsal İmaj** | ★★★★★ | ★★★★★ | ★☆☆☆☆ |
+| **Kurumsal İmaj** | Logolu kurumsal kullanım | Logolu kurumsal kullanım | Logo baskısı bulunmaz |
 
 ---
 
 :::cta
 TITLE: Kurumsal Antetli Kağıt Baskısı
-DESC: Ofisinizdeki tüm yazıcılarla tam uyumlu çalışacak, firmanızın logosuyla kurumsal kimliğinizi taçlandıracak antetli kağıtları en uygun ofset fiyatlarıyla üretiyoruz. Grafik prova onayı almak için hemen bizimle iletişime geçin.
+DESC: Logolu antetli kağıt için mevcut A4 ve A5 ürün seçeneklerini fiyat listesinden inceleyebilirsiniz. Ürün kodu, adet ve baskı dosyası bilgileriyle teklif almak için iletişime geçin.
 BTN_TEXT: WhatsApp Antetli Kağıt Hattı
 BTN_LINK: https://wa.me/905366022373
 :::`,
     faq: [
       {
         question: 'Antetli kağıtlarda standart gramaj neden 80 gr tercih edilir?',
-        answer: '80 gr. 1. Hamur kağıtlar, ofislerde kullanılan stagnant fotokopi kağıtlarıyla aynı gramajda olup, tüm lazer ve mürekkep püskürtmeli yazıcılarla en kusursuz ve sıkışmasız çalışan standarttır.'
+        answer: '80 gr 1. hamur, kurumsal yazışma kağıdı için değerlendirilen seçeneklerden biridir. Mevcut ürün fiyat listesinde 90 gr standart seçenekler bulunur; 80 gr talepleri ayrıca değerlendirilir. Yazıcı uyumluluğu için cihazın desteklediği gramaj ve baskılı kağıt kullanım talimatları kontrol edilmelidir.'
       },
       {
         question: 'Çok renkli logolar antetli kağıtta kaliteli basılır mı?',
-        answer: 'Evet, gelişmiş ofset baskı makinelerimizde kurumsal renkleriniz (Pantone veya CMYK) kağıt üzerine yüksek hassasiyetle ve netlikle aktarılır.'
+        answer: 'Çok renkli logo baskısında dosyanın renk profili ve baskı detayları önceden kontrol edilmelidir. CMYK dosya hazırlığı ve PDF prova kontrolü, logo ve firma bilgilerinin değerlendirilmesine yardımcı olur.'
       }
     ]
   },

@@ -47,6 +47,7 @@ async function prerender() {
   let zarfContent: string;
   let antetliContent: string;
   let zarfBlogContent: string;
+  let antetliBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
@@ -55,6 +56,7 @@ async function prerender() {
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
     zarfBlogContent = prerenderZarfBlog();
+    antetliBlogContent = prerenderZarfBlog('/blog/antetli-kagit-baskisinda-80gr-1.hamur');
   } finally { fs.rmSync(rendererPath, { force: true }); }
 
   // Extract all <loc> URLs from sitemap.xml
@@ -98,7 +100,8 @@ async function prerender() {
         seo.h1Text,
         pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent
           : pathname === '/antetli' ? antetliContent
-          : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent : seo.bodyContent,
+          : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
+          : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent : seo.bodyContent,
         seo.ogImage
       );
 
