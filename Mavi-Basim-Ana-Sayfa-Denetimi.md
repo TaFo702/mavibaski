@@ -1,94 +1,94 @@
-# Mavi Basım — Zarf Düzeltmesi Sonrası Denetim
+# Mavi Basım — Zarf Keyword / GSC İçerik Uygulama Raporu
 
 Sayfa: https://mavibasim.com/zarf  
 Tarih: 14 Ekim 2026  
-Kapsam: Onaylanan zarf prerender/hydration ve schema düzeltmeleri; ek teknik hata kontrolü.
+Veri dayanağı: Kullanıcının paylaştığı Planner/GSC analiz özeti ve yedi öncelikli ticari sorgu.
 
-## Geçici puan: 97/100
+## İşlem ve puan
 
-Önceki 80/100 puandaki prerender kaynaklı 10 ve schema kaynaklı 7 puanlık sorun giderildi. Kullanıcının önemsemediğini belirterek kapsam dışında bıraktığı galeri açıklaması ve WhatsApp örtüşmesi için önceki 3 puanlık not korunuyor. Bu değerlendirme Google sıralama puanı değildir. Mobil ve ölçülmüş performans doğrulaması tamamlanmadığından geçicidir.
+Önceki işlemde teknik prerender/hydration ve schema düzeltmeleri uygulanmıştı; bu sorgular için içerik düzenlemesi yapılmamıştı. Bu işlemde eksik kalan içerik çalışması tamamlandı: yalnız üç mevcut paragraf ve bir mevcut blog bağlantısı düzenlendi. Kaynak değişikliği yalnız `src/components/Zarf.tsx` dosyasında.
 
-| Kapsam | Puan |
-| --- | ---: |
-| Prerender / hydration | 25/25 |
-| Metadata / canonical / rota temizliği | 25/25 |
-| Schema | 20/20 |
-| Tarama / URL / bağlantılar | 15/15 |
-| Başlık / görsel / kullanılabilirlik / ölçülmüş performans | 12/15 |
-| Toplam | 97/100 |
+Önceki teknik denetimin geçici puanı 97/100 olarak korunuyor. Anahtar kelimelerin metinde bulunması ayrıca Google sıralama puanı değildir. Yeni GSC konum, tıklama veya CTR ölçümü yapılmadı.
 
-## Giderilen sorunlar ve kanıtları
+## Verilen sorgular için yapılan işlemler
 
-### 1. İlk HTML'nin ayrı ve eksik zarf kopyası
+Aşağıdaki Planner/GSC değerleri kullanıcının sağladığı rapordan alınmıştır; yeniden veri çekimi veya hesaplama sonucu değildir. Her sorguda raporlanan tıklama 0, CTR %0. Hedef URL sütunu bu çalışmanın ticari içerik hedefidir; sorgu bazında doğrulanmış GSC URL kaydı olarak sunulmuyor.
 
-Önceki ilk HTML, 6 ana içerik H2'si ve 5 bağlantı içeriyordu. Mevcut açıklamalar, sipariş süreci, ürün kartları ve rehberler bu kopyada eksikti; bazı metinler React sayfasıyla farklıydı.
+| Sorgu | Planner aylık hacim | GSC gösterim | Konum | İşlem | Ticari hedef |
+| --- | ---: | ---: | ---: | --- | --- |
+| baskılı zarf | 500 | 36 | 34,8 | Girişte ürün seçimi cümlesine doğal biçimde işlendi | /zarf |
+| zarf bastırma | 50 | 16 | 37,9 | Mevcut sipariş hazırlığı paragrafına işlendi | /zarf |
+| diplomat zarf baskı | 50 | 18 | 38,0 | Mevcut seçim rehberindeki ifade korundu | /zarf |
+| diplomat zarf baskı fiyatları | 50 | 18 | 29,4 | Mevcut H1 ve içerik korundu | /zarf |
+| baskılı diplomat zarf | 50 | 5 | 46,8 | Mevcut seçim rehberindeki ifade korundu | /zarf |
+| baskılı diplomat zarf fiyatları | 50 | 7 | 40,9 | Model seçimi paragrafındaki fiyat karşılaştırmasına işlendi | /zarf |
+| torba zarf baskı fiyatları | 50 | 2 | 30,0 | Aynı fiyat karşılaştırması paragrafına işlendi | /zarf |
 
-Kaynak düzeltmesi: Mevcut App, router ve cart sağlayıcılarıyla aynı ZarfPage bileşeni build sırasında render ediliyor. Build tarafında yalnız zarfın lazy bileşeni doğrudan çözülüyor; tarayıcının mevcut lazy yüklemesi korunuyor. /zarf için ayrı HTML dizgesi kaldırıldı. Bu rota `data-prerendered="zarf"` ile işaretlenip hydrateRoot ile başlatılıyor. Dist dosyası elle yamalanmadı; yeni framework veya paket eklenmedi.
+Düzenleme öncesinde üç tam ifade metinde bulunmuyordu: zarf bastırma, baskılı diplomat zarf fiyatları, torba zarf baskı fiyatları. Bu, ilgili model veya fiyat konularının tamamen eksik olduğu şeklinde yorumlanmadı. Aynı konularda yeni sayfa veya bölüm açılmadı; bütün eşanlamlı sorgular için ayrı tekrar paragrafları oluşturulmadı.
 
-Canlı kanıt: HTTP 200; ilk HTML'de 11 ana içerik H2'si, 73 bağlantı ve mevcut üç sipariş düğmesi var. Canlı `#root` HTML'si yerelde test edilen üretim çıktısıyla bayt düzeyinde eşleşti. Kullanıcıya gösterilen içerik ve bağlantılar, yerel hydration testinde değişmedi; fiyat tablosunun mevcut DOM öğesi yeniden oluşturulmadı.
+## Değişen üç mevcut paragraf
 
-### 2. Farklı zarf modellerini tek Product / AggregateOffer altında toplama
+1. Girişin ürün seçimi cümlesi:
 
-Önceki kayıt Z1, Z2 ve Z3'ün farklı ebat, baskı türü ve adetlerini tek ürünün fiyat aralığı gibi gösteriyordu.
+> Kurumsal evrak ve yazışma gönderimlerinizde kullanacağınız baskılı zarf için diplomat veya torba zarf seçeneklerini değerlendirebilirsiniz.
 
-Kaynak düzeltmesi: Yalnız /zarf rotasının hatalı toplu Product/AggregateOffer kaydı kaldırıldı. Mevcut breadcrumb ve FAQ korunuyor; yeni şema türleri, stok iddiası, puan veya fiyat geçerlilik tarihi eklenmedi.
+2. Mevcut model seçimi paragrafı:
 
-Canlı kanıt: İlk HTML ve Chrome DOM'unda bu rotanın şema türleri BreadcrumbList ve FAQPage. Antetli → zarf dönüşünde antetli şeması kalmıyor. Zarf → ana sayfa dönüşünde ürün veya breadcrumb kalıntısı bulunmadı.
+> Baskılı diplomat zarf fiyatları ile torba zarf baskı fiyatları, ebat, baskı türü ve sipariş adedine göre mevcut fiyat listesinden karşılaştırılabilir. Model seçimi için diplomat ve torba zarf seçim rehberini inceleyebilirsiniz.
 
-Resmî dayanak: https://developers.google.com/search/docs/appearance/structured-data/product-snippet#aggregateoffer
+Bu paragraftaki “diplomat ve torba zarf seçim rehberini” bağlantısı mevcut yazıya gider:
 
-## Kalan sorunlar
+https://mavibasim.com/blog/zarf-baskisinda-diplomat-ve-torba-zarf
 
-Bu kontrollerde, onaylanan kapsam içinde yeni doğrulanmış teknik hata bulunmadı.
+3. Mevcut sipariş hazırlığı paragrafı:
 
-Kullanıcı talebiyle müdahale edilmeyen iki not:
+> Zarf bastırma talebinizden önce logo, ölçü, zarf modeli ve adet bilgilerini netleştirin. Logo ve tasarım dosyalarının baskıya uygun formatta iletilmesi önerilir.
 
-1. `zarf-baski-detalleri.webp` genel zarf görünümünü gösterirken “Zarf Kapatma Detayı” açıklaması taşıyor.
-2. Masaüstü ilk ekranda sabit WhatsApp düğmesi Z3 sipariş düğmesinin sağ tarafıyla örtüşüyor.
+Fiyat açıklaması tabloların dışında kalan mevcut model seçimi paragrafındadır. Fiyat listesi başlığı, açıklaması, tablosu veya düğmeleri yeniden yazılmadı.
 
-Fiyat listeleri ve tablolarına bu not nedeniyle müdahale edilmedi. Bu iki not kalan çözüm kapsamına dahil değil.
+## Yapılmayan GSC/Planner işlemleri ve veri sınırları
 
-## Fiyat ve dosya koruma kanıtı
+- Google Search Console hesabına veya Google Keyword Planner'a bağlanılmadı. Yeni veri çekilmedi; indeksleme isteği veya GSC panelinde işlem yapılmadı.
+- Yirmi Planner CSV dosyası bu işlemde yeniden birleştirilmedi. 268/213 veya 35/28 sayılarını yeniden doğruladığım iddia edilmiyor.
+- Raporda sözü edilen 10 içerik fırsatının tam listesi ve 30 günlük planın ayrıntıları paylaşılan özette yok. Bu işlem yalnız verilen yedi sorgunun uygulanmasıdır; görülmeyen üç fırsat veya plan adımı uydurulmadı.
+- Tek URL kümesi toplamı 7 tıklama / 556 gösterim ile ana URL toplamı 4 / 289 arasındaki fark bu site metni değişikliğiyle çözülmedi. Tekrarlı sorgular ve eksik sorgu–URL alanları için kesin pay veya URL çakışması hesabı yapılmadı.
+- Fırsat puanları yeniden hesaplanmadı. Güncel sıralama kazanımı, indekslenme veya ilk sayfa sonucu ölçülmedi.
+- Bu değişiklik kaydı rapora ve GitHub'a yazıldı; ayrı bir GSC analiz uygulamasının SEO çalışma geçmişine otomatik kayıt eklenmedi.
 
-- `src/components/Zarf.tsx` bütünüyle değişmedi. Git blob SHA'sı düzeltme öncesi ve sonrası `4ff0eb8c2c826dbd058f4feb8eb32d27a21fd1c7`.
-- Fiyat verileri, tabloların mevcut JSX'si, stilleri, düğmeleri, notları ve sipariş detay bileşeni değiştirilmedi. Z1/Z2/Z3 fiyatları 2.500 / 3.000 / 3.900 ₺; ekstra adet fiyatları 1.950 / 2.100 / 2.600 ₺ olarak aynı.
-- İlk HTML'de ayrı, eski WhatsApp bağlantıları yerine değişmeyen mevcut React fiyat bileşeninin sipariş düğmeleri render ediliyor. Düğmeler yeniden yazılmadı veya bağlantıya dönüştürülmedi.
-- Yerel hydration testinde fiyat tablosunun outerHTML'si birebir aynı kaldı ve DOM öğesinin kimliği korundu. Canlı yenileme öncesi/sonrası fiyat HTML'si eşleşti.
-- Canlı SPA dönüşünde tek serileştirme farkı CSS yazımındaki boşluk/noktalı virgül ve React'in boş ayırıcı yorumlarıydı. Etiketler, öznitelikler, CSS özellik/değerleri ve metin düğümleri karşılaştırıldığında fiyat DOM'u ve stilleri aynı.
-- Canlı fiyat tablosu HTML SHA256: `d4a1a973a0e002ff3562cbafc931af07bc3e1c0e45f3fc964c2b75ec8d760b2c`.
-- Başlangıç hash kaydındaki tüm veri, sabit ve public dosyaları korundu; 267 public dosyasında değişiklik yok.
-- Diğer 293 rotanın üretilen HTML'si, build asset adları hariç önceki çıktıyla aynı. Diğer sayfaların içerikleri, tarifeleri ve URL'leri değiştirilmedi.
-- `seoGenerator.ts` dosyasındaki küçülme, yalnız zarf için kullanılan eski paralel HTML ve hatalı schema kopyasının kaldırılmasından kaynaklanıyor. Görsel veya tarife dosyası silinmedi.
+## Koruma kanıtları
 
-## Değişen dosyalar
+Fiyat listeleri ve tabloları kesinlikle değiştirilmeyecek kuralı uygulandı.
 
-| Dosya | Değişiklik |
-| --- | --- |
-| src/App.tsx | Build sırasında mevcut zarf bileşenini çözmek için sınırlı bileşen parametresi |
-| src/prerenderHome.tsx | Aynı App ve ZarfPage ile zarf renderer'ı |
-| scripts/prerender.ts | Yalnız /zarf için gerçek React çıktısı ve hydration işareti |
-| src/main.tsx | Yalnız zarf prerender çıktısının hydration ile başlatılması |
-| src/utils/seoGenerator.ts | Zarfın eski HTML kopyası ve toplu Product/AggregateOffer kaydının kaldırılması |
-| validate-zarf-fix.cjs | İçerik/fiyat hydration korunması, sipariş davranışı, rota ve HTTP regresyon kontrolü |
+- Kaynaktaki fiyat bölümünün tamamı düzeltme öncesi kopyasıyla birebir eşleşiyor.
+- Üç tablo JSX bloğu, başlıkları, hücreleri, stilleri, bağlantıları ve düğmeleri birebir aynı.
+- Galeri kayıtları ve bütün public dosyaları aynı. Kullanıcının kapsam dışında bıraktığı görsel açıklaması ve WhatsApp örtüşmesine müdahale edilmedi.
+- Tarife ve sabit dosyaları aynı; başka ürün veya blog sayfası değiştirilmedi.
+- Title, description ve H1 değişmedi. Yeni sayfa, route, bölüm, görsel, framework veya paket eklenmedi.
+- Fiyat tablosunun ilk HTML'si önceki canlı HTML ile birebir aynı. SHA256:
 
-## Doğrulama kaydı ve önemli sınırlar
+`d4a1a973a0e002ff3562cbafc931af07bc3e1c0e45f3fc964c2b75ec8d760b2c`
 
-Yerel üretim build/prerender/server build tamamlandı: 294 rota. Typecheck geçti. Değişen kaynaklarda ESLint 0 hata; mevcut uyarılar korunuyor. Zarf regresyon testinde ilk HTML/DOM metni ve bağlantıları, fiyat DOM kimliği, sipariş detayını açma/kapatma, doğrudan açılış, yeniden açılış, SPA dönüşleri ve üretim HTTP yanıtı doğrulandı. Ana sayfanın mevcut testinde 7 kategori ve 20 ürün dönüşü kontrol edildi.
+- Diğer 293 sayfanın üretilen HTML'si, asset dosya adları dışında önceki çıktıyla aynı.
+- Zarf dosyasının bütünü, onaylanan üç metin düzenlemesi ve bağlantı nedeniyle değişti: önceki Git blob SHA `4ff0eb8c2c826dbd058f4feb8eb32d27a21fd1c7`, yeni SHA `e02c033ac78e0f6d6ecf16dc467cc5dbfbe2a38b`. Korunan fiyat bölümünün ve tabloların baytları değişmedi.
 
-GitHub Production Quality Gate #134, run ID 38527140262: başarıyla tamamlandı. PR #16 birleştirildi. Vercel, aşağıdaki merge commit'inin deployment durumunu başarılı bildirdi.
+## Doğrulama ve yayın
 
-Chrome canlı kontrolleri: doğrudan zarf → Z1 sipariş detayı aç/kapat → antetli → zarf → ana sayfa → ürün menüsünden zarf → yenileme. Tek H1 ve tek metadata üretimi, doğru rota verisi ve fiyat korunması kontrol edildi. Site kaynaklı konsol hatası görülmedi; chrome-extension kaynaklı hatalar site hatası sayılmadı.
+Üretim Vite/prerender/server build tamamlandı: 294 rota. Typecheck geçti. Zarf dosyasında ESLint 0 hata; önceki dört kullanılmayan import/değişken uyarısı kaldı. Mevcut zarf regresyonu; ilk HTML/hydration metin ve bağlantı eşleşmesi, fiyat tablosunun DOM kimliği, sipariş detayını açma/kapatma, rota dönüşleri, yenileme ve üretim HTTP testlerini geçti.
 
-Sınırlar: Mobil boyut testi, LCP/CLS/INP ölçümü, Search Console URL incelemesi ve Google Rich Results Test yapılmadı. Google'ın indeks ve sıralama değişimi ölçülmedi. Fabrika sahipliği ve üretim beyanları bağımsız belgelerle doğrulanmadığından değiştirilmedi.
+GitHub Production Quality Gate #137, run ID 38529872009 başarılı. PR #17 birleştirildi. Vercel merge commit'inin deployment durumunu başarılı bildirdi.
 
-Kullanıcının sağladığı Planner/GSC özetinde ticari hedef /zarf; mevcut diplomat, torba, pencere ve logo konularını yeni sayfalara ayırmak için güçlü gerekçe yok. Bu nedenle URL, mevcut title, description ve H1 korundu. Eksik “20 güçlü kelime” üretilmedi. Kısmi ve tekrarlı GSC verisinden kesin URL çakışması veya birleşik pay hesaplanmadı; bu çalışma yeni bir Planner/GSC hesaplama raporu değildir.
+Canlı HTTP yanıtı 200. Yedi hedef ifade ilk HTML ve Chrome DOM'unda bulunuyor. Canlı `#root` çıktısı yerelde doğrulanan çıktı ile birebir aynı. Ana içerikte 11 H2 ve sayfada 74 bağlantı var. Yeni rehber bağlantısı Chrome'da klavye ile açılıp doğru URL ve makale H1'i doğrulandı; zarf sayfasına dönüş kontrol edildi.
 
-Kaynak commit: 6413bcae6ce0e33af39c29472058b199f68019a0  
-Yayın merge commit: 4537a340a7576197a0704d671c1502f7eacae96c  
-PR: https://github.com/TaFo702/mavibaski/pull/16  
-Deployment: https://vercel.com/kolay-basim/mavibaski/5DgAJd58Tx7bT17WHrrdLmB4sBDG  
-Doğrulanan canlı giriş asset'i: /assets/index-B-ZzJel7.js
+Önemli sınırlar: Mobil boyut, LCP/CLS/INP ve Search Console indeks/performans doğrulaması bu işlemde yapılmadı. Yedi tam ifadenin varlığı, anahtar kelime yoğunluğu hedefi veya sıralama başarısı olarak kabul edilmedi.
 
-## ÇÖZÜM PROMPTU
+Kaynak commit: f28e62ca26efe624d61a422cbfceea9d5017a129  
+Yayın merge commit: a1b3e93d8b664860bcc4783e1a1fb3339f6ffd91  
+PR: https://github.com/TaFo702/mavibaski/pull/17  
+Deployment: https://vercel.com/kolay-basim/mavibaski/HJipQ5tts1MazFrH7uWsPjd84HG1  
+Doğrulanan canlı giriş asset'i: /assets/index-DUncTk1e.js
 
-Bu doğrulamalarda kalan, kapsam içindeki teknik sorun bulunmadı; yeni değişiklik yapma. Kullanıcının kapsam dışında bıraktığı görsel açıklaması ve WhatsApp örtüşmesine müdahale etme. Fiyat listeleri ve tablolarının verilerini, HTML/JSX'sini, stillerini, bağlantılarını ve düğmelerini kesinlikle koru. Mevcut /zarf URL'sini ve diğer sayfaları koru. Yeni sayfa veya anahtar kelime doldurma üretme.
+## Kalan sorunlar ve ÇÖZÜM PROMPTU
+
+Bu değişikliğin doğrulamasında yeni kapsam içi teknik hata bulunmadı. Önceki görsel açıklaması ve WhatsApp örtüşmesi kullanıcı talebiyle kapsam dışında.
+
+Yeni içerik veya URL üretme. Fiyat listeleri ve tablolarının verilerini, başlıklarını, HTML/JSX'sini, stillerini, bağlantılarını ve düğmelerini kesinlikle koru. Görülmeyen Planner/GSC satırlarını, fırsatları veya sıralama sonucunu uydurma. Sonraki performans değerlendirmesinde yalnız /zarf için sorgu–URL bilgisi içeren, aynı uzunlukta dönemleri ve aynı filtreleri kullanan gerçek GSC verisini karşılaştır. Tekrarlı kayıtlar netleşmeden küme ve ana URL toplamlarını birleştirme.
