@@ -582,7 +582,7 @@ export const BlogPage = () => {
     // Render Detail View
     return (
       <div className="bg-neutral-50 min-h-screen pb-24">
-        <Helmet>
+        {activePost.slug !== 'zarf-baskisinda-diplomat-ve-torba-zarf' && <Helmet>
           <title>{displayTitle}</title>
           <meta name="description" content={displayDesc} />
           <meta property="og:title" content={displayTitle} />
@@ -594,7 +594,7 @@ export const BlogPage = () => {
               {JSON.stringify(sch)}
             </script>
           ))}
-        </Helmet>
+        </Helmet>}
 
         {/* Hero Section */}
         <div className="bg-black text-white py-16 px-4 sm:px-6 lg:px-8">

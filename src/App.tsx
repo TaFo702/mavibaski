@@ -1293,7 +1293,7 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 
 export const CanonicalLink = () => {
   const { pathname } = useLocation();
-  return pathname === '/' ? null : <LegacyCanonicalLink />;
+  return pathname === '/' || pathname.replace(/\/$/, '') === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? null : <LegacyCanonicalLink />;
 };
 
 const LegacyCanonicalLink = () => {
@@ -5334,7 +5334,7 @@ export const ProductSEOSection = ({ categoryKey, hideTrustFooter }: { categoryKe
 
 
 
-export const AppRoutes = ({ ZarfComponent = ZarfPage }: { ZarfComponent?: React.ComponentType } = {}) => {
+export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage }: { ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType } = {}) => {
   return (
     <React.Suspense fallback={
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
@@ -5395,8 +5395,8 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage }: { ZarfComponent?: React.
       <Route path="/teslimat-ve-iade" element={<Navigate to="/teslimat-sartlari" replace />} />
       <Route path="/lisans" element={<LisansPage />} />
       <Route path="/servis-formu" element={<Navigate to="/arac-kiralama" replace />} />
-      <Route path="/blog" element={<BlogPage />} />
-      <Route path="/blog/:slug" element={<BlogPage />} />
+      <Route path="/blog" element={<BlogComponent />} />
+      <Route path="/blog/:slug" element={<BlogComponent />} />
       <Route path="/makine-parkuru" element={<MakineParkuruPage />} />
       <Route path="/sektor/gida-kooperatif-baski" element={<Navigate to="/sektor/kutu-ambalaj-baski-cozumleri" replace />} />
       <Route path="/sektor/:slug" element={<SEOPages />} />
@@ -5424,7 +5424,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage }: { ZarfComponent?: React.
 
 const SEOMetadataManager = () => {
   const { pathname } = useLocation();
-  return pathname === '/' ? null : <LegacySEOMetadataManager />;
+  return pathname === '/' || pathname.replace(/\/$/, '') === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? null : <LegacySEOMetadataManager />;
 };
 
 const LegacySEOMetadataManager = () => {
@@ -5531,9 +5531,10 @@ pathname === '/kartvizit' ||
   return null;
 };
 
-export default function App({ Router = BrowserRouter, ZarfComponent }: {
+export default function App({ Router = BrowserRouter, ZarfComponent, BlogComponent }: {
   Router?: React.ComponentType<{ children: React.ReactNode }>;
   ZarfComponent?: React.ComponentType;
+  BlogComponent?: React.ComponentType;
 } = {}) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -5580,7 +5581,7 @@ export default function App({ Router = BrowserRouter, ZarfComponent }: {
             <Navbar />
             
             <main className="flex-grow">
-              <AppRoutes ZarfComponent={ZarfComponent} />
+              <AppRoutes ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} />
             </main>
 
             <Footer />

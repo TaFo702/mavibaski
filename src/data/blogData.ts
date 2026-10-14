@@ -2867,17 +2867,17 @@ Yazışmalarınız için [Zarf Baskısı](/zarf) modellerimizi görebilir, evrak
 Diplomat Zarf (10.5x24 cm)
 - Muhasebe faturaları, e-arşiv çıktıları ve tek sayfalık kurumsal yazışmalar için idealdir.
 - Evrak üzerindeki alıcı adresinin dışarıdan görünmesi için şeffaf pencereli veya adres alanı bulunmayan penceresiz seçenekleri bulunur.
-- En çok tercih edilen kurumsal diplomat zarf modelidir.
+- Günlük kurumsal yazışmalarda değerlendirilen zarf modellerinden biridir.
 ---
-Torba Zarf (24x32 cm / 26x35 cm)
+Torba Zarf (24x32 cm)
 - Çok sayfalı sözleşmeler, tapu belgeleri, broşürler ve kalın kurumsal evraklar için idealdir.
 - Evrakların bükülmeden, düzgünce saklanarak taşınmasını sağlayan dikey geniş hacimli yapıdır.
-- Firmanızın logosuyla ön yüze tek renk veya çok renkli ofset baskı yapılabilir.
+- Mevcut 24x32 cm torba zarf seçeneğinde firma logosu renkli ofset baskıyla uygulanabilir.
 ---
 Silikon Yapışkan Teknolojisi
 - Zarflarımızın kapaklarında güçlü silikon yapışkan şerit teknolojisi kullanılmaktadır.
-- Koruyucu bant söküldüğünde neme ve yırtılmaya dayanıklı güçlü yapışma sunar.
-- Kuru depolarda 2 yıla kadar güçlü yapışma özelliğini kaybetmeden saklanabilir.
+- Koruyucu bant, kapatma sırasında çıkarılarak yapışkan yüzeyler birleştirilir.
+- Saklama koşulları ve kapatma özelliği kullanılan malzemeye göre değerlendirilir; sipariş öncesinde bilgi alınabilir.
 :::
 
 ---
@@ -2896,36 +2896,38 @@ Silikon Yapışkan Teknolojisi
 ## Mavi Basım Güçlü Silikonlu Zarf Ayrıcalıkları
 
 :::importance-cards
-Güçlü Silikon Bant | Zarf kapağının taşıma ve kargo esnasında kendi kendine açılmasını kesinlikle engelleyen ultra mukavemetli silikon şerit yapışkan.
-İçi Görünmez Güvenlik | Zarfın içindeki gizli ticari evrakların ışığa tutulduğunda dışarıdan görünmesini önleyen kalın, yüksek opaklıkta selüloz yapısı.
-Pürüzsüz Ofset Logo | Gelişmiş zarf baskı makinelerimizde kurumsal logonuzun renklerini zarf yüzeyine sıfır kayma ile aktaran dikey ünitelerimiz.
+Güçlü Silikon Bant | Evrak gönderimi için pratik kapatma sağlar; bant çıkarıldıktan sonra kapağın düzgün yapıştığı kontrol edilmelidir.
+Evrak ve Kağıt Seçimi | İçeriğin görünürlüğü kağıda ve zarf modeline bağlıdır; hassas evraklar için uygunluk sipariş öncesinde değerlendirilmelidir.
+Pürüzsüz Ofset Logo | Firma logosu ve iletişim bilgilerinin yerleşimi baskı öncesi kontrol ve tasarım onayıyla netleştirilir.
 :::
 
 ---
 
 ## Kurumsal Zarf Çeşitleri Karşılaştırması
 
+Aşağıdaki tablo genel zarf modeli ve ölçüsü örneklerini karşılaştırır. Mavi Basım’ın mevcut ürün sayfasında 10.5x24 cm diplomat ve 24x32 cm torba zarf seçenekleri listelenir. Diğer ölçü ve modeller bu fiyat listesindeki sipariş seçenekleri değildir; talep öncesinde ayrıca bilgi alınmalıdır.
+
 | Zarf Modeli | Standart Ölçü | Pencere Seçeneği | En Uygun Gönderi Türü | Kurumsal Prestij |
 | :--- | :--- | :--- | :--- | :--- |
 | **Diplomat Zarf** | 10.5 x 24 cm | Pencereli veya Penceresiz | Muhasebe faturaları, tek sayfalık resmi teklifler | ★★★★★ |
-| **Torba Zarf** | 24 x 32 cm / 26 x 35 cm | Genelde Penceresiz | Çok sayfalı sözleşmeler, tapular, broşürler, kataloglar | ★★★★★ |
+| **Torba Zarf** | 24 x 32 cm / 26 x 35 cm (genel ölçü örnekleri) | Genelde Penceresiz | Çok sayfalı sözleşmeler, tapular, broşürler, kataloglar | ★★★★★ |
 | **Mektup Zarfı** | 11.4 x 16.2 cm | Penceresiz | Tebrik kartları, butik davetiyeler, hediye çekleri | ★★★★☆ |
 
 ---
 
 :::cta
 TITLE: Kurumsal Zarf Siparişi
-DESC: Resmi faturalarınızı ve ticari sözleşmelerinizi en güvenli şekilde taşıyacak, güçlü silikonlu diplomat ve torba zarfların üretimini yapıyoruz. logonuzla sipariş şablonu hazırlatmak için hemen bizimle iletişime geçin.
+DESC: Fatura, sözleşme ve kurumsal evrak gönderimleriniz için mevcut diplomat ve torba zarf seçeneklerini inceleyin. Logo, ölçü, model ve adet bilgilerinize göre sipariş detaylarını netleştirmek için bizimle iletişime geçin.
 BTN_TEXT: WhatsApp Zarf Hattı
 BTN_LINK: https://wa.me/905366022373
 :::`,
     faq: [
       {
-        question: 'Zarflardaki silikon yapışkanın raf ömrü ne kadardır?',
-        answer: 'Zarflarımızda kullanılan kaliteli silikon yapıştırıcı şeritler, nemsiz ve doğrudan güneş ışığı almayan ortamlarda saklandığında 2 yıla kadar güçlü yapışma özelliğini korur.'
+        question: 'Silikon bantlı zarflarda saklama ve kapatma için nelere dikkat edilmelidir?',
+        answer: 'Kapatma özelliği kullanılan malzemeye ve saklama koşullarına bağlıdır. Malzemeye uygun saklama bilgisi sipariş öncesinde alınmalı; kullanım sırasında koruyucu bant çıkarılıp kapağın düzgün yapıştığı kontrol edilmelidir.'
       },
       {
-        question: 'Pencereli and penceresiz diplomat zarf farkı nedir?',
+        question: 'Pencereli ve penceresiz diplomat zarf farkı nedir?',
         answer: 'Pencereli diplomat zarflarda, evrak üzerindeki adres bilgisinin dışarıdan görünmesi için şeffaf bir plastik pencere alanı bulunur. Penceresiz model ise tamamen kapalıdır.'
       }
     ]
