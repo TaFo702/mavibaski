@@ -313,7 +313,7 @@ export const ZarfPage = () => {
             </div>
             <div className="bg-white p-3.5 rounded-xl border border-gray-150">
               <span className="block text-gray-500 font-extrabold mb-1 text-[10px] uppercase tracking-wider">Sipariş Bilgisi</span>
-              <span className="font-black text-emerald-600 block leading-snug">Doğrudan Üretici Fabrika</span>
+              <span className="font-black text-emerald-600 block leading-snug">Hizmet ve Koordinasyon Noktası</span>
             </div>
           </div>
         </div>
@@ -605,7 +605,7 @@ export const ZarfPage = () => {
   {[
     {
       title: "Dosya Bilgisi",
-      desc: "Logo ve tasarım dosyalarının baskıya uygun formatta iletilmesi önerilir."
+      desc: "Hazır logo ve tasarım dosyalarınızı PDF, AI veya CDR formatında iletebilirsiniz. Dosya baskı öncesinde uygunluk kontrolünden geçirilir."
     },
     {
       title: "Renk Bilgisi",
@@ -645,7 +645,7 @@ export const ZarfPage = () => {
             </h3>
           </div>
           <p className="text-xs sm:text-sm font-semibold leading-relaxed text-gray-650 text-justify">
-            Mavi Basım olarak zarf baskı siparişlerinizi İstanbul Topkapı 2. Matbaacılar Sitesi tesislerimizde modern ofset baskı altyapısıyla üretiyoruz. Kaliteli 110 gr 1. hamur kağıt, güçlü yapışkan bant ve net renk çıkışıyla kurumsal yazışmalarınızda güvenilir matbaa çözüm ortağınız oluyoruz.
+            Mavi Basım olarak zarf baskı siparişlerinizi İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden planlıyor, baskı öncesi dosya kontrolü ve sipariş detaylarını netleştiriyoruz. Kaliteli 110 gr 1. hamur kağıt, güçlü yapışkan bant ve net renk çıkışıyla kurumsal yazışmalarınızda güvenilir matbaa çözüm ortağınız oluyoruz.
           </p>
         </div>
 
@@ -798,7 +798,7 @@ export const ZarfPage = () => {
               </p>
 
               <p>
-                Zarf bastırma talebinizden önce logo, ölçü, zarf modeli ve adet bilgilerini netleştirin. Logo ve tasarım dosyalarının baskıya uygun formatta iletilmesi önerilir.
+                Zarf bastırma talebinizden önce logo, ölçü, zarf modeli ve adet bilgilerini netleştirin. Hazır logo ve tasarım dosyalarınızı PDF, AI veya CDR formatında iletebilirsiniz. Dosya baskı öncesinde uygunluk kontrolünden geçirilir.
               </p>
 
               <p>

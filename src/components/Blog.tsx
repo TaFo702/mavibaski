@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Clock, User, ArrowLeft, ChevronRight, ArrowRight, ShieldCheck, Truck, FileText, FileSpreadsheet, Download, ExternalLink } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants/contact';
 import { BLOG_POSTS, BlogPost } from '../data/blogData';
+import { BLOG_AUTHOR_NAME, getBlogMetadata } from '../utils/blogMetadata';
 import { BLOG_IMAGE_MANIFEST } from '../generated/sectorImageManifest';
 
 export { BLOG_POSTS };
@@ -370,9 +371,10 @@ export const BlogPage = () => {
   }
 
   if (activePost) {
-    const displayTitle = activePost.title.length + 13 <= 65
+    const blogMeta = getBlogMetadata(activePost);
+    const displayTitle = activePost.seoTitle || (activePost.title.length + 13 <= 65
       ? `${activePost.title} - Mavi Basım`
-      : activePost.title.substring(0, 49) + "... - Mavi Basım";
+      : activePost.title.substring(0, 49) + "... - Mavi Basım");
     const displayDesc = activePost.excerpt.length > 155
       ? activePost.excerpt.substring(0, 152) + "..."
       : activePost.excerpt;
@@ -388,13 +390,9 @@ export const BlogPage = () => {
         },
         "headline": activePost.title,
         "image": `https://mavibasim.com${activePost.image}`,
-        "datePublished": "2026-06-04T08:00:00+03:00",
-        "dateModified": "2026-07-06T10:00:00+03:00",
-        "author": {
-          "@type": "Organization",
-          "name": "Mavi Basım Üretim Ekibi",
-          "url": "https://mavibasim.com"
-        },
+        "datePublished": blogMeta.datePublished,
+        "dateModified": blogMeta.dateModified,
+        "author": blogMeta.author,
         "publisher": {
           "@type": "Organization",
           "name": "Mavi Basım",
@@ -620,22 +618,22 @@ export const BlogPage = () => {
               <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-gray-300 text-xs sm:text-sm font-semibold border-t border-neutral-800 pt-4 mt-2">
                 <span className="flex items-center gap-2">
                   <User size={16} className="text-primary" /> 
-                  <span>Yazar: <strong>Mavi Basım Matbaa Uzmanları</strong></span>
+                  <span>Yazar: <strong>{BLOG_AUTHOR_NAME}</strong></span>
                   <span className="px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 text-[10px] font-black rounded border border-emerald-500/30">✓ DOĞRULANMIŞ UZMAN</span>
                 </span>
                 <span className="flex items-center gap-2">
                   <Clock size={16} className="text-primary" /> 
                   <span>{activePost.readTime}</span>
                 </span>
-                <span className="text-gray-400">İlk Yayın: <strong>04 Haziran 2026</strong></span>
-                <span className="text-gray-400">Son Güncelleme: <strong>06 Temmuz 2026</strong></span>
+                <span className="text-gray-400">İlk Yayın: <strong>{blogMeta.publishedLabel}</strong></span>
+                <span className="text-gray-400">Son Güncelleme: <strong>{blogMeta.modifiedLabel}</strong></span>
                 <span className="px-2 py-0.5 bg-primary/20 text-primary text-[10px] font-black rounded border border-primary/30">YASAL MEVZUAT UYUMLU</span>
               </div>
             ) : (
               <div className="flex flex-wrap items-center gap-6 text-gray-400 text-sm">
-                <span className="flex items-center gap-2"><User size={16} className="text-primary" /> Mavi Basım Matbaa Baskı Ekibi</span>
+                <span className="flex items-center gap-2"><User size={16} className="text-primary" /> {BLOG_AUTHOR_NAME}</span>
                 <span className="flex items-center gap-2"><Clock size={16} className="text-primary" /> {activePost.readTime}</span>
-                <span>Yayınlanma: {activePost.date}</span>
+                <span>Yayınlanma: {blogMeta.publishedLabel}</span>
               </div>
             )}
           </div>
@@ -1859,7 +1857,7 @@ export const BlogPage = () => {
               </div>
               <div className="text-center sm:text-left flex-1">
                 <div className="flex flex-wrap items-center justify-center sm:justify-between gap-2 mb-2">
-                  <h4 className="text-sm font-black text-black uppercase tracking-wider">Yazar: Mehmet Başar (Kıdemli Matbaa ve Grafik Koordinatörü)</h4>
+                  <h4 className="text-sm font-black text-black uppercase tracking-wider">Yazar: Tayfun Akan (Kıdemli Matbaa ve Grafik Koordinatörü)</h4>
                   <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded border border-emerald-200">
                     <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
                     İÇERİK DOĞRULANDI (TEKNİK ÜRETİM)
@@ -1867,20 +1865,20 @@ export const BlogPage = () => {
                 </div>
                 <p className="text-gray-600 font-semibold text-xs leading-relaxed mb-4">
                   {slug === 'brosur-baskida-en-dogru-kagit-nasil-secilir' ? (
-                    <>Bu rehber, 20 yılı aşkın süredir matbaa ve yayıncılık sektöründe kıdemli baskı ve grafik koordinatörü olarak görev yapan <strong>Mehmet Başar</strong> tarafından kaleme alınmıştır. Mehmet Başar, ofset ve dijital baskı teknolojileri, renk kalibrasyonu, kırım ve katlama teknikleri ile teknik dosya hazırlama konularında derin bir uzmanlığa sahiptir. Sektörel standartlara uygun, bütçe dostu ve kaliteli tanıtım materyallerinin tasarlanıp üretilmesi süreçlerinde kurumsal markalara teknik danışmanlık sunmaktadır.</>
+                    <>Bu rehber, 20 yılı aşkın süredir matbaa ve yayıncılık sektöründe kıdemli baskı ve grafik koordinatörü olarak görev yapan <strong>Tayfun Akan</strong> tarafından kaleme alınmıştır. Tayfun Akan, ofset ve dijital baskı teknolojileri, renk kalibrasyonu, kırım ve katlama teknikleri ile teknik dosya hazırlama konularında derin bir uzmanlığa sahiptir. Sektörel standartlara uygun, bütçe dostu ve kaliteli tanıtım materyallerinin tasarlanıp üretilmesi süreçlerinde kurumsal markalara teknik danışmanlık sunmaktadır.</>
                   ) : slug === 'yer-gosterme-belgesi-nasil-doldurulur' ? (
-                    <>Bu rehber, 20 yılı aşkın süredir matbaacılık, resmi evrak basımı ve kişiselleştirilmiş grafik tasarım tecrübesine sahip kıdemli matbaa uzmanı <strong>Mehmet Başar</strong> tarafından kaleme alınmıştır. İçerikteki teknik maddeler ve yasal mevzuat gereklilikleri, Taşınmaz Ticareti Hakkında Yönetmelik standartlarına uygunluk ve resmi evrak basım standartları açısından yazarımız tarafından detaylıca incelenmiş ve onaylanmıştır.</>
+                    <>Bu rehber, 20 yılı aşkın süredir matbaacılık, resmi evrak basımı ve kişiselleştirilmiş grafik tasarım tecrübesine sahip kıdemli matbaa uzmanı <strong>Tayfun Akan</strong> tarafından kaleme alınmıştır. İçerikteki teknik maddeler ve yasal mevzuat gereklilikleri, Taşınmaz Ticareti Hakkında Yönetmelik standartlarına uygunluk ve resmi evrak basım standartları açısından yazarımız tarafından detaylıca incelenmiş ve onaylanmıştır.</>
                   ) : slug === 'el-ilani-dagitimi-ise-yariyor-mu' ? (
-                    <>Bu rehber, 20 yılı aşkın süredir matbaacılık, yerel reklamcılık ve bölgesel pazarlama kampanyaları tecrübesine sahip kıdemli matbaa uzmanı <strong>Mehmet Başar</strong> tarafından kaleme alınmıştır. İçerikteki bölgesel reklam geri dönüşleri, el ilanı kuşe kağıt gramajları, ebat standartları ve dağıtım stratejileri, yüksek dönüşümlü ve bütçe dostu tanıtım kampanyaları standartları açısından yazarımız tarafından detaylıca incelenmiş ve onaylanmıştır.</>
+                    <>Bu rehber, 20 yılı aşkın süredir matbaacılık, yerel reklamcılık ve bölgesel pazarlama kampanyaları tecrübesine sahip kıdemli matbaa uzmanı <strong>Tayfun Akan</strong> tarafından kaleme alınmıştır. İçerikteki bölgesel reklam geri dönüşleri, el ilanı kuşe kağıt gramajları, ebat standartları ve dağıtım stratejileri, yüksek dönüşümlü ve bütçe dostu tanıtım kampanyaları standartları açısından yazarımız tarafından detaylıca incelenmiş ve onaylanmıştır.</>
                   ) : slug.includes('magnet') ? (
-                    <>Bu rehber, 20 yılı aşkın süredir matbaacılık, reklam ve kurumsal promosyon ürünleri üretimi tecrübesine sahip kıdemli matbaa uzmanı <strong>Mehmet Başar</strong> tarafından kaleme alınmıştır. İçerikteki teknik üretim kriterleri, mıknatıs çekim güçleri, selefon kaplama standartları ve grafik tasarım doğruluğu, yüksek kaliteli baskı ve uzun ömürlü promosyon üretimi standartları açısından yazarımız tarafından detaylıca incelenmiş ve onaylanmıştır.</>
+                    <>Bu rehber, 20 yılı aşkın süredir matbaacılık, reklam ve kurumsal promosyon ürünleri üretimi tecrübesine sahip kıdemli matbaa uzmanı <strong>Tayfun Akan</strong> tarafından kaleme alınmıştır. İçerikteki teknik üretim kriterleri, mıknatıs çekim güçleri, selefon kaplama standartları ve grafik tasarım doğruluğu, yüksek kaliteli baskı ve uzun ömürlü promosyon üretimi standartları açısından yazarımız tarafından detaylıca incelenmiş ve onaylanmıştır.</>
                   ) : (
-                    <>Bu rehber, 20 yılı aşkın süredir matbaacılık, reklam ve kurumsal ambalaj ile baskılı ürün imalatı tecrübesine sahip kıdemli matbaa uzmanı <strong>Mehmet Başar</strong> tarafından kaleme alınmıştır. İçerikteki teknik ambalaj kriterleri, kağıt mukavemet standartları, selefon kaplama standartları ve grafik tasarım doğruluğu, yüksek kaliteli baskı ve uzun ömürlü ürün üretimi standartları açısından yazarımız tarafından detaylıca incelenmiş ve onaylanmıştır.</>
+                    <>Bu rehber, 20 yılı aşkın süredir matbaacılık, reklam ve kurumsal ambalaj ile baskılı ürün imalatı tecrübesine sahip kıdemli matbaa uzmanı <strong>Tayfun Akan</strong> tarafından kaleme alınmıştır. İçerikteki teknik ambalaj kriterleri, kağıt mukavemet standartları, selefon kaplama standartları ve grafik tasarım doğruluğu, yüksek kaliteli baskı ve uzun ömürlü ürün üretimi standartları açısından yazarımız tarafından detaylıca incelenmiş ve onaylanmıştır.</>
                   )}
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 border-t border-gray-200/60 pt-4 text-[10px] font-black text-gray-500 uppercase">
-                  <div>İlk Yayınlanma: <span className="text-black">{slug === 'brosur-baskida-en-dogru-kagit-nasil-secilir' ? "21 Mayıs 2026" : slug === 'yer-gosterme-belgesi-nasil-doldurulur' ? "04 Haziran 2026" : "21 Mayıs 2026"}</span></div>
-                  <div>Son Güncelleme: <span className="text-black">06 Temmuz 2026</span></div>
+                  <div>İlk Yayınlanma: <span className="text-black">{blogMeta.publishedLabel}</span></div>
+                  <div>Son Güncelleme: <span className="text-black">{blogMeta.modifiedLabel}</span></div>
                   <div>Görsel Lisansı: <Link to="/lisans" className="text-primary hover:underline">Görsel Lisansı</Link></div>
                   {slug === 'yer-gosterme-belgesi-nasil-doldurulur' && (
                     <div>Mevzuat Uygunluk: <span className="text-emerald-700">Madde 19 (Uyumlu)</span></div>
