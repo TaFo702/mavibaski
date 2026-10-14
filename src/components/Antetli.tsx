@@ -300,7 +300,10 @@ export const AntetliPage = () => {
                 </h2>
 
                 <p className="text-xs text-gray-650 font-semibold leading-relaxed text-justify">
-                  Baskı dosyasında logo, firma bilgileri, ebat ve baskı detaylarının yer alması gerekir. Dosya hazırlama koşulları ve sipariş bilgileri, baskı öncesinde paylaşılır.
+                  Antetli kağıt tasarımı ve baskısı için hazır dosyanızı PDF, AI veya CDR formatında, ürün koduna uygun ebatta paylaşabilirsiniz. Logo, firma unvanı, adres ve iletişim bilgilerini kontrol edin; renkli baskı dosyasında CMYK renk profili kullanın. Kenara uzanan zeminlerde taşma payı bırakın, yazı ve logoları kesim çizgisinden içeride tutun. Baskı öncesi PDF provasında firma bilgilerini, yerleşimi ve ebatı kontrol ederek onay verin.
+                </p>
+                <p className="text-xs text-gray-650 font-semibold leading-relaxed mt-3">
+                  Ayrıntılar için <Link to="/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi" className="text-primary underline">CMYK, taşma payı ve baskı dosyası hazırlama rehberini</Link> inceleyebilirsiniz.
                 </p>
               </div>
             </div>

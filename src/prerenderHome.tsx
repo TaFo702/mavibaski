@@ -22,9 +22,9 @@ export function prerenderZarf() {
 }
 
 // Use the existing blog renderer for this audited route. The browser keeps its lazy route.
-export function prerenderZarfBlog() {
+export function prerenderZarfBlog(pathname = '/blog/zarf-baskisinda-diplomat-ve-torba-zarf') {
   const BlogRouter = ({ children }: { children: React.ReactNode }) => (
-    <MemoryRouter initialEntries={['/blog/zarf-baskisinda-diplomat-ve-torba-zarf']}>{children}</MemoryRouter>
+    <MemoryRouter initialEntries={[pathname]}>{children}</MemoryRouter>
   );
   // Metadata remains owned by injectSEOMetadata; keep only visible React output here.
   return renderToString(<App Router={BlogRouter} BlogComponent={BlogPage} />)

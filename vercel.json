@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/antetli-kagit",
+      "destination": "/antetli",
+      "permanent": true
+    },
+    {
       "source": "/makbuz",
       "destination": "/makbuz-ve-formlar",
       "permanent": true
