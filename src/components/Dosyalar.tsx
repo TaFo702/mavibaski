@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { DOSYALAR_DETAILS } from '../data/dosyalarPageContent';
 import { 
   ShoppingCart, 
   ShieldCheck, 
@@ -17,95 +17,52 @@ import { CategoryHero } from './CategoryHero';
 import RelatedBlogPosts from './RelatedBlogPosts';
 
 // --- Local Data ---
-const DOSYALAR_DETAILS = {
-  breadcrumbTitle: "Cepli Dosya",
-  h1Title: "Cepli Dosya Baskı Fiyatları",
-  faqList: [
-    {
-      q: "Cepli dosya baskısı hangi kağıtlarla üretilir?",
-      a: "Cepli dosya baskısında 350 gr ve 400 gr kuşe kağıt tercih edilmektedir."
-    },
-    {
-      q: "Mat selefon mu, parlak selefon mu tercih etmeliyim?",
-      a: "Mat selefon daha kurumsal ve sade bir görünüm sunarken, parlak selefon renklerin daha canlı görünmesini sağlar. Tercihinize göre seçim yapabilirsiniz."
-    },
-    {
-      q: "Cepli dosyanın içine hangi belgeler konulabilir?",
-      a: "Teklif dosyaları, sözleşmeler, antetli kağıtlar, kataloglar, broşürler, fiyat listeleri ve kurumsal evraklar yerleştirilebilir."
-    },
-    {
-      q: "Cepli dosya üzerine kabartma lak uygulanabilir mi?",
-      a: "Evet. Logo veya belirli tasarım alanlarına lokal kabartma lak uygulanan modeller mevcuttur."
-    },
-    {
-      q: "Kurumsal renklere uygun baskı yapılabilir mi?",
-      a: "Evet. Tasarımınız CMYK renk formatında hazırlandığında kurumsal renklerinize uygun baskı elde edilir."
-    },
-    {
-      q: "Cepli dosyalar tek taraflı mı çift taraflı mı basılabilir?",
-      a: "Her iki seçenek de mevcuttur. İsteğe göre yalnızca dış yüzeye veya hem iç hem dış yüzeye renkli baskı yapılabilir."
-    },
-    {
-      q: "Cepli dosya fuar ve toplantılar için uygun mudur?",
-      a: "Evet. Fuarlar, bayi toplantıları, kurumsal sunumlar ve müşteri tekliflerinin sunulması için tercih edilmektedir."
-    },
-    {
-      q: "Tasarım desteği alabilir miyim?",
-      a: "Evet. Firmanızın logosu ve kurumsal bilgileri doğrultusunda baskıya uygun dosya tasarımı konusunda bilgi alabilirsiniz."
-    },
-    {
-      q: "Baskı öncesinde tasarım kontrolü yapılıyor mu?",
-      a: "Evet. Üretime geçilmeden önce tasarımınız kontrol edilerek onayınız doğrultusunda baskı süreci yürütülür."
-    }
-  ]
-};
-
 const DOSYALAR_GALLERY = [
   {
     src: "/images/dosya/cepli-dosya-baski-fiyatlari.webp",
-    alt: "kurumsal-logo-baskili-mat-selefonlu-cepli-dosya",
-    title: "Mat Selefonlu Cepli Dosya",
-    desc: "Ön kapakta kurumsal logo ile şirketin sloganını taşıyan, mat selefon kaplamalı sunum dosyası. Kullanım Alanı: Kurumsal şirket sunumları ve resmi yazışmalar.",
+    alt: "Logo baskılı eğitim kurumu dosyasının açık ve kapalı görünümü",
+    title: "Eğitim Kurumu İçin Cepli Dosya",
+    desc: "Logo baskılı eğitim kurumu dosyasının açık ve kapalı görünümü.",
     width: 1536,
     height: 1024
   },
   {
     src: "/images/dosya/cepli-dosya-tasarimi.webp",
-    alt: "350-gr-kuse-kartvizit-yuvali-sunum-dosyasi",
-    title: "350 gr Cepli Sunum Dosyası",
-    desc: "350 gr kuşe kağıda basılan cepli sunum dosyası. Kullanım Alanı: Satış temsilcileri, müşteri ilişkileri birimleri ve teklif sunumları.",
+    alt: "İç cebinde kartvizit bulunan açık sunum dosyası örneği",
+    title: "Kartvizit Yuvalı Sunum Dosyası",
+    desc: "İç cebinde kartvizit bulunan açık sunum dosyası örneği.",
     width: 1536,
     height: 1024
   },
   {
     src: "/images/dosya/cepli-dosya-baski-detayi.webp",
-    alt: "kullanisli-tasarima-sahip-cepli-dosya",
-    title: "Lokal Kabartma Laklı Sunum Dosyası",
-    desc: "Kapak üzerindeki logo veya unvan gibi alanların parlak kabartma lak ile belirginleştirildiği özel dosya. Kullanım Alanı: Ürün tanıtımları ve üst düzey iş ortaklığı teklifleri.",
+    alt: "İki iç cebi bulunan açık ve kapalı kurumsal dosya örneği",
+    title: "Çift Cepli Tasarım Örneği",
+    desc: "İki iç cebi bulunan açık ve kapalı kurumsal dosya örneği.",
     width: 1536,
     height: 1024
   },
   {
     src: "/images/dosya/sunum-dosyasi-ornegi.webp",
-    alt: "koruklu-cepli-dosya-tasarimi",
-    title: "Körüklü Cepli Dosya",
-    desc: "Çok sayıda evrak, katalog ve kalın belgeleri muhafaza etmek için tasarlanmış model. Kullanım Alanı: Proje dosyaları, sözleşmeler ve teknik şartnameler.",
+    alt: "Tek iç cep ve kartvizit alanı bulunan hukuk bürosu dosyası örneği",
+    title: "Hukuk Bürosu İçin Sunum Dosyası",
+    desc: "Tek iç cep ve kartvizit alanı bulunan hukuk bürosu dosyası örneği.",
     width: 1536,
     height: 1024
   },
   {
     src: "/images/dosya/sunum-ve-cepli-dosya.webp",
-    alt: "cift-cepli-kurumsal-dosya",
-    title: "Çift Cepli Dosya",
-    desc: "Evrak tutucu cepler bulunduran geniş kapasiteli kurumsal dosya seçeneği. Kullanım Alanı: Kurum kayıt evrakları ve çoklu departman dokümanları.",
+    alt: "Sarı iç cebi ve kartvizit alanı bulunan turizm firması dosyası örneği",
+    title: "Turizm Firması İçin Cepli Dosya",
+    desc: "Sarı iç cebi ve kartvizit alanı bulunan turizm firması dosyası örneği.",
     width: 1536,
     height: 1024
   },
       {
     src: "/images/dosya/cepli-dosya-baski.webp",
-    alt: "fuar-tipi-promosyon-cepli-dosya",
-    title: "Fuar ve Tanıtım Dosyası",
-    desc: "Fuar ziyaretçilerine broşür, fiyat listesi ve kurumsal belgelerinizi sunmanızı sağlayan tanıtım ürünü. Kullanım Alanı: Fuar organizasyonları ve tanıtım etkinlikleri.",
+    alt: "Kurumsal logo ve iletişim bilgileri bulunan cepli dosya örneği",
+    title: "Kurumsal Cepli Dosya Örneği",
+    desc: "Kurumsal logo ve iletişim bilgileri bulunan cepli dosya örneği.",
     width: 1536,
     height: 1024
   }
@@ -153,39 +110,12 @@ export const DosyalarPage = () => {
 
   const { openProductDetail } = useCart();
 
-  React.useEffect(() => {
-    const prerenderedMetadata = document.head.querySelectorAll(
-      'title[data-prerender-seo], link[rel="canonical"][data-prerender-seo], meta[name="description"][data-prerender-seo], meta[property^="og:"][data-prerender-seo]'
-    );
-    prerenderedMetadata.forEach(node => node.remove());
-  }, []);
-
-  const openWhatsApp = (item: any) => {
+  const openWhatsApp = (item: (typeof DOSYALAR_DATA)[number]) => {
     openProductDetail(item, "Dosyalar");
   };
 
   return (
     <div className="bg-white min-h-screen pb-20">
-      <Helmet>
-        <title>Cepli Dosya Baskı Fiyatları | Kuşe ve Selefon | Mavi Basım</title>
-        <meta name="description" content="Kuşe cepli dosya baskı fiyatlarını; 500 ve 1.000 adet, tek veya çift yön baskı, mat/parlak selefon ve lak seçenekleriyle inceleyin." />
-        <link rel="canonical" href="https://mavibasim.com/dosyalar" />
-        <meta property="og:title" content="Cepli Dosya Baskı Fiyatları | Kuşe ve Selefon | Mavi Basım" />
-        <meta property="og:description" content="Kuşe cepli dosya baskı fiyatlarını; 500 ve 1.000 adet, tek veya çift yön baskı, mat/parlak selefon ve lak seçenekleriyle inceleyin." />
-        <meta property="og:url" content="https://mavibasim.com/dosyalar" />
-        <meta property="og:type" content="product" />
-        <meta property="og:image" content="https://mavibasim.com/images/dosya/cepli-dosya-baski-fiyatlari.webp" />
-        <meta property="og:image:secure_url" content="https://mavibasim.com/images/dosya/cepli-dosya-baski-fiyatlari.webp" />
-        <meta property="og:image:type" content="image/webp" />
-        <meta property="og:image:width" content="1536" />
-<meta property="og:image:height" content="1024" />
-        <meta property="og:image:alt" content="Mavi Basım 350 gr ve 400 gr kuşe selefonlu cepli dosya ve sunum dosyası modelleri" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cepli Dosya Baskı Fiyatları | Kuşe ve Selefon | Mavi Basım" />
-        <meta name="twitter:description" content="Kuşe cepli dosya baskı fiyatlarını; 500 ve 1.000 adet, tek veya çift yön baskı, mat/parlak selefon ve lak seçenekleriyle inceleyin." />
-        <meta name="twitter:image" content="https://mavibasim.com/images/dosya/cepli-dosya-baski-fiyatlari.webp" />
-      </Helmet>
-
       {/* Breadcrumb Navigation */}
       <div className="bg-gray-50 border-b border-gray-100 py-3">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -337,23 +267,23 @@ export const DosyalarPage = () => {
           </div>
           <div className="bg-slate-50 border border-gray-200 rounded-3xl p-6 md:p-8 space-y-6 text-xs sm:text-sm font-semibold leading-relaxed text-gray-700">
             <p>
-              Kurumsal sunum dosyalarınızın sevkıyat sürecinde korunması amacıyla paketleme ve sevkiyat aşamalarına özen gösteriyoruz.
+              Kurumsal sunum dosyalarınızın sevkiyat sürecinde korunması amacıyla paketleme ve sevkiyat aşamalarına özen gösteriyoruz.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 font-medium">
               <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-2">
-                <h4 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">🛡️ Kolileme Standartları</h4>
+                <h3 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">🛡️ Kolileme Standartları</h3>
                 <p className="text-xs font-semibold text-gray-600 leading-relaxed">
                   Basılan dosyalarınız, taşıma esnasında düzenli kalması için mukavemetli karton kolilerle paketlenir.
                 </p>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-2">
-                <h4 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">💧 Koruyucu Ambalaj</h4>
+                <h3 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">💧 Koruyucu Ambalaj</h3>
                 <p className="text-xs font-semibold text-gray-600 leading-relaxed">
                   Dış ortam etkilerine karşı koruma sağlamak amacıyla ürünler ambalajlanarak kolilere yerleştirilir.
                 </p>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-2">
-                <h4 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">🚚 Kargo Gönderimi</h4>
+                <h3 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">🚚 Kargo Gönderimi</h3>
                 <p className="text-xs font-semibold text-gray-600 leading-relaxed">
                   Anlaşmalı kargo firmaları aracılığıyla Türkiye genelindeki adresinize sevk edilir.
                 </p>
@@ -365,9 +295,9 @@ export const DosyalarPage = () => {
         <div className="mb-6 mt-6 bg-sky-50/50 border border-sky-100 rounded-[2rem] p-5 flex flex-col sm:flex-row items-center gap-4 shadow-sm text-black">
           <span className="w-10 h-10 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center text-lg shrink-0 font-bold">💬</span>
           <div className="text-center sm:text-left">
-            <h4 className="text-sm font-black text-slate-900 uppercase mb-0.5">Sipariş Oluşturma Adımları</h4>
+            <h3 className="text-sm font-black text-slate-900 uppercase mb-0.5">Sipariş Oluşturma Adımları</h3>
             <p className="text-xs text-slate-650 font-semibold leading-relaxed">
-              Dilediğiniz seçeneğin yanındaki <strong>"Hemen Sipariş Ver"</strong> butonuna tıklayarak WhatsApp destek hattımız üzerinden sipariş oluşturabilir ve detayları iletebilirsiniz.
+              Dilediğiniz seçeneğin yanındaki <strong>"Hemen Sipariş Ver"</strong> butonuyla ürün detayını açabilirsiniz. Açılan penceredeki WhatsApp bağlantısından sipariş bilgilerini paylaşabilirsiniz.
             </p>
           </div>
         </div>
@@ -487,20 +417,20 @@ export const DosyalarPage = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
               <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-2">
-                <h4 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">💪 Kağıt & Gramaj</h4>
+                <h3 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">💪 Kağıt & Gramaj</h3>
                 <p className="text-xs font-semibold text-gray-600 leading-relaxed">
                   • <strong>350 gr Kuşe:</strong> Standart ve dengeli kalınlık sunan kurumsal dosya seçeneği.<br />
                   • <strong>400 gr Kuşe:</strong> Daha tok ve yüksek gramajlı dosya tercihi.
                 </p>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-2">
-                <h4 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">✨ Selefon & Yüzey</h4>
+                <h3 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">✨ Selefon & Yüzey</h3>
                 <p className="text-xs font-semibold text-gray-600 leading-relaxed">
                   Mat selefon veya parlak selefon kaplamaları ile yüzey koruması sağlanır. Belirli modellerde <strong>lokal lak</strong> uygulaması mevcuttur.
                 </p>
               </div>
               <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-2">
-                <h4 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">🖨️ Baskı Yönü & Adet</h4>
+                <h3 className="font-black text-primary uppercase text-xs flex items-center gap-1.5">🖨️ Baskı Yönü & Adet</h3>
                 <p className="text-xs font-semibold text-gray-600 leading-relaxed">
                   Tek yön veya çift yön renkli baskı seçenekleri sunulmaktadır. 500 ve 1.000 adetlik paketlerde sipariş verilebilir.
                 </p>
@@ -511,7 +441,7 @@ export const DosyalarPage = () => {
             <div className="mt-8 p-6 bg-amber-50/70 border border-amber-200 rounded-3xl text-black">
               <div className="flex items-center gap-2.5 mb-3">
                 <span className="text-xl">💡</span>
-                <h4 className="text-sm font-black text-amber-950 uppercase">Hangi Seçeneği Tercih Etmeliyim?</h4>
+                <h3 className="text-sm font-black text-amber-950 uppercase">Hangi Seçeneği Tercih Etmeliyim?</h3>
               </div>
               <p className="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed mb-4">
                 İhtiyacınıza uygun cepli dosya modelini belirlemek için aşağıdaki karşılaştırmayı inceleyebilirsiniz:

@@ -13,7 +13,8 @@ const application = (
 const path = window.location.pathname.replace(/\/$/, '') || '/';
 if ((container.dataset.prerendered === 'home' && path === '/') ||
     (container.dataset.prerendered === 'zarf' && path === '/zarf') ||
-    (container.dataset.prerendered === 'antetli' && path === '/antetli')) {
+    (container.dataset.prerendered === 'antetli' && path === '/antetli') ||
+    (container.dataset.prerendered === 'dosyalar' && path === '/dosyalar')) {
   hydrateRoot(container, application);
 } else {
   createRoot(container).render(application);

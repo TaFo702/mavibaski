@@ -3,6 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 import ZarfPage from './components/Zarf';
+import { DosyalarPage } from './components/Dosyalar';
 import { AntetliPage } from './components/Antetli';
 import { BlogPage } from './components/Blog';
 
@@ -40,4 +41,11 @@ export function prerenderAntetli() {
     <MemoryRouter initialEntries={['/antetli']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={AntetliRouter} AntetliComponent={AntetliPage} />);
+}
+
+export function prerenderDosyalar() {
+  const DosyalarRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/dosyalar']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={DosyalarRouter} DosyalarComponent={DosyalarPage} />);
 }
