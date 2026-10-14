@@ -13,7 +13,7 @@ import { ETIKET_SEO_METADATA, ETIKET_SCHEMAS, generateEtiketSSRBodyContent } fro
 import { BLOKNOTLAR_SEO_METADATA, BLOKNOTLAR_SCHEMAS, generateBloknotlarSSRBodyContent } from "../data/bloknotlarPageContent";
 import { ANTETLI_SEO_METADATA, ANTETLI_SCHEMAS } from "../data/antetliPageContent";
 import { KATALOG_FAQS, KATALOG_DATA, KARTON_CANTA_DATA, ZARF_FAQS } from "../data/extraProductData";
-import { DOSYALAR_DATA } from "../data/productData";
+import { DOSYALAR_DETAILS } from "../data/dosyalarPageContent";
 export const citySlugs = new Set(CITIES_DATA.map(c => c.slug));
 
 export const knownStaticRoutes = new Set([
@@ -332,7 +332,7 @@ export const PRIORITY_PRODUCT_OG: Record<string, {
     alt: "Mavi Basım 35x50, 50x70 ve 70x100 cm kuşe afiş poster baskı fiyatları"
   },
   "/dosyalar": {
-    image: "https://mavibasim.com/images/dosya/cepli-dosya-tasarimi.webp",
+    image: "https://mavibasim.com/images/dosya/cepli-dosya-baski-fiyatlari.webp",
     type: "image/webp",
     width: "1536",
     height: "1024",
@@ -2509,351 +2509,25 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
 
   if (p === '/dosyalar') {
     const breadcrumbSchema = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
+      "@context": "https://schema.org", "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Ana Sayfa",
-          "item": "https://mavibasim.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Matbaa Ürünleri",
-          "item": "https://mavibasim.com/matbaa"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Cepli Dosya Baskı",
-          "item": "https://mavibasim.com/dosyalar"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://mavibasim.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Matbaa Ürünleri", "item": "https://mavibasim.com/matbaa" },
+        { "@type": "ListItem", "position": 3, "name": "Cepli Dosya Baskı", "item": canonical }
       ]
     };
-
-    const dosyalarFaqs = [
-  {
-    q: "Cepli dosya baskısı hangi kağıtlarla üretilir?",
-    a: "Cepli dosya baskısında 350 gr ve 400 gr kuşe kağıt tercih edilmektedir."
-  },
-  {
-    q: "Mat selefon mu, parlak selefon mu tercih etmeliyim?",
-    a: "Mat selefon daha kurumsal ve sade bir görünüm sunarken, parlak selefon renklerin daha canlı görünmesini sağlar. Tercihinize göre seçim yapabilirsiniz."
-  },
-  {
-    q: "Cepli dosyanın içine hangi belgeler konulabilir?",
-    a: "Teklif dosyaları, sözleşmeler, antetli kağıtlar, kataloglar, broşürler, fiyat listeleri ve kurumsal evraklar yerleştirilebilir."
-  },
-  {
-    q: "Cepli dosya üzerine kabartma lak uygulanabilir mi?",
-    a: "Evet. Logo veya belirli tasarım alanlarına lokal kabartma lak uygulanan modeller mevcuttur."
-  },
-  {
-    q: "Kurumsal renklere uygun baskı yapılabilir mi?",
-    a: "Evet. Tasarımınız CMYK renk formatında hazırlandığında kurumsal renklerinize uygun baskı elde edilir."
-  },
-  {
-    q: "Cepli dosyalar tek taraflı mı çift taraflı mı basılabilir?",
-    a: "Her iki seçenek de mevcuttur. İsteğe göre yalnızca dış yüzeye veya hem iç hem dış yüzeye renkli baskı yapılabilir."
-  },
-  {
-    q: "Cepli dosya fuar ve toplantılar için uygun mudur?",
-    a: "Evet. Fuarlar, bayi toplantıları, kurumsal sunumlar ve müşteri tekliflerinin sunulması için tercih edilmektedir."
-  },
-  {
-    q: "Tasarım desteği alabilir miyim?",
-    a: "Evet. Firmanızın logosu ve kurumsal bilgileri doğrultusunda baskıya uygun dosya tasarımı konusunda bilgi alabilirsiniz."
-  },
-  {
-    q: "Baskı öncesinde tasarım kontrolü yapılıyor mu?",
-    a: "Evet. Üretime geçilmeden önce tasarımınız kontrol edilerek onayınız doğrultusunda baskı süreci yürütülür."
-  }
-];
-
-const dosyalarPrices = DOSYALAR_DATA
-  .map(item => Number(item.price.replace(/[^\d]/g, "")))
-  .filter(price => Number.isFinite(price) && price > 0);
-
-const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Cepli Dosya Baskı Fiyatları",
-  "description": staticPages["/dosyalar"].desc,
-  "image": "https://mavibasim.com/images/dosya/cepli-dosya-tasarimi.webp",
-  "url": "https://mavibasim.com/dosyalar",
-  "brand": {
-    "@type": "Brand",
-    "name": "Mavi Basım"
-  },
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "TRY",
-    "lowPrice": String(Math.min(...dosyalarPrices)),
-    "highPrice": String(Math.max(...dosyalarPrices)),
-    "offerCount": String(dosyalarPrices.length)
-  }
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": dosyalarFaqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.a
-    }
-  }))
-};
-
-const dosyalarGallery = [
-  {
-    src: "/images/dosya/cepli-dosya-baski-fiyatlari.webp",
-    alt: "kurumsal-logo-baskili-mat-selefonlu-cepli-dosya",
-    width: 1536,
-    height: 1024
-  },
-  {
-    src: "/images/dosya/cepli-dosya-tasarimi.webp",
-    alt: "350-gr-kuse-kartvizit-yuvali-sunum-dosyasi",
-    width: 1536,
-    height: 1024
-  },
-  {
-    src: "/images/dosya/cepli-dosya-baski-detayi.webp",
-    alt: "kullanisli-tasarima-sahip-cepli-dosya",
-    width: 1536,
-    height: 1024
-  },
-  {
-    src: "/images/dosya/sunum-dosyasi-ornegi.webp",
-    alt: "koruklu-cepli-dosya-tasarimi",
-    width: 1536,
-    height: 1024
-  },
-  {
-    src: "/images/dosya/sunum-ve-cepli-dosya.webp",
-    alt: "cift-cepli-kurumsal-dosya",
-    width: 1536,
-    height: 1024
-    },
-  {
-    src: "/images/dosya/cepli-dosya-baski.webp",
-    alt: "fuar-tipi-promosyon-cepli-dosya",
-    width: 1536,
-    height: 1024
-  }
-];
-
-const galleryHtml = `<section aria-label="Cepli Dosya Ürün Fotoğrafları">
-  <h2>Cepli Dosya Ürün Fotoğrafları Galerisi</h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
-    ${dosyalarGallery.map(img => `<figure style="margin:0">
-      <div style="aspect-ratio:4/3;overflow:hidden">
-        <img src="${img.src}" alt="${img.alt}" ${img.width ? `width="${img.width}" ` : ''}${img.height ? `height="${img.height}" ` : ''}loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain" />
-      </div>
-    </figure>`).join("")}
-  </div>
-</section>`;
-
-const dosyalarTableRowsHtml = DOSYALAR_DATA.map((item, idx) => `
-  <tr class="border-b border-gray-100 hover:bg-primary/10 hover:shadow-[inset_4px_0_0_0_#29abe2] transition-all cursor-default group">
-    ${idx === 0 ? `
-      <td 
-        rowspan="${DOSYALAR_DATA.length}"
-        class="bg-primary text-white font-black text-center p-1 w-10 border-r border-white/10"
-        style="writing-mode: vertical-rl; transform: rotate(180deg);"
-      >
-        <span class="tracking-[0.1em] uppercase text-[10px]">DOSYALAR</span>
-      </td>
-    ` : ''}
-    <td class="p-3 text-center font-bold text-primary border-r border-gray-100 group-hover:text-secondary transition-colors">${item.code}</td>
-    <td class="p-3 text-center text-black font-medium border-r border-gray-100">${item.miktar}</td>
-    <td class="p-3 text-center text-black font-medium border-r border-gray-100">${item.desc}</td>
-    <td class="p-3 text-center font-black text-black border-r border-gray-100 bg-gray-50/30 group-hover:bg-primary/5 text-[14px] md:text-[16px] transition-colors">${item.price}</td>
-    <td class="p-3 text-center">
-      <a 
-        href="https://wa.me/905366022373" 
-        class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-secondary text-white px-4 py-2 rounded-full text-xs md:text-sm font-black tracking-tight leading-none transition-all shadow-md hover:scale-105 active:scale-95 whitespace-nowrap"
-      >
-        <span>Hemen Sipariş Ver</span>
-      </a>
-    </td>
-  </tr>
-`).join('');
-
-const priceTableHtml = `
-<div class="scroll-mt-24 group my-6">
-  <div class="flex justify-between items-center mb-6 px-2">
-    <div class="flex items-center gap-3">
-      <div class="w-2 h-8 bg-secondary rounded-full"></div>
-      <h2 class="text-xl md:text-2xl font-black text-black uppercase tracking-tight flex items-center gap-2 flex-wrap">
-        Cepli Dosya Fiyat Listesi
-      </h2>
-    </div>
-    <div class="hidden md:flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-100 text-[11px] font-bold">
-      <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-      <span>500 ve 1.000 Adet Seçenekleri</span>
-    </div>
-  </div>
-
-  <p class="text-gray-650 text-xs sm:text-sm font-semibold mb-6 px-2 leading-relaxed">
-    Aşağıdaki tabloda güncel cepli dosya baskı fiyatlarımızı inceleyebilirsiniz. Fiyatlara kulakçık yapıştırma dahildir. Siparişiniz, tasarım onayınızın ardından üretime alınmaktadır.
-  </p>
-
-  <div class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-visible relative z-10">
-    <div class="overflow-x-auto">
-      <table class="w-full border-collapse text-[11px] md:text-[13px]">
-        <thead>
-          <tr class="bg-black text-white border-b border-black">
-            <th class="p-4 w-10"></th>
-            <th class="p-4 w-24 font-black uppercase tracking-tight text-[14px] md:text-[16px] border-r border-white/10">KOD</th>
-            <th class="p-4 text-center font-black uppercase tracking-tight text-[14px] md:text-[16px] border-r border-white/10">ADET</th>
-            <th class="p-4 text-center font-black uppercase tracking-tight text-[14px] md:text-[16px] border-r border-white/10">ÖZELLİKLER</th>
-            <th class="p-4 w-32 font-black uppercase tracking-tight text-[14px] md:text-[16px] border-r border-white/10">FİYAT</th>
-            <th class="p-4 w-44 font-black uppercase tracking-tight text-[14px] md:text-[16px] text-center">SİPARİŞ</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${dosyalarTableRowsHtml}
-        </tbody>
-      </table>
-    </div>
-    <div class="bg-slate-50 px-5 py-3 border-t border-gray-150 rounded-b-2xl flex flex-col sm:flex-row justify-center items-center text-xs text-slate-500 font-medium font-sans">
-      <span>* Tabloda belirtilen fiyatlarımıza %20 KDV dahil değildir.</span>
-    </div>
-  </div>
-</div>`;
-
-const comparisonTableHtml = `
-<div class="mt-8 scroll-mt-24">
-  <div class="flex items-center gap-2.5 mb-4">
-    <div class="w-2 h-6 bg-secondary rounded-full shrink-0"></div>
-    <h3 class="text-lg font-black text-black uppercase tracking-tight">
-      Hangi Cepli Dosya Modelini Seçmeliyim?
-    </h3>
-  </div>
-  
-  <div class="bg-white rounded-3xl border border-gray-200 shadow-xl overflow-hidden">
-    <div class="overflow-x-auto">
-      <table class="w-full border-collapse text-left text-xs sm:text-sm">
-        <thead>
-          <tr class="bg-slate-900 text-white border-b border-slate-950">
-            <th class="p-4 font-black uppercase tracking-wider text-[11px] sm:text-xs">Model Adı</th>
-            <th class="p-4 font-black uppercase tracking-wider text-[11px] sm:text-xs">Gramaj</th>
-            <th class="p-4 font-black uppercase tracking-wider text-[11px] sm:text-xs">Selefon Türü</th>
-            <th class="p-4 font-black uppercase tracking-wider text-[11px] sm:text-xs">Baskı Yönü</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-gray-100 font-semibold">
-          <tr class="hover:bg-slate-50/50 transition-colors">
-            <td class="p-4 text-slate-900 font-black text-[12px] sm:text-[13px]">Mat Selefonlu Cepli Dosya</td>
-            <td class="p-4 text-gray-700">350 gr Kuşe</td>
-            <td class="p-4 text-gray-700">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-100">
-                Mat Selefon
-              </span>
-            </td>
-            <td class="p-4 text-gray-600 leading-relaxed text-[12px] sm:text-[13px]">Tek Yön</td>
-          </tr>
-          <tr class="hover:bg-slate-50/50 transition-colors">
-            <td class="p-4 text-slate-900 font-black text-[12px] sm:text-[13px]">Parlak Selefonlu Cepli Dosya</td>
-            <td class="p-4 text-gray-700">350 gr Kuşe</td>
-            <td class="p-4 text-gray-700">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-100">
-                Parlak Selefon
-              </span>
-            </td>
-            <td class="p-4 text-gray-600 leading-relaxed text-[12px] sm:text-[13px]">Tek Yön</td>
-          </tr>
-          <tr class="hover:bg-slate-50/50 transition-colors">
-            <td class="p-4 text-slate-900 font-black text-[12px] sm:text-[13px]">Kabartma Laklı Cepli Dosya</td>
-            <td class="p-4 text-gray-700">350 gr Kuşe</td>
-            <td class="p-4 text-gray-700">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-100">
-                Mat Selefon + Lak
-              </span>
-            </td>
-            <td class="p-4 text-gray-600 leading-relaxed text-[12px] sm:text-[13px]">Tek Yön</td>
-          </tr>
-          <tr class="hover:bg-slate-50/50 transition-colors">
-            <td class="p-4 text-slate-900 font-black text-[12px] sm:text-[13px]">Çift Yön Baskılı Cepli Dosya</td>
-            <td class="p-4 text-gray-700">350 gr Kuşe</td>
-            <td class="p-4 text-gray-700">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-100">
-                Mat / Parlak Selefon
-              </span>
-            </td>
-            <td class="p-4 text-gray-600 leading-relaxed text-[12px] sm:text-[13px]">Çift Yön</td>
-          </tr>
-          <tr class="hover:bg-slate-50/50 transition-colors">
-            <td class="p-4 text-slate-900 font-black text-[12px] sm:text-[13px]">400 gr Laklı Cepli Dosya</td>
-            <td class="p-4 text-gray-700">400 gr Kuşe</td>
-            <td class="p-4 text-gray-700">
-              <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-100">
-                Mat Selefon + Lak
-              </span>
-            </td>
-            <td class="p-4 text-gray-600 leading-relaxed text-[12px] sm:text-[13px]">Çift Yön</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>`;
-
-const faqHtml = `<section id="sss" aria-label="Cepli Dosya Sıkça Sorulan Sorular">
-  <h2>Cepli Dosya Baskı Hakkında Sıkça Sorulan Sorular</h2>
-  ${dosyalarFaqs.map(faq => `<article>
-    <h3>${faq.q}</h3>
-    <p>${faq.a}</p>
-  </article>`).join("")}
-</section>`;
-
-const extraHead = [breadcrumbSchema, productSchema, faqSchema]
-  .map(schema => `  <script type="application/ld+json">${JSON.stringify(schema)}</script>`)
-  .join("\n") + "\n";
-
-    const bodyContent = `<div class="bg-gray-50 border-b border-gray-100 py-3">
-  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-    <nav class="flex text-xs text-gray-500 font-medium" aria-label="Breadcrumb">
-      <ol class="inline-flex items-center space-x-1 md:space-x-2 flex-wrap">
-        <li class="inline-flex items-center">
-          <a href="/" class="text-gray-600 hover:text-primary transition-colors">Ana Sayfa</a>
-        </li>
-        <li>
-          <div class="flex items-center">
-            <span class="mx-2 text-gray-400" aria-hidden="true">/</span>
-            <a href="/matbaa" class="text-gray-600 hover:text-primary transition-colors">Matbaa Ürünleri</a>
-          </div>
-        </li>
-        <li>
-          <div class="flex items-center">
-            <span class="mx-2 text-gray-400" aria-hidden="true">/</span>
-            <span class="text-gray-900 font-semibold" aria-current="page">Cepli Dosya Baskı</span>
-          </div>
-        </li>
-      </ol>
-    </nav>
-  </div>
-</div>
-<h1>Cepli Dosya Baskı Fiyatları</h1>
-<p>İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktamızdan 350 gr ve 400 gr kuşe kâğıda, mat/parlak selefon ve lak seçenekleriyle <strong class="text-slate-900">cepli dosya baskısı</strong> sunuyoruz.</p>
-${priceTableHtml}
-${galleryHtml}
-${comparisonTableHtml}
-${faqHtml}`;
-
+    const faqSchema = {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": DOSYALAR_DETAILS.faqList.map(faq => ({
+        "@type": "Question", "name": faq.q,
+        "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+      }))
+    };
     return {
-      title: staticPages["/dosyalar"].title,
-      desc: staticPages["/dosyalar"].desc,
-      canonical,
-      extraHead,
-      h1Text: "Cepli Dosya Baskı Fiyatları",
-      bodyContent
+      title: staticPages["/dosyalar"].title, desc: staticPages["/dosyalar"].desc,
+      canonical, h1Text: DOSYALAR_DETAILS.h1Title,
+      extraHead: [breadcrumbSchema, faqSchema].map(schema =>
+        `  <script type="application/ld+json">${JSON.stringify(schema)}</script>`).join('\n') + '\n'
     };
   }
 

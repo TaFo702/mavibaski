@@ -5334,7 +5334,7 @@ export const ProductSEOSection = ({ categoryKey, hideTrustFooter }: { categoryKe
 
 
 
-export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage }: { ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType } = {}) => {
+export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage }: { ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType } = {}) => {
   return (
     <React.Suspense fallback={
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
@@ -5350,7 +5350,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
       <Route path="/el-ilani" element={<ElIlaniPage />} />
       <Route path="/afis" element={<AfisPage />} />
       <Route path="/antetli" element={<AntetliComponent />} />
-      <Route path="/dosyalar" element={<DosyalarPage />} />
+      <Route path="/dosyalar" element={<DosyalarComponent />} />
       <Route path="/etiket" element={<EtiketPage />} />
       <Route path="/oto-paspas" element={<OtoPaspasPage />} />
       <Route path="/kup-bloknot" element={<KupBloknotPage />} />
@@ -5531,11 +5531,12 @@ pathname === '/kartvizit' ||
   return null;
 };
 
-export default function App({ Router = BrowserRouter, ZarfComponent, BlogComponent, AntetliComponent }: {
+export default function App({ Router = BrowserRouter, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent }: {
   Router?: React.ComponentType<{ children: React.ReactNode }>;
   ZarfComponent?: React.ComponentType;
   BlogComponent?: React.ComponentType;
   AntetliComponent?: React.ComponentType;
+  DosyalarComponent?: React.ComponentType;
 } = {}) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -5582,7 +5583,7 @@ export default function App({ Router = BrowserRouter, ZarfComponent, BlogCompone
             <Navbar />
             
             <main className="flex-grow">
-              <AppRoutes ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} />
+              <AppRoutes ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} />
             </main>
 
             <Footer />
