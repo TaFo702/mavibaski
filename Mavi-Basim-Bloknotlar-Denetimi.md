@@ -38,7 +38,7 @@ Mevcut BloknotlarPage bileşenini build sırasında değiştirmeden render et; i
 - Beş galeri öğesinin metinleri kapaksız, kapaklı, kutulu masaüstü notluk, spiralli ve karma tasarım görselleriyle eşleştirildi. Altıncı mevcut küp bloknot görseli korundu. Fotoğraflardan kağıt gramajı veya cilt kalitesi çıkarılmadı. Görseldeki ebatların tarife kesim ölçülerini temsil etmediği belirtildi.
 - Ölçü SSS'sinde mevcut cm değerleri aynen korunup bunların fiyat listesindeki ebat grupları olduğu netleştirildi. Fiyat tablosundaki ölçü/etiketlere dokunulmadı.
 - CYP paragrafı parlak selefon modelini anlatıyor. Teknik bölümde yalnız “Yaprak kağıt kalınlığı” etiketi “İç sayfa gramajı” oldu; 80 gr/m² değeri aynı.
-- Sitemap içinde yalnız `/bloknotlar` kaydının lastmod tarihi bu içerik değişikliğinin Türkiye tarihi olan 2026-10-15 ile güncellendi.
+- Sitemap içinde yalnız `/bloknotlar` kaydının lastmod tarihi bu içerik değişikliğinin UTC tarihi olan 2026-10-14 (Türkiye: 15 Ekim) ile güncellendi.
 - Title, meta description, H1, görsel dosyaları ve mevcut ticari bilgiler korunuyor. Yeni bölüm, satış sistemi, sayfa veya blog eklenmedi.
 
 ## Doğrulama ve kapsam
@@ -62,3 +62,5 @@ Beş tablo JSX'i önceki sürümle birebir aynı. Render edilen tablo DOM'u önc
 | Başlık, görsel, kullanılabilirlik ve performans | 6/15 | Koruma kapsamındaki iki sorun −4; mobil/performance için 5 puan ölçüm bekliyor |
 
 Koruma kapsamındaki iki sorun giderilmedi. Ölçülmeyen 5 puan hata kesintisi değildir; başarılı kontrol kabul edilerek puana eklenmedi. Bu puan tam mobil/performance denetimi veya ilk 10 garantisi değildir.
+
+CI ilk denemede sitemap için Türkiye günü kullanıldığından UTC gelecekteki tarih kontrolünde durdu. Son kayıt UTC 2026-10-14 olarak düzeltildi; validator ve workflow kuralları değiştirilmedi.
