@@ -314,7 +314,7 @@ export const ZARF_FAQS = [
   },
   {
     q: "Zarflar kendinden yapışkanlı mı",
-    a: "Evet, zarflarımız pratik kullanım ve güvenli gönderim için silikon bantlı yapışkan kapağa sahiptir."
+    a: "Kapatma seçeneği zarf modeline göre değişir. Diplomat zarflarda silikon bantlı veya tutkallı kapatma; mevcut 24x32 cm torba zarf modelinde kendinden yapışkanlı silikon bantlı kapatma bulunur. Tercih edilen model ve kapatma seçeneği sipariş öncesinde netleştirilir."
   },
   {
     q: "Zarf üzerine firma logosu basılabilir mi",

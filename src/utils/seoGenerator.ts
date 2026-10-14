@@ -3,6 +3,7 @@ export { injectSEOMetadata } from "./seoMetadata";
 import { MAKBUZ_DETAILS, PARA_MAKBUZU_DATA } from "../data/makbuzData";
 import { SEO_PAGES_DATA } from "../data/seoPagesData";
 import { BLOG_POSTS } from "../data/blogData";
+import { getBlogMetadata } from "./blogMetadata";
 import { CITIES_DATA } from "../data/cityData";
 import { SECTOR_IMAGE_MANIFEST, AMBALAJ_IMAGE_MANIFEST, ETIKET_IMAGE_MANIFEST } from "../generated/sectorImageManifest";
 import { KUTU_SEO_METADATA, KUTU_FAQS, KUTU_SCHEMAS, generateKutuSSRBodyContent } from "../data/kutuPageContent";
@@ -4414,12 +4415,13 @@ ${faqHtml}`;
     const slug = p.substring("/blog/".length);
     const post = BLOG_POSTS.find((bp) => bp.slug === slug);
     if (post) {
-      title = `${post.title} - Mavi Basım`;
+      const blogMeta = getBlogMetadata(post);
+      title = blogMeta.title;
       desc = post.excerpt;
       const parsedBody = post.content
         ? post.content.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
         : '';
-      const bodyContent = `<h1>${post.title}</h1>\n<p>${post.excerpt}</p>\n<div>${parsedBody}</div>`;
+      const bodyContent = `<h1>${post.title}</h1>\n<p>Yazar: ${blogMeta.author.name} · İlk Yayınlanma: ${blogMeta.publishedLabel} · Son Güncelleme: ${blogMeta.modifiedLabel}</p>\n<p>${post.excerpt}</p>\n<div>${parsedBody}</div>`;
 
       const blogPostingSchema = {
         "@context": "https://schema.org",
@@ -4430,13 +4432,9 @@ ${faqHtml}`;
         },
         "headline": post.title,
         "image": `https://mavibasim.com${post.image}`,
-        "datePublished": "2026-06-04T08:00:00+03:00",
-        "dateModified": "2026-07-06T10:00:00+03:00",
-        "author": {
-          "@type": "Organization",
-          "name": "Mavi Basım Üretim Ekibi",
-          "url": "https://mavibasim.com"
-        },
+        "datePublished": blogMeta.datePublished,
+        "dateModified": blogMeta.dateModified,
+        "author": blogMeta.author,
         "publisher": {
           "@type": "Organization",
           "name": "Mavi Basım",

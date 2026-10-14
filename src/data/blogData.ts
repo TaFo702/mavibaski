@@ -1,6 +1,7 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  seoTitle?: string;
   excerpt: string;
   date: string;
   readTime: string;
@@ -2850,6 +2851,7 @@ BTN_LINK: https://wa.me/905366022373
   },
   {
     slug: 'zarf-baskisinda-diplomat-ve-torba-zarf',
+    seoTitle: 'Diplomat ve Torba Zarf Seçim Rehberi | Mavi Basım',
     title: 'Zarf Baskısında Diplomat Zarf, Torba Zarf ve Silikon Yapışkan Çeşitleri',
     excerpt: 'Muhasebe fatura gönderilerinde penceresiz diplomat zarfların ofset üretimi ve 1. Hamur torba zarflarda silikon yapışkan şerit ömrü.',
     date: '02 Mayıs 2026',
