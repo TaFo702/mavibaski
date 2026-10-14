@@ -1,68 +1,94 @@
-# Mavi Basım Ana Sayfa Denetimi
+# Mavi Basım — Zarf Düzeltmesi Sonrası Denetim
 
-**İşlem:** 14 Ekim 2026 — 13 Ekim canlı denetiminde bulunan iki kapsam içi sorunun kaynakta düzeltilmesi. Kullanıcı canlıya alma işlemini açıkça onayladı.
+Sayfa: https://mavibasim.com/zarf  
+Tarih: 14 Ekim 2026  
+Kapsam: Onaylanan zarf prerender/hydration ve schema düzeltmeleri; ek teknik hata kontrolü.
 
-**Yayın durumu:** PR #15 `main` dalına birleştirildi; GitHub tam kalite kontrolü ve Vercel yayını tamamlandı. Gerçek `https://mavibasim.com/` ilk HTML’si ve Chrome kontrolleriyle iki düzeltmenin canlıya geldiği doğrulandı.
+## Geçici puan: 97/100
 
-**Geçici puan: 92/100.** Puan dağılımı: prerender/hydration 25/25, metadata/canonical/rota temizliği 25/25, schema 20/20, tarama/URL/bağlantılar 13/15, başlık/görsel/kullanılabilirlik/ölçülmüş performans 9/15. İki puan korunan bağlantı sorunlarına, altı puan tamamlanmamış mobil/performans değerlendirmesine ayrıldı; altı yeni hata olduğu anlamına gelmez. Google sıralaması veya tüm alt sayfaların tam denetimi değildir.
+Önceki 80/100 puandaki prerender kaynaklı 10 ve schema kaynaklı 7 puanlık sorun giderildi. Kullanıcının önemsemediğini belirterek kapsam dışında bıraktığı galeri açıklaması ve WhatsApp örtüşmesi için önceki 3 puanlık not korunuyor. Bu değerlendirme Google sıralama puanı değildir. Mobil ve ölçülmüş performans doğrulaması tamamlanmadığından geçicidir.
 
-## Düzeltilen doğrulanmış sorunlar
+| Kapsam | Puan |
+| --- | ---: |
+| Prerender / hydration | 25/25 |
+| Metadata / canonical / rota temizliği | 25/25 |
+| Schema | 20/20 |
+| Tarama / URL / bağlantılar | 15/15 |
+| Başlık / görsel / kullanılabilirlik / ölçülmüş performans | 12/15 |
+| Toplam | 97/100 |
 
-### 1. Yedi kategori bağlantısının yanlış ürüne gitmesi
+## Giderilen sorunlar ve kanıtları
 
-Ana sayfa `#products` alanının `getCategoryPath` eşlemesinde yalnız aşağıdaki hedefler değiştirildi. Mevcut diğer kategori hedefleri, metinler ve sıra korunmuştur.
+### 1. İlk HTML'nin ayrı ve eksik zarf kopyası
 
-| Ürün | Önceki yanlış hedef | Düzeltilen mevcut hedef |
-|---|---|---|
-| Sigorta Poliçeleri | `/sozlesme-baski` | `/sigorta-policeleri` |
-| Tahsilat Makbuzu | `/para-makbuzu` | `/tahsilat-makbuzu` |
-| Araç Kiralama | `/sozlesme-baski` | `/arac-kiralama` |
-| Gider Makbuzu | `/para-makbuzu` | `/gider-makbuzu` |
-| Giriş Bileti | `/adisyon` | `/giris-bileti` |
-| Reçete | `/adisyon` | `/recete` |
-| Tediye Makbuzu | `/para-makbuzu` | `/tediye-makbuzu` |
+Önceki ilk HTML, 6 ana içerik H2'si ve 5 bağlantı içeriyordu. Mevcut açıklamalar, sipariş süreci, ürün kartları ve rehberler bu kopyada eksikti; bazı metinler React sayfasıyla farklıydı.
 
-Önceki canlı kanıt: Reçete bağlantısı Adisyon sayfasını açıyordu; doğru yedi ürün sayfası HTTP 200 ve ilgili başlık/H1 içeriğiyle doğrulanmıştı. Kaynak değişikliği yalnız `src/App.tsx` içindeki yedi eşlemedir. Alt sayfaların içerikleri, fiyatları ve URL’leri yeniden yazılmadı.
+Kaynak düzeltmesi: Mevcut App, router ve cart sağlayıcılarıyla aynı ZarfPage bileşeni build sırasında render ediliyor. Build tarafında yalnız zarfın lazy bileşeni doğrudan çözülüyor; tarayıcının mevcut lazy yüklemesi korunuyor. /zarf için ayrı HTML dizgesi kaldırıldı. Bu rota `data-prerendered="zarf"` ile işaretlenip hydrateRoot ile başlatılıyor. Dist dosyası elle yamalanmadı; yeni framework veya paket eklenmedi.
 
-### 2. Şehir kartı açıklamalarının iki satırda kırpılması
+Canlı kanıt: HTTP 200; ilk HTML'de 11 ana içerik H2'si, 73 bağlantı ve mevcut üç sipariş düğmesi var. Canlı `#root` HTML'si yerelde test edilen üretim çıktısıyla bayt düzeyinde eşleşti. Kullanıcıya gösterilen içerik ve bağlantılar, yerel hydration testinde değişmedi; fiyat tablosunun mevcut DOM öğesi yeniden oluşturulmadı.
 
-Önceki Chrome kontrolünde İstanbul, Ankara, İzmir, Muğla, Balıkesir, Bitlis ve Mardin açıklamaları 30 px alan içinde 45 px metin yüksekliğiyle kırpılıyordu. `src/components/CityLinksSection.tsx` içinde yalnız açıklama paragrafının `line-clamp-2` sınırlaması kaldırıldı. Şehir metinleri, sırası, hedefleri, fontları, renkleri ve kart yapısı aynı kaldı. Son ekran ölçümü aşağıdaki canlı doğrulama kaydındadır.
+### 2. Farklı zarf modellerini tek Product / AggregateOffer altında toplama
 
-## Fiyat koruması nedeniyle müdahale edilmeyen sorunlar
+Önceki kayıt Z1, Z2 ve Z3'ün farklı ebat, baskı türü ve adetlerini tek ürünün fiyat aralığı gibi gösteriyordu.
 
-1. **Orta:** Korunan `#fiyatlar` bölümündeki genel “Online Sipariş Ver” bağlantısı `/kataloglar` hedefinde kalıyor; genel ürün seçimi yerine katalog sayfasını açıyor.
-2. **Düşük:** Korunan “Fiyat Listesi” menüsündeki sayfa hedefleri button/navigate biçiminde; gerçek href üretmiyor.
+Kaynak düzeltmesi: Yalnız /zarf rotasının hatalı toplu Product/AggregateOffer kaydı kaldırıldı. Mevcut breadcrumb ve FAQ korunuyor; yeni şema türleri, stok iddiası, puan veya fiyat geçerlilik tarihi eklenmedi.
 
-Bu iki sorun değiştirilmedi. **Fiyat listeleri ve tablolarının verileri, başlıkları, satırları, HTML/JSX’i, stilleri, bağlantıları ve düğmeleri kesinlikle korunmuştur.**
+Canlı kanıt: İlk HTML ve Chrome DOM'unda bu rotanın şema türleri BreadcrumbList ve FAQPage. Antetli → zarf dönüşünde antetli şeması kalmıyor. Zarf → ana sayfa dönüşünde ürün veya breadcrumb kalıntısı bulunmadı.
 
-## Doğrulama ve kapsam kanıtları
+Resmî dayanak: https://developers.google.com/search/docs/appearance/structured-data/product-snippet#aggregateoffer
 
-- Yerel dosyaların başlangıç Git blob SHA’ları GitHub `main` dosyalarıyla eşleşti. Uygulama değişikliğinin yalnız yedi hedef ve tek kırpma sınıfından oluştuğu, dosyaların kalan bütün içeriği karşılaştırılarak doğrulandı. Fiyat alanının kaynak kodu değişmedi.
-- İlk HTML’deki yedi kategori href’i düzeltildi. Ana sayfanın bütün textContent değeri önceki build çıktısıyla aynı; `#fiyatlar` bölümünün bütün ilk HTML’si birebir aynı. Fiyat HTML SHA-256: `1383abdf31e28e33defdfd11f6cea9b7923cbe73cd6e68c6070dea3fd93713d2`.
-- Mevcut Vite build, `node --import tsx scripts/prerender.ts` ve mevcut esbuild sunucu bundle aşamaları tamamlandı; 294 HTML üretildi. Yerel tsx IPC sınırlaması nedeniyle normal build’in geçtiği henüz bu yerel sonuçla iddia edilmez; GitHub’daki normal npm quality zinciri de run 131 ile başarıyla tamamlandı.
-- Typecheck geçti. Değiştirilen kaynak dosyalarının ESLint kontrolü 0 hata verdi; mevcut uyarılar var. Mevcut CJS test dosyası repo ESLint ignore kapsamındadır; çalıştırma sonucu ayrıca doğrulandı.
-- Mevcut `validate-home-fix.cjs` testi yedi kategori için gerçek React/JSDOM tıklaması, doğru URL/ürün H1 içeriği ve ana sayfaya geri dönüş kontrolleriyle genişletildi. Yedi kategori, önceki 20 ürün/hizmet dönüşü, ilk HTML/hydration tutarlılığı, metadata/schema, doğrudan açılış ve yeniden açılış kontrolleri tamamlandı. Hydration/console hatası kaydedilmedi.
-- İlk hydration fiyat HTML eşitliği tam olarak karşılaştırıldı. SPA yeniden mount sonrası fiyat karşılaştırmasında yalnız React’in boş SSR ayraç yorumları (`<!-- -->`) karşılaştırma dışında bırakıldı; kalan markup birebir karşılaştırıldı. Uygulamanın fiyat koduna veya DOM’una bunun için müdahale edilmedi.
-- Mevcut üretim HTTP testi geçti. Yeni framework, paket, özellik, görsel veya route eklenmedi.
+## Kalan sorunlar
 
-## Önemli sınırlamalar
+Bu kontrollerde, onaylanan kapsam içinde yeni doğrulanmış teknik hata bulunmadı.
 
-- Yeni yedi kategori geçişinin bu aşamadaki otomatik testi React/JSDOM ortamındadır. Gerçek Chrome ve domain sonuçları yayın kaydından okunmalıdır.
-- Mobil görünüm, bütün klavye/odak senaryoları ve LCP/CLS/INP ölçümleri tamamlanmış sayılmadı. Ölçülmemiş performans sayısı yazılmadı.
-- Search Console indeksleme/sıralama sonucu veya müşteri dönüşümü ölçülmedi; Google ilk sayfa garantisi verilmedi. Diğer sayfaların tam SEO denetimi bu işlem değildir.
+Kullanıcı talebiyle müdahale edilmeyen iki not:
 
-## Canlı yayın doğrulaması — 14 Ekim 2026
+1. `zarf-baski-detalleri.webp` genel zarf görünümünü gösterirken “Zarf Kapatma Detayı” açıklaması taşıyor.
+2. Masaüstü ilk ekranda sabit WhatsApp düğmesi Z3 sipariş düğmesinin sağ tarafıyla örtüşüyor.
 
-- PR #15: https://github.com/TaFo702/mavibaski/pull/15 — birleştirildi.
-- Kaynak/test commit’i: `a7d95474dc4766bb874ae808040a8d1f316cd38f`; merge commit’i: `fd3240a9dddbb92d3faf8fb6184dea7b2f237a9c`.
-- GitHub `Production Quality Gate` run 131 / `38471377024`: `completed`, `success`. Başarılı sonuç doğrulandıktan sonra merge yapıldı.
-- Merge commit’inin Vercel durumu `success`: https://vercel.com/kolay-basim/mavibaski/CPBMt7EsFtwsbkpiUt6NfSchEJM1
-- Gerçek domain 14 Ekim 2026 00:39 Türkiye saati kontrolünde HTTP 200 verdi. Yedi doğru href ilk HTML’de mevcut, şehir açıklamalarında kırpma sınıfı yok; fiyat bölümünün HTML’si değişmeden korunan önceki çıktıyla birebir aynı. Yeni istemci asset’i `/assets/index-BWyx_aSl.js`.
-- Chrome’da yedi ürün bağlantısının href’i, açılan adresi, ilgili ürün H1 içeriği ve ana sayfaya dönüşü doğrulandı. Sigorta Poliçeleri pointer tıklamasıyla; diğer altı ürün Enter ile etkinleştirilerek kontrol edildi. Bunlar yedi pointer tıklaması yapılmış gibi sunulmadı. Dönüşlerde ana sayfanın title/description/canonical tekilliği, tek H1, 7 fiyat veri satırı ve Product verisinin temizlenmesi doğrulandı.
-- Chrome’da 1363×936 ekranında 17 şehir açıklamasının tamamı ölçüldü; `scrollHeight > clientHeight` nedeniyle kırpılan açıklama kalmadı. Daha önce kesilen yedi açıklamada görünür yükseklik 30 px’den 45 px’e çıktı, içerik yüksekliği de 45 px. Metinler değiştirilmedi.
-- Kaynak dosyaları/test dosyası GitHub’a aktarıldıktan sonra, yerelde test edilen dosyalarla Git blob SHA ve içerik eşitliği doğrulandı. Kaynakta yeni özellik veya ek değişiklik yapılmadı.
-- İzlenen tarayıcı kayıtlarındaki hata mesajları `chrome-extension://.../content-script.bundle.js` kaynaklıydı; site hatası olarak sayılmadı. Mobil ve Core Web Vitals sınırlamaları sürüyor.
+Fiyat listeleri ve tablolarına bu not nedeniyle müdahale edilmedi. Bu iki not kalan çözüm kapsamına dahil değil.
+
+## Fiyat ve dosya koruma kanıtı
+
+- `src/components/Zarf.tsx` bütünüyle değişmedi. Git blob SHA'sı düzeltme öncesi ve sonrası `4ff0eb8c2c826dbd058f4feb8eb32d27a21fd1c7`.
+- Fiyat verileri, tabloların mevcut JSX'si, stilleri, düğmeleri, notları ve sipariş detay bileşeni değiştirilmedi. Z1/Z2/Z3 fiyatları 2.500 / 3.000 / 3.900 ₺; ekstra adet fiyatları 1.950 / 2.100 / 2.600 ₺ olarak aynı.
+- İlk HTML'de ayrı, eski WhatsApp bağlantıları yerine değişmeyen mevcut React fiyat bileşeninin sipariş düğmeleri render ediliyor. Düğmeler yeniden yazılmadı veya bağlantıya dönüştürülmedi.
+- Yerel hydration testinde fiyat tablosunun outerHTML'si birebir aynı kaldı ve DOM öğesinin kimliği korundu. Canlı yenileme öncesi/sonrası fiyat HTML'si eşleşti.
+- Canlı SPA dönüşünde tek serileştirme farkı CSS yazımındaki boşluk/noktalı virgül ve React'in boş ayırıcı yorumlarıydı. Etiketler, öznitelikler, CSS özellik/değerleri ve metin düğümleri karşılaştırıldığında fiyat DOM'u ve stilleri aynı.
+- Canlı fiyat tablosu HTML SHA256: `d4a1a973a0e002ff3562cbafc931af07bc3e1c0e45f3fc964c2b75ec8d760b2c`.
+- Başlangıç hash kaydındaki tüm veri, sabit ve public dosyaları korundu; 267 public dosyasında değişiklik yok.
+- Diğer 293 rotanın üretilen HTML'si, build asset adları hariç önceki çıktıyla aynı. Diğer sayfaların içerikleri, tarifeleri ve URL'leri değiştirilmedi.
+- `seoGenerator.ts` dosyasındaki küçülme, yalnız zarf için kullanılan eski paralel HTML ve hatalı schema kopyasının kaldırılmasından kaynaklanıyor. Görsel veya tarife dosyası silinmedi.
+
+## Değişen dosyalar
+
+| Dosya | Değişiklik |
+| --- | --- |
+| src/App.tsx | Build sırasında mevcut zarf bileşenini çözmek için sınırlı bileşen parametresi |
+| src/prerenderHome.tsx | Aynı App ve ZarfPage ile zarf renderer'ı |
+| scripts/prerender.ts | Yalnız /zarf için gerçek React çıktısı ve hydration işareti |
+| src/main.tsx | Yalnız zarf prerender çıktısının hydration ile başlatılması |
+| src/utils/seoGenerator.ts | Zarfın eski HTML kopyası ve toplu Product/AggregateOffer kaydının kaldırılması |
+| validate-zarf-fix.cjs | İçerik/fiyat hydration korunması, sipariş davranışı, rota ve HTTP regresyon kontrolü |
+
+## Doğrulama kaydı ve önemli sınırlar
+
+Yerel üretim build/prerender/server build tamamlandı: 294 rota. Typecheck geçti. Değişen kaynaklarda ESLint 0 hata; mevcut uyarılar korunuyor. Zarf regresyon testinde ilk HTML/DOM metni ve bağlantıları, fiyat DOM kimliği, sipariş detayını açma/kapatma, doğrudan açılış, yeniden açılış, SPA dönüşleri ve üretim HTTP yanıtı doğrulandı. Ana sayfanın mevcut testinde 7 kategori ve 20 ürün dönüşü kontrol edildi.
+
+GitHub Production Quality Gate #134, run ID 38527140262: başarıyla tamamlandı. PR #16 birleştirildi. Vercel, aşağıdaki merge commit'inin deployment durumunu başarılı bildirdi.
+
+Chrome canlı kontrolleri: doğrudan zarf → Z1 sipariş detayı aç/kapat → antetli → zarf → ana sayfa → ürün menüsünden zarf → yenileme. Tek H1 ve tek metadata üretimi, doğru rota verisi ve fiyat korunması kontrol edildi. Site kaynaklı konsol hatası görülmedi; chrome-extension kaynaklı hatalar site hatası sayılmadı.
+
+Sınırlar: Mobil boyut testi, LCP/CLS/INP ölçümü, Search Console URL incelemesi ve Google Rich Results Test yapılmadı. Google'ın indeks ve sıralama değişimi ölçülmedi. Fabrika sahipliği ve üretim beyanları bağımsız belgelerle doğrulanmadığından değiştirilmedi.
+
+Kullanıcının sağladığı Planner/GSC özetinde ticari hedef /zarf; mevcut diplomat, torba, pencere ve logo konularını yeni sayfalara ayırmak için güçlü gerekçe yok. Bu nedenle URL, mevcut title, description ve H1 korundu. Eksik “20 güçlü kelime” üretilmedi. Kısmi ve tekrarlı GSC verisinden kesin URL çakışması veya birleşik pay hesaplanmadı; bu çalışma yeni bir Planner/GSC hesaplama raporu değildir.
+
+Kaynak commit: 6413bcae6ce0e33af39c29472058b199f68019a0  
+Yayın merge commit: 4537a340a7576197a0704d671c1502f7eacae96c  
+PR: https://github.com/TaFo702/mavibaski/pull/16  
+Deployment: https://vercel.com/kolay-basim/mavibaski/5DgAJd58Tx7bT17WHrrdLmB4sBDG  
+Doğrulanan canlı giriş asset'i: /assets/index-B-ZzJel7.js
 
 ## ÇÖZÜM PROMPTU
 
-Yayınlanan iki kaynak düzeltmesini koru; aynı işi tekrar uygulama. Kalan doğrulanmış iki sorun fiyat koruma alanında olduğundan bunlara müdahale etme. **Fiyat listeleri ve tablolarının verilerine, başlıklarına, satırlarına, HTML/JSX’ine, stillerine, bağlantılarına ve düğmelerine kesinlikle dokunma.** Bu işlem kapsamında başka doğrulanmış kaynak düzeltmesi kalmadığı için yeni özellik, bölüm, görsel, paket, route veya genel CSS değişikliği yapma. Mobil/performans ölçümü yapılmadıysa yapılmış gibi yazma. Diğer sayfaların içeriklerini, tarifelerini ve URL’lerini koru.
+Bu doğrulamalarda kalan, kapsam içindeki teknik sorun bulunmadı; yeni değişiklik yapma. Kullanıcının kapsam dışında bıraktığı görsel açıklaması ve WhatsApp örtüşmesine müdahale etme. Fiyat listeleri ve tablolarının verilerini, HTML/JSX'sini, stillerini, bağlantılarını ve düğmelerini kesinlikle koru. Mevcut /zarf URL'sini ve diğer sayfaları koru. Yeni sayfa veya anahtar kelime doldurma üretme.
