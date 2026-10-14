@@ -10,7 +10,9 @@ const application = (
   </StrictMode>
 );
 
-if (container.dataset.prerendered === 'home' && window.location.pathname === '/') {
+const path = window.location.pathname.replace(/\/$/, '') || '/';
+if ((container.dataset.prerendered === 'home' && path === '/') ||
+    (container.dataset.prerendered === 'zarf' && path === '/zarf')) {
   hydrateRoot(container, application);
 } else {
   createRoot(container).render(application);
