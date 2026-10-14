@@ -38,6 +38,7 @@ Mevcut BloknotlarPage bileşenini build sırasında değiştirmeden render et; i
 - Beş galeri öğesinin metinleri kapaksız, kapaklı, kutulu masaüstü notluk, spiralli ve karma tasarım görselleriyle eşleştirildi. Altıncı mevcut küp bloknot görseli korundu. Fotoğraflardan kağıt gramajı veya cilt kalitesi çıkarılmadı. Görseldeki ebatların tarife kesim ölçülerini temsil etmediği belirtildi.
 - Ölçü SSS'sinde mevcut cm değerleri aynen korunup bunların fiyat listesindeki ebat grupları olduğu netleştirildi. Fiyat tablosundaki ölçü/etiketlere dokunulmadı.
 - CYP paragrafı parlak selefon modelini anlatıyor. Teknik bölümde yalnız “Yaprak kağıt kalınlığı” etiketi “İç sayfa gramajı” oldu; 80 gr/m² değeri aynı.
+- Sitemap içinde yalnız `/bloknotlar` kaydının lastmod tarihi bu içerik değişikliğinin Türkiye tarihi olan 2026-10-15 ile güncellendi.
 - Title, meta description, H1, görsel dosyaları ve mevcut ticari bilgiler korunuyor. Yeni bölüm, satış sistemi, sayfa veya blog eklenmedi.
 
 ## Doğrulama ve kapsam
