@@ -1,3 +1,4 @@
+import { ProductSEOSection } from './ProductSEOSection';
 import React, { useState } from 'react';
 import { 
   Check, 
@@ -25,7 +26,7 @@ import {
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ProductSEOSection, FireWarning } from '../App';
+import { FireWarning } from '../App';
 import { WhatsAppIcon } from './WhatsAppIcon';
 
 const WHATSAPP_NUMBER = "905366022373";
