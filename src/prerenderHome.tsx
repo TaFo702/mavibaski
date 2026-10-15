@@ -81,3 +81,10 @@ export function prerenderTediyeMakbuzu() {
   );
   return renderToString(<App Router={TediyeRouter} MakbuzComponent={MakbuzFormlarPage} />);
 }
+
+export function prerenderRecete() {
+  const ReceteRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/recete']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={ReceteRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}

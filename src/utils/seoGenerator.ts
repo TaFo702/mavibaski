@@ -3415,6 +3415,9 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
     extraHead += `  <script type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;
     extraHead += `  <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n`;
 
+    extraHead += '  <meta property="og:image:width" content="930" />\n';
+    extraHead += '  <meta property="og:image:height" content="1117" />\n';
+
     const bodyContent = `<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-6">
   <nav class="text-xs font-bold text-gray-500 uppercase tracking-tight flex items-center gap-1.5" aria-label="Breadcrumb">
     <a href="/" class="hover:text-primary transition-colors">Ana Sayfa</a>
@@ -3498,7 +3501,8 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       canonical,
       extraHead,
       h1Text: detail.h1Title,
-      bodyContent
+      bodyContent,
+      ogImage: `https://mavibasim.com${detail.featureImage}`
     };
   }
 

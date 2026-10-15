@@ -1044,11 +1044,11 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     ]
   },
   "recete": {
-    seoTitle: "Reçete Baskı Fiyatları 2026 | Numaratörlü Reçete Koçanı Baskısı",
-    seoDescription: "Sağlık kuruluşlarına özel numaratörlü reçete koçanı baskısı. 14x20 cm ve A5 ölçülerde, otokopili veya 1. hamur reçete baskı seçenekleri.",
+    seoTitle: "Reçete Baskı Fiyatları 2026 | Numaratörlü Koçan - Mavi Basım",
+    seoDescription: "10x14 cm numaratörlü reçete baskı fiyatlarını inceleyin. Doktor ve kliniklere logolu koçan, A5 ve otokopili seçenekler için WhatsApp üzerinden teklif isteyin.",
     breadcrumbTitle: "Reçete",
     h1Title: "Reçete Baskı Fiyatları ve Reçete Koçanı Baskısı",
-    subtitle: "Kurumsal kullanım ihtiyaçlarına yönelik logolu, numaratörlü ve otokopili reçete koçanı baskı çözümleri.",
+    subtitle: "Doktor ve klinikler için logolu, numaratörlü reçete koçanı baskısı. Aşağıdaki fiyat listesi 10 x 14 cm, tek nüsha, 100 yaprak ve 1 renk baskı içindir. A5, özel ebat ve otokopili seçenekler ayrıca tekliflendirilir.",
     featureImage: "/images/recete/numaratorlu-recete-basimi.webp",
     featureImageAlt: "numaratörlü reçete koçanı baskısı",
     gallery: [
@@ -1072,16 +1072,16 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       }
     ],
     specifications: [
-      { title: "Ölçü", value: "14,8 x 21 cm (A5 Ebadı) veya 14 x 20 cm (Yarım Boy)" },
+      { title: "Ölçü", value: "Fiyat tablosundaki ürün: 10 x 14 cm. A5 (14,8 x 21 cm), 14 x 20 cm ve diğer özel ölçüler: ayrıca teklif." },
       { title: "Kağıt Türü", value: "80 gr 1. Hamur Beyaz Kağıt veya Otokopili (Çift Nüsha)" },
-      { title: "Sayfa / Yaprak", value: "50 Yaprak veya 100 Yaprak Cilt seçeneği" },
+      { title: "Sayfa / Yaprak", value: "Fiyat tablosundaki tek nüsha ürün: cilt başına 100 yaprak. Diğer seçenekler teklif aşamasında belirlenir." },
       { title: "Baskı Yönü", value: "Tek Yön Baskı" },
       { title: "Baskı Rengi", value: "1 Renk Siyah veya 4 Renk CMYK Kurumsal Renkli" },
       { title: "Cilt & Bitiş", value: "Üstten Tutkallı Bloknot veya Perforasyonlu (Tırtıklı) Cilt" },
-      { title: "Numaratör", value: "Sıralı Özel Seri No (İsteğe Bağlı)" },
+      { title: "Numaratör", value: "10 x 14 cm listedeki üründe sıralı numaratör dahil; diğer seçenekler teklifte belirtilir." },
       { title: "Özel Tasarım", value: "Sağlık kuruluşlarının kurumsal taleplerine uygun tasarımlar hazırlanmaktadır." },
       { title: "Minimum Miktar", value: "5 Cilt" },
-      { title: "Üretim & Teslimat", value: "3 - 5 İş Günü" }
+      { title: "Üretim & Teslimat", value: "Ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." }
     ],
     whatIsTitle: "Reçete Koçanı Baskısı Nedir ve Nerelerde Kullanılır?",
     whatIsContent: "Reçete koçanları, kurumların fiziki arşiv, bilgilendirme ve kurum içi kayıt süreçlerinde kullanılan basılı matbuat ürünleridir.",
@@ -1109,14 +1109,14 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     otokopiContent: "Reçete koçanlarımızı isteğe göre kolay yırtılabilen perforeli veya tutkallı bloknot ciltli olarak hazırlıyoruz.",
     faqList: [
       { q: "Reçete koçanları numaratörlü basılabilir mi?", a: "Evet, evrak takibini kolaylaştırmak amacıyla reçete koçanlarına sıralı numaratör basılabilmektedir." },
-      { q: "Reçete baskısı kaç iş gününde teslim edilir?", a: "Tasarım onayının ardından ortalama 3-5 iş günü içerisinde baskı tamamlanarak kargoya teslim edilir." },
+      { q: "Reçete baskısı kaç iş gününde teslim edilir?", a: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır. Dijital onay alınmadan baskıya başlanmaz." },
       { q: "Reçetelerde logo kullanılabilir mi?", a: "Evet, unvan, klinik logosu, adres ve iletişim bilgileri tasarıma dahil edilebilir." },
       { q: "Reçete koçanları otokopili hazırlanabilir mi?", a: "Evet, isteğe bağlı olarak tek nüsha 1. hamur kağıda veya kendinden kopyalı çift nüsha otokopili kağıda basılabilmektedir." },
       { q: "Minimum sipariş adedi nedir?", a: "Reçete koçanı baskısında minimum üretim miktarı 5 cilttir." },
-      { q: "Reçete koçanları hangi ölçülerde hazırlanır?", a: "Standart olarak A5 (14,8 x 21 cm) ve yarım boy (14 x 20 cm) ebatlarında imal edilmektedir." },
+      { q: "Reçete koçanları hangi ölçülerde hazırlanır?", a: "Bu sayfadaki fiyat listesi 10 x 14 cm reçete içindir. A5 (14,8 x 21 cm), 14 x 20 cm ve özel ölçüler için ayrıca teklif isteyebilirsiniz." },
       { q: "Reçete kağıdı örneği gönderebilir misiniz?", a: "Evet, tasarım sürecinde kurumunuza özel hazırlanan reçete kağıdı örneği ve şablonu dijital olarak onayınıza sunulmaktadır." },
       { q: "Doktor reçetesi baskısında hangi bilgiler bulunmalıdır?", a: "Doktor reçetesi baskısında kurum/doktor unvanı, iletişim ve adres bilgileri, tarih, hasta adı-soyadı, tanı/reçete alanı ve imza/kaşe bölümü yer alır." },
-      { q: "Reçete baskısında özel ölçü üretimi yapılabilir mi?", a: "Evet, standart A5 ve yarım boy ölçülerin dışında 9x21 cm, 10x20 cm gibi özel ebatlarda da üretim yapılabilmektedir." },
+      { q: "Reçete baskısında özel ölçü üretimi yapılabilir mi?", a: "Evet, 10 x 14 cm fiyat listesi dışındaki A5, 14 x 20 cm, 9 x 21 cm ve 10 x 20 cm gibi ölçüler için ayrıca teklif hazırlanır." },
       { q: "Doktor promosyon reçetesi hangi ölçülerde basılır?", a: "Doktor promosyon reçeteleri genellikle 9x21 cm, 10x20 cm, 14x20 cm ve A5 (14,8x21 cm) ölçülerinde üretilmektedir." },
       { q: "İstanbul dışına kargo gönderimi yapıyor musunuz?", a: "Evet, online siparişleriniz Türkiye'nin tüm il ve ilçelerine kargo ile ulaştırılmaktadır." }
     ]

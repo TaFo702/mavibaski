@@ -51,12 +51,13 @@ async function prerender() {
   let katalogContent: string;
   let kartvizitContent: string;
   let tediyeContent: string;
+  let receteContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
@@ -65,6 +66,7 @@ async function prerender() {
     katalogContent = prerenderKatalog();
     kartvizitContent = prerenderKartvizit();
     tediyeContent = prerenderTediyeMakbuzu();
+    receteContent = prerenderRecete();
     // Keep the published pricing section byte-for-byte. Only the surrounding
     // content comes from the existing React page; neither pricing renderer changes.
     const pricingSection = /<section\b[^>]*\bid="fiyat-tablosu"[^>]*>[\s\S]*?<\/section>/g;
@@ -145,6 +147,7 @@ async function prerender() {
           : pathname === '/bloknotlar' ? bloknotlarContent
           : pathname === '/kataloglar' ? katalogContent
           : pathname === '/kartvizit' ? kartvizitContent
+          : pathname === '/recete' ? receteContent
           : pathname === '/tediye-makbuzu' ? tediyeContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
           : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent : seo.bodyContent,
