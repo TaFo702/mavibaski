@@ -33,7 +33,7 @@ export const KUP_BLOKNOT_FAQS: KupBloknotFaqItem[] = [
   },
   {
     q: "250 yaprak ile 500 yaprak arasındaki temel farklar nelerdir?",
-    a: "250 yapraklı küp bloknot yaklaşık 2,5 cm kutu yüksekliğine sahiptir; kompakt yapısıyla fuar, lansman ve etkinlik dağıtımları için hafif ve ekonomiktir. 500 yapraklı model ise yaklaşık 5 cm kutu yüksekliğine sahip olup klasik küp formundadır ve uzun süreli masaüstü kullanımında kurumsal kullanımda tercih edilen seçeneklerden biridir."
+    a: "250 yapraklı küp bloknot yaklaşık 2,5 cm kutu yüksekliğine sahiptir; kompakt yapısıyla fuar, lansman ve etkinlik dağıtımları için hafif ve ekonomiktir. 500 yapraklı model ise yaklaşık 5 cm kutu yüksekliğine sahip olup klasik küp formundadır ve uzun süreli kurumsal masaüstü kullanımında tercih edilen seçeneklerden biridir."
   },
   {
     q: "Dış kutu ve iç kağıt baskı özellikleri nasıldır?",
@@ -41,7 +41,7 @@ export const KUP_BLOKNOT_FAQS: KupBloknotFaqItem[] = [
   },
   {
     q: "Tasarım dosyasını hangi formatta göndermeliyim?",
-    a: "Baskı kalitesini korumaya yardımcı teknik koşullar için tasarımlarınızı PDF, AI (Adobe Illustrator) veya CDR (CorelDRAW) vektörel formatlarında, 300 DPI çözünürlükte ve CMYK renk modunda iletmeniz gerekmektedir."
+    a: "Tasarımlarınızı PDF, AI (Adobe Illustrator) veya CDR (CorelDRAW) formatında ve CMYK renk modunda iletebilirsiniz. Logo ve yazıları vektörel olarak koruyun. Dosyadaki fotoğraf ve piksel tabanlı görseller, kullanılacak baskı boyutunda en az 300 PPI çözünürlükte olmalıdır; vektörel öğelerde piksel çözünürlüğü şartı aranmaz."
   },
   {
     q: "Tasarım desteği ve baskı öncesi onay süreci nasıl işler?",
@@ -187,12 +187,11 @@ export function generateKupBloknotSSRBodyContent(): string {
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       ${KUP_BLOKNOT_GALLERY.map(img => {
         const isAvail = Boolean((KUP_BLOKNOT_IMAGE_MANIFEST as Record<string, boolean>)[img.src]);
-        const isPreloadHero = img.src.includes('kup-bloknot-baski-fiyatlari.webp');
         return `
         <figure class="bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden p-3 flex flex-col justify-between">
           <div style="aspect-ratio: 4/3;" class="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center">
             ${isAvail ? `
-              <img src="${img.src}" alt="${img.title} - Mavi Basım" width="1536" height="1024" loading="${isPreloadHero ? 'eager' : 'lazy'}" ${isPreloadHero ? 'fetchpriority="high"' : ''} class="w-full h-full object-contain rounded-xl" />
+              <img src="${img.src}" alt="${img.title} - Mavi Basım" width="1536" height="1024" loading="lazy" class="w-full h-full object-contain rounded-xl" />
             ` : `
               <div class="p-6 text-center">
                 <span class="text-xs font-bold text-gray-500 uppercase tracking-wide">Ürün Görseli Hazırlanıyor</span>
@@ -261,7 +260,7 @@ export function generateKupBloknotSSRBodyContent(): string {
 
       <div class="lg:col-span-5 bg-gray-50 rounded-2xl p-5 sm:p-6 border border-gray-200 space-y-4">
         <div class="relative aspect-[4/3] rounded-xl overflow-hidden bg-white border border-gray-200">
-          <img src="/images/kup-bloknot/kutulu-kup-bloknot-baski.webp" alt="Kutulu Küp Bloknot Baskı ve Tasarım Modelleri - Mavi Basım" width="1536" height="1024" loading="eager" class="w-full h-full object-contain p-2" />
+          <img src="/images/kup-bloknot/kutulu-kup-bloknot-baski.webp" alt="Kutulu Küp Bloknot Baskı ve Tasarım Modelleri - Mavi Basım" width="1536" height="1024" loading="eager" fetchpriority="high" class="w-full h-full object-contain p-2" />
         </div>
         <div class="space-y-2">
           <div class="text-xs font-bold uppercase tracking-wider text-gray-900">Öne Çıkan Üretim Standartları</div>
@@ -332,46 +331,231 @@ export function generateKupBloknotSSRBodyContent(): string {
     </p>
   </section>
 
-  <section class="mb-12" id="urun-ozellikleri">
-    <h2 class="text-xl sm:text-2xl font-black text-gray-900 mb-4">Teknik Özellikler ve Baskı Standartları</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-700">
-      <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-        <h3 class="font-bold text-gray-900 mb-2 text-base">Dış Kutu Özellikleri</h3>
-        <ul class="space-y-2 list-disc list-inside text-gray-600">
-          <li><strong>Malzeme:</strong> 350 gr Amerikan Bristol karton</li>
-          <li><strong>Baskı:</strong> 4 Renk CMYK ofset baskı</li>
-          <li><strong>Yüzey Koruma:</strong> Mat veya parlak selefon kaplama</li>
-          <li><strong>Yapı:</strong> Katlamalı, dayanıklı kilitli taban yapısı</li>
-        </ul>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-        <h3 class="font-bold text-gray-900 mb-2 text-base">İç Not Kağıdı Özellikleri</h3>
-        <ul class="space-y-2 list-disc list-inside text-gray-600">
-          <li><strong>Kağıt Türü:</strong> 80 gr 1. Hamur beyaz kağıt</li>
-          <li><strong>Ebat:</strong> 78 × 78 mm kare kesim</li>
-          <li><strong>Baskı:</strong> Standart tek renk ofset baskı (farklı renkler özel teklif kapsamındadır)</li>
-          <li><strong>Yaprak Türü:</strong> Yapışkansız, serbest çekilebilen yapraklar</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <section class="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200 shadow-sm">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="w-2.5 h-6 bg-blue-600 rounded-full shrink-0" />
+            <h2 class="text-xl sm:text-2xl font-black text-slate-950 uppercase tracking-tight">
+              Logolu, Baskılı ve Promosyon Küp Bloknotun Kurumsal Gücü
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 text-sm text-slate-700 leading-relaxed">
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-black">
 
-  <section class="mb-12" id="tasarim-ve-prova">
-    <h2 class="text-xl sm:text-2xl font-black text-gray-900 mb-4">Tasarım Dosyası Hazırlama ve Dijital Prova Süreci</h2>
-    <p class="text-sm text-gray-700 leading-relaxed mb-4">
-      Baskıya uygun dosyanın teknik kontrolü ve dijital PDF prova süreci tamamen ücretsizdir.
-      Tasarımlarınızın baskı kalitesi için vektörel formatta (PDF, AI, CDR), 300 DPI ve CMYK renk modunda hazırlanması önerilir.
-      İç yapraklarda not almayı engellememek adına filigran ve zemin logolarının açık tonlarda (%10-15 opaklık) tutulması tavsiye edilir.
-    </p>
-    <p class="text-sm text-gray-700 leading-relaxed">
-      Hazır tasarımınız bulunmuyorsa grafik ekibimiz WhatsApp üzerinden kapsam ve ücretlendirme konusunda size destek olmaktadır.
-      Müşteri dijital PDF onayı vermeden üretim süreci başlatılmaz.
-    </p>
-  </section>
+              </div>
+              <h3 class="text-base font-bold text-slate-900">Sürekli Masaüstü Görünürlüğü</h3>
+              <p class="text-xs sm:text-sm text-slate-600">
+                <strong>Promosyon küp bloknot</strong>, kullanıcının doğrudan çalışma masasının en erişilebilir noktasında durur. Her not alındığında veya not bir iş arkadaşına iletildiğinde firmanızın logosu ve iletişim kanalları doğal biçimde görünürlük kazanır.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-black">
+
+              </div>
+              <h3 class="text-base font-bold text-slate-900">Prestijli Kurumsal İmaj</h3>
+              <p class="text-xs sm:text-sm text-slate-600">
+                <strong>Baskılı küp bloknot</strong> kutuları, 350 gr Amerikan Bristol kartondan üretilip mat veya parlak selefon ile kaplanır. Bu sayede kutu formunu korumaya yardımcı olur ve kurumsal görünümünüzü masalarda yansıtır.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-black">
+
+              </div>
+              <h3 class="text-base font-bold text-slate-900">Etkili Promosyon Yatırımı</h3>
+              <p class="text-xs sm:text-sm text-slate-600">
+                Fuar organizasyonları, kurumsal müşteri ziyaretleri, bayi toplantıları ve yılbaşı promosyon paketleri için <strong>küp bloknot promosyon</strong> tercihleri, birim maliyete oranla en uzun vadeli marka hatırlanabilirliği sunan çözümler arasındadır.
+              </p>
+            </div>
+          </div>
+        </section>
+
+<section class="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200 shadow-sm">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="w-2.5 h-6 bg-blue-600 rounded-full shrink-0" />
+            <h2 class="text-xl sm:text-2xl font-black text-slate-950 uppercase tracking-tight">
+              Küp Bloknot Ölçüleri ve Yaprak Seçenekleri
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-700">
+            <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black uppercase tracking-wider bg-blue-100 text-blue-800 px-2.5 py-1 rounded-md">
+                  Kompakt Model
+                </span>
+                <span class="text-xs font-bold text-slate-500">Kutu Yüksekliği: ~2,5 cm</span>
+              </div>
+              <h3 class="text-lg font-black text-slate-900">250 Yapraklı Küp Bloknot</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                78 × 78 mm kare yaprak ölçüsüyle üretilen 250 yapraklı model, hafif ve pratik kutu yüksekliği sayesinde özellikle fuar çantalarında, müşteri ziyaretlerinde hediye olarak dağıtılmak üzere oldukça uygundur. Taşıması kolaydır ve bütçe dostu promosyon projelerinde tercih edilir.
+              </p>
+              <ul class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <li class="flex items-center gap-2">✓ 78 × 78 mm standart kare iç kağıt ebadı</li>
+                <li class="flex items-center gap-2">✓ 350 gr Amerikan Bristol selefonlu dış kutu</li>
+                <li class="flex items-center gap-2">✓ Etkinlik ve promosyon dağıtımları için ideal ağırlık</li>
+              </ul>
+            </div>
+
+            <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black uppercase tracking-wider bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-md">
+                  Klasik Model
+                </span>
+                <span class="text-xs font-bold text-slate-500">Kutu Yüksekliği: ~5,0 cm</span>
+              </div>
+              <h3 class="text-lg font-black text-slate-900">500 Yapraklı Küp Bloknot</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Gerçek küp formunu en iyi yansıtan 500 yapraklı model, yaklaşık 5 cm yüksekliğe sahip kutusu ile masalarda dolgun ve tok bir duruş sergiler. Yüksek yaprak kapasitesi sayesinde ofis çalışanları ve müşteriler için uzun aylara yayılan kesintisiz kullanım sağlar.
+              </p>
+              <ul class="space-y-1.5 text-xs text-slate-700 font-medium">
+                <li class="flex items-center gap-2">✓ 78 × 78 mm standart kare iç kağıt ebadı</li>
+                <li class="flex items-center gap-2">✓ 350 gr Amerikan Bristol selefonlu dış kutu</li>
+                <li class="flex items-center gap-2">✓ Uzun ömürlü masaüstü not alma kapasitesi</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+<section class="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200 shadow-sm">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="w-2.5 h-6 bg-blue-600 rounded-full shrink-0" />
+            <h2 class="text-xl sm:text-2xl font-black text-slate-950 uppercase tracking-tight">
+              Küp Not Kağıdı Baskı Özellikleri ve Malzeme Standartları
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <span class="text-xs font-bold text-blue-700 uppercase">İç Kağıt Gramajı</span>
+              <h3 class="text-base font-bold text-slate-900">80 gr 1. Hamur Kağıt</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Tükenmez, kurşun ve dolma kalemle pürüzsüz yazı deneyimi sunar; arka yüze mürekkep geçirgenliği yapmaz.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <span class="text-xs font-bold text-blue-700 uppercase">Dış Kutu Kartonu</span>
+              <h3 class="text-base font-bold text-slate-900">350 gr Amerikan Bristol</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Dayanıklılık sağlayan karton yapısı ile masaüstü kullanıma uygun tok bir duruş sunar.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <span class="text-xs font-bold text-blue-700 uppercase">Yüzey Koruma</span>
+              <h3 class="text-base font-bold text-slate-900">Mat veya Parlak Selefon</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Dış kutu yüzeyini sürtünme ve kullanım izlerine karşı korumaya yardımcı olan koruyucu selefon kaplama uygulanabilir.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <span class="text-xs font-bold text-blue-700 uppercase">Yaprak Yapısı</span>
+              <h3 class="text-base font-bold text-slate-900">Serbest Yapraklar</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Yapraklar yapışkansızdır; kutu üst açıklığından tek tek kolayca çekilerek pratik şekilde alınır.
+              </p>
+            </div>
+          </div>
+        </section>
 
   ${galleryHtml}
 
-  <section class="mb-12" id="sikca-sorulan-sorular">
+<section class="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200 shadow-sm">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="w-2.5 h-6 bg-blue-600 rounded-full shrink-0" />
+            <h2 class="text-xl sm:text-2xl font-black text-slate-950 uppercase tracking-tight">
+              Küp Bloknot Tasarımı ve Dosya Hazırlama Rehberi
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-700">
+            <div class="space-y-4">
+              <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+
+                Teknik Dosya Kriterleri
+              </h3>
+              <ul class="space-y-3 text-xs sm:text-sm text-slate-600">
+                <li class="flex items-start gap-2">
+                  <span class="font-bold text-slate-900 min-w-28">Dosya Formatı:</span>
+                  <span>PDF, AI (Adobe Illustrator) veya CDR (CorelDRAW) vektörel formatlar tercih edilmelidir.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="font-bold text-slate-900 min-w-28">Renk Modu:</span>
+                  <span>Ofset baskı standartlarına uygun olarak CMYK modunda çalışılmalıdır. RGB gönderilen işlerde ton kaymaları yaşanabilir.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="font-bold text-slate-900 min-w-28">Çözünürlük:</span>
+                  <span>Fotoğraf ve piksel tabanlı görseller, kullanılacak baskı boyutunda en az 300 PPI çözünürlükte olmalıdır. Logo ve yazılar vektörel olarak korunmalıdır.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="font-bold text-slate-900 min-w-28">Taşma Payı:</span>
+                  <span>Dış kutu bıçak izi kenarlarından en az 3 mm taşma payı ve iç yazılar için 4-5 mm emniyet mesafesi bırakılmalıdır.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="space-y-4 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+              <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+
+                İç Yaprak Tasarım İpuçları
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                İç yapraklar kullanıcıların üzerine kalemle not aldığı alanlardır. Bu sebeple orta alanda yer alacak logo, zemin filigranı veya desenlerin <strong>%10 - %15 opaklıkta (pastel ve açık tonlarda)</strong> tasarlanması tavsiye edilir. Böylece tükenmez ve kurşun kalemle alınan notlar net şekilde okunabilir.
+              </p>
+              <div class="pt-2 border-t border-slate-200 text-xs text-slate-500">
+                💡 Hazır tasarım şablonuna ihtiyacınız varsa müşteri temsilcimizden ebadınıza uygun PDF veya AI bıçak şablonunu talep edebilirsiniz.
+              </div>
+            </div>
+          </div>
+        </section>
+
+<section class="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200 shadow-sm">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="w-2.5 h-6 bg-blue-600 rounded-full shrink-0" />
+            <h2 class="text-xl sm:text-2xl font-black text-slate-950 uppercase tracking-tight">
+              Sipariş Aşamaları, Ücretsiz Kontrol & Dijital Prova
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs sm:text-sm">
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-xs">1</span>
+              <h3 class="font-bold text-slate-900">Talep & Teklif</h3>
+              <p class="text-xs text-slate-600">
+                Seçtiğiniz yaprak adedi (250 / 500) ve sipariş miktarınızı ileterek net fiyat onayını alırsınız.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-xs">2</span>
+              <h3 class="font-bold text-slate-900">Ücretsiz Dosya Kontrolü</h3>
+              <p class="text-xs text-slate-600">
+                Baskıya uygun dosyanızın teknik kontrolü ve dijital PDF prova süreci tamamen ücretsizdir.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-xs">3</span>
+              <h3 class="font-bold text-slate-900">Onaylı Üretim</h3>
+              <p class="text-xs text-slate-600">
+                Dijital PDF provasına onayınız alınmadan kesinlikle baskı sürecine geçilmez. Hatalar önceden önlenir.
+              </p>
+            </div>
+
+            <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+              <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-xs">4</span>
+              <h3 class="font-bold text-slate-900">Güvenli Sevkiyat</h3>
+              <p class="text-xs text-slate-600">
+                İstanbul Topkapı noktamızdan elden teslim veya çift kat koruyucu kolilerle Türkiye geneline kargo.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 p-4 rounded-2xl bg-amber-50/70 border border-amber-200 text-xs sm:text-sm text-amber-900 font-medium">
+            <strong>Tasarım Desteği Notu:</strong> Baskıya uygun hazır dosyalarınızın teknik kontrolü ve dijital PDF prova sunumu ücretsizdir. Yeni bir tasarım hazırlanması veya kapsamlı revizyonlar standart sipariş kapsamı dışındadır; hazır dosyanız yoksa grafik ekibimiz WhatsApp üzerinden kapsam ve fiyat konusunda yardımcı olur.
+          </div>
+        </section>
+
+  <section class="mb-12" id="sss">
     <h2 class="text-xl sm:text-2xl font-black text-gray-900 mb-6">Sıkça Sorulan Sorular</h2>
     <div class="space-y-4">
       ${faqHtml}

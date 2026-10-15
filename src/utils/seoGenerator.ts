@@ -1741,7 +1741,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
     extraHead += `  <meta name="twitter:title" content="${KUP_BLOKNOT_SEO_METADATA.title}" />\n`;
     extraHead += `  <meta name="twitter:description" content="${KUP_BLOKNOT_SEO_METADATA.desc}" />\n`;
     extraHead += `  <meta name="twitter:image" content="${ogImage}" />\n`;
-    extraHead += `  <link rel="preload" as="image" href="/images/kup-bloknot/kup-bloknot-baski-fiyatlari.webp" fetchpriority="high" />\n`;
+    extraHead += `  <link rel="preload" as="image" href="/images/kup-bloknot/kutulu-kup-bloknot-baski.webp" fetchpriority="high" />\n`;
 
     const orgSchema = {
       "@context": "https://schema.org",

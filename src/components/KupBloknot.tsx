@@ -176,6 +176,7 @@ export const KupBloknotPage: React.FC = () => {
                   width="1536"
                   height="1024"
                   loading="eager"
+                  fetchPriority="high"
                   className="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-300"
                 />
                 <span className="absolute top-2.5 right-2.5 bg-slate-900/80 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
@@ -552,7 +553,7 @@ export const KupBloknotPage: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="font-bold text-slate-900 min-w-28">Çözünürlük:</span>
-                  <span>Görsel veya fotoğraflar en az 300 DPI çözünürlükte gömülmelidir.</span>
+                  <span>Fotoğraf ve piksel tabanlı görseller, kullanılacak baskı boyutunda en az 300 PPI çözünürlükte olmalıdır. Logo ve yazılar vektörel olarak korunmalıdır.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="font-bold text-slate-900 min-w-28">Taşma Payı:</span>
