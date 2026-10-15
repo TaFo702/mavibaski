@@ -1202,7 +1202,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
   },
   "tahsilat-ve-tediye-makbuzu": {
     seoTitle: "Tediye Makbuzu Baskı Fiyatları | Mavi Basım",
-    seoDescription: "Numaratörlü ve otokopili tediye makbuzu baskı seçeneklerini ve güncel fiyat tablosunu inceleyin. 14 × 20 cm ölçü ve nüsha seçenekleri için hemen teklif alın.",
+    seoDescription: "Numaratörlü ve otokopili tediye makbuzu baskı fiyatlarını inceleyin. Word, Excel ve PDF tediye makbuzu örneklerini indirin; nüsha seçenekleri için teklif alın.",
     breadcrumbTitle: "Tediye Makbuzu",
     h1Title: "Numaratörlü ve Otokopili Tediye Makbuzu Baskı Fiyatları",
     subtitle: "Firma logonuza göre hazırlanan numaratörlü ve kendinden karbonlu (otokopili) tediye makbuzu koçanları; personel, tedarikçi ve cari hesap ödemelerinin kayıt akışını düzenlemeye yardımcı olur. Standart 14 × 20 cm yarım boy ölçü, nüsha ve cilt seçenekleri ile mevcut fiyatları aşağıda inceleyebilir; baskı öncesi PDF provanızı onaylayarak siparişinizi tamamlayabilirsiniz.",
