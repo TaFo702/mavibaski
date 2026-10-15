@@ -177,6 +177,18 @@ export const KATALOG_DATA = {
 
 export const KATALOG_FAQS = [
   {
+    q: "Katalog baskı fiyat hesaplama için hangi bilgiler gerekir?",
+    a: "Bitmiş ebat, kapak dahil toplam sayfa sayısı, baskı adedi, iç sayfa ve kapak kâğıdı, cilt türü ve kapak uygulamaları gerekir. Aynı özelliklere sahip seçeneği fiyat tablosundan inceleyebilirsiniz. Farklı özellikler için özel teklif isteyin; listedeki KDV notunu da dikkate alın."
+  },
+  {
+    q: "Katalog sayfa sayısına kapak dahil mi?",
+    a: "Bu sayfadaki fiyat listesinde dört sayfalık kapak toplam sayıya dahildir. Örneğin 8 sayfa katalog, 4 iç sayfa ve 4 kapak sayfasından oluşur. Bir yaprağın iki yüzü iki sayfa sayılır; teklif talebinde iç sayfa ve kapak sayısını ayrı ayrı belirtin."
+  },
+  {
+    q: "A5 katalog baskı için A4 fiyat listesini kullanabilir miyim?",
+    a: "A4 tarifesi A5 katalog için doğrudan fiyat karşılığı değildir. Bitmiş ebat, sayfa sayısı, kâğıt ve baskı yerleşimi maliyeti etkiler. A5 katalog talebinizde kapalı ölçüyü, yönü, toplam sayfa sayısını ve adedi paylaşarak teklif isteyin."
+  },
+  {
     q: "Kataloglarda kapağa lokal kabartma lak atılabilir mi?",
     a: "Evet, kapağınıza uygulayacağımız mat selefon üstüne logonuz veya belirli desenler için özel kısmi kabartma lak uygulayarak lüks bir kabartma hissi elde edebilirsiniz."
   },
