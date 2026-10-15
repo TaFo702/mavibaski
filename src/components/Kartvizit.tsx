@@ -297,7 +297,7 @@ export const KartvizitPage = () => {
                                   Yeni
                                 </span>
                               )}
-                              <span>{item.code === 'PVC' ? 'Beyaz plastik PVC kartvizit – çift taraf renkli – oval kesim' : item.desc}</span>
+                              <span>{item.desc}</span>
                             </div>
                             {item.note && (
                               <div className="text-[11px] text-red-600 font-bold mt-1">
