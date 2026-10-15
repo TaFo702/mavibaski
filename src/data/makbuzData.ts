@@ -1234,10 +1234,10 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { title: "Cilt İçeriği", value: "Her Cilt 50 Takım" },
       { title: "Numaratör", value: "Otomatik Seri Numaralı" },
       { title: "Nüsha Seçenekleri", value: "1 Asıl + 1 Suret, 1 Asıl + 2 Suret veya 1 Asıl + 3 Suret" },
-      { title: "Cilt Seçenekleri", value: "5 Cilt, 10 Cilt, 20 Cilt, 30 Cilt, 50 Cilt" },
+      { title: "Cilt Seçenekleri", value: "5, 10, 20, 30, 50 veya 100 cilt" },
       { title: "Baskı Rengi", value: "Siyah veya Kurumsal Renk" },
       { title: "Kullanım Alanı", value: "Personel, cari hesap ve tedarikçi ödemelerinin kayıt takibi." },
-      { title: "Teslimat", value: "3-5 İş Günü" }
+      { title: "Üretim ve Teslim", value: "PDF prova onayından sonra 3–5 iş günü" }
     ],
     whatIsTitle: "Tediye Makbuzu Nedir?",
     whatIsContent: "Tediye makbuzu, işletmenin yaptığı bir ödemeyi ve kasa çıkışını kayıt altına almak için kullanılan matbu formdur. Personel, tedarikçi ve cari hesap ödemelerinde düzenlenebilir.\n\nOtokopili nüshalar, forma yazılan bilgilerin alt nüshalara aktarılmasına yardımcı olur. Numaratör seçeneği, makbuzların sıra numarasına göre izlenmesini kolaylaştırır.\n\nTediye makbuzları 14 × 20 cm yarım boy ölçüde; farklı nüsha, cilt adedi ve baskı seçenekleriyle hazırlanabilir. Firma bilgileri ve logo baskıya eklenebilir.",
@@ -1293,7 +1293,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { q: "Tediye makbuzu şirket kayıtlarında kullanılabilir mi?", a: "İşletmeler ödeme bilgilerini kayıt altına almak için tediye makbuzu kullanabilir. Resmî kayıtlar için mali müşavirinizin yönlendirmesini izleyin." },
       { q: "Tediye makbuzu ölçüleri değiştirilebilir mi?", a: "Evet, standart ölçülerin yanı sıra talebe göre özel ebatlarda tediye makbuzu baskısı yapılabilmektedir." },
       { q: "İstanbul dışına gönderim yapıyor musunuz?", a: "Evet, tediye makbuzu siparişleri Türkiye'nin tüm il ve ilçelerine kargo ile gönderilmektedir." },
-      { q: "Tediye makbuzu baskısı ne zaman teslim edilir?", a: "Üretim ve teslim süresi ürün, adet ve onay sürecine göre teklif aşamasında paylaşılır." }
+      { q: "Tediye makbuzu baskısı ne zaman teslim edilir?", a: "PDF prova onayından sonra tediye makbuzu baskısı genellikle 3–5 iş günü içinde tamamlanır. Kargo süresi teslimat adresine göre değişebilir." }
     ]
   },
   "tahsilat-makbuzu": {
