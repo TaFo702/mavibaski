@@ -29,7 +29,7 @@ const SPECIAL_QUOTE_WHATSAPP_LINK = `https://wa.me/905366022373?text=${encodeURI
 export const KARTVIZIT_FAQS = [
   {
     q: "Kartvizit nedir ve hangi bilgiler bulunmalıdır?",
-    a: "Kartvizit; bir kurumun veya profesyonelin iletişim bilgilerini, unvanını ve marka kimliğini karşı tarafa ileten basılı tanıtım kartıdır. Standart bir kartvizit baskı üzerinde firma logosu, ad-soyad, unvan, telefon, e-posta, web sitesi adresi ve isteğe bağlı olarak dijital menü veya kurumsal portföye yönlendiren QR kod yer almalıdır."
+    a: "Kartvizit; bir kurumun veya profesyonelin iletişim bilgilerini, unvanını ve marka kimliğini karşı tarafa ileten basılı tanıtım kartıdır. Standart bir kartvizitin üzerinde firma logosu, ad-soyad, unvan, telefon, e-posta, web sitesi adresi ve isteğe bağlı olarak dijital menü veya kurumsal portföye yönlendiren QR kod yer almalıdır."
   },
   {
     q: "Kartvizit Gramajları ve Ebatları Nasıl Seçilir?",
@@ -61,7 +61,7 @@ export const KARTVIZIT_FAQS = [
   },
   {
     q: "Kartvizit tasarım dosyası nasıl hazırlanır?",
-    a: "Baskı öncesinde kartvizit tasarla ve dosya hazırlığı sürecinde CMYK renk modu ve en az 300 DPI çözünürlük tercih edilmelidir. Kesim toleransı için her kenardan 3 mm taşma payı bırakılmalı ve metinler eğriye (convert/outline) dönüştürülmelidir. Baskıya hazır dosyalarınız için teknik kontrol ve dijital PDF prova sunulmaktadır. Grafik desteği var."
+    a: "Kartvizit tasarım dosyası CMYK renk modunda hazırlanmalı, kullanılan piksel tabanlı görseller baskı boyutunda en az 300 DPI çözünürlükte olmalıdır. Kesim toleransı için her kenardan 3 mm taşma payı bırakılmalı ve metinler eğriye (convert/outline) dönüştürülmelidir. Baskıya hazır dosyalarınız için teknik kontrol ve dijital PDF prova sunulmaktadır. Grafik desteği var."
   },
   {
     q: "Teslim süresi ve listede olmayan seçenekler nasıl belirlenir?",
@@ -109,7 +109,7 @@ export const KARTVIZIT_GALLERY = [
   {
     filename: "plastik-pvc-kartvizit.webp",
     src: "/images/kartvizit/plastik-pvc-kartvizit.webp",
-    alt: "Beyaz ve Şeffaf Plastik PVC Kartvizit Baskı Örnekleri",
+    alt: "Oval Köşeli Plastik PVC Kartvizit Baskı Örneği",
     title: "PVC Kartvizit Baskı Örnekleri",
     desc: "Beyaz plastik PVC malzemeli, çift taraf renkli ve oval kesimli kartvizit örneği."
   }
@@ -342,9 +342,9 @@ export const KartvizitPage = () => {
                 <Sparkles size={14} />
                 Özel Ölçü &amp; Tiraj Seçenekleri
               </span>
-              <h3 className="text-xl sm:text-2xl font-black text-white">
+              <h2 className="text-xl sm:text-2xl font-black text-white">
                 Fiyat Listesinde Bulunmayan Bir Kartvizit Mi Arıyorsunuz?
-              </h3>
+              </h2>
               <p className="text-xs sm:text-sm text-gray-300 max-w-2xl leading-relaxed">
                 Farklı adetler, fantezi dokulu özel kağıtlar, çift taraflı altın yaldız, gofre kabartma veya özel kalıp kesimli kartvizit talepleriniz için özel teklif alabilirsiniz.
               </p>
@@ -435,7 +435,7 @@ export const KartvizitPage = () => {
                 <div className="text-xs font-black text-primary uppercase tracking-wider mb-1">Bütçe Dostu &amp; Pratik</div>
                 <h3 className="text-lg font-black text-slate-900 mb-2">Eko &amp; Standart Kartlar</h3>
                 <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed mb-4">
-                  250 gr Bristol veya 350 gr Kuşe kağıda uygulanan tek veya çift yönlü baskı seçeneğidir. Standart paketlerimiz 1.000 adetten başlar; <strong>100 kartvizit</strong> veya <strong>kartvizit fiyatları 100 adet</strong> gibi ara tirajlar standart listede yer almamaktadır. Mühür basılacak veya tükenmez kalemle not yazılacak kullanımlar için mat veya arka yüzü selefonsuz modeller tercih edilebilir.
+                  250 gr Bristol veya 350 gr Kuşe kağıda uygulanan tek veya çift yönlü baskı seçeneğidir. Standart paketlerimiz 1.000 adetten başlar; 100 adet gibi ara tirajlar için özel teklif alınmalıdır. Mühür basılacak veya tükenmez kalemle not yazılacak kullanımlar için mat veya arka yüzü selefonsuz modeller tercih edilebilir.
                 </p>
               </div>
               <div className="bg-white p-3 rounded-xl border border-gray-200 text-xs font-bold text-gray-700">
@@ -471,7 +471,7 @@ export const KartvizitPage = () => {
                     Kalın kartvizit basımı için kullanılan 700–800 gr kalın kartvizit kağıdı ve kalın sıvama kartvizit seçenekleri, fiyat tablosunda ürün kodlarına göre ayrı ayrı gösterilmektedir.
                   </p>
                   <p>
-                    PVC satırındaki kartvizit fiyatları 500 adet içindir; 500 adet kağıt kartvizit paketi standart fiyat listesinde bulunmamaktadır. 100 kartvizit ve kartvizit fiyatları 100 adet seçenekleri de standart tabloda yer almadığından bu adetler için özel teklif alınmalıdır.
+                    PVC satırındaki kartvizit fiyatları 500 adet içindir; 500 adet kağıt kartvizit paketi standart fiyat listesinde bulunmamaktadır. 100 veya 500 adet kâğıt kartvizit talepleri özel teklif kapsamında değerlendirilir.
                   </p>
                 </div>
               </div>
@@ -499,14 +499,14 @@ export const KartvizitPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
           <section className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between">
             <div>
-              <h3 className="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight mb-4 flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight mb-4 flex items-center gap-2">
                 <span className="w-2 h-5 bg-primary rounded-full"></span>
                 4 Adımda Hızlı Kartvizit Siparişi
-              </h3>
+              </h2>
               <div className="grid grid-cols-2 gap-3 text-xs">
                 {[
                   { step: "1", title: "Model & Gramaj", desc: "250–800 gr kağıt, lak veya sıvama seçeneğini belirleyin." },
-                  { step: "2", title: "Dosya Gönderimi", desc: "Kartvizit tasarla adımında hazırlanan PDF veya AI dosyanızı iletin." },
+                  { step: "2", title: "Dosya Gönderimi", desc: "Baskıya hazır PDF veya AI tasarım dosyanızı iletin." },
                   { step: "3", title: "Dijital Prova", desc: "Teknik kontrol sonrası dijital PDF provayı onaylayın." },
                   { step: "4", title: "Üretim & Teslimat", desc: "Topkapı koordinasyonu ile basılarak anlaşmalı kargoya verilir." }
                 ].map((item, idx) => (
@@ -522,12 +522,12 @@ export const KartvizitPage = () => {
 
           <section className="bg-amber-50/80 p-6 sm:p-8 rounded-3xl border border-amber-200/80 flex flex-col justify-between">
             <div>
-              <h3 className="text-lg sm:text-xl font-black text-amber-950 uppercase tracking-tight mb-4 flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-black text-amber-950 uppercase tracking-tight mb-4 flex items-center gap-2">
                 <ShieldCheck className="text-amber-600" size={22} />
                 Baskı Öncesi Dosya Hazırlık Kontrolü
-              </h3>
+              </h2>
               <p className="text-xs text-amber-950 font-medium mb-3">
-                <strong>Kartvizit nedir</strong> ve <strong>kartvizit ölçüleri</strong> nasıl planlanır sorusuna yönelik olarak, baskı öncesi dikkat edilmesi gereken teknik detaylar:
+                Kartvizit tasarımınızı baskıya hazırlarken renk modu, taşma payı ve yazı karakterleri için şu kontrolleri yapın:
               </p>
               <ul className="space-y-2.5 text-xs sm:text-sm font-semibold text-amber-900">
                 <li className="flex items-start gap-2">
@@ -632,7 +632,7 @@ export const KartvizitPage = () => {
                     <Link
                       to={`/blog/${post.slug}`}
                       title={post.title}
-                      className="focus:outline-none"
+                      className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
                       {post.title}
                     </Link>

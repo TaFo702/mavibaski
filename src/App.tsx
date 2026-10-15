@@ -5334,7 +5334,7 @@ export const ProductSEOSection = ({ categoryKey, hideTrustFooter }: { categoryKe
 
 
 
-export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage }: { ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType } = {}) => {
+export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage }: { ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType } = {}) => {
   return (
     <React.Suspense fallback={
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
@@ -5345,7 +5345,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
       <Route path="/" element={<HomePage />} />
       <Route path="/kutu" element={<KutuPage />} />
       <Route path="/ambalaj" element={<AmbalajPage />} />
-      <Route path="/kartvizit" element={<KartvizitPage />} />
+      <Route path="/kartvizit" element={<KartvizitComponent />} />
       <Route path="/brosur" element={<BrosurPage />} />
       <Route path="/el-ilani" element={<ElIlaniPage />} />
       <Route path="/afis" element={<AfisPage />} />
@@ -5531,7 +5531,7 @@ pathname === '/kartvizit' ||
   return null;
 };
 
-export default function App({ Router = BrowserRouter, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent }: {
+export default function App({ Router = BrowserRouter, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent }: {
   Router?: React.ComponentType<{ children: React.ReactNode }>;
   ZarfComponent?: React.ComponentType;
   BlogComponent?: React.ComponentType;
@@ -5539,6 +5539,7 @@ export default function App({ Router = BrowserRouter, ZarfComponent, BlogCompone
   DosyalarComponent?: React.ComponentType;
   BloknotlarComponent?: React.ComponentType;
   KatalogComponent?: React.ComponentType;
+  KartvizitComponent?: React.ComponentType;
 } = {}) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -5585,7 +5586,7 @@ export default function App({ Router = BrowserRouter, ZarfComponent, BlogCompone
             <Navbar />
             
             <main className="flex-grow">
-              <AppRoutes ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} />
+              <AppRoutes ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} />
             </main>
 
             <Footer />

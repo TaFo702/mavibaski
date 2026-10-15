@@ -7,6 +7,7 @@ import { DosyalarPage } from './components/Dosyalar';
 import { BloknotlarPage } from './components/Bloknotlar';
 import { AntetliPage } from './components/Antetli';
 import { KatalogPage } from './components/Katalog';
+import { KartvizitPage } from './components/Kartvizit';
 import { BlogPage } from './components/Blog';
 
 export function prerenderHome() {
@@ -64,4 +65,11 @@ export function prerenderKatalog() {
     <MemoryRouter initialEntries={['/kataloglar']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={KatalogRouter} KatalogComponent={KatalogPage} />);
+}
+
+export function prerenderKartvizit() {
+  const KartvizitRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/kartvizit']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={KartvizitRouter} KartvizitComponent={KartvizitPage} />);
 }

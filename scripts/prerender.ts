@@ -49,18 +49,28 @@ async function prerender() {
   let dosyalarContent: string;
   let bloknotlarContent: string;
   let katalogContent: string;
+  let kartvizitContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
     dosyalarContent = prerenderDosyalar();
     bloknotlarContent = prerenderBloknotlar();
     katalogContent = prerenderKatalog();
+    kartvizitContent = prerenderKartvizit();
+    // Keep the published pricing section byte-for-byte. Only the surrounding
+    // content comes from the existing React page; neither pricing renderer changes.
+    const pricingSection = /<section\b[^>]*\bid="fiyat-tablosu"[^>]*>[\s\S]*?<\/section>/g;
+    const protectedPricing = getRouteSEO('/kartvizit').bodyContent?.match(pricingSection);
+    if (protectedPricing?.length !== 1 || kartvizitContent.match(pricingSection)?.length !== 1) {
+      throw new Error('Kartvizit pricing preservation failed: expected one section in each renderer.');
+    }
+    kartvizitContent = kartvizitContent.replace(pricingSection, () => protectedPricing[0]);
     zarfBlogContent = prerenderZarfBlog();
     antetliBlogContent = prerenderZarfBlog('/blog/antetli-kagit-baskisinda-80gr-1.hamur');
   } finally { fs.rmSync(rendererPath, { force: true }); }
@@ -109,6 +119,7 @@ async function prerender() {
           : pathname === '/dosyalar' ? dosyalarContent
           : pathname === '/bloknotlar' ? bloknotlarContent
           : pathname === '/kataloglar' ? katalogContent
+          : pathname === '/kartvizit' ? kartvizitContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
           : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent : seo.bodyContent,
         seo.ogImage

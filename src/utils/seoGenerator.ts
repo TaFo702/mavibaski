@@ -1312,7 +1312,7 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
     const kartvizitFaqs = [
       {
         q: "Kartvizit nedir ve hangi bilgiler bulunmalıdır?",
-        a: "Kartvizit; bir kurumun veya profesyonelin iletişim bilgilerini, unvanını ve marka kimliğini karşı tarafa ileten basılı tanıtım kartıdır. Standart bir kartvizit baskı üzerinde firma logosu, ad-soyad, unvan, telefon, e-posta, web sitesi adresi ve isteğe bağlı olarak dijital menü veya kurumsal portföye yönlendiren QR kod yer almalıdır."
+        a: "Kartvizit; bir kurumun veya profesyonelin iletişim bilgilerini, unvanını ve marka kimliğini karşı tarafa ileten basılı tanıtım kartıdır. Standart bir kartvizitin üzerinde firma logosu, ad-soyad, unvan, telefon, e-posta, web sitesi adresi ve isteğe bağlı olarak dijital menü veya kurumsal portföye yönlendiren QR kod yer almalıdır."
       },
       {
         q: "Kartvizit Gramajları ve Ebatları Nasıl Seçilir?",
@@ -1344,7 +1344,7 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
       },
       {
         q: "Kartvizit tasarım dosyası nasıl hazırlanır?",
-        a: "Baskı öncesinde kartvizit tasarla ve dosya hazırlığı sürecinde CMYK renk modu ve en az 300 DPI çözünürlük tercih edilmelidir. Kesim toleransı için her kenardan 3 mm taşma payı bırakılmalı ve metinler eğriye (convert/outline) dönüştürülmelidir. Baskıya hazır dosyalarınız için teknik kontrol ve dijital PDF prova sunulmaktadır. Grafik desteği var."
+        a: "Kartvizit tasarım dosyası CMYK renk modunda hazırlanmalı, kullanılan piksel tabanlı görseller baskı boyutunda en az 300 DPI çözünürlükte olmalıdır. Kesim toleransı için her kenardan 3 mm taşma payı bırakılmalı ve metinler eğriye (convert/outline) dönüştürülmelidir. Baskıya hazır dosyalarınız için teknik kontrol ve dijital PDF prova sunulmaktadır. Grafik desteği var."
       },
       {
         q: "Teslim süresi ve listede olmayan seçenekler nasıl belirlenir?",
@@ -1609,7 +1609,7 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
       </div>
       <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col">
         <div class="aspect-[4/3] bg-gray-100 overflow-hidden relative">
-          <img src="/images/kartvizit/plastik-pvc-kartvizit.webp" alt="Beyaz ve Şeffaf Plastik PVC Kartvizit Baskı Örnekleri" width="800" height="533" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+          <img src="/images/kartvizit/plastik-pvc-kartvizit.webp" alt="Oval Köşeli Plastik PVC Kartvizit Baskı Örneği" width="800" height="533" loading="lazy" decoding="async" class="w-full h-full object-cover" />
         </div>
         <div class="p-3.5 sm:p-4 flex flex-col flex-grow justify-between">
           <h3 class="font-bold text-gray-900 text-xs sm:text-sm mb-1 leading-snug">PVC Kartvizit Baskı Örnekleri</h3>
