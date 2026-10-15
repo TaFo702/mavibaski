@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 76637)
-Total output lines: 4067
-
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -1047,7 +1044,2191 @@ export const MakbuzFormlarPage = () => {
                           Gider makbuzları genellikle tarih, belge numarası, açıklama alanı, tutar bilgisi, firma bilgileri ve imza bölümlerinden oluşur. İşletmenin ihtiyaçlarına göre özel tasarlanabilen bu formlar, farklı sektörlerde yaygın olarak kullanılmaktadır. Ticari işletmeler, üretim firmaları, hizmet şirketleri, mağazalar, restoranlar ve çeşitli kurumsal kuruluşlar günlük operasyonlarında gider makbuzu kullanabilmektedir.
                         </p>
                         <p>
-                          Otokopili gider makbuzu modellerinde üst nüshaya yazılan bilgiler alt nüshalara otomatik olarak aktarılır. Numaratörlü gider makbuzu seçenekleri…46637 tokens truncated…", title: "CTP Kalıp Pozlama", desc: "Onaylanan tasarım CTP sisteminde ofset kalıbına pozlanır." },
+                          Otokopili gider makbuzu modellerinde üst nüshaya yazılan bilgiler alt nüshalara otomatik olarak aktarılır. Numaratörlü gider makbuzu seçeneklerinde ise her yaprak ardışık sıra numarası ile basılarak belge takibi kolaylaştırılır. İhtiyaca göre 1 asıl + 1 suret veya 1 asıl + 2 suret şeklinde üretilebilen gider makbuzu koçanları, düzenli kayıt tutmak isteyen işletmeler için pratik ve kullanışlı bir çözüm sunmaktadır.
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <p>
+                          Tahsilat makbuzu, işletmelerin müşterilerinden veya iş ortaklarından tahsil ettiği ödemeleri kayıt altına almak amacıyla düzenlediği resmi nitelikte bir ticari evraktır. Vergi Usul Kanunu kapsamında tek başına fatura yerine geçen bir belge olmamakla birlikte, işletmelerin iç muhasebe kayıtlarının düzenli tutulmasına, yapılan tahsilatların ispatına ve finansal hareketlerin kontrol edilmesine yardımcı olur.
+                        </p>
+                        <p>
+                          Ön muhasebe süreçlerinde kullanılan tahsilat makbuzları; ödeme tarihinin, tahsil edilen tutarın, ödeme nedeninin ve taraf bilgilerinin kayıt altına alınmasını sağlar. Düzenli şekilde saklanan makbuzlar, hesap mutabakatlarında, şirket içi denetimlerde ve geçmiş işlemlerin incelenmesinde önemli bir referans niteliği taşır.
+                        </p>
+                        <p>
+                          Tahsilat makbuzu kullanımı birçok sektörde yasal zorunluluk olmasa da belge düzenini sağlamak isteyen işletmeler tarafından yaygın olarak tercih edilmektedir. Toptan ve perakende ticaret firmaları, üreticiler, servis işletmeleri, sağlık kuruluşları, eğitim kurumları, emlak ofisleri, otomotiv sektörü ve çeşitli hizmet işletmeleri günlük tahsilat işlemlerini kayıt altına almak için bu belgelerden yararlanmaktadır.
+                        </p>
+                        <p>
+                          Firmanın çalışma sistemine göre logo, iletişim bilgileri, ödeme şekli, açıklama alanları ve diğer kurumsal bilgiler eklenerek hazırlanan tahsilat makbuzları, hem profesyonel bir kurumsal görünüm sunar hem de işletme içindeki evrak düzeninin standart hale gelmesine katkı sağlar.
+                        </p>
+                      </>
+                    )}
+                  </div>
+                </div>
+
+                <div className="p-6 bg-slate-50 border border-slate-150 rounded-[2rem] shadow-sm">
+                  <h2 className="text-base md:text-lg font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    <span className="w-1.5 h-6 bg-secondary rounded-full" />
+                    {pathId === 'gider-makbuzu' ? 'Gider Makbuzu Nasıl Doldurulur?' : 'Tahsilat Makbuzu Nasıl Doldurulur?'}
+                  </h2>
+                  <div className="text-slate-650 text-sm leading-relaxed font-semibold space-y-4 text-left">
+                    {pathId === 'gider-makbuzu' ? (
+                      <>
+                        <p>
+                          Gider makbuzu nasıl doldurulur sorusu, özellikle işletmelerde belge düzenini sağlamak isteyen kişiler tarafından sıkça araştırılmaktadır. Gider makbuzu düzenlenirken öncelikle işlem tarihi eksiksiz şekilde belirtilmelidir. Daha sonra yapılan harcamaya veya ödemeye ilişkin açıklama bölümü doldurularak işlemin konusu açık ve anlaşılır şekilde yazılmalıdır. Ödeme tutarı rakam ve gerekli durumlarda yazı ile belirtilmeli, ilgili kişi veya firma bilgileri eksiksiz olarak eklenmelidir.
+                        </p>
+                        <p>
+                          Bir gider makbuzu örneği incelendiğinde genellikle tarih, belge numarası, açıklama alanı, tutar bilgisi, firma unvanı ve imza bölümlerinin yer aldığı görülmektedir. İşletmeler ihtiyaçlarına göre bu alanlara ek sütunlar veya özel bilgiler de ekleyebilmektedir. Düzenli ve standart bir tasarım kullanılması, belgelerin daha kolay arşivlenmesini ve gerektiğinde hızlı şekilde bulunmasını sağlar.
+                        </p>
+                        <p>
+                          Gider makbuzu üzerinde bulunması gereken bilgiler işletmenin kullanım amacına göre değişebilse de temel alanların eksiksiz doldurulması önemlidir. Belge numarası, işlem tarihi, ödeme veya harcama açıklaması, tutar bilgisi ve imza alanları en sık kullanılan bölümler arasında yer alır. Özellikle otokopili ve numaratörlü koçanlarda bilgilerin okunaklı şekilde yazılması, hem arşivleme hem de belge takibi açısından avantaj sağlar. Düzenli doldurulan gider makbuzları, işletmelerin kayıt süreçlerini daha kontrollü ve düzenli yürütmesine yardımcı olur.
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <p>
+                          Tahsilat makbuzu nasıl doldurulur sorusu, özellikle işletmelerde belge düzenini sağlamak isteyen kişiler tarafından sıkça araştırılmaktadır. Tahsilat makbuzu düzenlenirken öncelikle işlem tarihi eksiksiz şekilde belirtilmelidir. Daha sonra alınan ödemeye veya tahsilata ilişkin açıklama bölümü doldurularak işlemin konusu açık ve anlaşılır şekilde yazılmalıdır. Ödeme tutarı rakam ve gerekli durumlarda yazı ile belirtilmeli, ilgili kişi veya firma bilgileri eksiksiz olarak eklenmelidir.
+                        </p>
+                        <p>
+                          Bir tahsilat makbuzu örneği incelendiğinde genellikle tarih, belge numarası, açıklama alanı, tutar bilgisi, firma unvanı ve imza bölümlerinin yer aldığı görülmektedir. İşletmeler ihtiyaçlarına göre bu alanlara ek sütunlar veya özel bilgiler de ekleyebilmektedir. Düzenli ve standart bir tasarım kullanılması, belgelerin daha kolay arşivlenmesini ve gerektiğinde hızlı şekilde bulunmasını sağlar.
+                        </p>
+                        <p>
+                          Tahsilat makbuzu üzerinde bulunması gereken bilgiler işletmenin kullanım amacına göre değişebilse de temel alanların eksiksiz doldurulması önemlidir. Belge numarası, işlem tarihi, ödeme veya tahsilat açıklaması, tutar bilgisi ve imza alanları en sık kullanılan bölümler arasında yer alır. Özellikle otokopili ve numaratörlü koçanlarda bilgilerin okunaklı şekilde yazılması, hem arşivleme hem de belge takibi açısından avantaj sağlar. Düzenli doldurulan tahsilat makbuzları, işletmelerin kayıt süreçlerini daha kontrollü ve düzenli yürütmesine yardımcı olur.
+                        </p>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Sipariş Yönlendirme Açıklaması */}
+          <div className="mb-8 bg-sky-50/50 border border-sky-100 rounded-[2rem] p-5 flex flex-col sm:flex-row items-center gap-4 shadow-sm">
+            <span className="w-10 h-10 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center text-lg shrink-0 font-bold">💬</span>
+            <div className="text-center sm:text-left">
+              <h3 className="text-sm font-black text-slate-900 uppercase mb-0.5">Siparişinizi Nasıl Oluşturabilirsiniz?</h3>
+              <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                Fiyat listesinden seçtiğiniz adedin yanında yer alan <strong>"Hemen Sipariş Ver"</strong> butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz. Siparişiniz için logo ve bilgilerinizi WhatsApp üzerinden göndermeniz yeterlidir. PDF prova onayınız alındıktan sonra üretim başlatılır.
+              </p>
+            </div>
+          </div>
+
+          {/* GÜVEN UNSURU DETAYLARI */}
+          <div className="mb-12 bg-gray-50 border border-gray-200 rounded-[2rem] p-6 shadow-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="flex gap-3">
+                <span className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-base shrink-0 font-bold">✓</span>
+                <div>
+                  <h3 className="text-sm font-black text-black uppercase mb-0.5">Tasarım Desteği</h3>
+                  <p className="text-[11px] text-gray-500 font-medium leading-relaxed">
+                    Mevcut logonuzla hazırlanan mizanpaj şablonu ve baskı provalarında profesyonel <strong>tasarım desteği</strong> sağlanır (yeni logo ve kurumsal kimlik çizimi hariç).
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <span className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-base shrink-0 font-bold">✓</span>
+                <div>
+                  <h3 className="text-sm font-black text-black uppercase mb-0.5">Türkiye Geneli Kargo</h3>
+                  <p className="text-[11px] text-gray-500 font-medium leading-relaxed">
+                    <strong>5.000 TL ve üzeri (KDV Hariç)</strong> siparişlerde kargo ücretsizdir. Altındaki siparişlerde alıcı ödemeli anlaşmalı indirimli kargo uygulanır.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <span className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-base shrink-0 font-bold">✓</span>
+                <div>
+                  <h3 className="text-sm font-black text-black uppercase mb-0.5">Onaylı Güvenli Baskı</h3>
+                  <p className="text-[11px] text-gray-500 font-medium leading-relaxed">
+                    Hazırlanan PDF taslak tasarımı siz onaylamadan baskı işlemine girmez. PDF prova sayesinde baskı öncesi içerik ve yerleşim hatalarının önemli ölçüde önüne geçilir.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <span className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-base shrink-0 font-bold">✓</span>
+                <div>
+                  <h3 className="text-sm font-black text-black uppercase mb-0.5">Numaratör Dahil</h3>
+                  <p className="text-[11px] text-gray-500 font-medium leading-relaxed">
+                    {pathId === 'adisyon'
+                      ? "Fiyat tablosunda yer alan standart tek nüsha adisyon koçanlarında ardışık seri numaratör baskısı dahildir."
+                      : `${currentDetails.breadcrumbTitle || "Ürün"} koçanlarında ardışık numaratör (seri no) baskısı liste fiyatımıza dahildir, ek ücret talep edilmez.`}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          {/* ÜRÜN FOTOĞRAF GALERİSİ */}
+          <div className="mb-12">
+            <div className="flex justify-between items-center mb-6 px-2">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-8 bg-primary rounded-full" />
+                <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight">
+                  {pathId === 'adisyon' ? "Numaratörlü Adisyon Baskı Örnekleri" : `${currentDetails.breadcrumbTitle} Ürün Fotoğraf Galerisi`}
+                </h2>
+              </div>
+            </div>
+            
+            <div className={`grid gap-6 ${pathId === 'arac-kiralama' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
+              {currentDetails.gallery.map((img, idx) => (
+                <figure 
+                  key={idx} 
+                  className="bg-gray-50 border border-gray-150 rounded-2xl p-4 shadow-sm flex flex-col justify-between hover:border-primary/40 hover:bg-white hover:shadow-md transition-all group"
+                >
+                                <DynamicImageContainer 
+                    src={img.src} 
+                    alt={img.alt} 
+                    title={img.title} 
+                    isTallLayoutDefault={isTallLayout}
+                    className="mb-4"
+                    imgClassName="group-hover:scale-105"
+                  />
+                  <div>
+                    <h3 className="text-sm font-black text-black uppercase mb-1.5">{img.title}</h3>
+                    <figcaption className="text-gray-550 text-xs font-medium leading-relaxed">
+                      {img.desc}
+                    </figcaption>
+                  </div>
+                </figure>
+              ))}
+            </div>
+          </div>
+
+          {(pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu') && (
+            <div className="mb-12 bg-slate-50 border border-slate-150 rounded-[2rem] p-6 md:p-8 shadow-sm">
+              <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight mb-4 flex items-center gap-2">
+                <span className="w-1.5 h-6 bg-secondary rounded-full" />
+                {pathId === 'gider-makbuzu' ? 'Gider Makbuzu Örnekleri' : 'Tahsilat Makbuzu Örnekleri'}
+              </h2>
+              <div className="text-slate-650 text-base leading-relaxed font-semibold space-y-4 text-left md:text-justify text-black">
+                {pathId === 'gider-makbuzu' ? (
+                  <>
+                    <p>
+                      Farklı sektörlerde kullanılan <strong>gider makbuzu örnekleri</strong>, firma ihtiyaçlarına göre tasarlanabilir. Şirket unvanı, iletişim bilgileri ve logo gibi firma bilgilerinin yer aldığı <strong>logolu gider makbuzu</strong> tasarımları, hem resmiyet kazandırır hem de marka bütünlüğünü her işlemde korumanıza yardımcı olur. Bu sayede işletmenizin <strong>gider makbuzu baskı</strong> gereksinimleri kurumsal bir standartta karşılanmış olur.
+                    </p>
+                    <p>
+                      Belge takibinde ve nüshaların paylaşımında pratikliği artırmak için kendinden karbonlu kağıda basılan <strong>otokopili gider makbuzu baskı</strong> koçanları en çok tercih edilen modeller arasındadır. Yazılan bilgilerin alt nüshalara anında ve net şekilde geçmesi, muhasebe süreçlerini hızlandırır. Bununla birlikte, her bir belgenin kaybolmasını önlemek ve muhasebe kayıtlarını sıralı bir şekilde yürütebilmek adına ardışık seri numaralarıyla üretilen <strong>numaratörlü gider makbuzu baskı</strong> koçanları da evrak takibini hatasız yapmanızı sağlar.
+                    </p>
+                    <p>
+                      İşletmenizin ihtiyaç duyduğu özelliklere sahip, kaliteli ve uzun ömürlü <strong>gider makbuzu bastırma</strong> süreçlerinizde Mavi Basım olarak profesyonel tasarım desteği sunmaktayız. Kurumsal standartlarınıza uygun nüsha sayısı, numaratör sırası ve boyut seçenekleriyle siparişlerinizi hızla hazırlayıp teslim ediyoruz.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p>
+                      Farklı sektörlerde kullanılan <strong>tahsilat makbuzu örnekleri</strong>, firma ihtiyaçlarına göre tasarlanabilir. Şirket unvanı, iletişim bilgileri ve logo gibi firma bilgilerinin yer aldığı <strong>logolu tahsilat makbuzu</strong> tasarımları, hem resmiyet kazandırır hem de marka bütünlüğünü her işlemde korumanıza yardımcı olur. Bu sayede işletmenizin <strong>tahsilat makbuzu baskı</strong> gereksinimleri kurumsal bir standartta karşılanmış olur.
+                    </p>
+                    <p>
+                      Belge takibinde ve nüshaların paylaşımında pratikliği artırmak için kendinden karbonlu kağıda basılan <strong>otokopili tahsilat makbuzu baskı</strong> koçanları en çok tercih edilen modeller arasındadır. Yazılan bilgilerin alt nüshalara anında ve net şekilde geçmesi, ön muhasebe süreçlerini hızlandırır. Bununla birlikte, her bir belgenin kaybolmasını önlemek ve muhasebe kayıtlarını sıralı bir şekilde yürütebilmek adına ardışık seri numaralarıyla üretilen <strong>numaratörlü tahsilat makbuzu baskı</strong> koçanları da evrak takibini hatasız yapmanızı sağlar.
+                    </p>
+                    <p>
+                      Tahsilat makbuzu örnekleri hazırlanırken her işletmenin çalışma şekli, bilgi alanları ve kurumsal kimliği dikkate alınır. Perakende mağazaları, üretim firmaları, servis işletmeleri, sağlık kuruluşları, eğitim kurumları ve çeşitli hizmet sektörleri ihtiyaçlarına göre farklı mizanpajlar tercih edebilmektedir. Firma logosu, vergi bilgileri, ödeme şekli, açıklama alanları, teslim eden ve teslim alan bölümleri gibi alanlar işletmenin kullanım alışkanlıklarına göre düzenlenebilir. Bu sayede hem belge düzeni standart hale gelir hem de günlük muhasebe ve arşiv işlemleri daha pratik şekilde yürütülebilir.
+                    </p>
+                  </>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* GÖRSEL ALANI VE NÜSHA DETAYLARI - YAN YANA 3 SÜTUN */}
+          <div className="mb-10">
+            <div className={`bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-2 ${pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu' ? '' : 'lg:grid-cols-3'} gap-6 md:gap-8 items-stretch font-medium`}>
+              {/* SÜTUN 1: GÖRSEL */}
+              <figure className="flex flex-col justify-center items-center bg-white p-3 border border-gray-150 rounded-2xl shadow-sm w-fit mx-auto">
+                <DynamicImageContainer 
+                  src={currentDetails.featureImage} 
+                  alt={currentDetails.featureImageAlt} 
+                  title={currentDetails.featureImageAlt} 
+                  isTallLayoutDefault={isTallLayout}
+                  className="mb-2"
+                  imgClassName="p-1 hover:scale-105"
+                  isPriority={true}
+                />
+                <figcaption className="text-gray-550 text-[11px] mt-2.5 text-center font-bold leading-normal max-w-[280px]">
+                  {pathId === 'adisyon'
+                    ? "Önyüz yakın çekim. 14 × 20 cm standart numaratörlü adisyon koçanı örneği."
+                    : `Önyüz yakın çekim. Otokopili numaratörlü ${currentDetails.breadcrumbTitle.toLowerCase()} koçanı ve baskı modeli.`}
+                </figcaption>
+              </figure>
+
+              
+              {/* SÜTUN 2: BASKI TANITIMI */}
+              <div className="space-y-4 flex flex-col justify-start">
+                <div>
+                  <h2 className="text-lg font-black text-black uppercase tracking-tight mb-3">
+                    {pathId === 'adisyon' ? "Neden Numaratörlü Adisyon Kullanılır?" : pathId === 'sozlesme-baski' ? "Numaratörlü Sözleşme Formu Özellikleri" : pathId === 'siparis-fisi' ? "Sipariş Fişi Öne Çıkan Avantajları" : pathId === 'para-makbuzu' ? "Para Makbuzu Öne Çıkan Avantajları" : "Ürün Öne Çıkan Özellikleri"}
+                  </h2>
+                  {pathId === 'adisyon' ? (
+                    <ul className="space-y-2 text-gray-700 text-xs sm:text-sm font-semibold pl-1 list-none">
+                      <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Siparişlerin düzenli kayıt altına alınmasını sağlar.</li>
+                      <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Mutfak, bar ve kasa arası sipariş aktarımını düzenler.</li>
+                      <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Kurumsal logo ve iletişim bilgilerinizle kişiselleştirilir.</li>
+                      <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Ardışık seri numaratör baskısı ile takip etmeyi kolaylaştırır.</li>
+                    </ul>
+                  ) : (pathId === 'siparis-fisi' || pathId === 'para-makbuzu') ? (
+                    <ul className="space-y-2 text-gray-700 text-xs sm:text-sm font-bold pl-1 list-none">
+                      <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> Otokopili kopyalama kâğıdı (karbon gerektirmez)</li>
+                      <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> Kırmızı otomatik seri numaratör baskısı dahil</li>
+                      <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> 1 asıl + 1, 2 veya 3 suret nüsha seçenekleri</li>
+                      <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> Üstten tırtıklı perfore ve telli dikişli cilt</li>
+                      <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> Profesyonel mizanpaj, tasarım desteği ve baskı öncesi PDF prova</li>
+                      <li className="flex items-center gap-2"><span className="text-emerald-600">✓</span> Türkiye geneli hızlı kargo teslimatı</li>
+                    </ul>
+                  ) : (
+                    <ul className="space-y-2 text-gray-700 text-xs sm:text-sm font-bold pl-1 list-none">
+                      {currentDetails.specifications.slice(0, 7).map((spec, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <span className="text-primary">✓</span> {spec.title}: {spec.value}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+
+              {/* SÜTUN 3: ASIL VE SURET DETAYLARI */}
+              {pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && (
+                <div className="space-y-4 border-t border-gray-200 pt-4 md:border-t-0 md:pt-0 lg:border-l lg:pl-6 col-span-1 md:col-span-2 lg:col-span-1 flex flex-col justify-center gap-4">
+                  {pathId === 'adisyon' ? (
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-2.5">
+                        <div className="w-2.5 h-2.5 bg-slate-500 rounded-full mt-1.5 shrink-0" />
+                        <p className="leading-relaxed text-xs sm:text-sm">
+                          <strong className="text-slate-900 font-black uppercase text-xs block mb-0.5">Tek Nüsha Adisyon (100'lük Cilt):</strong> 
+                          80 gr 1. hamur beyaz kâğıda basılır. Mutfak, kasa veya garson kullanımı için pratik standart koçandır.
+                        </p>
+                      </div>
+                      <div className="border-t border-gray-200 pt-3 flex items-start gap-2.5">
+                        <div className="w-2.5 h-2.5 bg-primary rounded-full mt-1.5 shrink-0" />
+                        <p className="leading-relaxed text-xs sm:text-sm">
+                          <strong className="text-primary font-black uppercase text-xs block mb-0.5">Otokopili Adisyon (50'lik Takım):</strong> 
+                          Otokopili seçeneğinde kendinden karbonlu kâğıda basım yapılır. Üst nüshaya yazılanlar doğrudan alt kopyaya geçer.
+                        </p>
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="flex items-start gap-2.5">
+                        <div className="w-2.5 h-2.5 bg-primary rounded-full mt-1.5 shrink-0" />
+                        <p className="leading-relaxed text-sm">
+                          <strong className="text-primary font-black uppercase text-xs block mb-0.5">1 Asıl + 1 Suret (50x2 Cilt):</strong> 
+                          Cilt başına toplam 100 yapraktan oluşur (50 asıl + 50 suret takımı). Üst yazılanlar alt nüshaya otomatik aktarılır.
+                        </p>
+                      </div>
+                      <div className="border-t border-gray-200 pt-4 flex items-start gap-2.5">
+                        <div className="w-2.5 h-2.5 bg-secondary rounded-full mt-1.5 shrink-0" />
+                        <p className="leading-relaxed text-sm">
+                          <strong className="text-secondary font-black uppercase text-xs block mb-0.5">1 Asıl + 2 Suret (50x3 Cilt):</strong> 
+                          Cilt başına toplam 150 yapraktan oluşur (50 asıl + 100 suret takımı). Üst yazılanlar alt iki nüshaya birden aktarılır.
+                        </p>
+                      </div>
+                      {filteredData.some(sec => sec.rows.some((r: any) => r.label.includes('1 Asl+3 Su.'))) && (
+                        <div className="border-t border-gray-200 pt-4 flex items-start gap-2.5">
+                          <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full mt-1.5 shrink-0" />
+                          <p className="leading-relaxed text-sm">
+                            <strong className="text-emerald-600 font-black uppercase text-xs block mb-0.5">1 Asıl + 3 Suret (50x4 Cilt):</strong> 
+                            Cilt başına toplam 200 yapraktan oluşur (50 asıl + 150 suret takımı). Muhasebe, müşteri ve acente kopyasını aynı anda dökerek alt üç nüshaya aktarır.
+                          </p>
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* TEKNİK ÖZELLİKLER */}
+          <div id="ozellikler" className="scroll-mt-24 mb-12">
+            <div className="flex justify-between items-center mb-6 px-2">
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-8 bg-primary rounded-full" />
+                <h2 id={pathId === 'para-makbuzu' ? "teknik-ozellikler-baslik" : undefined} className="text-xl md:text-2xl font-black text-black uppercase tracking-tight">
+                  {pathId === 'adisyon' ? 'Adisyon Standart ve Özel Seçenekleri' : pathId === 'sozlesme-baski' ? 'Teknik Bilgiler Tablosu' : pathId === 'recete' ? 'Reçete Koçanı Teknik Özellikleri' : 'Teknik Özellikler'}
+                </h2>
+              </div>
+            </div>
+            {pathId === 'adisyon' ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="p-6 bg-slate-50 border border-slate-200 rounded-3xl shadow-sm">
+                  <h3 className="text-base md:text-lg font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    <span className="w-2 h-6 bg-primary rounded-full" />
+                    Fiyat Tablosundaki Standart Adisyon Özellikleri
+                  </h3>
+                  <ul className="space-y-3 text-xs sm:text-sm font-semibold text-slate-700">
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-primary font-bold">✓</span>
+                      <div><strong className="text-black font-bold">Ebat:</strong> 14 × 20 cm</div>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-primary font-bold">✓</span>
+                      <div><strong className="text-black font-bold">Kâğıt Türü:</strong> 70–80 gr 1. Hamur Beyaz Kâğıt</div>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-primary font-bold">✓</span>
+                      <div><strong className="text-black font-bold">Cilt Yapısı:</strong> 100 Yaprak / Cilt (Tek Nüsha / Otokopisiz)</div>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-primary font-bold">✓</span>
+                      <div><strong className="text-black font-bold">Baskı Rengi:</strong> Tek Renk Kurumsal Baskı</div>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-primary font-bold">✓</span>
+                      <div><strong className="text-black font-bold">Numaratör:</strong> Ardışık Seri Numaralı Baskı (Fiyata Dahil)</div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-6 bg-blue-50/50 border border-blue-150 rounded-3xl shadow-sm">
+                  <h3 className="text-base md:text-lg font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    <span className="w-2 h-6 bg-secondary rounded-full" />
+                    Talebe Göre Üretilebilen Özel Seçenekler
+                  </h3>
+                  <ul className="space-y-3 text-xs sm:text-sm font-semibold text-slate-700">
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-secondary font-bold">→</span>
+                      <div><strong className="text-black font-bold">Farklı Ölçü:</strong> 10 × 14 cm veya özel ebat üretimi</div>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-secondary font-bold">→</span>
+                      <div><strong className="text-black font-bold">Otokopili Kâğıt:</strong> Kendinden karbonlu (1 asıl + 1 veya 2 suret) kâğıt</div>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-secondary font-bold">→</span>
+                      <div><strong className="text-black font-bold">Cilt Kapasitesi:</strong> Otokopililerde 50 Takım koçan imalatı</div>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="text-secondary font-bold">→</span>
+                      <div><strong className="text-black font-bold">Çok Renkli Baskı:</strong> Kurumsal logonuzun tüm renklerinde özel baskı</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            ) : (pathId === 'sozlesme-baski' || pathId === 'siparis-fisi' || pathId === 'para-makbuzu') ? (
+              <div className="overflow-hidden border border-gray-150 rounded-2xl bg-white shadow-sm">
+                <table 
+                  className="w-full text-left border-collapse font-sans"
+                  {...(pathId === 'para-makbuzu' ? { 'aria-labelledby': 'teknik-ozellikler-baslik' } : {})}
+                >
+                  {pathId === 'para-makbuzu' && (
+                    <caption className="sr-only">Para Makbuzu Teknik Özellikleri</caption>
+                  )}
+                  <thead>
+                    <tr className="bg-slate-50 border-b border-gray-150">
+                      <th scope="col" className="p-4 text-xs font-black text-slate-700 uppercase tracking-wider w-1/3">Özellik</th>
+                      <th scope="col" className="p-4 text-xs font-black text-slate-700 uppercase tracking-wider w-2/3">Açıklama</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-150">
+                    {(pathId === 'para-makbuzu' ? [
+                      { key: "Ürün Türü", val: "Numaratörlü Otokopili Para Makbuzu Koçanı" },
+                      { key: "Ebat / Ölçü", val: "14 × 20 cm (Yarım Boy Standart Ebat)" },
+                      { key: "Kâğıt Türü", val: "1. Sınıf Kendinden Karbonlu Otokopi Kâğıdı" },
+                      { key: "Cilt Kapasitesi", val: "50 Takım / Cilt" },
+                      { key: "Nüsha Seçenekleri", val: "1 Asıl + 1 Suret, 1 Asıl + 2 Suret, 1 Asıl + 3 Suret" },
+                      { key: "Baskı Yöntemi", val: "Heidelberg Ofset Baskı (Siyah, Lacivert veya Özel Renk)" },
+                      { key: "Numaratör", val: "Kırmızı Otomatik Seri Numarası Baskısı (Dahil)" },
+                      { key: "Cilt ve Perforaj", val: "Üstten Tel Dikişli & Tırtıklı Koparma Hattı" },
+                      { key: "Tasarım Desteği", val: "Mizanpaj, Tasarım Desteği ve PDF Prova Onayı" },
+                      { key: "İmalat Süresi", val: "PDF Onayından Sonra 3–5 İş Günü" },
+                      { key: "Minimum Sipariş", val: "5 Cilt" },
+                      { key: "Teslimat", val: "Çift Oluklu Kolilerle Türkiye Geneli Kargo" }
+                    ] : pathId === 'siparis-fisi' ? [
+                      { key: "Ürün Türü", val: "Numaratörlü Otokopili Sipariş Fişi Koçanı" },
+                      { key: "Ebat / Ölçü", val: "14 × 20 cm (Yarım Boy Standart Ebat)" },
+                      { key: "Kâğıt Türü", val: "1. Sınıf Kendinden Karbonlu Otokopi Kâğıdı" },
+                      { key: "Cilt Kapasitesi", val: "50 Takım / Cilt" },
+                      { key: "Nüsha Seçenekleri", val: "1 Asıl + 1 Suret, 1 Asıl + 2 Suret, 1 Asıl + 3 Suret" },
+                      { key: "Baskı Yöntemi", val: "Heidelberg Ofset Baskı (1 Renk veya Özel Pantone)" },
+                      { key: "Numaratör", val: "Kırmızı Otomatik Seri Numarası Baskısı (Dahil)" },
+                      { key: "Cilt ve Perforaj", val: "Üstten Tel Dikişli & Tırtıklı Koparma Hattı" },
+                      { key: "Tasarım Desteği", val: "Mizanpaj, Tasarım Desteği ve PDF Prova Onayı" },
+                      { key: "İmalat Süresi", val: "PDF Onayından Sonra 3–5 İş Günü" },
+                      { key: "Minimum Sipariş", val: "5 Cilt" },
+                      { key: "Teslimat", val: "Çift Oluklu Kolilerle Türkiye Geneli Kargo" }
+                    ] : [
+                      { key: "Ürün Türü", val: "Numaratörlü Otokopili Sözleşme Koçanı" },
+                      { key: "Ebat", val: "20,5 x 28,5 cm (A4 Net Bitmiş Boyut)" },
+                      { key: "Baskı Tekniği", val: "Ofset Baskı" },
+                      { key: "Kağıt Türü", val: "1. Sınıf Kendinden Karbonlu Otokopi Kağıdı" },
+                      { key: "Nüsha Seçenekleri", val: "1 Asıl + 1 Suret, 1 Asıl + 2 Suret, 1 Asıl + 3 Suret" },
+                      { key: "Numaratör", val: "Kırmızı Otomatik Seri Numaralı" },
+                      { key: "Perfore", val: "Talebe Bağlı, Ücretsiz" },
+                      { key: "Ciltleme", val: "Üstten Bezli Tutkallı Cilt" },
+                      { key: "Tasarım Desteği", val: "Ücretsiz PDF Prova" },
+                      { key: "Teslim Süresi", val: "3-5 İş Günü" }
+                    ]).map((row, idx) => (
+                      <tr key={idx} className={idx % 2 === 0 ? "bg-white hover:bg-slate-50/50" : "bg-slate-50/30 hover:bg-slate-50/55"}>
+                        {pathId === 'para-makbuzu' ? (
+                          <th scope="row" className="p-4 text-sm font-black text-slate-900 text-left font-sans">{row.key}</th>
+                        ) : (
+                          <td className="p-4 text-sm font-black text-slate-900">{row.key}</td>
+                        )}
+                        <td className="p-4 text-sm font-semibold text-slate-650 leading-relaxed">{row.val}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {currentDetails.specifications.map((spec, idx) => (
+                  <div key={idx} className="p-5 bg-white border border-gray-150 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+                    <h3 className="text-sm font-black text-slate-900 mb-1 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                      {spec.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm font-semibold text-slate-650 leading-relaxed">
+                      {spec.value}
+                    </p>
+                    {spec.desc && (
+                      <p className="text-[11px] font-medium text-slate-400 mt-2">
+                        {spec.desc}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {(pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu') && (
+              <div className="mt-8 p-6 bg-slate-50 border border-slate-150 rounded-[2rem] shadow-sm">
+                <h3 className="text-lg md:text-xl font-black text-black mb-3 uppercase tracking-tight flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-secondary rounded-full" />
+                  {pathId === 'gider-makbuzu' ? 'Gider Makbuzu Teknik Baskı Özellikleri' : 'Tahsilat Makbuzu Teknik Baskı Özellikleri'}
+                </h3>
+                <div className="text-slate-650 text-sm md:text-base leading-relaxed font-semibold space-y-4">
+                  {pathId === 'gider-makbuzu' ? (
+                    <>
+                      <p>
+                        Gider makbuzu, işletmelerin yaptığı ödemeleri ve harcamaları kayıt altına almak için kullanılan önemli matbu evraklardan biridir. Mavi Basım tarafından üretilen gider makbuzu koçanları, firmanıza özel bilgilerle hazırlanır ve otokopili (kendinden karbonlu) kağıda basılır.
+                      </p>
+                      <p>
+                        Üst nüshaya yazılan bilgiler alt nüshalara otomatik olarak aktarılır. Her yaprak sıralı numaratör ile basılarak belge takibi kolaylaştırılır. Perfore (tırtık) hattı sayesinde sayfalar düzenli şekilde kopartılabilir ve sağlam ciltleme sistemi uzun süreli kullanım sağlar.
+                      </p>
+                      <p>
+                        Firmanızın logosu, unvanı, adres bilgileri ve vergi bilgileri baskıya eklenebilir. Baskı öncesinde ücretsiz dijital prova gönderilir and onay sonrasında üretime başlanır.
+                      </p>
+                      <p>
+                        İş hayatında sıklıkla karıştırılan <strong>gider pusulası</strong> ile <strong>gider makbuzu koçanı</strong> aslında farklı kullanım amaçlarına sahip, apayrı iki mali belgedir. Gider pusulası vergi mükellefi olmayan kişilerden alınan mal ve hizmetleri belgelendirmek için düzenlenirken, gider makbuzları şirketlerin kendi iç muhasebe akışında veya kasa çıkışlarında ödemeleri izlemek için kullanılır.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        Tahsilat makbuzu, işletmelerin aldığı ödemeleri ve tahsilatları kayıt altına almak için kullanılan en önemli matbu evraklardan biridir. Mavi Basım tarafından yüksek kalitede üretilen tahsilat makbuzu koçanları, firmanıza özel bilgilerle hazırlanır ve otokopili (kendinden karbonlu) kağıda basılır.
+                      </p>
+                      <p>
+                        Üst nüshaya yazılan bilgiler alt nüshalara otomatik olarak aktarılır. Her yaprak sıralı numaratör ile basılarak belge takibi kolaylaştırılır. Perfore (tırtık) hattı sayesinde sayfalar düzenli şekilde kopartılabilir ve sağlam ciltleme sistemi uzun süreli kullanım ve arşivleme sağlar.
+                      </p>
+                      <p>
+                        Firmanızın logosu, unvanı, adres bilgileri ve vergi bilgileri baskıya eklenebilir. Baskı öncesinde ücretsiz dijital prova gönderilir ve onay sonrasında üretime başlanır.
+                      </p>
+                      <p>
+                        İş hayatında sıklıkla tamamlayıcısı olarak kullanılan <strong>tediye makbuzu</strong> ile <strong>tahsilat makbuzu koçanı</strong> aslında nakit akışını çift taraflı yönetmenizi sağlayan apayrı iki evraktır. Tahsilat makbuzu işletmenize para girişi olduğunda düzenlenirken, tediye makbuzu ise kasadan nakit ödemeler yapılırken tanzim edilir.
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ÜRÜN AÇIKLAMALARI */}
+          {pathId !== "para-makbuzu" && (
+            <div className="bg-white border border-gray-150 rounded-3xl p-8 md:p-12 shadow-sm mb-14 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-32 -mt-32 blur-3xl pointer-events-none" />
+              <div className="space-y-8 relative z-10">
+                {/* GÜVEN VE DÖNÜŞÜM ROZETLERİ (TRUST & CONVERSION BADGES) */}
+                <div className="p-4 bg-gradient-to-r from-blue-50/80 via-slate-50 to-indigo-50/80 border border-blue-100 rounded-2xl shadow-xs">
+                  {pathId === 'adisyon' ? (
+                    <>
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-3">
+                        <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
+                          <span className="text-primary font-extrabold text-xs sm:text-sm">Tasarım Desteği</span>
+                        </div>
+                        <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
+                          <span className="text-emerald-600 font-extrabold text-xs sm:text-sm">24 Saat İçinde PDF Prova</span>
+                        </div>
+                        <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
+                          <span className="text-amber-600 font-extrabold text-xs sm:text-sm">Numaratör Baskısı Dahil</span>
+                        </div>
+                        <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
+                          <span className="text-blue-600 font-extrabold text-xs sm:text-sm">Türkiye’nin 81 İline Kargo</span>
+                        </div>
+                      </div>
+                      <p className="text-center text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed">
+                        Logo ve bilgileriniz eksiksiz ulaştığında tasarım provaları çoğunlukla aynı iş günü veya 24 saat içinde hazırlanır. PDF prova sayesinde baskı öncesi içerik ve yerleşim hatalarının önemli ölçüde önüne geçilir.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 text-center mb-3">
+                        <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
+                          <span className="text-emerald-600 font-extrabold text-xs sm:text-sm">Bugün Sipariş Verin</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">Aynı Gün Tasarım</span>
+                        </div>
+                        <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
+                          <span className="text-primary font-extrabold text-xs sm:text-sm">24 Saat İçinde PDF Prova</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">WhatsApp Onaylı</span>
+                        </div>
+                        <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
+                          <span className="text-blue-600 font-extrabold text-xs sm:text-sm">81 İle Hızlı Kargo</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">Özenli Paketleme</span>
+                        </div>
+                        <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
+                          <span className="text-amber-600 font-extrabold text-xs sm:text-sm">Yüksek Baskı Kalitesi</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">İmalatçı Garantisi</span>
+                        </div>
+                        <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center col-span-2 sm:col-span-1">
+                          <span className="text-indigo-600 font-extrabold text-xs sm:text-sm">Tasarım Desteği</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">Kurumsal Logolu</span>
+                        </div>
+                      </div>
+                      <p className="text-center text-xs sm:text-sm font-semibold text-slate-700 leading-relaxed">
+                        {pathId === 'recete' 
+                          ? "Mavi Basım, kurumsal kullanım amaçlı reçete koçanı baskı hizmeti ve matbu evrak imalatı sunmaktadır."
+                          : "Mavi Basım, işletmeler için numaratörlü ve otokopili matbu koçan baskıları üretmektedir."
+                        }
+                      </p>
+                    </>
+                  )}
+                </div>
+
+                {pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-black text-black mb-3 uppercase tracking-tight flex items-center gap-2">
+                      {currentDetails.whatIsTitle}
+                    </h2>
+                    <p className="text-slate-650 text-base leading-relaxed mb-4 font-medium">
+                      {currentDetails.whatIsContent}
+                    </p>
+                  </div>
+                )}
+
+                {pathId === 'adisyon' && (
+                  <>
+                    <div id="uretim-sureci" className="scroll-mt-24 border-t border-gray-100 pt-8">
+                      <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                        Numaratörlü Adisyon Siparişi ve Üretim Süreci
+                      </h2>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
+                          <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">1</div>
+                          <h3 className="text-sm font-black text-black uppercase mb-1">Adet ve Özellik Seçimi</h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">Fiyat tablosundan ihtiyacınız olan cilt adetini belirleyin.</p>
+                        </div>
+                        <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
+                          <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">2</div>
+                          <h3 className="text-sm font-black text-black uppercase mb-1">WhatsApp Üzerinden İletişim</h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">Sipariş butonuna tıklayarak firmanıza ait logo ve detayları bize iletin.</p>
+                        </div>
+                        <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
+                          <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">3</div>
+                          <h3 className="text-sm font-black text-black uppercase mb-1">Tasarım Desteği ve Onay</h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">Grafik ekibimizin hazırladığı adisyon taslağını onaylayın.</p>
+                        </div>
+                        <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
+                          <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">4</div>
+                          <h3 className="text-sm font-black text-black uppercase mb-1">Üretim ve Teslimat</h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">Onaylanan adisyon koçanları 3–5 iş günü içinde basılarak adresinize kargolanır.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="kimler-kullanir" className="scroll-mt-24 border-t border-gray-100 pt-8">
+                      <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                        {currentDetails.whoUsesTitle || "Kimler Adisyon Kullanır?"}
+                      </h2>
+                      <p className="text-slate-650 text-base leading-relaxed mb-4 font-medium">
+                        Adisyon koçanları, masa ve sipariş takibi yapan yeme-içme ve ağırlama işletmelerinde yaygın olarak kullanılır:
+                      </p>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+                        {currentDetails.whoUsesItems.map((itemStr, idx) => (
+                          <div key={idx} className="flex items-center gap-2.5 bg-slate-50 border border-slate-150 p-3 rounded-xl font-bold text-slate-800 text-xs sm:text-sm">
+                            <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                            <span>{itemStr}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <h3 className="text-lg font-black text-black mb-3 uppercase tracking-tight">
+                        Adisyon Koçanının İşletmeler İçin Avantajları
+                      </h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="bg-gray-50 border border-gray-150 rounded-2xl p-5 flex items-start gap-3">
+                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
+                          <div>
+                            <h3 className="text-sm font-black text-black mb-1">Düzenli Hesap ve Sipariş Takibi</h3>
+                            <p className="text-xs text-slate-600 font-medium leading-relaxed">Sipariş akışının düzenli yürütülmesine yardımcı olur.</p>
+                          </div>
+                        </div>
+                        <div className="bg-gray-50 border border-gray-150 rounded-2xl p-5 flex items-start gap-3">
+                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
+                          <div>
+                            <h3 className="text-sm font-black text-black mb-1">Numaratör ile Güvenli Kayıt</h3>
+                            <p className="text-xs text-slate-600 font-medium leading-relaxed">Ardışık numaralar sayesinde kayıp veya eksik adisyon takibini kolaylaştırır.</p>
+                          </div>
+                        </div>
+                        <div className="bg-gray-50 border border-gray-150 rounded-2xl p-5 flex items-start gap-3">
+                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
+                          <div>
+                            <h3 className="text-sm font-black text-black mb-1">Kurumsal Kimliğe Uygun Baskı</h3>
+                            <p className="text-xs text-slate-600 font-medium leading-relaxed">Firmanıza ait logo ve bilgiler tüm koçanlarda standart olarak yer alabilir.</p>
+                          </div>
+                        </div>
+                        <div className="bg-gray-50 border border-gray-150 rounded-2xl p-5 flex items-start gap-3">
+                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
+                          <div>
+                            <h3 className="text-sm font-black text-black mb-1">Hızlı ve Pratik Kullanım</h3>
+                            <p className="text-xs text-slate-600 font-medium leading-relaxed">Otokopili seçeneklerde kendinden kopyalı kâğıt yapısı sayesinde alt nüshaya anında kopyalama sağlar.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
+
+
+                  {pathId === 'sozlesme-baski' && (
+                    <>
+                      <div id="kimler-kullanir" className="scroll-mt-24 mt-6 pt-6 border-t border-gray-100">
+                        <h3 className="text-lg md:text-xl font-black text-black mb-3 uppercase tracking-tight">
+                          Otokopili Sözleşme Baskı Hizmeti
+                        </h3>
+                        <p className="text-slate-650 text-base leading-relaxed font-semibold">
+                          Otokopili sözleşme baskı ürünleri, işletmelerin satış, üyelik, kiralama ve hizmet süreçlerinde kullandıkları önemli kurumsal evraklar arasında yer almaktadır. Mavi Basım tarafından üretilen numaratörlü sözleşme koçanı baskıları; firma logosu, iletişim bilgileri ve özel şartnameler eklenerek tamamen kuruma özel hazırlanır.
+                        </p>
+                        <p className="text-slate-650 text-base leading-relaxed font-semibold mt-4">
+                          İstanbul Topkapı Matbaacılar Sitesi'ndeki üretim tesisimizde hazırlanan sözleşme koçanı baskı siparişleri; İstanbul, Ankara, İzmir, Bursa, Antalya, Konya, Adana ve Türkiye'nin 81 iline gönderilmektedir. İsteğe bağlı olarak tek nüsha, çift nüsha veya çok nüshalı otokopili sözleşme baskı seçenekleri sunulmaktadır.
+                        </p>
+                      </div>
+
+                      <div className="mt-6 pt-6 border-t border-gray-100">
+                        <h2 className="text-xl md:text-2xl font-black text-black mb-3 uppercase tracking-tight">
+                          Firma Logolu Sözleşme Koçanı Baskı
+                        </h2>
+                        <p className="text-slate-650 text-base leading-relaxed font-medium">
+                          Kurumsal kimliğinizi yansıtan firma logolu sözleşme koçanları; üyelik işlemleri, hizmet satışları, araç kiralama, eğitim kayıtları ve emlak işlemlerinde profesyonel görünüm sağlar. Firmanıza özel hazırlanan sözleşme formları logo, adres, iletişim bilgileri ve özel maddelerle baskıya hazırlanır.
+                        </p>
+                      </div>
+                    </>
+                  )}
+
+                {pathId !== 'adisyon' && pathId !== 'sozlesme-baski' && pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'tediye-makbuzu' && pathId !== 'siparis-fisi' && pathId !== 'para-makbuzu' && (
+                  <div id="kimler-kullanir" className="scroll-mt-24 border-t border-gray-100 pt-8">
+                    <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                      {currentDetails.whoUsesTitle}
+                    </h2>
+                    <p className="text-slate-650 text-base leading-relaxed mb-4 font-medium">
+                      {pathId === 'tediye-makbuzu'
+                        ? "Tediye makbuzu birçok işletme tarafından ödeme kayıtlarının tutulması amacıyla kullanılır:"
+                        : pathId === 'recete'
+                        ? "Özel muayenehaneler, klinikler ve sağlık kuruluşlarının kurumsal matbuat ihtiyaçlarına yönelik üretilmektedir:"
+                        : `${currentDetails.breadcrumbTitle}, kayıtların düzenli tutulması ve evrak takibi amacıyla birçok işletme tarafından kullanılır:`}
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-slate-800 text-sm md:text-base font-bold pl-2">
+                      {pathId === "sozlesme-baski" ? (
+                        <>
+                          <div className="flex items-center gap-3">
+                            <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] shrink-0">➔</span>
+                            <Link to="/sozlesme-baski?type=spor-salonu" className="text-black hover:text-emerald-700 hover:underline transition-all font-bold">
+                              Spor Salonları ve Fitness Merkezleri
+                            </Link>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] shrink-0">➔</span>
+                            <Link to="/sozlesme-baski?type=emlak-formlari" className="text-black hover:text-emerald-700 hover:underline transition-all font-bold">
+                              Emlak ve Gayrimenkul Ofisleri
+                            </Link>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] shrink-0">➔</span>
+                            <Link to="/arac-kiralama" className="text-black hover:text-emerald-700 hover:underline transition-all font-bold">
+                              Araç Kiralama Firmaları
+                            </Link>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] shrink-0">➔</span>
+                            <Link to="/sozlesme-baski?type=guzellik" className="text-black hover:text-emerald-700 hover:underline transition-all font-bold">
+                              Güzellik Merkezleri
+                            </Link>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] shrink-0">➔</span>
+                            <Link to="/siparis-fisi" className="text-black hover:text-emerald-700 hover:underline transition-all font-bold">
+                              Teknik Servis Firmaları
+                            </Link>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] shrink-0">➔</span>
+                            <Link to="/sozlesme-baski?type=egitim" className="text-black hover:text-emerald-700 hover:underline transition-all font-bold">
+                              Eğitim Kurumları
+                            </Link>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] shrink-0">➔</span>
+                            <Link to="/sozlesme-baski?type=saglik" className="text-black hover:text-emerald-700 hover:underline transition-all font-bold">
+                              Sağlık ve Danışmanlık Merkezleri
+                            </Link>
+                          </div>
+                        </>
+                      ) : (
+                        currentDetails.whoUsesItems.map((itemStr, idx) => (
+                          <div key={idx} className="flex items-center gap-3">
+                            <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] shrink-0">➔</span>
+                            <span>{itemStr}</span>
+                          </div>
+                        ))
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {pathId !== 'adisyon' && pathId !== 'para-makbuzu' && pathId !== 'siparis-fisi' && pathId !== 'recete' && pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && (
+                  <div id="uretim-sureci" className="scroll-mt-24 border-t border-gray-100 pt-8">
+                    <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                      {currentDetails.breadcrumbTitle} Sipariş ve Üretim Süreci
+                    </h2>
+                    <p className="text-slate-650 text-base leading-relaxed mb-6 font-medium">
+                      Tüm kurumsal matbu evrak siparişleriniz grafik tasarımdan kargoya kadar 4 adımlı standart kalite sürecinden geçer:
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                      <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
+                        <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">1</div>
+                        <h3 className="text-sm font-black text-black uppercase mb-1">Adet ve Nüsha Seçimi</h3>
+                        <p className="text-xs text-slate-600 font-medium leading-relaxed">İhtiyacınıza uygun cilt adedini ve nüsha sayısını fiyat tablosundan belirleyin.</p>
+                      </div>
+                      <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
+                        <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">2</div>
+                        <h3 className="text-sm font-black text-black uppercase mb-1">WhatsApp İletişim</h3>
+                        <p className="text-xs text-slate-600 font-medium leading-relaxed">Firmanızın logosunu, unvan ve iletişim bilgilerini WhatsApp hattımıza iletin.</p>
+                      </div>
+                      <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
+                        <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">3</div>
+                        <h3 className="text-sm font-black text-black uppercase mb-1">Ücretsiz PDF Prova</h3>
+                        <p className="text-xs text-slate-600 font-medium leading-relaxed">Grafik ekibimizin hazırladığı baskı şablonunu ve numaratör konumunu onaylayın.</p>
+                      </div>
+                      <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
+                        <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">4</div>
+                        <h3 className="text-sm font-black text-black uppercase mb-1">Ofset Baskı ve Teslimat</h3>
+                        <p className="text-xs text-slate-600 font-medium leading-relaxed">Heidelberg ofset makinelerimizde basılıp ciltlenen koçanlarınız kargoya verilir.</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {pathId !== 'adisyon' && pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'para-makbuzu' && (
+                  <div className="border-t border-gray-100 pt-8">
+                    <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                      {currentDetails.usageAreasTitle}
+                    </h2>
+                    <p className="text-slate-650 text-base leading-relaxed mb-6 font-medium">
+                      {pathId === 'sozlesme-baski'
+                        ? "Firma logolu ve seri numaralı sözleşme formları, işlemlerin düzenli şekilde kayıt altına alınmasına ve arşivlenmesine yardımcı olur:"
+                        : `Firma logolu ve numaratörlü ${currentDetails.breadcrumbTitle.toLowerCase()} koçanları, işlemlerin kayıt altına alınmasına ve arşivlenmesine yardımcı olur:`}
+                    </p>
+                    <div className="space-y-4">
+                      {currentDetails.usageAreasItems.map((area, idx) => (
+                        <div key={idx} className="bg-gray-50 border border-gray-150 rounded-2xl p-5">
+                          <h3 className="text-sm font-black text-black mb-1.5">{area.title}</h3>
+                          <p className="text-gray-600 text-xs md:text-sm font-medium leading-relaxed">
+                            {area.desc}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* DÖNÜŞÜM / LEAD CTA BLOĞU */}
+          <div className={`${pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu' ? 'hidden' : ''} bg-gradient-to-br from-gray-50 to-white border-2 border-emerald-500/20 rounded-3xl p-8 md:p-10 shadow-sm mb-14 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8`}>
+            <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-50/50 rounded-full -mr-24 -mt-24 blur-2xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/5 rounded-full -ml-16 -mb-16 blur-xl pointer-events-none" />
+            
+            <div className="relative z-10 space-y-4 max-w-xl text-center md:text-left">
+              <span className="inline-block bg-emerald-100 text-emerald-800 text-xs md:text-sm px-3.5 py-1 rounded-full font-black uppercase tracking-wider">
+                Hızlı Tasarım Desteği
+              </span>
+              <h2 className="text-2xl md:text-3xl font-black text-black uppercase tracking-tight leading-tight">
+                {pathId === "sozlesme-baski" ? "Sözleşme" : currentDetails.breadcrumbTitle} Tasarımınız Hazır mı?
+              </h2>
+              <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">
+                PDF, Word veya eski {pathId === "sozlesme-baski" ? "sözleşme" : currentDetails.breadcrumbTitle.toLowerCase()} örneğinizi bize gönderin.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-left">
+                <div className="flex items-center gap-2 bg-white/60 border border-gray-100 px-3 py-2 rounded-xl text-xs md:text-sm font-bold text-gray-800">
+                  <span className="text-emerald-600 text-base">✓</span>
+                  <span>Ücretsiz kontrol</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/60 border border-gray-150 px-3 py-2 rounded-xl text-xs md:text-sm font-bold text-gray-800">
+                  <span className="text-emerald-600 text-base">✓</span>
+                  <span>Baskıya uygun düzenleme</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/60 border border-gray-150 px-3 py-2 rounded-xl text-xs md:text-sm font-bold text-gray-800">
+                  <span className="text-emerald-600 text-base">✓</span>
+                  <span>Hızlı fiyat teklifi</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative z-10 shrink-0 flex flex-col items-center gap-3 w-full md:w-auto">
+              <div className="text-center md:text-right w-full md:w-auto">
+                <span className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Müşteri Hattı</span>
+                <span className="block text-lg md:text-xl font-black text-black tracking-tight flex items-center gap-1.5 justify-center md:justify-end">
+                  <Phone size={16} className="text-emerald-600 shrink-0" />
+                  WhatsApp: 0536 602 23 73
+                </span>
+              </div>
+              <a 
+                href={`https://wa.me/905366022373?text=${encodeURIComponent(`Merhaba, ${pathId === "sozlesme-baski" ? "sözleşme" : currentDetails.breadcrumbTitle.toLowerCase()} baskısı için tasarım örneğimiz var. Kontrol edip fiyat teklifi verebilir misiniz?`)}`}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-full text-sm md:text-base font-black tracking-tight transition-all shadow-lg hover:shadow-emerald-500/20 hover:scale-105 active:scale-95 duration-200"
+              >
+                <Phone size={18} className="fill-current rotate-12 shrink-0" />
+                <span>WhatsApp'tan Teklif Al</span>
+              </a>
+            </div>
+          </div>
+
+          {/* ALAKALI ÜRÜNLER (İÇ LİNKLER) */}
+          {pathId !== "arac-kiralama" && (
+            <div className="bg-gray-50 border border-gray-150 rounded-3xl p-6 md:p-8 mb-14">
+              <h2 className="text-lg md:text-xl font-black text-black uppercase tracking-tight mb-4 flex items-center gap-2">
+                <span className="w-2 h-5 bg-primary rounded-full" />
+                İlginizi Çekebilecek Diğer Baskı Ürünlerimiz
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {getRelatedProducts(pathId).map((rel, rIdx) => (
+                  <Link key={rIdx} to={rel.path} className="bg-white border border-gray-150 rounded-2xl p-4 hover:border-primary/40 hover:shadow-md transition-all text-center flex flex-col justify-center items-center group">
+                    <span className="text-black font-black text-sm uppercase group-hover:text-primary transition-colors text-center">{rel.label}</span>
+                    <span className="text-gray-500 text-[11px] mt-1 font-bold">{rel.desc}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* DETAYLI BİLGİLENDİRME VE REHBER ALANI */}
+          <div className="bg-white border border-gray-150 rounded-3xl p-8 md:p-12 shadow-sm mb-14 relative overflow-hidden space-y-12 text-black">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full -mr-32 -mt-32 blur-3xl pointer-events-none" />
+
+            {/* EK GÖRSEL BLOĞU */}
+            <div className="relative z-10 bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
+              <div className="flex items-center gap-2 mb-6">
+                <span className="w-2.5 h-5 bg-secondary rounded-full" />
+                <h3 className="text-lg md:text-xl font-black text-black uppercase tracking-tight">{pathId === 'sozlesme-baski' ? 'Kurumsal Sözleşme Koçanı Tasarımı' : `${currentDetails.breadcrumbTitle} Örneği`}</h3>
+              </div>
+              <div className="flex flex-col md:flex-row gap-6 items-stretch">
+                <figure className="w-fit shrink-0 overflow-hidden rounded-xl border border-gray-150 bg-white p-3 flex flex-col items-center justify-center mx-auto md:max-w-md lg:max-w-lg">
+                  <DynamicImageContainer 
+                    src={pathId === 'recete' ? '/images/recete/recete-kocani-ornegi.webp' : pathId === 'tediye-makbuzu' ? '/images/tediye-makbuzu/numaratorlu-tediye-makbuzu.webp' : pathId === 'tahsilat-makbuzu' ? '/images/tahsilat-makbuzu/numaratorlu-tahsilat-makbuzu.webp' : (currentDetails.gallery[1]?.src || currentDetails.featureImage)} 
+                    alt={pathId === 'sozlesme-baski' ? 'Kurumsal Sözleşme Formu Şablonu' : pathId === 'arac-kiralama' ? 'araç teslim tutanağı örneği' : pathId === 'sigorta-policeleri' ? 'sigorta teklif formu örneği' : pathId === 'tediye-makbuzu' ? 'Numaratörlü Tediye Makbuzu Şablonu' : pathId === 'tahsilat-makbuzu' ? 'Numaratörlü Tahsilat Makbuzu Şablonu' : `${currentDetails.breadcrumbTitle} Şablonu`} 
+                    title={pathId === 'sozlesme-baski' ? 'Kurumsal Sözleşme Formu Şablonu' : pathId === 'arac-kiralama' ? 'Araç Teslim Tutanağı Örneği' : pathId === 'sigorta-policeleri' ? 'Sigorta Teklif Formu Örneği' : pathId === 'tediye-makbuzu' ? 'Numaratörlü Tediye Makbuzu Şablonu' : pathId === 'tahsilat-makbuzu' ? 'Numaratörlü Tahsilat Makbuzu Şablonu' : `${currentDetails.breadcrumbTitle} Şablonu`} 
+                    isTallLayoutDefault={isTallLayout}
+                    className="mb-2"
+                    imgClassName="p-1 hover:scale-105"
+                  />
+                  <figcaption className="text-gray-550 text-[11px] mt-2.5 text-center font-bold leading-normal text-gray-650">
+                    {pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu'
+                      ? `Örnek ${pathId === 'gider-makbuzu' ? 'gider' : 'tahsilat'} makbuzu tasarımı üzerinde tarih, unvan, miktar ve tutar alanları gösterilmektedir.`
+                      : pathId === 'adisyon'
+                      ? `Örnek adisyon tasarımı üzerinde tarih, ürün, miktar ve tutar alanları gösterilmektedir.`
+                      : pathId === 'sozlesme-baski'
+                      ? 'Örnek otokopili sözleşme tasarımı üzerinde tarih, unvan, imzalar ve şartnameler gösterilmektedir.'
+                      : `Örnek ${currentDetails.breadcrumbTitle.toLowerCase()} tasarımı üzerinde tarih, unvan, adet ve ıslak imza alanları gösterilmektedir.`}
+                  </figcaption>
+                </figure>
+                <div className="flex-1 flex flex-col justify-center space-y-4">
+                  {pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu' ? (
+                    <>
+                      <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">
+                        Sitemizde incelediğiniz <strong>{pathId === 'gider-makbuzu' ? 'gider' : 'tahsilat'} makbuzu örneği</strong>, firmanıza göre uyarlanabilir bir şablon sunmaktadır. Hazırlanacak olan <strong>{pathId === 'gider-makbuzu' ? 'gider' : 'tahsilat'} makbuzu koçanı</strong> üzerindeki tüm tablo alanları, logo konumlandırması ve renk tercihleri firmanıza özel olarak tasarlanır.
+                      </p>
+                      <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">
+                        Elinizde halihazırda kullandığınız veya internetten bulduğunuz bir <strong>boş {pathId === 'gider-makbuzu' ? 'gider' : 'tahsilat'} makbuzu</strong> tasarımı varsa, uzman grafik ekibimiz bu çalışmayı logonuzla entegre ederek baskıya hazır hale getirir. Sıfırdan profesyonel bir <strong>{pathId === 'gider-makbuzu' ? 'gider' : 'tahsilat'} makbuzu bastırma</strong> hizmeti almak isteyen müşterilerimiz için de sektörel standartlara uygun mizanpaj desteği sağlıyoruz.
+                      </p>
+                    </>
+                  ) : pathId === 'adisyon' ? (
+                    <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">
+                      Adisyon basımı siparişlerinizde firma logonuz, adres bilgileriniz ve masa düzeninize uygun sütun alanları kurumsal kimliğinize özel olarak hazırlanmaktadır.
+                    </p>
+                  ) : (
+                    <>
+                      <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">
+                        {pathId === 'sozlesme-baski'
+                          ? "Sözleşme tasarımlarınız, firma logonuz ve kurumsal şartlarınıza göre uyarlanarak baskıya hazırlanmaktadır."
+                          : pathId === 'arac-kiralama'
+                          ? "Araç kiralama sözleşmesi ve teslim tutanağı tasarımlarınız, markanıza özel logo ve hukuki maddelerinize uygun olarak hazırlanır."
+                          : pathId === 'recete'
+                          ? "Siparişe konu matbu evraklar, müşteri tarafından iletilen bilgi ve içeriklere göre baskıya hazırlanır."
+                          : `${currentDetails.breadcrumbTitle} siparişlerinizde, firma bilgilerine göre düzenlenerek baskıya hazırlanır.`}
+                      </p>
+                      <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">
+                        {pathId === 'arac-kiralama'
+                          ? "Örnek hasar şeması ve kiralama şartları alanları, firmanızın ihtiyaçlarına göre tamamen özelleştirilebilir."
+                          : "Bu örnek şablon ihtiyaçlarınıza ve kurumsal şartlarınıza göre revize edilebilir."}
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+
+              {pathId === 'recete' && (
+                <div className="mt-8 pt-8 border-t border-gray-200/85 space-y-4">
+                  <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight flex items-center gap-2">
+                    <span className="w-2 h-6 bg-secondary rounded-full" />
+                    Reçete Kağıdı Örneği ve Şablonları
+                  </h2>
+                  <p className="text-gray-650 text-sm md:text-base font-medium leading-relaxed">
+                    <strong>Reçete kağıdı örneği</strong>; tarih alanı, hasta bilgileri, kurum unvanı, doktor bilgileri ve imza bölümlerinden oluşan standart bir yerleşime sahiptir. Müşterilerimizin talebi doğrultusunda mevcut <strong>boş reçete örneği</strong> veya <strong>reçete örneği PDF</strong> şablonları üzerinden yeni baskı çalışmaları hazırlanabilmektedir.
+                  </p>
+                  <div className="pt-2">
+                    <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">
+                      Reçete Örneği PDF ve Boş Reçete Şablonları
+                    </h3>
+                    <p className="text-gray-650 text-sm md:text-base font-medium leading-relaxed">
+                      Kurumunuza özel hazırlanan <strong>boş reçete örneği</strong> ve <strong>reçete örneği PDF</strong> dosyaları dijital baskı öncesinde tarafınıza iletilerek taslak onayı alınmaktadır.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {currentDetails.extraSampleTitle && currentDetails.extraSampleContent && (
+                <div className="mt-8 pt-8 border-t border-gray-200/85 space-y-4">
+                  <h3 className="text-base md:text-lg font-black text-black uppercase tracking-tight flex items-center gap-2 mb-2">
+                    <span className="w-1.5 h-3 bg-secondary rounded-full" />
+                    {currentDetails.extraSampleTitle}
+                  </h3>
+                  {currentDetails.extraSampleContent.map((paragraph, pIdx) => (
+                    <p key={pIdx} className="text-gray-650 text-sm md:text-base font-medium leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {(pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu') && (
+              <div id="kimler-kullanir" className="scroll-mt-24 relative z-10 border-t border-gray-100 pt-8">
+                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-secondary rounded-full" />
+                  {pathId === 'gider-makbuzu' ? 'Özel Tasarım Gider Makbuzu Baskı ve Kullanım Alanları' : 'Özel Tasarım Tahsilat Makbuzu Baskı ve Kullanım Alanları'}
+                </h2>
+                <div className="text-slate-650 text-base leading-relaxed font-semibold space-y-4 text-left md:text-justify text-black">
+                  {pathId === 'gider-makbuzu' ? (
+                    <>
+                      <p>
+                        Her firmanın kullandığı evrak yapısı ve bilgi alanları farklılık gösterebilir. Bu nedenle <strong>gider makbuzu baskı</strong> işlemleri hazır şablonlarla sınırlı kalmadan, talep edilen alanlara göre özel olarak tasarlanabilmektedir. Firma logosu, iletişim bilgileri, vergi bilgileri, açıklama alanları ve özel tablolar baskıya eklenebilir.
+                      </p>
+                      <p>
+                        Otokopili ve numaratörlü olarak üretilebilen özel tasarım gider makbuzu koçanları, kullanım alışkanlıklarına uygun şekilde hazırlanır. 1 asıl + 1 suret veya 1 asıl + 2 suret seçenekleriyle üretim yapılabilir. İstenilen başlangıç numarası uygulanabilir ve baskı öncesinde PDF prova onayı alınarak <strong>gider makbuzu baskısı</strong> çalışması kesinleştirilebilir.
+                      </p>
+                      <p>
+                        Logolu ve özel tasarımlı gider makbuzu baskıları, belge düzeninin korunmasına yardımcı olurken firmanıza özgü bir kullanım kolaylığı da sağlar. Profesyonel kalitede <strong>gider makbuzu bastırma</strong> ve hızlı sipariş süreçlerimizle firmanızın tüm matbu evrak ihtiyaçlarını karşılıyoruz.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        Her işletmenin kullandığı tahsilat makbuzu aynı yapıda olmak zorunda değildir. İş akışınıza uygun olarak ihtiyaç duyduğunuz bilgi alanları eklenebilir, gereksiz bölümler kaldırılabilir ve tamamen firmanıza özel bir mizanpaj hazırlanabilir. Böylece belge düzeni hem daha pratik hale gelir hem de günlük kullanımda zaman kazandırır.
+                      </p>
+                      <p>
+                        Özel tasarım çalışmalarda ödeme şekli (nakit, kredi kartı, havale/EFT), IBAN bilgisi, QR kod, açıklama alanı, teslim eden ve teslim alan bölümleri, kaşe alanı, cari hesap kodu, proje numarası, sipariş numarası veya firmanızın kullandığı diğer özel bilgi alanları makbuza eklenebilmektedir. İstenirse farklı sütun yapıları, ek tablolar ve kurumsal renk düzeni de uygulanabilir.
+                      </p>
+                      <p>
+                        Hazırlanan tasarım, firmanızın çalışma sistemine uygun şekilde düzenlenerek baskıya hazır hale getirilir. Böylece kullanılan tahsilat makbuzu sadece ödeme kaydı oluşturan bir evrak olmaktan çıkar, işletmenizin muhasebe ve belge yönetim süreçlerine uygun, tamamen size özel bir çalışma haline gelir.
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {(pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu') && (
+              <div className="relative z-10 border-t border-gray-100 pt-8">
+                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-secondary rounded-full" />
+                  {pathId === 'gider-makbuzu' ? 'Gider Makbuzu Baskı ve Bastırma Hizmeti' : 'Tahsilat Makbuzu Baskı ve Bastırma Hizmeti'}
+                </h2>
+                <div className="text-slate-650 text-base leading-relaxed font-semibold space-y-4 text-left md:text-justify text-black">
+                  {pathId === 'gider-makbuzu' ? (
+                    <>
+                      <p>
+                        <strong>Gider makbuzu baskı</strong> hizmeti, harcama ve ödeme kayıtlarını düzenli şekilde takip etmek isteyen firmalar tarafından tercih edilmektedir. Kullanım amacına göre hazırlanan gider makbuzu koçanları, otokopili ve numaratörlü olarak üretilebilmektedir. Firmanızın logo, unvan og iletişim bilgileri baskıya eklenerek kullanıma hazır hale getirilir.
+                      </p>
+                      <p>
+                        <strong>Otokopili gider makbuzu baskı</strong> seçeneklerinde üst nüshaya yazılan bilgiler alt nüshalara otomatik olarak aktarılır. Bu sayede karbon kağıdı kullanmadan hızlı ve pratik bir kullanım elde edilir. <strong>Numaratörlü gider makbuzu baskı</strong> modellerinde ise her yaprak ardışık sıra numarası ile basılarak evrak takibi kolaylaştırılır.
+                      </p>
+                      <p>
+                        <strong>Logolu gider makbuzu baskı</strong> çözümleri, firma bilgilerinin tüm koçanlarda standart şekilde yer almasını sağlar. İhtiyaca göre 1 asıl + 1 suret veya 1 asıl + 2 suret olarak üretim yapılabilmektedir. <strong>Gider makbuzu bastırma</strong> sürecinde baskı öncesi tasarım kontrolü yapılarak çalışma onaya sunulur ve onay sonrasında üretime alınır.
+                      </p>
+                      <p>
+                        Farklı ölçü, nüsha ve <strong>gider makbuzu baskı</strong> seçenekleriyle hazırlanan ürünler, günlük evrak düzeninin sağlanmasına ve kayıt süreçlerinin daha düzenli yürütülmesine yardımcı olur.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        Tahsilat makbuzu baskı süreci, onaylanan tasarımın üretime hazırlanmasıyla başlar. Baskıda kullanılan kağıt türü, nüsha sayısı, baskı rengi ve ciltleme özellikleri sipariş detaylarına göre belirlenir. Üretim aşamasında baskı kalitesi, sayfa hizalaması ve kesim ölçüleri kontrol edilerek tüm koçanların aynı standartta hazırlanması sağlanır.
+                      </p>
+                      <p>
+                        Baskısı tamamlanan makbuzlar, ciltleme ve kalite kontrol işlemlerinin ardından paketlenerek sevkiyata hazır hale getirilir. Sipariş öncesinde belirlenen başlangıç numarası, özel bilgi alanları ve diğer üretim detayları baskı sırasında uygulanır. Böylece teslim edilen tüm koçanlar kullanıma hazır şekilde hazırlanmış olur.
+                      </p>
+                      <p>
+                        Standart ölçülerin yanı sıra işletmenizin talep ettiği farklı ebatlarda ve özel mizanpajlarda üretim yapılabilmektedir. Hazırlanan ürünler güvenli şekilde paketlenerek Türkiye'nin her yerine kargo ile gönderilir ve teslimat öncesinde son kalite kontrol aşamasından geçirilir.
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {(pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu') && (
+              <div id="uretim-sureci" className="scroll-mt-24 relative z-10 border-t border-gray-100 pt-8">
+                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-secondary rounded-full" />
+                  {pathId === 'gider-makbuzu' ? 'Gider Makbuzu Siparişi ve Üretim Süreci' : 'Tahsilat Makbuzu Siparişi ve Üretim Süreci'}
+                </h2>
+                <div className="text-slate-650 text-base leading-relaxed font-semibold space-y-4 text-left md:text-justify text-black">
+                  <p>
+                    {pathId === 'gider-makbuzu' ? (
+                      <>
+                        <strong>Gider makbuzu siparişi</strong> vermek için firmanızın logosunu, iletişim bilgilerini ve talep ettiğiniz nüsha sayısını iletmeniz yeterlidir. İhtiyacınıza göre <strong>otokopili gider makbuzu</strong> veya <strong>numaratörlü gider makbuzu</strong> seçenekleri hazırlanabilir. <strong>Özel tasarım gider makbuzu</strong> çalışmalarında tüm alanlar firmanıza göre düzenlenebilir. Onaylanan tasarım sonrasında <strong>gider makbuzu basımı</strong> süreci başlatılır ve baskılar kısa sürede üretime alınır.
+                      </>
+                    ) : (
+                      <>
+                        <strong>Tahsilat makbuzu siparişi</strong> vermek için firmanızın logosunu, iletişim bilgilerini ve talep ettiğiniz nüsha sayısını iletmeniz yeterlidir. İhtiyacınıza göre <strong>otokopili tahsilat makbuzu</strong> veya <strong>numaratörlü tahsilat makbuzu</strong> seçenekleri hazırlanabilir. <strong>Özel tasarım tahsilat makbuzu</strong> çalışmalarında tüm alanlar firmanıza göre düzenlenebilir. Onaylanan tasarım sonrasında <strong>tahsilat makbuzu basımı</strong> süreci başlatılır ve baskılar kısa sürede üretime alınır.
+                      </>
+                    )}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {pathId !== 'arac-kiralama' && (pathId === 'gider-makbuzu' || currentDetails.howToFillTitle || currentDetails.requiredInfoTitle) ? (
+              <div id="nasil-doldurulur" className={`scroll-mt-24 relative z-10 grid grid-cols-1 ${pathId === 'gider-makbuzu' ? '' : 'md:grid-cols-2'} gap-8 border-t border-gray-100 pt-8`}>
+                {/* Nasıl Doldurulur? */}
+                {(pathId === 'gider-makbuzu' || currentDetails.howToFillTitle) && (
+                  <div className={pathId === 'gider-makbuzu' ? 'max-w-4xl' : ''}>
+                    <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                      {pathId === 'gider-makbuzu' ? 'Gider Makbuzu Nasıl Doldurulur?' : currentDetails.howToFillTitle}
+                    </h2>
+                    {pathId === 'gider-makbuzu' ? (
+                      <div className="text-slate-650 text-base leading-relaxed font-semibold space-y-4 text-left md:text-justify">
+                        <p>
+                          Gider makbuzu düzenlenirken işlem tarihi, açıklama bilgisi ve ödeme tutarı eksiksiz şekilde belirtilmelidir. Yapılan harcamanın konusu açık ve anlaşılır olarak yazılmalı, gerekli durumlarda firma bilgileri ve imza alanları doldurulmalıdır.
+                        </p>
+                        <p>
+                          Standart bir gider makbuzu üzerinde tarih, belge numarası, açıklama alanı, tutar bilgisi ve imza bölümleri bulunur. İşletmeler ihtiyaçlarına göre bu alanları genişletebilir veya özel tablo düzenleri oluşturabilir.
+                        </p>
+                        <p>
+                          Otokopili gider makbuzu koçanlarında üst nüshaya yazılan bilgiler alt nüshalara otomatik olarak aktarılır. Numaratörlü gider makbuzu modellerinde ise her yaprak ardışık sıra numarası ile basılarak evrak takibi kolaylaştırılır. Düzenli ve okunaklı şekilde doldurulan gider makbuzları, işletmelerin muhasebe ve arşiv süreçlerini daha düzenli yürütmesine yardımcı olur.
+                        </p>
+                      </div>
+                    ) : (
+                      <ul className="space-y-3 pl-1">
+                        {currentDetails.howToFillContent.map((para, pIdx) => (
+                          <li key={pIdx} className="flex items-start gap-2.5 text-slate-650 text-base leading-relaxed font-medium">
+                            <span className="text-primary mt-1.5 shrink-0 text-xs">•</span>
+                            <span>{para}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
+
+                {/* Bulunması Gereken Bilgiler */}
+                {pathId !== 'gider-makbuzu' && currentDetails.requiredInfoTitle && (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                      {currentDetails.requiredInfoTitle}
+                    </h2>
+                    <ul className="space-y-3 pl-1">
+                      {currentDetails.requiredInfoContent.map((para, pIdx) => (
+                        <li key={pIdx} className="flex items-start gap-2.5 text-slate-650 text-base leading-relaxed font-medium">
+                          <span className="text-primary mt-1.5 shrink-0 text-xs">•</span>
+                          <span>{para}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ) : null}
+
+            {pathId === 'para-makbuzu' && (
+              <>
+                {/* BU ÜRÜN KİMLER İÇİN ÜRETİLİYOR? */}
+                <div id="kimler-kullanir" className="scroll-mt-24 relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    <span className="w-2 h-7 bg-primary rounded-full" />
+                    Bu Ürün Kimler İçin Üretiliyor?
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed mb-6 font-semibold">
+                    Numaratörlü ve otokopili para makbuzu koçanları, elden nakit ödeme, kapora, borç ve teslimat kaydı tutan tüm kurum ve işletmeler tarafından tercih edilmektedir:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {[
+                      { title: "Emlak ve Gayrimenkul Ofisleri", desc: "Müşterilerden alınan emlak kaporaları ve kira teslimatlarının yazılı belgesi için." },
+                      { title: "İnşaat Firmaları ve Şantiyeler", desc: "Şantiye nakit harcamaları ve taşeron avans ödemelerini kayıt altına almak için." },
+                      { title: "Avukatlar ve Hukuk Büroları", desc: "Müvekkillerden alınan masraf avansları ve nakit tahsilatların dökümü için." },
+                      { title: "Muhasebe ve Mali Müşavirler", desc: "Mükellef masraf ve harç ödemelerinin kayıt altına alınması için." },
+                      { title: "Dernekler, Vakıflar ve Kulüpler", desc: "Makbuz karşılığı nakit bağış, aidat ve katılım payı ödemelerini belgelemek için." },
+                      { title: "Oto Galeriler ve Araç Satışı", desc: "Araç alım-satım kaporaları ve peşinat ödemelerini güvenle arşivlemek için." },
+                      { title: "Organizasyon Firmaları", desc: "Etkinlik, düğün ve kiralama kaporalarının resmi ve düzenli kaydı için." },
+                      { title: "Toptan ve Perakende Ticaret", desc: "Saha kuryeleri, teslimat elemanları ve elden yapılan nakit tahsilatlar için." }
+                    ].map((item, idx) => (
+                      <div key={idx} className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 flex flex-col justify-between hover:border-primary/40 hover:bg-white transition-all shadow-2xs">
+                        <div>
+                          <div className="flex items-center gap-2 mb-1.5">
+                            <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                            <h3 className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight">{item.title}</h3>
+                          </div>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* GERÇEK ÜRETİM SÜRECİ */}
+                <div id="uretim-sureci" className="scroll-mt-24 relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    <span className="w-2 h-7 bg-emerald-600 rounded-full" />
+                    Gerçek Üretim Süreci
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed mb-6 font-semibold">
+                    Para makbuzu siparişiniz grafik tasarımdan adresinize teslim edilene kadar 6 aşamalı yüksek kalitede matbaa imalat sürecinden geçer:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {[
+                      { step: "01", title: "CTP Kalıp Pozlama", desc: "PDF provası onaylanan tasarımlarınız yüksek çözünürlüklü termal CTP kalıplara sıfır hatayla pozlanır." },
+                      { step: "02", title: "Heidelberg Ofset Baskı", desc: "Alman kalitesi Heidelberg ofset baskı makinelerimizde kurumsal renginiz net ve canlı olarak basılır." },
+                      { step: "03", title: "Otomatik Kırmızı Numaratör", desc: "Seri ve sıra takibini sağlayan 6 haneli kırmızı numaratör baskısı yüksek hassasiyetle vurulur." },
+                      { step: "04", title: "Hassas Perforaj (Tırtık)", desc: "Sayfaların koçandan pürüzsüz ve kolayca kopması için tırtıklı perforaj hattı çekilir." },
+                      { step: "05", title: "Tel Dikiş & Ciltleme", desc: "Koçanın dağılmasını önleyen telli dikiş, dip tutkal ve sırta bez kaplama dikiş cilt yapılır." },
+                      { step: "06", title: "Kalite Kontrol & Paketleme", desc: "Numaratör sırası ve sayfa adedi kontrol edilerek koruyucu çift oluklu kolilerde adresinize kargolanır." }
+                    ].map((step, idx) => (
+                      <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-5 shadow-2xs relative overflow-hidden flex flex-col justify-between">
+                        <div className="absolute top-2 right-3 text-3xl font-black text-slate-100 select-none">{step.step}</div>
+                        <div className="relative z-10">
+                          <h3 className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight mb-2 flex items-center gap-2">
+                            <span className="w-5 h-5 rounded-lg bg-emerald-100 text-emerald-800 font-black text-[10px] flex items-center justify-center">{step.step}</span>
+                            {step.title}
+                          </h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">{step.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* İLGİLİ MATBU EVRAKLAR & İÇ LİNKLEME */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    <span className="w-2 h-7 bg-blue-600 rounded-full" />
+                    İlgili Matbu Evrak Ürünleri & Makaleler
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed mb-6 font-semibold">
+                    Kasa ve muhasebe süreçlerinizin eksiksiz yürümesi için para makbuzu ile birlikte sıklıkla tercih edilen diğer otokopili matbu evrak çözümlerimiz:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {[
+                      { title: "Tahsilat Makbuzu", path: "/tahsilat-makbuzu", desc: "Müşterilerden alınan ödeme ve alacakların resmi kayıt altına alınması için." },
+                      { title: "Tediye Makbuzu", path: "/tediye-makbuzu", desc: "Kasadan tedarikçi ve üçüncü şahıslara yapılan nakit çıkışlarının belgelenmesi için." },
+                      { title: "Gider Makbuzu", path: "/gider-makbuzu", desc: "Şirket içi harcama ve küçük masrafların düzenli kaydı için." },
+                      { title: "Sipariş Fişi", path: "/siparis-fisi", desc: "Alınan ürün ve hizmet siparişlerinin detaylı takibi için." },
+                      { title: "Adisyon Baskı", path: "/adisyon", desc: "Hizmet ve gıda sektörüne özel masasal adisyon takibi için." },
+                      { title: "Servis Formu", path: "/arac-kiralama", desc: "Teknik servis ve teslimat süreçlerinin kayıt altına alınması için." }
+                    ].map((linkItem, idx) => (
+                      <Link key={idx} to={linkItem.path} className="bg-slate-50 hover:bg-white border border-slate-200 hover:border-blue-500/50 p-4 rounded-2xl transition-all shadow-2xs group flex flex-col justify-between">
+                        <div>
+                          <div className="flex items-center justify-between mb-1">
+                            <h3 className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight group-hover:text-blue-600 transition-colors">{linkItem.title}</h3>
+                            <span className="text-blue-600 font-black text-xs group-hover:translate-x-1 transition-transform">→</span>
+                          </div>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">{linkItem.desc}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* PARA MAKBUZU İLE TAHSİLAT/TEDİYE MAKBUZU ARASINDAKİ FARK */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Para Makbuzu ile Tahsilat ve Tediye Makbuzu Arasındaki Farklar
+                  </h2>
+                  <div className="text-slate-700 text-xs md:text-sm leading-relaxed font-medium space-y-3 bg-slate-50/80 p-5 rounded-2xl border border-slate-200">
+                    <p>
+                      <strong>Para makbuzu;</strong> iki taraf veya şahıs arasında kapora, emanet, borç ve nakit teslimatlarında anlık yazılı mutabakat sağlayan ve işlemlerin kayıt altına alınmasına yardımcı olan özel bir ticari belgedir.
+                    </p>
+                    <p>
+                      <strong>Tahsilat makbuzu;</strong> işletmenize giren nakit veya çek tahsilatlarını temsil ederken, <strong>tediye makbuzu</strong> ise şirket kasasından çıkan ödemelerin karşı tarafça teslim alındığını belgelendirir.
+                    </p>
+                    <p>
+                      Para makbuzu koçanlarımız kendinden karbonlu otokopi kâğıdına, kırmızı seri numaralı ve firma logonuz basılı olarak 5 ciltten başlayan miktarlarla üretilmektedir.
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* Karşılaştırma Farkı */}
+            {pathId !== "para-makbuzu" && pathId !== "sozlesme-baski" && currentDetails.comparisonTitle && currentDetails.comparisonTableRows && (
+              <div className="relative z-10 border-t border-gray-100 pt-8">
+                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                  {currentDetails.comparisonTitle}
+                </h2>
+                {pathId !== 'adisyon' && (
+                  <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
+                    İşlemlerin karmaşasını önlemek adına, her ticari matbu formun kendine has kullanım kuralları ve özellikleri mevcuttur. Farkları net şekilde görebilmek amacıyla hazırlanan tablo size yol gösterecektir:
+                  </p>
+                )}
+
+                {/* Tablo */}
+                <div className="overflow-x-auto mb-6 border border-gray-200 rounded-xl">
+                  <table className="w-full text-left border-collapse">
+                    {pathId === 'recete' && (
+                      <caption className="sr-only">1. Hamur Reçete ve Otokopili Reçete Karşılaştırması</caption>
+                    )}
+                    {pathId === 'tediye-makbuzu' && (
+                      <caption className="sr-only">Tediye Makbuzu ve Tahsilat Makbuzu Karşılaştırması</caption>
+                    )}
+                    <thead>
+                      <tr className="bg-gray-50 border-b border-gray-200">
+                        <th scope="col" className="p-4 font-black text-sm text-black">Özellik</th>
+                        <th scope="col" className="p-4 font-black text-sm text-black">{currentDetails.breadcrumbTitle}</th>
+                        <th scope="col" className="p-4 font-black text-sm text-black">{getSubHeaderName(pathId)}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {currentDetails.comparisonTableRows.map((row, rIdx) => (
+                        <tr key={rIdx} className={`border-b border-gray-200/60 ${rIdx % 2 === 1 ? 'bg-gray-50/30' : ''}`}>
+                          <th scope="row" className="p-4 font-bold text-xs md:text-sm text-gray-900 text-left font-normal md:font-bold">{row.label}</th>
+                          <td className="p-4 text-xs md:text-sm text-gray-700">{row.col1}</td>
+                          <td className="p-4 text-xs md:text-sm text-gray-700">{row.col2}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {(pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu') && (
+              <div className="relative z-10 border-t border-gray-100 pt-8">
+                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                  İlgili Matbu Evrak Ürünleri
+                </h2>
+                <div className="text-slate-650 text-base leading-relaxed font-semibold space-y-4 text-left md:text-justify text-black">
+                  {pathId === 'gider-makbuzu' ? (
+                    <>
+                      <p>
+                        Gider makbuzu, işletmelerin harcama ve ödeme kayıtlarını düzenli şekilde takip etmesini sağlayan önemli bir matbu evrak türüdür. Ancak günlük iş akışlarında yalnızca gider makbuzu kullanımı yeterli olmayabilir. Muhasebe, finans, satış ve operasyon süreçlerinde farklı amaçlara hizmet eden tamamlayıcı matbu formlara da ihtiyaç duyulur.
+                      </p>
+                      <p>
+                        <strong><Link to="/makbuz/tahsilat-makbuzu" className="font-extrabold text-primary hover:underline">Tahsilat Makbuzu</Link></strong>, müşterilerden alınan nakit, çek veya havale ödemelerinin kayıt altına alınması amacıyla kullanılır. Özellikle düzenli tahsilat yapan işletmeler için belge takibi ve arşivleme açısından önemli avantajlar sağlar. Otokopili ve numaratörlü olarak hazırlanabilen tahsilat makbuzu koçanları, ön muhasebe süreçlerinin daha düzenli yürütülmesine yardımcı olur.
+                      </p>
+                      <p>
+                        <strong><Link to="/makbuz/tediye-makbuzu" className="font-extrabold text-primary hover:underline">Tediye Makbuzu</Link></strong> ise şirket kasasından yapılan ödemelerin teslim edildiğini belgelemek amacıyla kullanılır. Tedarikçilere, çalışanlara veya iş ortaklarına yapılan ödemelerin kayıt altına alınmasını sağlayan bu formlar, şirket içi mali kontrol açısından önemli bir evraktır.
+                      </p>
+                      <p>
+                        <strong><Link to="/makbuz/para-makbuzu" className="font-extrabold text-primary hover:underline">Para Makbuzu</Link></strong>, daha küçük ölçekli nakit teslimlerinde tercih edilen pratik bir belgedir. Personel avansları, emanet para teslimleri veya günlük nakit işlemlerinde kullanılabilir. Düzenli kayıt tutulmasını sağlayarak olası karışıklıkların önüne geçer.
+                      </p>
+                      <p>
+                        <strong><Link to="/makbuz/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/makbuz/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ürünleri ise restoran, kafe, lokanta ve perakende işletmelerinde yoğun olarak kullanılmaktadır. Müşteri siparişlerinin eksiksiz alınması, ürün adetlerinin takip edilmesi ve servis süreçlerinin düzenli ilerlemesi açısından önemli bir görev üstlenirler.
+                      </p>
+                      <p>
+                        Mavi Basım, otokopili gider makbuzu, numaratörlü gider makbuzu ve logolu gider makbuzu üretimlerinde uzmanlaşmış bir matbaa firmasıdır. İşletmenize özel hazırlanan gider makbuzu koçanı tasarımları, kullanım alışkanlıklarınıza göre düzenlenebilmektedir. Gider makbuzu basımı sürecinde profesyonel tasarım desteği sağlanırken, onaylanan çalışmalar kısa sürede baskıya alınmaktadır. Türkiye'nin her yerinden gider makbuzu siparişi verebilir ve ürünlerinizi güvenli şekilde teslim alabilirsiniz.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        Tahsilat makbuzu, işletmelerin müşterilerinden aldıkları ödeme ve tahsilatları düzenli şekilde kayıt altına almasını sağlayan vazgeçilmez bir matbu evraktır. Günlük iş akışlarında finansal süreçlerin sağlıklı takibi için sadece tahsilat makbuzu değil, diğer tamamlayıcı muhasebe ve kayıt belgelerine de ihtiyaç duyulmaktadır.
+                      </p>
+                      <p>
+                        <strong><Link to="/makbuz/gider-makbuzu" className="font-extrabold text-primary hover:underline">Gider Makbuzu</Link></strong>, işletme dışı yapılan harcamaları ve nakit ödemeleri belgelemek için düzenlenirken; <strong><Link to="/makbuz/tediye-makbuzu" className="font-extrabold text-primary hover:underline">Tediye Makbuzu</Link></strong>, kasadan çıkan nakit ödemelerin alıcısı tarafından teslim alındığını kayıt altına almak üzere düzenlenir.
+                      </p>
+                      <p>
+                        <strong><Link to="/makbuz/para-makbuzu" className="font-extrabold text-primary hover:underline">Para Makbuzu</Link></strong>, personelden personele veya anlık küçük emanet nakit akışlarında pratik bir kayıt çözümü sunar. <strong><Link to="/makbuz/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/makbuz/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ise hizmet sektöründeki sipariş ve servis süreçlerinin noksansız takibini sağlar.
+                      </p>
+                      <p>
+                        Mavi Basım olarak; kurumsal logolu, kendinden karbonlu otokopili ve seri numaralı tahsilat makbuzu koçanlarının basımında uzman kadromuz ve grafik desteğimizle hizmet veriyoruz. İstanbul Topkapı'daki tesisimizde üretilen kaliteli evraklarınızı Türkiye'nin tüm bölgelerine güvenli kargo ile ulaştırıyoruz.
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {(pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu') && (
+              <div className="relative z-10 border-t border-gray-100 pt-8">
+                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                  <span className="w-1.5 h-6 bg-secondary rounded-full" />
+                  {pathId === 'gider-makbuzu' ? 'Gider Makbuzu ile Gider Pusulası Arasındaki Farklar' : 'Tahsilat Makbuzu ile Tediye Makbuzu Arasındaki Farklar'}
+                </h2>
+                <div className="text-slate-650 text-base leading-relaxed font-semibold space-y-4 text-left md:text-justify text-black">
+                  {pathId === 'gider-makbuzu' ? (
+                    <>
+                      <p>
+                        Gider makbuzu ve gider pusulası farklı amaçlarla kullanılan iki ayrı belgedir. Gider makbuzu, yapılan harcamaların ve ödemelerin kayıt altına alınmasına yardımcı olan matbu evraktır. Belge düzeninin sağlanması, ödeme kayıtlarının takip edilmesi ve arşivleme işlemlerinde kullanılır.
+                      </p>
+                      <p>
+                        Gider pusulası ise Vergi Usul Kanunu kapsamında belirli durumlarda düzenlenen resmi bir belgedir. Genellikle vergi mükellefi olmayan kişilerden mal veya hizmet alınması halinde kullanılır. Bu nedenle gider pusulası ile gider makbuzu aynı belge değildir.
+                      </p>
+                      <p>
+                        Kısaca, gider makbuzu işletme içi kayıt düzenine yardımcı olurken gider pusulası belirli ticari işlemlerin yasal olarak belgelendirilmesi amacıyla düzenlenmektedir.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p>
+                        Tahsilat makbuzu ve tediye makbuzu işletmelerin nakit akışını yönetirken kullandıkları birbirini tamamlayan iki ayrı belgedir. Tahsilat makbuzu, şirkete herhangi bir kaynaktan para girişi olduğunda (müşteri ödemesi, tahsilat, vb.) düzenlenir ve nakit teslim alındığını belgeler.
+                      </p>
+                      <p>
+                        Tediye makbuzu ise şirket kasasından dışarıya bir ödeme yapıldığında (tedarikçi ödemesi, personel avansı, vb.) düzenlenir ve nakdin karşı tarafa teslim edildiğini belgeler.
+                      </p>
+                      <p>
+                        Özetle, tahsilat makbuzu nakit girişini (para alımını) kayıt altına alırken, tediye makbuzu nakit çıkışını (para ödemesini) belgelemek amacıyla düzenlenmektedir.
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Önem / Numaratör */}
+            {pathId !== "para-makbuzu" && pathId !== "gider-makbuzu" && pathId !== "tahsilat-makbuzu" && currentDetails.importanceTitle && currentDetails.importanceContent && (
+              <div className="relative z-10 border-t border-gray-100 pt-8">
+                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                  {currentDetails.importanceTitle}
+                </h2>
+                <p className="text-slate-650 text-base leading-relaxed font-medium">
+                  {currentDetails.importanceContent}
+                </p>
+              </div>
+            )}
+
+            {/* Otokopi */}
+            {pathId !== "para-makbuzu" && pathId !== "gider-makbuzu" && pathId !== "tahsilat-makbuzu" && currentDetails.otokopiTitle && currentDetails.otokopiContent && (
+              <div className="relative z-10 border-t border-gray-100 pt-8">
+                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                  {currentDetails.otokopiTitle}
+                </h2>
+                <p className="text-slate-650 text-base leading-relaxed font-medium">
+                  {currentDetails.otokopiContent}
+                </p>
+              </div>
+            )}
+
+            {pathId === 'sozlesme-baski' && (
+              <div className="relative z-10 border-t border-gray-100 pt-8">
+                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                  Otokopili Sözleşme Baskı Siparişi
+                </h2>
+                <p className="text-slate-650 text-base leading-relaxed font-medium">
+                  Otokopili sözleşme baskı ürünleri, işletmelerin satış, üyelik, kiralama ve hizmet süreçlerinde kullandıkları önemli kurumsal evraklar arasında yer almaktadır. Mavi Basım tarafından üretilen numaratörlü sözleşme koçanı baskıları; firma logosu, iletişim bilgileri ve özel şartnameler eklenerek tamamen kuruma özel hazırlanır. İstanbul'da üretilen sözleşme baskıları Türkiye'nin 81 iline gönderilmektedir.
+                </p>
+              </div>
+            )}
+
+            {/* Sektörler */}
+            {pathId !== "para-makbuzu" && pathId !== 'adisyon' && pathId !== 'arac-kiralama' && pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'sozlesme-baski' && pathId !== 'sigorta-policeleri' && (
+              <div className="relative z-10 border-t border-gray-100 pt-8">
+                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                  {pathId === 'tediye-makbuzu'
+                    ? "Tediye Makbuzu Kimler Tarafından Kullanılır?"
+                    : (currentDetails.sectoralTitle || `${currentDetails.breadcrumbTitle} Sektörel Kullanım Dağılımı`)}
+                </h2>
+                <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
+                  {pathId === 'tediye-makbuzu'
+                    ? "Tediye makbuzu farklı sektörlerde kullanılabilmektedir."
+                    : "En doğru kullanım, firmanıza özel kurumsal logolu belgelerle süreçlerin takip edilmesiyle başlar. Hizmet verdiğimiz başlıca sektörler:"}
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {(currentDetails.sectoralItems || currentDetails.whoUsesItems || []).map((text, sIdx) => {
+                    const hasColon = text.includes(':');
+                    const title = hasColon ? text.split(':')[0].trim() : text;
+                    const desc = hasColon ? text.split(':').slice(1).join(':').trim() : '';
+                    return (
+                      <div key={sIdx} className="bg-gray-50 border border-gray-150 rounded-2xl p-4 flex flex-col gap-1 hover:bg-slate-50/50 hover:border-slate-300 transition-all duration-300">
+                        <div className="flex items-center gap-3">
+                          <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] shrink-0 font-bold">➔</span>
+                          <span className="text-sm text-gray-900 font-extrabold">{title}</span>
+                        </div>
+                        {desc && (
+                          <p className="text-xs text-slate-500 pl-8 font-medium leading-relaxed">
+                            {desc}
+                          </p>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {pathId === 'sozlesme-baski' && (
+              <>
+                {/* Çok Güçlü SEO Paragrafı */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <div className="bg-emerald-950/5 border-l-4 border-emerald-600 p-6 rounded-r-2xl m-0 shadow-sm">
+                    <p className="text-slate-700 text-base leading-relaxed font-semibold">
+                      Numaratörlü otokopili sözleşme koçanları; hizmet sözleşmeleri, üyelik kayıt formları, satış sözleşmeleri, araç kiralama belgeleri, emlak yer gösterme formları ve kurumsal taahhütnameler için tercih edilen en güvenilir matbu evraklar arasında yer almaktadır. Firma logolu ve özel tasarımlı sözleşme formları, işletmelerin kayıt ve arşiv süreçlerini kolaylaştırırken müşterilerinize kurumsal ve güven veren bir imaj sunar.
+                    </p>
+                    <p className="text-slate-700 text-base leading-relaxed font-semibold mt-4">
+                      Mavi Basım olarak İstanbul Topkapı Matbaacılar Sitesi'ndeki yüksek kapasiteli üretim tesisimizde hazırladığımız sözleşme baskıları; isteğe bağlı kırmızı seri numaratör, tırtıklı perfore ve çok nüshalı (2-3-4 nüsha) kendinden karbonlu otokopi kağıdı seçenekleriyle üretilmektedir. Türkiye'nin tüm il ve ilçelerine hızlı ve güvenli kargo ile ulaştırılır.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 1. SÖZLEŞME TÜRLERİ (KART YAPISI) */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
+                    Kurumsal Sözleşme Türleri
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
+                    Sektörünüze ve hukuki ihtiyaçlarınıza özel olarak tasarlayıp bastığımız başlıca otokopili sözleşme çeşitleri:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {[
+                      { title: "Hizmet Sözleşmesi", desc: "Genel hizmet alım-satım şartları, iş kapsamı, teslimat süreci, ödeme planı ve yasal taahhütnameler.", badge: "Otokopili / Numaratörlü", icon: "📋" },
+                      { title: "Üyelik Sözleşmesi", desc: "Spor salonları, fitness merkezleri, yüzme havuzları ve kulüpler için üye kayıt ve salon kuralları belgesi.", badge: "A4 / 2-3 Nüsha", icon: "🏋️" },
+                      { title: "Araç Kiralama Sözleşmesi", desc: "Rent a car firmaları için kasko şartları, günlük km sınırı, kaza/hasar sorumluluğu ve teslim tutanağı.", badge: "Yasal Standart", icon: "🚗" },
+                      { title: "Emlak Yer Gösterme", desc: "Gayrimenkul danışmanları için taşınmaz gösterme, portföy yetki ve komisyon haklarını koruyan yasal form.", badge: "Numaratörlü", icon: "🏢" },
+                      { title: "Eğitim Kurumu Sözleşmesi", desc: "Özel okul, kurs ve dershaneler için öğrenci kayıt, veli muvafakati ve taksitli ödeme taahhüt belgeleri.", badge: "Kurumsal Logolu", icon: "🎓" },
+                      { title: "Güzellik Merkezi Sözleşmesi", desc: "Epilasyon, cilt bakımı ve estetik seans paketleri için müşteri açık rıza ve uygulama onay sözleşmeleri.", badge: "Hijyenik Kayıt", icon: "✨" },
+                      { title: "Teknik Servis Sözleşmesi", desc: "Cihaz kabul, arıza teşhis, parça değişim ve garanti teslimat otokopili matbu kayıt formları.", badge: "2-3 Nüsha Cilt", icon: "🛠️" },
+                      { title: "Danışmanlık Sözleşmesi", desc: "Yönetim, finans, bilişim ve hukuk alanlarında proje kapsamı, hakediş ve NDA gizlilik anlaşmaları.", badge: "Gizlilik Uyumlu", icon: "💼" }
+                    ].map((card, cIdx) => (
+                      <div key={cIdx} className="bg-white border border-gray-150 rounded-2xl p-5 flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition-all duration-300 group">
+                        <div>
+                          <div className="flex items-center justify-between gap-2 mb-3">
+                            <span className="text-2xl">{card.icon}</span>
+                            <span className="text-[10px] font-extrabold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100/80">{card.badge}</span>
+                          </div>
+                          <h3 className="text-base font-extrabold text-black mb-2 group-hover:text-emerald-700 transition-colors">{card.title}</h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">{card.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 2. "KİMLER KULLANIR?" SEKTÖR KART YAPISI */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
+                    Sözleşme Koçanlarını Hangi Sektörler Kullanır?
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
+                    Müşteri kayıtlarını ve hukuki taahhütlerini otokopili sözleşme formlarıyla kayıt altına alan başlıca kurumsal sektörler:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {[
+                      { title: "Spor Salonları & Fitness", desc: "Üyelik kayıtları, üye taahhütnameleri ve paket kullanım sözleşmeleri.", icon: "🏋️‍♂️" },
+                      { title: "Hastaneler & Sağlık Merkezleri", desc: "Hasta kabul formları, tıp merkezi bilgilendirilmiş rıza onay belgeleri.", icon: "🏥" },
+                      { title: "Özel Klinikler & Muayenehaneler", desc: "Diş ve estetik muayenehane hasta kayıt ve tedavi rıza mukaveleleri.", icon: "🩺" },
+                      { title: "Eğitim Kurumları & Özel Kurslar", desc: "Öğrenci kayıt formları, veli ödeme taahhütleri ve eğitim sözleşmeleri.", icon: "📚" },
+                      { title: "Sigorta Acenteleri & Eksperler", desc: "Sigorta teklif kayıtları, poliçe bilgilendirme ve ekspertiz formları.", icon: "🛡️" },
+                      { title: "Bayiler & Distribütör Ağları", desc: "Bayi satış sözleşmeleri, mal teslimat ve teminat taahhüt formları.", icon: "🤝" },
+                      { title: "Teknik Servisler & Bakım", desc: "Cihaz teslim alım formları, arıza onarım ve parça değişim sözleşmeleri.", icon: "🔧" },
+                      { title: "Emlak Ofisleri & Gayrimenkul", desc: "Alıcı/satıcı yer gösterme sözleşmeleri ve portföy yetki belgeleri.", icon: "🏠" },
+                      { title: "Oto Kiralama (Rent a Car)", desc: "Günlük/aylık kiralama şartnameleri, km sınırı ve araç teslim tutanakları.", icon: "🚘" },
+                      { title: "Danışmanlık Firmaları", desc: "Kurumsal yönetim, finans ve bilişim danışmanlığı hizmet sözleşmeleri.", icon: "💡" },
+                      { title: "Yazılım & Bilişim Şirketleri", desc: "SLA bakım anlaşmaları, lisans kullanımı ve proje yazılım sözleşmeleri.", icon: "💻" },
+                      { title: "Organizasyon & Davet Acenteleri", desc: "Düğün, lansman ve fuar ekipman kiralama hizmet sözleşmeleri.", icon: "🎉" }
+                    ].map((sec, sIdx) => (
+                      <div key={sIdx} className="bg-slate-50/70 border border-gray-150 rounded-2xl p-4 flex items-start gap-3.5 hover:bg-white hover:border-emerald-500 hover:shadow-sm transition-all duration-300">
+                        <span className="text-2xl shrink-0 mt-0.5">{sec.icon}</span>
+                        <div>
+                          <h3 className="text-sm font-extrabold text-black mb-1">{sec.title}</h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">{sec.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 3. 4 ADIMLIK GÖRSEL İMALAT SÜRECİ AKIŞI */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
+                    Sözleşme Baskı 4 Adımlı İmalat Süreci
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
+                    İstanbul Topkapı Matbaacılar Sitesi'ndeki tesisimizde sözleşme siparişlerinizin aşama aşama imalat akışı:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {[
+                      { step: "01", title: "Tasarım & Mizanpaj", desc: "Şirket logonuz, adres bilgileriniz ve yasal maddeleriniz grafik ekibimizce mizanpaj yapılır.", icon: "🎨" },
+                      { step: "02", title: "Dijital PDF Onayı", desc: "Baskı öncesinde hazırlanan sözleşme taslağı WhatsApp / E-posta ile onayınıza sunulur.", icon: "📄" },
+                      { step: "03", title: "Ofset Baskı & Cilt", desc: "Otokopili kağıtlara HD kalitede baskı, kırmızı numaratör ve dikişli ciltleme uygulanır.", icon: "🖨️" },
+                      { step: "04", title: "Adrese Hızlı Kargo", desc: "Çift oluklu kolilerde paketlenen sözleşme koçanlarınız kargoya verilerek teslim edilir.", icon: "📦" }
+                    ].map((step, idx) => (
+                      <div key={idx} className="bg-gradient-to-br from-slate-50 to-white border border-gray-150 rounded-2xl p-5 relative overflow-hidden flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition-all">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-2xl">{step.icon}</span>
+                          <span className="text-xs font-black text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">{step.step}</span>
+                        </div>
+                        <div>
+                          <h3 className="text-base font-extrabold text-black mb-1.5">{step.title}</h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">{step.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 5. SEKTÖR VE SÖZLEŞME EŞLEŞTİRME TABLOSU */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
+                    Hangi Sözleşme Hangi Sektör İçin Kullanılır?
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
+                    Sektörünüze özel geliştirilen otokopili sözleşme türleri ve temel kullanım amaçları karşılaştırma tablosu:
+                  </p>
+                  <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+                    <table className="w-full text-left text-xs md:text-sm border-collapse bg-white">
+                      <thead>
+                        <tr className="bg-slate-900 text-white font-extrabold text-xs uppercase tracking-wider">
+                          <th className="p-3.5 md:p-4 border-b border-slate-800">Sektör</th>
+                          <th className="p-3.5 md:p-4 border-b border-slate-800">Kullanılan Sözleşme / Form Türü</th>
+                          <th className="p-3.5 md:p-4 border-b border-slate-800">Temel Kullanım Amacı & Yasal Koruma</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-150 text-slate-700 font-medium">
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🏋️</span> Spor Salonu & Fitness
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Üyelik ve Taahhüt Sözleşmesi</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Salon kuralları, üyelik süresi, paket dökümü ve aylık ödeme taahhüdü.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🏢</span> Emlak & Gayrimenkul
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Yer Gösterme ve Portföy Yetki Belgesi</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Taşınmaz gösterme kaydı, gayrimenkul detayları ve komisyon hakkı güvencesi.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🚗</span> Araç Kiralama (Rent a Car)
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Kiralama Sözleşmesi ve Teslim Tutanağı</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Kasko muafiyet şartları, günlük/aylık km sınırı, kaza ve ceza sorumluluk kaydı.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🛠️</span> Teknik Servis & Bakım
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Cihaz Kabul ve Garanti Teslim Formu</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Arızalı cihaz teslim alımı, onarım onayı, parça değişim kaydı ve servis garantisi.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>✨</span> Güzellik & Estetik Merkezi
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Hizmet ve Seans Onay Sözleşmesi</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Epilasyon/cilt bakımı seans takibi, hedeflenen paket dökümü ve açık rıza onayı.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🎓</span> Eğitim Kurumu & Kurs
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Öğrenci Kayıt ve Taksit Sözleşmesi</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Kurs kayıt şartları, müfredat süresi, taksitli ödeme planı ve veli muvafakati.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>💼</span> Danışmanlık Firması
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Hizmet ve Gizlilik (NDA) Sözleşmesi</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Proje kapsamı, danışmanlık hakediş bedelleri ve ticari bilgi gizliliği garantisi.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>💻</span> Yazılım & Bilişim
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Bakım, Lisans ve SLA Sözleşmesi</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Yazılım teknik destek kapsamı, sunucu bakımı ve servis seviyesi taahhüdü.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🩺</span> Sağlık & Klinik
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Aydınlatılmış Rıza ve Tedavi Formu</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Tıbbi müdahale öncesi hasta bilgilendirmesi, muafiyet şartları ve onay imzası.</td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🛡️</span> Sigorta Acentesi
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Teklif ve Poliçe Bilgilendirme Formu</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Sigorta poliçe şartları, prim ödemeleri, kasko istisnaları ve teminatlar.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Türkiye Geneli Sözleşme Koçanı Baskı Hizmeti */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Türkiye Geneli Sözleşme Koçanı Baskı Hizmeti
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium">
+                    Mavi Basım tarafından üretilen numaratörlü sözleşme koçanı baskıları; İstanbul, Ankara, İzmir, Bursa, Antalya, Kocaeli, Sakarya, Tekirdağ, Balıkesir, Konya, Kayseri, Gaziantep, Adana, Mersin, Samsun, Trabzon, Eskişehir, Denizli ve Türkiye'nin tüm illerine gönderilmektedir.
+                  </p>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium mt-4">
+                    Otokopili sözleşme baskı siparişleri, İstanbul Topkapı Matbaacılar Sitesi'ndeki üretim tesisimizde hazırlanmakta ve anlaşmalı kargo ile adreslere teslim edilmektedir. Firma logolu sözleşme formu, üyelik sözleşmesi, hizmet sözleşmesi, araç kiralama sözleşmesi ve emlak sözleşmesi baskıları için Türkiye'nin her bölgesine hizmet vermekteyiz.
+                  </p>
+                </div>
+
+                {/* Otokopili Sözleşme Baskı Fiyatları Nasıl Belirlenir? ve Sektörel Detaylar */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Otokopili Sözleşme Baskı Fiyatları Nasıl Belirlenir?
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium">
+                    Otokopili sözleşme baskı fiyatları; cilt adedi, nüsha sayısı (1 asıl 1 suret, 1 asıl 2 suret vb.), baskı rengi ve üretim miktarına göre değişmektedir. Sektörde <strong>sözleşme koçanı fiyatları</strong> belirlenirken, yüksek adetli siparişlerde birim maliyetlerin düşüşüyle birlikte <strong>sözleşme koçanı baskı fiyatları</strong> çok daha ekonomik seviyelere gelmektedir. Numaratörlü sözleşme koçanı baskıları standart olarak seri numaralı şekilde üretilebilmektedir. Güncel fiyatlar için yukarıdaki tabloyu inceleyebilir veya WhatsApp üzerinden teklif talep edebilirsiniz.
+                  </p>
+                </div>
+
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Firma Logolu Sözleşme Koçanı Baskısı
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium">
+                    Kurumsal kimliğinizi güçlendirmek amacıyla hazırlanan firma logolu sözleşme koçanları; şirket unvanı, adres bilgileri, vergi bilgileri ve özel sözleşme maddeleri eklenerek hazırlanabilmektedir. Talebinize özel tasarlanan ve basılan <strong>otokopili sözleşme formu</strong> çeşitleri veya <strong>karbonlu sözleşme formu</strong> nüshaları, firmanızın operasyon süreçlerini mükemmel şekilde düzene sokar. Her baskı öncesinde tamamen size özel PDF prova onayı alınarak üretime geçilmektedir.
+                  </p>
+                </div>
+
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Numaratörlü Sözleşme Baskı Neden Tercih Edilir?
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium">
+                    Numaratörlü sözleşme baskı ürünleri; sözleşmelerin sıralı şekilde takip edilmesini sağlar. Özellikle emlak ofisleri, araç kiralama firmaları, spor salonları, güzellik merkezleri ve eğitim kurumları tarafından yaygın olarak tercih edilmektedir. İstanbul geneli ve Türkiye geneli hizmet veren profesyonel bir <strong>sözleşme matbaası</strong> olan Mavi Basım, belgelerinizi en yüksek baskı döküm kalitesinde sizlere sunmaktadır.
+                  </p>
+                </div>
+
+                {/* Neden Mavi Basım? */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Neden Mavi Basım?
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    {[
+                      "İstanbul Topkapı Matbaacılar Sitesi üretimi",
+                      "5 ciltten başlayan düşük adet baskı imkanı",
+                      "Ücretsiz grafik düzenleme desteği",
+                      "PDF prova onayı sonrası üretim",
+                      "Numaratör ve perfore seçenekleri",
+                      "Türkiye geneli kargo gönderimi",
+                      "Kurumsal logolu özel tasarım",
+                      "3-5 iş günü üretim süresi"
+                    ].map((feat, fIdx) => (
+                      <div key={fIdx} className="bg-gray-50 border border-gray-150 rounded-2xl p-4 flex gap-3 hover:bg-white hover:border-emerald-500 hover:shadow-md transition-all duration-300">
+                        <span className="text-emerald-600 text-lg font-black shrink-0">✓</span>
+                        <span className="text-sm font-bold text-black leading-snug">{feat}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* İstanbul'da Sözleşme Baskı Yaptırmak İsteyen Firmalar İçin */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    İstanbul'da Sözleşme Baskı Yaptırmak İsteyen Firmalar İçin
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium">
+                    İstanbul sözleşme baskı hizmetlerimiz kapsamında; Zeytinburnu, Topkapı, Bayrampaşa, Güngören, Bakırköy, Bahçelievler, Esenler, Bağcılar, Küçükçekmece, Avcılar, Başakşehir, Ümraniye, Pendik, Kartal ve İstanbul'un tüm ilçelerine hizmet sunmaktayız.
+                  </p>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium mt-4">
+                    İstanbul'da faaliyet gösteren spor salonları, güzellik merkezleri, emlak ofisleri, eğitim kurumları, teknik servisler ve araç kiralama firmaları için kurumsal sözleşme koçanı baskıları hazırlamaktayız.
+                  </p>
+                </div>
+
+                {/* Sözleşme Koçanı Baskı Siparişi Nasıl Verilir? */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Sözleşme Koçanı Baskı Siparişi Nasıl Verilir?
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium">
+                    Numaratörlü sözleşme baskı siparişleriniz için mevcut Word, PDF veya eski sözleşme örneğinizi tarafımıza göndermeniz yeterlidir. Grafik ekibimiz baskıya uygun mizanpaj çalışmasını hazırlayarak ücretsiz PDF prova sunar. Onayınızın ardından otokopili sözleşme koçanı baskı üretimi başlatılır ve ürünleriniz kısa sürede kargoya teslim edilir.
+                  </p>
+                </div>
+
+                {/* En Çok Bastırılan Sözleşme Türleri */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    En Çok Bastırılan Sözleşme Türleri
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
+                    Her biri farklı hukuki ve ticari şartlar içeren matbu sözleşmeleri, firmanızın kurumsal kimliği ve yasal şartlarına göre tam uyumlulukta üretiyoruz:
+                  </p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {[
+                      "Hizmet sözleşmesi",
+                      "Üyelik sözleşmesi",
+                      "Araç kiralama sözleşmesi",
+                      "Emlak yer gösterme sözleşmesi",
+                      "Güzellik merkezi sözleşmesi",
+                      "Eğitim kurumu kayıt sözleşmesi",
+                      "Teknik servis teslim formu",
+                      "Danışmanlık sözleşmesi"
+                    ].map((title, sIdx) => (
+                      <div key={sIdx} className="bg-gray-50 border border-gray-150 rounded-2xl p-4 flex items-center gap-2.5 hover:bg-slate-100/50 hover:border-slate-300 transition-all duration-300">
+                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0" />
+                        <span className="text-sm text-gray-900 font-bold leading-normal">{title}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* İlgili Baskı Ürünleri */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    İlgili Baskı Ürünleri
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
+                    Sözleşme koçanı baskısının yanı sıra işletmenizin ihtiyaç duyabileceği diğer matbu basılı evraklar:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {[
+                      { name: "Tahsilat Makbuzu Baskı", path: "/tahsilat-makbuzu", desc: "Ödeme ve tahsilat kayıtlarınız için otokopili makbuz." },
+                      { name: "Tediye Makbuzu Baskı", path: "/tediye-makbuzu", desc: "Ödeme çıkışlarınız için logolu tediye koçanı." },
+                      { name: "Para Makbuzu Baskı", path: "/para-makbuzu", desc: "Saha teslimatları ve elden tahsilat makbuzu." },
+                      { name: "Sipariş Fişi Baskı", path: "/siparis-fisi", desc: "Müşteri ve tedarikçi sipariş kayıt formları." }
+                    ].map((prod, pIdx) => (
+                      <Link 
+                        to={prod.path} 
+                        key={pIdx} 
+                        className="bg-gray-50 border border-gray-150 hover:border-emerald-600 hover:bg-white rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer group"
+                      >
+                        <div>
+                          <div className="flex items-center gap-2 mb-1.5">
+                            <span className="w-2 h-2 rounded-full bg-slate-400 group-hover:bg-emerald-600 transition-colors shrink-0" />
+                            <span className="text-sm text-gray-900 font-black tracking-tight group-hover:text-emerald-600 transition-colors leading-normal">{prod.name}</span>
+                          </div>
+                          <p className="text-xs text-slate-500 font-medium leading-relaxed pl-4">{prod.desc}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
+
+            {pathId === 'sigorta-policeleri' && (
+              <>
+                {/* 1. SEO VURUCU GİRİŞ PARAGRAFI BANNER */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <div className="bg-sky-950/5 border-l-4 border-sky-600 p-6 rounded-r-2xl m-0 shadow-sm">
+                    <p className="text-slate-700 text-base leading-relaxed font-semibold">
+                      Acentenize özel logo baskılı, numaratörlü ve otokopili sigorta poliçesi ve <strong>teklif formu</strong> koçanları; acenteler, brokerlar, eksperler ve finans kuruluşları için hızlı, ıslak imzalı ve yasal uyumlu evrak tanzim etme imkanı sunar. Müşterilerinize sunduğunuz teminat miktarlarını, peşin veya taksitli <strong>prim tahsilatı</strong> şartlarını, poliçe <strong>yenileme</strong> taahhütlerini ve <strong>zeyilname</strong> değişikliklerini anında kayıt altına alan otokopili koçanlar; siber kesintilerde veya sistem arızalarında fiziksel arşiv güvencesi sağlar. Olası kaza durumlarında hızlı <strong>hasar ihbarı</strong> kaydı oluşturulmasına imkan tanır.
+                    </p>
+                    <p className="text-slate-700 text-base leading-relaxed font-semibold mt-4">
+                      Mavi Basım olarak İstanbul Topkapı Matbaacılar Sitesi'ndeki yüksek kapasiteli tesisimizde ürettiğimiz sigorta poliçe formları; kasko, trafik, DASK, sağlık, iş yeri ve nakliyat sigortaları için özel şablonlarla basılmaktadır. İsteğe bağlı kırmızı seri numaratör, dikişli cilt ve arka yüz şartname baskısıyla Türkiye'nin tüm illerine kargo ile ulaştırılır.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 2. ⭐ POLİÇE TÜRLERİ (KART YAPISI) */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
+                    Acente Baskılı Sigorta Poliçesi ve Teklif Formu Türleri
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
+                    Acentenizin kurumsal kimliğine ve sunduğunuz sigortacılık ürünlerine özel olarak tasarlayıp bastığımız başlıca poliçe ve teklif formu çeşitleri:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    {[
+                      { title: "Trafik Sigortası", desc: "Zorunlu karayolları motorlu araçlar mali sorumluluk sigortası teklif ve bilgilendirme formları.", badge: "A4 / Numaratörlü", icon: "🚗" },
+                      { title: "Kasko Poliçesi", desc: "Araç kaza, yanma, çalınma, cam kırılması ve kasko muafiyet detaylı teklif ve onay belgeleri.", badge: "A4 / 2-3 Nüsha", icon: "🚘" },
+                      { title: "DASK Deprem", desc: "Zorunlu deprem sigortası başvuru, bina beyan ve poliçe bilgilendirme kayıt formları.", badge: "Yasal Standart", icon: "🏠" },
+                      { title: "Konut Sigortası", desc: "Ev, eşya, hırsızlık, su baskını, yangın ve dahili su teminatları teklif ve poliçe koçanları.", badge: "Kurumsal Logolu", icon: "🏡" },
+                      { title: "İş Yeri Sigortası", desc: "Ticari bina, demirbaş, emtia stok, hırsızlık ve iş durması teminatlı iş yeri poliçe formları.", badge: "A4 Geniş Form", icon: "🏢" },
+                      { title: "Sağlık Sigortası", desc: "Özel sağlık sigortası yatarak/ayakta tedavi teminat tablosu ve medikal beyan formları.", badge: "Hassas Kayıt", icon: "🏥" },
+                      { title: "Tamamlayıcı Sağlık", desc: "SGK anlaşmalı özel hastane fark ücreti teminat dökümü ve katılım onay belgeleri.", badge: "SGK Uyumlu", icon: "🩺" },
+                      { title: "Nakliyat Sigortası", desc: "Kara, hava, deniz yük taşımacılığı emtia nakliyat teminat ve sevkiyat poliçe formları.", badge: "Lojistik Uyumlu", icon: "🚢" },
+                      { title: "Ferdi Kaza Sigortası", desc: "Kaza sonucu vefat, sürekli sakatlık ve sağlık giderleri teminatı teklif belgeleri.", badge: "Garantili Teminat", icon: "🛡️" },
+                      { title: "Seyahat Sigortası", desc: "Yurt dışı vize uyumlu acil sağlık, bagaj kaybı, seyahat iptali ve asistans hizmet formları.", badge: "Vize Uyumlu", icon: "✈️" }
+                    ].map((card, cIdx) => (
+                      <div key={cIdx} className="bg-white border border-gray-150 rounded-2xl p-4 flex flex-col justify-between hover:border-sky-500 hover:shadow-md transition-all duration-300 group">
+                        <div>
+                          <div className="flex items-center justify-between gap-1 mb-2.5">
+                            <span className="text-2xl">{card.icon}</span>
+                            <span className="text-[10px] font-extrabold text-sky-800 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-100">{card.badge}</span>
+                          </div>
+                          <h3 className="text-sm font-extrabold text-black mb-1.5 group-hover:text-sky-700 transition-colors">{card.title}</h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">{card.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* GÖRSEL ÇEŞİTLİLİĞİ: POLİÇE VE TEKLİF FORMU ŞABLON MOKÖPLERİ */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
+                    Acente Sigorta Poliçesi & Teklif Formu Örnek Baskı Şablonları
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
+                    Mavi Basım kalitesiyle acentenizin kurumsal kimliğine ve SEDDK standartlarına uygun üretilen örnek form düzenleri:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    {[
+                      {
+                        title: "Trafik & Kasko Teklif Formu",
+                        tag: "A4 - 2 / 3 Nüsha Otokopili",
+                        color: "from-sky-900 to-slate-900",
+                        fields: ["Acente Logosu & Levha No", "Müşteri T.C. / Plaka / Şasi", "Kasko / Trafik Teminat Tablosu", "Prim Tahsilat Şekli & Vade", "Acente Kaşe & Islak İmza"],
+                        icon: "🚗"
+                      },
+                      {
+                        title: "DASK & Konut Poliçe Formu",
+                        tag: "A4 - Seri Numaratörlü",
+                        color: "from-blue-900 to-indigo-950",
+                        fields: ["Acente İletişim & Unvanı", "Bina Adresi & DASK Beyanı", "Deprem / Yangın Limitleri", "Yenileme & Zeyil Notları", "Soru / Bilgilendirme Klozu"],
+                        icon: "🏠"
+                      },
+                      {
+                        title: "Özel Sağlık & TSS Formu",
+                        tag: "A4 - Hassas Tablo Baskı",
+                        color: "from-teal-900 to-slate-900",
+                        fields: ["Acente Yetki Kodu", "Sigortalı Medikal Beyanı", "Yatarak / Ayakta Limit Tablosu", "SGK Katılım Onay Alanı", "Müşteri Onay İmzası"],
+                        icon: "🩺"
+                      },
+                      {
+                        title: "Arka Yüz Şartname Baskısı",
+                        tag: "Tek Renk Yasal Metin",
+                        color: "from-slate-800 to-gray-900",
+                        fields: ["Poliçe Genel Şartları Metni", "SEDDK / TOBB Yasal Bilgi", "Muafiyet & Kloz Maddeleri", "Hasar İhbarı & Tahkim Bilgisi", "Uyuşmazlık Çözüm Alanı"],
+                        icon: "📜"
+                      }
+                    ].map((tmpl, tIdx) => (
+                      <div key={tIdx} className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-sky-500 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                          {/* Visual Paper Header Bar */}
+                          <div className={`bg-gradient-to-r ${tmpl.color} p-4 text-white relative`}>
+                            <div className="flex items-center justify-between gap-2 mb-1">
+                              <span className="text-2xl">{tmpl.icon}</span>
+                              <span className="text-[10px] font-black uppercase bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded text-white border border-white/30">
+                                {tmpl.tag}
+                              </span>
+                            </div>
+                            <h3 className="text-sm font-black text-white tracking-tight">{tmpl.title}</h3>
+                          </div>
+                          {/* Simulated Paper Content Area */}
+                          <div className="p-4 bg-slate-50/50">
+                            <span className="text-[11px] font-extrabold uppercase text-slate-500 tracking-wider block mb-2">Form İçerik Bölümleri:</span>
+                            <ul className="space-y-1.5">
+                              {tmpl.fields.map((fld, fIdx) => (
+                                <li key={fIdx} className="text-xs text-slate-700 font-medium flex items-center gap-1.5">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-sky-600 shrink-0" />
+                                  <span>{fld}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                        <div className="p-3 bg-gray-50 border-t border-gray-150 flex items-center justify-between text-xs font-bold text-sky-800 group-hover:text-sky-900">
+                          <span>Acentenize Özel Mizanpaj</span>
+                          <span>Baskıya Hazır ✓</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 3. "KİMLER KULLANIR?" SEKTÖR KART YAPISI */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
+                    Sigorta Poliçe ve Teklif Koçanlarını Kimler Kullanır?
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
+                    Saha satışlarında, müşteri görüşmelerinde ve evrak arşivlemede otokopili poliçe koçanı kullanan başlıca kurum ve işletmeler:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    {[
+                      { title: "Sigorta Acenteleri", desc: "Müşteri ziyaretlerinde anında teklif verip prim tahsilatı şartlarını yazılı belgelendiren acenteler.", icon: "📋" },
+                      { title: "Sigorta Brokerleri", desc: "Farklı şirketlerden aldıkları fiyat ve teminat dökümlerini müşteriye fiziki evrakla sunan brokerlar.", icon: "💼" },
+                      { title: "Sigorta Eksperleri", desc: "Kaza yeri incelemelerinde, hasar ihbarı kayıtlarında ve ekspertiz süreçlerinde tespit tutanağı tutan eksperler.", icon: "🔍" },
+                      { title: "Oto Galerileri", desc: "Araç devir ve tescil tanziminde alıcılara geçici teminat belgesi ve poliçe başvuru dökümü hazırlayan galeriler.", icon: "🏎️" },
+                      { title: "Rent a Car Firmaları", desc: "Araç teslimatlarında ikame araç teminat onayını ve muafiyet şartlarını kiralayan müşteriye imzalatan işletmeler.", icon: "🚗" },
+                      { title: "Bankalar & Finans", desc: "Kredi kullandırımlarında ipotekli gayrimenkul ve taşıt sigorta taahhütnamelerini müşteri dosyasında saklayan şubeler.", icon: "🏦" },
+                      { title: "Leasing Şirketleri", desc: "Kiralık iş makinesi ve ekipman portföyünün yıllık yenileme durumlarını ve poliçe zeyil kayıtlarını takip eden kurumlar.", icon: "📑" },
+                      { title: "Filo Yönetimi", desc: "Şirket araç filolarının periyodik kasko/trafik zeyilname onaylarını ve poliçe vadesi takibini yürüten yöneticiler.", icon: "🚙" },
+                      { title: "Kurumsal Satış Ekipleri", desc: "Müşteri lokasyonunda yapılan görüşmelerde anında yazılı ön onay, poliçe teklifi ve başvuru koçanı sunan temsilciler.", icon: "👥" },
+                      { title: "Teknik Servis & Oto Sanayi", desc: "Hasarlı araç kabul işlemlerinde kasko/trafik sigorta dosya takip formlarını ve eksper evrak kopyalarını klasörleyen servisler.", icon: "🔧" }
+                    ].map((sec, sIdx) => (
+                      <div key={sIdx} className="bg-slate-50/70 border border-gray-150 rounded-2xl p-4 flex flex-col justify-between hover:bg-white hover:border-sky-500 hover:shadow-sm transition-all duration-300">
+                        <div>
+                          <span className="text-2xl mb-2 block">{sec.icon}</span>
+                          <h3 className="text-sm font-extrabold text-black mb-1">{sec.title}</h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">{sec.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 4. 4 ADIMLIK GÖRSEL İMALAT SÜRECİ AKIŞI */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
+                    Sigorta Poliçesi 4 Adımlı Baskı İmalat Süreci
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
+                    Topkapı Matbaacılar Sitesi'ndeki tesisimizde poliçe koçanı siparişlerinizin aşama aşama imalat akışı:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {[
+                      { step: "01", title: "Tasarım & Mizanpaj", desc: "Acente logonuz, TOBB/SEDDK levha no ve teminat tablolarınız grafikerlerimizce mizanpaj yapılır.", icon: "🎨" },
+                      { step: "02", title: "Dijital PDF Onayı", desc: "Hazırlanan şablon WhatsApp / E-posta ile tarafınıza iletilerek birebir PDF kontrolü ve onayı alınır.", icon: "📄" },
+                      { step: "03", title: "Ofset Baskı & Cilt", desc: "Otokopili kağıtlara kurumsal renklerinizde HD ofset baskı, kırmızı numaratör ve dikişli ciltleme uygulanır.", icon: "🖨️" },
+                      { step: "04", title: "Kargo & Adrese Teslim", desc: "Çift oluklu dayanıklı kolilerde paketlenen poliçe koçanlarınız anlaşmalı kargo ile adresinize ulaştırılır.", icon: "📦" }
+                    ].map((step, idx) => (
+                      <div key={idx} className="bg-gradient-to-br from-slate-50 to-white border border-gray-150 rounded-2xl p-5 relative overflow-hidden flex flex-col justify-between hover:border-sky-500 hover:shadow-md transition-all">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-2xl">{step.icon}</span>
+                          <span className="text-xs font-black text-sky-700 bg-sky-50 px-2.5 py-1 rounded-full border border-sky-200">{step.step}</span>
+                        </div>
+                        <div>
+                          <h3 className="text-base font-extrabold text-black mb-1.5">{step.title}</h3>
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed">{step.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 5. KARŞILAŞTIRMA / POLİÇE EŞLEŞTİRME TABLOSU */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
+                    Hangi Sigorta Poliçesi Hangi Amaçla Kullanılır?
+                  </h2>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
+                    Acentelerin en sık düzenlediği sigorta poliçe türleri, kullanım amaçları ve yasal koruma kapsamı karşılaştırma tablosu:
+                  </p>
+                  <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
+                    <table className="w-full text-left text-xs md:text-sm border-collapse bg-white">
+                      <thead>
+                        <tr className="bg-slate-900 text-white font-extrabold text-xs uppercase tracking-wider">
+                          <th className="p-3.5 md:p-4 border-b border-slate-800">Poliçe / Teklif Türü</th>
+                          <th className="p-3.5 md:p-4 border-b border-slate-800">Kullanım Amacı & Teminat Kapsamı</th>
+                          <th className="p-3.5 md:p-4 border-b border-slate-800">Yasal Durum & Avantaj</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-150 text-slate-700 font-medium">
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🚗</span> Trafik Sigortası
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-sky-900 bg-sky-50/50">Zorunlu karayolu motorlu araç mali sorumluluk ve 3. şahıs kaza güvencesi.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm"><span className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold text-[11px]">Yasal Zorunlu</span></td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🚘</span> Kasko Poliçesi
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-sky-900 bg-sky-50/50">Araç kaza, devrilme, yanma, çalınma, cam kırılması ve kasko muafiyet tazminatları.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm"><span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[11px]">Gönüllü Güvence</span></td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🏠</span> DASK (Deprem Sigortası)
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-sky-900 bg-sky-50/50">Zorunlu deprem, deprem kaynaklı yangın, infilak ve tsunami konut bina güvencesi.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm"><span className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold text-[11px]">Yasal Zorunlu</span></td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🏡</span> Konut Sigortası
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-sky-900 bg-sky-50/50">Ev, eşya, hırsızlık, su baskını, yangın ve komşuluk mali sorumluluk koruması.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm"><span className="px-2 py-0.5 rounded bg-sky-100 text-sky-800 font-bold text-[11px]">Geniş Teminat</span></td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🏢</span> İş Yeri Sigortası
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-sky-900 bg-sky-50/50">Ticari bina, demirbaş, emtia stok, hırsızlık, yangın ve iş durması riskleri.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm"><span className="px-2 py-0.5 rounded bg-purple-100 text-purple-800 font-bold text-[11px]">Ticari Güvence</span></td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🏥</span> Özel Sağlık Sigortası
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-sky-900 bg-sky-50/50">Yatarak/ayakta tedavi, ameliyat, tahlil, medikal harcama ve doktor muayene teminatı.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm"><span className="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-[11px]">Bireysel / Kurumsal</span></td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🩺</span> Tamamlayıcı Sağlık (TSS)
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-sky-900 bg-sky-50/50">SGK anlaşmalı özel hastanelerde doktor ve ameliyat fark ücreti teminat dökümü.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm"><span className="px-2 py-0.5 rounded bg-teal-100 text-teal-800 font-bold text-[11px]">SGK Destekli</span></td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🚢</span> Nakliyat Sigortası
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-sky-900 bg-sky-50/50">Kara, hava ve deniz yük taşımacılığında taşınan emtia ve ticari mal güvencesi.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm"><span className="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 font-bold text-[11px]">Lojistik Güvence</span></td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>🛡️</span> Ferdi Kaza Sigortası
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-sky-900 bg-sky-50/50">Kaza sonucu vefat, sürekli sakatlık ve kaza tedavi masrafları teminatı.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm"><span className="px-2 py-0.5 rounded bg-slate-100 text-slate-800 font-bold text-[11px]">Kişisel Koruma</span></td>
+                        </tr>
+                        <tr className="hover:bg-slate-50 transition-colors">
+                          <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
+                            <span>✈️</span> Seyahat Sağlık Sigortası
+                          </td>
+                          <td className="p-3.5 md:p-4 font-semibold text-sky-900 bg-sky-50/50">Yurt dışı vize başvuruları için acil sağlık, bagaj kaybı ve seyahat iptali güvencesi.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm"><span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-[11px]">Vize Uyumlu</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* 6. TÜRKİYE GENELİ SİGORTA POLİÇESİ BASKI HİZMETİ */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Türkiye Geneli Sigorta Poliçesi Baskı Hizmeti
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium">
+                    Mavi Basım tarafından üretilen numaratörlü sigorta poliçesi ve teklif formu koçanları; İstanbul, Ankara, İzmir, Bursa, Antalya, Adana, Konya, Gaziantep, Kocaeli, Kayseri, Mersin, Eskişehir, Denizli, Samsun, Trabzon, Şanlıurfa, Malatya, Erzurum ve Türkiye'nin tüm illerine gönderilmektedir.
+                  </p>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium mt-4">
+                    Otokopili sigorta poliçesi siparişleriniz, İstanbul Topkapı Matbaacılar Sitesi'ndeki tesisimizde hazırlanmakta ve koruyucu ambalaj ile kargoya verilmektedir. Sigorta acenteleri, brokerlar ve eksperler için yasal uyumlu, logo baskılı ve seri numaralı matbu belgeler üretiyoruz.
+                  </p>
+                </div>
+
+                {/* 7. NEDEN MAVİ BASIM SİGORTA MATBAASI? */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Acentelerin Tercihi: Neden Mavi Basım?
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    {[
+                      "İstanbul Topkapı Matbaacılar Sitesi üretimi",
+                      "5 ciltten başlayan esnek sipariş olanağı",
+                      "TOBB ve SEDDK standartlarına uygun mizanpaj",
+                      "Baskı öncesi ücretsiz PDF prova onayı",
+                      "Kırmızı sıralı numaratör ve perfore imkanı",
+                      "İsteğe bağlı arka yüz şartname baskısı",
+                      "CMYK ve özel Pantone kurumsal renk baskı",
+                      "Türkiye geneli sigortalı hızlı kargo"
+                    ].map((feat, fIdx) => (
+                      <div key={fIdx} className="bg-gray-50 border border-gray-150 rounded-2xl p-4 flex gap-3 hover:bg-white hover:border-sky-500 hover:shadow-md transition-all duration-300">
+                        <span className="text-sky-600 text-lg font-black shrink-0">✓</span>
+                        <span className="text-sm font-bold text-black leading-snug">{feat}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 8. İLGİLİ BASKI ÜRÜNLERİ */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Acenteler İçin Diğer Matbu Baskı Ürünleri
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
+                    Sigorta poliçesi ve teklif formu baskısının yanında acentenizin ihtiyaç duyabileceği diğer matbu kurumsal evraklar:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {[
+                      { name: "Tahsilat Makbuzu Baskı", path: "/tahsilat-makbuzu", desc: "Acente prim ve poliçe tahsilatları için otokopili makbuz." },
+                      { name: "Tediye Makbuzu Baskı", path: "/tediye-makbuzu", desc: "Müşteri veya şirkete yapılan ödemeler için tediye koçanı." },
+                      { name: "Sözleşme Koçanı Baskı", path: "/sozlesme-baski", desc: "Acente kurumsal hizmet ve taahhüt sözleşmeleri baskısı." },
+                      { name: "Para Makbuzu Baskı", path: "/para-makbuzu", desc: "Saha ödemeleri ve elden tahsilatlar için seri numaralı makbuz." },
+                      { name: "Gider Makbuzu Baskı", path: "/gider-makbuzu", desc: "Acente içi harcama ve giderlerin takibi için logolu koçan." },
+                      { name: "Araç Kiralama Sözleşmesi", path: "/arac-kiralama", desc: "Rent a car ve filo müşterileri için kiralama sözleşmesi." },
+                      { name: "Teslimat Formu Baskı", path: "/makbuz-ve-formlar", desc: "Poliçe ve evrak teslimat kayıtları için matbu teslim formu." },
+                      { name: "Sipariş Fişi Baskı", path: "/siparis-fisi", desc: "Acente malzeme ve stok sipariş takip koçanları." }
+                    ].map((prod, pIdx) => (
+                      <Link 
+                        to={prod.path} 
+                        key={pIdx} 
+                        className="bg-gray-50 border border-gray-150 hover:border-sky-600 hover:bg-white rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer group"
+                      >
+                        <div>
+                          <div className="flex items-center gap-2 mb-1.5">
+                            <span className="w-2 h-2 rounded-full bg-slate-400 group-hover:bg-sky-600 transition-colors shrink-0" />
+                            <span className="text-sm text-gray-900 font-black tracking-tight group-hover:text-sky-600 transition-colors leading-normal">{prod.name}</span>
+                          </div>
+                          <p className="text-xs text-slate-500 font-medium leading-relaxed pl-4">{prod.desc}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
+
+            {pathId === 'siparis-fisi' && (
+              <>
+                {/* 1. Bu Ürün Kimler İçin Üretiliyor? (E-E-A-T) */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Bu Ürün Kimler İçin Üretiliyor?
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
+                    Sipariş fişi koçanları, özel üretim yapan veya sipariş üzerine çalışan işletmelerin operasyon ve teslimat süreçlerini eksiksiz yönetmeleri için tasarlanmıştır. Hizmet verdiğimiz başlıca sektörler:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {[
+                      { title: "Mobilyacılar & Ahşap Atölyeleri", desc: "Özel ölçülü imalat, kapora takibi ve teslimat aşamalarını kayıt altına almak için." },
+                      { title: "Beyaz Eşya & Elektronik Servisleri", desc: "Müşteriden alınan cihazların durumunu ve servis ücretini detaylandırmak için." },
+                      { title: "Tekstil & Konfeksiyon İmalathaneleri", desc: "Toptan kumaş ve dikim siparişlerinin nüshalı takibi için." },
+                      { title: "Halı Yıkama & Temizlik Tesisleri", desc: "Adresten alınan halı ve koltuk teslimat formları için." },
+                      { title: "Oto Servis & Tamir Merkezleri", desc: "Araç kabul, iş emri ve parça değişim detaylarını müşteriye sunmak için." },
+                      { title: "İnşaat, Yapı & Taahhüt Firmaları", desc: "Şantiye malzeme teslimatı ve peşinat kayıtları için." },
+                      { title: "Organizasyon & Etkinlik Acenteleri", desc: "Düğün, davet ve kiralık ekipman sipariş taahhütleri için." },
+                      { title: "Reklam Ajansları & Tabela Üreticileri", desc: "Işıklı tabela, dijital baskı ve cephe giydirme sipariş detayları için." },
+                      { title: "Toptancılar & Mutfak Ekipmanları", desc: "Sıcak satış ve depodan ürün çıkış sipariş fişleri için." }
+                    ].map((sec, sIdx) => (
+                      <div key={sIdx} className="bg-gray-50 border border-gray-150 rounded-2xl p-4 flex flex-col gap-1 hover:bg-white hover:border-primary/40 hover:shadow-sm transition-all duration-300">
+                        <div className="flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-emerald-600 shrink-0" />
+                          <span className="text-sm text-gray-900 font-extrabold">{sec.title}</span>
+                        </div>
+                        <p className="text-xs text-slate-500 font-medium leading-relaxed pl-4">
+                          {sec.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 2. Gerçek Üretim Sürecimiz (Adım Adım) */}
+                <div className="relative z-10 border-t border-gray-100 pt-8">
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
+                    Sipariş Fişi Gerçek Üretim Sürecimiz
+                  </h2>
+                  <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
+                    Sipariş fişleriniz İstanbul Topkapı Matbaacılar Sitesi’ndeki tesislerimizde sıfır hata prensibiyle üretilmektedir:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {[
+                      { step: "01", title: "Logo & Bilgi İletimi", desc: "Logonuzu WhatsApp veya e-posta ile iletin. Vektörel formatlar (PDF, AI, CDR) veya yüksek çözünürlüklü görseller kabul edilir." },
+                      { step: "02", title: "Grafik Mizanpajı", desc: "Grafik ekibimiz firmanıza özel tablo düzenini, iletişim alanlarını ve şartnameleri ekleyerek tasarlar." },
+                      { step: "03", title: "Ücretsiz PDF Prova", desc: "Baskı öncesinde sipariş fişinizin dijital PDF provası WhatsApp üzerinden tarafınıza gönderilir ve yazılı onayınız alınır." },
+                      { step: "04", title: "CTP Kalıp Pozlama", desc: "Onaylanan tasarım CTP sisteminde ofset kalıbına pozlanır." },
                       { step: "05", title: "Ofset Baskı", desc: "Otokopili otantik kağıtlara yüksek çözünürlüklü CMYK / panteon ofset baskı gerçekleştirilir." },
                       { step: "06", title: "Kırmızı Numaratör", desc: "İstediğiniz başlangıç numarasından itibaren seri kırmızı numaratör basılır." },
                       { step: "07", title: "Perforaj & Ciltleme", desc: "Yaprakların koçandan kolayca kopması için perforaj çekilir ve sağlam üst dikiş cilt yapılır." },
@@ -1150,108 +3331,37 @@ export const MakbuzFormlarPage = () => {
                   </div>
                 </div>
 
-                {/* 2. Tediye Makbuzu Örnek Metinleri */}
+                {/* 2. Tediye Makbuzu Örneği: Excel, Word ve PDF */}
                 <div className="relative z-10 border-t border-gray-100 pt-8">
                   <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Tediye Makbuzu Örnek Metinleri
+                    Tediye Makbuzu Örneği: Excel, Word ve PDF
                   </h2>
                   <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
                     <p>
-                      Aşağıdaki örnek alanlar, tediye makbuzunda bulunabilecek bilgileri gösteren genel metin taslaklarıdır. İşletmenizin kullandığı formata göre düzenleyebilirsiniz.
+                      Tediye makbuzu örneği Excel, Word veya PDF arayanlar için boş şablonları aşağıdan indirebilirsiniz. Şablonlarda tarih, sıra numarası, ödeyen ve ödeme alan bilgileri, tutar, açıklama ve imza alanları bulunur.
                     </p>
                     <p>
-                      Taslakta tarih, sıra numarası, ödeyen ve ödeme alan bilgileri, tutar, açıklama ve imza alanları yer alır.
-                    </p>
-                    <p>
-                      Numaratör ve otokopili nüsha seçenekleri, basılı koçanlarda kayıtların izlenmesine ve nüshaların birlikte hazırlanmasına yardımcı olur.
-                    </p>
-                    <p>
-                      Bu indirmeler örnek metin dosyalarıdır; resmî veya muhasebe kullanımı için hazır belge niteliğinde değildir.
+                      Bu dosyalar genel amaçlı örnek şablonlardır; resmî belge veya muhasebe danışmanlığı niteliği taşımaz. İşleminize uygun kullanım için mali müşavirinize danışın.
                     </p>
 
                     {/* ÜCRETSİZ ÖRNEKLER İNDİRME BÖLÜMÜ */}
                     <div className="mt-6 bg-slate-50 border border-slate-200 rounded-2xl p-5">
                       <h3 className="text-base md:text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
-                        <span>📂 Örnek Metin Dosyaları</span>
+                        <span>📂 Tediye Makbuzu Örnek Dosyaları</span>
                       </h3>
                       <p className="text-xs sm:text-sm text-slate-600 mb-4">
-                        Örnekleri düz metin (.txt) dosyası olarak indirebilirsiniz:
+                        Boş örneği tercih ettiğiniz dosya biçiminde indirin:
                       </p>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                        <button
-                          type="button"
-                          onClick={() => {
-                            const blob = new Blob([
-                              `TEDİYE MAKBUZU ÖRNEK METNİ\n\nTarih: __________\nMakbuz No: __________\nÖdeyen Ünvanı: __________\nÖdeme Alan: __________\nÖdeme Tutarı: __________ TL\nÖdeme Açıklaması: __________\n\nÖdeyen İmza: __________    Teslim Alan İmza: __________`
-                            ], { type: 'text/plain;charset=utf-8' });
-                            const url = URL.createObjectURL(blob);
-                            const a = document.createElement('a');
-                            a.href = url;
-                            a.download = 'tediye-makbuzu-ornek-metni.txt';
-                            a.click();
-                            URL.revokeObjectURL(url);
-                          }}
-                          className="flex items-center justify-between bg-white p-3.5 rounded-xl border border-slate-200 hover:border-red-400 hover:shadow-xs transition-all group cursor-pointer text-left"
-                        >
-                          <div className="flex items-center gap-2.5">
-                            <span className="w-8 h-8 rounded-lg bg-red-100 text-red-600 font-black text-xs flex items-center justify-center">TXT</span>
-                            <div>
-                              <div className="text-xs font-bold text-slate-800 group-hover:text-red-600 transition-colors">Örnek Makbuz Metni</div>
-                              <div className="text-[10px] text-slate-500">TXT dosyası indir</div>
-                            </div>
-                          </div>
-                          <span className="text-slate-400 group-hover:text-red-600 text-sm font-bold">↓</span>
-                        </button>
-
-                        <button
-                          type="button"
-                          onClick={() => {
-                            const blob = new Blob([
-                              `TEDİYE MAKBUZU DÜZENLENEBİLİR ÖRNEK\n\nTarih: __________\nMakbuz No: __________\nÖdeyen Ünvanı: __________\nÖdeme Alan: __________\nÖdeme Tutarı: __________ TL\nÖdeme Açıklaması: __________\n\nÖdeyen İmza: __________\nTeslim Alan İmza: __________`
-                            ], { type: 'text/plain;charset=utf-8' });
-                            const url = URL.createObjectURL(blob);
-                            const a = document.createElement('a');
-                            a.href = url;
-                            a.download = 'tediye-makbuzu-duzenlenebilir-ornek.txt';
-                            a.click();
-                            URL.revokeObjectURL(url);
-                          }}
-                          className="flex items-center justify-between bg-white p-3.5 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-xs transition-all group cursor-pointer text-left"
-                        >
-                          <div className="flex items-center gap-2.5">
-                            <span className="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 font-black text-xs flex items-center justify-center">TXT</span>
-                            <div>
-                              <div className="text-xs font-bold text-slate-800 group-hover:text-blue-600 transition-colors">Düzenlenebilir Örnek</div>
-                              <div className="text-[10px] text-slate-500">TXT dosyası indir</div>
-                            </div>
-                          </div>
-                          <span className="text-slate-400 group-hover:text-blue-600 text-sm font-bold">↓</span>
-                        </button>
-
-                        <button
-                          type="button"
-                          onClick={() => {
-                            const blob = new Blob([
-                              `Tarih\tMakbuz No\tÖdeyen\tÖdeme Alan\tTutar\tAçıklama\n__________\t__________\t__________\t__________\t__________ TL\t__________`
-                            ], { type: 'text/plain;charset=utf-8' });
-                            const url = URL.createObjectURL(blob);
-                            const a = document.createElement('a');
-                            a.href = url;
-                            a.download = 'tediye-makbuzu-tab-ayrimli-ornek.txt';
-                            a.click();
-                            URL.revokeObjectURL(url);
-                          }}
-                          className="flex items-center justify-between bg-white p-3.5 rounded-xl border border-slate-200 hover:border-emerald-400 hover:shadow-xs transition-all group cursor-pointer text-left"
-                        >
-                          <div className="flex items-center gap-2.5">
-                            <span className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 font-black text-xs flex items-center justify-center">TXT</span>
-                            <div>
-                              <div className="text-xs font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">Tab Ayrımlı Örnek</div>
-                              <div className="text-[10px] text-slate-500">TXT dosyası indir</div>
-                            </div>
-                          </div>
-                          <span className="text-slate-400 group-hover:text-emerald-600 text-sm font-bold">↓</span>
-                        </button>
+                        <a href="/downloads/tediye-makbuzu-ornegi.pdf" download className="flex items-center justify-between bg-white p-3.5 rounded-xl border border-slate-200 hover:border-red-400 hover:shadow-xs transition-all text-left">
+                          <span className="text-xs font-bold text-slate-800">PDF örneği indir</span><span className="font-black text-red-600">PDF ↓</span>
+                        </a>
+                        <a href="/downloads/tediye-makbuzu-ornegi.docx" download className="flex items-center justify-between bg-white p-3.5 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-xs transition-all text-left">
+                          <span className="text-xs font-bold text-slate-800">Word örneği indir</span><span className="font-black text-blue-600">DOCX ↓</span>
+                        </a>
+                        <a href="/downloads/tediye-makbuzu-ornegi.xlsx" download className="flex items-center justify-between bg-white p-3.5 rounded-xl border border-slate-200 hover:border-emerald-400 hover:shadow-xs transition-all text-left">
+                          <span className="text-xs font-bold text-slate-800">Excel örneği indir</span><span className="font-black text-emerald-600">XLSX ↓</span>
+                        </a>
                       </div>
                     </div>
                   </div>
