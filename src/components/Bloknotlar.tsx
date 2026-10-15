@@ -431,7 +431,7 @@ export const BloknotlarPage = () => {
                   CYP modelinde kuşe kapak üzerine parlak selefon uygulanır. Parlak yüzey tercih edenler, bu seçeneği mat selefonlu CYM modeliyle karşılaştırabilir.
                 </p>
               </div>
-              <div className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-400 font-bold">Fiyat Seviyesi: Ekonomik (+%10)</div>
+              <div className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-400 font-bold">Fiyat: Ebat ve adet için listedeki CYP satırına bakın.</div>
             </div>
             <div className="border border-gray-150 rounded-2xl p-4 bg-gray-50/50 hover:bg-white hover:border-primary/40 transition-all flex flex-col justify-between">
               <div>
@@ -444,7 +444,7 @@ export const BloknotlarPage = () => {
                   Kapak üzerine çekilen özel mat selefon, bloknota son derece elit, kadifemsi ve yansıma yapmayan ağır bir duruş kazandırır. Kurumsal kimlik projelerinde en çok tercih edilen seçenektir.
                 </p>
               </div>
-              <div className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-400 font-bold">Fiyat Seviyesi: Standart Fiyat (+%12)</div>
+              <div className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-400 font-bold">Fiyat: Ebat ve adet için listedeki CYM satırına bakın.</div>
             </div>
             <div className="border border-gray-150 rounded-2xl p-4 bg-gray-50/50 hover:bg-white hover:border-amber-300 transition-all flex flex-col justify-between">
               <div>
@@ -457,7 +457,7 @@ export const BloknotlarPage = () => {
                   Mat selefonlu kapağın belirli alanlarına logo veya başlık için lokal lak uygulanabilir. Uygulama tasarım ve sipariş detaylarına göre netleştirilir.
                 </p>
               </div>
-              <div className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-400 font-bold">Fiyat Seviyesi: Premium Segment (+%25)</div>
+              <div className="mt-3 pt-2 border-t border-gray-100 text-[10px] text-gray-400 font-bold">Fiyat: Ebat ve adet için listedeki CYML4 satırına bakın.</div>
             </div>
           </div>
 
@@ -488,7 +488,7 @@ export const BloknotlarPage = () => {
                   <th scope="row" className="p-3 font-bold text-slate-950 text-xs sm:text-sm text-left font-sans font-normal">A6 Kapaklı (9.4x14.3 cm)</th>
                   <td className="p-3">350 gr Kuşe Kapak + Amerikan Cilt</td>
                   <td className="p-3">Saha satış ekipleri, şantiye/doktor cep notları, mobil kullanıma uygun pratik tanıtım.</td>
-                  <td className="p-3">350 gr kuşe kapakta mat veya parlak selefon seçenekleri</td>
+                  <td className="p-3">Seçilen kapak kodu ve sipariş adedine göre fiyat listesinden karşılaştırılır.</td>
                   <td className="p-3 text-center text-emerald-600 font-bold">Yüksek</td>
                   <td className="p-3 text-center font-bold text-slate-800">Prestijli</td>
                 </tr>
@@ -614,12 +614,12 @@ export const BloknotlarPage = () => {
           <div className="flex items-center gap-3 mb-4 px-2">
             <div className="w-2.5 h-6 bg-secondary rounded-full shrink-0" />
             <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight">
-              Neden Promosyon ve Kapaklı Bloknot Tercih Edilmelidir?
+              Kullanım Amacına Göre Bloknot Seçimi
             </h2>
           </div>
           <div className="bg-gray-50 border border-gray-150 rounded-3xl p-6 md:p-8 space-y-4 text-xs sm:text-sm font-semibold leading-relaxed text-gray-650">
             <p>
-              Bloknotlar; kurumsal tanıtım, toplantı ve günlük not alma süreçlerinde kullanılabilen basılı ürünlerdir. Kapaklı veya kapaksız modeller, kullanım amacına, ölçüye, iç sayfa özelliklerine ve sipariş adedine göre değerlendirilir.
+              Not sayfalarını koparıp paylaşacağınız masaüstü kullanımda üstten tutkallı modeli; kapağın not sayfalarını korumasını istediğiniz toplantı ve saha kullanımında kapaklı modeli değerlendirebilirsiniz. Spiralli cilt, sayfaları çevirerek kullanmaya uygundur. Galerideki spiralli örnekler için model ve ebat uygunluğunu sipariş öncesinde ayrıca sorunuz; kapaklı ve tutkallı fiyat listeleri spiralli modellere uygulanmaz.
             </p>
             {/* İÇ LİNKLER BÖLÜMÜ */}
             <div className="mt-4 pt-4 border-t border-gray-200">
@@ -879,48 +879,48 @@ export const BloknotlarPage = () => {
           <div className="flex items-center gap-3 mb-6">
             <span className="w-2.5 h-6 bg-primary rounded-full shrink-0" />
             <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight">
-              Baskı ve Sipariş Bilgileri
+              Bloknot Baskı Dosyası Hazırlama
             </h2>
           </div>
 
           <p className="text-xs sm:text-sm text-gray-650 font-semibold leading-relaxed mb-6">
-            Bloknot siparişlerinde adet, ebat, kapak ve cilt bilgileri netleştirilir. Baskı ve sipariş hazırlığı, iletilen ürün bilgilerine göre planlanır.
+            Hazır tasarımınızı PDF, AI veya CDR formatında iletebilirsiniz. Kapak ve iç sayfa tasarımlarını ayrı belirtin; yalnız logonuz varsa firma adı ve kullanılacak iletişim bilgilerini de paylaşın.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs font-semibold text-gray-700">
             <div className="bg-slate-50 p-5 rounded-2xl border border-gray-150">
               <h3 className="font-black text-black uppercase text-xs mb-1.5">
-                Baskı Bilgileri
+                Dosya ve Görseller
               </h3>
               <p className="text-[11px] leading-relaxed">
-                Kağıt ve baskı özellikleri sipariş detaylarına göre netleştirilir.
+                Logoyu mümkünse vektörel gönderin. Fotoğraf ve diğer piksel tabanlı görsellerde, kullanılacak baskı boyutunda 300 DPI çözünürlük hedefleyin.
               </p>
             </div>
 
             <div className="bg-slate-50 p-5 rounded-2xl border border-gray-150">
               <h3 className="font-black text-black uppercase text-xs mb-1.5">
-                Kapak ve Cilt
+                Baskı Renkleri
               </h3>
               <p className="text-[11px] leading-relaxed">
-                Kapaklı veya kapaksız model ile cilt bilgileri sipariş sırasında belirlenir.
+                Kapak tasarımını CMYK baskıya göre hazırlayın. İç sayfada tek renk kullanılacak alanları belirtin; çok renkli iç sayfa talebini standart tek renk seçenekten ayrı bildirin.
               </p>
             </div>
 
             <div className="bg-slate-50 p-5 rounded-2xl border border-gray-150">
               <h3 className="font-black text-black uppercase text-xs mb-1.5">
-                Sipariş Detayları
+                Kesim ve Yerleşim
               </h3>
               <p className="text-[11px] leading-relaxed">
-                Adet, ebat, kapak ve cilt bilgilerini WhatsApp üzerinden iletebilirsiniz.
+                Tasarımda fiyat listesindeki santimetre cinsinden kesim ölçüsünü esas alın. Kenara uzanan zeminlerde taşma payı bırakın; yazı ve logoları kesim ve cilt bölgesinden uzak tutun. Kesin payları dosya kontrolünde netleştirin.
               </p>
             </div>
 
             <div className="bg-slate-50 p-5 rounded-2xl border border-gray-150">
               <h3 className="font-black text-black uppercase text-xs mb-1.5">
-                Sevkiyat Bilgileri
+                PDF Prova Kontrolü
               </h3>
               <p className="text-[11px] leading-relaxed">
-                Sevkiyat yöntemi ve adres bilgileri sipariş sürecinde paylaşılır.
+                PDF provada firma bilgilerini, yazıları, kesim ölçüsünü ve kapak/iç sayfa yerleşimini kontrol edin. Dijital prova, ekran ve fiziksel baskı renginin birebir aynı olacağını garanti etmez.
               </p>
             </div>
           </div>

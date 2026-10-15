@@ -64,3 +64,20 @@ Beş tablo JSX'i önceki sürümle birebir aynı. Render edilen tablo DOM'u önc
 Koruma kapsamındaki iki sorun giderilmedi. Ölçülmeyen 5 puan hata kesintisi değildir; başarılı kontrol kabul edilerek puana eklenmedi. Bu puan tam mobil/performance denetimi veya ilk 10 garantisi değildir.
 
 CI ilk denemede sitemap için Türkiye günü kullanıldığından UTC gelecekteki tarih kontrolünde durdu. Son kayıt UTC 2026-10-14 olarak düzeltildi; validator ve workflow kuralları değiştirilmedi.
+
+## 15 Ekim 2026 — Planner/GSC incelemesi sonrası tamamlanan düzeltmeler
+
+Kullanıcı, güncel puanlama tablosundaki hatalar için “hataları düzelt bağlan onay veriyorum bekleme” dedi. Bu onayla, daha önce koruma kapsamında bırakılan sabit yüzde etiketleri ile karşılaştırma tablosundaki tek yanlış bütçe hücresi sınırlı olarak düzeltildi. Fiyat tutarları, kodlar, adetler, ölçüler, teslimat ve ödeme bilgileri değiştirilmedi.
+
+- `/bloknot` adresinin doğrudan istekte 404 vermesine karşı Vercel kalıcı yönlendirmesi eklendi: `/bloknot` → `/bloknotlar`. Aynı eşleştirme Express sunucunun merkezi yönlendirme kaynağına eklendi. Sunucu testi GET/HEAD, son slash ve sorgu parametresini kapsıyor; parametre korunuyor. Vercel kalıcı yönlendirmesi yayında 308, Express 301 üretir.
+- CYP/CYM/CYML4 kartlarında tarife farklarıyla uyuşmayan +%10/+%12/+%25 etiketleri kaldırıldı. Yerlerine ilgili model kodunun ebat ve adet satırından fiyat karşılaştırması yapılması bilgisi verildi; yeni fiyat hesaplanmadı.
+- A6 kapaklı satırının bütçe hücresindeki malzeme metni, fiyatı kapak kodu ve sipariş adedine göre karşılaştırmayı anlatan metinle değiştirildi. Diğer dört tablo normalize edilmiş DOM olarak birebir aynı; üçüncü tabloda yalnız bu hücrenin metni değişti. Değişiklik öncesi/sonrası karşılaştırma yapıldı. Regresyon testinin yalnız bu tablo hash'i onaylanan yeni hücreye göre güncellendi.
+- Girişi tekrar eden tercih paragrafı, koparılabilir tutkallı sayfa/kapaklı kullanım ve spiralli model ayrımını anlatıyor. Spiralli örneklerin ebat/model uygunluğu sipariş öncesi sorulmalı; kapaklı/tutkallı fiyat listeleri spiralli modele uygulanmaz. Yeni spiral ürün veya fiyat vaadi yok.
+- Tekrar eden “Baskı ve Sipariş Bilgileri” bölümü dosya hazırlamaya ayrıldı: PDF/AI/CDR, vektörel logo, baskı boyutunda piksel görsel çözünürlüğü, kapak/iç sayfa ve renk ayrımı, kesim/cilt alanı, taşma payı ve PDF prova kontrolü. Kabul edilen formatlar sitenin mevcut antetli/küp bloknot açıklamalarında zaten belirtiliyor. Kesin taşma payı uydurulmadı; dosya kontrolünde netleştirilir. Dijital provanın fiziksel rengi birebir garanti etmediği açıklandı.
+- Title, meta description, H1, görünür 20 SSS ve şemaları korunuyor. Yeni sayfa/blog/görsel eklenmedi. Yalnız bloknotlar sitemap lastmod tarihi 2026-10-15 olarak güncellendi.
+
+### Yerel doğrulama
+
+Typecheck geçti; lint 0 hata, mevcut 410 uyarı. Vite build, 294 sayfa prerender ve sunucu bundle başarılı. 287 rota, sitemap, metadata, iç bağlantı, içerik, 25 üretim HTTP kontrolü ve 25 kontrollü hata yakalama kontrolü geçti. Mevcut bloknot regresyonu ilk HTML, hydration, fiyat düğmeleri/sipariş detayı, sayfa geçişleri, title/canonical/SSS ve yönlendirmeyi doğruladı; site hatası yok. Korunan dört tablo birebir aynı, karşılaştırma tablosunda yalnız onaylanan hücre değişikliği var.
+
+Bu ortamda `tsx` CLI geçici IPC soketi oluşturamadığından aynı TypeScript girişleri `node --import tsx` ile çalıştırıldı; proje build komutu değiştirilmedi. Chromium yürütülebilir dosyası bulunmadığından Playwright spinner kontrolü kendi uyarısıyla atlandı. Gerçek mobil görünüm ve Core Web Vitals ölçümü yapıldığı iddia edilmez. GSC verisi yeniden çekilmedi, panel toplam/rol bilgileri değiştirilmedi; sıralama sonucu vaat edilmez.
