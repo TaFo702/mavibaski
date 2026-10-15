@@ -3325,10 +3325,10 @@ export const MakbuzFormlarPage = () => {
                   </h2>
                   <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
                     <p>
-                      Tediye makbuzu örneği Excel, Word veya PDF arayanlar için boş şablonları aşağıdan indirebilirsiniz. Şablonlarda tarih, sıra numarası, ödeyen ve ödeme alan bilgileri, tutar, açıklama ve imza alanları bulunur.
+                      Tediye makbuzu örneğini Word, Excel veya PDF biçiminde indirebilirsiniz. Excel tediye makbuzu örneği ve Word tediye makbuzu örneğinde tarih, sıra numarası, ödeyen ve ödeme alan bilgileri, tutar, açıklama ve imza alanları yer alır. Doldurulmuş örnek görsel, bu alanların koçan üzerindeki yerleşimini gösterir.
                     </p>
                     <p>
-                      Bu dosyalar genel amaçlı örnek şablonlardır; resmî belge veya muhasebe danışmanlığı niteliği taşımaz. İşleminize uygun kullanım için mali müşavirinize danışın.
+                      Tediye makbuzu indir aramasından bu sayfaya geldiyseniz, boş örnek dosyalarını aşağıdaki bağlantılardan seçebilirsiniz. “Tediye fişi örneği” arayanlar için not: aşağıdaki dosyalar tediye makbuzu şablonudur; kullanacağınız belge türünü işletmenizin işlemine göre belirleyin. Dosyalar genel amaçlı örneklerdir; resmî belge veya muhasebe danışmanlığı niteliği taşımaz. İşleminize uygun kullanım için mali müşavirinize danışın.
                     </p>
 
                     {/* ÜCRETSİZ ÖRNEKLER İNDİRME BÖLÜMÜ */}
