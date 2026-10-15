@@ -548,6 +548,21 @@ export const KatalogPage = () => {
           <FireWarning />
         </div>
 
+        <section aria-labelledby="katalog-teklif-hesabi" className="mt-12 p-6 md:p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
+          <h2 id="katalog-teklif-hesabi" className="text-2xl md:text-3xl font-black text-black mb-4 tracking-tight">Katalog Baskı Fiyat Hesaplama ve Teklif Karşılaştırma</h2>
+          <div className="space-y-4 text-gray-700 font-medium leading-relaxed">
+            <p>
+              Katalog fiyat hesaplama işleminde önce bitmiş ebat, kapak dahil toplam sayfa sayısı ve baskı adedi belirlenir. Ardından iç sayfa kâğıdı, kapak gramajı, cilt ve kapak uygulamaları birlikte değerlendirilir. Aynı adet için verilen iki katalog basım teklifini karşılaştırırken bu özelliklerin eşleşmesi gerekir; yalnız toplam tutara bakmak yeterli değildir.
+            </p>
+            <p>
+              A4 katalog fiyatları için yukarıdaki listede ihtiyacınıza uygun toplam sayfa seçeneğini ve adet satırını birlikte inceleyebilirsiniz. Katalog baskı fiyatı hesaplama sırasında listedeki KDV notunu da dikkate alın. Farklı ebat, kâğıt veya cilt talebiniz varsa standart tarifenin aynen geçerli olduğunu varsaymadan özelliklerinizi iletin; projenize göre teklif isteyin.
+            </p>
+            <p>
+              Teklif talebinize bitmiş katalog ölçülerini, iç sayfa ve kapak sayısını ayrı ayrı, baskı adedini ve hazır dosyanızın bulunup bulunmadığını ekleyin. Sayfa düzeni için desteğe ihtiyacınız varsa <Link to="/grafik-tasarim" className="text-primary hover:underline font-bold">katalog tasarımı ve grafik desteği</Link> hakkında bilgi alabilirsiniz.
+            </p>
+          </div>
+        </section>
+
         {/* KATALOG ÜRÜN FOTOĞRAFLARI GALERİSİ */}
         <div className="mt-16 mb-8 text-black">
           <div className="flex items-center gap-3 mb-6 px-2">
@@ -689,6 +704,39 @@ export const KatalogPage = () => {
           </section>
 
           {/* Katalog Üretim ve Kargo Planlaması */}
+          <section aria-labelledby="katalog-ebat-sayfa" className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100">
+            <h2 id="katalog-ebat-sayfa" className="text-2xl md:text-3xl font-black text-black mb-4 tracking-tight">Katalog Boyutları ve Kapak Dahil Sayfa Sayısı</h2>
+            <div className="space-y-4 text-gray-700 font-medium leading-relaxed">
+              <p>
+                Katalog baskı ölçüleri belirtilirken bitmiş, yani kapalı ebat ile açık kapak ölçüsü birbirinden ayrılmalıdır. A4 katalog baskı ile A5 katalog baskı taleplerinde dikey veya yatay kullanım tercihinizi de paylaşın. Açık kapak ölçüsü ve gerekiyorsa sırt payı; seçilen cilt, kâğıt ve toplam sayfa sayısına göre dosya kontrolünde netleştirilir.
+              </p>
+              <p>
+                Katalog sayfa sayısı hesabında yaprak ile sayfa aynı değildir: bir yaprağın ön ve arka yüzü iki sayfadır. Bu sayfadaki tarifede dört sayfalık kapak toplam sayıya dahildir. Örneğin 8 sayfa katalog, 4 iç sayfa + 4 kapak sayfası; 16 sayfa katalog ise 12 iç sayfa + 4 kapak sayfası anlamına gelir. Dosyanızdaki toplamı tarifenin başlığıyla bu şekilde eşleştirin.
+              </p>
+              <p>
+                Tel dikişte toplam sayfanın dördün katı olması gerekir. Forma başına sayfa sayısı ise katalog boyutları ve baskı yerleşimine göre değişir; bütün projeler için tek bir forma sayısı kabul edilmez. Kapak ve iç sayfaların nasıl teslim edileceğini baskı dosyasını hazırlamadan önce netleştirin.
+              </p>
+            </div>
+          </section>
+
+          <section aria-labelledby="sektorel-urun-katalogu" className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100">
+            <h2 id="sektorel-urun-katalogu" className="text-2xl md:text-3xl font-black text-black mb-6 tracking-tight">Sektöre Göre Ürün ve Hizmet Kataloğu Hazırlığı</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-700 font-medium leading-relaxed">
+              <div>
+                <h3 className="text-lg font-bold text-black mb-3">Mobilya ve Tekstil Ürün Kataloğu</h3>
+                <p>Mobilya kataloğu baskı hazırlığında model kodu, ölçü ve malzeme bilgilerini ürün fotoğrafıyla eşleştirin. Tekstil kataloğunda renk, beden ve koleksiyon ayrımı satış ekibinin doğru ürünü bulmasını kolaylaştırır. Baskıdan önce ürün kodlarının ve görsel altı açıklamaların güncelliğini kontrol edin.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-black mb-3">Makine ve Teknik Ürün Kataloğu</h3>
+                <p>Makine kataloğu baskı dosyasında teknik çizimler, ölçü birimleri ve özellik tabloları okunaklı olmalıdır. Benzer modelleri aynı bilgi sırasıyla sunun. Teknik katalog baskısı için dosyayı son kullanılacak ebatta inceleyerek küçük yazıları, şema açıklamalarını ve cilde yakın alanları kontrol edin.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-black mb-3">Firma Hizmet ve Emlak Kataloğu</h3>
+                <p>Firma hizmet kataloğu baskısında hizmet kapsamı, proje örnekleri ve iletişim bilgilerini açıkça ayırın. Emlak kataloğu için proje konumu, planlar ve görsellerin güncel sürümünü kullanın. Kozmetik veya mağaza ürün kataloğunda da ürün açıklamalarını ve varsa fiyatların geçerlilik tarihini baskı onayından önce doğrulayın.</p>
+              </div>
+            </div>
+          </section>
+
           <section className="bg-black rounded-[40px] p-8 md:p-16 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full -mr-48 -mt-48 blur-3xl" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full -ml-48 -mb-48 blur-3xl" />
