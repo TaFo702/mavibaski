@@ -7,14 +7,14 @@ const client = require('esbuild').buildSync({ entryPoints: ['src/main.tsx'], bun
 const errors = [];
 const crypto = require('node:crypto');
 const initial = new JSDOM(fs.readFileSync('dist/bloknotlar/index.html','utf8')).window.document;
-const expectedTableHashes = ['d37f7f28e86977e07dcb029d050815f828a2922fc76984ed584aef4e5456335d','2e5bf4da9b447cae684bb1798db7b8313e7ef19c18cccc3bb786024049d500d0','c7464d677d5038fe0eb4df488b995a96eb8a6ff69cef67859b0d1aa0e66d9f3b','9a2f447966bef4e1e544562888ddfa27eb716bba53f099e97f89f4757aac9bb9','7de73f5460f14f57b3f64aca90fbde13ca9c6216f1d72798663e62b8cf5d692e'];
+const expectedTableHashes = ['d37f7f28e86977e07dcb029d050815f828a2922fc76984ed584aef4e5456335d','2e5bf4da9b447cae684bb1798db7b8313e7ef19c18cccc3bb786024049d500d0','aafc6250c43460a240c1f8684352cb4c0f758b73ab9c19142960efd7afd77f5a','9a2f447966bef4e1e544562888ddfa27eb716bba53f099e97f89f4757aac9bb9','7de73f5460f14f57b3f64aca90fbde13ca9c6216f1d72798663e62b8cf5d692e'];
 // React SSR and client rendering serialize identical inline CSS with different whitespace.
 const hashes = d => [...d.querySelectorAll('main table')].map(n => {
   const copy = n.cloneNode(true);
   copy.querySelectorAll('[style]').forEach(el => el.setAttribute('style', el.style.cssText));
   return crypto.createHash('sha256').update(copy.outerHTML).digest('hex');
 });
-assert.deepEqual(hashes(initial), expectedTableHashes, 'Protected tables differ from existing React output');
+assert.deepEqual(hashes(initial), expectedTableHashes, 'Tables differ from approved output (comparison table contains one authorized cell correction)');
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const normalize = text => text.replace(/\s+/g, ' ').trim();
 const links = doc => [...doc.querySelectorAll('#root a[href]')].map(n => n.getAttribute('href'));
@@ -50,6 +50,10 @@ function checkBloknotlar(doc) {
   const h=[...doc.querySelectorAll('main h1,main h2,main h3,main h4')];for(let i=1;i<h.length;i++)assert(+h[i].tagName[1]<=+h[i-1].tagName[1]+1);
   assert(doc.querySelector('main').textContent.includes('CYP modelinde kuşe kapak üzerine parlak selefon uygulanır.'));
   assert(doc.querySelector('main').textContent.includes('İç sayfa gramajı:'));
+  assert(doc.querySelector('main').textContent.includes('Bloknot Baskı Dosyası Hazırlama'));
+  assert(doc.querySelector('main').textContent.includes('PDF, AI veya CDR'));
+  assert(doc.querySelector('main').textContent.includes('kapaklı ve tutkallı fiyat listeleri spiralli modellere uygulanmaz'));
+  assert(!/\+%10|\+%12|\+%25/.test(doc.querySelector('main').textContent));
 }
 
 async function wait(w, path) {
@@ -139,6 +143,16 @@ async function go(w,path,label) {
   try {
     for(let i=0;i<50&&!output.includes('Server running');i++) await sleep(100);
     assert(output.includes('Server running'),output);
+    const hostingRedirect = JSON.parse(fs.readFileSync('vercel.json','utf8')).redirects.find(r=>r.source==='/bloknot');
+    assert.deepEqual(hostingRedirect,{source:'/bloknot',destination:'/bloknotlar',permanent:true});
+    for(const method of ['GET','HEAD']) {
+      for(const path of ['/bloknot','/bloknot/','/bloknot?utm_source=audit']) {
+        const response=await fetch('http://127.0.0.1:3000'+path,{method,redirect:'manual'});
+        assert.equal(response.status,301,path);
+        assert.equal(response.headers.get('location'),path.includes('?')?'/bloknotlar?utm_source=audit':'/bloknotlar');
+      }
+    }
+    results.legacyUrlRedirect='GET/HEAD: 301 to canonical URL; query string preserved';
     results.http=[];
     for(const path of ['/bloknotlar','/bloknotlar?utm_source=audit']) {
       const response=await fetch('http://127.0.0.1:3000'+path);

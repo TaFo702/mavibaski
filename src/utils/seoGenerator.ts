@@ -72,6 +72,7 @@ export const knownStaticRoutes = new Set([
 ]);
 
 export const URL_REDIRECTS: Record<string, string> = {
+  "/bloknot": "/bloknotlar",
   "/antetli-kagit": "/antetli",
   "/cepli-dosya": "/dosyalar",
   "/favicon.ico": "/mavilogo.png",

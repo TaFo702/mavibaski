@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/bloknot",
+      "destination": "/bloknotlar",
+      "permanent": true
+    },
+    {
       "source": "/antetli-kagit",
       "destination": "/antetli",
       "permanent": true
