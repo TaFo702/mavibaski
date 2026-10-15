@@ -54,8 +54,25 @@ export const KUP_BLOKNOT_FAQS: KupBloknotFaqItem[] = [
   {
     q: "Şehir dışı kargo gönderimi nasıl yapılmaktadır?",
     a: "Türkiye'nin 81 iline anlaşmalı kargo firmalarımızla sevkiyat yapılmaktadır. Ürünler taşıma esnasında deformasyonu önlemeye yardımcı koruyucu çift kat mukavva kolilerde paketlenerek sevk edilir."
+  },
+  {
+    q: "Küp bloknot bıçak izini nasıl temin edebilirim?",
+    a: "Seçtiğiniz 250 veya 500 yapraklı modeli belirterek müşteri temsilcimizden uygun küp bloknot kutu şablonunu talep edebilirsiniz. İç yaprak ölçüsü dış kutunun açık ölçüsü değildir. Dış kutu tasarımını modele uygun kesim ve katlama çizgilerine göre hazırlayın; baskı öncesinde dijital PDF provasını kontrol ederek onaylayın."
+  },
+  {
+    q: "Logolu küp bloknot için kutu ve iç yaprak tasarımı ayrı mı hazırlanır?",
+    a: "Evet. Dış kutu ile iç not kağıdı farklı baskı alanlarıdır; tasarımlarını ayrı dosyalarda veya aynı dosyanın ayrı sayfalarında hazırlayın. Dış kutuda kurumsal görseller ve iletişim bilgileri kullanılabilir. İç yapraklarda ise not yazılacak alanı koruyan açık tonlu bir logo tercih edin. Standart iç yaprak baskısı tek renktir; farklı renk talepleri özel teklif kapsamında değerlendirilir."
   }
 ];
+
+export const KUP_BLOKNOT_FILE_GUIDE = {
+  title: "Küp Bloknot Bıçak İzi ve Baskı Dosyası",
+  paragraphs: [
+    "Logolu küp bloknot için dış kutu tasarımını ve iç yaprak baskısını ayrı dosyalarda veya aynı dosyanın ayrı sayfalarında hazırlayın. Dış kutuda firma logosu, kurumsal renkler ve iletişim bilgileri yer alabilir. İç yapraklarda ise yazı yazılacak alanı açık bırakan, notların okunmasını zorlaştırmayan bir yerleşim kullanın.",
+    "Küp bloknot kutu şablonu seçilen modele uygun olmalıdır. 78 × 78 mm iç yaprak ölçüsünü dış kutunun açık ölçüsü olarak kullanmayın. Tasarıma başlamadan önce 250 veya 500 yapraklı modelin bıçak izini talep edin; logo ve yazıları kesim, katlama ve yapıştırma alanlarından uzak tutun.",
+    "Küp bloknot tasarım dosyasını hazırlarken bıçak izini ayrı bir katmanda tutun; kesim ve katlama çizgilerinin ürün görseline karışmamasına dikkat edin. Dış kutu ve iç yaprak yerleşimlerini dijital PDF provasında ayrı ayrı kontrol edin. Üretim, mevcut prova onayı sürecine göre başlatılır."
+  ]
+};
 
 export const KUP_BLOKNOT_GALLERY: KupBloknotGalleryItem[] = [
   {
@@ -506,6 +523,10 @@ export function generateKupBloknotSSRBodyContent(): string {
                 💡 Hazır tasarım şablonuna ihtiyacınız varsa müşteri temsilcimizden ebadınıza uygun PDF veya AI bıçak şablonunu talep edebilirsiniz.
               </div>
             </div>
+          </div>
+          <div class="mt-6 space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <h3 class="text-base font-bold text-slate-900">${KUP_BLOKNOT_FILE_GUIDE.title}</h3>
+            ${KUP_BLOKNOT_FILE_GUIDE.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('\n')}
           </div>
         </section>
 

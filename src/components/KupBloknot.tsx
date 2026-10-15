@@ -25,7 +25,8 @@ import RelatedBlogPosts from './RelatedBlogPosts';
 import { KUP_BLOKNOT_DATA } from '../data/extraProductData';
 import { 
   KUP_BLOKNOT_SEO_METADATA, 
-  KUP_BLOKNOT_FAQS, 
+  KUP_BLOKNOT_FAQS,
+  KUP_BLOKNOT_FILE_GUIDE,
   KUP_BLOKNOT_GALLERY, 
   KUP_BLOKNOT_SCHEMAS,
   KupBloknotGalleryItem 
@@ -574,6 +575,12 @@ export const KupBloknotPage: React.FC = () => {
                 💡 Hazır tasarım şablonuna ihtiyacınız varsa müşteri temsilcimizden ebadınıza uygun PDF veya AI bıçak şablonunu talep edebilirsiniz.
               </div>
             </div>
+          </div>
+          <div className="mt-6 space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <h3 className="text-base font-bold text-slate-900">{KUP_BLOKNOT_FILE_GUIDE.title}</h3>
+            {KUP_BLOKNOT_FILE_GUIDE.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </section>
 
