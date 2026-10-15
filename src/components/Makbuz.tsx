@@ -247,8 +247,7 @@ const SmartCiltFinder = ({ data, isModalMode = false }: { data: any[], isModalMo
             </div>
             <div>
               <h2 className="text-sm font-black text-black uppercase tracking-tight">Akıllı Fiyat Hesaplayıcı</h2>
-              <p className="text-[10px] text-black font-medium">İstediğiniz özellikleri seçin, fiyatı görün.</p>
-            </div>
+              <p className="text-[10px] text-black font-medium">İstediğiniz özellikleri seçin, fiyatı görün.</p>            </div>
           </div>
         )}
 
@@ -498,7 +497,6 @@ export const MakbuzFormlarPage = () => {
   const filteredData = pathId && pathId !== 'makbuz-ve-formlar'
     ? MAKBUZ_FORMLAR_ALL_DATA.filter(item => item.id === pathId)
     : MAKBUZ_FORMLAR_ALL_DATA.filter(item => item.id !== 'senet');
-
   const currentDetails = MAKBUZ_DETAILS[pathId];
 
   const getRelatedProducts = (currentPathId: string) => {
@@ -747,8 +745,7 @@ export const MakbuzFormlarPage = () => {
                 <div className="bg-emerald-50/90 border-l-4 border-emerald-600 p-4 rounded-r-2xl text-left text-xs md:text-sm font-semibold text-slate-800 shadow-2xs space-y-1">
                   <div className="flex items-center gap-2 font-black text-emerald-900 uppercase tracking-tight text-xs">
                     <span className="w-2 h-2 rounded-full bg-emerald-600" />
-                    <span>Kısa Cevap</span>
-                  </div>
+                    <span>Kısa Cevap</span>                  </div>
                   <p className="leading-relaxed">
                     {pathId === 'para-makbuzu' ? (
                       <>
@@ -997,8 +994,7 @@ export const MakbuzFormlarPage = () => {
                         </p>
                         <p>
                           <strong>Gider makbuzu bastırma</strong> sürecinde kullanılacak kağıt türü, baskı adedi ve özel tasarım talepleri fiyatları etkileyebilir. <strong>Logolu gider makbuzu</strong> ve <strong>özel tasarım gider makbuzu</strong> çalışmalarında firmanıza özel grafik düzenlemeleri uygulanabilmektedir. Güncel <strong>gider makbuzu baskı fiyatları</strong> için yukarıdaki tabloyu inceleyebilir veya hızlı <strong>gider makbuzu siparişi</strong> oluşturabilirsiniz.
-                        </p>
-                      </>
+                        </p>                      </>
                     ) : (
                       <>
                         <p>
@@ -1247,8 +1243,7 @@ export const MakbuzFormlarPage = () => {
                 />
                 <figcaption className="text-gray-550 text-[11px] mt-2.5 text-center font-bold leading-normal max-w-[280px]">
                   {pathId === 'adisyon'
-                    ? "Önyüz yakın çekim. 14 × 20 cm standart numaratörlü adisyon koçanı örneği."
-                    : `Önyüz yakın çekim. Otokopili numaratörlü ${currentDetails.breadcrumbTitle.toLowerCase()} koçanı ve baskı modeli.`}
+                    ? "Önyüz yakın çekim. 14 × 20 cm standart numaratörlü adisyon koçanı örneği."                    : `Önyüz yakın çekim. Otokopili numaratörlü ${currentDetails.breadcrumbTitle.toLowerCase()} koçanı ve baskı modeli.`}
                 </figcaption>
               </figure>
 
@@ -1497,8 +1492,7 @@ export const MakbuzFormlarPage = () => {
                 <h3 className="text-lg md:text-xl font-black text-black mb-3 uppercase tracking-tight flex items-center gap-2">
                   <span className="w-1.5 h-6 bg-secondary rounded-full" />
                   {pathId === 'gider-makbuzu' ? 'Gider Makbuzu Teknik Baskı Özellikleri' : 'Tahsilat Makbuzu Teknik Baskı Özellikleri'}
-                </h3>
-                <div className="text-slate-650 text-sm md:text-base leading-relaxed font-semibold space-y-4">
+                </h3>                <div className="text-slate-650 text-sm md:text-base leading-relaxed font-semibold space-y-4">
                   {pathId === 'gider-makbuzu' ? (
                     <>
                       <p>
@@ -1747,8 +1741,7 @@ export const MakbuzFormlarPage = () => {
                             <Link to="/arac-kiralama" className="text-black hover:text-emerald-700 hover:underline transition-all font-bold">
                               Araç Kiralama Firmaları
                             </Link>
-                          </div>
-                          <div className="flex items-center gap-3">
+                          </div>                          <div className="flex items-center gap-3">
                             <span className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] shrink-0">➔</span>
                             <Link to="/sozlesme-baski?type=guzellik" className="text-black hover:text-emerald-700 hover:underline transition-all font-bold">
                               Güzellik Merkezleri
@@ -1998,7 +1991,6 @@ export const MakbuzFormlarPage = () => {
                   </div>
                 </div>
               )}
-
               {currentDetails.extraSampleTitle && currentDetails.extraSampleContent && (
                 <div className="mt-8 pt-8 border-t border-gray-200/85 space-y-4">
                   <h3 className="text-base md:text-lg font-black text-black uppercase tracking-tight flex items-center gap-2 mb-2">
@@ -2247,8 +2239,7 @@ export const MakbuzFormlarPage = () => {
                       { title: "Sipariş Fişi", path: "/siparis-fisi", desc: "Alınan ürün ve hizmet siparişlerinin detaylı takibi için." },
                       { title: "Adisyon Baskı", path: "/adisyon", desc: "Hizmet ve gıda sektörüne özel masasal adisyon takibi için." },
                       { title: "Servis Formu", path: "/arac-kiralama", desc: "Teknik servis ve teslimat süreçlerinin kayıt altına alınması için." }
-                    ].map((linkItem, idx) => (
-                      <Link key={idx} to={linkItem.path} className="bg-slate-50 hover:bg-white border border-slate-200 hover:border-blue-500/50 p-4 rounded-2xl transition-all shadow-2xs group flex flex-col justify-between">
+                    ].map((linkItem, idx) => (                      <Link key={idx} to={linkItem.path} className="bg-slate-50 hover:bg-white border border-slate-200 hover:border-blue-500/50 p-4 rounded-2xl transition-all shadow-2xs group flex flex-col justify-between">
                         <div>
                           <div className="flex items-center justify-between mb-1">
                             <h3 className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight group-hover:text-blue-600 transition-colors">{linkItem.title}</h3>
@@ -2497,8 +2488,7 @@ export const MakbuzFormlarPage = () => {
                     Kurumsal Sözleşme Türleri
                   </h2>
                   <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
-                    Sektörünüze ve hukuki ihtiyaçlarınıza özel olarak tasarlayıp bastığımız başlıca otokopili sözleşme çeşitleri:
-                  </p>
+                    Sektörünüze ve hukuki ihtiyaçlarınıza özel olarak tasarlayıp bastığımız başlıca otokopili sözleşme çeşitleri:                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
                       { title: "Hizmet Sözleşmesi", desc: "Genel hizmet alım-satım şartları, iş kapsamı, teslimat süreci, ödeme planı ve yasal taahhütnameler.", badge: "Otokopili / Numaratörlü", icon: "📋" },
@@ -2747,8 +2737,7 @@ export const MakbuzFormlarPage = () => {
 
                 {/* İstanbul'da Sözleşme Baskı Yaptırmak İsteyen Firmalar İçin */}
                 <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    İstanbul'da Sözleşme Baskı Yaptırmak İsteyen Firmalar İçin
+                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">                    İstanbul'da Sözleşme Baskı Yaptırmak İsteyen Firmalar İçin
                   </h2>
                   <p className="text-slate-650 text-base leading-relaxed font-medium">
                     İstanbul sözleşme baskı hizmetlerimiz kapsamında; Zeytinburnu, Topkapı, Bayrampaşa, Güngören, Bakırköy, Bahçelievler, Esenler, Bağcılar, Küçükçekmece, Avcılar, Başakşehir, Ümraniye, Pendik, Kartal ve İstanbul'un tüm ilçelerine hizmet sunmaktayız.
@@ -2997,8 +2986,7 @@ export const MakbuzFormlarPage = () => {
                       { step: "02", title: "Dijital PDF Onayı", desc: "Hazırlanan şablon WhatsApp / E-posta ile tarafınıza iletilerek birebir PDF kontrolü ve onayı alınır.", icon: "📄" },
                       { step: "03", title: "Ofset Baskı & Cilt", desc: "Otokopili kağıtlara kurumsal renklerinizde HD ofset baskı, kırmızı numaratör ve dikişli ciltleme uygulanır.", icon: "🖨️" },
                       { step: "04", title: "Kargo & Adrese Teslim", desc: "Çift oluklu dayanıklı kolilerde paketlenen poliçe koçanlarınız anlaşmalı kargo ile adresinize ulaştırılır.", icon: "📦" }
-                    ].map((step, idx) => (
-                      <div key={idx} className="bg-gradient-to-br from-slate-50 to-white border border-gray-150 rounded-2xl p-5 relative overflow-hidden flex flex-col justify-between hover:border-sky-500 hover:shadow-md transition-all">
+                    ].map((step, idx) => (                      <div key={idx} className="bg-gradient-to-br from-slate-50 to-white border border-gray-150 rounded-2xl p-5 relative overflow-hidden flex flex-col justify-between hover:border-sky-500 hover:shadow-md transition-all">
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-2xl">{step.icon}</span>
                           <span className="text-xs font-black text-sky-700 bg-sky-50 px-2.5 py-1 rounded-full border border-sky-200">{step.step}</span>
@@ -3247,8 +3235,7 @@ export const MakbuzFormlarPage = () => {
                 {/* 3. İlgili Baskı Ürünleri (Ağ İçi Bağlantılar) */}
                 <div className="relative z-10 border-t border-gray-100 pt-8">
                   <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    İlgili Kurumsal Matbu Ürünlerimiz
-                  </h2>
+                    İlgili Kurumsal Matbu Ürünlerimiz                  </h2>
                   <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
                     Sipariş fişi siparişinizin yanında işletmenizin ihtiyaç duyabileceği diğer matbu belgeler:
                   </p>
@@ -3407,7 +3394,7 @@ export const MakbuzFormlarPage = () => {
                       Sipariş ve dosya bilgileri netleştirildikten sonra baskı öncesi dosya kontrolü yapılır. Baskı, müşteri onayı alındıktan sonra başlatılır.
                     </p>
                     <p>
-                      Üretim ve teslim süresi; ürün, adet ve onay sürecine göre teklif aşamasında paylaşılır.
+                      Tediye makbuzu baskısı PDF prova onayından sonra genellikle 3–5 iş günü içinde tamamlanır; kargo süresi teslimat adresine göre değişebilir.
                     </p>
                   </div>
                 </div>
@@ -3497,8 +3484,7 @@ export const MakbuzFormlarPage = () => {
                         rel="noopener noreferrer"
                         className="border border-slate-300 bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs sm:text-sm py-3 px-3 rounded-xl text-center transition-colors flex items-center justify-center"
                       >
-                        Numune Görsel İste
-                      </a>
+                        Numune Görsel İste                      </a>
                       <a
                         href="https://wa.me/905366022373?text=Merhaba,%20re%C3%A7ete%20ko%C3%A7an%C4%B1%20tek%20t%C4%B1kla%20sipari%C5%9F%20vermek%20istiyorum."
                         target="_blank"
@@ -3748,7 +3734,6 @@ export const MakbuzFormlarPage = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
