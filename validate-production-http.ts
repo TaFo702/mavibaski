@@ -1012,7 +1012,7 @@ async function validateProductionHTTP() {
   console.log(` - Product Schema No Unverified priceValidUntil: ${hasNoKupPriceValidUntil ? 'PASSED ✅' : 'FAILED (Unverified priceValidUntil found) 🔴'}`);
   const hasKupCorrectMinOrder = kupBody.includes('Minimum sipariş adedi 100 adettir') && !kupBody.includes('Minimum sipariş adedi: 1.000 adettir');
   console.log(` - Minimum Order Text (100 adettir): ${hasKupCorrectMinOrder ? 'PASSED ✅' : 'FAILED 🔴'}`);
-  console.log(` - FAQPage Questions Count: ${kupFaqQuestionsCount} ${kupFaqQuestionsCount === 8 ? '✅ (Exact 8 questions)' : '🔴'}`);
+  console.log(` - FAQPage Questions Count: ${kupFaqQuestionsCount} ${kupFaqQuestionsCount === 10 ? '✅ (Exact 10 questions)' : '🔴'}`);
 
   const kupProhibited = [
     'yapışkanlı',
@@ -1056,7 +1056,7 @@ async function validateProductionHTTP() {
     Number(kupProductObj?.offers?.highPrice) !== 17100 ||
     !hasNoKupAvailability ||
     !hasNoKupPriceValidUntil ||
-    kupFaqQuestionsCount !== 8 ||
+    kupFaqQuestionsCount !== 10 ||
     foundKupProhibited.length > 0 ||
     !hasKupGroupDivider
   ) {
