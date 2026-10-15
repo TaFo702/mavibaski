@@ -3399,29 +3399,14 @@ export const MakbuzFormlarPage = () => {
                   </div>
                 </div>
 
-                {/* 4. Neden Numaratörlü Tediye Makbuzu Kullanılmalıdır? */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Neden Numaratörlü Tediye Makbuzu Kullanılmalıdır?
-                  </h2>
-                  <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
-                    <p>
-                      Seri numarası, basılı makbuzların sıra numarasına göre izlenmesine yardımcı olur. Numaratör seçeneği ve baskı ayrıntıları sipariş öncesinde belirlenebilir.
-                    </p>
-                    <p>
-                      Otokopili nüsha ve firma bilgileriyle özelleştirilmiş tediye makbuzu baskısı için teklif alabilirsiniz.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 5. Tediye Makbuzu Neden Kesilir? */}
+                {/* 4. Tediye Makbuzu Neden Kesilir? */}
                 <div className="relative z-10 border-t border-gray-100 pt-8">
                   <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
                     Tediye Makbuzu Neden Kesilir?
                   </h2>
                   <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
                     <p>
-                      Tediye makbuzu; personel ödemeleri, avans ödemeleri, tedarikçi ödemeleri ve diğer kasa çıkışlarının kayıt altına alınması amacıyla düzenlenir. Yapılan ödemenin belgelenmesini sağlayarak işletmeler için düzenli arşivleme imkânı sunar.
+                      Personel avansı, tedarikçiye yapılan ödeme, cari hesap kapaması veya küçük işletme gideri gibi kasadan çıkan ödemelerde kayıt oluşturmak için düzenlenir. Tarih, tutar, ödeme nedeni, ödeyen ve parayı teslim alan bilgileri ile seri numarası doldurulur; imzalı nüsha ilgili fatura veya diğer dayanak evrakla birlikte saklanır. Tediye makbuzu, gerektiğinde tutulması gereken fatura ya da başka resmî belgelerin yerine geçtiği varsayılarak kullanılmamalıdır.
                     </p>
                   </div>
                 </div>
