@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 77682)
-Total output lines: 5641
-
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -66,9 +63,7 @@ import {
   MessageCircle
 } from 'lucide-react';
 import Fuse from 'fuse.js';
-import ReactMarkdown from 'react-markdown';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { PRODUCT_DESCRIPTIONS } from './constants/productTexts';
 import { useProductSearch } from './components/HeaderActions';
 import { CityLinksSection } from './components/CityLinksSection';
 import { WhatsAppIcon } from './components/WhatsAppIcon';
@@ -1156,7 +1151,3512 @@ const PRODUCTS = [
   { id: "katalog", name: "KATALOG BASKI", price: "5.400 ₺", desc: "50 Adet", subtext: "Ürün ve hizmetlerinizi detaylı anlatan çok sayfalı kaliteli kataloglar.", image: LOCAL_ASSETS.katalog, type: "katalog" },
   { id: "amerikan_servis", name: "AMERİKAN SERVİS BASKI", price: "2.900 ₺", desc: "2.000 Adet", subtext: "Restoran ve kafeler için hijyenik ve özel marka logolu masa örtüleri.", image: LOCAL_ASSETS.amerikan_servis, type: "amerikan-servis" },
   { id: "karton_canta", name: "KARTON ÇANTA BASKI", price: "8.400 ₺", desc: "500 Adet", subtext: "Doğa dostu, şık ve dayanıklı kurumsal ambalaj taşıma çantaları.", image: LOCAL_ASSETS.karton_canta, type: "karton-canta" },
-  { id: "otopaspa…47682 tokens truncated…="text-slate-900">Online Baskı Avantajları</strong> değerlendirmesi yapıyoruz.
+  { id: "otopaspas", name: "OTO PASPAS BASKI", price: "2.300 ₺", desc: "1.000 Adet", subtext: "Oto yıkamalar için kalın kuşe kağıttan üretilmiş emici oto paspas kağıdı.", image: LOCAL_ASSETS.otopaspas, type: "oto-paspas" },
+  { id: "afis", name: "AFİŞ BASKI", price: "2.100 ₺", desc: "250 Adet", subtext: "Etkinlik duyuruları ve campaigns için canlı renklerde büyük boy afişler.", image: LOCAL_ASSETS.afis, type: "afis" },
+  { id: "siparis_fisi", name: "SİPARİŞ FİŞİ BASKI", price: "1.900 ₺", desc: "5 Cilt", subtext: "Sipariş ve satış süreçlerini hızlandıran, kendinden karbonlu pratik sipariş fişleri.", image: LOCAL_ASSETS.siparis_fisi, type: "siparis-fisi" },
+  { id: "ambalaj", name: "AMBALAJ BASKI", price: "Fiyat Alınız", desc: "100 kg", subtext: "Esnek, hijyenik ve gıdaya uygun özel ambalaj paketleme kağıtları.", image: LOCAL_ASSETS.ambalaj, type: "ambalaj" },
+  { id: "makbuz", name: "MAKBUZ & FORM BASKI", price: "1.850 ₺", desc: "5 Cilt", subtext: "Sipariş fişi, fatura, adisyon ve tediye makbuzu gibi otokopili resmi formlar.", image: LOCAL_ASSETS.makbuz, type: "makbuz-ve-formlar" },
+  { id: "kutu", name: "KUTU BASKI", price: "Fiyat Alınız", desc: "1.000 Adet", subtext: "Gıda, giyim ve e-ticaret sektörü için özel ölçülerde kurumsal kutular.", image: LOCAL_ASSETS.kutu, type: "kutu" },
+];
+
+// KUTU_DATA, AMBALAJ_DATA, and PRICE_LIST are imported from ./data/productData
+
+
+const ALL_PRODUCTS_CATEGORIES = [
+  "Kartvizit Baskı",
+  "Broşür Baskı",
+  "El İlanı Baskı",
+  "Magnet Baskı",
+  "Kitap Ayracı Baskı",
+  "Yağ Kartı Baskı",
+  "Etiket Baskı",
+  "Zarf Baskı",
+  "Antetli Kağıt Baskı",
+  "Afiş Baskı",
+  "Amerikan Servis Baskı",
+  "Dosya Baskı",
+  "Bloknot Baskı",
+  "Karton Çanta Baskı",
+  "Küp Bloknot Baskı",
+  "Oto Paspas Baskı",
+  "Katalog Baskı",
+  "Kutu Baskı",
+  "Ambalaj Baskı",
+  "Adisyon Baskı",
+  "Sipariş Fişi Baskı",
+  "Para Makbuzu Baskı",
+  "Sözleşme Baskı",
+  "Sigorta Poliçeleri Baskı",
+  "Tahsilat Makbuzu Baskı",
+  "Araç Kiralama Baskı",
+  "Gider Makbuzu Baskı",
+  "Giriş Bileti Baskı",
+  "Reçete Baskı",
+  "Tediye Makbuzu Baskı",
+];
+
+const getCategoryPath = (cat: string) => {
+  if (cat === "Kitap Ayracı Baskı") return "/kitap-ayraci";
+  if (cat === "Yağ Kartı Baskı") return "/yag-karti";
+  if (cat === "Kutu Baskı") return "/kutu";
+  if (cat === "Ambalaj Baskı") return "/ambalaj";
+  if (cat === "Kartvizit Baskı") return "/kartvizit";
+  if (cat === "Broşür Baskı") return "/brosur";
+  if (cat === "El İlanı Baskı") return "/el-ilani";
+  if (cat === "Magnet Baskı") return "/magnet";
+  if (cat === "Etiket Baskı") return "/etiket";
+  if (cat === "Zarf Baskı") return "/zarf";
+  if (cat === "Antetli Kağıt Baskı") return "/antetli";
+  if (cat === "Afiş Baskı") return "/afis";
+  if (cat === "Amerikan Servis Baskı") return "/amerikan-servis";
+  if (cat === "Dosya Baskı") return "/dosyalar";
+  if (cat === "Bloknot Baskı") return "/bloknotlar";
+  if (cat === "Karton Çanta Baskı") return "/karton-canta";
+  if (cat === "Küp Bloknot Baskı") return "/kup-bloknot";
+  if (cat === "Oto Paspas Baskı") return "/oto-paspas";
+  if (cat === "Katalog Baskı") return "/kataloglar";
+  if (cat === "Adisyon Baskı") return "/adisyon";
+  if (cat === "Sipariş Fişi Baskı") return "/siparis-fisi";
+  if (cat === "Para Makbuzu Baskı") return "/para-makbuzu";
+  if (cat === "Sözleşme Baskı") return "/sozlesme-baski";
+  if (cat === "Sigorta Poliçeleri Baskı") return "/sigorta-policeleri";
+  if (cat === "Tahsilat Makbuzu Baskı") return "/tahsilat-makbuzu";
+  if (cat === "Araç Kiralama Baskı") return "/arac-kiralama";
+  if (cat === "Gider Makbuzu Baskı") return "/gider-makbuzu";
+  if (cat === "Giriş Bileti Baskı") return "/giris-bileti";
+  if (cat === "Reçete Baskı") return "/recete";
+  if (cat === "Tediye Makbuzu Baskı") return "/tediye-makbuzu";
+  return "/";
+};
+
+// --- Components ---
+
+// --- Components ---
+
+const ScrollToTop = () => {
+  const { pathname, hash, key } = useLocation();
+  useEffect(() => {
+    if (pathname === '/' && hash) {
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+      if (target) { target.scrollIntoView({ behavior: 'smooth' }); return; }
+    }
+    window.scrollTo(0, 0);
+  }, [pathname, hash, key]);
+  return null;
+};
+
+import { BLOG_POSTS } from './data/blogData';
+import { SEO_PAGES_DATA } from './data/seoPagesData';
+
+const getAbsoluteUrl = (url: string) => {
+  if (!url) return 'https://mavibasim.com/logo.png';
+  if (url.startsWith('https://') || url.startsWith('http://')) return url;
+  if (url.startsWith('/')) return `https://mavibasim.com${url}`;
+  return `https://mavibasim.com/${url}`;
+};
+
+export const parsePriceString = (priceStr: string | undefined | null): number => {
+  if (!priceStr) return NaN;
+  let str = String(priceStr).trim();
+  if (str.includes('–') || str.includes('-')) {
+    str = str.split(/[–-]/)[0].trim();
+  }
+  str = str.replace(/[TL|₺\s]/gi, '');
+  const hasComma = str.includes(',');
+  const hasDot = str.includes('.');
+  if (hasComma && hasDot) {
+    const lastComma = str.lastIndexOf(',');
+    const lastDot = str.lastIndexOf('.');
+    if (lastComma > lastDot) {
+      str = str.replace(/\./g, '').replace(/,/g, '.');
+    } else {
+      str = str.replace(/,/g, '');
+    }
+  } else if (hasComma) {
+    const parts = str.split(',');
+    if (parts[1] && parts[1].length === 3) {
+      str = str.replace(/,/g, '');
+    } else {
+      str = str.replace(/,/g, '.');
+    }
+  } else if (hasDot) {
+    const parts = str.split('.');
+    if (parts[1] && parts[1].length === 3) {
+      str = str.replace(/\./g, '');
+    }
+  }
+  const parsed = parseFloat(str);
+  return isNaN(parsed) ? NaN : parsed;
+};
+
+export const CanonicalLink = () => {
+  const { pathname } = useLocation();
+  return pathname === '/' || ['/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
+};
+
+const LegacyCanonicalLink = () => {
+  const location = useLocation();
+  
+  // Rule 8: Standart Trailing Slash standardı (Hepsi non-trailing slash ile bitecek, ana sayfa hariç)
+  let path = location.pathname;
+  if (path.endsWith('/') && path.length > 1) {
+    path = path.slice(0, -1);
+  }
+  if (path === '/') {
+    path = '';
+  }
+
+  const isInvalidSectorPage = path.startsWith('/sektor/') && !SEO_PAGES_DATA[path.substring(8)];
+  const isKutuPage = path === '/kutu';
+  const isAmbalajPage = path === '/ambalaj';
+  const isKupBloknotPage = path === '/kup-bloknot';
+  const isEtiketPage = path === '/etiket';
+  const isBloknotlarPage = path === '/bloknotlar';
+  const isAntetliPage = path === '/antetli';
+  const isZarfPage = path === '/zarf';
+  const isAmerikanServisPage = path === '/amerikan-servis';
+  const isOtoPaspasPage = path === '/oto-paspas';
+  const isKataloglarPage = path === '/kataloglar' || path === '/katalog';
+  const isKartonCantaPage = path === '/karton-canta';
+  const isYagKartiPage = path === '/yag-karti';
+  const isRecetePage = path === '/recete';
+  const isTediyeMakbuzuPage = path === '/tediye-makbuzu';
+  const isTahsilatMakbuzuPage = path === '/tahsilat-makbuzu';
+    const isGiderMakbuzuPage = path === '/gider-makbuzu';
+    const isKartvizitPage = path === '/kartvizit';
+      const isDosyalarPage = path === '/dosyalar';
+  // Rule 9: Pagination varsa canonical URL'e "page" query parametresi dahil edilmeli, diğerleri temizlenmeli
+  const searchParams = new URLSearchParams(location.search);
+  const canonicalParams = new URLSearchParams();
+  if (searchParams.has('page')) {
+    canonicalParams.set('page', searchParams.get('page')!);
+  }
+  
+  const querySuffix = canonicalParams.toString() ? `?${canonicalParams.toString()}` : '';
+  const canonicalUrl = `https://mavibasim.com${path}${querySuffix}`;
+  
+  // Centralized structured data schemas array
+  const schemas: any[] = [];
+
+  // 1. Dynamic Breadcrumb Generator
+  const itemListElement: any[] = [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Ana Sayfa",
+      "item": "https://mavibasim.com"
+    }
+  ];
+
+  const standardProductsMap: Record<string, string> = {
+    "/kutu": "Özel Kesim Kutu",
+    "/ambalaj": "Ambalaj Kutu Baskı",
+    "/kartvizit": "Kartvizit Baskı",
+    "/brosur": "Broşür Baskı",
+    "/el-ilani": "El İlanı Baskı",
+    "/afis": "Afiş Baskı",
+    "/antetli": "Antetli Kağıt",
+    "/dosyalar": "Cepli Dosya",
+    "/etiket": "Etiket Baskı",
+    "/oto-paspas": "Oto Paspas Baskı",
+    "/kup-bloknot": "Küp Bloknot",
+    "/magnet": "Özel Kesim Magnet",
+    "/kitap-ayraci": "Kitap Ayracı Baskı",
+    "/yag-karti": "Yağ Kartı Baskı",
+    "/bloknotlar": "Bloknot Çeşitleri",
+    "/amerikan-servis": "Amerikan Servis",
+    "/karton-canta": "Karton Çanta Baskı",
+    "/zarf": "Zarf Baskı",
+    "/kataloglar": "Katalog Baskı",
+    "/makbuz-ve-formlar": "Makbuz ve Formlar",
+    "/adisyon": "Adisyon Basımı",
+    "/siparis-fisi": "Sipariş Fişi",
+    "/perakende-satis-fisi": "Perakende Satış Fişi",
+    "/para-makbuzu": "Para Makbuzu",
+    "/sozlesme-baski": "Sözleşme Baskısı",
+    "/sigorta-policeleri": "Sigorta Poliçesi",
+    "/tahsilat-makbuzu": "Tahsilat Makbuzu",
+    "/arac-kiralama": "Araç Kiralama Formu",
+    "/gider-makbuzu": "Gider Makbuzu",
+    "/giris-bileti": "Giriş Bileti",
+    "/recete": "Reçete Koçanı",
+    "/tediye-makbuzu": "Tediye Makbuzu",
+    "/cilt-isleri": "Cilt İşleri",
+    "/matbaa": "Matbaa ve Grafik",
+    "/referanslar": "Referanslarımız",
+    "/sikca-sorulan": "Sıkça Sorulan Sorular",
+    "/grafik-tasarim": "Grafik Tasarım Hizmeti",
+    "/hakkimizda": "Hakkımızda",
+    "/iletisim": "İletişim"
+  };
+
+  // Add Breadcrumb parts based on pathname
+  if (path === '/blog') {
+    itemListElement.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://mavibasim.com/blog"
+    });
+  } else if (path.startsWith('/blog/')) {
+    const blogSlug = path.substring(6);
+    const activePost = BLOG_POSTS.find(p => p.slug === blogSlug);
+    itemListElement.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://mavibasim.com/blog"
+    });
+    itemListElement.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": activePost ? activePost.title : "Blog Yazısı",
+      "item": `https://mavibasim.com/blog/${blogSlug}`
+    });
+  } else if (path.startsWith('/sektor/')) {
+    const sectorSlug = path.substring(8);
+    const seoPage = SEO_PAGES_DATA[sectorSlug];
+    const parentName = sectorSlug.includes('brosur') 
+      ? "Broşür Baskı" 
+      : (sectorSlug.includes('kozmetik') || sectorSlug.includes('kutu') || sectorSlug.includes('ambalaj') || sectorSlug.includes('e-ticaret') || sectorSlug.includes('perakende')) 
+      ? "Matbaa Ürünleri" 
+      : "Kartvizit Baskı";
+    const parentItem = sectorSlug.includes('brosur') 
+      ? "https://mavibasim.com/brosur" 
+      : (sectorSlug.includes('kozmetik') || sectorSlug.includes('kutu') || sectorSlug.includes('ambalaj') || sectorSlug.includes('e-ticaret') || sectorSlug.includes('perakende')) 
+      ? "https://mavibasim.com/matbaa" 
+      : "https://mavibasim.com/kartvizit";
+
+    itemListElement.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": parentName,
+      "item": parentItem
+    });
+    itemListElement.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": seoPage ? seoPage.h1 : "Kutu ve Ambalaj Baskı Çözümleri",
+      "item": `https://mavibasim.com/sektor/${sectorSlug}`
+    });
+  } else if (path && SEO_PAGES_DATA[path.substring(1)]) {
+    const seoPage = SEO_PAGES_DATA[path.substring(1)];
+    itemListElement.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": seoPage ? seoPage.h1 : "Baskı Çözümleri",
+      "item": `https://mavibasim.com${path}`
+    });
+  } else if (path && standardProductsMap[path]) {
+    itemListElement.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": standardProductsMap[path],
+      "item": `https://mavibasim.com${path}`
+    });
+  }
+
+  // Push Breadcrumb list to schemas
+  // Zarf, Oto Paspas, Katalog, Karton Çanta ve Yağ Kartı sayfalarında BreadcrumbList prerender tarafından oluşturulur.
+// Diğer sayfalarda mevcut dinamik BreadcrumbList korunur.
+if (path !== '/zarf' && path !== '/oto-paspas' && path !== '/kataloglar' && path !== '/katalog' && path !== '/karton-canta' && path !== '/yag-karti' && path !== '/recete' && path !== '/tediye-makbuzu' && path !== '/tahsilat-makbuzu' && path !== '/gider-makbuzu') {
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": itemListElement
+  });
+}
+
+  // Global Organization Schema available across all routes
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://mavibasim.com/#organization",
+    "name": "Mavi Basım Matbaa & Reklam",
+    "description": "Mavi Basım Matbaa & Reklam, İstanbul Topkapı Matbaacılar Sitesi’nde faaliyet gösteren profesyonel bir matbaa firmasıdır. Kartvizit, broşür, katalog, etiket, kutu ve ambalaj baskı hizmetleri sunmaktadır.",
+    "url": "https://mavibasim.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mavibasim.com/mavi-basim-logo.webp",
+      "caption": "Mavi Basım Matbaa ve Reklam"
+    },
+    "sameAs": [
+      "https://www.instagram.com/mavibasimmatbaa",
+      "https://www.facebook.com/profile.php?id=100048115954138"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+90-536-602-23-73",
+      "contactType": "customer service",
+      "areaServed": "TR",
+      "availableLanguage": ["Turkish"]
+    },
+    "email": "info@mavibasim.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB",
+      "addressLocality": "Zeytinburnu",
+      "addressRegion": "İstanbul",
+      "postalCode": "34010",
+      "addressCountry": "TR"
+    }
+  };
+  schemas.push(orgSchema);
+
+  // We strictly pair Product schemas ONLY with pages where a real pricing grid/table is visible on-screen.
+  // All other pages (e.g., /kutu, /ambalaj, custom packaging, doorway sectors, city SEO endpoints) use Service schema.
+  const getPricesForPath = (targetPath: string): number[] => {
+    const normalizedPath = targetPath.toLowerCase().trim();
+
+    // If path is ambalaj/kutu or any custom quotation-only service, return empty prices to block Product schema layout
+    if (
+      normalizedPath === '/ambalaj' ||
+      normalizedPath === '/kutu' ||
+      normalizedPath === '/matbaa' ||
+      normalizedPath === '/grafik-tasarim' ||
+      normalizedPath.includes('ozel-uretim') ||
+      normalizedPath.includes('ozel-olcu')
+    ) {
+      return [];
+    }
+
+    try {
+      switch (normalizedPath) {
+        case '/kartvizit': {
+          return KARTVIZIT_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/brosur': {
+          return BROSUR_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/el-ilani': {
+          return EL_ILANI_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/afis': {
+          return AFIS_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/antetli': {
+          return ANTETLI_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/dosyalar': {
+          return DOSYALAR_DATA.map(item => 
+            parsePriceString(item.price)
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/etiket': {
+          return ETIKET_DATA.map(item => 
+            parsePriceString(item.price)
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/oto-paspas': {
+          return OTO_PASPAS_DATA.map(item => 
+            parsePriceString(item.price)
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/kup-bloknot': {
+          return KUP_BLOKNOT_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/magnet': {
+          return MAGNET_DATA.flatMap(cat => 
+            cat.items.filter(item => !item.isCustom).map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/kitap-ayraci': {
+          return KITAP_AYRACI_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/yag-karti': {
+          return YAG_KARTI_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/bloknotlar': {
+          const pricesKapakli = (BLOKNOTLAR_DATA?.kapakli || []).flatMap(g => 
+            (g.items || []).flatMap(item => [
+              parsePriceString(item.p500),
+              parsePriceString(item.p1000)
+            ])
+          );
+          const pricesKapaksiz = (BLOKNOTLAR_DATA?.kapaksiz || []).flatMap(g => 
+            (g.items || []).flatMap(item => [
+              parsePriceString(item.p500),
+              parsePriceString(item.p1000)
+            ])
+          );
+          return [...pricesKapakli, ...pricesKapaksiz].filter(p => !isNaN(p) && p > 0);
+        }
+        case '/amerikan-servis': {
+          return AMERIKAN_SERVIS_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/karton-canta': {
+          return KARTON_CANTA_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/zarf': {
+          return ZARF_DATA.flatMap(cat => 
+            cat.items.map(item => parsePriceString(item.price))
+          ).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/kataloglar': {
+          return (KATALOG_DATA?.rows || []).filter(r => !r.isSpecial).flatMap(r => [
+            parsePriceString(r.p50),
+            parsePriceString(r.p100),
+            parsePriceString(r.p250),
+            parsePriceString(r.p500),
+            parsePriceString(r.p1000)
+          ]).filter(p => !isNaN(p) && p > 0);
+        }
+        case '/makbuz-ve-formlar': {
+          return (MAKBUZ_FORMLAR_ALL_DATA || []).flatMap(sec => 
+            sec.rows
+              .filter((r: any) => !r.label.includes('Renk Farkı'))
+              .flatMap((r: any) => r.values)
+          ).filter(v => typeof v === 'number' && v > 0);
+        }
+        case '/cilt-isleri': {
+          return (CILT_ISLERI_DATA || []).flatMap(sec => 
+            sec.rows
+              .filter((r: any) => !r.label.includes('Renk Farkı'))
+              .flatMap((r: any) => r.values)
+          ).filter(v => typeof v === 'number' && v > 0);
+        }
+        default: {
+          const idToMatch = normalizedPath.replace('/', '');
+          const items = (MAKBUZ_FORMLAR_ALL_DATA || []).filter(sec => {
+            if (sec.id === idToMatch) return true;
+            const normalizedTitle = sec.title.toLowerCase().replace(/[\s-]/g, '');
+            const normalizedTarget = idToMatch.toLowerCase().replace(/[\s-]/g, '');
+            return normalizedTitle.includes(normalizedTarget) || normalizedTarget.includes(normalizedTitle);
+          });
+          if (items.length > 0) {
+            return items.flatMap(sec => 
+              sec.rows
+                .filter((r: any) => !r.label.includes('Renk Farkı'))
+                .flatMap((r: any) => r.values)
+            ).filter(v => typeof v === 'number' && v > 0);
+          }
+        }
+      }
+    } catch (err) {
+      console.error("Error extracting dynamic price list in Structured Data module:", err);
+    }
+    return [];
+  };
+
+  const parsedPrices = path ? getPricesForPath(path) : [];
+  const productName = standardProductsMap[path] || (path ? path.replace('/', '').toUpperCase() : "Baskı");
+
+  // 4AB. Centralized Schema Decision Engine - Spam Prevention & Content Parity System
+  const normalizedPath = (path || '').toLowerCase().trim();
+  
+  const isStandardizedProduct = [
+    "/kartvizit", "/brosur", "/el-ilani", "/afis", "/antetli", "/dosyalar", "/etiket",
+    "/oto-paspas", "/kup-bloknot", "/magnet", "/kitap-ayraci", "/yag-karti", "/bloknotlar",
+    "/amerikan-servis", "/karton-canta", "/zarf", "/kataloglar", "/makbuz-ve-formlar",
+    "/adisyon", "/siparis-fisi", "/perakende-satis-fisi", "/para-makbuzu", "/sozlesme-baski",
+    "/sigorta-policeleri", "/tahsilat-makbuzu", "/arac-kiralama", "/gider-makbuzu",
+    "/giris-bileti", "/recete", "/tediye-makbuzu", "/cilt-isleri"
+  ].some(p => normalizedPath === p);
+
+  const hasVisibleNumericPricing = parsedPrices.length > 0 && parsedPrices.every(p => !isNaN(p) && p > 0);
+  const hasFixedSpecs = isStandardizedProduct;
+  const pricingMatchesDOM = hasVisibleNumericPricing;
+
+  const isCustomQuoteOnly = (
+    normalizedPath === '/kutu' ||
+    normalizedPath === '/ambalaj' ||
+    normalizedPath === '/matbaa' ||
+    normalizedPath === '/grafik-tasarim' ||
+    normalizedPath.includes('ozel-uretim') ||
+    normalizedPath.includes('ozel-olcu') ||
+    normalizedPath.startsWith('/sektor/') ||
+    normalizedPath.includes('-baski') ||
+    normalizedPath.includes('-fiyatlari') ||
+    normalizedPath === '/'
+  );
+
+  const determineSchemaType = (): "Product" | "Service" => {
+    const shouldUseProduct =
+      hasVisibleNumericPricing &&
+      pricingMatchesDOM &&
+      isStandardizedProduct &&
+      hasFixedSpecs &&
+      !isCustomQuoteOnly;
+
+    if (shouldUseProduct) {
+      return "Product";
+    }
+    return "Service";
+  };
+
+  const schemaType = determineSchemaType();
+
+  // 4. Dynamic SEO Lands (Sector/City pages)
+  let seoSlug: string | null = null;
+  if (path.startsWith('/sektor/')) {
+    seoSlug = path.substring(8);
+  } else if (path) {
+    const pk = path.substring(1);
+    if (SEO_PAGES_DATA[pk]) {
+      seoSlug = pk;
+    }
+  }
+
+  const isMakbuzFormlarMainPage = normalizedPath === '/makbuz-ve-formlar';
+
+  if (schemaType === "Product" && !isMakbuzFormlarMainPage) {
+    const minVal = Math.min(...parsedPrices);
+    const maxVal = Math.max(...parsedPrices);
+    const countVal = parsedPrices.length;
+    const uniquePrices = Array.from(new Set(parsedPrices));
+    const isSinglePrice = uniquePrices.length === 1;
+
+    const offersObj = isSinglePrice ? {
+      "@type": "Offer",
+      "price": String(uniquePrices[0]),
+      "priceCurrency": "TRY",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "PrintingService",
+        "@id": "https://mavibasim.com/#localbusiness"
+      }
+    } : {
+      "@type": "AggregateOffer",
+      "priceCurrency": "TRY",
+      "lowPrice": String(minVal),
+      "highPrice": String(maxVal),
+      "offerCount": String(countVal),
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "PrintingService",
+        "@id": "https://mavibasim.com/#localbusiness"
+      }
+    };
+
+    const seoImagesMap: Record<string, string> = {
+      "/brosur": "/images/brosur/brosur-tasarimi-ve-baski.webp",
+      "/el-ilani": "/images/el-ilani/el-ilani-baski-fiyatlari.webp",
+      "/afis": "/images/afis/afis-baski-fiyatlari.webp",
+      "/magnet": "/images/magnet/magnet-baski-tasarimi.webp",
+      "/kitap-ayraci": "/images/kitap-ayraci/kitap-ayraci-baski.webp",
+      "/yag-karti": "/images/yag-karti/yag-karti-baski.webp",
+      "/etiket": "/images/etiket/yapiskanli-etiket-baski.webp",
+      "/amerikan-servis": "/images/amerikan-servis/amerikan-servis-baski.webp",
+      "/oto-paspas": "/images/oto-paspas/oto-paspas-kagit-baski.webp",
+      "/kutu": "/images/kutu/ozel-kesim-kutu-tasarimi.webp",
+      "/ambalaj": "/images/ambalaj/ambalaj-baski-fiyatlari.webp",
+      "/kartvizit": "/images/kartvizit/kartvizit-baski.webp",
+      "/zarf": "/images/zarf/kurumsal-zarf-baski.webp",
+      "/antetli": "/images/antetli-kagit/antetli-kagit-baski-fiyatlari.webp",
+      "/dosyalar": "/images/dosya/cepli-dosya-tasarimi.webp",
+      "/kataloglar": "/images/katalog/tanitim-katalogu-ornegi.webp",
+      "/bloknotlar": "/images/bloknot/spiralli-bloknot-baski.webp",
+      "/kup-bloknot": "/images/kup-bloknot/kup-bloknot-baski-fiyatlari.webp",
+      "/karton-canta": "/images/karton-canta/karton-canta-baski-fiyatlari.webp",
+      "/adisyon": "/images/adisyon/otokopili-adisyon-baski.webp",
+      "/siparis-fisi": "/images/siparis-fisi/otokopili-siparis-fisi.webp",
+      "/para-makbuzu": "/images/para-makbuzu/para-makbuzu-ornegi.webp",
+      "/sozlesme-baski": "/images/sozlesme/sozlesme-taslagi-baski.webp",
+      "/sigorta-policeleri": "/images/sigorta-policesi/sigorta-policesi-basimi.webp",
+      "/tahsilat-makbuzu": "/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp",
+      "/gider-makbuzu": "/images/gider-makbuzu/gider-makbuzu-basimi.webp",
+      "/tediye-makbuzu": "/images/tediye-makbuzu/tediye-baski.webp",
+      "/arac-kiralama": "/images/arac-kiralama/arac-kiralama-sozlesmesi-baski.webp",
+      "/giris-bileti": "/images/giris-bileti/numaratorlu-giris-bileti-baski.webp",
+      "/recete": "/images/recete/doktor-recetesi-basimi.webp",
+    };
+    const mappedImg = seoImagesMap[path] || `/${path.replace('/', '')}-baski.webp`;
+
+    const prodSchemaName =
+  path === '/kartvizit'
+    ? "Kartvizit Baskı Fiyatları"
+    : path === '/zarf'
+      ? "Diplomat ve Torba Zarf Baskı Fiyatları"
+      : `${productName} Baskı Fiyatları`;
+
+const prodSchemaDesc =
+  path === '/kartvizit'
+    ? "Mavi Basım güvencesiyle 350 gr mat selefonlu, kabartma laklı, 700 gr sıvama ve PVC kartvizit baskı çözümleri."
+    : path === '/zarf'
+      ? "Diplomat ve torba zarf baskı fiyatlarını; pencereli, penceresiz ve 24x32 cm torba zarf seçenekleriyle inceleyin."
+      : `Mavi Basım ${productName.toLowerCase()} baskı seçenekleri ve fiyat bilgileri.`;
+    
+    const prodSchemaImages = path === '/kartvizit' ? [
+      getAbsoluteUrl(mappedImg),
+      "https://mavibasim.com/images/kartvizit/kartvizit-baski-detayi.webp",
+      "https://mavibasim.com/images/kartvizit/kartvizit-yakin-cekim.webp"
+    ] : [
+      getAbsoluteUrl(mappedImg)
+    ];
+
+    const prodSchemaImagesObj = prodSchemaImages.map((imgUrl, idx) => ({
+      "@type": "ImageObject",
+      "@id": `${canonicalUrl}#image-${idx + 1}`,
+      "url": imgUrl,
+      "contentUrl": imgUrl,
+      "caption": `${prodSchemaName} - Görsel ${idx + 1}`,
+      "license": "https://mavibasim.com/lisans",
+      "acquireLicensePage": "https://mavibasim.com/lisans",
+      "creditText": "Mavi Basım Topkapı Matbaa",
+      "creator": {
+        "@type": "Organization",
+        "name": "Mavi Basım"
+      },
+      "copyrightNotice": "Mavi Basım Matbaacılık"
+    }));
+
+    // Strict Product Standard Schema with 0 placeholder metrics (No fake SKU / fake GTIN / fake reviews / fake aggregateRating)
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "@id": `${canonicalUrl}#product`,
+      "mainEntityOfPage": canonicalUrl,
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://mavibasim.com/#website"
+      },
+      "name": prodSchemaName,
+      "description": prodSchemaDesc,
+      "image": prodSchemaImagesObj,
+      "category": `${productName} Baskı`,
+      "url": canonicalUrl,
+      "brand": {
+        "@type": "Brand",
+        "name": "Mavi Basım"
+      },
+      "offers": offersObj
+    });
+  } else if (seoSlug && SEO_PAGES_DATA[seoSlug]) {
+    const page = SEO_PAGES_DATA[seoSlug];
+    // Since SEO Pages do not present an on-screen pricing table/grid, we strictly output Service schema.
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${canonicalUrl}#service`,
+      "name": page.h1,
+      "serviceType": `${page.h1} Hizmeti`,
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://mavibasim.com/#organization",
+        "name": "Mavi Basım Matbaa & Reklam"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Türkiye"
+      },
+      "url": canonicalUrl,
+      "description": page.metaDesc
+    });
+
+    if (page.faqs && page.faqs.length > 0) {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": page.faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      });
+    }
+  } else if (path && path !== '/' && !path.startsWith('/blog')) {
+    // Elegant fallback Service Schema mapping quote-only customized prints
+    const serviceName = standardProductsMap[path] || (path === '/matbaa' ? 'Kurumsal Matbaa' : 'Profesyonel Grafik Tasarım');
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": canonicalUrl,
+      "name": `${serviceName} Hizmeti`,
+      "serviceType": "Printing Service",
+      "provider": {
+        "@type": "PrintingService",
+        "@id": "https://mavibasim.com/#localbusiness"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Türkiye"
+      },
+      "url": canonicalUrl,
+      "description": `Mavi Basım güvencesi ile kurumsal ve sektörel ${serviceName.toLowerCase()} imalat çözümleri. WhatsApp üzerinden anında özel fiyat teklifi alın.`
+    });
+  }
+
+  // 6. Dynamic Sıkça Sorulan Sorular FAQPage Schema
+  if (path === '/sikca-sorulan') {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Siparişim Ne Kadar Sürede Elime Ulaşır - Ofisten Teslim Alabilir miyim?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Teslimat süresi üründen ürüne farklılık göstermektedir. Ürün sayfalarındaki açıklamalarda belirtilen süreler 'üretim süresi'dir. Üretim tamamlandıktan sonra siparişinizi Zeytinburnu Topkapı'daki ofisimizden teslim alabilir veya kargo ile gönderimini talep edebilirsiniz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tasarım Hizmeti Veriyor musunuz? Ya Memnun Kalmazsam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mavi Basım Matbaa & Reklam olarak profesyonel tasarım desteği sunuyoruz. Tasarım ücretleri ürün bazlı değişmekte olup sipariş sırasında belirtilmektedir. Tasarım sürecinde 3 revize hakkınız bulunmaktadır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Baskı Öncesi Tasarım Kontrolü Yapıyor musunuz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet, gönderdiğiniz tüm çalışmalar kesim payı, çözünürlük ve yerleşim açısından ücretsiz kontrol edilir. Bir hata tespit edilirse size bilgi verilerek düzeltilmesi istenir. Onayınız alınmadan baskıya geçilmez."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Baskıda Sorun Yaşamamak İçin Tasarımı Nasıl Göndermeliyim?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Çalışmalarınızı CMYK renk formatında ve 300 DPI çözünürlükte hazırlamalısınız. Efekt kullandıysanız (gölge, transparanlık vb.) bunları görsele çevirmeniz renk sapmalarını önleyecektir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "İstediğim Adet veya Ürün Listede Yoksa Ne Yapmalıyım?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sitede görmediğiniz adetler veya özel ürünler için WhatsApp hattımızdan veya mail yoluyla bizimle iletişime geçebilirsiniz. Müşteri temsilcilerimiz size özel fiyatlandırma yapacaktır."
+          }
+        }
+      ]
+    });
+  }
+
+  useEffect(() => {
+        if (isKutuPage || isKupBloknotPage || isEtiketPage || isBloknotlarPage || isAntetliPage || isZarfPage || isAmerikanServisPage || isOtoPaspasPage || isKataloglarPage || isKartonCantaPage || isYagKartiPage || isRecetePage || isTediyeMakbuzuPage || isTahsilatMakbuzuPage || isGiderMakbuzuPage || isKartvizitPage || isDosyalarPage) {
+      const scriptEl = document.getElementById('app-seo-metadata-jsonld');
+      if (scriptEl) scriptEl.remove();
+      return;
+    }
+    if (isAmbalajPage) {
+      return;
+    }
+    if (isInvalidSectorPage) return;
+    let scriptEl = document.getElementById('app-seo-metadata-jsonld') as HTMLScriptElement;
+    if (!scriptEl) {
+      scriptEl = document.createElement('script');
+      scriptEl.id = 'app-seo-metadata-jsonld';
+      scriptEl.type = 'application/ld+json';
+      document.head.appendChild(scriptEl);
+    }
+    scriptEl.textContent = JSON.stringify(schemas);
+        }, [canonicalUrl, schemas, isInvalidSectorPage, isKutuPage, isAmbalajPage, isKupBloknotPage, isEtiketPage, isBloknotlarPage, isAntetliPage, isZarfPage, isAmerikanServisPage, isOtoPaspasPage, isKataloglarPage, isKartonCantaPage, isYagKartiPage, isRecetePage, isTediyeMakbuzuPage, isTahsilatMakbuzuPage, isGiderMakbuzuPage, isKartvizitPage, isDosyalarPage]);
+
+  if (
+  isInvalidSectorPage ||
+  isKutuPage ||
+  isAmbalajPage ||
+  isKupBloknotPage ||
+  isEtiketPage ||
+  isBloknotlarPage ||
+  isAntetliPage ||
+  isZarfPage ||
+  isAmerikanServisPage ||
+  isOtoPaspasPage ||
+  isKataloglarPage ||
+  isKartonCantaPage ||
+  isYagKartiPage ||
+  isRecetePage ||
+    isTediyeMakbuzuPage ||
+  isTahsilatMakbuzuPage ||
+    isGiderMakbuzuPage ||
+    isKartvizitPage ||
+  isDosyalarPage
+) {
+  return null;
+}
+
+  return (
+    <Helmet>
+      <link rel="canonical" href={canonicalUrl} />
+      <meta property="og:url" content={canonicalUrl} />
+    </Helmet>
+  );
+};
+
+const NotFoundPage = () => {
+  return (
+    <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4 py-16">
+      <Helmet>
+        <title>404 - Sayfa Bulunamadı | Mavi Basım Matbaa & Reklam</title>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+      <h1 className="text-9xl font-black text-[#29abe2] mb-4">404</h1>
+      <h2 className="text-3xl font-bold text-gray-900 mb-4">Aradığınız Sayfa Bulunamadı</h2>
+      <p className="text-gray-600 mb-8 max-w-md">
+        Ulaşmaya çalıştığınız sayfa silinmiş, taşınmış veya adresi değiştirilmiş olabilir.
+      </p>
+      <Link 
+        to="/" 
+        className="inline-flex items-center gap-2 bg-[#29abe2] text-white px-8 py-3 rounded-2xl font-bold transition-all hover:scale-105 shadow-md hover:shadow-lg"
+      >
+        <ArrowLeft size={20} />
+        Ana Sayfaya Dön
+      </Link>
+    </div>
+  );
+};
+
+const BackToTopButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  return (
+    <>
+      {/* WhatsApp Button - Always Visible */}
+      <div className="fixed bottom-24 right-6 z-50">
+        <motion.a
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#128C7E] transition-all hover:scale-110 active:scale-95 group"
+        >
+          <img src="/WhatsApp.svg" alt="WhatsApp" width={32} height={32} className="w-8 h-8 group-hover:scale-110 transition-transform" />
+        </motion.a>
+      </div>
+
+      {/* Back to Top Button - Shows only when scrolled down */}
+      <AnimatePresence>
+        {isVisible && (
+          <div className="fixed bottom-6 right-6 z-50">
+            <motion.button
+              type="button"
+              aria-label="Başa dön"
+              title="Başa dön"
+              initial={{ opacity: 0, scale: 0.5, x: 20 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              exit={{ opacity: 0, scale: 0.5, x: 20 }}
+              onClick={scrollToTop}
+              className="flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-lg transition-all hover:scale-110 active:scale-95 group"
+            >
+              <ArrowUp size={32} className="group-hover:-translate-y-1 transition-transform" />
+            </motion.button>
+          </div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+const MEGA_MENU_DATA = [
+  {
+    title: "Broşürler & El İlanları",
+    items: [
+      { name: "Broşür", path: "/brosur" },
+      { name: "El İlanı", path: "/el-ilani" },
+      { name: "Afiş", path: "/afis" },
+    ]
+  },
+  {
+    title: "Reklam Ürünleri",
+    items: [
+      { name: "Magnet", path: "/magnet" },
+      { name: "Kitap Ayracı", path: "/kitap-ayraci" },
+      { name: "Yağ Kartı", path: "/yag-karti" },
+      { name: "Etiket", path: "/etiket" },
+      { name: "Amerikan Servis", path: "/amerikan-servis" },
+      { name: "Oto Paspas", path: "/oto-paspas" },
+      { name: "Kutu", path: "/kutu" },
+      { name: "Ambalaj", path: "/ambalaj" },
+    ]
+  },
+  {
+    title: "Kurumsal Ürünler",
+    items: [
+      { name: "Kartvizit", path: "/kartvizit" },
+      { name: "Zarf", path: "/zarf" },
+      { name: "Antetli Kağıt", path: "/antetli" },
+      { name: "Dosya", path: "/dosyalar" },
+      { name: "Katalog", path: "/kataloglar" },
+      { name: "Bloknot", path: "/bloknotlar" },
+      { name: "Küp Bloknot", path: "/kup-bloknot" },
+      { name: "Karton Çanta", path: "/karton-canta" },
+    ]
+  },
+  {
+    title: "Makbuz & Formlar",
+    items: [
+      { name: "Adisyon", path: "/adisyon" },
+      { name: "Sipariş Fişi", path: "/siparis-fisi" },
+      { name: "Para Makbuzu", path: "/para-makbuzu" },
+      { name: "Sözleşme", path: "/sozlesme-baski" },
+      { name: "Sigorta Poliçeleri", path: "/sigorta-policeleri" },
+      { name: "Tahsilat Makbuzu", path: "/tahsilat-makbuzu" },
+      { name: "Araç Kiralama", path: "/arac-kiralama" },
+      { name: "Gider Makbuzu", path: "/gider-makbuzu" },
+      { name: "Giriş Bileti", path: "/giris-bileti" },
+      { name: "Reçete", path: "/recete" },
+      { name: "Tediye Makbuzu", path: "/tediye-makbuzu" },
+      { name: "Tüm Makbuz İşleri", path: "/makbuz-ve-formlar" },
+    ]
+  }
+];
+
+const MATBAA_URUNLERI_DATA = MEGA_MENU_DATA;
+
+const MAKBUZ_FORMLAR_MENU = [
+  { name: "Perakende Satış Fişi", path: "/perakende-satis-fisi" },
+  { name: "Adisyon", path: "/adisyon" },
+  { name: "Sipariş Fişi", path: "/siparis-fisi" },
+  { name: "Para Makbuzu", path: "/para-makbuzu" },
+  { name: "Gider Makbuzu", path: "/gider-makbuzu" },
+  { name: "Giriş Bileti", path: "/giris-bileti" },
+  { name: "Reçete", path: "/recete" },
+  { name: "Tediye Makbuzu", path: "/tediye-makbuzu" },
+  { name: "Sözleşme", path: "/sozlesme-baski" },
+  { name: "Sigorta Poliçeleri", path: "/sigorta-policeleri" },
+  { name: "Tahsilat Makbuzu", path: "/tahsilat-makbuzu" },
+  { name: "Araç Kiralama", path: "/arac-kiralama" },
+  { name: "Tüm Makbuz İşleri", path: "/makbuz-ve-formlar" },
+];
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPriceListOpen, setIsPriceListOpen] = useState(false);
+  const [isMakbuzOpen, setIsMakbuzOpen] = useState(false);
+  const [isAllProductsOpen, setIsAllProductsOpen] = useState(false);
+  const { cart, setIsCartOpen } = useCart();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const searchProps = useProductSearch();
+  const { searchQuery, handleSearch, isSearchOpen, setIsSearchOpen, searchResults, setSearchQuery } = searchProps;
+
+  // Auto-close mobile menu on route change
+  const [prevPathname, setPrevPathname] = useState(location.pathname);
+  if (prevPathname !== location.pathname) {
+    setPrevPathname(location.pathname);
+    setIsMenuOpen(false);
+  }
+
+  // Lock body scroll when mobile menu is open to prevent background scrolling
+  useEffect(() => {
+    if (isMenuOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isSearchOpen && 
+          !(event.target as HTMLElement).closest('.search-container') && 
+          !(event.target as HTMLElement).closest('.search-container-mobile')) {
+        setIsSearchOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isSearchOpen, setIsSearchOpen]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        if (isAllProductsOpen) {
+          setIsAllProductsOpen(false);
+          document.getElementById('matbaa-urunleri-btn')?.focus();
+        }
+        if (isPriceListOpen) {
+          setIsPriceListOpen(false);
+          document.getElementById('fiyat-listesi-btn')?.focus();
+        }
+      }
+    };
+    if (isAllProductsOpen || isPriceListOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+      return () => window.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [isAllProductsOpen, isPriceListOpen]);
+
+  return (
+    <header className="sticky top-0 z-50">
+      {/* Top Bar (Design from Image) */}
+      <div className="bg-primary text-white py-2">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-[10px] md:text-[11px] font-bold">
+          {/* Left Section */}
+          <div className="flex items-center gap-2 md:gap-6">
+            <div className="flex items-center gap-3">
+              <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" aria-label="Mavi Basım Facebook Sayfası">
+                <Facebook size={16} className="md:w-4.5 md:h-4.5" />
+              </a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" aria-label="Mavi Basım Instagram Sayfası">
+                <Instagram size={16} className="md:w-4.5 md:h-4.5" />
+              </a>
+            </div>
+            <div className="h-4 w-px bg-white/30"></div>
+            <div className="flex items-center gap-4">
+              <a href={PHONE_LINK} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <PhoneCall size={14} className="md:w-4 md:h-4" />
+                <span className="text-[13px] font-black">{PHONE_NUMBER}</span>
+              </a>
+              <span className="hidden xl:block font-medium text-[13px] opacity-95">Avantajlı Fiyatlarla Online Matbaa</span>
+            </div>
+          </div>
+
+          {/* Right Section */}
+          <div className="flex items-center gap-3 md:gap-4">
+            {/* Search Bar (Desktop) */}
+            <div className="hidden lg:block relative search-container">
+              <label htmlFor="product-search" className="sr-only">
+                Ürün ara
+              </label>
+              <input 
+                id="product-search"
+                type="text" 
+                aria-label="Ürün ara"
+                placeholder="Ürün ara..." 
+                value={searchQuery}
+                onChange={handleSearch}
+                onFocus={() => searchQuery.length > 1 && setIsSearchOpen(true)}
+                className="bg-white border-none rounded-full py-1 px-10 text-[13px] text-black placeholder:text-gray-400 focus:ring-2 focus:ring-white/20 outline-none transition-all w-56 shadow-sm"
+              />
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+              
+              <AnimatePresence>
+                {isSearchOpen && searchResults.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-100 shadow-2xl rounded-2xl overflow-hidden z-[100]"
+                  >
+                    <div className="max-h-80 overflow-y-auto py-2">
+                      {searchResults.map((result, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => {
+                            navigate(result.path);
+                            setIsSearchOpen(false);
+                            setSearchQuery("");
+                          }}
+                          className="w-full px-4 py-3 flex items-center gap-3 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0 text-left"
+                        >
+                          <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <Search size={14} className="text-slate-400" />
+                          </div>
+                          <div>
+                            <div className="text-[13px] font-bold text-black">{result.title}</div>
+                            <div className="text-[11px] text-gray-500">{result.type}</div>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <div className="hidden xl:flex items-center gap-4">
+              <div className="flex items-center gap-1.5 whitespace-nowrap text-[12px] font-black">
+                <Truck size={16} className="stroke-[2.5px]" />
+                <span className="uppercase">TÜRKİYE’NİN HER YERİNE KARGO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Nav */}
+      <nav className="bg-white shadow-md border-b border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between w-full h-20">
+            <Link 
+              to="/" 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="flex-shrink-0 flex flex-col items-start group"
+            >
+              <span className="text-[20px] md:text-[23px] font-black text-black tracking-tight leading-none">MAVİ BASIM</span>
+              <span className="text-[8px] md:text-[9.2px] font-bold text-primary tracking-[0.35em] mt-0.5 uppercase leading-none">MATBAA ve REKLAM</span>
+            </Link>
+            
+            <div className="hidden lg:flex items-center space-x-1">
+                {/* Ürünlerimiz Dropdown */}
+                <div 
+                  className="relative group"
+                  onMouseEnter={() => setIsAllProductsOpen(true)}
+                  onMouseLeave={() => setIsAllProductsOpen(false)}
+                >
+                  <button 
+                    id="matbaa-urunleri-btn"
+                    onClick={(event) => setIsAllProductsOpen(prev => event.detail === 0 ? !prev : true)}
+                    aria-expanded={isAllProductsOpen}
+                    aria-haspopup="true"
+                    aria-controls="matbaa-urunleri-dropdown-menu"
+                    className="flex items-center text-[13px] font-bold text-black hover:text-secondary px-3 py-2 transition-colors uppercase gap-2 bg-secondary/5 rounded-lg"
+                  >
+                    <Menu size={18} className="text-black" />
+                    Matbaa Ürünleri <ChevronDown size={14} className={`ml-1 transition-transform ${isAllProductsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  <AnimatePresence>
+                    {isAllProductsOpen && (
+                      <motion.div 
+                        id="matbaa-urunleri-dropdown-menu"
+                        role="region"
+                        aria-labelledby="matbaa-urunleri-btn"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute left-0 mt-0 w-[840px] bg-white border border-gray-200 shadow-2xl rounded-2xl overflow-hidden z-[100]"
+                      >
+                        <div className="grid grid-cols-4 p-6 gap-0 divide-x divide-gray-100">
+                          {MATBAA_URUNLERI_DATA.map((section, sIdx) => (
+                            <div key={sIdx} className={`space-y-2 ${sIdx === 0 ? 'pr-4' : sIdx === 3 ? 'pl-4' : 'px-4'}`}>
+                              <h4 className="text-[13px] font-black text-slate-900 uppercase tracking-wider border-b-2 border-primary/20 pb-2.5 mb-2">
+                                {section.title}
+                              </h4>
+                              <div className="flex flex-col divide-y divide-gray-100">
+                                {section.items.map((item, iIdx) => (
+                                  <Link
+                                    key={iIdx}
+                                    to={item.path}
+                                    onClick={() => {
+                                      setIsAllProductsOpen(false);
+                                    }}
+                                    className="py-1.5 px-2 text-[12.5px] font-medium text-slate-700 hover:text-primary hover:bg-primary/5 transition-all text-left flex items-center justify-between group rounded"
+                                  >
+                                    <span className="group-hover:translate-x-1 transition-transform">{item.name}</span>
+                                    <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 text-primary transition-opacity shrink-0" />
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Fiyat Listesi Dropdown */}
+                <div 
+                  className="relative group"
+                  onMouseEnter={() => setIsPriceListOpen(true)}
+                  onMouseLeave={() => setIsPriceListOpen(false)}
+                >
+                  <button 
+                    id="fiyat-listesi-btn"
+                    onClick={(event) => setIsPriceListOpen(prev => event.detail === 0 ? !prev : true)}
+                    aria-expanded={isPriceListOpen}
+                    aria-haspopup="true"
+                    aria-controls="fiyat-listesi-dropdown-menu"
+                    className="flex items-center text-[13px] font-black text-white bg-secondary hover:bg-black px-4 py-2.5 transition-all uppercase gap-2 rounded-xl shadow-lg shadow-secondary/20"
+                  >
+                    <FileText size={18} />
+                    FİYAT LİSTESİ <ChevronDown size={14} className={`ml-1 transition-transform ${isPriceListOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  <AnimatePresence>
+                    {isPriceListOpen && (
+                      <motion.div 
+                        id="fiyat-listesi-dropdown-menu"
+                        role="region"
+                        aria-labelledby="fiyat-listesi-btn"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute left-0 mt-0 w-[840px] bg-white border border-gray-200 shadow-2xl rounded-2xl overflow-hidden z-[100]"
+                      >
+                        <div className="grid grid-cols-4 p-6 gap-0 divide-x divide-gray-100">
+                          {MEGA_MENU_DATA.map((section, sIdx) => (
+                            <div key={sIdx} className={`space-y-2 ${sIdx === 0 ? 'pr-4' : sIdx === 3 ? 'pl-4' : 'px-4'}`}>
+                              <h4 className="text-[13px] font-black text-slate-900 uppercase tracking-wider border-b-2 border-secondary/20 pb-2.5 mb-2">
+                                {section.title}
+                              </h4>
+                              <div className="flex flex-col divide-y divide-gray-100">
+                                {section.items.map((item, iIdx) => (
+                                  <button
+                                    key={iIdx}
+                                    onClick={() => {
+                                      navigate(item.path);
+                                      setIsPriceListOpen(false);
+                                    }}
+                                    className="py-1.5 px-2 text-[12.5px] font-medium text-slate-700 hover:text-secondary hover:bg-secondary/5 transition-all text-left flex items-center justify-between group rounded"
+                                  >
+                                    <span className="group-hover:translate-x-1 transition-transform">{item.name}</span>
+                                    <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 text-secondary transition-opacity shrink-0" />
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+
+                <Link to="/grafik-tasarim" className="text-[13px] font-bold text-black hover:text-secondary px-3 py-2 transition-colors uppercase whitespace-nowrap">
+                  GRAFİK TASARIM
+                </Link>
+
+                <Link to="/matbaa" className="text-[13px] font-bold text-black hover:text-secondary px-3 py-2 transition-colors uppercase">
+                  MATBAA
+                </Link>
+
+                <Link to="/sikca-sorulan" className="text-[13px] font-bold text-black hover:text-secondary px-3 py-2 transition-colors uppercase whitespace-nowrap">
+                  SIKÇA SORULAN
+                </Link>
+
+                <Link to="/hakkimizda" className="text-[13px] font-bold text-black hover:text-secondary px-3 py-2 transition-colors uppercase">
+                  Hakkımızda
+                </Link>
+
+                <Link to="/referanslar" className="text-[13px] font-bold text-black hover:text-secondary px-3 py-2 transition-colors uppercase">
+                  REFERANSLAR
+                </Link>
+
+                <div className="flex items-center gap-4 ml-4">
+                  <Link to="/iletisim" className="text-[13px] font-bold text-black hover:text-secondary transition-colors uppercase">
+                    İletişim
+                  </Link>
+
+                  <button 
+                    onClick={() => setIsCartOpen(true)}
+                    className="relative p-2 text-black hover:text-primary transition-colors group"
+                    aria-label="Sepetim"
+                  >
+                    <ShoppingCart size={20} />
+                    {cart.length > 0 && (
+                      <span className="absolute -top-0.5 -right-0.5 bg-primary text-white text-[9px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                        {cart.length}
+                      </span>
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              <div className="flex items-center lg:hidden gap-2">
+                <button 
+                  onClick={() => setIsCartOpen(true)}
+                  className="relative p-2 text-black hover:text-primary transition-colors"
+                  aria-label="Sepetim"
+                >
+                  <ShoppingCart size={24} />
+                  {cart.length > 0 && (
+                    <span className="absolute top-1 right-1 bg-primary text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-sm">
+                      {cart.length}
+                    </span>
+                  )}
+                </button>
+                <button 
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  className="text-secondary hover:text-secondary p-2"
+                  aria-label={isMenuOpen ? "Menüyü Kapat" : "Menüyü Aç"}
+                >
+                  {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div 
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="lg:hidden bg-white border-t border-gray-100 overflow-y-auto overscroll-contain max-h-[calc(100dvh-112px)] sm:max-h-[calc(100dvh-116px)] shadow-2xl"
+              style={{ WebkitOverflowScrolling: 'touch' }}
+            >
+              <div className="px-4 pt-2 pb-20 space-y-1">
+                <div className="px-3 py-4 bg-primary/5 rounded-2xl border border-primary/10 mb-4 mt-2">
+                  <span className="block text-xs font-black text-primary uppercase tracking-widest mb-3">Öncelikli Siparişler</span>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Link 
+                      to="/kartvizit" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">💳</span>
+                      <span>Kartvizit Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/brosur" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">📄</span>
+                      <span>Broşür Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/magnet" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">🧲</span>
+                      <span>Magnet Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/kataloglar" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">📖</span>
+                      <span>Katalog Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/kutu" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all col-span-2 flex justify-center items-center gap-2 shadow-sm"
+                    >
+                      <span className="text-[13px]">📦</span>
+                      <span>Kutu Baskı</span>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Matbaa Ürünleri (Öncelikli Siparişler harici ürünler) */}
+                <div className="px-3 py-4 bg-primary/5 rounded-2xl border border-primary/10 mb-3">
+                  <span className="block text-xs font-black text-primary uppercase tracking-widest mb-3">Matbaa Ürünleri</span>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Link 
+                      to="/el-ilani" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">📑</span>
+                      <span>El İlanı Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/etiket" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">🏷️</span>
+                      <span>Etiket Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/dosyalar" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">📁</span>
+                      <span>Cepli Dosya Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/antetli" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">📄</span>
+                      <span>Antetli Kağıt Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/zarf" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">✉️</span>
+                      <span>Zarf Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/bloknotlar" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">📝</span>
+                      <span>Bloknot Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/kup-bloknot" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">🗒️</span>
+                      <span>Küp Bloknot Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/karton-canta" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">🛍️</span>
+                      <span>Karton Çanta Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/amerikan-servis" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">🍽️</span>
+                      <span>Amerikan Servis Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/oto-paspas" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">🚗</span>
+                      <span>Oto Paspas Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/afis" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">📢</span>
+                      <span>Afiş Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/kitap-ayraci" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">🔖</span>
+                      <span>Kitap Ayracı Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/yag-karti" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">🛢️</span>
+                      <span>Yağ Kartı Baskı</span>
+                    </Link>
+                    <Link 
+                      to="/ambalaj" 
+                      onClick={() => setIsMenuOpen(false)}
+                      className="bg-white border border-gray-100 p-2 rounded-xl text-center text-xs font-bold text-black hover:text-primary transition-all flex flex-col justify-center items-center gap-1 shadow-sm"
+                    >
+                      <span className="text-[13px]">📦</span>
+                      <span>Ambalaj Baskı</span>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Ambalaj Baskı'dan hemen sonra gelen Makbuz ve Koçan Fiyat Listesi butonu */}
+                <div className="px-3 pt-1 pb-2">
+                  <button 
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      navigate('/makbuz-ve-formlar');
+                    }}
+                    className="w-full bg-secondary text-white py-3.5 px-3 rounded-2xl font-black uppercase text-xs sm:text-sm tracking-wide flex items-center justify-center shadow-xl shadow-secondary/20 text-center hover:bg-black transition-all"
+                  >
+                    <span>Makbuz ve Koçan Fiyat Listesi</span>
+                  </button>
+                </div>
+                <div className="px-3 py-4">
+                  <span className="block text-base font-bold text-black mb-2 uppercase tracking-tight">Makbuz & Formlar</span>
+                  <div className="grid grid-cols-1 gap-1 pl-2">
+                    {MAKBUZ_FORMLAR_MENU.map((item, idx) => (
+                      <button 
+                        key={idx} 
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          navigate(item.path);
+                        }}
+                        className="flex items-center gap-2 py-2 text-sm w-full text-left border-b border-gray-50 last:border-0"
+                      >
+                        <ChevronRight size={12} className="text-black" />
+                        <span className="text-black font-medium uppercase tracking-tight">{item.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+
+                <div className="px-3 py-2">
+                  <button 
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      navigate("/grafik-tasarim");
+                    }}
+                    className="w-full text-left py-3 px-3 bg-secondary/5 rounded-xl flex items-center justify-between group"
+                  >
+                    <span className="text-base font-black text-black uppercase tracking-tight">GRAFİK TASARIM</span>
+                    <ChevronRight size={18} className="text-black group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+
+
+                <div className="px-3 py-2">
+                  <button 
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      navigate("/iletisim");
+                    }}
+                    className="w-full text-left py-3 px-3 bg-gray-50 rounded-xl flex items-center justify-between group"
+                  >
+                    <span className="text-base font-black text-black uppercase tracking-tight">İLETİŞİM</span>
+                    <ChevronRight size={18} className="text-black group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+
+                <div className="pt-4">
+                  <a 
+                    href={PHONE_LINK}
+                    className="flex items-center justify-center gap-2 bg-secondary text-white w-full py-4 rounded-xl font-bold"
+                  >
+                    <PhoneCall size={20} />
+                    <span>Sipariş Ver: {PHONE_NUMBER}</span>
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </header>
+  );
+};
+
+const SEOQuickCategoryBar = () => {
+  return (
+    <>
+      {/* Üst Kategori Alanı / SEO Quick Category links bar */}
+      <div className="bg-gray-50 border-b border-gray-100 py-3 hidden md:block">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center items-center gap-8 text-[13px] font-bold uppercase tracking-wide">
+            <span className="text-gray-400 font-extrabold text-[11px] uppercase mr-2 text-secondary">Öne Çıkanlar:</span>
+            <Link to="/kartvizit" className="text-gray-700 hover:text-primary transition-all flex items-center gap-1.5 group">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+              Kartvizit Baskı
+            </Link>
+            <Link to="/brosur" className="text-gray-700 hover:text-primary transition-all flex items-center gap-1.5 group">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+              Broşür Baskı
+            </Link>
+            <Link to="/magnet" className="text-gray-700 hover:text-primary transition-all flex items-center gap-1.5 group">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+              Magnet Baskı
+            </Link>
+            <Link to="/kataloglar" className="text-gray-700 hover:text-primary transition-all flex items-center gap-1.5 group">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+              Katalog Baskı
+            </Link>
+            <Link to="/kutu" className="text-gray-700 hover:text-primary transition-all flex items-center gap-1.5 group">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" />
+              Kutu Baskı
+            </Link>
+          </div>
+        </div>
+      </div>
+      
+      {/* Swipeable SEO Category Bar for Mobile */}
+      <div className="bg-gray-50 border-b border-gray-100 py-2.5 md:hidden overflow-x-auto scrollbar-none flex whitespace-nowrap px-4 gap-4 text-xs font-bold uppercase tracking-tight">
+        <span className="text-primary font-black shrink-0">Hızlı Sipariş:</span>
+        <Link to="/kartvizit" className="text-gray-700 hover:text-primary shrink-0 font-bold">Kartvizit Baskı</Link>
+        <span className="text-gray-300 shrink-0">|</span>
+        <Link to="/brosur" className="text-gray-700 hover:text-primary shrink-0 font-bold">Broşür Baskı</Link>
+        <span className="text-gray-300 shrink-0">|</span>
+        <Link to="/magnet" className="text-gray-700 hover:text-primary shrink-0 font-bold">Magnet Baskı</Link>
+        <span className="text-gray-300 shrink-0">|</span>
+        <Link to="/kataloglar" className="text-gray-700 hover:text-primary shrink-0 font-bold">Katalog Baskı</Link>
+        <span className="text-gray-300 shrink-0">|</span>
+        <Link to="/kutu" className="text-gray-700 hover:text-primary shrink-0 font-bold">Kutu Baskı</Link>
+      </div>
+    </>
+  );
+};
+
+const Hero = () => {
+  const [current, setCurrent] = useState(0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % sortedBannerUrls.length);
+    }, 15000); // 15 seconds transition
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleSecondaryClick = (link: string) => {
+    if (link.startsWith('#')) {
+      document.getElementById(link.substring(1))?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate(link);
+    }
+  };
+
+  return (
+    <div className="relative w-full min-h-[300px] sm:min-h-[340px] md:h-[380px] lg:h-[400px] bg-slate-900 group flex items-center overflow-hidden py-3 sm:py-5">
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={current}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2 }}
+          className="absolute inset-0"
+        >
+          <img
+            src={banners[current].img}
+            alt={banners[current].alt}
+            className="w-full h-full transition-all duration-1000 object-cover opacity-100 scale-100"
+            referrerPolicy="no-referrer"
+            fetchPriority={current === 0 ? "high" : "auto"}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/10" />
+        </motion.div>
+      </AnimatePresence>
+      
+      <div className="relative max-w-[1440px] mx-auto px-16 sm:px-20 w-full h-full flex items-center pb-12 sm:pb-14">
+        <div className="max-w-3xl py-1 sm:py-2 pr-2 sm:pr-0 w-full overflow-hidden">
+          {/* Statik, Tekil ve Türkiye Geneli Odaklı Ana SEO H1 Başlığı */}
+          <h1 className="text-sm min-[380px]:text-base sm:text-2xl md:text-3xl font-black text-white leading-tight mb-2 uppercase tracking-tight text-shadow-strong break-words">
+            Matbaa ve Baskı Çözümleri
+          </h1>
+
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div 
+              key={current}
+              initial={{ opacity: 0, x: -15 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 15 }}
+              transition={{ duration: 0.5 }}
+            >
+              {/* Slider içi dinamik kampanya başlıkları H2 olarak yapılandırılmıştır */}
+              <h2 className="text-xs min-[380px]:text-sm sm:text-base md:text-lg font-extrabold text-amber-300 leading-snug mb-2 uppercase tracking-tight text-shadow-strong break-words">
+                {banners[current].title}
+              </h2>
+              
+              <p className="text-xs sm:text-sm font-semibold text-slate-100 mb-3 max-w-2xl leading-relaxed text-shadow-strong">
+                İstanbul Topkapı 2. Matbaacılar Sitesi'ndeki hizmet ve koordinasyon noktamız üzerinden Türkiye geneline matbaa ve ambalaj çözümleri sunuyoruz.
+              </p>
+
+              {/* Subtitle List with Green Check Square Badges */}
+              {banners[current].subtitle && (
+                <div className="mb-3 space-y-1 max-w-2xl">
+                  {banners[current].subtitle
+                    .split('\n')
+                    .map(line => line.trim())
+                    .filter(Boolean)
+                    .map((line, idx) => (
+                      <div key={idx} className="text-xs sm:text-sm text-white font-bold text-shadow-strong flex items-center gap-2">
+                        <span className="w-4 h-4 rounded-[3px] bg-[#00C853] border border-black flex items-center justify-center shrink-0 shadow-sm">
+                          <Check size={11} className="text-white stroke-[3.5]" />
+                        </span>
+                        <span className="leading-snug">{line.replace(/^•\s*/, '').replace(/^✅\s*/, '')}</span>
+                      </div>
+                    ))}
+                </div>
+              )}
+
+              {/* Action Buttons - 2 Focused Buttons */}
+              <div className="flex flex-wrap items-center gap-2.5">
+                {/* Blue Button */}
+                {banners[current].blueBtn.link.startsWith('/') ? (
+                  <Link to={banners[current].blueBtn.link} className="bg-[#29abe2] hover:bg-[#29abe2]/90 text-white min-h-[44px] px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md inline-flex items-center justify-center">
+                    {banners[current].blueBtn.text}
+                  </Link>
+                ) : (
+                  <a href={banners[current].blueBtn.link} target="_blank" rel="noopener noreferrer" className="bg-[#29abe2] hover:bg-[#29abe2]/90 text-white min-h-[44px] px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md inline-flex items-center justify-center">
+                    {banners[current].blueBtn.text}
+                  </a>
+                )}
+
+                {/* Black Button */}
+                {banners[current].blackBtn.link.startsWith('/') ? (
+                  <Link to={banners[current].blackBtn.link} className="bg-slate-900 hover:bg-black text-white border border-slate-700/80 min-h-[44px] px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md inline-flex items-center justify-center">
+                    {banners[current].blackBtn.text}
+                  </Link>
+                ) : (
+                  <a href={banners[current].blackBtn.link} target="_blank" rel="noopener noreferrer" className="bg-slate-900 hover:bg-black text-white border border-slate-700/80 min-h-[44px] px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all shadow-md inline-flex items-center justify-center">
+                    {banners[current].blackBtn.text}
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Navigation Arrows */}
+      <button 
+        onClick={() => setCurrent((prev) => (prev - 1 + banners.length) % banners.length)}
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-11 h-11 min-w-[44px] min-h-[44px] bg-black/50 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-all z-10 backdrop-blur-xs shadow-md"
+        aria-label="Önceki Banner"
+      >
+        <ChevronLeft size={22} />
+      </button>
+      <button 
+        onClick={() => setCurrent((prev) => (prev + 1) % banners.length)}
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-11 h-11 min-w-[44px] min-h-[44px] bg-black/50 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-all z-10 backdrop-blur-xs shadow-md"
+        aria-label="Sonraki Banner"
+      >
+        <ChevronRight size={22} />
+      </button>
+
+      {/* Dot Indicators - Visible on both mobile and desktop with comfortable touch area */}
+      <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-8 flex gap-1 z-10 items-center">
+        {banners.map((_, idx) => (
+          <button 
+            key={idx}
+            onClick={() => setCurrent(idx)}
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 group"
+            aria-label={`Banner ${idx + 1}`}
+          >
+            <span className={`h-1.5 transition-all rounded-full block ${current === idx ? 'bg-[#29abe2] w-8 md:w-12' : 'bg-white/40 w-3 md:w-6 group-hover:bg-white/70'}`} />
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const TrustBar = () => {
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
+
+  const items = [
+    { 
+      icon: <Truck size={20} />, 
+      title: "5.000 TL ve Üzeri (KDV Hariç) Ücretsiz Kargo", 
+      desc: "5.000 TL ve üzeri (KDV Hariç) alışverişlerinizde, Türkiye'nin her iline ücretsiz kargo ile teslim ediyoruz." 
+    },
+    { 
+      icon: <Package size={20} />, 
+      title: "Zamanında Teslimat", 
+      desc: "Ürünleri sitede belirtilen kargo tarihlerinde kargoya veriyor ve tarafınıza gönderiyoruz." 
+    },
+    { 
+      icon: <ShieldCheck size={20} />, 
+      title: "Güvenli Alışveriş", 
+      desc: "Kişisel verilerinizi koruyor, kurumsal banka Havale/EFT güvencesiyle ödemelerinizi güvenle yapmanızı sağlıyoruz." 
+    },
+  ];
+
+  return (
+    <div className="bg-white border-b border-gray-100 py-1.5">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4">
+          {items.map((item, idx) => (
+            <div 
+              key={idx} 
+              className="flex flex-col items-center md:items-start cursor-pointer group select-none relative"
+              onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
+            >
+              <div className="flex items-center gap-3">
+                <div className="text-black group-hover:text-secondary transition-colors shrink-0">
+                  {item.icon}
+                </div>
+                <h3 className="text-[11px] font-bold text-black uppercase tracking-tight">
+                  {item.title}
+                </h3>
+              </div>
+              
+              <AnimatePresence>
+                {expandedIdx === idx && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="text-[10px] text-black leading-tight mt-2 max-w-[250px] text-center md:text-left">
+                      {item.desc}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface ProductCardProps {
+  product: typeof PRODUCTS[0];
+  setIsKartvizitModalOpen: (val: boolean) => void;
+}
+
+const toTurkishTitleCase = (str: string) => {
+  if (!str) return "";
+  return str
+    .toLocaleLowerCase("tr-TR")
+    .split(" ")
+    .map((word) => {
+      if (!word) return "";
+      return word.charAt(0).toLocaleUpperCase("tr-TR") + word.slice(1);
+    })
+    .join(" ");
+};
+
+const PRODUCT_SEO_DATA: Record<string, {
+  seoDesc: string;
+  features: string[];
+  pricingKey: string;
+  orderKey: string;
+}> = {
+  kartvizit: {
+    seoDesc: "İş ortaklarınızda kurumsal ve akılda kalıcı bir ilk izlenim bırakmak için kartvizit baskı çözümleri.",
+    features: ["350 gr Kuşe Kağıt", "Mat veya Parlak Selefon", "Lokal Lak / Özel Kesim", "Çift Yön Ofset Baskı"],
+    pricingKey: "Kartvizit Fiyatları",
+    orderKey: "Online Kartvizit Siparişi"
+  },
+  el_ilani: {
+    seoDesc: "Geniş kitlelere avantajlı ve etkili şekilde ulaşarak kampanya veya duyurularınızı ulaştıran el ilanları.",
+    features: ["90 gr / 115 gr Kuşe", "Tek veya Çift Yön Baskı", "Canlı Renkli Ofset Baskı", "Hızlı Üretim Avantajı"],
+    pricingKey: "El İlanı Fiyatları",
+    orderKey: "Online El İlanı Siparişi"
+  },
+  brosur: {
+    seoDesc: "Ürün ve hizmetlerinizi detaylı, şık ve katlamalı kırımlarla müşterilerinize sunan tanıtım broşürleri.",
+    features: ["130 gr / 115 / 170 gr Kuşe", "Tek / Çift Kırım Katlama", "Yüksek Baskı Kalitesi", "A5 / A4 Ebat"],
+    pricingKey: "Broşür Fiyatları",
+    orderKey: "Online Broşür Siparişi"
+  },
+  magnet: {
+    seoDesc: "Müşterilerinizin buzdolabı ve metal yüzeylerinde her an gözünün önünde yer alacak kalıcı magnet reklamları.",
+    features: ["0.5 mm Mıknatıs", "Mat / Parlak Selefonlu", "Oval veya Özel Kesim", "Canlı Ofset Renkler"],
+    pricingKey: "Magnet Fiyatları",
+    orderKey: "Online Magnet Siparişi"
+  },
+  kitap_ayraci: {
+    seoDesc: "Okurlarınız ve müşterileriniz için her kitap açıldığında markanızı hatırlatacak lüks kitap ayraçları.",
+    features: ["350 gr Kuşe Kağıt", "Özel Delikli ve Püsküllü", "Mat veya Parlak Selefon", "Çift Yön Ofset Baskı"],
+    pricingKey: "Kitap Ayracı Fiyatları",
+    orderKey: "Online Kitap Ayracı Siparişi"
+  },
+  yag_karti: {
+    seoDesc: "Oto servisler için araç periyodik bakım takibini kolaylaştıran, dayanıklı ve kurumsal oto bakım kartları.",
+    features: ["350 gr Kalın Kuşe", "Özel Askı Delikli", "Yazı Yazılabilir Arka Yüz", "Kurumsal Logo Baskısı"],
+    pricingKey: "Yağ Kartı Fiyatları",
+    orderKey: "Online Yağ Kartı Siparişi"
+  },
+  etiket: {
+    seoDesc: "Ambalajlarınızı markalaştıran, rulo veya tabaka olarak üretilen dayanıklı kendinden yapışkanlı etiketler.",
+    features: ["Kuşe veya PP Opak Etiket", "Şeffaf veya Kraft Seçeneği", "Özel Şekilli Lazer Kesim", "Solmayan Canlı Mürekkep"],
+    pricingKey: "Etiket Fiyatları",
+    orderKey: "Online Etiket Siparişi"
+  },
+  zarf: {
+    seoDesc: "Kurumsal yazışmalarınız ve fatura gönderimleriniz için prestij katan logo baskılı silikonlu diplomat zarflar.",
+    features: ["110 gr 1. Hamur Kağıt", "Pencereli / Penceresiz", "Silikonlu Yapışkan Bant", "Kurumsal Logo Baskılı"],
+    pricingKey: "Zarf Fiyatları",
+    orderKey: "Online Diplomat Zarf Siparişi"
+  },
+  anteli_kagit: {
+    seoDesc: "Kurumsal yazışmalarınızda resmiyetinizi ve kurumsal kimliğinizi en üst düzeyde yansıtan antetli kağıtlar.",
+    features: ["80 gr 1. Hamur Kağıt", "A4 Standart Ebat", "Firma Logolu Özel Baskı", "Pürüzsüz Emici Doku"],
+    pricingKey: "Antetli Kağıt Fiyatları",
+    orderKey: "Online Antetli Kağıt Siparişi"
+  },
+  cep: {
+    seoDesc: "Teklif, sözleşme, fatura ve kurumsal evraklarınızı bir arada tutarak prestij sunan cepli sunum dosyaları.",
+    features: ["350 gr Kuşe Kağıt", "Tek veya Çift Cepli", "Mat / Parlak Selefonlu", "Kartvizit Takma Bölmesi"],
+    pricingKey: "Cepli Dosya Fiyatları",
+    orderKey: "Online Cepli Dosya Siparişi"
+  },
+  bloknot: {
+    seoDesc: "Toplantılarda ve günlük iş akışında müşterilerinizin sürekli elinin altında olacak kurumsal bloknot not defterleri.",
+    features: ["Spiralli / Tutkallı / Kapaklı", "80 gr 1. Hamur İç Sayfa", "350 gr Kuşe Kapak", "Logolu Özel Baskılı"],
+    pricingKey: "Bloknot Fiyatları",
+    orderKey: "Online Bloknot Siparişi"
+  },
+  kup: {
+    seoDesc: "Çalışma masalarında her an not alma ihtiyacını çözen, uzun süre masada kalarak reklam yapan küp bloknotlar.",
+    features: ["Logolu Özel Baskılı", "Tutkallı veya Kutulu", "80 gr 1. Hamur Kağıt", "Yüksek Sayfa Sayısı"],
+    pricingKey: "Küp Bloknot Fiyatları",
+    orderKey: "Online Küp Bloknot Siparişi"
+  },
+  katalog: {
+    seoDesc: "Geniş ürün gamınızı ve kurumsal hikayenizi müşterilerinize en detaylı ve prestijli şekilde aktaran kataloglar.",
+    features: ["Kuşe İç ve Kapak Kağıdı", "Tel Dikiş / Amerikan Cilt", "Mat / Parlak Selefon", "Çoklu Sayfa Seçeneği"],
+    pricingKey: "Katalog Fiyatları",
+    orderKey: "Online Katalog Siparişi"
+  },
+  amerikan_servis: {
+    seoDesc: "Restoran ve kafeler için hem masa temizliği sağlayan hem de marka reklamınızı yapan kağıt Amerikan servisler.",
+    features: ["Kraft veya Kuşe Kağıt", "Gıdaya Uygun Canlı Boya", "Tek Kullanımlık Pratik", "Firma Logolu Özel Tasarım"],
+    pricingKey: "Amerikan Servis Fiyatları",
+    orderKey: "Online Amerikan Servis Siparişi"
+  },
+  karton_canta: {
+    seoDesc: "Müşterilerinizin mağazanızdan çıkıp sokaklarda markanızı taşımasını sağlayan şık kurumsal karton çantalar.",
+    features: ["Amerikan Bristol / Kraft", "Mat / Parlak Selefon Kaplama", "İpli / Lüks Sonlandırma", "Toptan Matbaa Avantajı"],
+    pricingKey: "Karton Çanta Fiyatları",
+    orderKey: "Online Karton Çanta Siparişi"
+  },
+  otopaspas: {
+    seoDesc: "Oto yıkama ve servis firmaları için araç içini temiz tutarken kurumsal reklamınızı yapan baskılı oto paspas kağıtları.",
+    features: ["Kalın Emici Kraft / Kuşe", "Firma Logolu Özel Baskılı", "Ekonomik Toptan Üretim", "Hızlı Kuruma Özelliği"],
+    pricingKey: "Oto Paspas Fiyatları",
+    orderKey: "Online Oto Paspas Siparişi"
+  },
+  afis: {
+    seoDesc: "Etkinlik, duyuru ve kampanyalarınızı geniş kitlelere ulaştıran dikkat çekici büyük boy afiş baskıları.",
+    features: ["130 gr / 170 gr Kuşe", "A3 / A2 / 50x70 / 70x100 Ebat", "Yüksek Çözünürlüklü Ofset", "Canlı ve Solmaz Renkler"],
+    pricingKey: "Afiş Fiyatları",
+    orderKey: "Online Afiş Siparişi"
+  },
+  siparis_fisi: {
+    seoDesc: "Satış ve sipariş süreçlerinizi kayıt altında tutarak iş takibini kolaylaştıran otokopili sipariş fişleri.",
+    features: ["Kendinden Karbonlu", "Numaratörlü Seri Takibi", "Ciltli ve Perforajlı", "1. Sınıf Mikrokapsüllü"],
+    pricingKey: "Sipariş Fişi Fiyatları",
+    orderKey: "Online Sipariş Fişi Siparişi"
+  },
+  ambalaj: {
+    seoDesc: "Gıda ve gıda dışı ürünlerinizi güvenle paketleyen ve markanızı sergileyen ambalaj paketleme kağıtları.",
+    features: ["Sülfit veya Kraft Kağıt", "Gıdaya Uygun Boyalar", "Yağ ve Nem Dayanımı", "Logolu Özel Ambalaj"],
+    pricingKey: "Ambalaj Fiyatları",
+    orderKey: "Online Ambalaj Siparişi"
+  },
+  makbuz: {
+    seoDesc: "Tahsilat, tediye, teslimat ve irsaliye gibi operasyonlarınızı düzenleyen otokopili resmi veya özel makbuz ve formlar.",
+    features: ["Otokopili (Çok Nüshalı)", "Otomatik Seri Numaralı", "Perforajlı Kolay Koparma", "Firma Logolu Tasarım"],
+    pricingKey: "Makbuz Fiyatları",
+    orderKey: "Online Makbuz Siparişi"
+  },
+  kutu: {
+    seoDesc: "Ürünlerinizi dış etkenlerden korurken şık sunumuyla kargo ve satış değerini artıran kurumsal kutular.",
+    features: ["Amerikan Bristol / Mikro Kırma", "Gıda veya E-ticaret Kutusu", "Selefonlu ve Varak Yaldızlı", "Özel Ölçülerde Kesim"],
+    pricingKey: "Kutu Fiyatları",
+    orderKey: "Online Kutu Siparişi"
+  }
+};
+
+const getProductPath = (type: string): string => {
+  switch (type) {
+    case "kutu": return "/kutu";
+    case "ambalaj": return "/ambalaj";
+    case "kartvizit": return "/kartvizit";
+    case "brosur": return "/brosur";
+    case "el-ilani": return "/el-ilani";
+    case "afis": return "/afis";
+    case "antetli": return "/antetli";
+    case "dosyalar": return "/dosyalar";
+    case "etiket": return "/etiket";
+    case "oto-paspas": return "/oto-paspas";
+    case "kup-bloknot": return "/kup-bloknot";
+    case "bloknotlar": return "/bloknotlar";
+    case "magnet": return "/magnet";
+    case "amerikan-servis": return "/amerikan-servis";
+    case "karton-canta": return "/karton-canta";
+    case "katalog": return "/kataloglar";
+    case "zarf": return "/zarf";
+    case "makbuz-ve-formlar": return "/makbuz-ve-formlar";
+    case "kitap-ayraci": return "/kitap-ayraci";
+    case "yag-karti": return "/yag-karti";
+    case "siparis-fisi": return "/siparis-fisi";
+    default: return "#products";
+  }
+};
+
+const ProductCard = (props: any) => {
+  const { product } = props;
+  const [imgFailed, setImgFailed] = useState(false);
+  const productPath = getProductPath(product.type);
+  const seoInfo = PRODUCT_SEO_DATA[product.id] || {
+    seoDesc: product.subtext,
+    features: ["1. Sınıf Malzeme", "Canlı Baskı Standartları", "Hızlı Üretim Garantisi"],
+    pricingKey: toTurkishTitleCase(product.name) + " Fiyatları",
+    orderKey: "Online Matbaa Siparişi"
+  };
+
+  return (
+    <motion.div 
+      whileHover={{ y: -6 }}
+      className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden group flex flex-col justify-between h-full transition-all duration-300 hover:shadow-xl hover:border-secondary/30"
+    >
+      <div className="flex flex-col flex-1 min-w-0">
+        <Link 
+          to={productPath}
+          title={`${product.name} Fiyatları ve Özellikleri`}
+          className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-slate-50 to-slate-100 border-b border-slate-100 flex items-center justify-center shrink-0 block"
+        >
+          {!imgFailed ? (
+            <img 
+              src={LOCAL_ASSETS[product.id]} 
+              srcSet={`${LOCAL_ASSETS[product.id]} 1x`}
+              alt={`${product.name} - Mavi Basım Online Matbaa Baskı`} 
+              title={`${product.name} - Mavi Basım Matbaa`}
+              width="400"
+              height="300"
+              loading="lazy"
+              onError={() => setImgFailed(true)}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              referrerPolicy="no-referrer"
+            />
+          ) : (
+            <div className="w-full h-full flex flex-col items-center justify-center p-4 bg-gradient-to-tr from-sky-50 to-indigo-50 relative select-none">
+              <span className="text-[9px] font-black tracking-widest text-secondary/40 uppercase mb-1">MAVİ BASIM</span>
+              <span className="text-xs font-black text-slate-800 text-center uppercase tracking-tight max-w-[150px] leading-tight mb-2">
+                {product.name}
+              </span>
+              <div className="flex items-center gap-1.5 bg-white/75 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm border border-slate-100">
+                <div className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+                <span className="text-[8px] font-bold text-slate-500 tracking-tight">Görsel Hazırlanıyor</span>
+              </div>
+            </div>
+          )}
+          <div className="absolute top-3 right-3 bg-slate-900/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+            <span className="text-[9px] font-black text-white uppercase tracking-wider">
+              {product.desc}
+            </span>
+          </div>
+        </Link>
+        
+        <div className="p-4 sm:p-5 flex-1 flex flex-col">
+          <div className="mb-2 min-h-[50px] flex flex-col justify-start">
+            <span className="inline-block bg-blue-50 text-blue-700 px-2 py-0.5 rounded text-[9px] font-black uppercase tracking-tight mb-1 self-start">
+              {seoInfo.orderKey}
+            </span>
+            <h3 className="text-xs sm:text-sm md:text-base font-black text-slate-950 uppercase tracking-tight leading-tight line-clamp-2">
+              <Link 
+                to={productPath}
+                className="hover:text-primary transition-colors block"
+                title={`${product.name} Online Fiyatları ve Siparişi`}
+              >
+                {product.name}
+              </Link>
+            </h3>
+          </div>
+          
+          <p className="text-xs text-slate-600 font-medium leading-relaxed mb-3 min-h-[36px] flex items-center">
+            {seoInfo.seoDesc}
+          </p>
+
+          {/* Ürün Özellikleri / Teknik Özellikler */}
+          <div className="grid grid-cols-2 gap-1.5 mb-3 bg-slate-50 p-2.5 rounded-xl border border-slate-100 min-h-[68px] content-center flex-none">
+            {seoInfo.features.map((feature: string, fIdx: number) => (
+              <span key={fIdx} className="text-[10px] font-bold text-slate-700 leading-tight flex items-start gap-1.5 min-w-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1" />
+                <span className="break-words min-w-0" title={feature}>{feature}</span>
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-auto space-y-2.5 pt-1">
+            <div className="flex items-center justify-between bg-slate-50 p-2.5 rounded-xl border border-slate-100 flex-none">
+              <div>
+                <span className="text-[8px] text-slate-400 font-extrabold uppercase tracking-widest block mb-0.5">
+                  BAŞLAYAN FİYATLAR
+                </span>
+                <span className="text-xs sm:text-sm md:text-base font-black text-primary tracking-tighter">
+                  {typeof product.price === 'number' ? formatPrice(product.price) : product.price}
+                </span>
+              </div>
+            </div>
+
+            {/* Kısa Avantaj Metni / Değer Rozetleri */}
+            <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-center gap-1 w-full flex-none">
+              <span className="text-[8px] sm:text-[9px] font-black bg-black text-white px-1.5 py-1 rounded uppercase tracking-tight whitespace-nowrap flex-1 flex items-center justify-center min-h-[22px]">
+                Hızlı Üretim
+              </span>
+              <span className="text-[8px] sm:text-[9px] font-black bg-black text-white px-1.5 py-1 rounded uppercase tracking-tight whitespace-nowrap flex-1 flex items-center justify-center min-h-[22px]">
+                Kaliteli Baskı
+              </span>
+              <span className="text-[8px] sm:text-[9px] font-black bg-black text-white px-1.5 py-1 rounded uppercase tracking-tight whitespace-nowrap flex-1 flex items-center justify-center min-h-[22px]">
+                Uygun Fiyat
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="px-4 pb-4 sm:px-5 sm:pb-5 flex-none">
+        <Link 
+          to={productPath}
+          title={`${product.name} Fiyat Listesi ve Sipariş Sayfası`}
+          className="w-full py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl font-extrabold flex items-center justify-between transition-all duration-300 bg-secondary text-white hover:bg-secondary/90 shadow-sm hover:shadow-md group-hover:bg-primary"
+        >
+          <div className="flex flex-col text-left min-w-0">
+            <span className="text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-white/80">MAVİ BASIM MATBAA</span>
+            <span className="text-[11px] sm:text-xs font-black mt-0.5 break-words">{seoInfo.pricingKey} &amp; Sipariş</span>
+          </div>
+          <ArrowRight size={14} className="flex-shrink-0 ml-1.5 group-hover:translate-x-1 transition-transform duration-300" />
+        </Link>
+      </div>
+    </motion.div>
+  );
+};
+
+const CategoryList = () => {
+  return (
+    <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8">
+      <h2 className="text-xl font-bold text-black mb-8 flex items-center gap-3">
+        <Package className="text-black" />
+        Hizmet Kategorilerimiz
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {ALL_PRODUCTS_CATEGORIES.map((cat, idx) => (
+          <Link 
+            key={idx} 
+            to={getCategoryPath(cat)}
+            className="flex items-center gap-3 p-4 rounded-2xl hover:bg-secondary/5 border border-transparent hover:border-secondary/10 transition-all group text-left w-full"
+          >
+            <div className="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-colors">
+              <ChevronRight size={16} />
+            </div>
+            <span className="text-xs font-medium text-black group-hover:text-black">{cat}</span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const HomePage = () => {
+  const randomProducts = PRODUCTS.slice(0, 18);
+  const [activeGuideTab, setActiveGuideTab] = useState<'tech' | 'gramaj' | 'mucellit' | 'ebat'>('tech');
+
+  return (
+    <>
+      <Hero />
+      <SEOQuickCategoryBar />
+
+      {/* Türkiye'nin Önde Gelen Matbaa Çözüm Merkezlerinden Biri - Otorite Bandı */}
+      <section className="bg-gray-50 text-slate-900 py-6 md:py-8 border-b border-gray-200">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto md:max-w-7xl bg-white border border-gray-200 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 justify-between shadow-sm">
+            <div className="space-y-2 flex-1">
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">
+                <Award size={14} /> KURUMSAL MATBAA GÜVENCESİ
+              </div>
+              <h2 className="text-lg md:text-2xl font-black text-slate-900 uppercase tracking-tight">
+                20+ Yıllık Tecrübeyle Güvenilir Baskı Çözümleri
+              </h2>
+              <p className="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">
+                Mavi Basım Matbaa &amp; Reklam olarak yıllara dayanan tecrübemizi dijital sipariş kolaylığıyla buluşturuyoruz. Topkapı 2. Matbaacılar Sitesi'ndeki hizmet noktamızda kartvizitten lüks ambalaj kutusuna kadar tüm siparişleri yüksek baskı kalitesi, şeffaf maliyet yapısı ve zamanında kargo garantisiyle sunuyoruz.
+              </p>
+            </div>
+            <div className="flex flex-wrap sm:flex-nowrap gap-3 shrink-0 w-full md:w-auto">
+              <a
+                href="https://wa.me/905366022373?text=Merhaba,%20matbaa%20baskı%20hizmetleriniz%20hakkında%20bilgi%20ve%20fiyat%20almak%20istiyorum."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-black text-xs uppercase px-5 py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md"
+              >
+                <WhatsAppIcon size={16} /> WhatsApp Destek
+              </a>
+              <Link
+                to="/hakkimizda"
+                className="flex-1 md:flex-initial inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-black text-xs uppercase px-5 py-3.5 rounded-xl transition-all shadow-sm hover:shadow-md"
+              >
+                Hakkımızda &amp; Tesis
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hero Altı - Doğal SEO ve Matbaa Baskı Çözümleri Özeti */}
+      <section className="bg-white border-b border-gray-100 py-6 md:py-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto md:max-w-7xl bg-slate-50 rounded-2xl border border-slate-100 p-5 md:p-6 flex flex-col md:flex-row items-center gap-6 justify-between">
+            <div className="min-w-0 flex-1">
+              <h2 className="text-xs font-black tracking-widest text-[#00E5FF] uppercase mb-1.5 flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#00E5FF] animate-pulse" /> OFSET VE DİJİTAL BASKI MERKEZİ
+              </h2>
+              <p className="text-xs md:text-sm text-slate-600 font-semibold leading-relaxed">
+                İşletmenizin kurumsal kimliğini ve pazarlama materyallerini güçlendiren <strong className="text-slate-900">ofset baskı</strong> ve <strong className="text-slate-900">dijital baskı</strong> çözümlerimiz, Topkapı merkezimiz koordinasyonunda özenle hazırlanmaktadır. Farklı tiraj ve malzeme ihtiyaçlarınıza uygun şeffaf fiyat listelerimizi kategorilerimizden inceleyebilir, dosyanızı yükleyerek siparişinizi güvenle başlatabilirsiniz.
+              </p>
+            </div>
+            <div className="flex shrink-0 gap-3">
+              <Link to="/brosur" className="bg-primary hover:bg-primary/90 text-white font-black text-xs uppercase px-5 py-3 rounded-xl transition-all shadow-md">
+                Broşür Çözümleri
+              </Link>
+              <Link to="/kartvizit" className="bg-slate-900 hover:bg-slate-800 text-white font-black text-xs uppercase px-5 py-3 rounded-xl transition-all shadow-md">
+                Kartvizit Seçenekleri
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GERÇEK ATÖLYE VE ÜRETİM TESİSİMİZDEN KARELER (E-E-A-T GALERİSİ) */}
+      <section className="bg-white text-slate-900 py-14 md:py-20 border-b border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-3 border border-primary/20">
+              BASKI VE ÜRETİM STANDARTLARI
+            </div>
+            <h2 className="text-2xl md:text-3.5xl font-black text-slate-900 uppercase tracking-tight mb-4">
+              Baskı Teknikleri ve <span className="text-primary">Üretim Süreçlerinden Örnekler</span>
+            </h2>
+            <p className="text-slate-600 font-semibold leading-relaxed text-xs md:text-sm">
+              Baskı kalitesi, yüzey kaplama, baskı sonrası işlemler ve dosya hazırlığı hakkında görsel örnekler.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Gallery Item 1 */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-md">
+              <div className="aspect-[16/10] overflow-hidden relative">
+                <img 
+                  src="/images/hakkimizda/baski-kalitesini-etkileyen-faktorler-teknik-detaylar.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Baskı kalitesi, çözünürlük ve renk karşılaştırmaları" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/10">
+                  BASKI KALİTESİ
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
+                  Baskı Kalitesini Etkileyen Faktörler
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Çözünürlük, renk ve görsel ayrıntıların baskı kalitesine etkisini gösteren teknik karşılaştırmalar.
+                </p>
+              </div>
+            </div>
+
+            {/* Gallery Item 2 */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-md">
+              <div className="aspect-[16/10] overflow-hidden relative">
+                <img 
+                  src="/images/hakkimizda/baski-sonrasi-islemler-mucellit-surecleri.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Giyotin ve Mücellit İşlemleri" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/10">
+                  MÜCELLİT &amp; KESİM
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
+                  Hassas Giyotin &amp; Ebatlama
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Baskısı tamamlanan tabakaların milimetrik hassasiyetle kesimi, kırım katlama ve otomatik harmanlama süreçleri.
+                </p>
+              </div>
+            </div>
+
+            {/* Gallery Item 3 */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-md">
+              <div className="aspect-[16/10] overflow-hidden relative">
+                <img 
+                  src="/images/hakkimizda/selefon-nedir-mat-parlak-selefon-farklari.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Mat ve parlak selefon yüzey örnekleri" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/10">
+                  YÜZEY KORUMA
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
+                  Mat &amp; Parlak Selefon Kaplama
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Mat ve parlak selefonun basılı yüzeylerde oluşturduğu görünüm ve yansıma farklarından örnekler.
+                </p>
+              </div>
+            </div>
+
+            {/* Gallery Item 4 */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-md">
+              <div className="aspect-[16/10] overflow-hidden relative">
+                <img 
+                  src="/images/hakkimizda/varak-baski-nedir-altin-gumus-yaldiz-teknikleri.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Varak Yaldız ve Özel Kesim" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/10">
+                  ÖZEL UYGULAMALAR
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
+                  Sıcak Varak Yaldız &amp; Kabartma Lak
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Prestijli kurumsal materyaller için altın/gümüş varak yaldız ve bölgesel parlak kabartma lak dokunuşları.
+                </p>
+              </div>
+            </div>
+
+            {/* Gallery Item 5 */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-md">
+              <div className="aspect-[16/10] overflow-hidden relative">
+                <img 
+                  src="/images/hakkimizda/hizli-uretim-sureci-acil-matbaa-baski.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Bilgisayar ekranında grafik tasarım ve baskı hazırlığı" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/10">
+                  UZMAN KADRO
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
+                  Grafik Tasarım ve Baskı Hazırlığı
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Bilgisayar ortamında tasarımın düzenlenmesi ve baskı öncesi dosya hazırlığı.
+                </p>
+              </div>
+            </div>
+
+            {/* Gallery Item 6 */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:shadow-md">
+              <div className="aspect-[16/10] overflow-hidden relative">
+                <img 
+                  src="/images/hakkimizda/tecrube-matbaa.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Paketleme ve Kargo Sevk" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
+                />
+                <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-white/10">
+                  LOJİSTİK &amp; SEVK
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
+                  Özel Çift Oluklu Koli Paketleme
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Baskısı ve kontrolü tamamlanan siparişler nem ve darbeye dirençli korumalı kolilerle 81 ile sevk edilir.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sipariş Süreci / Nasıl Sipariş Verilir? Section */}
+      <section id="siparis-sureci" className="bg-slate-50 py-12 md:py-16 border-b border-gray-100 relative overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+              KOLAY SİPARİŞ ADIMLARI
+            </div>
+            <h2 className="text-2xl md:text-3.5xl font-black text-slate-900 uppercase tracking-tight mb-4">
+              Online Matbaa <span className="text-primary">Sipariş Süreci</span> Nasıl İşler?
+            </h2>
+            <p className="text-slate-600 font-semibold leading-relaxed text-sm md:text-base">
+              Mavi Basım aracılığıyla dükkanınızdan veya ofisinizden çıkmadan, sadece 5 kolay adımda <strong className="text-slate-900">Acil ve Hızlı</strong> matbaa siparişinizi oluşturun. Tüm süreç profesyonel ve güvencelidir.
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Connection Line for Desktop */}
+            <div className="hidden lg:block absolute top-1/2 left-[10%] right-[10%] h-0.5 bg-slate-200 -translate-y-1/2 z-0" />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 relative z-10">
+              {[
+                {
+                  step: "01",
+                  title: "Teklif Al",
+                  desc: "İstediğiniz ürünün ebat, kağıt ve adet detaylarını WhatsApp veya telefonla bize ileterek anında en uygun fiyat teklifini alın.",
+                  badge: "Hızlı Dönüş"
+                },
+                {
+                  step: "02",
+                  title: "Tasarım Gönder",
+                  desc: "Hazır tasarımınızı (PDF, AI, CDR) iletin. Tasarımınız yoksa kurumsal logonuz ve bilgilerinizle grafik ekibimizden profesyonel tasarım desteği alın.",
+                  badge: "Tasarım Desteği"
+                },
+                {
+                  step: "03",
+                  title: "PDF Prova Onayı",
+                  desc: "Baskı öncesi hazırladığımız dijital mizanpajı inceleyin. PDF Prova Onayı ile üretime başlayın.",
+                  badge: "Dijital Onay"
+                },
+                {
+                  step: "04",
+                  title: "Üretim",
+                  desc: "Onayınızın ardından İstanbul Topkapı'daki tesislerimizde ofset veya yüksek hızlı dijital parkurumuzda baskıya geçilir.",
+                  badge: "Modern Parkur"
+                },
+                {
+                  step: "05",
+                  title: "Kargo",
+                  desc: "Siparişleriniz koruyucu ambalajlarla paketlenir. Anlaşmalı kargo firmaları aracılığıyla adresinize sevk edilir.",
+                  badge: "81 İl Kargo"
+                }
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white border border-gray-100 p-6 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 relative flex flex-col justify-between group">
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-3xl font-black text-primary/20 font-mono tracking-tighter group-hover:text-primary/30 transition-colors">
+                        {item.step}
+                      </span>
+                      <span className="bg-primary/10 text-primary text-[10px] font-black px-2 py-0.5 rounded-full uppercase">
+                        {item.badge}
+                      </span>
+                    </div>
+                    <h3 className="text-base font-black text-slate-900 uppercase tracking-tight mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 font-semibold text-xs leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Welcome SEO Section */}
+      <section className="bg-white py-8 md:py-14 border-b border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-none">
+            <span className="inline-block bg-primary/10 text-primary text-[10px] md:text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-3">
+              Güvenilir İstanbul Topkapı Matbaa Merkezi
+            </span>
+            <h2 className="text-xl md:text-2.5xl lg:text-3.25xl font-black text-slate-900 tracking-tight mb-3 uppercase leading-tight">
+              20+ Yıllık Tecrübeyle <span className="text-primary">İstanbul Topkapı Hizmet Merkezimiz</span> &amp; Profesyonel Baskı Çözümleri
+            </h2>
+            <h3 className="text-md md:text-lg font-bold text-slate-600 mb-6 max-w-5xl mx-auto leading-relaxed">
+              Topkapı Koordinasyon Noktamızdan Baskı Hizmetleri, Kurumsal Çözümler ve Güvenilir Matbaa Altyapısı
+            </h3>
+ 
+            {/* Güven Sinyalleri & Rozet Alanı (İlk Ekran Altı) */}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4 mb-6 text-left max-w-7xl mx-auto">
+              <div className="bg-slate-50 border border-slate-200/80 p-4 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-primary font-black text-base sm:text-lg">Yılların Tecrübesi</span>
+                  <Award className="text-primary stroke-[2.2] w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="text-slate-900 font-extrabold text-xs mb-1">Kurumsal İmalat Tecrübesi</div>
+                <div className="text-slate-600 text-[11px] font-semibold leading-snug">20 yılı aşkın köklü matbaa ve profesyonel baskı birikimi.</div>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-200/80 p-4 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-primary font-black text-base sm:text-lg">Topkapı Merkezimiz</span>
+                  <Printer className="text-primary stroke-[2.2] w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="text-slate-900 font-extrabold text-xs mb-1">Matbaa &amp; Baskı Çözümleri</div>
+                <div className="text-slate-500 text-[11px] font-semibold leading-snug">İstanbul Topkapı Matbaacılar Sitesi'nde profesyonel hizmet.</div>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-200/80 p-4 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-primary font-black text-base sm:text-lg">81 İle Gönderim</span>
+                  <Truck className="text-primary stroke-[2.2] w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="text-slate-900 font-extrabold text-xs mb-1">Özenli Paketleme</div>
+                <div className="text-slate-500 text-[11px] font-semibold leading-snug">Dayanıklı koliler ile korumalı paketleme.</div>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-200/80 p-4 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-all group">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-primary font-black text-base sm:text-lg">Bütçe Dostu</span>
+                  <Boxes className="text-primary stroke-[2.2] w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="text-slate-900 font-extrabold text-xs mb-1">Şeffaf &amp; Net Bütçe</div>
+                <div className="text-slate-500 text-[11px] font-semibold leading-snug">Sürpriz maliyetsiz, doğrudan avantajlı fiyat politikası.</div>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-200/80 p-4 rounded-2xl flex flex-col justify-between col-span-2 md:col-span-1 shadow-sm hover:shadow-md transition-all group">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-primary font-black text-base sm:text-lg">PDF Prova Onayı</span>
+                  <CheckCircle2 className="text-primary stroke-[2.2] w-5 h-5 shrink-0 group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="text-slate-900 font-extrabold text-xs mb-1">Ücretsiz Grafik Kontrol</div>
+                <div className="text-slate-500 text-[11px] font-semibold leading-snug">Baskı öncesi renk, çözünürlük ve kırım denetimi.</div>
+              </div>
+            </div>
+
+            {/* Hızlı Güven & Tasarım Destek CTA Bağlantısı */}
+            <div className="mb-8 max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 bg-emerald-50/80 border border-emerald-200/70 p-3.5 sm:p-4 rounded-2xl text-left">
+              <div className="flex items-center gap-3">
+                <ShieldCheck className="text-emerald-600 w-6 h-6 shrink-0" />
+                <div className="text-xs sm:text-sm font-bold text-slate-800">
+                  <span className="text-emerald-700 font-black uppercase">Baskı Öncesi Dosya Kontrolü:</span> Tasarımlarınız üretime girmeden önce grafik ekibimizce ücretsiz incelenir ve PDF onayınız alınır.
+                </div>
+              </div>
+              <a 
+                href="https://wa.me/905366022373?text=Merhaba%2C%20tasar%C4%B1m%C4%B1m%C4%B1%20bask%C4%B1%20%C3%B6ncesi%20%C3%BCcretsiz%20teknik%20kontrol%20i%C3%A7in%20iletmek%20istiyorum."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-black text-xs px-4 py-2 rounded-xl transition-all inline-flex items-center gap-1.5 shadow-sm shrink-0"
+              >
+                Tasarımını Ücretsiz Denetlet
+              </a>
+            </div>
+ 
+            <div className="space-y-4 text-slate-600 font-semibold leading-relaxed text-sm md:text-base bg-slate-50 border border-slate-100 p-6 md:p-8 rounded-[2rem] shadow-sm text-left max-w-7xl mx-auto">
+              <p>
+                Mavi Basım, İstanbul Topkapı Matbaacılar Sitesi'nde yer alan koordinasyon ve hizmet merkezinde, donanımlı bir <strong className="text-slate-900">İstanbul Topkapı Matbaa Hizmet Noktası</strong> ve güvenilir bir <strong className="text-slate-900">Baskı Çözüm Merkezi</strong> olarak faaliyetlerini sürdürmektedir. Tüm kurumsal ve ticari sipariş taleplerinizi yüksek kalite standartları ve zamanında teslimat ilkesiyle karşılamaktadır.
+              </p>
+              <p>
+                Mavi Basım ile dükkanınızdan veya ofisinizden çıkmadan, sadece 5 kolay adımda profesyonel <strong className="text-primary">Baskı Siparişi</strong> oluşturabilirsiniz. <strong className="text-slate-900">Uygun fiyatlı matbaa</strong> ve <strong className="text-slate-900">kaliteli baskı</strong> arayışınızda, kaliteden ödün vermeden güvenilir bir iş ortağı olarak çalışıyoruz. Web sitemiz üzerinden <strong className="text-slate-900">güncel matbaa fiyatları</strong> ve <strong className="text-slate-900">baskı maliyetleri</strong> bilgilerine şeffafça ulaşabilir, kolayca online sipariş verebilirsiniz.
+              </p>
+              <p className="text-primary font-bold border-t border-slate-200/60 pt-3">
+                81 ile kargo güvenceli <strong className="text-primary">Kurumsal Baskı Çözümleri</strong> kapsamında; <a href="/kartvizit" className="underline hover:text-slate-900">Kartvizit Fiyatları</a>, <a href="/brosur" className="underline hover:text-slate-900">Broşür Fiyatları</a>, <a href="/kataloglar" className="underline hover:text-slate-900">Katalog Fiyatları</a>, <a href="/etiket" className="underline hover:text-slate-900">Etiket Fiyatları</a>, <a href="/kutu" className="underline hover:text-slate-900">Kutu Fiyatları</a>, <a href="/magnet" className="underline hover:text-slate-900">Magnet Fiyatları</a> ve <a href="/karton-canta" className="underline hover:text-slate-900">Karton Çanta Fiyatları</a> incelemesi yapabilir, siparişinizi hemen iletebilirsiniz.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+      {/* Öne Çıkan Ürünler Section */}
+      <section id="featured-products" className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+        <div className="text-center max-w-none mb-10 md:mb-12">
+          <h2 className="text-2xl md:text-3.5xl font-black uppercase tracking-tight text-slate-900 mb-4">
+            Online <span className="text-primary">Matbaa Ürünleri</span> ve Online Baskı Çözümleri
+          </h2>
+          <p className="text-slate-600 font-semibold leading-relaxed text-sm md:text-base mb-6 w-full max-w-7xl mx-auto">
+            Mavi Basım olarak <strong className="text-slate-900">Uygun Fiyatlı Matbaa</strong> arayışlarınızda, bütçenizi koruyan <Link to="/kartvizit" className="text-primary hover:underline font-bold">Kartvizit</Link> ve <Link to="/brosur" className="text-primary hover:underline font-bold">Broşür</Link> seçenekleri de dahil olmak üzere zengin bir ürün yelpazesi sunuyoruz. Kurumsal <Link to="/brosur" className="text-slate-900 hover:text-primary underline">broşür</Link>, şık <Link to="/magnet" className="text-slate-900 hover:text-primary underline">magnet</Link>, yapışkanlı <Link to="/etiket" className="text-slate-900 hover:text-primary underline">etiket</Link>, ambalaj <Link to="/kutu" className="text-slate-900 hover:text-primary underline">kutusu</Link>, <Link to="/karton-canta" className="text-slate-900 hover:text-primary underline">karton çanta</Link>, <Link to="/antetli" className="text-slate-900 hover:text-primary underline">antetli kağıt</Link> ve otokopili <Link to="/makbuz-ve-formlar" className="text-slate-900 hover:text-primary underline">makbuz form</Link> siparişlerinizi <strong className="text-primary">Online Baskı Siparişi</strong> kolaylığıyla, Zeytinburnu ve Topkapı merkezimiz koordinasyonunda güvenli şekilde adresinize teslim ediyoruz.
+          </p>
+          <div className="bg-primary/5 border border-primary/10 p-5 rounded-2xl text-xs md:text-sm font-bold text-slate-700 w-full max-w-7xl mx-auto leading-relaxed">
+            <strong>2026 Güncel Matbaa Fiyatları &amp; Sipariş:</strong> 2026 yılında en çok tercih edilen kurumsal baskı çözümleri arasında <strong className="text-primary">Online Matbaa Fiyatları</strong> ile bütçe dostu, kaliteli <Link to="/el-ilani" className="text-primary hover:underline">el ilanları</Link>, <Link to="/etiket" className="text-primary hover:underline">etiketler</Link>, <Link to="/kutu" className="text-primary hover:underline">kutular</Link>, <Link to="/kartvizit" className="text-primary hover:underline">kartvizitler</Link> ve <Link to="/kataloglar" className="text-primary hover:underline">kataloglar</Link> yer almaktadır. Mavi Basım ile <strong className="text-slate-900">Online Baskı Siparişi</strong> vererek işinizi büyütecek kurumsal basılı tanıtım materyallerine sahip olabilirsiniz.
+          </div>
+        </div>
+ 
+        <div className="flex flex-col items-center justify-center text-center mb-6 gap-2">
+          <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-slate-900">
+            <span className="text-primary">Öne Çıkan</span> Ürünler
+          </h3>
+        </div>
+ 
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+          {randomProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      {/* Kurumsal & Toptan Teklif Bölümü */}
+      <section id="wholesale-corporate" className="bg-slate-50 text-slate-900 py-12 md:py-16 border-t border-b border-slate-200/80">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full text-center space-y-4 max-w-4xl mx-auto mb-10">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest border border-primary/20 shadow-sm">
+              <Boxes size={16} /> TOPTAN BASKI &amp; KURUMSAL SİPARİŞ MERKEZİ
+            </div>
+            <h2 className="text-2xl md:text-3.5xl font-black uppercase tracking-tight text-slate-900">
+              Kurumsal &amp; Toptan <span className="text-primary">Matbaa Siparişleri</span>
+            </h2>
+            <p className="text-sm md:text-base text-slate-600 font-semibold leading-relaxed">
+              Mavi Basım olarak reklam ajansları, matbaalar, kurumsal şirketler, bayiler ve zincir markalar için yüksek hacimli toptan baskı çözümleri sunuyoruz. İhtiyacınız olan <Link to="/kartvizit" className="text-primary hover:underline font-bold">kurumsal kartvizit</Link>, <Link to="/brosur" className="text-primary hover:underline font-bold">broşür</Link>, <Link to="/kataloglar" className="text-primary hover:underline font-bold">firma kataloğu</Link>, <Link to="/kutu" className="text-primary hover:underline font-bold">karton kutu</Link>, <Link to="/karton-canta" className="text-primary hover:underline font-bold">karton çanta</Link> ve <Link to="/etiket" className="text-primary hover:underline font-bold">etiket</Link> siparişlerinizde Topkapı merkezimizden özel bütçe avantajı sunuyoruz.
+            </p>
+          </div>
+
+          {/* Kurumsal Avantajlar Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10 max-w-7xl mx-auto text-left">
+            <div className="bg-white border border-slate-200/80 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-black mb-3">
+                <Boxes size={20} />
+              </div>
+              <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-1.5">
+                Avantajlı Toptan Fiyatlar
+              </h3>
+              <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                Şeffaf fiyat politikamız ve yüksek adetli siparişlerinize özel net birim maliyet avantajları.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200/80 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-black mb-3">
+                <FileText size={20} />
+              </div>
+              <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-1.5">
+                Baskı Öncesi Prova &amp; Denetim
+              </h3>
+              <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                Grafik ekibimizce ücretsiz dosya kontrolü ve yüksek hacimli siparişlerde teknik baskı öncesi PDF prova onayı.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200/80 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-black mb-3">
+                <Award size={20} />
+              </div>
+              <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-1.5">
+                Anlaşmalı Kurumsal Faturalama
+              </h3>
+              <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                Sözleşmeli kurumsal müşteriler, bayiler ve ajanslar için düzenli faturalandırma ve cari süreç takibi.
+              </p>
+            </div>
+
+            <div className="bg-white border border-slate-200/80 p-5 rounded-2xl shadow-sm hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-black mb-3">
+                <Truck size={20} />
+              </div>
+              <h3 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-1.5">
+                81 İle Güvenli Lojistik
+              </h3>
+              <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                Çift oluklu dayanıklı koliler ve koruyucu ambalajlarla Türkiye'nin tüm illerine güvenli ve hızlı sevk imkanı.
+              </p>
+            </div>
+          </div>
+
+          {/* Toptan Sipariş Süreci Adımları */}
+          <div className="bg-white border border-slate-200/80 rounded-2xl p-6 md:p-8 max-w-7xl mx-auto shadow-sm text-left mb-8">
+            <h3 className="text-base md:text-lg font-black text-slate-900 uppercase tracking-tight mb-6 text-center md:text-left">
+              4 Adımda Kurumsal &amp; Toptan Sipariş Süreci
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="flex items-start gap-3">
+                <span className="w-7 h-7 rounded-full bg-primary text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">1</span>
+                <div>
+                  <h4 className="text-xs font-black text-slate-900 uppercase mb-1">Talebinizi İletin</h4>
+                  <p className="text-xs text-slate-600 font-medium leading-relaxed">Ürün çeşidi, ebat, kağıt gramajı ve adet bilgilerinizi bize ulaştırın.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="w-7 h-7 rounded-full bg-primary text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">2</span>
+                <div>
+                  <h4 className="text-xs font-black text-slate-900 uppercase mb-1">Özel Fiyat &amp; Prova</h4>
+                  <p className="text-xs text-slate-600 font-medium leading-relaxed">Toplu alım bütçeniz ve baskı prova belgeniz kısa sürede hazırlansın.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="w-7 h-7 rounded-full bg-primary text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">3</span>
+                <div>
+                  <h4 className="text-xs font-black text-slate-900 uppercase mb-1">Seri Üretim Aşaması</h4>
+                  <p className="text-xs text-slate-600 font-medium leading-relaxed">Yazılı onayınızın ardından Topkapı merkezimiz koordinasyonunda seri baskı başlasın.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="w-7 h-7 rounded-full bg-primary text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5">4</span>
+                <div>
+                  <h4 className="text-xs font-black text-slate-900 uppercase mb-1">Adrese Teslimat</h4>
+                  <p className="text-xs text-slate-600 font-medium leading-relaxed">Korumalı paketleme ile siparişleriniz kapınıza kadar ulaştırılsın.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Çift Yönlü CTA Alanı */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-black text-xs md:text-sm uppercase px-8 py-3.5 rounded-xl transition-all shadow-md shadow-[#25D366]/20 hover:scale-105 active:scale-95"
+            >
+              <WhatsAppIcon size={20} /> WhatsApp ile Toptan Teklif Al
+            </a>
+            <Link
+              to="/iletisim"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-black text-xs md:text-sm uppercase px-8 py-3.5 rounded-xl transition-all shadow-md"
+            >
+              <Mail size={18} /> Kurumsal Teklif Formu
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 2026 Güncel Matbaa Fiyatları Link Grid Section */}
+      <section className="bg-white py-12 md:py-16 border-t border-b border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-none mb-10 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+              DOĞRUDAN ÜRETİCİ FİYATLARI
+            </div>
+            <h2 className="text-2xl md:text-3.5xl font-black text-slate-900 uppercase tracking-tight mb-4">
+              2026 GÜNCEL <span className="text-primary">MATBAA FİYATLARI</span> LİSTESİ
+            </h2>
+            <p className="text-slate-600 font-semibold leading-relaxed text-sm md:text-base max-w-none mx-auto mb-6">
+              Mavi Basım Online Matbaa sistemimiz üzerinden güncel toptan fiyat listelerine anında ulaşabilirsiniz. Kurumsal ihtiyaçlarınız için <strong className="text-slate-900">online matbaa fiyatları</strong> ve <strong className="text-slate-900">güncel baskı fiyatları</strong> karşılaştırması yaparak bütçenizi en verimli şekilde yönetin. Aşağıdaki popüler ürün kategorilerimizin üzerine tıklayarak ilgili <strong className="text-primary">kartvizit fiyatları</strong>, <strong className="text-primary">broşür fiyatları</strong> ve ambalaj detaylarını saniyeler içinde inceleyebilirsiniz.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Kartvizit Fiyatları",
+                link: "/kartvizit",
+                desc: "350 gr kuşe kartvizit, özel kesim, lak ve selefon seçeneklerinin güncel toptan fiyatlarını inceleyin."
+              },
+              {
+                title: "Broşür Fiyatları",
+                link: "/brosur",
+                desc: "A5 ve A4 tek/çift kırım 130 gr kuşe tanıtım broşürleri için güncel baskı fiyatları listesi."
+              },
+              {
+                title: "El İlanı Fiyatları",
+                link: "/el-ilani",
+                desc: "90 gr ve 115 gr parlak kuşe ucuz el ilanı siparişleriniz için ekonomik fiyatlandırmalar."
+              },
+              {
+                title: "Katalog Fiyatları",
+                link: "/kataloglar",
+                desc: "Çok sayfalı kurumsal firma katalogları, dergi ve kitapçıkların adet bazlı imalat maliyetleri."
+              },
+              {
+                title: "Etiket Fiyatları",
+                link: "/etiket",
+                desc: "Su geçirmez opak, şeffaf ve kraft rulo/tabaka etiketlerin özel kesim toptan fiyatları."
+              },
+              {
+                title: "Magnet Fiyatları",
+                link: "/magnet",
+                desc: "0.5 mm kalın mıknatıslı, selefonlu, özel kesim reklam magnetleri için güncel fiyat listesi."
+              },
+              {
+                title: "Kutu Fiyatları",
+                link: "/kutu",
+                desc: "Amerikan Bristol ve mikro kırma lüks karton kutular için avantajlı toptan fiyatlar."
+              },
+              {
+                title: "Karton Çanta Fiyatları",
+                link: "/karton-canta",
+                desc: "Lüks karton poşetler, ipli ve selefonlu kurumsal karton çanta toptan imalat fiyatları."
+              },
+              {
+                title: "Cepli Dosya Fiyatları",
+                link: "/dosyalar",
+                desc: "350 gr kuşe ve Amerikan Bristol kurumsal sunum cepli dosyaları için güncel fiyatlar."
+              },
+              {
+                title: "Antetli Kağıt Fiyatları",
+                link: "/antetli",
+                desc: "80 gr ve 1. hamur logolu antetli kağıtların kurumsal toptan baskı fiyat listesi."
+              },
+              {
+                title: "Diplomat Zarf Fiyatları",
+                link: "/zarf",
+                desc: "Pencereli ve penceresiz silikonlu diplomat zarf çeşitlerinin güncel toptan fiyatları."
+              },
+              {
+                title: "Bloknot Fiyatları",
+                link: "/bloknotlar",
+                desc: "Spiralli, tutkallı veya kapaklı kurumsal bloknotların adet bazlı üretim fiyat listesi."
+              },
+              {
+                title: "Makbuz Fiyatları",
+                link: "/tahsilat-makbuzu",
+                desc: "Otokopili fatura, tahsilat makbuzu ve sevk irsaliyelerinin resmi standartlı fiyatlandırmaları."
+              },
+              {
+                title: "Adisyon Fiyatları",
+                link: "/adisyon",
+                desc: "Restoran ve kafeler için otokopili veya kendinden karbonlu adisyon fişi üretim fiyatları."
+              },
+              {
+                title: "Amerikan Servis Fiyatları",
+                link: "/amerikan-servis",
+                desc: "Gıda sektörü için kraft veya kuşe kağıt tek kullanımlık Amerikan servis toptan fiyatları."
+              },
+              {
+                title: "Kitap Ayracı Fiyatları",
+                link: "/kitap-ayraci",
+                desc: "Özel kesimli, püsküllü veya delikli kurumsal kitap ayraçlarının toptan baskı fiyatları."
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-slate-50 border border-slate-100 p-5 rounded-2xl hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <Link 
+                    to={item.link} 
+                    className="text-sm font-black text-slate-900 hover:text-primary transition-colors uppercase tracking-tight block mb-2"
+                  >
+                    {item.title} →
+                  </Link>
+                  <p className="text-slate-500 font-semibold text-xs leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Güncel Matbaa Fiyat Listesi Section */}
+      <section id="fiyatlar" className="bg-slate-50 py-12 md:py-16 border-t border-b border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-none mb-10 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+              GÜNCEL MATBAA FİYAT LİSTESİ
+            </div>
+            <h2 className="text-2xl md:text-3.5xl font-black text-slate-900 uppercase tracking-tight mb-4">
+              Güncel <span className="text-primary">Matbaa &amp; Baskı Fiyatları</span> Listesi
+            </h2>
+            <div className="space-y-4 text-slate-600 font-semibold leading-relaxed text-sm md:text-base max-w-none mx-auto text-left md:text-center">
+              <p>
+                Mavi Basım platformumuz üzerinden avantajlı <strong className="text-slate-900">matbaa fiyatları</strong> ve kurumsal <strong className="text-slate-900">baskı çözümleri</strong> listelerine doğrudan ulaşabilirsiniz. Şeffaf fiyat politikamız sayesinde kurumsal ihtiyaçlarınız için doğrudan fiyat teklifi alabilir ve siparişinizi oluşturabilirsiniz.
+              </p>
+              <p className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs text-xs md:text-sm">
+                Geniş ürün yelpazemizde yer alan kurumsal <strong className="text-slate-900">Baskı Ürünleri</strong> için maliyetleri inceleyebilirsiniz: <Link to="/kartvizit" className="text-primary font-black hover:underline">Kartvizit Fiyatları</Link>, <Link to="/brosur" className="text-primary font-black hover:underline">Broşür Fiyatları</Link>, <Link to="/el-ilani" className="text-primary font-black hover:underline">El İlanı Fiyatları</Link>, <Link to="/kataloglar" className="text-primary font-black hover:underline">Katalog Fiyatları</Link>, <Link to="/etiket" className="text-primary font-black hover:underline">Etiket Fiyatları</Link>, <Link to="/magnet" className="text-primary font-black hover:underline">Magnet Fiyatları</Link>, <Link to="/kutu" className="text-primary font-black hover:underline">Kutu Fiyatları</Link>, <Link to="/karton-canta" className="text-primary font-black hover:underline">Karton Çanta Fiyatları</Link>, <Link to="/bloknotlar" className="text-primary font-black hover:underline">Bloknot Fiyatları</Link>, <Link to="/dosyalar" className="text-primary font-black hover:underline">Cepli Dosya Fiyatları</Link>, <Link to="/antetli" className="text-primary font-black hover:underline">Antetli Kağıt Fiyatları</Link>, <Link to="/zarf" className="text-primary font-black hover:underline">Diplomat Zarf Fiyatları</Link> ve <Link to="/amerikan-servis" className="text-primary font-black hover:underline">Amerikan Servis Fiyatları</Link>. İlgili kategorilerden ürün detaylarını inceleyebilir, anında teklif alabilirsiniz.
+              </p>
+              <p className="text-xs text-slate-500 font-medium italic">
+                ℹ️ Not: Fiyatlar; ebat, kağıt türü, gramaj, sipariş adedi ve baskı sonrası özel uygulamalara (selefon kaplama, lokal lak, özel kesim, varak yaldız) göre değişiklik gösterebilir.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white border border-slate-100 rounded-[2rem] shadow-sm overflow-hidden max-w-none">
+            {/* Desktop Table */}
+            <div className="hidden md:block overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-slate-50 border-b border-slate-100 text-[11px] font-black text-slate-400 uppercase tracking-wider">
+                    <th className="p-6">Ürün Grubu / Hizmet</th>
+                    <th className="p-6">Standart Ölçü</th>
+                    <th className="p-6">Popüler Tiraj</th>
+                    <th className="p-6">Malzeme &amp; Kağıt Gramajı</th>
+                    <th className="p-6">Fiyat Türü</th>
+                    <th className="p-6 text-right">Detaylar</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 text-sm font-semibold text-slate-700">
+                  {[
+                    { name: "Kurumsal Kartvizit", size: "8.4x5.2 cm", qty: "1000 Adet", mat: "350g Kuşe / Amerikan Bristol", priceLink: "/kartvizit", label: "Kartvizit Fiyatları" },
+                    { name: "Tanıtım Broşürü & El İlanı", size: "A5 (14.8x21 cm)", qty: "1000 Adet", mat: "130g Kuşe, Çift Yön Renkli", priceLink: "/brosur", label: "Broşür Fiyatları" },
+                    { name: "Ürün Kataloğu & Dergi", size: "A4 (21x29.7 cm)", qty: "500 Adet", mat: "170g Kuşe, 16 Sayfa, Tel Dikiş", priceLink: "/kataloglar", label: "Katalog Fiyatları" },
+                    { name: "Opak & Şeffaf Etiket", size: "Özel Kesim (5x5 cm)", qty: "1000 Adet", mat: "Su Geçirmez PP Opak / Şeffaf", priceLink: "/etiket", label: "Etiket Fiyatları" },
+                    { name: "Ambalaj Kutusu", size: "Özel Ebat İmalat", qty: "1000 Adet", mat: "300g Amerikan Bristol / Kroma", priceLink: "/kutu", label: "Kutu Fiyatları" },
+                    { name: "Mıknatıslı Magnet", size: "Özel Kesim (5x7 cm)", qty: "1000 Adet", mat: "0.5 mm Kalın Magnet, Selefonlu", priceLink: "/magnet", label: "Magnet Fiyatları" },
+                    { name: "Kurumsal Karton Çanta", size: "25x35x8 cm", qty: "500 Adet", mat: "250g Amerikan Bristol, İpli", priceLink: "/karton-canta", label: "Karton Çanta Fiyatları" }
+                  ].map((row, idx) => (
+                    <tr key={idx} className="hover:bg-slate-50/50 transition-colors">
+                      <td className="p-6 font-black text-slate-900">{row.name}</td>
+                      <td className="p-6 font-mono text-xs">{row.size}</td>
+                      <td className="p-6 font-bold text-primary">{row.qty}</td>
+                      <td className="p-6 font-medium text-slate-500 text-xs">{row.mat}</td>
+                      <td className="p-6">
+                        <span className="inline-flex bg-emerald-50 text-emerald-700 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
+                          2026 GÜNCEL FİYAT
+                        </span>
+                      </td>
+                      <td className="p-6 text-right">
+                        <Link 
+                          to={row.priceLink}
+                          className="inline-flex items-center gap-1.5 text-xs font-black text-primary hover:text-slate-900 transition-colors border-b-2 border-primary/20 hover:border-slate-900"
+                        >
+                          {row.label} →
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Mobile Cards */}
+            <div className="block md:hidden divide-y divide-slate-100">
+              {[
+                { name: "Kurumsal Kartvizit", size: "8.4x5.2 cm", qty: "1000 Adet", mat: "350g Kuşe / Amerikan Bristol", priceLink: "/kartvizit", label: "Kartvizit Fiyatları" },
+                { name: "Tanıtım Broşürü & El İlanı", size: "A5 (14.8x21 cm)", qty: "1000 Adet", mat: "130g Kuşe, Çift Yön Renkli", priceLink: "/brosur", label: "Broşür Fiyatları" },
+                { name: "Ürün Kataloğu & Dergi", size: "A4 (21x29.7 cm)", qty: "500 Adet", mat: "170g Kuşe, 16 Sayfa, Tel Dikiş", priceLink: "/kataloglar", label: "Katalog Fiyatları" },
+                { name: "Opak & Şeffaf Etiket", size: "Özel Kesim (5x5 cm)", qty: "1000 Adet", mat: "Su Geçirmez PP Opak / Şeffaf", priceLink: "/etiket", label: "Etiket Fiyatları" },
+                { name: "Ambalaj Kutusu", size: "Özel Ebat İmalat", qty: "1000 Adet", mat: "300g Amerikan Bristol / Kroma", priceLink: "/kutu", label: "Kutu Fiyatları" },
+                { name: "Mıknatıslı Magnet", size: "Özel Kesim (5x7 cm)", qty: "1000 Adet", mat: "0.5 mm Kalın Magnet, Selefonlu", priceLink: "/magnet", label: "Magnet Fiyatları" },
+                { name: "Kurumsal Karton Çanta", size: "25x35x8 cm", qty: "500 Adet", mat: "250g Amerikan Bristol, İpli", priceLink: "/karton-canta", label: "Karton Çanta Fiyatları" }
+              ].map((row, idx) => (
+                <div key={idx} className="p-5 space-y-3">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="font-black text-slate-900 text-sm leading-tight">{row.name}</h3>
+                      <p className="text-[11px] text-slate-400 font-bold mt-0.5">{row.size} / {row.qty}</p>
+                    </div>
+                    <span className="bg-emerald-50 text-emerald-700 text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">
+                      2026 GÜNCEL FİYAT
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-500 font-semibold">{row.mat}</p>
+                  <div className="pt-2 border-t border-slate-50 flex justify-end">
+                    <Link 
+                      to={row.priceLink}
+                      className="text-xs font-black text-primary hover:text-slate-900 transition-colors"
+                    >
+                      {row.label} →
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Fiyat Bölümü CTA Butonları */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs md:text-sm uppercase px-6 py-3.5 rounded-xl transition-all shadow-md flex items-center gap-2"
+            >
+              <span>WhatsApp'tan Fiyat Sor</span>
+            </a>
+            <Link
+              to="/kataloglar"
+              className="bg-primary hover:bg-primary/90 text-white font-black text-xs md:text-sm uppercase px-6 py-3.5 rounded-xl transition-all shadow-md"
+            >
+              Online Sipariş Ver
+            </Link>
+            <Link
+              to="/iletisim"
+              className="bg-slate-900 hover:bg-slate-800 text-white font-black text-xs md:text-sm uppercase px-6 py-3.5 rounded-xl transition-all shadow-md"
+            >
+              Hemen Fiyat Teklifi Al
+            </Link>
+          </div>
+          <p className="text-center text-[11px] text-slate-400 font-bold mt-5 uppercase tracking-wide leading-relaxed">
+            * Tablodaki tirajlar en sık tercih edilen popüler adetlerdir. Farklı ebat, adet, lak/gofre/yaldız veya özel kağıt istekleri için lütfen WhatsApp destek hattımızdan güncel matbaa fiyat listesi teklifi talep edin.
+          </p>
+        </div>
+      </section>
+
+      {/* İNTERAKTİF TEKNİK BASKI VE ÜRETİM REHBERİ (MODÜLER TABS) */}
+      <section id="teknik-rehber" className="bg-white py-12 md:py-16 border-b border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto mb-10">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+              <BookOpen size={14} /> KAPSAMLI UZMAN REHBERİ
+            </div>
+            <h2 className="text-2xl md:text-3.5xl font-black text-slate-900 uppercase tracking-tight mb-4">
+              Matbaa ve Baskı Teknolojileri <span className="text-primary">Uzman Rehberi</span>
+            </h2>
+            <p className="text-slate-600 font-semibold leading-relaxed text-sm md:text-base">
+              Baskı siparişiniz için en doğru kağıt gramajını, makine teknolojisini, ölçü standartlarını ve baskı sonrası işlemleri bölümlere ayrılmış rehberimizden detaylıca inceleyebilirsiniz.
+            </p>
+
+            {/* Tab Control Buttons */}
+            <div className="flex flex-wrap justify-center gap-2.5 mt-8">
+              {[
+                { id: 'tech', label: '⚙️ Baskı Teknolojileri' },
+                { id: 'gramaj', label: '📄 Kağıt Gramajları' },
+                { id: 'mucellit', label: '✂️ Baskı Sonrası İşlemler' },
+                { id: 'ebat', label: '📐 Ölçüler Rehberi' },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveGuideTab(tab.id as any)}
+                  className={`px-5 py-3 rounded-2xl font-black text-xs md:text-sm uppercase tracking-tight transition-all duration-200 border ${
+                    activeGuideTab === tab.id
+                      ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20 scale-105'
+                      : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Tab Content 1: Baskı Teknolojileri */}
+          {activeGuideTab === 'tech' && (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
+              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                <h3 className="text-base font-black text-slate-900 uppercase mb-2 flex items-center gap-2">
+                  <Printer className="text-primary" size={20} /> Çok Renkli Ofset Baskı
+                </h3>
+                <p className="text-xs text-slate-600 font-semibold leading-relaxed mb-4">
+                  Yüksek tirajlı broşür, katalog, cepli dosya ve karton kutularda ekonomik birim maliyeti ve yüksek renk doğruluğu sağlayan ana üretim yöntemidir.
+                </p>
+                <ul className="space-y-1.5 text-xs text-slate-700 font-bold">
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> 1.000 adet ve üzeri yüksek tiraj avantajı</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> CMYK ve özel Pantone renk kalibrasyonu</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Tüm kuşe ve karton gramajlarında yüksek hız</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                <h3 className="text-base font-black text-slate-900 uppercase mb-2 flex items-center gap-2">
+                  <Zap className="text-primary" size={20} /> Dijital Ekspres Baskı
+                </h3>
+                <p className="text-xs text-slate-600 font-semibold leading-relaxed mb-4">
+                  Düşük adetli ve acil teslimat gerektiren kartvizit, davetiye veya numune baskılarında kalıp maliyeti olmadan aynı gün imalat olanağı sunar.
+                </p>
+                <ul className="space-y-1.5 text-xs text-slate-700 font-bold">
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Aynı gün teslimat seçeneği</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Düşük adetli kişiselleştirilmiş baskı</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Sıfır kalıp ücreti</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                <h3 className="text-base font-black text-slate-900 uppercase mb-2 flex items-center gap-2">
+                  <Boxes className="text-primary" size={20} /> Flexo Rulo Etiket Baskı
+                </h3>
+                <p className="text-xs text-slate-600 font-semibold leading-relaxed mb-4">
+                  Gıda, kozmetik ve e-ticaret ambalajları için suya, yağa ve ısıya dayanıklı PP opak ve şeffaf yapışkanlı rulo etiket imalat teknolojisi.
+                </p>
+                <ul className="space-y-1.5 text-xs text-slate-700 font-bold">
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Otomatik etiketleme makinelerine uyumlu rulo</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Suya ve neme dayanıklı yırtılmaz malzeme</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Şeffaf, gümüş ve şık mat görünüm</li>
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {/* Tab Content 2: Kağıt Gramajları */}
+          {activeGuideTab === 'gramaj' && (
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 animate-fadeIn">
+              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                <span className="text-primary font-mono font-black text-xl block mb-1">115g - 130g</span>
+                <h4 className="font-black text-slate-900 uppercase text-xs mb-2">Hafif Kuşe Kağıt</h4>
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                  Broşür, el ilanı, insört ve gazete ekleri için en ekonomik hafif gramaj seçeneğidir. Dağıtım kolaylığı sağlar.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                <span className="text-primary font-mono font-black text-xl block mb-1">170g - 250g</span>
+                <h4 className="font-black text-slate-900 uppercase text-xs mb-2">Orta Tok Gramaj</h4>
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                  Katalog iç sayfaları, kurumsal sunum föyleri, menüler ve şık broşür kapaklarında tercih edilen kaliteli kağıttır.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                <span className="text-primary font-mono font-black text-xl block mb-1">300g - 350g</span>
+                <h4 className="font-black text-slate-900 uppercase text-xs mb-2">Amerikan Bristol &amp; Kuşe</h4>
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                  Kartvizitler, karton çantalar, cepli sunum dosyaları ve ambalaj kutuları için yüksek sertlik ve mukavemet sunar.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                <span className="text-primary font-mono font-black text-xl block mb-1">400g+</span>
+                <h4 className="font-black text-slate-900 uppercase text-xs mb-2">Lüks Sıvama &amp; Sert Mukavva</h4>
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                  Kabartma laklı lüks kartvizitler, hediye kutuları ve sert kapak katalog ciltleri için premium sert yapı.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Tab Content 3: Baskı Sonrası */}
+          {activeGuideTab === 'mucellit' && (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
+              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                <h4 className="font-black text-slate-900 uppercase text-sm mb-2 flex items-center gap-2">
+                  <CheckCircle2 className="text-primary" size={18} /> Mat &amp; Parlak Selefon
+                </h4>
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                  Kağıt yüzeyini nem, yırtılma ve aşınmaya karşı koruyan estetik koruyucu lüks kaplama türü.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                <h4 className="font-black text-slate-900 uppercase text-sm mb-2 flex items-center gap-2">
+                  <CheckCircle2 className="text-primary" size={18} /> Varak Yaldız &amp; Kabartma Lak
+                </h4>
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                  Logolarda veya özel metinlerde dikkat çekici parlaklık ve dokunsal his oluşturan altın/gümüş varak yaldız uygulamaları.
+                </p>
+              </div>
+
+              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                <h4 className="font-black text-slate-900 uppercase text-sm mb-2 flex items-center gap-2">
+                  <CheckCircle2 className="text-primary" size={18} /> Kırım, Cilt &amp; Perforaj
+                </h4>
+                <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                  Broşür katlama (akordeon/tekli), Amerikan sıcak tutkal cilt, tel dikiş ve koparılabilir tırtıklı perforaj işlemleri.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Tab Content 4: Ölçüler Rehberi */}
+          {activeGuideTab === 'ebat' && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 animate-fadeIn">
+              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                <h4 className="font-black text-slate-900 uppercase text-xs mb-2">Broşür &amp; El İlanı</h4>
+                <ul className="text-xs text-slate-600 space-y-1 font-semibold">
+                  <li>• A5 (14.8x21 cm) - En Popüler</li>
+                  <li>• A4 (21x29.7 cm) - Katlamalı</li>
+                  <li>• A3 (29.7x42 cm) - Afiş/Poster</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                <h4 className="font-black text-slate-900 uppercase text-xs mb-2">Kurumsal Evraklar</h4>
+                <ul className="text-xs text-slate-600 space-y-1 font-semibold">
+                  <li>• Kartvizit (8.4x5.2 cm)</li>
+                  <li>• Diplomat Zarf (10.5x24 cm)</li>
+                  <li>• Antetli Kağıt (A4 21x29.7 cm)</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                <h4 className="font-black text-slate-900 uppercase text-xs mb-2">Otokopili Formlar</h4>
+                <ul className="text-xs text-slate-600 space-y-1 font-semibold">
+                  <li>• Tam Boy Form (20.5x28.5 cm)</li>
+                  <li>• Yarım Boy Makbuz (14x20 cm)</li>
+                  <li>• Küçük Fiş (10x14 cm)</li>
+                </ul>
+              </div>
+
+              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                <h4 className="font-black text-slate-900 uppercase text-xs mb-2">Ambalaj &amp; Çanta</h4>
+                <ul className="text-xs text-slate-600 space-y-1 font-semibold">
+                  <li>• Küçük Çanta (16x25x6 cm)</li>
+                  <li>• Orta Çanta (25x37x8 cm)</li>
+                  <li>• Özel Kutu Ebatlamaları</li>
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section id="products" className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+        <div className="flex flex-col items-center justify-center text-center mb-8 md:mb-12 gap-4">
+          <div className="w-full text-center">
+            <h2 className="text-lg min-[380px]:text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-tight text-slate-900 break-words">
+              <span className="text-primary">Matbaa Hizmetlerimiz</span>
+              <span className="mx-2 sm:mx-3 text-slate-300 font-light">{' & '}</span>
+              <span>Matbaa Ürünleri</span>
+            </h2>
+          </div>
+        </div>
+
+        <CategoryList />
+      </section>
+
+      {/* Hangi Baskıları Yapıyoruz? Section */}
+      <section className="bg-white py-12 md:py-16 border-t border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3.5xl font-black text-slate-900 uppercase tracking-tight mb-4">
+              Hangi <span className="text-primary">Baskıları</span> Yapıyoruz?
+            </h2>
+            <p className="text-slate-600 font-semibold leading-relaxed text-sm md:text-base">
+              Mavi Basım olarak son teknoloji ofset ve dijital makine parkurumuzla kurumsal tanıtım ürünlerinden butik ambalaj kutularına kadar geniş bir yelpazede baskı hizmeti veriyoruz.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                title: "Kurumsal Tanıtım Materyalleri",
+                desc: "Şirketinizin profesyonel yüzünü yansıtacak kartvizit, broşür, magnet, katalog, afiş, antetli kağıt, cepli dosya ve zarf baskı çözümleri.",
+                items: ["Prestijli Kartvizitler", "Tanıtım Broşürleri", "Çok Sayfalı Kataloglar", "Kurumsal Bloknotlar"]
+              },
+              {
+                title: "Kutu & Ambalaj Çözümleri",
+                desc: "Ürünlerinize değer katacak özel ölçülü Amerikan Bristol kutular, kromo karton ambalajlar, karton çantalar ve kendinden yapışkanlı rulo/tabaka etiketler.",
+                items: ["Gıda ve Paket Servis Kutuları", "Lüks Karton Çantalar", "PP Opak ve Şeffaf Etiketler", "Özel Üretim Ambalajlar"]
+              },
+              {
+                title: "Sektörel Matbu Formlar",
+                desc: "İşletmenizin operasyonel iş akışını düzenleyen otokopili tahsilat makbuzları, sipariş fişleri, adisyonlar, Amerikan servisler ve oto paspasları.",
+                items: ["Otokopili Sipariş Fişi", "Tediye & Para Makbuzu", "Kağıt Amerikan Servisler", "Oto Paspas & Yağ Kartları"]
+              }
+            ].map((cat, idx) => (
+              <div key={idx} className="bg-slate-50 border border-slate-100 p-6 md:p-8 rounded-3xl relative overflow-hidden group hover:shadow-xl transition-all duration-500">
+                <div className="absolute top-0 left-0 w-1.5 bg-primary h-full" />
+                <h3 className="text-lg md:text-xl font-black text-slate-900 uppercase tracking-tight mb-3 group-hover:text-primary transition-colors">
+                  {cat.title}
+                </h3>
+                <p className="text-slate-600 font-semibold text-xs md:text-sm leading-relaxed mb-6">
+                  {cat.desc}
+                </p>
+                <ul className="space-y-2">
+                  {cat.items.map((item, i) => (
+                    <li key={i} className="flex items-center gap-2.5 text-xs font-bold text-slate-700">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-16 md:py-24 border-y border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-black text-black mb-6 uppercase tracking-tight break-words">
+                Türkiye Geneli <span className="text-primary">Profesyonel Matbaa</span> Hizmetleri
+              </h2>
+              <div className="space-y-4 text-black/70 font-medium leading-relaxed text-base md:text-lg">
+                <p>
+                  <strong>Mavi Basım Matbaa & Reklam</strong> İstanbul Zeytinburnu Topkapı 2. Matbaacılar Sitesi’nde faaliyet gösteren profesyonel bir matbaa ve reklam üretim merkezidir.
+                </p>
+                <p>
+                  Kartvizit baskı, broşür baskı, el ilanı baskı, afiş baskı, katalog baskı, magnet baskı, bloknot baskı, karton çanta baskı, etiket baskı ve ambalaj baskı hizmetleri sunmaktayız.
+                </p>
+                <p>
+                  İstanbul’da bulunan üretim merkezimizden Türkiye’nin tüm illerine hızlı üretim ve kargo ile matbaa hizmeti vermekteyiz.
+                </p>
+                <div className="pt-4 flex items-center gap-3 text-primary font-bold">
+                  <MapPin size={20} />
+                  <span className="text-sm md:text-base">Maltepe Mah. Davutpaşa Cad. Topkapı 2. Matbaacılar Sitesi B Blok No:2NB Zeytinburnu / İstanbul adresindeki üretim merkezimiz ile hizmetinizdeyiz.</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white p-5 sm:p-8 md:p-12 rounded-[2rem] shadow-2xl shadow-primary/5 border border-primary/10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110" />
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Truck className="text-primary" size={32} />
+                </div>
+                <h3 className="text-2xl font-black text-black mb-4 uppercase tracking-tight">Kargo Bilgisi</h3>
+                <div className="space-y-4 text-black/70 font-medium leading-relaxed">
+                  <p>
+                    <strong>Mavi Basım Matbaa & Reklam</strong> olarak Türkiye’nin tüm illerine kargo ile matbaa ürünleri gönderiyoruz.
+                  </p>
+                  <p>
+                    Kartvizit, broşür, magnet, katalog, etiket ve diğer baskı ürünleriniz güvenli şekilde adresinize teslim edilir.
+                  </p>
+                  <p className="font-bold text-primary">
+                    Türkiye geneline hızlı üretim ve güvenli kargo ile matbaa hizmeti sunmaktayız.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Türkiye Geneli Matbaa Hizmetleri Section */}
+      <CityLinksSection />
+
+      {/* Sipariş Süreci Section */}
+      <section className="bg-slate-50 py-16 md:py-24 border-t border-b border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-none mb-12">
+            <h2 className="text-2xl md:text-3.5xl font-black text-slate-900 uppercase tracking-tight mb-4">
+              5 Adımda Kolay <span className="text-primary">Online Matbaa Siparişi</span> Nasıl Verilir?
+            </h2>
+            <p className="text-slate-600 font-semibold leading-relaxed text-sm md:text-base max-w-none">
+              Mavi Basım <strong className="text-slate-900">Online Matbaa</strong> sistemiyle, dükkanınızdan veya ofisinizden çıkmadan, sadece 5 kolay adımda profesyonel <strong className="text-slate-900">Online Matbaa Siparişi</strong> verebilir ve <strong className="text-slate-900">Online Baskı Siparişi</strong> sürecinizi hemen başlatabilirsiniz.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 relative">
+            {[
+              {
+                step: "01",
+                icon: <PhoneCall className="text-primary" size={24} />,
+                title: "Talebinizi İletin",
+                desc: "WhatsApp, telefon veya e-posta yoluyla istediğiniz ürün, ölçü ve adet detaylarını ekibimize iletin."
+              },
+              {
+                step: "02",
+                icon: <Coins className="text-primary" size={24} />,
+                title: "Fiyat Teklifi Alın",
+                desc: "Talebinize göre en avantajlı, aracısız net imalat fiyat teklifini dakikalar içinde hazırlayalım."
+              },
+              {
+                step: "03",
+                icon: <FileText className="text-primary" size={24} />,
+                title: "Tasarım & Prova",
+                desc: "Gönderdiğiniz tasarımları inceliyor, baskı standartlarına uygun PDF prova dosyasıyla onayınızı alıyoruz."
+              },
+              {
+                step: "04",
+                icon: <Printer className="text-primary" size={24} />,
+                title: "Aracısız Üretim",
+                desc: "Onayınızın ardından siparişiniz modern ofset ve dijital baskı parkurlarımızda sıfır hata hedefiyle basılır."
+              },
+              {
+                step: "05",
+                icon: <Truck className="text-primary" size={24} />,
+                title: "Paketleme & Kargo",
+                desc: "Baskısı biten ürünler koruyucu kalın kolilerle paketlenir, Türkiye genelindeki adresinize sigortalı sevk edilir."
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white border border-gray-100 p-6 rounded-2xl relative shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="absolute top-4 right-6 text-3xl font-black text-slate-100 font-mono select-none">
+                  {item.step}
+                </div>
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="text-base md:text-lg font-black text-slate-900 uppercase tracking-tight mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600 font-semibold text-xs md:text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Hangi Sektörlere Hizmet Veriyoruz? Section */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3.5xl font-black text-slate-900 uppercase tracking-tight mb-4">
+              Hangi Sektörlere <span className="text-primary">Hizmet Veriyoruz</span>?
+            </h2>
+            <p className="text-slate-600 font-semibold leading-relaxed text-sm md:text-base">
+              Farklı sektörlerin dinamiklerine ve yasal gereksinimlerine uygun özel baskı, etiket ve ambalaj çözümleri geliştiriyoruz.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+            {[
+              {
+                title: "Restoran & Catering",
+                desc: "Islak mendiller, Amerikan servisler, hamburger ve dürüm kutuları, adisyon koçanları ve kurye paket etiketleri.",
+                link: "/sektor/restoran-brosur-baski"
+              },
+              {
+                title: "Kuaför & Güzellik Salonları",
+                desc: "Kuaför, berber ve güzellik salonları için kartvizit, randevu kartı, broşür, fiyat listesi ve etiket baskı çözümleri.",
+                link: "/sektor/kuafor-kartvizit-baski"
+              },
+              {
+                title: "E-Ticaret & Perakende",
+                desc: "Kargo kolileri, yapışkanlı rulo barkod etiketleri, kraft çantalar, fatura formları ve marka teşekkür kartları.",
+                link: "/sektor/e-ticaret-perakende-baski"
+              },
+              {
+                title: "Güzellik Merkezleri & Kozmetik",
+                desc: "Parfüm kutusu, seans takip formu, randevu kartı, broşür, kozmetik etiketi ve karton çanta baskı çözümleri.",
+                link: "/sektor/kozmetik-guzellik-merkezi-baski"
+              },
+              {
+                title: "Eğitim Kurumları",
+                desc: "Deneme kitapçığı, fasikül, kayıt evrakları ve eğitim yayınları.",
+                link: "/sektor/egitim-kurumlari-baski"
+              },
+              {
+                title: "Kutu & Ambalaj Çözümleri",
+                desc: "300–400 gr Bristol, kraft ve kuşe ambalaj kâğıdı ile ilaç, parfüm, fast-food, tatlı ve özel ambalaj kutuları.",
+                link: "/sektor/kutu-ambalaj-baski-cozumleri"
+              }
+            ].map((sector, idx) => (
+              sector.link ? (
+                <Link key={idx} to={sector.link} className="bg-slate-50 border border-slate-100 hover:border-primary/40 p-6 rounded-2xl hover:bg-slate-100/50 transition-all duration-300 flex flex-col group">
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    <div className="w-1.5 h-6 bg-primary rounded-full shrink-0 group-hover:bg-black transition-colors" />
+                    <h3 className="text-base md:text-lg font-black text-slate-900 group-hover:text-primary transition-colors uppercase tracking-tight">
+                      {sector.title}
+                    </h3>
+                  </div>
+                  <p className="text-slate-600 font-semibold text-xs md:text-sm leading-relaxed">
+                    {sector.desc}
+                  </p>
+                </Link>
+              ) : (
+                <div key={idx} className="bg-slate-50 border border-slate-100 p-6 rounded-2xl hover:bg-slate-100/50 transition-colors duration-300 flex flex-col">
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    <div className="w-1.5 h-6 bg-primary rounded-full shrink-0" />
+                    <h3 className="text-base md:text-lg font-black text-slate-900 uppercase tracking-tight">
+                      {sector.title}
+                    </h3>
+                  </div>
+                  <p className="text-slate-600 font-semibold text-xs md:text-sm leading-relaxed">
+                    {sector.desc}
+                  </p>
+                </div>
+              )
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Matbaa Rehberi – Son Blog Yazıları Section */}
+      <section className="bg-white py-16 md:py-24 border-t border-b border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-6xl mx-auto md:max-w-7xl mb-12">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-3">
+              <BookOpen size={14} /> MATBAA REHBERİ
+            </div>
+            <h2 className="text-2xl md:text-3.5xl font-black text-slate-900 uppercase tracking-tight mb-4">
+              Matbaa Rehberi – <span className="text-primary">Faydalı Bilgiler &amp; İpuçları</span>
+            </h2>
+            <p className="text-slate-600 font-semibold leading-relaxed text-sm md:text-base max-w-none">
+              Baskı kalitenizi artırmak, tasarım bütçenizi korumak ve doğru teknik özellikler seçmek için hazırladığımız güncel rehber yazılarımızı okuyun.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Card 1 */}
+            <div className="bg-slate-50 border border-slate-100 p-6 md:p-8 rounded-3xl hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] text-primary font-black font-mono tracking-widest uppercase bg-primary/10 px-2.5 py-1 rounded-full">BİLGİ REHBERİ</span>
+                <h3 className="text-base md:text-lg font-black text-slate-900 uppercase tracking-tight mt-4 mb-3">
+                  Online Matbaa Nedir &amp; Nasıl Çalışır?
+                </h3>
+                <p className="text-slate-600 font-semibold text-xs md:text-sm leading-relaxed mb-4">
+                  İnternetten 7/24 kesintisiz kurumsal baskı siparişi vermenin, dosya yükleme ve dijital prova kontrolü süreçlerinin detayları. <strong className="text-slate-900">Online Matbaa Nedir?</strong> ve geleneksel matbaacılıktan farkları nelerdir, tüm detaylarıyla keşfedin.
+                </p>
+              </div>
+
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-slate-50 border border-slate-100 p-6 md:p-8 rounded-3xl hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] text-primary font-black font-mono tracking-widest uppercase bg-primary/10 px-2.5 py-1 rounded-full">SİPARİŞ REHBERİ</span>
+                <h3 className="text-base md:text-lg font-black text-slate-900 uppercase tracking-tight mt-4 mb-3">
+                  Online Matbaa Siparişi Nasıl Verilir?
+                </h3>
+                <p className="text-slate-600 font-semibold text-xs md:text-sm leading-relaxed mb-4">
+                  Ofisinizden çıkmadan kartvizit, broşür, katalog veya kutu imalatı siparişlerinizi vermenin yolları. <strong className="text-slate-900">Online Matbaa Siparişi Nasıl Verilir?</strong> ve basım onayına kadar geçen dijital prova süreçleri hakkında ipuçları.
+                </p>
+              </div>
+
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-slate-50 border border-slate-100 p-6 md:p-8 rounded-3xl hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <span className="text-[10px] text-primary font-black font-mono tracking-widest uppercase bg-primary/10 px-2.5 py-1 rounded-full">BÜTÇE &amp; SEÇİM</span>
+                <h3 className="text-base md:text-lg font-black text-slate-900 uppercase tracking-tight mt-4 mb-3">
+                  Online Matbaa mı Yerel Matbaa mı?
+                </h3>
+                <p className="text-slate-600 font-semibold text-xs md:text-sm leading-relaxed mb-4">
+                  Fiziki olarak matbaa aramaktansa internet üzerinden sipariş vermenin bütçe ve zaman kazançları. <strong className="text-slate-900">Online Matbaa mı Yerel Matbaa mı?</strong> sorusuna yanıt arıyor, imalatçı hızı ve <strong className="text-slate-900">Online Baskı Avantajları</strong> değerlendirmesi yapıyoruz.
                 </p>
               </div>
 
@@ -1492,344 +4992,6 @@ const PRODUCTS = [
 };
 
 // KutuPage is imported from ./components/Kutu.tsx
-
-const SEO_SPECS: Record<string, {
-  role: string;
-  authority: string;
-  process: string;
-  machines: string;
-  paper: string;
-  postPress: string;
-}> = {
-  "kartvizit": {
-    role: "Kartvizit Çözümleri",
-    authority: "Kartvizit siparişleriniz kalite standartlarımıza uygun olarak Topkapı merkezimiz koordinasyonunda hazırlanmaktadır.",
-    process: "Yüksek çözünürlüklü tabaka montajının ardından, gelişmiş ofset veya dijital baskı parkurunda basılır, hassas giyotin kesimlerle tamamlanır.",
-    machines: "Yüksek Hassasiyetli Ofset ve Dijital Baskı Sistemleri, Polar Giyotin, Lokal Lak ve Gofre Üniteleri.",
-    paper: "350 gr. Mat/Parlak Kuşe, 350 gr. Birinci Sınıf Bristol Karton, 700 gr. Çift Kat Sıvama Karton ve Fantezi Özel Dokulu Kağıtlar.",
-    postPress: "Mat/Parlak Selefon Kaplama, Lokal Kabartma Lak, Altın/Gümüş Varak Yaldız, Oval Köşe Kesimi."
-  },
-  "brosur": {
-    role: "Broşür Çözümleri",
-    authority: "Broşür siparişleriniz standartlara uygun olarak hazırlanmaktadır.",
-    process: "Tasarım mizanpaj onayı sonrası tabaka montajı yapılır, çift taraflı basılıp kırım ünitelerinde katlanır.",
-    machines: "4-Renk Ofset Baskı, Otomatik Kırım ve Katlama Sistemleri, Hassas Giyotin Kesim Sistemleri.",
-    paper: "115 gr, 130 gr Parlak ve Mat Kuşe Kağıt Çeşitleri.",
-    postPress: "Tek Kırım, Çift Kırım (C Kırım), Üç Kırım Akordeon Katlama, Koruyucu Selefon Uygulaması."
-  },
-  "el_ilani": {
-    role: "El İlanı Çözümleri",
-    authority: "El ilanı siparişleriniz Topkapı merkezimizde titizlikle hazırlanmaktadır.",
-    process: "Dağıtım ve lokasyon tanıtımları için tabaka halinde basılır ve pürüzsüz giyotin bıçaklarla tam ebatında kesilerek ambalajlanır.",
-    machines: "Ofset Baskı Üniteleri, Hassas Giyotin Hatları, Paketleme Üniteleri.",
-    paper: "105 gr, 115 gr, 130 gr Parlak Kuşe ve Birinci Hamur Kağıtlar.",
-    postPress: "Düz Giyotin Kesim, İsteğe Bağlı Kısmi Parlak Lak, Korunaklı Paketleme ve Hızlı Kargo Hazırlığı."
-  },
-  "katalog": {
-    role: "Katalog Çözümleri",
-    authority: "Katalog baskı süreçleriniz profesyonel olarak tamamlanmaktadır.",
-    process: "Çok sayfalı mizanpaj montajı kalıplara aktarılır, basılan sayfalar harmanlanıp iplik dikiş veya Amerikan sıcak tutkal ciltle birleştirilir.",
-    machines: "Ofset Baskı Üniteleri, Otomatik Harman Üniteleri, Amerikan Cilt Sıcak Tutkal Hatları, Tel Dikiş ve İplik Dikiş Sistemleri.",
-    paper: "Kapak için 250-350 gr. Kuşe Kağıt, İç Sayfalar için 115 gr, 130 gr Parlak/Mat Kuşe Kağıtlar.",
-    postPress: "Kapak Mat/Parlak Selefon, Kısmi Kabartma Lak, Sıcak Amerikan Cilt, Tel/İplik Dikiş, Gofre Kabartma."
-  },
-  "etiket": {
-    role: "Etiket Çözümleri",
-    authority: "Etiket siparişleriniz rulo ve tabaka olarak hassasiyetle hazırlanır.",
-    process: "Rulo etiketlerde bobinden bobine baskı teknikleri, tabaka etiketlerde ise baskı sonrası özel bıçaklı yarı-kesim (kiss-cut) uygulanır.",
-    machines: "Flekso Bobin Baskı Hattı, Rulo Dijital Baskı, Otomatik Rulo Sarım ve Dilimleme Sistemleri, Optik Kesim Ünitesi.",
-    paper: "Kendinden Yapışkanlı Çıkartma Kağıdı, PP Opak (Suya Dayanıklı Plastik), PP Şeffaf Etiket, Termal Yapışkanlı Kağıtlar.",
-    postPress: "Mat/Parlak Selefon Kaplama, Özel Şekilli Yarı Kesim, Altın/Gümüş Varak Yaldız, Bobine Dilimleme ve Rulo Sarım."
-  },
-  "kutu": {
-    role: "Kutu Çözümleri",
-    authority: "Kutu ve ambalaj siparişleriniz titizlikle tamamlanmaktadır.",
-    process: "Amerikan Bristol veya kroma karton üzerine yapılan baskı sonrası mukavemet artırıcı selefon kaplanır. Ardından preslerde şekilli kesim yapılıp yapıştırma alanlarında katlanır.",
-    machines: "Ofset Baskı Sistemleri, Şekilli Kesim Presleri, Otomatik Yan ve Dip Yapıştırma Hatları.",
-    paper: "230 gr, 250 gr, 300 gr, 350 gr Amerikan Bristol Karton ve Kroma Karton Çeşitleri.",
-    postPress: "Mat/Parlak Selefon, Pencereli Kutularda Şeffaf Asetat Yapıştırma, Gofre (Kabartma), Varak Yaldız, Otomatik Dip Yapıştırma."
-  },
-  "karton_canta": {
-    role: "Karton Çanta Üreticisi",
-    authority: "Karton çanta üretimi Topkapı üretim tesisimizde imal edilir.",
-    process: "Kalın Amerikan Bristol kartona yapılan baskı ve selefon sonrası otomatik kazanlı preslerde kesim yapılır, alt ve ağız takviye kartonları sıvanarak el işçiliğiyle sap ipleri takılır.",
-    machines: "Büyük Format Ofset Baskı, Kazanlı Kesim Presleri, Otomatik Delik Delme ve Kuşgözü Çakma Makineleri.",
-    paper: "210 gr, 250 gr. Amerikan Bristol Karton, Kraft ve Esmer Ambalaj Kağıtları.",
-    postPress: "Mat/Parlak Selefon, Gofre Kabartma, Altın Varak Yaldız, Kurdele veya PP İp Sap Takılması, Taban Takviye Kartonu Sıvama."
-  },
-  "ambalaj": {
-    role: "Ambalaj Üreticisi",
-    authority: "Ambalaj üretimi standartlara uygun olarak tesisimizde basılır.",
-    process: "Uygun kağıtlar üzerine kokusuz, su bazlı mürekkeplerle flekso veya ofset baskı yapılır, rulo veya tabaka olarak dilimlenir.",
-    machines: "Flekso Ambalaj Baskı Makineleri, Büyük Format Ofset Baskı, Bobinden Tabakaya Ebatlama Hatları.",
-    paper: "Gıdaya Uygun Kraft Kağıt, Yağ Geçirmez Sülfit ve Şamua Kağıtları, OPP/PE Laminasyonlu Esnek Ambalaj Malzemeleri.",
-    postPress: "Otomatik Dilimleme ve Bobine Sarım, Tabaka Kesim, Kese Kağıdı Formunda Katlama ve Yan Yapıştırma."
-  },
-  "zarf": {
-  role: "Zarf Baskı Çözümleri",
-  authority: "Zarf baskı siparişleri İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden planlanmaktadır.",
-  process: "Zarf seçenekleri; diplomat veya torba zarf modeli, ürün kodu, ölçü ve adet bilgilerine göre değerlendirilir.",
-  machines: "Baskı, kesim ve paketleme süreçleri ürün detaylarına göre planlanır.",
-  paper: "110 gr 1. Hamur kağıt seçeneği.",
-  postPress: "Baskı sonrası kontrol, ebatlama ve paketleme işlemleri ürün detaylarına göre uygulanır."
-},
-  "magnet": {
-    role: "Magnet Üreticisi",
-    authority: "Magnet üretimi Topkapı üretim tesisimizde yapılmaktadır.",
-    process: "Kuşe kağıda yapılan ofset baskı ve selefon kaplamanın ardından, otomatik laminasyon makinesinde rulo mıknatısa (magnet) sıvanır ve kazanlı preslerde şekilli bıçaklarla kesilir.",
-    machines: "Ofset Baskı, Otomatik Magnet Sıvama (Laminasyon) Hatları, Yüksek Tonajlı Kazanlı Kesim Presleri.",
-    paper: "300 gr, 350 gr. Kuşe Kağıt, 0,40 mm veya 0,50 mm Kalınlıkta İthal Rulo Mıknatıs (Magnet Tabakası).",
-    postPress: "Parlak/Mat Selefon Kaplama, Özel Şekilli Bıçak Kesimi, Çapak Ayıklama, Otomatik Sayım ve Korunaklı Paketleme."
-  },
-  "yağ_kartı": {
-    role: "Yağ Kartı Üreticisi",
-    authority: "Yağ kartı imalatı İstanbul Topkapı tesisimizde gerçekleştirilmektedir.",
-    process: "Tasarımı onaylanan yağ kartları tabaka montajına alınır. Ofset baskı sonrası mat selefon lamine edilir ve 4 mm delik payları ile özel bıçaklı kesim preslerinde ebatlanır.",
-    machines: "Ofset Baskı Makineleri, Selefon Laminasyon Üniteleri, Kazanlı Kesim Presleri.",
-    paper: "350 gr Kuşe Kağıt ve 700 gr Çift Kat (Sıvama) Karton Seçenekleri.",
-    postPress: "Mat Selefon Kaplama, Özel Kesim, 4 mm İp Deliği Delme ve İp İlavesi."
-  },
-  "yag_karti": {
-    role: "Yağ Kartı Üreticisi",
-    authority: "Yağ kartı imalatı İstanbul Topkapı tesisimizde gerçekleştirilmektedir.",
-    process: "Tasarımı onaylanan yağ kartları tabaka montajına alınır. Ofset baskı sonrası mat selefon lamine edilir ve 4 mm delik payları ile özel bıçaklı kesim preslerinde ebatlanır.",
-    machines: "Ofset Baskı Makineleri, Selefon Laminasyon Üniteleri, Kazanlı Kesim Presleri.",
-    paper: "350 gr Kuşe Kağıt ve 700 gr Çift Kat (Sıvama) Karton Seçenekleri.",
-    postPress: "Mat Selefon Kaplama, Özel Kesim, 4 mm İp Deliği Delme ve İp İlavesi."
-  },
-  "afis": {
-    role: "Afiş ve Poster Baskı Hizmetleri",
-    authority: "Afiş ve poster baskı siparişleriniz kalite standartlarımıza uygun olarak Topkapı hizmet noktamız koordinasyonunda titizlikle hazırlanmaktadır.",
-    process: "300 DPI yüksek çözünürlüklü tabaka montajının ardından çok renkli Heidelberg ofset baskı makinelerinde basılır, hassas giyotin kesimlerle ebatlanır ve koruyucu rulo paketleme yapılır.",
-    machines: "Heidelberg Ofset Baskı Makineleri, Geniş Format Dijital Baskı Hatları, Polar Giyotin Kesim Sistemleri.",
-    paper: "105 gr, 135 gr, 170 gr Parlak Kuşe Kağıtlar ve 120 gr Blueback Dış Mekan Kağıdı.",
-    postPress: "Düz Giyotin Kesim, Mat/Parlak Selefon Kaplama, Rulo Sarım ve Koruyucu Tüp Paketleme."
-  }
-};
-
-export const ProductSEOSection = ({ categoryKey, hideTrustFooter }: { categoryKey: string; hideTrustFooter?: boolean }) => {
-  const content = PRODUCT_DESCRIPTIONS[categoryKey];
-  if (!content) return null;
-
-  const spec = SEO_SPECS[categoryKey] || {
-    role: "Matbaa Üreticisi",
-    authority: "Üretim süreçleri İstanbul Topkapı tesisimizde gerçekleştirilmektedir.",
-    process: "Tasarımı onaylanan siparişler baskı kalıplarına aktarılır. Baskı sonrası ebatlama ve yüzey işlemleri uygulanır.",
-    machines: "Ofset Baskı Makineleri, Dijital Baskı Hatları, Otomatik Mücellithane Ekipmanları.",
-    paper: "Kullanım amacına uygun kuşe kağıt, Amerikan Bristol veya kroma karton seçenekleri.",
-    postPress: "Selefon kaplama, kesim, kırım ve paketleme işlemleri."
-  };
-
-  return (
-    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-20">
-      {/* Üretici Odaklı Otorite Başlığı */}
-      <div className="bg-slate-900 text-white rounded-[32px] p-8 md:p-12 shadow-2xl mb-12 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -mr-32 -mt-32 blur-3xl" />
-        <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-[#00E5FF]/10 text-[#00E5FF] px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-4">
-            DOĞRUDAN TESLİMAT
-          </div>
-          <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tight mb-4 text-white">
-  {categoryKey === 'zarf' ? (
-    <>
-      İstanbul Topkapı Hizmet ve Koordinasyon Noktamızdan{' '}
-      <span className="text-[#00E5FF]">{spec.role}</span>
-    </>
-  ) : (
-    <>
-      İstanbul Topkapı Tesisimizden{' '}
-      <span className="text-[#00E5FF]">{spec.role}</span> Hizmeti
-    </>
-  )}
-</h2>
-          <p className="text-gray-300 font-bold text-base md:text-lg leading-relaxed mb-0">
-            {spec.authority} Siparişleriniz özenle basılarak paketlenmekte ve kargo ile adresinize sevk edilmektedir.
-          </p>
-        </div>
-      </div>
-
-      {/* 4 Bölümlü Üretim Süreci Detayları */}
-      <div className="bg-white rounded-[32px] p-8 md:p-12 shadow-2xl border border-gray-100 mb-12">
-        <div className="flex items-center gap-3 mb-8 border-b border-gray-100 pb-4">
-          <span className="w-2.5 h-6 bg-primary rounded-full" />
-          <h3 className="text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight">
-            Üretim Detayları &amp; Teknik Özellikleri
-          </h3>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          <div className="bg-slate-50 border border-slate-100 p-6 rounded-2xl">
-            <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
-              <Cpu size={20} />
-            </div>
-            <h4 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">Üretim Süreci</h4>
-            <p className="text-slate-600 text-xs md:text-sm font-semibold leading-relaxed">
-              {spec.process}
-            </p>
-          </div>
-
-          <div className="bg-slate-50 border border-slate-100 p-6 rounded-2xl">
-            <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
-              <Printer size={20} />
-            </div>
-            <h4 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">Kullanılan Makineler</h4>
-            <p className="text-slate-600 text-xs md:text-sm font-semibold leading-relaxed">
-              {spec.machines}
-            </p>
-          </div>
-
-          <div className="bg-slate-50 border border-slate-100 p-6 rounded-2xl">
-            <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
-              <Layers size={20} />
-            </div>
-            <h4 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">Kullanılan Kağıt</h4>
-            <p className="text-slate-600 text-xs md:text-sm font-semibold leading-relaxed">
-              {spec.paper}
-            </p>
-          </div>
-
-          <div className="bg-slate-50 border border-slate-100 p-6 rounded-2xl">
-            <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
-              <Settings size={20} />
-            </div>
-            <h4 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">Baskı Sonrası İşlemler</h4>
-            <p className="text-slate-600 text-xs md:text-sm font-semibold leading-relaxed">
-              {spec.postPress}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Teslimat ve Onboarding Süreci Bilgilendirme Kutusu */}
-      <div className="bg-slate-50 rounded-[32px] p-8 md:p-12 shadow-md border border-slate-100 mb-12">
-        <div className="max-w-4xl mb-8">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-3">
-            GÜVENLİ SİPARİŞ &amp; TESLİMAT SÜRECİ
-          </div>
-          <h3 className="text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight">
-            Tasarım Onayı, Üretim ve Kargo Süreçleri
-          </h3>
-          <p className="text-slate-600 font-semibold text-xs md:text-sm mt-2">
-            Siparişinizin her adımı Topkapı üretim tesisimizde titizlikle takip edilir. Hata riskini en aza indirmek ve yüksek kalite standardı sunmak için uyguladığımız standart iş akışımız:
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10">
-          {[
-            {
-              title: "Tasarım Onayı",
-              desc: "Gönderdiğiniz grafik dosyaları teknik kontrolümüzden geçer. Hataları önlemek için hazırladığımız PDF prova onayınızı almadan üretime başlamayız.",
-              badge: "Aynı Gün Prova"
-            },
-            {
-              title: "Üretim Süresi",
-              desc: "Baskı onayı ve ödeme teyidinin ardından siparişiniz üretim parkuruna alınır. Standart ürünlerimizin üretim süresi ortalama 2-3 iş günüdür.",
-              badge: "Seri Üretim"
-            },
-            {
-              title: "Kargo Süresi",
-              desc: "Paketler kalın çift oluklu karton korumalarla hazırlanır. Türkiye geneli 81 ile anlaşmalı kargo ağımızla gönderilir. Kargo süresi 1-2 iş günüdür.",
-              badge: "81 İl Sevk"
-            }
-          ].map((item, idx) => (
-            <div key={idx} className="bg-white border border-slate-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-end mb-4">
-                  <span className="bg-slate-100 text-slate-700 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
-                    {item.badge}
-                  </span>
-                </div>
-                <h4 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
-                  {item.title}
-                </h4>
-                <p className="text-slate-600 font-semibold text-xs leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Ortak SSS Soruları */}
-        {categoryKey !== 'karton_canta' && (
-          <div className="border-t border-slate-200/60 pt-8">
-            <h4 className="text-sm font-black text-slate-900 uppercase tracking-wider mb-6 flex items-center gap-2">
-              Sıkça Sorulan Sipariş ve Onay Soruları
-            </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white p-5 rounded-xl border border-slate-100 shadow-sm">
-                <h5 className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
-                  Tasarım onayı ne kadar sürer?
-                </h5>
-                <p className="text-[11px] md:text-xs text-slate-600 font-semibold leading-relaxed">
-                  Logonuzu ve hazır çalışmanızı iletmenizin ardından, grafik ekibimiz en geç 1-2 saat içinde teknik kontrolü tamamlar. Baskı hatalarını en aza indirmek ve yüksek kalite standardı sunmak amacıyla size dijital PDF prova sunar. "Aynı Gün PDF Prova Onayı" sistemimiz sayesinde iş akışınız aksamaz.
-                </p>
-              </div>
-              <div className="bg-white p-5 rounded-xl border border-slate-100 shadow-sm">
-                <h5 className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight mb-2">
-                  Baskı süreci ne zaman başlar?
-                </h5>
-                <p className="text-[11px] md:text-xs text-slate-600 font-semibold leading-relaxed">
-                  Siparişinizin fiziksel üretimi, hazırlanan PDF prova mizanpajına WhatsApp veya e-posta üzerinden yazılı "BASKI ONAYI" vermeniz ve ödeme teyidinin alınmasıyla birlikte 24 saat içinde otomatik olarak başlar.
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Standart Markdown İçeriği */}
-      <div className="bg-white rounded-[32px] p-8 md:p-12 shadow-2xl border border-gray-100 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-32 -mt-32 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full -ml-32 -mb-32 blur-3xl" />
-        
-        <div className={`relative prose prose-slate max-w-none text-black
-          prose-headings:text-black
-          prose-h2:text-3xl prose-h2:font-black prose-h2:text-black prose-h2:mb-6 prose-h2:uppercase prose-h2:tracking-tight
-          prose-h3:text-2xl prose-h3:font-bold prose-h3:text-black prose-h3:mb-4
-          prose-p:text-black prose-p:leading-relaxed prose-p:text-lg prose-p:mb-6
-          prose-li:text-black prose-li:text-lg
-          prose-strong:text-black prose-strong:font-black
-          prose-em:text-black
-        `}>
-          <ReactMarkdown>{content}</ReactMarkdown>
-        </div>
-        
-        {!hideTrustFooter && categoryKey !== 'arac_kiralama' && categoryKey !== 'amerikan_servis' && categoryKey !== 'antetli_kagit' && categoryKey !== 'bloknot' && (
-          <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
-                <ShieldCheck size={24} />
-              </div>
-              <div>
-                <h4 className="font-bold text-black">Yıllara Dayanan Tecrübe</h4>
-                <p className="text-sm font-medium text-black">Güvenilir ve Kaliteli Baskı</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary">
-                <Truck size={24} />
-              </div>
-              <div>
-                <h4 className="font-bold text-black">81 İle Kargo</h4>
-                <p className="text-sm font-medium text-black">Hızlı ve Güvenli Teslimat</p>
-              </div>
-            </div>
-            <a 
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary text-white px-8 py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-secondary transition-all shadow-xl shadow-primary/20 flex items-center gap-3"
-            >
-              <img src="/WhatsApp.svg" alt="WhatsApp" width={24} height={24} className="w-6 h-6" />
-              HEMEN TEKLİF AL
-            </a>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
 
 // MagnetPage is imported from ./components/Magnet.tsx
 
