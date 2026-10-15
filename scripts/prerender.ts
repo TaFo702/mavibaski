@@ -70,7 +70,14 @@ async function prerender() {
     if (protectedPricing?.length !== 1 || kartvizitContent.match(pricingSection)?.length !== 1) {
       throw new Error('Kartvizit pricing preservation failed: expected one section in each renderer.');
     }
-    kartvizitContent = kartvizitContent.replace(pricingSection, () => protectedPricing[0]);
+    // The protected legacy section omits the existing tax notice. Keep that
+    // section intact and carry the React notice immediately after it so both
+    // initial HTML and the client show the same commercial information once.
+    const taxNotices = kartvizitContent.match(/<div\b[^>]*>[^<]*Fiyatlarımıza[^<]*KDV[^<]*<\/div>/g);
+    if (taxNotices?.length !== 1) {
+      throw new Error('Kartvizit tax notice preservation failed: expected one existing notice.');
+    }
+    kartvizitContent = kartvizitContent.replace(pricingSection, () => protectedPricing[0] + taxNotices[0]);
     zarfBlogContent = prerenderZarfBlog();
     antetliBlogContent = prerenderZarfBlog('/blog/antetli-kagit-baskisinda-80gr-1.hamur');
   } finally { fs.rmSync(rendererPath, { force: true }); }

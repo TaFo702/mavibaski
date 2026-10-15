@@ -1320,11 +1320,11 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
       },
       {
         q: "Kartvizit Fiyatları 1.000 Adet ve 500 Adet İçin Nasıl Hesaplanır?",
-        a: "Standart kâğıt kartvizit modellerimiz 1.000 adetlik paketlerle ofset baskı olarak hesaplanmakta ve listelenmektedir. Plastik PVC kartvizit seçeneğimiz ise 500 adet olarak fiyat tablomuzda yer alır. Standart dışı ara adetler (örneğin 100 adet kâğıt kartvizit gibi) standart fiyat listesinde yer almadığından özel teklif kapsamında hesaplanır."
+        a: "Standart kâğıt kartvizit modellerimiz 1.000 adetlik paketlerle ofset baskı olarak hesaplanmakta ve listelenmektedir. Plastik PVC kartvizit seçeneğimiz ise 500 adet olarak fiyat tablomuzda yer alır. Standart dışı ara adetler (örneğin 100 adet kâğıt kartvizit gibi) standart fiyat listesinde yer almadığından özel teklif kapsamında hesaplanır. 1.000 adet çift taraflı kartvizit fiyatı karşılaştırılırken iki yüzü renkli baskı ile ön yüzü renkli, arka yüzü tek renk siyah baskı ayrılmalıdır. Ön ve arka yüzü renkli isteyenler, tabloda Çift Yön Renkli olarak açıklanan modelleri inceleyebilir."
       },
       {
         q: "Kartvizit fiyatları hangi özelliklere göre değişir?",
-        a: "Kartvizit fiyatları; seçilen kâğıt gramajı (250 gr, 350 gr, 400 gr, 700 gr veya 800 gr), baskı yönü (tek yön veya çift yön), selefon kaplama (mat veya parlak), kabartma lak, altın yaldız, özel kesim ve adet tirajına göre değişiklik gösterir. Kalın kartvizit fiyatları ve kabartmalı kartvizit fiyatları uygulanan ek işçilik ve malzeme katmanlarına göre farklılaşır."
+        a: "Kartvizit fiyatları; seçilen kâğıt gramajı (250 gr, 350 gr, 400 gr, 700 gr veya 800 gr), baskı yönü (tek yön veya çift yön), selefon kaplama (mat veya parlak), kabartma lak, altın yaldız, özel kesim ve adet tirajına göre değişiklik gösterir. Kalın kartvizit fiyatları ve kabartmalı kartvizit fiyatları uygulanan ek işçilik ve malzeme katmanlarına göre farklılaşır. Kartvizit basım fiyatları veya kartvizit ücretleri karşılaştırılırken aynı adet, gramaj ve baskı yönüne sahip modeller esas alınmalıdır."
       },
       {
         q: "Kalın kartvizit kağıdı ve 700–800 gr sıvama nedir?",
@@ -1349,6 +1349,10 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
       {
         q: "Teslim süresi ve listede olmayan seçenekler nasıl belirlenir?",
         a: "Teslim süresi; talep edilen kartvizit modeli, sipariş adedi, baskıya hazır dosya onayı, baskı sonrası lak/yaldız/özel kesim uygulamaları ve operasyonel yoğunluğa bağlı olarak teklif veya sipariş aşamasında netleştirilir. Fiyat listesinde bulunmayan ara adet, özel ölçü ve özel kâğıt talepleri için web sitemizdeki Özel Teklif Al bağlantısı üzerinden bilgi alabilirsiniz."
+      },
+      {
+        q: "QR kodlu kartvizit baskı için dosya nasıl hazırlanır?",
+        a: "QR kodun yönlendirdiği web sitesi, iletişim veya katalog bağlantısını dosyayı göndermeden önce telefonunuzla açarak kontrol edin. Kodun çevresinde boşluk bırakın, zeminle kontrastını koruyun ve kesim çizgisine çok yakın yerleştirmeyin. Düşük çözünürlüklü veya çok küçültülmüş kodlar okunmayı zorlaştırabilir. Baskıya hazır PDF dosyanızdaki QR kodu ve dijital provadaki yerleşimi onaydan önce kontrol edin."
       }
     ];
 
