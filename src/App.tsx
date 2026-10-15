@@ -5311,3 +5311,5 @@ export const CityPageWrapper = () => {
     </Routes>
   );
 };
+
+export { ProductSEOSection } from "./components/ProductSEOSection";
