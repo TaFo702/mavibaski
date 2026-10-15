@@ -287,7 +287,7 @@ export const KatalogPage = () => {
           badge="A4 / A5 Ebat - Tel Dikiş &amp; Amerikan Cilt"
           description={
             <p>
-              Katalog baskı ve katalog basım fiyatları; seçilen ebat, sayfa sayısı, kuşe kâğıt, cilt türü ve adet bilgilerine göre belirlenir. A4 ve A5 ebatlarında, 135 gr kuşe iç sayfalar ve 300 gr mat/parlak selefonlu kapak alternatifiyle tel dikiş veya Amerikan ciltli profesyonel <strong className="text-slate-900">ürün katalog baskı</strong> çözümleri sunuyoruz. Kurumsal tanıtım materyalleriniz için <Link to="/brosur" className="text-primary hover:underline font-bold">broşür</Link>, <Link to="/karton-canta" className="text-primary hover:underline font-bold">karton çanta</Link>, <Link to="/dosyalar" className="text-primary hover:underline">cepli dosya</Link> ve <Link to="/kartvizit" className="text-primary hover:underline">kartvizit</Link> ürünleri için de sipariş talebinizi iletebilirsiniz.
+              Katalog baskı ve katalog basım fiyatları; seçilen ebat, sayfa sayısı, kuşe kâğıt, cilt türü ve adet bilgilerine göre belirlenir. A4 ve A5 ebatlarında, 135 gr kuşe iç sayfalar ve 300 gr mat/parlak selefonlu kapak alternatifiyle tel dikiş veya Amerikan ciltli profesyonel <strong className="text-slate-900">ürün katalog baskı</strong> çözümleri sunuyoruz. Kurumsal tanıtım materyalleriniz için <Link to="/brosur" className="text-primary hover:underline font-bold">broşür</Link>, <Link to="/karton-canta" className="text-primary hover:underline font-bold">karton çanta</Link>, <Link to="/dosyalar" className="text-primary hover:underline">cepli dosya</Link> ve <Link to="/kartvizit" className="text-primary hover:underline">kartvizit</Link> ürünlerine yönelik sipariş taleplerinizi de iletebilirsiniz.
             </p>
           }
           relatedLinks={[
@@ -787,7 +787,7 @@ const KatalogSEOSection = () => {
             </div>
             <h4 className="text-sm font-black text-slate-900 uppercase tracking-tight mb-2">Üretim Süreci</h4>
             <p className="text-slate-600 text-xs md:text-sm font-semibold leading-relaxed">
-              Çok sayfalı mizanpaj montajı kalıplara aktarılır, basılan sayfalar harmanlanıp iplik dikiş veya Amerikan sıcak tutkal ciltle birleştirilir.
+              Çok sayfalı mizanpaj montajı kalıplara aktarılır. Basılan sayfalar harmanlanır; seçilen cilt türüne göre tel dikiş, iplik dikiş veya Amerikan sıcak tutkal ciltle birleştirilir.
             </p>
           </div>
           <div className="bg-slate-50 border border-slate-100 p-6 rounded-2xl">
