@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 32494)
+Total output lines: 1656
+
 export interface MakbuzDetail {
   seoTitle: string;
   seoDescription: string;
@@ -740,105 +743,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { q: "Sigorta poliçeleri kaç nüshalı basılabilir?", a: "İhtiyaca göre 2 nüsha (1 asıl 1 suret), 3 nüsha (1 asıl 2 suret) veya daha fazla nüshalı sigorta poliçesi baskısı yapılabilmektedir." },
       { q: "Sigorta poliçelerine numaratör basılabilir mi?", a: "Evet, evrak takibini ve iç denetimi kolaylaştırmak amacıyla sıralı kırmızı numaratörlü baskı uygulanmaktadır." },
       { q: "Özel tasarımlı sigorta poliçesi bastırabilir miyim?", a: "Evet, acentenizin ihtiyaçlarına uygun özel tasarımlı sigorta poliçesi ve teklif formu koçanları hazırlanabilmektedir." },
-      { q: "Sigorta poliçeleri hangi kağıda basılmaktadır?", a: "Alt nüshalara bilgilerin pürüzsüz şekilde aktarılabilmesi için yüksek kaliteli kendinden karbonlu otokopili kağıtlar kullanılmaktadır." },
-      { q: "Sigorta poliçesi ölçüleri değiştirilebilir mi?", a: "Evet, standart A4 (20.5 x 28.5 cm) ölçüsünün yanı sıra talebe göre A5 veya özel ebatlarda üretim yapılabilmektedir." },
-      { q: "İstanbul dışına gönderim yapıyor musunuz?", a: "Evet, sigorta poliçesi siparişleri Türkiye'nin tüm il ve ilçelerine kargo ile gönderilmektedir." },
-      { q: "Sigorta poliçesi baskısı kaç günde tamamlanır?", a: "Tasarım onayının ardından baskı süreci genellikle 3-5 iş günü içerisinde tamamlanarak kargoya teslim edilmektedir." }
-    ]
-  },
-  "arac-kiralama": {
-    seoTitle: "Araç Kiralama Sözleşmesi & Rent A Car Sözleşmesi Baskısı | Mavi Basım",
-    seoDescription: "Kurumsal oto kiralama evrakları, rent a car sözleşmesi, araç kiralama sözleşmesi baskısı ve araç teslim tutanağı hasar tespit formu üretimi. Otokopili, sıralı numaratörlü.",
-    breadcrumbTitle: "Araç Kiralama",
-    h1Title: "Araç Kiralama Sözleşmesi Baskı & Rent A Car Formu",
-    subtitle: "Araç kiralama sözleşmesi, araç teslim tutanağı ve araç hasar tespit formu baskı hizmetleri sunuyoruz. Otokopili ve numaratörlü olarak üretilen formlar, araç teslim ve iade süreçlerinin kayıt altına alınmasını sağlar.",
-    featureImage: "/images/arac-kiralama/arac-kiralama-sozlesmesi-baski.webp",
-    featureImageAlt: "arac-kiralama-sozlesmesi-baski.webp",
-    gallery: [
-      {
-        src: "/images/arac-kiralama/rent-a-car-sozlesmesi-baski.webp",
-        alt: "rent-a-car-sozlesmesi-baski.webp",
-        title: "Rent A Car Sözleşmesi Baskı Örneği",
-        desc: "İki nüshalı otokopili rent a car sözleşmesi koçanı baskı örneği."
-      },
-      {
-        src: "/images/arac-kiralama/arac-kiralama-formu-ornegi.webp",
-        alt: "arac-kiralama-formu-ornegi.webp",
-        title: "Araç Kiralama Formu Örneği",
-        desc: "Teslim alma ve iade anında yakıt ile km tespiti sağlayan araç teslim formu."
-      },
-      {
-        src: "/images/arac-kiralama/otokopili-arac-kiralama-sozlesmesi.webp",
-        alt: "otokopili-arac-kiralama-sozlesmesi.webp",
-        title: "Otokopili Rent A Car Sözleşmesi",
-        desc: "Müşteriyle olası hasar tartışmalarını bitiren gövde şablonlu hasar durum formu."
-      }
-    ],
-    specifications: [
-      { title: "Ölçü", value: "20.5 x 28.5 cm (A4 Net Boy) veya Özel Boylar" },
-      { title: "Kağıt Türü", value: "Otokopili Kendinden Karbonlu Kağıt" },
-      { title: "Nüsha Sayısı", value: "1 Asıl + 1 Suret veya 1 Asıl + 2 Suret" },
-      { title: "Numaratör", value: "Ardışık Takip Sıra Numaralı Baskı" },
-      { title: "Cilt Standardı", value: "Her Ciltte 50 Yaprak Takımı" },
-      { title: "Baskı Rengi", value: "Siyah, Kırmızı veya Firmanızın Kurumsal Rengi" },
-      { title: "Sipariş Miktarı", value: "5 Cilt, 10 Cilt, 20 Cilt, 30 Cilt, 50 Cilt" },
-      { title: "Kağıt Kalitesi", value: "Yüksek Kalite Kopya Özellikli Kimyasal Kaplamalı" },
-      { title: "Teslim Süresi", value: "Grafik tasarım onayından sonra 3-5 İş Günü" }
-    ],
-    whatIsTitle: "Araç Kiralama Sözleşmesi ve Formu Nedir?",
-    whatIsContent: "Araç kiralama sözleşmesi ve rent a car teslim tutanakları; kiralayan şirket ile araç teslim alan müşteri arasında, kiralama süresini, depozito şartlarını, hasar ve sigorta durumlarını ile km bilgilerini yasal güvence altına almak için düzenlenen resmi ve hukuki belgelerdir. Otokopili yapısıyla yapılan işaretlemelerin ve girilen sözleşme maddelerinin kopyası saniyeler içinde alt nüshaya net bir şekilde aktarılır.",
-    whoUsesTitle: "Araç Kiralama Formlarını Kimler Tercih Eder?",
-    whoUsesItems: ["Oto Kiralama Şirketleri (Rent a Car)", "Lüks ve Ekonomik Araç Filoları", "Motosiklet ve Karavan Kiralama Ofisleri", "Yat ve Tekne Kiralama Acenteleri", "Operasyonel Filo Kiralama Firmaları"],
-    usageAreasTitle: "Araç Kiralama Belgelerinin Kullanım Alanları",
-    usageAreasItems: [
-      { title: "Sözleşme Mutabakatı", desc: "Taraflar arasındaki kiralama bedeli, iade tarihi ve cezai şartları sabitleyerek olası anlaşmazlıkları yasal zeminde sonlandırır." },
-      { title: "Hasar ve Kaporta Kontrolü", desc: "Araç teslim şablonları üstünde kaporta çizik, göçük ve kusurlarını işaretleyerek her iki tarafın hakkını güvenceye alır." },
-      { title: "KM ve Depo Seviyesi Takibi", desc: "Aracın çıkış kilometresini ve depo yakıt seviyesini yazarak adil iade koşullarını garanti eder." }
-    ],
-    howToFillTitle: "Araç Kiralama Sözleşmesi Nasıl Doldurulur?",
-    howToFillContent: [
-      "Aracı kiralayan sürücünün ehliyet, kimlik ve adres bilgilerini tam doldurun.",
-      "Aracın plaka, km ve yakıt seviyesini çıkış esnasında forma kaydedin.",
-      "Gövde şablonu üzerinde mevcut ezik, çizik ve kusurları kalemle işaretleyin.",
-      "Kiralama ücreti, depozito miktarı ve teslim şartlarını ekleyip ıslak imzalayın."
-    ],
-    requiredInfoTitle: "Araç Kiralama Sözleşmesinde Hangi Bilgiler Bulunur?",
-    requiredInfoContent: [
-      "Kiraya Veren ve Kiralayan Taraf Bilgileri",
-      "Araç Bilgileri (Plaka, Marka, Model, KM, Yakıt)",
-      "Sıralı Ardışık Seri Numarası",
-      "Müşteri Ehliyet ve T.C. Kimlik Verileri",
-      "Araç Hasar Tespit Gövde Şeması"
-    ],
-    comparisonTitle: "Otokopili Sözleşme ile Dijital Sözleşme Karşılaştırması",
-    comparisonTableRows: [
-      { label: "Saha Uyumluluğu", col1: "İnternet bağlantısından bağımsız her ortamda anında ıslak imza ile düzenlenir.", col2: "Mobil çekim alanı veya şarj sorunu olduğunda sözleşmeye erişim kesilir." },
-      { label: "Hukuki Geçerlilik", col1: "Çift nüsha ıslak imzalı orijinal belge mahkemelerde tam ispat gücü taşır.", col2: "Yasal olarak tescillenmemiş dijital imzaların takibi ve doğrulanması zordur." },
-      { label: "Maliyet", col1: "Tek seferlik çok ekonomik matbaa baskı bedeli ile yüzlerce nüsha basılır.", col2: "Aylık yüksek üyelik kotaları veya yazılım lisans ücretleri gerektirir." }
-    ],
-    importanceTitle: "Filo Yönetiminde Çift Sayfa Islak İmzanın Önemi",
-    importanceContent: "Araç tesliminde ve iadesinde tutulan ıslak imzalı otokopili formlar, müşterinin kiralama süresince işlediği trafik cezaları, kaza hasarları veya geciken iadeler durumunda acentelerin yasal haklarını arayabilmeleri için en sağlam hukuki delildir.",
-    otokopiTitle: "Mükemmel Otokopi Kalitesi",
-    otokopiContent: "Mavi Basım tarafından ve en son teknoloji araç şablonlarıyla üretilen otokopili kağıt kalitesi sayesinde, kiralama koşullarının bulunduğu küçük puntolu yasal metinler dahi alt surette tamamen temiz ve okunaklı çıkar.",
-    faqList: [
-      { q: "Araç kiralama sözleşmelerinde minimum sipariş miktarı nedir?", a: "Araç kiralama sözleşmesi baskılarında minimum sipariş miktarı 5 cilttir." },
-      { q: "Araç kiralama sözleşmelerine firma logosu basılabilir mi?", a: "Evet, araç kiralama sözleşmelerine firmanızın logosu, iletişim bilgileri ve kurumsal kimlik unsurları eklenebilmektedir." },
-      { q: "Araç kiralama sözleşmeleri kaç nüshalı basılabilir?", a: "İhtiyaca göre 2 nüsha, 3 nüsha veya daha fazla nüshalı araç kiralama sözleşmesi üretilebilmektedir." },
-      { q: "Araç kiralama sözleşmelerine numaratör basılabilir mi?", a: "Evet, evrak takibini kolaylaştırmak amacıyla numaratörlü baskı uygulanabilmektedir." },
-      { q: "Sözleşmenin arkasına kiralama şartları basılabilir mi?", a: "Evet, sözleşmenin arka yüzüne kiralama koşulları, teslim şartları ve diğer yasal maddeler basılabilmektedir." },
-      { q: "Hasar tespit şablonu özel olarak hazırlanabilir mi?", a: "Evet, binek araç, SUV, motosiklet, karavan veya ticari araç seçeneklerine uygun özel hasar tespit şablonları hazırlanabilmektedir." },
-      { q: "Araç kiralama sözleşmeleri özel tasarlanabilir mi?", a: "Evet, firmanızın ihtiyaçlarına uygun özel tasarımlı araç kiralama sözleşmeleri hazırlanabilmektedir." },
-      { q: "Araç kiralama sözleşmeleri hangi kağıda basılmaktadır?", a: "Alt nüshalara bilgilerin net şekilde aktarılabilmesi için kaliteli otokopili kağıtlar kullanılmaktadır." },
-      { q: "İstanbul dışına gönderim yapıyor musunuz?", a: "Evet, araç kiralama sözleşmesi siparişleri Türkiye'nin tüm il ve ilçelerine kargo ile gönderilmektedir." },
-      { q: "Araç kiralama sözleşmeleri kaç günde basılır?", a: "Tasarım onayının ardından baskı süreci genellikle 3-5 iş günü içerisinde tamamlanarak kargoya teslim edilmektedir." }
-    ]
-  },
-  "gider-makbuzu": {
-    seoTitle: "Gider Makbuzu Baskı Fiyatları | Otokopili ve Numaratörlü Gider Makbuzu Basımı",
-    seoDescription: "Gider makbuzu baskı fiyatları. Otokopili ve numaratörlü gider makbuzu koçanları. Logolu özel tasarım, hızlı üretim ve Türkiye geneli kargo.",
-    breadcrumbTitle: "Gider Makbuzu",
-    h1Title: "Gider Makbuzu Baskı Fiyatları | Otokopili ve Numaratörlü Gider Makbuzu",
-    subtitle: "Gider makbuzu, işletmelerin gerçekleştirdiği harcamaları ve yapılan ödemeleri kayıt altına almak amacıyla kullanılan önemli bir matbu evraktır. Özellikle ön muhasebe süreçlerinde belge düzeninin sağlanması, yapılan giderlerin takip edilmesi ve şirket içi kayıtların düzenli şekilde arşivlenebilmesi için tercih edilir. Farklı sektörlerde faaliyet gösteren firmalar günlük operasyonlarında gider makbuzu kullanımına ihtiyaç duyabilmektedir.\n\nOtokopili gider makbuzu koçanları, üst nüshaya yazılan bilgilerin alt nüshalara otomatik olarak aktarılmasını sağlayan kendinden karbonlu kağıtlardan üretilir. Bu yapı sayesinde ayrıca karbon kağıdı kullanmaya gerek kalmadan hızlı, temiz ve pratik bir kullanım elde edilir. Birden fazla nüsha oluşturulabilmesi, belge paylaşımını ve arşivleme süreçlerini kolaylaştırır.\n\nNumaratörlü gider makbuzu modellerinde ise her yaprak ardışık sıra numarası ile basılır. Bu sistem, belgelerin düzenli şekilde takip edilmesine yardımcı olurken kayıp veya eksik evrakların tespit edilmesini de kolaylaştırır. 1 asıl + 1 suret veya 1 asıl + 2 suret olarak hazırlanabilen gider makbuzları, farklı ölçü ve tasarım seçenekleriyle üretilebilmektedir.",
+      { q: "Sigorta poliçeleri hangi kağıda basılmaktadır?", a: "Alt nüshalara bilgilerin pürüzsüz şekilde aktarılabilmesi için yüksek kaliteli kendinden karbonlu otokopili kağ…2494 tokens truncated…ullanmaya gerek kalmadan hızlı, temiz ve pratik bir kullanım elde edilir. Birden fazla nüsha oluşturulabilmesi, belge paylaşımını ve arşivleme süreçlerini kolaylaştırır.\n\nNumaratörlü gider makbuzu modellerinde ise her yaprak ardışık sıra numarası ile basılır. Bu sistem, belgelerin düzenli şekilde takip edilmesine yardımcı olurken kayıp veya eksik evrakların tespit edilmesini de kolaylaştırır. 1 asıl + 1 suret veya 1 asıl + 2 suret olarak hazırlanabilen gider makbuzları, farklı ölçü ve tasarım seçenekleriyle üretilebilmektedir.",
     featureImage: "/images/gider-makbuzu/numaratorlu-gider-makbuzu.webp",
     featureImageAlt: "gider makbuzu basım fiyatları",
     gallery: [
@@ -1201,13 +1106,13 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     ]
   },
   "tahsilat-ve-tediye-makbuzu": {
-    seoTitle: "Tediye Makbuzu Baskı Fiyatları 2026 | Numaratörlü ve Otokopili",
-    seoDescription: "Numaratörlü ve otokopili tediye makbuzu baskı fiyatları. 14x20 cm A5 ölçü, tasarım desteği, PDF prova ve Türkiye geneli hızlı teslimat.",
+    seoTitle: "Tediye Makbuzu Baskı Fiyatları | Mavi Basım",
+    seoDescription: "Numaratörlü ve otokopili tediye makbuzu baskı seçeneklerini ve güncel fiyat tablosunu inceleyin. 14 × 20 cm ölçü ve nüsha seçenekleri için hemen teklif alın.",
     breadcrumbTitle: "Tediye Makbuzu",
     h1Title: "Numaratörlü ve Otokopili Tediye Makbuzu Baskı Fiyatları",
     subtitle: "Firmanıza özel numaratörlü ve otokopili tediye makbuzu baskısı için bizimle iletişime geçebilirsiniz.",
     featureImage: "/images/tediye-makbuzu/tediye-baski.webp",
-    featureImageAlt: "Tediye makbuzu basimi",
+    featureImageAlt: "Numaratörlü ve otokopili tediye makbuzu baskısı",
     gallery: [
       {
         src: "/images/tediye-makbuzu/kendinden-karbonlu-tediye-makbuzu.webp",
@@ -1225,22 +1130,22 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
         src: "/images/tediye-makbuzu/tediye-makbuzu-ornegi.webp",
         alt: "14x20 cm tediye makbuzu örneği",
         title: "Kurumsal Logolu Baskı",
-        desc: "A5 boyutunda 14x20 cm tediye makbuzu kurumsal logolu ve özel tasarımlı baskı örneği."
+        desc: "14 × 20 cm yarım boy ölçüde, firma bilgileriyle özelleştirilebilen tediye makbuzu baskı örneği."
       }
     ],
     specifications: [
       { title: "Ölçü", value: "14 x 20 cm (Yarım Boy)" },
-      { title: "Kağıt Türü", value: "Otokopili Kendinden Carbonlu" },
+      { title: "Kağıt Türü", value: "Kendinden karbonlu (otokopili) kâğıt" },
       { title: "Cilt İçeriği", value: "Her Cilt 50 Takım" },
       { title: "Numaratör", value: "Otomatik Seri Numaralı" },
       { title: "Nüsha Seçenekleri", value: "1 Asıl + 1 Suret, 1 Asıl + 2 Suret veya 1 Asıl + 3 Suret" },
-      { title: "Cilt Seçenekleri", value: "5 Cilt, 10 Cilt, 20 Cilt, 30 Cilt, 50 Cilt" },
+      { title: "Cilt Seçenekleri", value: "5, 10, 20, 30, 50 veya 100 cilt" },
       { title: "Baskı Rengi", value: "Siyah veya Kurumsal Renk" },
-      { title: "Kullanım Alanı", value: "Personel ödemeleri, cari hesap ödemeleri, tedarikçi ödemeleri ve kasa çıkış işlemleri." },
-      { title: "Teslimat", value: "3-5 İş Günü" }
+      { title: "Kullanım Alanı", value: "Personel, cari hesap ve tedarikçi ödemelerinin kayıt takibi." },
+      { title: "Üretim ve Teslim", value: "Ürün, adet ve onay sürecine göre teklif aşamasında paylaşılır." }
     ],
     whatIsTitle: "Tediye Makbuzu Nedir?",
-    whatIsContent: "Tediye kelimesi, Arapça kökenli olup \"ödeme yapmak\" anlamına gelmektedir. Muhasebe ve ticari hayatta ise işletmelerin kasalarından çıkan nakit ödemeleri ifade etmek amacıyla kullanılmaktadır.\n\nTediye makbuzu, işletmelerde kasadan yapılan nakit ödemelerin kayıt altına alınması için kullanılan resmi bir muhasebe evrakıdır. Personel ödemeleri, cari hesap ödemeleri, tedarikçi ödemeleri ve kasa çıkış işlemlerinde kullanılır. Otokopili ve numaratörlü olarak basılan tediye makbuzları, yapılan ödemenin belgelenmesini ve arşivlenmesini sağlar.\n\nMavi Basım olarak İstanbul'daki üretim tesisimizde 14x20 cm A5 ölçülerinde kendinden karbonlu, seri numaralı ve kurumsal logolu tediye makbuzu koçanı üretimi yapıyoruz.",
+    whatIsContent: "Tediye makbuzu, işletmenin yaptığı bir ödemeyi ve kasa çıkışını kayıt altına almak için kullanılan matbu formdur. Personel, tedarikçi ve cari hesap ödemelerinde düzenlenebilir.\n\nOtokopili nüshalar, forma yazılan bilgilerin alt nüshalara aktarılmasına yardımcı olur. Numaratör seçeneği, makbuzların sıra numarasına göre izlenmesini kolaylaştırır.\n\nTediye makbuzları 14 × 20 cm yarım boy ölçüde; farklı nüsha, cilt adedi ve baskı seçenekleriyle hazırlanabilir. Firma bilgileri ve logo baskıya eklenebilir.",
     whoUsesTitle: "Kimler Kullanır?",
     whoUsesItems: ["Muhasebe Birimleri", "Mali Müşavirlik Ofisleri", "Üretim Firmaları", "Toptancılar", "Distribütörler", "Lojistik Firmaları", "İnşaat Firmaları", "Taşeron Firmalar", "Tedarikçi Ödemesi Yapan İşletmeler", "Cari Hesap Takibi Yapan Firmalar"],
     usageAreasTitle: "Tediye Makbuzu Kullanım Alanları",
@@ -1253,25 +1158,25 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     ],
     howToFillTitle: "Tediye Makbuzu Nasıl Doldurulur?",
     howToFillContent: [
-      "Tediye makbuzu nakit hareketlerinin kayıt altına alınmasında kullanılır.",
-      "Düzenleme esnasında belirli alanların doldurulması, kayıtların düzenli tutulmasına yardımcı olur.",
-      "İlk aşamada, her tediye makbuzu koçanı üzerinde yer alan makbuz numarası alanı kontrol edilmelidir. Bu seri numarası evrakların takip edilmesine yardımcı olur.",
-      "İkinci adım olarak tediye tarihi bilgisi gün, ay ve yıl formatında yazılmalıdır. Tediye tarihi, ödemenin gerçekleştirildiği günü ifade eder. Tediye makbuzlarında tarih bilgisi; muhasebe kayıtlarının, arşivleme süreçlerinin ve ödeme takibinin doğru yapılabilmesi açısından önem taşır.",
-      "Son aşamada ödeyen ve ödeme alan taraf bilgileri, ödeme tutarı hem rakamla hem yazıyla ve açıklaması ile birlikte eksiksiz doldurularak karşılıklı imzalanır."
+      "Tediye makbuzu, ödeme hareketinin kayıt takibinde kullanılabilir.",
+      "Kayıt düzeni için formdaki alanları okunaklı ve tutarlı biçimde doldurun.",
+      "Koçanda seri veya sıra numarası alanı varsa numarayı kontrol ederek kaydedin.",
+      "Tarih alanına ödeme gününü yazın; tarih biçimini işletmenizin kayıt düzenine göre uygulayın.",
+      "Ödeyen ve ödeme alan taraf bilgilerini, tutarı ve açıklamayı ekleyin. Gerekli imzaları tamamlayın; tutarı rakam ve yazıyla belirtmek takibi kolaylaştırır."
     ],
-    requiredInfoTitle: "Tediye Makbuzunda Bulunması Gereken Bilgiler",
+    requiredInfoTitle: "Tediye Makbuzunda Kullanılabilecek Bilgiler",
     requiredInfoContent: [
-      "Tediye makbuzunda seri ve sıra numarası bulunabilir.",
-      "İkinci olarak, belgenin tanzim edildiği anı gösteren düzenleme tarihi yer almalıdır.",
-      "Diğer taraftan ödeyen bilgileri, yani parayı kasasından çıkaran işletmenin ünvanı, adresi ve vergi dairesi/numarası gibi detaylar bulunmalıdır.",
-      "Ödeme alan bilgileri kısmında ise parayı teslim alan şahsın adı soyadı ya da firmanın firma ünvanı yazılı olmalıdır."
+      "Seri ve sıra numarası ile düzenleme tarihi, kayıt takibini kolaylaştırabilir.",
+      "Ödeyen işletmenin adı veya unvanı ve gerekli iletişim bilgileri eklenebilir.",
+      "Ödeme alan kişinin adı soyadı ya da firma unvanı forma yazılabilir.",
+      "Ödeme tutarı, açıklama ve imza alanları işletmenin kullandığı forma göre düzenlenebilir."
     ],
     comparisonTitle: "Tediye Makbuzu ile Tahsilat Makbuzu Arasındaki Fark",
     comparisonTableRows: [
       { label: "Para çıkışı", col1: "Kasadan para çıkışı gerçekleştiğinde düzenlenir", col2: "Para çıkışıyla ilgisi yoktur, parayı alan taraf düzenler" },
       { label: "Para girişi", col1: "Para girişiyle ilgisi yoktur", col2: "İşletme kasasına nakit girişi olduğunda düzenlenir" },
       { label: "Kullanım amacı", col1: "Yapılan ödemelerin elden teslim edildiğini belgeleme", col2: "Alınan ödemelerin elden teslim alındığını belgeleme" },
-      { label: "Muhasebe kaydı", col1: "Kasa borç hanesinde değil, borçlu hesaplara veya giderlere alacak kaydı", col2: "Kasa hesabına borç, ödeme yapan tarafa alacak kaydı" },
+      { label: "Muhasebe kaydı", col1: "Kayıt, ödeme türüne ve işletmenin hesap düzenine göre yapılır.", col2: "Kayıt, tahsilatın niteliğine ve işletmenin hesap düzenine göre yapılır." },
       { label: "Düzenleyen taraf", col1: "Ödemeyi yapan (parayı teslim eden) işletme", col2: "Ödemeyi alan (parayı tahsil eden) işletme" }
     ],
     importanceTitle: "Numaratörlü Tediye Makbuzu Neden Kullanılır?",
@@ -1279,21 +1184,21 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     otokopiTitle: "Otokopili Tediye Makbuzu Nedir?",
     otokopiContent: "Otokopili tediye makbuzu, alt nüshalara yazı geçirmek için araya karbon kağıdı koymadan alt nüshalara yazı aktarılmasını sağlayan özel kimyasal kaplamalı kağıtlardan üretilen bir makbuz türüdür.",
     faqList: [
-      { q: "Tediye makbuzu kaç yıl saklanmalıdır?", a: "Tediye makbuzları ve muhasebe belgeleri, Vergi Usul Kanunu uyarınca 5 yıl, Türk Ticaret Kanunu uyarınca ise 10 yıl süreyle saklanmalıdır." },
-      { q: "Tediye makbuzu noter onaylı olur mu?", a: "Tediye makbuzları genel olarak şirket içi ve cari ödeme kayıtlarında kullanılan matbu evraklar olup noter onayı zorunluluğu bulunmamaktadır." },
-      { q: "Tediye makbuzu tek nüsha düzenlenebilir mi?", a: "Tediye makbuzları en az 2 nüsha (1 asıl + 1 suret) olarak düzenlenmelidir. Bir nüsha parayı teslim alana verilirken diğer nüsha koçanda kalarak muhasebede arşivlenir." },
-      { q: "Tediye makbuzu ile ödeme ispat edilir mi?", a: "Evet, imzalı ve kaşeli tediye makbuzu nakit olarak teslim edilen paranın muhatabına ulaştığını gösteren hukuki ve muhasebesel bir ispat belgesidir." },
-      { q: "Tediye makbuzu muhasebede nasıl işlenir?", a: "Tediye makbuzları kasa çıkış fişi olarak muhasebe sistemine girilir ve ilgili cari hesabın veya gider kaleminin borç kapatmasında kullanılır." },
-      { q: "Tediye makbuzu zorunlu mudur?", a: "Kasadan yapılan elden ödemelerin ve nakit hareketlerinin belgelenmesi, iç denetim ve muhasebe düzeni açısından zorunlu ve kritik bir uygulamadır." },
+      { q: "Tediye makbuzları ne kadar süre saklanmalıdır?", a: "Saklama süresi belgenin niteliğine ve işletmenin yükümlülüklerine göre değişebilir. İşletmenize uygulanacak süreyi mali müşavirinize danışın." },
+      { q: "Tediye makbuzunda noter onayı gerekir mi?", a: "Noter onayı veya belgenin hukuki etkisi, işlemin koşullarına göre değişebilir. Gerektiğinde mali müşavir veya hukuk uzmanından bilgi alın." },
+      { q: "Tek nüsha tediye makbuzu bastırılabilir mi?", a: "Fiyat tablosundaki baskı seçenekleri 1 asıl + 1 suret, 1 asıl + 2 suret ve 1 asıl + 3 surettir. Farklı talepler için teklif alın." },
+      { q: "Tediye makbuzu ödemeyi belgelendirir mi?", a: "Makbuz, ödeme bilgilerini ve tarafların imzalarını kayıt altına almak için kullanılır. Belgenin ispat gücü somut olaya göre değişebilir." },
+      { q: "Tediye makbuzu muhasebede nasıl kaydedilir?", a: "Muhasebe kaydı, işlemin niteliğine ve işletmenin hesap düzenine göre değişir. Uygulama için mali müşavirinize danışın." },
+      { q: "Tediye makbuzu hangi durumda kullanılır?", a: "İşletmenin yaptığı nakit ödemeyi ve kasa çıkışını kayıt altına almak için kullanılabilir. İşleme uygun belge türünü mali müşavirinizle netleştirin." },
       { q: "Tediye makbuzu baskısında minimum sipariş miktarı nedir?", a: "Tediye makbuzu baskılarında minimum sipariş miktarı 5 cilttir." },
-      { q: "Tediye makbuzu kaç nüsha basılabilir?", a: "İhtiyaca göre 1 Asıl + 1 Suret, 1 Asıl + 2 Suret veya daha fazla nüshalı tediye makbuzu üretilebilmektedir." },
+      { q: "Tediye makbuzu kaç nüsha basılabilir?", a: "Fiyat tablosunda 1 asıl + 1 suret, 1 asıl + 2 suret ve 1 asıl + 3 suret seçenekleri yer alır." },
       { q: "Tediye makbuzu numaratörlü basılabilir mi?", a: "Evet, evrak takibini kolaylaştırmak amacıyla tediye makbuzları numaratörlü olarak basılabilmektedir." },
       { q: "Tediye makbuzlarına firma logosu basılabilir mi?", a: "Evet, tediye makbuzlarına firma logosu, iletişim bilgileri ve kurumsal kimlik unsurları eklenebilmektedir." },
       { q: "Özel tasarım tediye makbuzu yaptırabilir miyim?", a: "Evet, işletmenizin ihtiyaçlarına uygun özel tasarımlı tediye makbuzları hazırlanabilmektedir." },
-      { q: "Tediye makbuzu resmi evrak mıdır?", a: "Tediye makbuzu, işletmeler tarafından yapılan ödemelerin kayıt altına alınması amacıyla kullanılan bir belgedir." },
+      { q: "Tediye makbuzu şirket kayıtlarında kullanılabilir mi?", a: "İşletmeler ödeme bilgilerini kayıt altına almak için tediye makbuzu kullanabilir. Resmî kayıtlar için mali müşavirinizin yönlendirmesini izleyin." },
       { q: "Tediye makbuzu ölçüleri değiştirilebilir mi?", a: "Evet, standart ölçülerin yanı sıra talebe göre özel ebatlarda tediye makbuzu baskısı yapılabilmektedir." },
       { q: "İstanbul dışına gönderim yapıyor musunuz?", a: "Evet, tediye makbuzu siparişleri Türkiye'nin tüm il ve ilçelerine kargo ile gönderilmektedir." },
-      { q: "Tediye makbuzu baskısı kaç günde tamamlanır?", a: "Tasarım onayının ardından tediye makbuzu baskıları genellikle 3-5 iş günü içerisinde tamamlanarak kargoya teslim edilmektedir." }
+      { q: "Tediye makbuzu baskısı ne zaman teslim edilir?", a: "Üretim ve teslim süresi ürün, adet ve onay sürecine göre teklif aşamasında paylaşılır." }
     ]
   },
   "tahsilat-makbuzu": {

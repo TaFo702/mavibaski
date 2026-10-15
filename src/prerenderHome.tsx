@@ -9,6 +9,7 @@ import { AntetliPage } from './components/Antetli';
 import { KatalogPage } from './components/Katalog';
 import { KartvizitPage } from './components/Kartvizit';
 import { BlogPage } from './components/Blog';
+import { MakbuzFormlarPage } from './components/Makbuz';
 
 export function prerenderHome() {
   const HomeRouter = ({ children }: { children: React.ReactNode }) => (
@@ -72,4 +73,11 @@ export function prerenderKartvizit() {
     <MemoryRouter initialEntries={['/kartvizit']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={KartvizitRouter} KartvizitComponent={KartvizitPage} />);
+}
+
+export function prerenderTediyeMakbuzu() {
+  const TediyeRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/tediye-makbuzu']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={TediyeRouter} MakbuzComponent={MakbuzFormlarPage} />);
 }

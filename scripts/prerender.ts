@@ -50,12 +50,13 @@ async function prerender() {
   let bloknotlarContent: string;
   let katalogContent: string;
   let kartvizitContent: string;
+  let tediyeContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
@@ -63,6 +64,7 @@ async function prerender() {
     bloknotlarContent = prerenderBloknotlar();
     katalogContent = prerenderKatalog();
     kartvizitContent = prerenderKartvizit();
+    tediyeContent = prerenderTediyeMakbuzu();
     // Keep the published pricing section byte-for-byte. Only the surrounding
     // content comes from the existing React page; neither pricing renderer changes.
     const pricingSection = /<section\b[^>]*\bid="fiyat-tablosu"[^>]*>[\s\S]*?<\/section>/g;
@@ -78,6 +80,22 @@ async function prerender() {
       throw new Error('Kartvizit tax notice preservation failed: expected one existing notice.');
     }
     kartvizitContent = kartvizitContent.replace(pricingSection, () => protectedPricing[0] + taxNotices[0]);
+
+    // Use the existing React page and its unchanged pricing component for
+    // the full first-HTML output, keeping it identical to the hydration tree.
+    const pricingRootIndex = tediyeContent.indexOf('id="fiyat-tablosu"');
+    const renderedTableMatch = pricingRootIndex < 0
+      ? null
+      : /<table\b[\s\S]*?<\/table>/i.exec(tediyeContent.slice(pricingRootIndex));
+    if (!renderedTableMatch ||
+        (tediyeContent.match(/id="fiyat-tablosu"/g) || []).length !== 1) {
+      throw new Error('Tediye pricing preservation failed: expected one existing React price table.');
+    }
+    if (!renderedTableMatch[0].includes('Tediye Makbuzu 14 x 20 cm Yarım Boy Fiyat Listesi') ||
+        (tediyeContent.match(/<h1\b/g) || []).length !== 1 ||
+        !tediyeContent.includes('id="sss-bolumu"') || !tediyeContent.includes('Tediye makbuzları ne kadar süre saklanmalıdır?')) {
+      throw new Error('Tediye prerender validation failed: content or protected table did not match expectations.');
+    }
     zarfBlogContent = prerenderZarfBlog();
     antetliBlogContent = prerenderZarfBlog('/blog/antetli-kagit-baskisinda-80gr-1.hamur');
   } finally { fs.rmSync(rendererPath, { force: true }); }
@@ -127,6 +145,7 @@ async function prerender() {
           : pathname === '/bloknotlar' ? bloknotlarContent
           : pathname === '/kataloglar' ? katalogContent
           : pathname === '/kartvizit' ? kartvizitContent
+          : pathname === '/tediye-makbuzu' ? tediyeContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
           : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent : seo.bodyContent,
         seo.ogImage
