@@ -858,7 +858,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
         src: "/images/gider-makbuzu/numaratorlu-gider-makbuzu.webp",
         alt: "Numaratörlü gider makbuzu koçanı",
         title: "Numaratörlü Gider Makbuzu Örneği",
-        desc: "Takip kolaylığı sağlayan ardışık seri numaralarına sahip koçanlardır. Finansal denetimlerde ve muhasebe arşivlerinde evrak kaybı riskini tamamen ortadan kaldıran profesyonel numaralandırma sistemiyle üretilir."
+        desc: "Takip kolaylığı sağlayan ardışık seri numaralarına sahip koçanlardır. Ardışık numaralar, eksik belgelerin fark edilmesini ve muhasebe arşivlerinde evrak takibini kolaylaştırır."
       },
       {
         src: "/images/gider-makbuzu/gider-makbuzu-kocani.webp",
@@ -870,7 +870,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
         src: "/images/gider-makbuzu/gider-pusulasi-makbuzu-ornegi.webp",
         alt: "14x20 gider makbuzu",
         title: "14x20 Gider Makbuzu Baskı",
-        desc: "A5 yarım boy ölçüsüyle (14x20 cm) taşınabilirliği en yüksek modeldir. Hem geniş bir veri giriş alanı sunar hem de çekmece veya çantalarda fazla yer kaplamaz."
+        desc: "14x20 cm yarım boy ölçüsüyle kolay taşınabilir bir modeldir. Hem geniş bir veri giriş alanı sunar hem de çekmece veya çantalarda fazla yer kaplamaz."
       },
       {
         src: "/images/gider-makbuzu/numaratorlu-gider-makbuzu.webp",
@@ -881,7 +881,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     ],
     specifications: [
       { title: "Kağıt Türü", value: "Kendinden Karbonlu (Otokopili) Kağıt" },
-      { title: "Ölçü", value: "A5 Yarım Boy (14x20 cm) veya A4 Tam Boy" },
+      { title: "Ölçü", value: "14x20 cm Yarım Boy veya A4 Tam Boy" },
       { title: "Nüsha Sayısı", value: "1 Asıl + 1 Suret (2 Nüsha) veya 1 Asıl + 2 Suret (3 Nüsha)" },
       { title: "Numaratör", value: "Sıralı Ardışık Numaralı Baskı" },
       { title: "Cilt Standardı", value: "Her Ciltte 50 Yaprak Takımı (50 Set)" },

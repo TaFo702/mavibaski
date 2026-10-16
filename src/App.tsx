@@ -5050,7 +5050,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
       <Route path="/sigorta-policeleri" element={<MakbuzFormlarPage />} />
       <Route path="/tahsilat-makbuzu" element={<MakbuzFormlarPage />} />
       <Route path="/arac-kiralama" element={<MakbuzFormlarPage />} />
-      <Route path="/gider-makbuzu" element={<MakbuzFormlarPage />} />
+      <Route path="/gider-makbuzu" element={<MakbuzComponent />} />
       <Route path="/giris-bileti" element={<MakbuzFormlarPage />} />
       <Route path="/recete" element={<MakbuzComponent />} />
       <Route path="/tediye-makbuzu" element={<MakbuzComponent />} />
