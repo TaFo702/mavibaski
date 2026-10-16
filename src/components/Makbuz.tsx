@@ -2048,7 +2048,7 @@ export const MakbuzFormlarPage = () => {
                         Otokopili ve numaratörlü olarak üretilebilen özel tasarım gider makbuzu koçanları, kullanım alışkanlıklarına uygun şekilde hazırlanır. 1 asıl + 1 suret veya 1 asıl + 2 suret seçenekleriyle üretim yapılabilir. İstenilen başlangıç numarası uygulanabilir ve baskı öncesinde PDF prova onayı alınarak <strong>gider makbuzu baskısı</strong> çalışması kesinleştirilebilir.
                       </p>
                       <p>
-                        Logolu ve özel tasarımlı gider makbuzu baskıları, belge düzeninin korunmasına yardımcı olurken firmanıza özgü bir kullanım kolaylığı da sağlar. Profesyonel kalitede <strong>gider makbuzu bastırma</strong> ve hızlı sipariş süreçlerimizle firmanızın tüm matbu evrak ihtiyaçlarını karşılıyoruz.
+                        <strong>Firmaya özel gider makbuzu</strong> hazırlanırken açıklama, tutar, ödeme şekli ve imza alanları günlük kullanımınıza göre düzenlenebilir. Matbu gider makbuzu şablonunda firma bilgileriniz ve logo konumunuz baskı öncesinde kontrol edilir. Mevcut koçanınızın örneğini paylaşmanız, yeni baskının kullandığınız evrak düzeniyle uyumlu hazırlanmasını kolaylaştırır.
                       </p>
                     </>
                   ) : (

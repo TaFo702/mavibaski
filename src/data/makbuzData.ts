@@ -937,7 +937,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         q: "Gider Makbuzu Kaç Nüsha Olarak Basılır?",
-        a: "Gider makbuzları genellikle 1 Asıl + 1 Suret veya 1 Asıl + 2 Suret olarak üretilmektedir. Talebe göre farklı nüsha seçenekleri de hazırlanabilmektedir. Otokopili baskı sayesinde tüm nüshalar tek seferde doldurulabilir."
+        a: "İki nüshalı gider makbuzu 1 Asıl + 1 Suretten, üç nüshalı gider makbuzu ise 1 Asıl + 2 Suretten oluşur. Nüsha sayısını, işlemin ardından belgeyi saklayacak kişi veya birim sayısına göre belirleyebilirsiniz. Talebe göre farklı nüsha seçenekleri de hazırlanabilmektedir. Otokopili baskı sayesinde tüm nüshalar tek seferde doldurulabilir."
       },
       {
         q: "Gider Makbuzunda Hangi Bilgiler Bulunmalıdır?",
@@ -950,6 +950,14 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       {
         q: "Gider Makbuzu Fiyatları Nasıl Belirlenir?",
         a: "Gider makbuzu fiyatları; baskı adedi, nüsha sayısı, cilt miktarı, baskı özellikleri ve tasarım taleplerine göre değişiklik gösterebilir. Numaratörlü gider makbuzu ve otokopili gider makbuzu seçenekleri fiyatlandırmayı etkileyebilir."
+      },
+      {
+        q: "Toptan gider makbuzu basımı için toplu sipariş nasıl verilir?",
+        a: "Gider makbuzu baskı teklifi alırken her tasarımın cilt adedini, ölçüsünü, nüsha sayısını, baskı rengini ve başlangıç numarasını belirtin. Gider makbuzu toplu sipariş talebinizle birlikte logonuzu veya mevcut örneğinizi WhatsApp üzerinden iletebilirsiniz. Standart listedeki seçeneklerden farklı talepler ayrıca değerlendirilir; üretim öncesinde PDF prova onayınız alınır."
+      },
+      {
+        q: "Masraf makbuzu baskı ve harcama makbuzu baskı için örnek gönderebilir miyim?",
+        a: "Masraf makbuzu koçanı veya firma gider formu örneğinizi WhatsApp üzerinden paylaşabilirsiniz. Açıklama, tutar, ödeme şekli ve imza alanları ihtiyaçlarınıza göre düzenlenir; baskı öncesinde PDF prova onayınıza sunulur. Bu örnekler işletme içi kayıt amaçlı matbu gider makbuzu çalışması olarak değerlendirilir."
       },
       {
         q: "Gider Makbuzu Kaç Günde Teslim Edilir?",
