@@ -175,6 +175,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="dosyalar">')
         : pathname === '/bloknotlar'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="bloknotlar">')
+        : pathname === '/recete'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="recete">')
         : pathname === '/kataloglar'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="kataloglar">')
         : html;

@@ -442,8 +442,8 @@ const DynamicImageContainer = ({
         loading={isPriority ? "eager" : "lazy"}
         fetchPriority={isPriority ? "high" : "auto"}
         decoding="async"
-        width={1200}
-        height={800}
+        width={src.startsWith('/images/recete/') ? 930 : 1200}
+        height={src.startsWith('/images/recete/') ? 1117 : 800}
         referrerPolicy="no-referrer"
         onLoad={(e) => {
           const img = e.currentTarget;
@@ -500,6 +500,16 @@ export const MakbuzFormlarPage = () => {
   const currentDetails = MAKBUZ_DETAILS[pathId];
 
   const getRelatedProducts = (currentPathId: string) => {
+    if (currentPathId === 'recete') {
+      return [
+        { label: 'Klinik Antetli Kağıt', path: '/antetli', desc: 'Logolu kurumsal yazışma kağıdı' },
+        { label: 'Doktor Kartviziti', path: '/kartvizit', desc: 'Doktor ve klinik iletişim kartları' },
+        { label: 'Klinik Cepli Dosya', path: '/dosyalar', desc: 'Belge ve evrak sunum dosyaları' },
+        { label: 'Logolu Bloknot', path: '/bloknotlar', desc: 'Klinik içi not ve görüşme blokları' },
+        { label: 'Klinik Zarf Baskısı', path: '/zarf', desc: 'Kurumsal evrak gönderim zarfları' }
+      ];
+    }
+
     if (currentPathId === 'tahsilat-makbuzu') {
       return [
         { label: "Tediye Makbuzu", path: "/tediye-makbuzu", desc: "Nakit kasa çıkış makbuzu" },
@@ -1105,7 +1115,11 @@ export const MakbuzFormlarPage = () => {
             <div className="text-center sm:text-left">
               <h3 className="text-sm font-black text-slate-900 uppercase mb-0.5">Siparişinizi Nasıl Oluşturabilirsiniz?</h3>
               <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                Fiyat listesinden seçtiğiniz adedin yanında yer alan <strong>"Hemen Sipariş Ver"</strong> butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz. Siparişiniz için logo ve bilgilerinizi WhatsApp üzerinden göndermeniz yeterlidir. PDF prova onayınız alındıktan sonra üretim başlatılır.
+                {pathId === 'recete' ? (
+                  <>Fiyat tablosundaki <strong>"Hemen Sipariş Ver"</strong> düğmesi ürün seçim penceresini açar. Cilt adedini ve baskı rengini seçtikten sonra <strong>"WhatsApp ile İletişim"</strong> üzerinden teklif isteyebilir veya ürünü sepetinize ekleyebilirsiniz. PDF prova onayınızdan sonra baskıya başlanır.</>
+                ) : (
+                  <>Fiyat listesinden seçtiğiniz adedin yanında yer alan <strong>"Hemen Sipariş Ver"</strong> butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz. Siparişiniz için logo ve bilgilerinizi WhatsApp üzerinden göndermeniz yeterlidir. PDF prova onayınız alındıktan sonra üretim başlatılır.</>
+                )}
               </p>
             </div>
           </div>
@@ -1229,7 +1243,7 @@ export const MakbuzFormlarPage = () => {
 
           {/* GÖRSEL ALANI VE NÜSHA DETAYLARI - YAN YANA 3 SÜTUN */}
           <div className="mb-10">
-            <div className={`bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-2 ${pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu' ? '' : 'lg:grid-cols-3'} gap-6 md:gap-8 items-stretch font-medium`}>
+            <div className={`bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-2 ${pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu' || pathId === 'recete' ? '' : 'lg:grid-cols-3'} gap-6 md:gap-8 items-stretch font-medium`}>
               {/* SÜTUN 1: GÖRSEL */}
               <figure className="flex flex-col justify-center items-center bg-white p-3 border border-gray-150 rounded-2xl shadow-sm w-fit mx-auto">
                 <DynamicImageContainer 
@@ -1239,7 +1253,7 @@ export const MakbuzFormlarPage = () => {
                   isTallLayoutDefault={isTallLayout}
                   className="mb-2"
                   imgClassName="p-1 hover:scale-105"
-                  isPriority={true}
+                  isPriority={pathId !== 'recete'}
                 />
                 <figcaption className="text-gray-550 text-[11px] mt-2.5 text-center font-bold leading-normal max-w-[280px]">
                   {pathId === 'adisyon'
@@ -1249,6 +1263,7 @@ export const MakbuzFormlarPage = () => {
 
               
               {/* SÜTUN 2: BASKI TANITIMI */}
+              {pathId !== 'recete' && (
               <div className="space-y-4 flex flex-col justify-start">
                 <div>
                   <h2 className="text-lg font-black text-black uppercase tracking-tight mb-3">
@@ -1282,10 +1297,18 @@ export const MakbuzFormlarPage = () => {
                 </div>
               </div>
 
+              )}
+
               {/* SÜTUN 3: ASIL VE SURET DETAYLARI */}
               {pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && (
                 <div className="space-y-4 border-t border-gray-200 pt-4 md:border-t-0 md:pt-0 lg:border-l lg:pl-6 col-span-1 md:col-span-2 lg:col-span-1 flex flex-col justify-center gap-4">
-                  {pathId === 'adisyon' ? (
+                  {pathId === 'recete' ? (
+                    <div className="space-y-4 text-sm text-slate-700 leading-relaxed">
+                      <h2 className="text-lg font-black text-black">Reçete Kağıdı ve Cilt Seçenekleri</h2>
+                      <p>Listedeki ürün, 10 × 14 cm tek nüsha reçete koçanıdır. Numaratör baskısı liste fiyatına dahildir.</p>
+                      <p>Arşivde kopya bırakmak için otokopili seçenek; kolay koparma için tutkallı veya perforeli cilt tercih edilebilir. Bu seçeneklerin ölçü, nüsha ve yaprak sayısı teklif aşamasında belirlenir.</p>
+                    </div>
+                  ) : pathId === 'adisyon' ? (
                     <div className="space-y-3">
                       <div className="flex items-start gap-2.5">
                         <div className="w-2.5 h-2.5 bg-slate-500 rounded-full mt-1.5 shrink-0" />
@@ -2398,7 +2421,7 @@ export const MakbuzFormlarPage = () => {
             )}
 
             {/* Önem / Numaratör */}
-            {pathId !== "para-makbuzu" && pathId !== "gider-makbuzu" && pathId !== "tahsilat-makbuzu" && currentDetails.importanceTitle && currentDetails.importanceContent && (
+            {pathId !== "para-makbuzu" && pathId !== "gider-makbuzu" && pathId !== "tahsilat-makbuzu" && pathId !== "recete" && currentDetails.importanceTitle && currentDetails.importanceContent && (
               <div className="relative z-10 border-t border-gray-100 pt-8">
                 <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
                   {currentDetails.importanceTitle}
@@ -2433,7 +2456,7 @@ export const MakbuzFormlarPage = () => {
             )}
 
             {/* Sektörler */}
-            {pathId !== "para-makbuzu" && pathId !== 'adisyon' && pathId !== 'arac-kiralama' && pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'sozlesme-baski' && pathId !== 'sigorta-policeleri' && (
+            {pathId !== 'recete' && pathId !== "para-makbuzu" && pathId !== 'adisyon' && pathId !== 'arac-kiralama' && pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'sozlesme-baski' && pathId !== 'sigorta-policeleri' && (
               <div className="relative z-10 border-t border-gray-100 pt-8">
                 <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
                   {pathId === 'tediye-makbuzu'
@@ -3427,234 +3450,29 @@ export const MakbuzFormlarPage = () => {
 
             {pathId === 'recete' && (
               <>
-                {/* 1. Reçete Baskı Fiyatları ve Özellikleri */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Reçete Baskı Fiyatları ve Baskı Özellikleri
-                  </h2>
-                  <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
-                    <p>
-                      <strong>Reçete baskı fiyatları</strong> tablosu; 10 x 14 cm ölçüsünde, tek nüsha, 70–80 gr 1. hamur kağıda, 100 yapraklı ve 1 renk numaratörlü koçan içindir. <strong>A5 reçete baskısı</strong> ve otokopili seçenekler farklı özellikler taşıdığı için ayrıca tekliflendirilir.
-                    </p>
-                    <p>
-                      Sipariş fiyatları cilt adedi, kağıt türü, ölçü ve baskı rengine göre belirlenir. <strong>Özel ebat reçete koçanı</strong> ve <strong>otokopili reçete formu</strong> taleplerinde ölçü, nüsha ve yaprak sayısını ileterek teklif isteyebilirsiniz.
-                    </p>
-                    
-                    {/* Üst CTA Küçük Uyarı Kutusu */}
-                    <div className="my-3 p-3 bg-slate-100/90 border border-slate-200/80 rounded-xl text-[11px] md:text-xs text-slate-600 leading-relaxed">
-                      <strong className="text-slate-800 font-semibold">Önemli:</strong> Mavi Basım yalnızca basılı matbuat üretimi yapmaktadır. Resmî kullanım uygunluğu ve içerik sorumluluğu sipariş veren kuruma aittir.
-                    </div>
-
-                    {/* Dönüşüm Barları & Hızlı Eylem Butonları */}
-                    <div className="my-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
-                      <a
-                        href="https://wa.me/905366022373?text=Merhaba,%20re%C3%A7ete%20ko%C3%A7an%C4%B1%20bask%C4%B1%20fiyatlar%C4%B1%20hakk%C4%B1nda%20hemen%20teklif%20almak%20istiyorum."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-primary hover:bg-primary-dark text-white font-bold text-xs sm:text-sm py-3 px-3 rounded-xl text-center shadow-xs transition-colors flex items-center justify-center"
-                      >
-                        Hemen Teklif Al
-                      </a>
-                      <a
-                        href="https://wa.me/905366022373?text=Merhaba,%20re%C3%A7ete%20i%C3%A7in%20%C3%BCcretsiz%20PDF%20prova%20talep%20ediyorum."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm py-3 px-3 rounded-xl text-center shadow-xs transition-colors flex items-center justify-center"
-                      >
-                        PDF Prova Talep Et
-                      </a>
-                      <a
-                        href="https://wa.me/905366022373?text=Merhaba,%20re%C3%A7ete%20ko%C3%A7an%C4%B1%20numune%20g%C3%B6rseli%20istiyorum."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="border border-slate-300 bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs sm:text-sm py-3 px-3 rounded-xl text-center transition-colors flex items-center justify-center"
-                      >
-                        Numune Görsel İste                      </a>
-                      <a
-                        href="https://wa.me/905366022373?text=Merhaba,%20re%C3%A7ete%20ko%C3%A7an%C4%B1%20tek%20t%C4%B1kla%20sipari%C5%9F%20vermek%20istiyorum."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-primary hover:bg-primary-dark text-white font-bold text-xs sm:text-sm py-3 px-3 rounded-xl text-center shadow-xs transition-colors flex items-center justify-center"
-                      >
-                        Tek Tıkla Sipariş
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* YMYL & Yasal Bilgilendirme Notu */}
-                <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-4 my-2 text-xs md:text-sm text-slate-700 leading-relaxed font-medium">
-                  <span className="font-bold text-slate-900 block mb-1">⚖️ Yasal Bilgilendirme ve Kullanım Sorumluluğu:</span>
-                  Bu sayfada sunulan reçete koçanları; kurum içi takip, hasta bilgilendirme ve fiziki arşiv süreçlerine yönelik basılı matbuat ürünleridir (matbu evrak). Mavi Basım, yalnızca müşteri tarafından iletilen ve onaylanan içeriklerin basılı üretimini gerçekleştirmekte olup, basılan evrakların ilgili mevzuata uygunluğu ve kullanım amacı tamamen sipariş sahibi kurumun sorumluluğundadır.
-                </div>
-
-                {/* 2. Numaratörlü Reçete Koçanı Baskısı */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Numaratörlü Reçete Koçanı Baskısı
-                  </h2>
-                  <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
-                    <p>
-                      Kurumsal kayıt ve arşiv süreçlerinde düzen sağlamak amacıyla <strong>numaratörlü reçete koçanı</strong> baskısı tercih edilmektedir. Sıralı seri numarası basılan koçan yaprakları sayesinde evrak takibi kolaylaşır, kayıp veya atlanan sayfalar anında tespit edilir. Kliniklerin ve sağlık merkezlerinin kurum içi denetimlerini sorunsuz yürütmelerine imkan tanır.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 3. Otokopili Reçete Baskısı Özellikleri */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Otokopili Reçete Baskısı Özellikleri
-                  </h2>
-                  <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
-                    <p>
-                      Nüshalı kullanım gerektiren durumlar için <strong>otokopili reçete baskısı</strong> (kendinden kopyalı otokopi kağıdı) ideal çözümdür. Üst nüshaya yazılan bilgiler, ilave karbon kağıdına ihtiyaç duyulmadan alt nüshaya net bir şekilde aktarılır. Genellikle 2 nüsha (1 asıl + 1 kopya) olarak üretilen <strong>otokopili reçete koçanı</strong> seçeneklerinde bir nüsha kurum arşivinde saklanabilir.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 4. A5 ve Yarım Boy Reçete Ölçüleri */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    A5 ve Yarım Boy Reçete Ölçüleri
-                  </h2>
-                  <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
-                    <p>
-                      Bu sayfadaki fiyatlar <strong>10 x 14 cm reçete baskısı</strong> içindir. <strong>A5 reçete baskısı</strong> (14,8 x 21 cm), 14 x 20 cm ve 9 x 21 cm veya 10 x 20 cm gibi özel ölçüler ayrıca tekliflendirilir. Tutkallı bloknot veya perforeli cilt seçimi, sipariş öncesinde belirlenir.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 5. Doktor Reçetesi Baskısı ve Kullanım Alanları */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Doktor Reçetesi Baskısı ve Kullanım Alanları
-                  </h2>
-                  <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
-                    <p>
-                      Özel muayenehaneler, klinikler, poliklinikler, ağız ve diş sağlığı merkezleri ile fizik tedavi kurumları için kurumsal <strong>doktor reçetesi baskısı</strong> yapılmaktadır. Kurum logosu, doktor unvanı, iletişim ve adres bilgileri müşterinin ilettiği onaylı tasarıma uygun olarak basılır.
-                    </p>
-                    <p>
-                      <strong>Doktor reçetesi baskısı</strong>; özel muayenehaneler, diş hekimleri, poliklinikler ve sağlık merkezleri tarafından tercih edilen kurumsal matbuat ürünlerinden biridir. <strong>Reçete kağıdı baskısı</strong>, kurum logosu, unvan, iletişim bilgileri ve isteğe bağlı seri numarası ile kişiselleştirilebilir. Günümüzde <strong>e-reçete</strong> kullanımının yaygınlaşmasına rağmen, fiziki arşiv ve kurum içi süreçler için <strong>reçete kağıdı</strong> kullanımı devam etmektedir.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 5.1 Doktor Promosyon Reçetesi ve Özel Ölçü Baskılar */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Doktor Promosyon Reçetesi ve Özel Ölçü Baskılar
-                  </h2>
-                  <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
-                    <p>
-                      <strong>Doktor promosyon reçetesi</strong>; ilaç firmaları, klinikler ve sağlık kuruluşları tarafından tercih edilen özel ölçülü matbuat ürünleridir. Standart A5 ve yarım boy ölçülerin yanı sıra 9x21 cm ve 10x20 cm gibi <strong>slim reçete</strong> ebatlarında da üretilebilmektedir. Kurum logosu, iletişim bilgileri ve özel tasarım detayları ile hazırlanabilir.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 6. Reçete Baskı Fiyatları Nasıl Belirlenir? */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Reçete Baskı Fiyatları Nasıl Belirlenir?
-                  </h2>
-                  <div className="text-slate-650 text-sm md:text-base leading-relaxed font-medium space-y-4">
-                    <p>
-                      Reçete baskı fiyatları; sipariş adedi, kağıt türü, baskı rengi ve numaratör tercihine göre değişmektedir. Mavi Basım olarak <strong>A5 reçete baskısı</strong>, <strong>yarım boy reçete baskısı</strong>, <strong>numaratörlü reçete koçanı</strong> ve <strong>otokopili reçete baskısı</strong> seçenekleri için sipariş özelliklerine göre teklif hazırlıyoruz. Özellikle <strong>doktor reçetesi baskısı</strong> ve klinik reçete koçanı ihtiyaçlarında uygun maliyetli çözümler sağlıyoruz.
-                    </p>
-                    <p>
-                      <strong>Reçete koçanı fiyatları</strong> belirlenirken cilt sayısı, otokopili nüsha sayısı ve özel tasarım talepleri dikkate alınmaktadır. İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktası üzerinden sipariş ayrıntıları ve gönderim planı paylaşılır.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 3. Reçete Baskısı Sipariş Süreci */}
-                <div id="uretim-sureci" className="scroll-mt-24 relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Reçete Baskısı Sipariş ve Üretim Süreci
-                  </h2>
-                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
-                    Kurumsal matbu evrak siparişlerinizi tamamlamak için 4 adımlı standart matbaa sürecini uyguluyoruz:
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 relative">
-                      <span className="text-xs font-black text-primary bg-primary/10 px-2.5 py-1 rounded-full inline-block mb-2">1. ADIM</span>
-                      <h3 className="font-bold text-slate-900 text-sm mb-1">Tasarım & Bilgi İletimi</h3>
-                      <p className="text-xs text-slate-600 leading-relaxed">Logo, unvan ve iletişim bilgilerinizi WhatsApp veya e-posta ile tarafımıza iletin.</p>
-                    </div>
-                    <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 relative">
-                      <span className="text-xs font-black text-primary bg-primary/10 px-2.5 py-1 rounded-full inline-block mb-2">2. ADIM</span>
-                      <h3 className="font-bold text-slate-900 text-sm mb-1">Ücretsiz PDF Prova</h3>
-                      <p className="text-xs text-slate-600 leading-relaxed">Grafik ekibimizce hazırlanan dizgi ve yerleşim provası onayınıza sunulur.</p>
-                    </div>
-                    <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 relative">
-                      <span className="text-xs font-black text-primary bg-primary/10 px-2.5 py-1 rounded-full inline-block mb-2">3. ADIM</span>
-                      <h3 className="font-bold text-slate-900 text-sm mb-1">Matbaa İmalatı</h3>
-                      <p className="text-xs text-slate-600 leading-relaxed">Onaylanan tasarım hamur veya otokopili kağıda basılır, ciltleme ve numaratör işlemleri yapılır.</p>
-                    </div>
-                    <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 relative">
-                      <span className="text-xs font-black text-primary bg-primary/10 px-2.5 py-1 rounded-full inline-block mb-2">4. ADIM</span>
-                      <h3 className="font-bold text-slate-900 text-sm mb-1">Paketleme ve Gönderim</h3>
-                      <p className="text-xs text-slate-600 leading-relaxed">Özenle paketlenen koçanlar Türkiye'nin tüm illerine doğrudan kargolanır.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 4. Sağlık Kuruluşları İçin Diğer Baskı Ürünleri */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Kurumsal Diğer Matbu Baskı Ürünleri
-                  </h2>
-                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-4">
-                    Kurumunuzun diğer matbuat ihtiyaçları için ilgili baskı ürünlerini inceleyebilirsiniz:
-                  </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-                    <Link to="/antetli" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
-                      <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Antetli Kağıt</span>
-                    </Link>
-                    <Link to="/kartvizit" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
-                      <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Klinik Kartvizit</span>
-                    </Link>
-                    <Link to="/dosyalar" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
-                      <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Cepli Dosya</span>
-                    </Link>
-                    <Link to="/bloknotlar" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
-                      <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Tutkallı Bloknot</span>
-                    </Link>
-                    <Link to="/zarf" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
-                      <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Diplomat Zarf</span>
-                    </Link>
-                    <Link to="/brosur" className="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-primary hover:bg-white transition-all text-center group flex items-center justify-center">
-                      <span className="text-xs font-bold text-slate-800 group-hover:text-primary transition-colors">Broşür</span>
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Önemli Bilgilendirme Kutusu (Footer Öncesi) */}
-                <div className="relative z-10 border-t border-gray-100 pt-6">
-                  <div className="p-4 rounded-2xl bg-slate-100/80 border border-slate-200 text-xs md:text-sm text-slate-700 leading-relaxed">
-                    <strong className="text-slate-900 block mb-1">📌 Önemli Bilgilendirme:</strong>
-                    Bu ürün, basılı matbuat kapsamında üretilmektedir. Mavi Basım; içerik oluşturma, düzenleme veya resmi kullanım onayı hizmeti sunmamaktadır. Siparişe konu tüm içeriklerin hukuki ve idari sorumluluğu sipariş veren kuruma aittir.
-                  </div>
-                </div>
-
-                {/* EEAT & Editör Bilgisi */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-600">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 text-primary font-black text-sm flex items-center justify-center shrink-0">
-                        MB
-                      </div>
-                      <div>
-                        <div className="font-bold text-slate-900 text-sm">Mavi Basım Matbaa İçerik Ekibi</div>
-                        <div className="text-[11px] text-slate-500">Baskı özellikleri ve sipariş süreci hakkında Mavi Basım tarafından hazırlanmıştır.</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4 text-[11px] font-semibold text-slate-500 shrink-0">
-                      <span>Son Güncelleme: 16 Ekim 2026</span>
-                      <span>•</span>
-                      <span>Topkapı 2. Matbaacılar Sitesi</span>
-                    </div>
-                  </div>
-                </div>
+                <section className="border-t border-gray-100 pt-8 space-y-4">
+                  <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight">A5 ve Özel Ölçü Reçete Baskısı</h2>
+                  <p className="text-sm md:text-base text-slate-650 leading-relaxed">Fiyat listesi 10 × 14 cm tek nüsha ürün içindir. A5 (14,8 × 21 cm), 14 × 20 cm, 9 × 21 cm ve 10 × 20 cm reçete kağıdı için ayrıca teklif hazırlanır. Doktor ve kliniklere yönelik logolu veya promosyon amaçlı çalışmalarda kağıt, baskı rengi, nüsha ve cilt tercihinizi sipariş öncesinde iletebilirsiniz.</p>
+                </section>
+                <section id="uretim-sureci" className="scroll-mt-24 border-t border-gray-100 pt-8 space-y-4">
+                  <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight">Reçete Baskısı Sipariş ve Üretim Süreci</h2>
+                  <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {[
+                      { title: 'Bilgi ve Dosya İletimi', text: 'Ölçü, cilt adedi, nüsha, baskı rengi ve logonuzu iletin.' },
+                      { title: 'Teklif ve PDF Prova', text: 'Teklif ve takvim paylaşılır. Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir.' },
+                      { title: 'Dijital Onay ve Baskı', text: 'Onaylanan tasarımla baskı, numaratör ve ciltleme işlemlerine geçilir.' },
+                      { title: 'Paketleme ve Gönderim', text: 'Gönderim bilgileri ve teslim planı sipariş özelliklerine göre paylaşılır.' }
+                    ].map((step, index) => (
+                      <li key={step.title} className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+                        <span className="text-xs font-black text-primary">{index + 1}. ADIM</span>
+                        <h3 className="font-bold text-slate-900 text-sm mt-2 mb-1">{step.title}</h3>
+                        <p className="text-xs text-slate-600 leading-relaxed">{step.text}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </section>
+                <p className="p-4 rounded-2xl bg-slate-100 border border-slate-200 text-xs text-slate-700 leading-relaxed">Bu sayfa basılı matbuat hizmetini tanıtır. İçerik ve resmi kullanım uygunluğu sipariş veren kuruma aittir. Grafik desteği var; dijital onay alınmadan baskıya başlanmaz.</p>
+                <p className="text-xs text-slate-500">Mavi Basım · İçerik güncellemesi: 16 Ekim 2026</p>
               </>
             )}
 

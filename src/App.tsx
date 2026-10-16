@@ -508,6 +508,9 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
       .toLowerCase();
   };
 
+  const isReceteProduct = normalizeForSearch(category).includes('recete') ||
+    normalizeForSearch(product?.code || '').includes('recete');
+
   const isMakbuzVeForm = (() => {
     const normCategory = normalizeForSearch(category);
     const normProductTitle = product ? normalizeForSearch(product.code || product.desc || "") : "";
@@ -1034,17 +1037,17 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
                 <div className="bg-emerald-50/80 border border-emerald-200/80 rounded-2xl p-4 text-left space-y-2 shadow-sm">
                   <div className="flex items-center gap-2 text-xs font-black text-emerald-900 uppercase tracking-tight">
                     <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
-                    <span>Aynı Gün Tasarım Onayı</span>
+                    <span>{isReceteProduct ? 'Baskı Öncesi PDF Prova Onayı' : 'Aynı Gün Tasarım Onayı'}</span>
                   </div>
                   <p className="text-[11px] text-emerald-800 font-semibold leading-relaxed pl-6">
-                    Onay gerektiren siparişlerde PDF prova aynı gün iletilir.
+                    {isReceteProduct ? 'Dijital onay alınmadan baskıya başlanmaz. Prova takvimi sipariş özelliklerine göre paylaşılır.' : 'Onay gerektiren siparişlerde PDF prova aynı gün iletilir.'}
                   </p>
                   <div className="flex items-center gap-2 text-xs font-black text-slate-900 uppercase tracking-tight pt-2 border-t border-emerald-200/60">
                     <Truck size={16} className="text-primary shrink-0" />
-                    <span>Üretim Süresi: Ortalama 3–4 iş günü</span>
+                    <span>{isReceteProduct ? 'Üretim ve Teslim Süresi' : 'Üretim Süresi: Ortalama 3–4 iş günü'}</span>
                   </div>
                   <p className="text-[11px] text-slate-600 font-semibold pl-6">
-                    (Ürün grubuna ve adede göre değişiklik gösterebilir.)
+                    {isReceteProduct ? 'Ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.' : '(Ürün grubuna ve adede göre değişiklik gösterebilir.)'}
                   </p>
                   <div className="pt-2 border-t border-emerald-200/60">
                     <p className="text-[11px] text-slate-700 font-bold leading-relaxed flex items-start gap-1.5">

@@ -16,7 +16,8 @@ if ((container.dataset.prerendered === 'home' && path === '/') ||
     (container.dataset.prerendered === 'antetli' && path === '/antetli') ||
     (container.dataset.prerendered === 'dosyalar' && path === '/dosyalar') ||
     (container.dataset.prerendered === 'bloknotlar' && path === '/bloknotlar') ||
-    (container.dataset.prerendered === 'kataloglar' && path === '/kataloglar')) {
+    (container.dataset.prerendered === 'kataloglar' && path === '/kataloglar') ||
+    (container.dataset.prerendered === 'recete' && path === '/recete')) {
   hydrateRoot(container, application);
 } else {
   createRoot(container).render(application);

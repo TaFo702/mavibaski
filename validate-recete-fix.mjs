@@ -55,4 +55,17 @@ for (const image of main.querySelectorAll('img[src^="/images/recete/"]')) {
 for (const href of ['/antetli', '/dosyalar', '/bloknotlar', '/zarf']) {
   assert.ok(main.querySelector(`a[href="${href}"]`));
 }
-console.log('PASS: Reçete full HTML, exact table preservation, anchors, metadata, visible FAQ/schema parity and existing images.');
+assert.equal(doc.querySelector('#root').dataset.prerendered, 'recete');
+assert.ok(main.textContent.includes('düğmesi ürün seçim penceresini açar'));
+assert.ok(!main.textContent.includes('butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz'));
+assert.ok(!main.textContent.includes('Reçete Sektörel Kullanım Dağılımı'));
+assert.ok(!main.textContent.includes('Ürün Öne Çıkan Özellikleri'));
+assert.ok(!main.textContent.includes('14x20 cm garson adisyonu'));
+assert.equal([...main.querySelectorAll('h2')].filter(h => h.textContent.includes('Reçete Koçanı Teknik Özellikleri')).length, 1);
+assert.equal([...main.querySelectorAll('h2')].filter(h => h.textContent.includes('Reçete Koçanı Baskısının Kullanıldığı Sektörler')).length, 1);
+assert.ok(main.querySelector('a[href="/kartvizit"]'));
+for (const image of main.querySelectorAll('img[src^="/images/recete/"]')) {
+  assert.equal(image.getAttribute('width'), '930');
+  assert.equal(image.getAttribute('height'), '1117');
+}
+console.log('PASS: Reçete full HTML, exact table preservation, hydration, unique content, order guidance, related products, FAQ/schema parity and image dimensions.');
