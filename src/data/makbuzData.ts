@@ -1114,7 +1114,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { q: "Reçete koçanları otokopili hazırlanabilir mi?", a: "Evet, isteğe bağlı olarak tek nüsha 1. hamur kağıda veya kendinden kopyalı çift nüsha otokopili kağıda basılabilmektedir." },
       { q: "Minimum sipariş adedi nedir?", a: "Reçete koçanı baskısında minimum üretim miktarı 5 cilttir." },
       { q: "Reçete koçanları hangi ölçülerde hazırlanır?", a: "Bu sayfadaki fiyat listesi 10 x 14 cm reçete içindir. A5 (14,8 x 21 cm), 14 x 20 cm ve özel ölçüler için ayrıca teklif isteyebilirsiniz." },
-      { q: "Reçete kağıdı örneği gönderebilir misiniz?", a: "Evet, tasarım sürecinde kurumunuza özel hazırlanan reçete kağıdı örneği ve şablonu dijital olarak onayınıza sunulmaktadır." },
+      { q: "Reçete kağıdı örneği gönderebilir misiniz?", a: "Evet, baskı siparişinizin tasarım sürecinde kurumunuza özel reçete kağıdı örneği ve PDF prova dijital onayınıza sunulur. Sayfadaki görseller baskı örneklerini gösterir; PDF prova siparişinizin baskı öncesi kontrolü için hazırlanır." },
       { q: "Doktor reçetesi baskısında hangi bilgiler bulunmalıdır?", a: "Doktor reçetesi baskısında kurum/doktor unvanı, iletişim ve adres bilgileri, tarih, hasta adı-soyadı, tanı/reçete alanı ve imza/kaşe bölümü yer alır." },
       { q: "Reçete baskısında özel ölçü üretimi yapılabilir mi?", a: "Evet, 10 x 14 cm fiyat listesi dışındaki A5, 14 x 20 cm, 9 x 21 cm ve 10 x 20 cm gibi ölçüler için ayrıca teklif hazırlanır." },
       { q: "Doktor promosyon reçetesi hangi ölçülerde basılır?", a: "Doktor promosyon reçeteleri genellikle 9x21 cm, 10x20 cm, 14x20 cm ve A5 (14,8x21 cm) ölçülerinde üretilmektedir." },

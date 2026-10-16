@@ -1121,6 +1121,11 @@ export const MakbuzFormlarPage = () => {
                   <>Fiyat listesinden seçtiğiniz adedin yanında yer alan <strong>"Hemen Sipariş Ver"</strong> butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz. Siparişiniz için logo ve bilgilerinizi WhatsApp üzerinden göndermeniz yeterlidir. PDF prova onayınız alındıktan sonra üretim başlatılır.</>
                 )}
               </p>
+              {pathId === 'recete' && (
+                <p className="text-xs text-slate-600 font-medium leading-relaxed mt-2">
+                  Toptan reçete kağıdı baskısı veya birden fazla doktor ve klinik için logolu koçan taleplerinizde, her tasarımın cilt adedini ve baskı özelliklerini ayrı ayrı iletebilirsiniz. Standart listedeki seçeneklerden farklı talepler için mevcut WhatsApp hattından fiyat teklifi isteyebilirsiniz.
+                </p>
+              )}
             </div>
           </div>
 
@@ -2015,7 +2020,7 @@ export const MakbuzFormlarPage = () => {
                       Reçete Örneği PDF ve Boş Reçete Şablonları
                     </h4>
                     <p className="text-gray-650 text-sm md:text-base font-medium leading-relaxed">
-                      Kurumunuza özel hazırlanan <strong>boş reçete örneği</strong> ve <strong>reçete örneği PDF</strong> dosyaları dijital baskı öncesinde tarafınıza iletilerek taslak onayı alınmaktadır.
+                      <strong>Reçete örneği PDF</strong> dosyası, baskı siparişinizin tasarım ve prova aşamasında kurum bilgilerinize göre hazırlanır. Dosya, içerik ve yerleşim kontrolü için dijital onayınıza sunulur. Mevcut Word, PDF veya eski reçete örneğinizi de baskıya uygunluk kontrolü için iletebilirsiniz.
                     </p>
                   </div>
                 </div>
@@ -3459,6 +3464,7 @@ export const MakbuzFormlarPage = () => {
                 <section className="border-t border-gray-100 pt-8 space-y-4">
                   <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight">A5 ve Özel Ölçü Reçete Baskısı</h2>
                   <p className="text-sm md:text-base text-slate-650 leading-relaxed">Fiyat listesi 10 × 14 cm tek nüsha ürün içindir. A5 (14,8 × 21 cm), 14 × 20 cm, 9 × 21 cm ve 10 × 20 cm reçete kağıdı için ayrıca teklif hazırlanır. Doktor ve kliniklere yönelik logolu veya promosyon amaçlı çalışmalarda kağıt, baskı rengi, nüsha ve cilt tercihinizi sipariş öncesinde iletebilirsiniz.</p>
+                  <p className="text-sm md:text-base text-slate-650 leading-relaxed">İlaç firması reçete baskısı, doktorlara dağıtılan promosyon matbuat çalışmalarını da kapsar. İlaç mümessilleri için hazırlanan firma logolu reçete kağıtlarında marka görselleri ile yazı alanı, ilettiğiniz tasarıma göre düzenlenir. İlaç markalı tanıtım çalışmalarında kullanılacak logo, görsel ve metinleri sipariş veren kurum paylaşır; baskı öncesinde yerleşim PDF prova üzerinden onaya sunulur.</p>
                 </section>
                 <section id="uretim-sureci" className="scroll-mt-24 border-t border-gray-100 pt-8 space-y-4">
                   <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight">Reçete Baskısı Sipariş ve Üretim Süreci</h2>
