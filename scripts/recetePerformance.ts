@@ -68,8 +68,6 @@ export function optimizeProductHTML(
     });
   if (!optimized.includes(`data-${product}-critical-css`)) throw new Error(`${product} stylesheet not found.`);
 
-  if (product === 'arac-kiralama') return optimized.replaceAll('display=swap', 'display=optional');
-
   // Paint the server-rendered first screen before executing the application.
   // Preload its unchanged module so this does not introduce a network waterfall.
   let entry = '';
@@ -79,7 +77,7 @@ export function optimizeProductHTML(
       return `<link rel="modulepreload" crossorigin href="${href}" />`;
     });
   if (!entry) throw new Error('Reçete module entry not found.');
-  const bootstrap = `<script data-recete-bootstrap>(()=>{const start=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>import(${JSON.stringify(entry)})));if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start()})();</script>`;
+  const bootstrap = `<script data-${product}-bootstrap>(()=>{const start=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>import(${JSON.stringify(entry)})));if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start()})();</script>`;
   optimized = optimized.replace('</body>', `${bootstrap}</body>`);
   // Optional font loading avoids replacing the LCP text with a late web font.
   return optimized.replaceAll('display=swap', 'display=optional');
