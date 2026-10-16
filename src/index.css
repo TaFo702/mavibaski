@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
+/* Improve reçete text contrast without changing the protected price area. */
+#root:has(.recete-page) header,
+.recete-page {
+  --color-primary: #08769e;
+  --color-secondary: #08769e;
+}
+
+.recete-page #fiyat-tablosu {
+  --color-primary: #29ADDF;
+  --color-secondary: #29ADDF;
+}
+
+.recete-page .text-slate-400:not(#fiyat-tablosu *) {
+  color: #64748b;
+}
+
+#root:has(.recete-page) a[class*="bg-[#25D366]"]:not(#fiyat-tablosu *) {
+  color: #123525;
+}
+
+#root:has(.recete-page) a[class*="bg-[#25D366]"]:not(#fiyat-tablosu *):hover {
+  color: white;
+  background-color: #087a50;
+}
+
 html {
   scroll-behavior: smooth;
 }

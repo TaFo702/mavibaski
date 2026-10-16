@@ -686,7 +686,7 @@ export const MakbuzFormlarPage = () => {
     };
 
     return (
-      <div className="bg-white min-h-screen pb-20">
+      <div className={`bg-white min-h-screen pb-20${pathId === 'recete' ? ' recete-page' : ''}`}>
         {pathId !== 'recete' && pathId !== 'tediye-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && (
           <Helmet>
             <title>{pageTitleForSEO}</title>
