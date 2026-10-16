@@ -27,6 +27,11 @@ export interface MakbuzDetail {
   faqList: Array<{ q: string; a: string }>;
   extraSampleTitle?: string;
   extraSampleContent?: string[];
+  deliveryForm?: {
+    title: string;
+    description: string;
+    fields: Array<{ title: string; desc: string }>;
+  };
   orderProcessTitle?: string;
   orderProcessItems?: Array<{ step: string; title: string; desc: string }>;
   thingsToConsiderTitle?: string;
@@ -758,8 +763,8 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       {
         src: "/images/arac-kiralama/rent-a-car-sozlesmesi-baski.webp",
         alt: "İmzalı rent a car sözleşmesi ve otokopili sarı sureti",
-        title: "Rent A Car Sözleşmesi Baskı Örneği",
-        desc: "İki nüshalı otokopili rent a car sözleşmesi koçanı baskı örneği."
+        title: "Rent A Car Sözleşmesi Örneği",
+        desc: "Firma logosu ve sözleşme metniyle özelleştirilebilen iki nüshalı otokopili koçanın basılı örneği."
       },
       {
         src: "/images/arac-kiralama/arac-kiralama-formu-ornegi.webp",
@@ -786,7 +791,18 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { title: "Teslim Süresi", value: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." }
     ],
     whatIsTitle: "Araç Kiralama Sözleşmesi ve Formu Nedir?",
-    whatIsContent: "Araç kiralama sözleşmesi, kiralama koşullarını; araç teslim tutanağı ise teslim ve iade anındaki araç bilgilerini kaydetmek için kullanılan matbu formlardır. Otokopili kâğıt, üst nüshaya yazılan bilgilerin alt nüshalara aktarılmasını sağlar. Firma bilgileri ve müşteri tarafından iletilen sözleşme metni, baskı öncesinde PDF prova üzerinden onaya sunulur.",
+    whatIsContent: "Araç kiralama sözleşmesi, kiralama koşullarını; araç teslim tutanağı ise teslim ve iade anındaki araç bilgilerini kaydetmek için kullanılan matbu formlardır. Oto kiralama sözleşmesi veya araç kiralama kontratı olarak kullanılan evraklar, firmanızın ilettiği sözleşme metni ve firma bilgileriyle baskıya hazırlanır. Otokopili kâğıt, üst nüshaya yazılan bilgilerin alt nüshalara aktarılmasını sağlar. Metin ve alanların yerleşimi, baskı öncesinde PDF prova üzerinden onaya sunulur.",
+    deliveryForm: {
+      title: "Araç Teslim Alma Formu ve İade Kayıt Alanları",
+      description: "Rent a car araç teslim tutanağı baskısında, aracın çıkış ve dönüş bilgileri karşılaştırılabilecek şekilde düzenlenir. Araç teslim alma tutanağı için kullanılacak alanlar, firmanızın mevcut formu ve kayıt ihtiyacına göre belirlenir.",
+      fields: [
+        { title: "Araç ve Form Bilgileri", desc: "Plaka, marka, model ve formun takip numarası için ayrılan alanlar, kaydın ilgili araç ve kiralama dosyasıyla eşleştirilmesini kolaylaştırır." },
+        { title: "Teslim ve İade Tarihleri", desc: "Aracın müşteriye verildiği ve geri alındığı tarih ile saat, çıkış ve dönüş için ayrı alanlarda gösterilebilir." },
+        { title: "Kilometre ve Yakıt Seviyesi", desc: "Teslimde ve iadede kaydedilen kilometre ile yakıt seviyesi, aynı form üzerinde yan yana kontrol edilebilecek şekilde düzenlenebilir." },
+        { title: "Araç Hasar Tespit Şeması", desc: "Araç gövde çizimi, gözlemlenen çizik, göçük ve diğer kusurların teslim ve iade aşamalarında işaretlenmesi için kullanılır. Şemanın yerleşimi mevcut tasarımınıza göre hazırlanır." },
+        { title: "Teslim Alan ve Teslim Eden", desc: "İşlemi yapan tarafların ad, açıklama ve imza alanları, firmanızın kullandığı kayıt düzenine göre baskı tasarımına eklenebilir." }
+      ]
+    },
     whoUsesTitle: "Araç Kiralama Formlarını Kimler Tercih Eder?",
     whoUsesItems: ["Oto Kiralama Şirketleri (Rent a Car)", "Lüks ve Ekonomik Araç Filoları", "Motosiklet ve Karavan Kiralama Ofisleri", "Yat ve Tekne Kiralama Acenteleri", "Operasyonel Filo Kiralama Firmaları"],
     usageAreasTitle: "Araç Kiralama Belgelerinin Kullanım Alanları",
@@ -830,7 +846,10 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { q: "Araç kiralama sözleşmeleri özel tasarlanabilir mi?", a: "Evet, firmanızın ihtiyaçlarına uygun özel tasarımlı araç kiralama sözleşmeleri hazırlanabilmektedir." },
       { q: "Araç kiralama sözleşmeleri hangi kağıda basılmaktadır?", a: "Alt nüshalara bilgilerin net şekilde aktarılabilmesi için kaliteli otokopili kağıtlar kullanılmaktadır." },
       { q: "İstanbul dışına gönderim yapıyor musunuz?", a: "Evet, araç kiralama sözleşmesi siparişleri Türkiye'nin tüm il ve ilçelerine kargo ile gönderilmektedir." },
-      { q: "Araç kiralama sözleşmeleri kaç günde basılır?", a: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." }
+      { q: "Araç kiralama sözleşmeleri kaç günde basılır?", a: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." },
+      { q: "Araç kira kontratı tasarımımı baskı için gönderebilir miyim?", a: "Evet. Oto kira sözleşmesi olarak kullandığınız mevcut metni veya eski basılı örneği iletebilirsiniz. Firma logosu, iletişim bilgileri ve kayıt alanları baskıya uygun yerleşime alınır; hazırlanan PDF prova onayınıza sunulur." },
+      { q: "Kiralık araç teslim tutanağı ve iade kayıtları aynı formda yer alabilir mi?", a: "Evet. Kiralık araç teslim formu üzerinde çıkış ve dönüş için ayrı tarih, kilometre, yakıt ve hasar alanları düzenlenebilir. Araç iade formu ile teslim kaydı aynı baskıda kullanılacaksa, alanların yerleşimi PDF provada birlikte kontrol edilir." },
+      { q: "Galerideki rent a car sözleşmesi örneği baskıda kullanılacak metni gösterir mi?", a: "Galeri, basılı formun görünümünü ve bilgi alanlarını gösterir. Baskıda yer alacak sözleşme metni firmanız tarafından iletilir; logo, firma bilgileri ve metin yerleşimi düzenlendikten sonra PDF prova üzerinden onayınız alınır." }
     ]
   },
   "gider-makbuzu": {
