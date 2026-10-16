@@ -4051,6 +4051,11 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
 
     let extraHead = `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n`;
     extraHead += `  <script type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;
+    if (p === '/gider-makbuzu') {
+      // Actual dimensions of the existing share image; no image or layout changes.
+      extraHead += '  <meta property="og:image:width" content="1536" />\n';
+      extraHead += '  <meta property="og:image:height" content="1024" />\n';
+    }
     for (const imgSchema of imageObjectSchemas) {
       extraHead += `  <script type="application/ld+json">${JSON.stringify(imgSchema)}</script>\n`;
     }

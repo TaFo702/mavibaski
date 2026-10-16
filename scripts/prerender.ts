@@ -53,12 +53,13 @@ async function prerender() {
   let kartvizitContent: string;
   let tediyeContent: string;
   let receteContent: string;
+  let giderContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
@@ -68,6 +69,12 @@ async function prerender() {
     kartvizitContent = prerenderKartvizit();
     tediyeContent = prerenderTediyeMakbuzu();
     receteContent = prerenderRecete();
+    giderContent = prerenderGiderMakbuzu();
+    if ((giderContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
+        !giderContent.includes('id="sss-bolumu"') ||
+        !giderContent.includes('Gider Makbuzu Ürün Fotoğraf Galerisi')) {
+      throw new Error('Gider prerender validation failed: existing table, gallery or FAQ missing.');
+    }
     // Keep the published pricing section byte-for-byte. Only the surrounding
     // content comes from the existing React page; neither pricing renderer changes.
     const pricingSection = /<section\b[^>]*\bid="fiyat-tablosu"[^>]*>[\s\S]*?<\/section>/g;
@@ -148,6 +155,7 @@ async function prerender() {
           : pathname === '/bloknotlar' ? bloknotlarContent
           : pathname === '/kataloglar' ? katalogContent
           : pathname === '/kartvizit' ? kartvizitContent
+          : pathname === '/gider-makbuzu' ? giderContent
           : pathname === '/recete' ? receteContent
           : pathname === '/tediye-makbuzu' ? tediyeContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
@@ -176,6 +184,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="dosyalar">')
         : pathname === '/bloknotlar'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="bloknotlar">')
+        : pathname === '/gider-makbuzu'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="gider-makbuzu">')
         : pathname === '/recete'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="recete">')
         : pathname === '/kataloglar'

@@ -714,15 +714,7 @@ export const MakbuzFormlarPage = () => {
           </Helmet>
         )}
         
-        {pathId === 'gider-makbuzu' && (
-  <Helmet>
-    {imageObjectSchemas.map((imgSchema, idx) => (
-      <script key={`gider-image-${idx}`} type="application/ld+json">
-        {JSON.stringify(imgSchema)}
-      </script>
-    ))}
-  </Helmet>
-)}{/* Breadcrumb Alanı */}
+        {/* Breadcrumb Alanı */}
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-6">
           <nav className="text-xs font-bold text-gray-500 uppercase tracking-tight flex items-center gap-1.5" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-primary transition-colors">Ana Sayfa</Link>
@@ -870,7 +862,7 @@ export const MakbuzFormlarPage = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                 <span className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight">İçindekiler (Hızlı Gezinme)</span>
               </div>
-              {pathId !== 'recete' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
+              {pathId !== 'recete' && pathId !== 'gider-makbuzu' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
             </div>
             <nav className={`grid ${(pathId === 'para-makbuzu' || pathId === 'arac-kiralama') ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'} gap-2 text-xs font-bold text-slate-700`} aria-label="Sayfa İçindekiler Navigasyonu">
               <a 
@@ -1072,7 +1064,7 @@ export const MakbuzFormlarPage = () => {
                   </div>
                 </div>
 
-                <div className="p-6 bg-slate-50 border border-slate-150 rounded-[2rem] shadow-sm">
+                <div id={pathId === 'gider-makbuzu' ? 'nasil-doldurulur' : undefined} className="p-6 bg-slate-50 border border-slate-150 rounded-[2rem] shadow-sm">
                   <h2 className="text-base md:text-lg font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
                     <span className="w-1.5 h-6 bg-secondary rounded-full" />
                     {pathId === 'gider-makbuzu' ? 'Gider Makbuzu Nasıl Doldurulur?' : 'Tahsilat Makbuzu Nasıl Doldurulur?'}
@@ -1223,7 +1215,7 @@ export const MakbuzFormlarPage = () => {
                       Farklı sektörlerde kullanılan <strong>gider makbuzu örnekleri</strong>, firma ihtiyaçlarına göre tasarlanabilir. Şirket unvanı, iletişim bilgileri ve logo gibi firma bilgilerinin yer aldığı <strong>logolu gider makbuzu</strong> tasarımları, hem resmiyet kazandırır hem de marka bütünlüğünü her işlemde korumanıza yardımcı olur. Bu sayede işletmenizin <strong>gider makbuzu baskı</strong> gereksinimleri kurumsal bir standartta karşılanmış olur.
                     </p>
                     <p>
-                      Belge takibinde ve nüshaların paylaşımında pratikliği artırmak için kendinden karbonlu kağıda basılan <strong>otokopili gider makbuzu baskı</strong> koçanları en çok tercih edilen modeller arasındadır. Yazılan bilgilerin alt nüshalara anında ve net şekilde geçmesi, muhasebe süreçlerini hızlandırır. Bununla birlikte, her bir belgenin kaybolmasını önlemek ve muhasebe kayıtlarını sıralı bir şekilde yürütebilmek adına ardışık seri numaralarıyla üretilen <strong>numaratörlü gider makbuzu baskı</strong> koçanları da evrak takibini hatasız yapmanızı sağlar.
+                      Belge takibinde ve nüshaların paylaşımında pratikliği artırmak için kendinden karbonlu kağıda basılan <strong>otokopili gider makbuzu baskı</strong> koçanları en çok tercih edilen modeller arasındadır. Yazılan bilgilerin alt nüshalara anında ve net şekilde geçmesi, muhasebe süreçlerini hızlandırır. Bununla birlikte, belgelerin eksiksizliğini kontrol etmek ve muhasebe kayıtlarını sıralı bir şekilde yürütebilmek adına ardışık seri numaralarıyla üretilen <strong>numaratörlü gider makbuzu baskı</strong> koçanları evrak takibini kolaylaştırır.
                     </p>
                     <p>
                       İşletmenizin ihtiyaç duyduğu özelliklere sahip, kaliteli ve uzun ömürlü <strong>gider makbuzu bastırma</strong> süreçlerinizde Mavi Basım olarak profesyonel tasarım desteği sunmaktayız. Kurumsal standartlarınıza uygun nüsha sayısı, numaratör sırası ve boyut seçenekleriyle siparişlerinizi hızla hazırlayıp teslim ediyoruz.
@@ -1530,7 +1522,7 @@ export const MakbuzFormlarPage = () => {
                         Üst nüshaya yazılan bilgiler alt nüshalara otomatik olarak aktarılır. Her yaprak sıralı numaratör ile basılarak belge takibi kolaylaştırılır. Perfore (tırtık) hattı sayesinde sayfalar düzenli şekilde kopartılabilir ve sağlam ciltleme sistemi uzun süreli kullanım sağlar.
                       </p>
                       <p>
-                        Firmanızın logosu, unvanı, adres bilgileri ve vergi bilgileri baskıya eklenebilir. Baskı öncesinde ücretsiz dijital prova gönderilir and onay sonrasında üretime başlanır.
+                        Firmanızın logosu, unvanı, adres bilgileri ve vergi bilgileri baskıya eklenebilir. Baskı öncesinde ücretsiz dijital prova gönderilir ve onay sonrasında üretime başlanır.
                       </p>
                       <p>
                         İş hayatında sıklıkla karıştırılan <strong>gider pusulası</strong> ile <strong>gider makbuzu koçanı</strong> aslında farklı kullanım amaçlarına sahip, apayrı iki mali belgedir. Gider pusulası vergi mükellefi olmayan kişilerden alınan mal ve hizmetleri belgelendirmek için düzenlenirken, gider makbuzları şirketlerin kendi iç muhasebe akışında veya kasa çıkışlarında ödemeleri izlemek için kullanılır.
@@ -2086,7 +2078,7 @@ export const MakbuzFormlarPage = () => {
                   {pathId === 'gider-makbuzu' ? (
                     <>
                       <p>
-                        <strong>Gider makbuzu baskı</strong> hizmeti, harcama ve ödeme kayıtlarını düzenli şekilde takip etmek isteyen firmalar tarafından tercih edilmektedir. Kullanım amacına göre hazırlanan gider makbuzu koçanları, otokopili ve numaratörlü olarak üretilebilmektedir. Firmanızın logo, unvan og iletişim bilgileri baskıya eklenerek kullanıma hazır hale getirilir.
+                        <strong>Gider makbuzu baskı</strong> hizmeti, harcama ve ödeme kayıtlarını düzenli şekilde takip etmek isteyen firmalar tarafından tercih edilmektedir. Kullanım amacına göre hazırlanan gider makbuzu koçanları, otokopili ve numaratörlü olarak üretilebilmektedir. Firmanızın logo, unvan ve iletişim bilgileri baskıya eklenerek kullanıma hazır hale getirilir.
                       </p>
                       <p>
                         <strong>Otokopili gider makbuzu baskı</strong> seçeneklerinde üst nüshaya yazılan bilgiler alt nüshalara otomatik olarak aktarılır. Bu sayede karbon kağıdı kullanmadan hızlı ve pratik bir kullanım elde edilir. <strong>Numaratörlü gider makbuzu baskı</strong> modellerinde ise her yaprak ardışık sıra numarası ile basılarak evrak takibi kolaylaştırılır.
@@ -2137,7 +2129,7 @@ export const MakbuzFormlarPage = () => {
               </div>
             )}
 
-            {pathId !== 'arac-kiralama' && (pathId === 'gider-makbuzu' || currentDetails.howToFillTitle || currentDetails.requiredInfoTitle) ? (
+            {pathId !== 'arac-kiralama' && pathId !== 'gider-makbuzu' && (currentDetails.howToFillTitle || currentDetails.requiredInfoTitle) ? (
               <div id="nasil-doldurulur" className={`scroll-mt-24 relative z-10 grid grid-cols-1 ${pathId === 'gider-makbuzu' ? '' : 'md:grid-cols-2'} gap-8 border-t border-gray-100 pt-8`}>
                 {/* Nasıl Doldurulur? */}
                 {(pathId === 'gider-makbuzu' || currentDetails.howToFillTitle) && (
@@ -2360,16 +2352,16 @@ export const MakbuzFormlarPage = () => {
                         Gider makbuzu, işletmelerin harcama ve ödeme kayıtlarını düzenli şekilde takip etmesini sağlayan önemli bir matbu evrak türüdür. Ancak günlük iş akışlarında yalnızca gider makbuzu kullanımı yeterli olmayabilir. Muhasebe, finans, satış ve operasyon süreçlerinde farklı amaçlara hizmet eden tamamlayıcı matbu formlara da ihtiyaç duyulur.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/tahsilat-makbuzu" className="font-extrabold text-primary hover:underline">Tahsilat Makbuzu</Link></strong>, müşterilerden alınan nakit, çek veya havale ödemelerinin kayıt altına alınması amacıyla kullanılır. Özellikle düzenli tahsilat yapan işletmeler için belge takibi ve arşivleme açısından önemli avantajlar sağlar. Otokopili ve numaratörlü olarak hazırlanabilen tahsilat makbuzu koçanları, ön muhasebe süreçlerinin daha düzenli yürütülmesine yardımcı olur.
+                        <strong><Link to="/tahsilat-makbuzu" className="font-extrabold text-primary hover:underline">Tahsilat Makbuzu</Link></strong>, müşterilerden alınan nakit, çek veya havale ödemelerinin kayıt altına alınması amacıyla kullanılır. Özellikle düzenli tahsilat yapan işletmeler için belge takibi ve arşivleme açısından önemli avantajlar sağlar. Otokopili ve numaratörlü olarak hazırlanabilen tahsilat makbuzu koçanları, ön muhasebe süreçlerinin daha düzenli yürütülmesine yardımcı olur.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/tediye-makbuzu" className="font-extrabold text-primary hover:underline">Tediye Makbuzu</Link></strong> ise şirket kasasından yapılan ödemelerin teslim edildiğini belgelemek amacıyla kullanılır. Tedarikçilere, çalışanlara veya iş ortaklarına yapılan ödemelerin kayıt altına alınmasını sağlayan bu formlar, şirket içi mali kontrol açısından önemli bir evraktır.
+                        <strong><Link to="/tediye-makbuzu" className="font-extrabold text-primary hover:underline">Tediye Makbuzu</Link></strong> ise şirket kasasından yapılan ödemelerin teslim edildiğini belgelemek amacıyla kullanılır. Tedarikçilere, çalışanlara veya iş ortaklarına yapılan ödemelerin kayıt altına alınmasını sağlayan bu formlar, şirket içi mali kontrol açısından önemli bir evraktır.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/para-makbuzu" className="font-extrabold text-primary hover:underline">Para Makbuzu</Link></strong>, daha küçük ölçekli nakit teslimlerinde tercih edilen pratik bir belgedir. Personel avansları, emanet para teslimleri veya günlük nakit işlemlerinde kullanılabilir. Düzenli kayıt tutulmasını sağlayarak olası karışıklıkların önüne geçer.
+                        <strong><Link to="/para-makbuzu" className="font-extrabold text-primary hover:underline">Para Makbuzu</Link></strong>, daha küçük ölçekli nakit teslimlerinde tercih edilen pratik bir belgedir. Personel avansları, emanet para teslimleri veya günlük nakit işlemlerinde kullanılabilir. Düzenli kayıt tutulmasını sağlayarak olası karışıklıkların önüne geçer.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/makbuz/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ürünleri ise restoran, kafe, lokanta ve perakende işletmelerinde yoğun olarak kullanılmaktadır. Müşteri siparişlerinin eksiksiz alınması, ürün adetlerinin takip edilmesi ve servis süreçlerinin düzenli ilerlemesi açısından önemli bir görev üstlenirler.
+                        <strong><Link to="/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ürünleri ise restoran, kafe, lokanta ve perakende işletmelerinde yoğun olarak kullanılmaktadır. Müşteri siparişlerinin eksiksiz alınması, ürün adetlerinin takip edilmesi ve servis süreçlerinin düzenli ilerlemesi açısından önemli bir görev üstlenirler.
                       </p>
                       <p>
                         Mavi Basım, otokopili gider makbuzu, numaratörlü gider makbuzu ve logolu gider makbuzu üretimlerinde uzmanlaşmış bir matbaa firmasıdır. İşletmenize özel hazırlanan gider makbuzu koçanı tasarımları, kullanım alışkanlıklarınıza göre düzenlenebilmektedir. Gider makbuzu basımı sürecinde profesyonel tasarım desteği sağlanırken, onaylanan çalışmalar kısa sürede baskıya alınmaktadır. Türkiye'nin her yerinden gider makbuzu siparişi verebilir ve ürünlerinizi güvenli şekilde teslim alabilirsiniz.

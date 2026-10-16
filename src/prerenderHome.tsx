@@ -88,3 +88,11 @@ export function prerenderRecete() {
   );
   return renderToString(<App Router={ReceteRouter} MakbuzComponent={MakbuzFormlarPage} />);
 }
+
+// Render the audited page with its existing, unchanged pricing component.
+export function prerenderGiderMakbuzu() {
+  const GiderRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/gider-makbuzu']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={GiderRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}
