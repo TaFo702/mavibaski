@@ -3,7 +3,7 @@ import path from "path";
 import { getRouteSEO, injectSEOMetadata, URL_REDIRECTS } from "../src/utils/seoGenerator";
 import { build } from "esbuild";
 import { createRequire } from "node:module";
-import { optimizeReceteHTML } from "./recetePerformance";
+import { optimizeReceteHTML, optimizeProductHTML } from "./recetePerformance";
 
 async function prerender() {
   console.log("--- Starting Static HTML Metadata Prerendering ---");
@@ -204,6 +204,7 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="kataloglar">')
         : html;
       if (pathname === "/recete") output = optimizeReceteHTML(output, distDir);
+      if (pathname === "/arac-kiralama") output = optimizeProductHTML(output, distDir, "arac-kiralama");
       fs.writeFileSync(targetPath, output, "utf-8");
       generatedCount++;
     } catch (err) {

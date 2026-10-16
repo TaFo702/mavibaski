@@ -424,6 +424,8 @@ const DynamicImageContainer = ({
   isPriority?: boolean;
 }) => {
   const [aspect, setAspect] = useState<'tall' | 'wide' | null>(null);
+  const hasResponsiveCarImage = /^\/images\/arac-kiralama\/(rent-a-car-sozlesmesi-baski|arac-kiralama-formu-ornegi|otokopili-arac-kiralama-sozlesmesi|arac-kiralama-sozlesmesi-baski)\.webp$/.test(src);
+  const carImageBase = src.replace(/\.webp$/, '');
 
   return (
     <div className={`overflow-hidden rounded-xl bg-white mb-4 flex items-center justify-center p-1.5 w-fit mx-auto transition-all duration-300 ${
@@ -437,6 +439,8 @@ const DynamicImageContainer = ({
     } ${className}`}>
       <img 
         src={src} 
+        srcSet={hasResponsiveCarImage ? `${carImageBase}-320w.webp 320w, ${carImageBase}-640w.webp 640w, ${src} 805w` : undefined}
+        sizes={hasResponsiveCarImage ? "(min-width: 768px) 314px, (max-width: 359px) 240px, 283px" : undefined}
         alt={alt} 
         title={title}
         loading={isPriority ? "eager" : "lazy"}
@@ -454,6 +458,8 @@ const DynamicImageContainer = ({
           }
         }}
         onError={(e) => {
+          e.currentTarget.removeAttribute('srcset');
+          e.currentTarget.removeAttribute('sizes');
           (e.currentTarget as HTMLImageElement).src = "/images/adisyon/otokopili-adisyon-baski.webp";
         }}
         className={`h-full w-auto object-contain rounded-lg transition-all duration-300 ${imgClassName}`} 
@@ -686,7 +692,7 @@ export const MakbuzFormlarPage = () => {
     };
 
     return (
-      <div className={`bg-white min-h-screen pb-20${pathId === 'recete' ? ' recete-page' : ''}`}>
+      <div className={`bg-white min-h-screen pb-20${pathId === 'recete' ? ' recete-page' : pathId === 'arac-kiralama' ? ' arac-kiralama-page' : ''}`}>
         {pathId !== 'recete' && pathId !== 'tediye-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && (
           <Helmet>
             <title>{pageTitleForSEO}</title>
@@ -1259,7 +1265,7 @@ export const MakbuzFormlarPage = () => {
                   isTallLayoutDefault={isTallLayout}
                   className="mb-2"
                   imgClassName="p-1 hover:scale-105"
-                  isPriority={pathId !== 'recete'}
+                  isPriority={pathId !== 'recete' && pathId !== 'arac-kiralama'}
                 />
                 <figcaption className="text-gray-550 text-[11px] mt-2.5 text-center font-bold leading-normal max-w-[280px]">
                   {pathId === 'adisyon'
