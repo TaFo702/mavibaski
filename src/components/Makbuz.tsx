@@ -442,8 +442,8 @@ const DynamicImageContainer = ({
         loading={isPriority ? "eager" : "lazy"}
         fetchPriority={isPriority ? "high" : "auto"}
         decoding="async"
-        width={src.startsWith('/images/recete/') ? 930 : 1200}
-        height={src.startsWith('/images/recete/') ? 1117 : 800}
+        width={src.startsWith('/images/recete/') ? 930 : src.startsWith('/images/arac-kiralama/') ? 805 : 1200}
+        height={src.startsWith('/images/recete/') ? 1117 : src.startsWith('/images/arac-kiralama/') ? 1024 : 800}
         referrerPolicy="no-referrer"
         onLoad={(e) => {
           const img = e.currentTarget;
@@ -862,7 +862,7 @@ export const MakbuzFormlarPage = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                 <span className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight">İçindekiler (Hızlı Gezinme)</span>
               </div>
-              {pathId !== 'recete' && pathId !== 'gider-makbuzu' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
+              {pathId !== 'recete' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
             </div>
             <nav className={`grid ${(pathId === 'para-makbuzu' || pathId === 'arac-kiralama') ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'} gap-2 text-xs font-bold text-slate-700`} aria-label="Sayfa İçindekiler Navigasyonu">
               <a 
@@ -1107,7 +1107,7 @@ export const MakbuzFormlarPage = () => {
             <div className="text-center sm:text-left">
               <h3 className="text-sm font-black text-slate-900 uppercase mb-0.5">Siparişinizi Nasıl Oluşturabilirsiniz?</h3>
               <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                {pathId === 'recete' ? (
+                {pathId === 'recete' || pathId === 'arac-kiralama' ? (
                   <>Fiyat tablosundaki <strong>"Hemen Sipariş Ver"</strong> düğmesi ürün seçim penceresini açar. Cilt adedini ve baskı rengini seçtikten sonra <strong>"WhatsApp ile İletişim"</strong> üzerinden teklif isteyebilir veya ürünü sepetinize ekleyebilirsiniz. PDF prova onayınızdan sonra baskıya başlanır.</>
                 ) : (
                   <>Fiyat listesinden seçtiğiniz adedin yanında yer alan <strong>"Hemen Sipariş Ver"</strong> butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz. Siparişiniz için logo ve bilgilerinizi WhatsApp üzerinden göndermeniz yeterlidir. PDF prova onayınız alındıktan sonra üretim başlatılır.</>
@@ -1581,19 +1581,19 @@ export const MakbuzFormlarPage = () => {
                       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 text-center mb-3">
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
                           <span className="text-emerald-600 font-extrabold text-xs sm:text-sm">Bugün Sipariş Verin</span>
-                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' ? 'Grafik desteği var.' : 'Aynı Gün Tasarım'}</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'Grafik desteği var.' : 'Aynı Gün Tasarım'}</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
-                          <span className="text-primary font-extrabold text-xs sm:text-sm">{pathId === 'recete' ? 'PDF Prova Kontrolü' : '24 Saat İçinde PDF Prova'}</span>
+                          <span className="text-primary font-extrabold text-xs sm:text-sm">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'PDF Prova Kontrolü' : '24 Saat İçinde PDF Prova'}</span>
                           <span className="text-[11px] text-slate-500 font-medium mt-0.5">WhatsApp Onaylı</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
-                          <span className="text-blue-600 font-extrabold text-xs sm:text-sm">{pathId === 'recete' ? 'Türkiye Geneli Kargo' : '81 İle Hızlı Kargo'}</span>
+                          <span className="text-blue-600 font-extrabold text-xs sm:text-sm">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'Türkiye Geneli Kargo' : '81 İle Hızlı Kargo'}</span>
                           <span className="text-[11px] text-slate-500 font-medium mt-0.5">Özenli Paketleme</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
                           <span className="text-amber-600 font-extrabold text-xs sm:text-sm">Yüksek Baskı Kalitesi</span>
-                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' ? 'Dijital Onay' : 'İmalatçı Garantisi'}</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'Dijital Onay' : 'İmalatçı Garantisi'}</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center col-span-2 sm:col-span-1">
                           <span className="text-indigo-600 font-extrabold text-xs sm:text-sm">Tasarım Desteği</span>
@@ -1825,7 +1825,7 @@ export const MakbuzFormlarPage = () => {
                       <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
                         <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">4</div>
                         <h3 className="text-sm font-black text-black uppercase mb-1">Ofset Baskı ve Teslimat</h3>
-                        <p className="text-xs text-slate-600 font-medium leading-relaxed">Heidelberg ofset makinelerimizde basılıp ciltlenen koçanlarınız kargoya verilir.</p>
+                        <p className="text-xs text-slate-600 font-medium leading-relaxed">{pathId === 'arac-kiralama' ? 'Dijital onaydan sonra baskı ve ciltleme yapılır. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.' : 'Heidelberg ofset makinelerimizde basılıp ciltlenen koçanlarınız kargoya verilir.'}</p>
                       </div>
                     </div>
                   </div>
@@ -1945,8 +1945,8 @@ export const MakbuzFormlarPage = () => {
                 <figure className="w-fit shrink-0 overflow-hidden rounded-xl border border-gray-150 bg-white p-3 flex flex-col items-center justify-center mx-auto md:max-w-md lg:max-w-lg">
                   <DynamicImageContainer 
                     src={pathId === 'recete' ? '/images/recete/recete-kocani-ornegi.webp' : pathId === 'tediye-makbuzu' ? '/images/tediye-makbuzu/numaratorlu-tediye-makbuzu.webp' : pathId === 'tahsilat-makbuzu' ? '/images/tahsilat-makbuzu/numaratorlu-tahsilat-makbuzu.webp' : (currentDetails.gallery[1]?.src || currentDetails.featureImage)} 
-                    alt={pathId === 'sozlesme-baski' ? 'Kurumsal Sözleşme Formu Şablonu' : pathId === 'arac-kiralama' ? 'araç teslim tutanağı örneği' : pathId === 'sigorta-policeleri' ? 'sigorta teklif formu örneği' : pathId === 'tediye-makbuzu' ? 'Numaratörlü Tediye Makbuzu Şablonu' : pathId === 'tahsilat-makbuzu' ? 'Numaratörlü Tahsilat Makbuzu Şablonu' : `${currentDetails.breadcrumbTitle} Şablonu`} 
-                    title={pathId === 'sozlesme-baski' ? 'Kurumsal Sözleşme Formu Şablonu' : pathId === 'arac-kiralama' ? 'Araç Teslim Tutanağı Örneği' : pathId === 'sigorta-policeleri' ? 'Sigorta Teklif Formu Örneği' : pathId === 'tediye-makbuzu' ? 'Numaratörlü Tediye Makbuzu Şablonu' : pathId === 'tahsilat-makbuzu' ? 'Numaratörlü Tahsilat Makbuzu Şablonu' : `${currentDetails.breadcrumbTitle} Şablonu`} 
+                    alt={pathId === 'sozlesme-baski' ? 'Kurumsal Sözleşme Formu Şablonu' : pathId === 'arac-kiralama' ? 'Kiracı ve kefil bilgileri bulunan otokopili araç kiralama sözleşmesi' : pathId === 'sigorta-policeleri' ? 'sigorta teklif formu örneği' : pathId === 'tediye-makbuzu' ? 'Numaratörlü Tediye Makbuzu Şablonu' : pathId === 'tahsilat-makbuzu' ? 'Numaratörlü Tahsilat Makbuzu Şablonu' : `${currentDetails.breadcrumbTitle} Şablonu`}
+                    title={pathId === 'sozlesme-baski' ? 'Kurumsal Sözleşme Formu Şablonu' : pathId === 'arac-kiralama' ? 'Araç Kiralama Sözleşmesi Örneği' : pathId === 'sigorta-policeleri' ? 'Sigorta Teklif Formu Örneği' : pathId === 'tediye-makbuzu' ? 'Numaratörlü Tediye Makbuzu Şablonu' : pathId === 'tahsilat-makbuzu' ? 'Numaratörlü Tahsilat Makbuzu Şablonu' : `${currentDetails.breadcrumbTitle} Şablonu`}
                     isTallLayoutDefault={isTallLayout}
                     className="mb-2"
                     imgClassName="p-1 hover:scale-105"
@@ -1960,6 +1960,8 @@ export const MakbuzFormlarPage = () => {
                       ? 'Örnek otokopili sözleşme tasarımı üzerinde tarih, unvan, imzalar ve şartnameler gösterilmektedir.'
                       : pathId === 'recete'
                       ? 'Örnek reçete tasarımında hasta adı soyadı, tarih, doktor bilgisi ve kaşe / imza alanları gösterilmektedir.'
+                      : pathId === 'arac-kiralama'
+                      ? 'Örnek araç kiralama sözleşmesinde araç, kiracı, kefil, kiralama bedeli ve imza alanları gösterilmektedir.'
                       : `Örnek ${currentDetails.breadcrumbTitle.toLowerCase()} tasarımı üzerinde tarih, unvan, adet ve ıslak imza alanları gösterilmektedir.`}
                   </figcaption>
                 </figure>
@@ -3511,10 +3513,10 @@ export const MakbuzFormlarPage = () => {
               <div className="space-y-2">
                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white flex items-center gap-2">
                   <span className="w-2 h-6 bg-primary rounded-full" />
-                  {pathId === 'recete' ? 'Baskı Öncesi Kontrol ve Onay' : 'Mavi Basım İmalat Güvencesi'}
+                  {pathId === 'recete' || pathId === 'arac-kiralama' ? 'Baskı Öncesi Kontrol ve Onay' : 'Mavi Basım İmalat Güvencesi'}
                 </h3>
                 <p className="text-xs md:text-sm text-slate-300 font-medium max-w-xl leading-relaxed">
-                  {pathId === 'recete' ? 'Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz.' : 'Doğrudan imalathanemizden hızlı, güvenli ve kurumsal kalitede matbu evrak baskı çözümleri sunuyoruz.'}
+                  {pathId === 'recete' || pathId === 'arac-kiralama' ? 'Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz.' : 'Doğrudan imalathanemizden hızlı, güvenli ve kurumsal kalitede matbu evrak baskı çözümleri sunuyoruz.'}
                 </p>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 shrink-0">
@@ -3524,7 +3526,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
-                  <span className="text-xs font-bold text-white">{pathId === 'recete' ? 'Topkapı Hizmet Noktası' : 'Topkapı Üretim Tesisi'}</span>
+                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'Topkapı Hizmet Noktası' : 'Topkapı Üretim Tesisi'}</span>
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
@@ -3536,7 +3538,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center col-span-2 sm:col-span-1">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
-                  <span className="text-xs font-bold text-white">{pathId === 'recete' ? 'Grafik desteği var.' : 'Ücretsiz Grafik Desteği'}</span>
+                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'Grafik desteği var.' : 'Ücretsiz Grafik Desteği'}</span>
                 </div>
               </div>
             </div>

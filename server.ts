@@ -89,9 +89,12 @@ async function startServer() {
             };
         const homeContent = req.path === '/'
           ? (await vite.ssrLoadModule('/src/prerenderHome.tsx')).prerenderHome()
+          : req.path === '/arac-kiralama'
+          ? (await vite.ssrLoadModule('/src/prerenderHome.tsx')).prerenderAracKiralama()
           : seo.bodyContent;
         let html = injectSEOMetadata(template, seo.title, seo.desc, seo.canonical, !known, seo.extraHead, seo.h1Text, homeContent, seo.ogImage);
         if (req.path === '/') html = html.replace('<div id="root">', '<div id="root" data-prerendered="home">');
+        if (req.path === '/arac-kiralama') html = html.replace('<div id="root">', '<div id="root" data-prerendered="arac-kiralama">');
         res.status(statusCode).set({ "Content-Type": "text/html" }).end(html);
       } catch (e) {
         next(e);

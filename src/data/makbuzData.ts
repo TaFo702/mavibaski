@@ -753,25 +753,25 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     h1Title: "Araç Kiralama Sözleşmesi Baskı & Rent A Car Formu",
     subtitle: "Araç kiralama sözleşmesi, araç teslim tutanağı ve araç hasar tespit formu baskı hizmetleri sunuyoruz. Otokopili ve numaratörlü olarak üretilen formlar, araç teslim ve iade süreçlerinin kayıt altına alınmasını sağlar.",
     featureImage: "/images/arac-kiralama/arac-kiralama-sozlesmesi-baski.webp",
-    featureImageAlt: "arac-kiralama-sozlesmesi-baski.webp",
+    featureImageAlt: "Araç gövde şemalı otokopili araç teslim formu ve sarı sureti",
     gallery: [
       {
         src: "/images/arac-kiralama/rent-a-car-sozlesmesi-baski.webp",
-        alt: "rent-a-car-sozlesmesi-baski.webp",
+        alt: "İmzalı rent a car sözleşmesi ve otokopili sarı sureti",
         title: "Rent A Car Sözleşmesi Baskı Örneği",
         desc: "İki nüshalı otokopili rent a car sözleşmesi koçanı baskı örneği."
       },
       {
         src: "/images/arac-kiralama/arac-kiralama-formu-ornegi.webp",
-        alt: "arac-kiralama-formu-ornegi.webp",
+        alt: "Araç, kiracı ve kefil alanları bulunan araç kiralama sözleşmesi",
         title: "Araç Kiralama Formu Örneği",
-        desc: "Teslim alma ve iade anında yakıt ile km tespiti sağlayan araç teslim formu."
+        desc: "Araç, kiracı, kefil, kiralama ve imza alanları bulunan otokopili sözleşme örneği."
       },
       {
         src: "/images/arac-kiralama/otokopili-arac-kiralama-sozlesmesi.webp",
-        alt: "otokopili-arac-kiralama-sozlesmesi.webp",
+        alt: "Araç hasar şeması ve teslim bilgileri bulunan otokopili form",
         title: "Otokopili Rent A Car Sözleşmesi",
-        desc: "Müşteriyle olası hasar tartışmalarını bitiren gövde şablonlu hasar durum formu."
+        desc: "Teslim ve iade bilgileriyle araç gövde şemasını bir arada gösteren otokopili form örneği."
       }
     ],
     specifications: [
@@ -783,17 +783,17 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { title: "Baskı Rengi", value: "Siyah, Kırmızı veya Firmanızın Kurumsal Rengi" },
       { title: "Sipariş Miktarı", value: "5 Cilt, 10 Cilt, 20 Cilt, 30 Cilt, 50 Cilt" },
       { title: "Kağıt Kalitesi", value: "Yüksek Kalite Kopya Özellikli Kimyasal Kaplamalı" },
-      { title: "Teslim Süresi", value: "Grafik tasarım onayından sonra 3-5 İş Günü" }
+      { title: "Teslim Süresi", value: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." }
     ],
     whatIsTitle: "Araç Kiralama Sözleşmesi ve Formu Nedir?",
-    whatIsContent: "Araç kiralama sözleşmesi ve rent a car teslim tutanakları; kiralayan şirket ile araç teslim alan müşteri arasında, kiralama süresini, depozito şartlarını, hasar ve sigorta durumlarını ile km bilgilerini yasal güvence altına almak için düzenlenen resmi ve hukuki belgelerdir. Otokopili yapısıyla yapılan işaretlemelerin ve girilen sözleşme maddelerinin kopyası saniyeler içinde alt nüshaya net bir şekilde aktarılır.",
+    whatIsContent: "Araç kiralama sözleşmesi, kiralama koşullarını; araç teslim tutanağı ise teslim ve iade anındaki araç bilgilerini kaydetmek için kullanılan matbu formlardır. Otokopili kâğıt, üst nüshaya yazılan bilgilerin alt nüshalara aktarılmasını sağlar. Firma bilgileri ve müşteri tarafından iletilen sözleşme metni, baskı öncesinde PDF prova üzerinden onaya sunulur.",
     whoUsesTitle: "Araç Kiralama Formlarını Kimler Tercih Eder?",
     whoUsesItems: ["Oto Kiralama Şirketleri (Rent a Car)", "Lüks ve Ekonomik Araç Filoları", "Motosiklet ve Karavan Kiralama Ofisleri", "Yat ve Tekne Kiralama Acenteleri", "Operasyonel Filo Kiralama Firmaları"],
     usageAreasTitle: "Araç Kiralama Belgelerinin Kullanım Alanları",
     usageAreasItems: [
-      { title: "Sözleşme Mutabakatı", desc: "Taraflar arasındaki kiralama bedeli, iade tarihi ve cezai şartları sabitleyerek olası anlaşmazlıkları yasal zeminde sonlandırır." },
-      { title: "Hasar ve Kaporta Kontrolü", desc: "Araç teslim şablonları üstünde kaporta çizik, göçük ve kusurlarını işaretleyerek her iki tarafın hakkını güvenceye alır." },
-      { title: "KM ve Depo Seviyesi Takibi", desc: "Aracın çıkış kilometresini ve depo yakıt seviyesini yazarak adil iade koşullarını garanti eder." }
+      { title: "Sözleşme Mutabakatı", desc: "Tarafların ilettiği kiralama bedeli, iade tarihi ve kiralama koşullarının aynı form üzerinde kaydedilmesine yardımcı olur." },
+      { title: "Hasar ve Kaporta Kontrolü", desc: "Araç gövde şeması üzerinde mevcut çizik, göçük ve kusurların teslim ve iade sırasında kaydedilmesini kolaylaştırır." },
+      { title: "KM ve Depo Seviyesi Takibi", desc: "Çıkış ve dönüş kilometresi ile yakıt seviyesinin karşılaştırılabilmesi için kayıt alanları sağlar." }
     ],
     howToFillTitle: "Araç Kiralama Sözleşmesi Nasıl Doldurulur?",
     howToFillContent: [
@@ -812,14 +812,14 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     ],
     comparisonTitle: "Otokopili Sözleşme ile Dijital Sözleşme Karşılaştırması",
     comparisonTableRows: [
-      { label: "Saha Uyumluluğu", col1: "İnternet bağlantısından bağımsız her ortamda anında ıslak imza ile düzenlenir.", col2: "Mobil çekim alanı veya şarj sorunu olduğunda sözleşmeye erişim kesilir." },
-      { label: "Hukuki Geçerlilik", col1: "Çift nüsha ıslak imzalı orijinal belge mahkemelerde tam ispat gücü taşır.", col2: "Yasal olarak tescillenmemiş dijital imzaların takibi ve doğrulanması zordur." },
-      { label: "Maliyet", col1: "Tek seferlik çok ekonomik matbaa baskı bedeli ile yüzlerce nüsha basılır.", col2: "Aylık yüksek üyelik kotaları veya yazılım lisans ücretleri gerektirir." }
+      { label: "Saha Uyumluluğu", col1: "İnternet bağlantısından bağımsız her ortamda anında ıslak imza ile düzenlenir.", col2: "Çevrimdışı kullanım ve cihaz gereksinimleri tercih edilen yazılıma göre değişir." },
+      { label: "İmza ve Saklama", col1: "İmzalanan nüshalar taraflarca paylaşılır ve fiziksel olarak saklanır.", col2: "Dijital belgede imzalama, doğrulama ve saklama yöntemi kullanılan sisteme göre değişir." },
+      { label: "Maliyet", col1: "Baskı bedeli cilt adedi, nüsha ve baskı seçeneklerine göre belirlenir.", col2: "Yazılım, lisans ve kullanım bedelleri tercih edilen hizmete göre değişir." }
     ],
-    importanceTitle: "Filo Yönetiminde Çift Sayfa Islak İmzanın Önemi",
-    importanceContent: "Araç tesliminde ve iadesinde tutulan ıslak imzalı otokopili formlar, müşterinin kiralama süresince işlediği trafik cezaları, kaza hasarları veya geciken iadeler durumunda acentelerin yasal haklarını arayabilmeleri için en sağlam hukuki delildir.",
-    otokopiTitle: "Mükemmel Otokopi Kalitesi",
-    otokopiContent: "Mavi Basım tarafından ve en son teknoloji araç şablonlarıyla üretilen otokopili kağıt kalitesi sayesinde, kiralama koşullarının bulunduğu küçük puntolu yasal metinler dahi alt surette tamamen temiz ve okunaklı çıkar.",
+    importanceTitle: "Filo Yönetiminde İmzalı Formların Takibi",
+    importanceContent: "Araç tesliminde ve iadesinde tutulan otokopili formlar; kilometre, yakıt, gözlemlenen hasar ve teslim tarihi gibi bilgilerin taraflarda birer nüsha olarak saklanmasını kolaylaştırır. Ardışık numaratör, formların kiralama dosyalarıyla eşleştirilmesine ve arşiv takibine yardımcı olur.",
+    otokopiTitle: "Otokopili Formlarda Okunaklı Baskı",
+    otokopiContent: "Otokopili kâğıt, üst nüshaya yazılan bilgileri alt suretlere aktarır. Küçük yazıların, imza alanlarının ve araç şemasının yerleşimi PDF prova üzerinden kontrol edilerek baskıya hazırlanır.",
     faqList: [
       { q: "Araç kiralama sözleşmelerinde minimum sipariş miktarı nedir?", a: "Araç kiralama sözleşmesi baskılarında minimum sipariş miktarı 5 cilttir." },
       { q: "Araç kiralama sözleşmelerine firma logosu basılabilir mi?", a: "Evet, araç kiralama sözleşmelerine firmanızın logosu, iletişim bilgileri ve kurumsal kimlik unsurları eklenebilmektedir." },
@@ -830,7 +830,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { q: "Araç kiralama sözleşmeleri özel tasarlanabilir mi?", a: "Evet, firmanızın ihtiyaçlarına uygun özel tasarımlı araç kiralama sözleşmeleri hazırlanabilmektedir." },
       { q: "Araç kiralama sözleşmeleri hangi kağıda basılmaktadır?", a: "Alt nüshalara bilgilerin net şekilde aktarılabilmesi için kaliteli otokopili kağıtlar kullanılmaktadır." },
       { q: "İstanbul dışına gönderim yapıyor musunuz?", a: "Evet, araç kiralama sözleşmesi siparişleri Türkiye'nin tüm il ve ilçelerine kargo ile gönderilmektedir." },
-      { q: "Araç kiralama sözleşmeleri kaç günde basılır?", a: "Tasarım onayının ardından baskı süreci genellikle 3-5 iş günü içerisinde tamamlanarak kargoya teslim edilmektedir." }
+      { q: "Araç kiralama sözleşmeleri kaç günde basılır?", a: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." }
     ]
   },
   "gider-makbuzu": {

@@ -4055,6 +4055,10 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       // Actual dimensions of the existing share image; no image or layout changes.
       extraHead += '  <meta property="og:image:width" content="1536" />\n';
       extraHead += '  <meta property="og:image:height" content="1024" />\n';
+    } else if (p === '/arac-kiralama') {
+      // Existing image dimensions; the asset and protected pricing stay intact.
+      extraHead += '  <meta property="og:image:width" content="805" />\n';
+      extraHead += '  <meta property="og:image:height" content="1024" />\n';
     }
     for (const imgSchema of imageObjectSchemas) {
       extraHead += `  <script type="application/ld+json">${JSON.stringify(imgSchema)}</script>\n`;
