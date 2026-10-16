@@ -25,6 +25,31 @@
   background-color: #087a50;
 }
 
+/* Improve araç kiralama contrast while preserving the existing price colors. */
+#root:has(.arac-kiralama-page) header,
+.arac-kiralama-page {
+  --color-primary: #08769e;
+  --color-secondary: #08769e;
+}
+
+.arac-kiralama-page #fiyat-tablosu {
+  --color-primary: #29ADDF;
+  --color-secondary: #29ADDF;
+}
+
+.arac-kiralama-page :is(.text-slate-400, .text-gray-400):not(#fiyat-tablosu *) {
+  color: #64748b;
+}
+
+#root:has(.arac-kiralama-page) a[class*="bg-[#25D366]"]:not(#fiyat-tablosu *) {
+  color: #123525;
+}
+
+#root:has(.arac-kiralama-page) a[class*="bg-[#25D366]"]:not(#fiyat-tablosu *):hover {
+  color: white;
+  background-color: #087a50;
+}
+
 html {
   scroll-behavior: smooth;
 }

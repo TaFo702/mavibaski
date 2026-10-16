@@ -33,12 +33,18 @@ function criticalStyles(css: string, classes: Set<string>): string {
 }
 
 export function optimizeReceteHTML(html: string, distDirectory: string): string {
+  return optimizeProductHTML(html, distDirectory, 'recete');
+}
+
+export function optimizeProductHTML(
+  html: string, distDirectory: string, product: 'recete' | 'arac-kiralama'
+): string {
   const doc = new JSDOM(html).window.document;
   const hero = doc.querySelector('main h1')?.parentElement;
   const contents = doc.querySelector('nav[aria-label="Sayfa İçindekiler Navigasyonu"]')?.parentElement;
   const targets = [doc.querySelector('header'), hero, contents,
     doc.querySelector('nav[aria-label="Breadcrumb"]'), doc.querySelector('#fiyat-tablosu')];
-  if (targets.some(target => !target)) throw new Error('Reçete critical CSS: expected first-screen sections.');
+  if (targets.some(target => !target)) throw new Error(`${product} critical CSS: expected first-screen sections.`);
   const classes = new Set<string>();
   for (const target of targets) {
     for (const element of [target!, ...target!.querySelectorAll('*')]) {
@@ -55,12 +61,14 @@ export function optimizeReceteHTML(html: string, distDirectory: string): string 
     (_link, href: string) => {
       const css = fs.readFileSync(path.join(distDirectory, href.slice(1)), 'utf8');
       const critical = criticalStyles(css, classes);
-      if (!critical.length || critical.length >= css.length) throw new Error('Reçete critical CSS extraction failed.');
-      return `<style data-recete-critical-css>${critical}</style>` +
+      if (!critical.length || critical.length >= css.length) throw new Error(`${product} critical CSS extraction failed.`);
+      return `<style data-${product}-critical-css>${critical}</style>` +
         `<link rel="preload" as="style" href="${href}" onload="this.onload=null;this.rel='stylesheet'" />` +
         `<noscript><link rel="stylesheet" href="${href}" /></noscript>`;
     });
-  if (!optimized.includes('data-recete-critical-css')) throw new Error('Reçete stylesheet not found.');
+  if (!optimized.includes(`data-${product}-critical-css`)) throw new Error(`${product} stylesheet not found.`);
+
+  if (product === 'arac-kiralama') return optimized.replaceAll('display=swap', 'display=optional');
 
   // Paint the server-rendered first screen before executing the application.
   // Preload its unchanged module so this does not introduce a network waterfall.
