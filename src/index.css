@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 /* Improve reçete text contrast without changing the protected price area. */
-#root:has(.recete-page) header,
 .recete-page {
   --color-primary: #08769e;
   --color-secondary: #08769e;
