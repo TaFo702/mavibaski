@@ -1064,7 +1064,7 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
         {/* Footer / Action */}
         <div className="p-4 sm:p-8 pt-0 shrink-0 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${product.ebat || '-'}) için ${quantity.toLocaleString('tr-TR')} adet (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${product.ebat || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-sm uppercase tracking-tight flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98]"

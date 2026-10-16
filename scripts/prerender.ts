@@ -3,6 +3,7 @@ import path from "path";
 import { getRouteSEO, injectSEOMetadata, URL_REDIRECTS } from "../src/utils/seoGenerator";
 import { build } from "esbuild";
 import { createRequire } from "node:module";
+import { optimizeReceteHTML } from "./recetePerformance";
 
 async function prerender() {
   console.log("--- Starting Static HTML Metadata Prerendering ---");
@@ -165,7 +166,7 @@ async function prerender() {
         targetPath = path.join(routeDir, "index.html");
       }
 
-      const output = pathname === '/'
+      let output = pathname === '/'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
         : pathname === '/zarf'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="zarf">')
@@ -180,6 +181,7 @@ async function prerender() {
         : pathname === '/kataloglar'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="kataloglar">')
         : html;
+      if (pathname === "/recete") output = optimizeReceteHTML(output, distDir);
       fs.writeFileSync(targetPath, output, "utf-8");
       generatedCount++;
     } catch (err) {

@@ -68,4 +68,13 @@ for (const image of main.querySelectorAll('img[src^="/images/recete/"]')) {
   assert.equal(image.getAttribute('width'), '930');
   assert.equal(image.getAttribute('height'), '1117');
 }
-console.log('PASS: Reçete full HTML, exact table preservation, hydration, unique content, order guidance, related products, FAQ/schema parity and image dimensions.');
+const criticalStyle = doc.querySelector('style[data-recete-critical-css]');
+assert.ok(criticalStyle?.textContent.includes('.border-collapse'));
+assert.ok(criticalStyle?.textContent.includes('.bg-black'));
+assert.ok(criticalStyle?.textContent.includes('.text-primary'));
+assert.equal(doc.querySelectorAll('script[data-recete-bootstrap]').length, 1);
+assert.equal(doc.querySelectorAll('script[type="module"][src]').length, 0);
+assert.ok(doc.querySelector('link[rel="preload"][as="style"][href^="/assets/"]'));
+assert.ok(doc.querySelector('noscript')?.textContent || doc.querySelector('noscript link'));
+assert.ok(!html.includes('display=swap'));
+console.log('PASS: Reçete full HTML, unchanged tables, hydration, critical styles, deferred entry, content, metadata and images.');
