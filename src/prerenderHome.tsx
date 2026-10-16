@@ -96,3 +96,11 @@ export function prerenderGiderMakbuzu() {
   );
   return renderToString(<App Router={GiderRouter} MakbuzComponent={MakbuzFormlarPage} />);
 }
+
+// Reuse the page and protected price component for the complete initial HTML.
+export function prerenderAracKiralama() {
+  const AracKiralamaRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/arac-kiralama']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={AracKiralamaRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}

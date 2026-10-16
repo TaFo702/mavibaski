@@ -1294,7 +1294,7 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 
 export const CanonicalLink = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
+  return pathname === '/' || ['/arac-kiralama', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
 };
 
 const LegacyCanonicalLink = () => {
@@ -5049,7 +5049,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
       <Route path="/sozlesme-baski" element={<MakbuzFormlarPage />} />
       <Route path="/sigorta-policeleri" element={<MakbuzFormlarPage />} />
       <Route path="/tahsilat-makbuzu" element={<MakbuzFormlarPage />} />
-      <Route path="/arac-kiralama" element={<MakbuzFormlarPage />} />
+      <Route path="/arac-kiralama" element={<MakbuzComponent />} />
       <Route path="/gider-makbuzu" element={<MakbuzComponent />} />
       <Route path="/giris-bileti" element={<MakbuzFormlarPage />} />
       <Route path="/recete" element={<MakbuzComponent />} />
@@ -5099,7 +5099,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
 
 const SEOMetadataManager = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
+  return pathname === '/' || ['/arac-kiralama', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
 };
 
 const LegacySEOMetadataManager = () => {
