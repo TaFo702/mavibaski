@@ -870,7 +870,7 @@ export const MakbuzFormlarPage = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                 <span className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight">İçindekiler (Hızlı Gezinme)</span>
               </div>
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>
+              {pathId !== 'recete' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
             </div>
             <nav className={`grid ${(pathId === 'para-makbuzu' || pathId === 'arac-kiralama') ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'} gap-2 text-xs font-bold text-slate-700`} aria-label="Sayfa İçindekiler Navigasyonu">
               <a 
@@ -1935,10 +1935,14 @@ export const MakbuzFormlarPage = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full -mr-32 -mt-32 blur-3xl pointer-events-none" />
 
             {/* EK GÖRSEL BLOĞU */}
-            <div className="relative z-10 bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
+            <div id={pathId === 'recete' ? 'recete-ornegi' : undefined} className={`relative z-10 bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm${pathId === 'recete' ? ' scroll-mt-24' : ''}`}>
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-2.5 h-5 bg-secondary rounded-full" />
-                <h3 className="text-lg md:text-xl font-black text-black uppercase tracking-tight">{pathId === 'sozlesme-baski' ? 'Kurumsal Sözleşme Koçanı Tasarımı' : `${currentDetails.breadcrumbTitle} Örneği`}</h3>
+                {pathId === 'recete' ? (
+                  <h2 className="text-lg md:text-xl font-black text-black uppercase tracking-tight">Reçete Örneği</h2>
+                ) : (
+                  <h3 className="text-lg md:text-xl font-black text-black uppercase tracking-tight">{pathId === 'sozlesme-baski' ? 'Kurumsal Sözleşme Koçanı Tasarımı' : `${currentDetails.breadcrumbTitle} Örneği`}</h3>
+                )}
               </div>
               <div className="flex flex-col md:flex-row gap-6 items-stretch">
                 <figure className="w-fit shrink-0 overflow-hidden rounded-xl border border-gray-150 bg-white p-3 flex flex-col items-center justify-center mx-auto md:max-w-md lg:max-w-lg">
@@ -1957,6 +1961,8 @@ export const MakbuzFormlarPage = () => {
                       ? `Örnek adisyon tasarımı üzerinde tarih, ürün, miktar ve tutar alanları gösterilmektedir.`
                       : pathId === 'sozlesme-baski'
                       ? 'Örnek otokopili sözleşme tasarımı üzerinde tarih, unvan, imzalar ve şartnameler gösterilmektedir.'
+                      : pathId === 'recete'
+                      ? 'Örnek reçete tasarımında hasta adı soyadı, tarih, doktor bilgisi ve kaşe / imza alanları gösterilmektedir.'
                       : `Örnek ${currentDetails.breadcrumbTitle.toLowerCase()} tasarımı üzerinde tarih, unvan, adet ve ıslak imza alanları gösterilmektedir.`}
                   </figcaption>
                 </figure>
@@ -1996,18 +2002,18 @@ export const MakbuzFormlarPage = () => {
               </div>
 
               {pathId === 'recete' && (
-                <div id="recete-ornegi" className="scroll-mt-24 mt-8 pt-8 border-t border-gray-200/85 space-y-4">
-                  <h2 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight flex items-center gap-2">
+                <div className="mt-8 pt-8 border-t border-gray-200/85 space-y-4">
+                  <h3 className="text-xl md:text-2xl font-black text-black uppercase tracking-tight flex items-center gap-2">
                     <span className="w-2 h-6 bg-secondary rounded-full" />
                     Reçete Kağıdı Örneği ve Şablonları
-                  </h2>
+                  </h3>
                   <p className="text-gray-650 text-sm md:text-base font-medium leading-relaxed">
                     <strong>Reçete kağıdı örneği</strong>; tarih alanı, hasta bilgileri, kurum unvanı, doktor bilgileri ve imza bölümlerinden oluşan standart bir yerleşime sahiptir. Müşterilerimizin talebi doğrultusunda mevcut <strong>boş reçete örneği</strong> veya <strong>reçete örneği PDF</strong> şablonları üzerinden yeni baskı çalışmaları hazırlanabilmektedir.
                   </p>
                   <div className="pt-2">
-                    <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">
+                    <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-2">
                       Reçete Örneği PDF ve Boş Reçete Şablonları
-                    </h3>
+                    </h4>
                     <p className="text-gray-650 text-sm md:text-base font-medium leading-relaxed">
                       Kurumunuza özel hazırlanan <strong>boş reçete örneği</strong> ve <strong>reçete örneği PDF</strong> dosyaları dijital baskı öncesinde tarafınıza iletilerek taslak onayı alınmaktadır.
                     </p>
