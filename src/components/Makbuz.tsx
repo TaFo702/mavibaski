@@ -864,7 +864,7 @@ export const MakbuzFormlarPage = () => {
               </div>
               {pathId !== 'recete' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
             </div>
-            <nav className={`grid ${(pathId === 'para-makbuzu' || pathId === 'arac-kiralama') ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'} gap-2 text-xs font-bold text-slate-700`} aria-label="Sayfa İçindekiler Navigasyonu">
+            <nav className={`grid ${pathId === 'para-makbuzu' ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'} gap-2 text-xs font-bold text-slate-700`} aria-label="Sayfa İçindekiler Navigasyonu">
               <a 
                 href="#fiyat-tablosu" 
                 onClick={(e) => scrollToSection(e, 'fiyat-tablosu')}
@@ -893,6 +893,15 @@ export const MakbuzFormlarPage = () => {
               >
                 <span className="text-primary group-hover:text-white font-black">4.</span> Üretim Süreci
               </a>
+              {currentDetails.deliveryForm && (
+                <a
+                  href="#teslim-iade-formu"
+                  onClick={(e) => scrollToSection(e, 'teslim-iade-formu')}
+                  className="bg-white hover:bg-primary hover:text-white border border-slate-200 p-2.5 rounded-xl transition-all flex items-center gap-1.5 shadow-2xs group cursor-pointer"
+                >
+                  <span className="text-primary group-hover:text-white font-black">5.</span> Teslim / İade
+                </a>
+              )}
               {pathId !== 'para-makbuzu' && pathId !== 'arac-kiralama' && (
                 <a 
                   href={pathId === 'recete' ? '#recete-ornegi' : '#nasil-doldurulur'}
@@ -907,7 +916,7 @@ export const MakbuzFormlarPage = () => {
                 onClick={(e) => scrollToSection(e, 'sss-bolumu')}
                 className="bg-white hover:bg-primary hover:text-white border border-slate-200 p-2.5 rounded-xl transition-all flex items-center gap-1.5 shadow-2xs group cursor-pointer"
               >
-                <span className="text-primary group-hover:text-white font-black">{(pathId === 'para-makbuzu' || pathId === 'arac-kiralama') ? '5.' : '6.'}</span> Sıkça Sorulan Sorular
+                <span className="text-primary group-hover:text-white font-black">{pathId === 'para-makbuzu' ? '5.' : '6.'}</span> Sıkça Sorulan Sorular
               </a>
             </nav>
           </div>
@@ -1855,6 +1864,25 @@ export const MakbuzFormlarPage = () => {
                 )}
               </div>
             </div>
+          )}
+
+          {currentDetails.deliveryForm && (
+            <section id="teslim-iade-formu" aria-labelledby="teslim-iade-basligi" className="scroll-mt-24 bg-white border border-gray-150 rounded-3xl p-6 md:p-8 mb-14">
+              <h2 id="teslim-iade-basligi" className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight">
+                {currentDetails.deliveryForm.title}
+              </h2>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
+                {currentDetails.deliveryForm.description}
+              </p>
+              <dl className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {currentDetails.deliveryForm.fields.map((field) => (
+                  <div key={field.title} className="bg-gray-50 border border-gray-150 rounded-2xl p-5">
+                    <dt className="text-sm font-black text-black mb-2">{field.title}</dt>
+                    <dd className="text-gray-600 text-sm leading-relaxed">{field.desc}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
           )}
 
           {/* DÖNÜŞÜM / LEAD CTA BLOĞU */}
