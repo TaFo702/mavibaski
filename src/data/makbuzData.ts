@@ -573,7 +573,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     breadcrumbTitle: "Sözleşme Baskı",
     h1Title: "Sözleşme Baskı | Numaratörlü Otokopili Sözleşme Koçanı",
     subtitle: "Hizmet, satış ve üyelik belgeleriniz için özel tasarlanan numaratörlü otokopili sözleşme koçanlarını ofset baskı tekniği ile üretime alıyoruz.",
-    featureImage: "/images/sozlesme/numaratorlu-sozlesme-baski.webp",
+    featureImage: "/images/sozlesme/sozlesme-ornegi-kocani.webp",
     featureImageAlt: "Numaratörlü otokopili sözleşme baskı koçanı",
     gallery: [
       {

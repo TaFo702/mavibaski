@@ -4013,6 +4013,12 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       extraHead += '  <meta property="og:image:width" content="1536" />\n';
       extraHead += '  <meta property="og:image:height" content="1024" />\n';
     } else if (p === '/sozlesme-baski') {
+      extraHead += `  <script type="application/ld+json">${JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "url": canonical,
+        "primaryImageOfPage": `https://mavibasim.com${detail.featureImage}`
+      })}</script>\n`;
       // Dimensions of the existing share image; do not alter the image asset.
       extraHead += '  <meta property="og:image:width" content="980" />\n';
       extraHead += '  <meta property="og:image:height" content="1024" />\n';
