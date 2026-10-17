@@ -1325,8 +1325,8 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     seoTitle: "Tahsilat Makbuzu Baskı Fiyatları | Otokopili ve Numaratörlü",
     seoDescription: "Logolu, otokopili ve numaratörlü tahsilat makbuzu baskı seçeneklerini ve mevcut fiyat tablosunu inceleyin. İstanbul Topkapı'dan Türkiye geneline gönderim.",
     breadcrumbTitle: "Tahsilat Makbuzu",
-    h1Title: "Tahsilat Makbuzu Baskı Fiyatları | Otokopili ve Numaratörlü Tahsilat Makbuzu",
-    subtitle: "Tahsilat makbuzu, işletmelerin gerçekleştirdiği tahsilatları ve alınan ödemeleri kayıt altına almak amacıyla kullanılan önemli bir matbu evraktır. Tahsilat makbuzu baskı ürünleri; işletmelerin tahsilat işlemlerini kayıt altına alması için kullanılan, logolu ve numaratörlü makbuz seçenekleridir. Özellikle ön muhasebe süreçlerinde belge düzeninin sağlanması, alınan ödemelerin takip edilmesi ve şirket içi kayıtların düzenli şekilde arşivlenebilmesi için tercih edilir. Farklı sektörlerde faaliyet gösteren firmalar günlük operasyonlarında tahsilat makbuzu kullanımına ihtiyaç duyabilmektedir.\n\nOtokopili tahsilat makbuzu koçanları, üst nüshaya yazılan bilgilerin alt nüshalara otomatik olarak aktarılmasını sağlayan kendinden karbonlu kağıtlardan üretilir. Bu yapı sayesinde ayrıca karbon kağıdı kullanmaya gerek kalmadan hızlı, temiz ve pratik bir kullanım elde edilir. Birden fazla nüsha oluşturulabilmesi, belge paylaşımını ve arşivleme süreçlerini kolaylaştırır.\n\nNumaratörlü tahsilat makbuzu modellerinde ise her yaprak ardışık sıra numarası ile basılır. Bu sistem, belgelerin düzenli şekilde takip edilmesine yardımcı olurken kayıp veya eksik evrakların tespit edilmesini de kolaylaştırır. 1 asıl + 1 suret veya 1 asıl + 2 suret olarak hazırlanabilen tahsilat makbuzları, farklı ölçü ve tasarım seçenekleriyle üretilebilmektedir.",
+    h1Title: "Tahsilat Makbuzu Baskı Fiyatları ve Koçan Baskısı",
+    subtitle: "Tahsilat makbuzu, işletmelerin aldıkları ödemeleri kayıt altına almak için kullandıkları matbu evraktır. Firmanıza özel logolu, otokopili ve numaratörlü olarak hazırlanabilir. Özellikle ön muhasebe süreçlerinde belge düzeninin sağlanması, alınan ödemelerin takip edilmesi ve şirket içi kayıtların düzenli şekilde arşivlenebilmesi için tercih edilir. Farklı sektörlerde faaliyet gösteren firmalar günlük operasyonlarında tahsilat makbuzu kullanımına ihtiyaç duyabilmektedir.\n\nOtokopili tahsilat makbuzu koçanları, üst nüshaya yazılan bilgilerin alt nüshalara otomatik olarak aktarılmasını sağlayan kendinden karbonlu kağıtlardan üretilir. Bu yapı sayesinde ayrıca karbon kağıdı kullanmaya gerek kalmadan hızlı, temiz ve pratik bir kullanım elde edilir. Birden fazla nüsha oluşturulabilmesi, belge paylaşımını ve arşivleme süreçlerini kolaylaştırır.\n\nNumaratörlü tahsilat makbuzu modellerinde ise her yaprak ardışık sıra numarası ile basılır. Bu sistem, belgelerin düzenli şekilde takip edilmesine yardımcı olurken kayıp veya eksik evrakların tespit edilmesini de kolaylaştırır. 1 asıl + 1 suret veya 1 asıl + 2 suret olarak hazırlanabilen tahsilat makbuzları, farklı ölçü ve tasarım seçenekleriyle üretilebilmektedir.",
     featureImage: "/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp",
     featureImageAlt: "Otokopili ve numaratörlü tahsilat makbuzu koçanı",
     gallery: [
@@ -1358,7 +1358,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { title: "Baskı Rengi", value: "Tek Renk (Siyah / Lacivert) veya Çok Renkli Kurumsal Baskı" },
       { title: "Kullanım Amacı", value: "İşletme içi alınan ödemelerin ve tahsilatların pratik şekilde belgelenmesi." },
       { title: "Sipariş Miktarı", value: "5 Cilt, 10 Cilt, 20 Cilt, 30 Cilt, 50 Cilt" },
-      { title: "Teslim Süresi", value: "Tasarım Onayından Sonra 3 - 5 İş Günü" }
+      { title: "Teslim Süresi", value: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." }
     ],
     whatIsTitle: "Tahsilat Makbuzu Baskı Ürün Özellikleri",
     whatIsContent: "Mavi Basım olarak yüksek kalitede ürettiğimiz tahsilat makbuzu koçanları; otokopili baskı, sıralı numaratör, kolay koparma sağlayan perfore ve dayanıklı ciltleme gibi üstün teknik özelliklerle donatılmış, firmanıza özel tasarlanan profesyonel ürünlerdir.",
@@ -1431,7 +1431,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         q: "Tahsilat Makbuzu Kaç Günde Teslim Edilir?",
-        a: "Grafik tasarım onayının ardından üretim süreci genellikle 3-5 iş günü içerisinde tamamlanmaktadır. Teslimat süresi kargo firması ve gönderim adresine göre değişiklik gösterebilir."
+        a: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır."
       },
       {
         q: "Tahsilat makbuzu baskısında minimum sipariş miktarı nedir?",

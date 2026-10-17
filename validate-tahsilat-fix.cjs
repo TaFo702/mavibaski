@@ -1,0 +1,66 @@
+const fs=require('node:fs');
+const assert=require('node:assert/strict');
+const crypto=require('node:crypto');
+const {JSDOM,VirtualConsole}=require('jsdom');
+const client=require('esbuild').buildSync({entryPoints:['src/main.tsx'],bundle:true,platform:'browser',format:'iife',write:false,loader:{'.css':'empty'}}).outputFiles[0].text;
+const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+const errors=[];
+const normalize=s=>s.replace(/\s+/g,' ').trim();
+// Ignore only React SSR text separators and React Router's discovery marker.
+// Prices, classes, attributes, labels, links and order controls remain protected.
+const hash=d=>crypto.createHash('sha256').update(d.querySelector('#fiyat-tablosu > .bg-white').outerHTML.replace(/<!-- -->/g,'').replaceAll(' data-discover="true"','')).digest('hex');
+const expectedPriceHash='8f060aa1eff0206571e1bd35a85a8302a348d8323d126f24873ee717607d34ae';
+function check(d){
+ assert.equal(d.querySelectorAll('h1').length,1);
+ assert.equal(d.querySelector('h1').textContent,'Tahsilat Makbuzu Baskı Fiyatları ve Koçan Baskısı');
+ for(const s of ['title','meta[name="description"]','link[rel="canonical"]'])assert.equal(d.querySelectorAll(s).length,1,s);
+ assert.equal(d.querySelector('link[rel="canonical"]').href,'https://mavibasim.com/tahsilat-makbuzu');
+ const ids=[...d.querySelectorAll('[id]')].map(x=>x.id);assert.equal(new Set(ids).size,ids.length,'Duplicate IDs');
+ assert.equal(hash(d),expectedPriceHash);
+ for(const s of ['og:title','og:description','og:url','og:image'])assert.equal(d.querySelectorAll(`meta[property="${s}"]`).length,1,s);
+ for(const s of ['twitter:title','twitter:description','twitter:image'])assert.equal(d.querySelectorAll(`meta[name="${s}"]`).length,1,s);
+ const schemas=[...d.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent));
+ for(const t of ['Product','FAQPage','BreadcrumbList'])assert.equal(schemas.filter(s=>s['@type']===t).length,1,t);
+ assert.equal(schemas.find(s=>s['@type']==='Product').offers.lowPrice,'1900');
+ assert.equal(d.querySelectorAll('a[href^="/makbuz/"]').length,0);
+}
+async function settle(w,path){
+ for(let i=0;i<100;i++){
+  if(w.location.pathname===path&&w.document.querySelector('link[rel="canonical"]')?.href==='https://mavibasim.com'+path&&w.document.querySelector('h1')){await sleep(400);return;}
+  await sleep(100);
+ }
+ throw new Error('Route did not settle: '+path);
+}
+async function open(){
+ const vc=new VirtualConsole();vc.on('error',(...a)=>errors.push(a.map(String).join(' ')));vc.on('jsdomError',e=>errors.push(String(e)));
+ const dom=new JSDOM(fs.readFileSync('dist/tahsilat-makbuzu/index.html','utf8'),{url:'https://mavibasim.com/tahsilat-makbuzu',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc});
+ const w=dom.window;w.scrollTo=()=>{};w.HTMLElement.prototype.scrollIntoView=function(){w.__target=this.id;};
+ w.matchMedia=()=>({matches:false,addListener(){},removeListener(){},addEventListener(){},removeEventListener(){}});
+ const d=w.document;check(d);assert.equal(crypto.createHash('sha256').update(d.querySelector('#fiyat-tablosu > .bg-white').outerHTML).digest('hex'),'b2b188f3f7da1500cb90ca4a9999c2630bd9180a1162dd4dea39ee9420d17f8f','Initial price card changed');
+ const before={priceHTML:d.querySelector('#fiyat-tablosu > .bg-white').outerHTML,table:d.querySelector('main table'),text:normalize(d.querySelector('main').textContent),links:[...d.querySelectorAll('main a[href]')].map(x=>x.getAttribute('href'))};
+ w.eval(client);await settle(w,'/tahsilat-makbuzu');check(d);
+ assert.strictEqual(d.querySelector('main table'),before.table,'Hydration replaced the protected table');
+ assert.equal(d.querySelector('#fiyat-tablosu > .bg-white').outerHTML,before.priceHTML,'Hydration changed protected price card');
+ assert.equal(normalize(d.querySelector('main').textContent),before.text,'Hydration changed visible content');
+ assert.deepEqual([...d.querySelectorAll('main a[href]')].map(x=>x.getAttribute('href')),before.links,'Hydration changed links');
+ return dom;
+}
+async function go(w,path){
+ const a=[...w.document.querySelectorAll('a[href]')].find(x=>x.getAttribute('href')===path&&!x.target);
+ assert.ok(a,'Missing navigation '+path);a.dispatchEvent(new w.MouseEvent('click',{bubbles:true,cancelable:true,button:0}));await settle(w,path);
+}
+(async()=>{
+ const dom=await open(),w=dom.window,d=w.document;
+ d.querySelector('a[href="#nasil-doldurulur"]').dispatchEvent(new w.MouseEvent('click',{bubbles:true,cancelable:true,button:0}));
+ assert.equal(w.__target,'nasil-doldurulur');assert.ok(d.querySelector('#nasil-doldurulur h2').textContent.includes('Nasıl Doldurulur?'));
+ for(const path of ['/gider-makbuzu','/para-makbuzu','/tediye-makbuzu','/']){
+  await go(w,path);w.history.back();await settle(w,'/tahsilat-makbuzu');check(d);
+ }
+ d.querySelector('#fiyat-tablosu table button').dispatchEvent(new w.MouseEvent('click',{bubbles:true,cancelable:true,button:0}));await sleep(300);
+ assert.ok(d.body.textContent.includes('WhatsApp ile İletişim'),'Order selection did not open');
+ assert.equal(hash(d),expectedPriceHash);
+ dom.window.close();
+ const reload=await open();reload.window.close();
+ assert.deepEqual(errors,[],'Runtime or hydration errors');
+ console.log('PASS: direct load, reload, hydration keeps price table node/markup/text/links, 4 return navigations, metadata/schema ownership, anchor and order selection.');
+})().catch(e=>{console.error(e);process.exit(1)});

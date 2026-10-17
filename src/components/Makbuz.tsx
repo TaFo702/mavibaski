@@ -868,7 +868,7 @@ export const MakbuzFormlarPage = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                 <span className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight">İçindekiler (Hızlı Gezinme)</span>
               </div>
-              {pathId !== 'recete' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
+              {pathId !== 'recete' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && pathId !== 'tahsilat-makbuzu' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
             </div>
             <nav className={`grid ${pathId === 'para-makbuzu' ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'} gap-2 text-xs font-bold text-slate-700`} aria-label="Sayfa İçindekiler Navigasyonu">
               <a 
@@ -1036,7 +1036,7 @@ export const MakbuzFormlarPage = () => {
                         Mavi Basım'da tahsilat makbuzları, sayfadaki mevcut seçeneklere göre logolu, kendinden karbonlu (otokopili) ve seri numaralı olarak hazırlanabilir. Ölçü, nüsha ve adet seçeneklerini ürün tablosundan inceleyerek ihtiyacınıza uygun ürünü seçebilirsiniz.
                       </p>
                       <p>
-                        Üretim İstanbul Topkapı'daki tesisimizde yapılır; siparişler Türkiye geneline gönderilir. Kasadan yapılan nakit çıkışlarını belgelemek için <Link to="/tediye-makbuzu" className="text-primary hover:underline font-bold">tediye makbuzu</Link> veya tüm matbuat çeşitleri için <Link to="/makbuz-ve-formlar" className="text-primary hover:underline font-bold">makbuz ve form baskı</Link> kategorimizi inceleyebilirsiniz.
+                        İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamızdan siparişlerinizi alıyor, Türkiye geneline gönderim sağlıyoruz. Kasadan yapılan nakit çıkışlarını belgelemek için <Link to="/tediye-makbuzu" className="text-primary hover:underline font-bold">tediye makbuzu</Link> veya tüm matbuat çeşitleri için <Link to="/makbuz-ve-formlar" className="text-primary hover:underline font-bold">makbuz ve form baskı</Link> kategorimizi inceleyebilirsiniz.
                       </p>
                     </div>
                   </div>
@@ -1079,7 +1079,7 @@ export const MakbuzFormlarPage = () => {
                   </div>
                 </div>
 
-                <div id={pathId === 'gider-makbuzu' ? 'nasil-doldurulur' : undefined} className="p-6 bg-slate-50 border border-slate-150 rounded-[2rem] shadow-sm">
+                <div id="nasil-doldurulur" className="p-6 bg-slate-50 border border-slate-150 rounded-[2rem] shadow-sm">
                   <h2 className="text-base md:text-lg font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
                     <span className="w-1.5 h-6 bg-secondary rounded-full" />
                     {pathId === 'gider-makbuzu' ? 'Gider Makbuzu Nasıl Doldurulur?' : 'Tahsilat Makbuzu Nasıl Doldurulur?'}
@@ -1122,7 +1122,7 @@ export const MakbuzFormlarPage = () => {
             <div className="text-center sm:text-left">
               <h3 className="text-sm font-black text-slate-900 uppercase mb-0.5">Siparişinizi Nasıl Oluşturabilirsiniz?</h3>
               <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                {pathId === 'recete' || pathId === 'arac-kiralama' ? (
+                {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? (
                   <>Fiyat tablosundaki <strong>"Hemen Sipariş Ver"</strong> düğmesi ürün seçim penceresini açar. Cilt adedini ve baskı rengini seçtikten sonra <strong>"WhatsApp ile İletişim"</strong> üzerinden teklif isteyebilir veya ürünü sepetinize ekleyebilirsiniz. PDF prova onayınızdan sonra baskıya başlanır.</>
                 ) : (
                   <>Fiyat listesinden seçtiğiniz adedin yanında yer alan <strong>"Hemen Sipariş Ver"</strong> butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz. Siparişiniz için logo ve bilgilerinizi WhatsApp üzerinden göndermeniz yeterlidir. PDF prova onayınız alındıktan sonra üretim başlatılır.</>
@@ -1596,19 +1596,19 @@ export const MakbuzFormlarPage = () => {
                       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 text-center mb-3">
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
                           <span className="text-emerald-600 font-extrabold text-xs sm:text-sm">Bugün Sipariş Verin</span>
-                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'Grafik desteği var.' : 'Aynı Gün Tasarım'}</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Grafik desteği var.' : 'Aynı Gün Tasarım'}</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
-                          <span className="text-primary font-extrabold text-xs sm:text-sm">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'PDF Prova Kontrolü' : '24 Saat İçinde PDF Prova'}</span>
+                          <span className="text-primary font-extrabold text-xs sm:text-sm">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'PDF Prova Kontrolü' : '24 Saat İçinde PDF Prova'}</span>
                           <span className="text-[11px] text-slate-500 font-medium mt-0.5">WhatsApp Onaylı</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
-                          <span className="text-blue-600 font-extrabold text-xs sm:text-sm">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'Türkiye Geneli Kargo' : '81 İle Hızlı Kargo'}</span>
+                          <span className="text-blue-600 font-extrabold text-xs sm:text-sm">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Türkiye Geneli Kargo' : '81 İle Hızlı Kargo'}</span>
                           <span className="text-[11px] text-slate-500 font-medium mt-0.5">Özenli Paketleme</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
                           <span className="text-amber-600 font-extrabold text-xs sm:text-sm">Yüksek Baskı Kalitesi</span>
-                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'Dijital Onay' : 'İmalatçı Garantisi'}</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Dijital Onay' : 'İmalatçı Garantisi'}</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center col-span-2 sm:col-span-1">
                           <span className="text-indigo-600 font-extrabold text-xs sm:text-sm">Tasarım Desteği</span>
@@ -2166,7 +2166,7 @@ export const MakbuzFormlarPage = () => {
             )}
 
             {pathId !== 'arac-kiralama' && pathId !== 'gider-makbuzu' && (currentDetails.howToFillTitle || currentDetails.requiredInfoTitle) ? (
-              <div id="nasil-doldurulur" className={`scroll-mt-24 relative z-10 grid grid-cols-1 ${pathId === 'gider-makbuzu' ? '' : 'md:grid-cols-2'} gap-8 border-t border-gray-100 pt-8`}>
+              <div id={pathId === 'tahsilat-makbuzu' ? undefined : 'nasil-doldurulur'} className={`scroll-mt-24 relative z-10 grid grid-cols-1 ${pathId === 'gider-makbuzu' ? '' : 'md:grid-cols-2'} gap-8 border-t border-gray-100 pt-8`}>
                 {/* Nasıl Doldurulur? */}
                 {(pathId === 'gider-makbuzu' || currentDetails.howToFillTitle) && (
                   <div className={pathId === 'gider-makbuzu' ? 'max-w-4xl' : ''}>
@@ -2409,13 +2409,13 @@ export const MakbuzFormlarPage = () => {
                         Tahsilat makbuzu, işletmelerin müşterilerinden aldıkları ödeme ve tahsilatları düzenli şekilde kayıt altına almasını sağlayan vazgeçilmez bir matbu evraktır. Günlük iş akışlarında finansal süreçlerin sağlıklı takibi için sadece tahsilat makbuzu değil, diğer tamamlayıcı muhasebe ve kayıt belgelerine de ihtiyaç duyulmaktadır.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/gider-makbuzu" className="font-extrabold text-primary hover:underline">Gider Makbuzu</Link></strong>, işletme dışı yapılan harcamaları ve nakit ödemeleri belgelemek için düzenlenirken; <strong><Link to="/makbuz/tediye-makbuzu" className="font-extrabold text-primary hover:underline">Tediye Makbuzu</Link></strong>, kasadan çıkan nakit ödemelerin alıcısı tarafından teslim alındığını kayıt altına almak üzere düzenlenir.
+                        <strong><Link to="/gider-makbuzu" className="font-extrabold text-primary hover:underline">Gider Makbuzu</Link></strong>, işletme dışı yapılan harcamaları ve nakit ödemeleri belgelemek için düzenlenirken; <strong><Link to="/tediye-makbuzu" className="font-extrabold text-primary hover:underline">Tediye Makbuzu</Link></strong>, kasadan çıkan nakit ödemelerin alıcısı tarafından teslim alındığını kayıt altına almak üzere düzenlenir.
                       </p>
                       <p>
-                        <strong><Link to="/makbuz/para-makbuzu" className="font-extrabold text-primary hover:underline">Para Makbuzu</Link></strong>, personelden personele veya anlık küçük emanet nakit akışlarında pratik bir kayıt çözümü sunar. <strong><Link to="/makbuz/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/makbuz/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ise hizmet sektöründeki sipariş ve servis süreçlerinin noksansız takibini sağlar.
+                        <strong><Link to="/para-makbuzu" className="font-extrabold text-primary hover:underline">Para Makbuzu</Link></strong>, personelden personele veya anlık küçük emanet nakit akışlarında pratik bir kayıt çözümü sunar. <strong><Link to="/adisyon" className="font-extrabold text-primary hover:underline">Adisyon</Link></strong> ve <strong><Link to="/siparis-fisi" className="font-extrabold text-primary hover:underline">Sipariş Fişi</Link></strong> ise hizmet sektöründeki sipariş ve servis süreçlerinin noksansız takibini sağlar.
                       </p>
                       <p>
-                        Mavi Basım olarak; kurumsal logolu, kendinden karbonlu otokopili ve seri numaralı tahsilat makbuzu koçanlarının basımında uzman kadromuz ve grafik desteğimizle hizmet veriyoruz. İstanbul Topkapı'daki tesisimizde üretilen kaliteli evraklarınızı Türkiye'nin tüm bölgelerine güvenli kargo ile ulaştırıyoruz.
+                        Mavi Basım olarak; kurumsal logolu, kendinden karbonlu otokopili ve seri numaralı tahsilat makbuzu koçanlarının basımında grafik desteği sunuyoruz. İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamızdan siparişlerinizi alıyor, Türkiye geneline kargo ile gönderim sağlıyoruz.
                       </p>
                     </>
                   )}
@@ -3547,10 +3547,10 @@ export const MakbuzFormlarPage = () => {
               <div className="space-y-2">
                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white flex items-center gap-2">
                   <span className="w-2 h-6 bg-primary rounded-full" />
-                  {pathId === 'recete' || pathId === 'arac-kiralama' ? 'Baskı Öncesi Kontrol ve Onay' : 'Mavi Basım İmalat Güvencesi'}
+                  {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Baskı Öncesi Kontrol ve Onay' : 'Mavi Basım İmalat Güvencesi'}
                 </h3>
                 <p className="text-xs md:text-sm text-slate-300 font-medium max-w-xl leading-relaxed">
-                  {pathId === 'recete' || pathId === 'arac-kiralama' ? 'Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz.' : 'Doğrudan imalathanemizden hızlı, güvenli ve kurumsal kalitede matbu evrak baskı çözümleri sunuyoruz.'}
+                  {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz.' : 'Doğrudan imalathanemizden hızlı, güvenli ve kurumsal kalitede matbu evrak baskı çözümleri sunuyoruz.'}
                 </p>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 shrink-0">
@@ -3560,7 +3560,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
-                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'Topkapı Hizmet Noktası' : 'Topkapı Üretim Tesisi'}</span>
+                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Topkapı Hizmet Noktası' : 'Topkapı Üretim Tesisi'}</span>
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
@@ -3572,7 +3572,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center col-span-2 sm:col-span-1">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
-                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' ? 'Grafik desteği var.' : 'Ücretsiz Grafik Desteği'}</span>
+                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Grafik desteği var.' : 'Ücretsiz Grafik Desteği'}</span>
                 </div>
               </div>
             </div>
