@@ -54,13 +54,14 @@ async function prerender() {
   let tediyeContent: string;
   let receteContent: string;
   let giderContent: string;
+  let tahsilatContent: string;
   let aracKiralamaContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderAracKiralama } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
@@ -71,6 +72,16 @@ async function prerender() {
     tediyeContent = prerenderTediyeMakbuzu();
     receteContent = prerenderRecete();
     giderContent = prerenderGiderMakbuzu();
+    tahsilatContent = prerenderTahsilatMakbuzu();
+    if ((tahsilatContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
+        (tahsilatContent.match(/<h1\b/g) || []).length !== 1 ||
+        !tahsilatContent.includes('Tahsilat Makbuzu 14 x 20 cm Fiyat Listesi') ||
+        !tahsilatContent.includes('id="ozellikler"') ||
+        !tahsilatContent.includes('id="nasil-doldurulur"') ||
+        !tahsilatContent.includes('id="sss-bolumu"') ||
+        !tahsilatContent.includes('Tahsilat Makbuzu Ürün Fotoğraf Galerisi')) {
+      throw new Error('Tahsilat prerender validation failed: existing pricing, content, gallery, FAQ or H1 missing.');
+    }
     aracKiralamaContent = prerenderAracKiralama();
     if ((aracKiralamaContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
         (aracKiralamaContent.match(/<h1\b/g) || []).length !== 1 ||
@@ -165,6 +176,7 @@ async function prerender() {
           : pathname === '/kataloglar' ? katalogContent
           : pathname === '/kartvizit' ? kartvizitContent
           : pathname === '/gider-makbuzu' ? giderContent
+          : pathname === '/tahsilat-makbuzu' ? tahsilatContent
           : pathname === '/arac-kiralama' ? aracKiralamaContent
           : pathname === '/recete' ? receteContent
           : pathname === '/tediye-makbuzu' ? tediyeContent
@@ -196,6 +208,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="bloknotlar">')
         : pathname === '/gider-makbuzu'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="gider-makbuzu">')
+        : pathname === '/tahsilat-makbuzu'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="tahsilat-makbuzu">')
         : pathname === '/arac-kiralama'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="arac-kiralama">')
         : pathname === '/recete'

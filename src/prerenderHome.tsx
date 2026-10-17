@@ -97,6 +97,14 @@ export function prerenderGiderMakbuzu() {
   return renderToString(<App Router={GiderRouter} MakbuzComponent={MakbuzFormlarPage} />);
 }
 
+// Keep the existing page, price table and client hydration tree in sync.
+export function prerenderTahsilatMakbuzu() {
+  const TahsilatRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/tahsilat-makbuzu']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={TahsilatRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}
+
 // Reuse the page and protected price component for the complete initial HTML.
 export function prerenderAracKiralama() {
   const AracKiralamaRouter = ({ children }: { children: React.ReactNode }) => (
