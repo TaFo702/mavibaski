@@ -514,6 +514,9 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
   const isSozlesmeProduct = normalizeForSearch(category).includes('sozlesme') ||
     normalizeForSearch(product?.code || '').includes('sozlesme');
   const usesQuotedProductionTime = isReceteProduct || isSozlesmeProduct;
+  const productSize = product?.ebat || (isSozlesmeProduct
+    ? MAKBUZ_FORMLAR_ALL_DATA.find(section => section.id === 'sozlesme-baski')?.ebat
+    : undefined);
 
   const isMakbuzVeForm = (() => {
     const normCategory = normalizeForSearch(category);
@@ -1068,7 +1071,7 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
         {/* Footer / Action */}
         <div className="p-4 sm:p-8 pt-0 shrink-0 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${product.ebat || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${productSize || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-sm uppercase tracking-tight flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98]"
@@ -5052,6 +5055,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
       <Route path="/siparis-fisi-baski-fiyatlari" element={<MakbuzFormlarPage />} />
       <Route path="/perakende-satis-fisi" element={<MakbuzFormlarPage />} />
       <Route path="/para-makbuzu" element={<MakbuzFormlarPage />} />
+      <Route path="/sozlesme" element={<Navigate to="/sozlesme-baski" replace />} />
       <Route path="/sozlesme-baski" element={<MakbuzComponent />} />
       <Route path="/sigorta-policeleri" element={<MakbuzFormlarPage />} />
       <Route path="/tahsilat-makbuzu" element={<MakbuzComponent />} />

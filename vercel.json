@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/sozlesme",
+      "destination": "/sozlesme-baski",
+      "permanent": true
+    },
+    {
       "source": "/bloknot",
       "destination": "/bloknotlar",
       "permanent": true
