@@ -1744,7 +1744,7 @@ export const MakbuzFormlarPage = () => {
                           Firma Logolu Sözleşme Koçanı Baskı
                         </h2>
                         <p className="text-slate-650 text-base leading-relaxed font-medium">
-                          Kurumsal kimliğinizi yansıtan firma logolu sözleşme koçanları; üyelik işlemleri, hizmet satışları, araç kiralama, eğitim kayıtları ve emlak işlemlerinde profesyonel görünüm sağlar. Firmanıza özel hazırlanan sözleşme formları logo, adres, iletişim bilgileri ve özel maddelerle baskıya hazırlanır.
+                          Firma logolu sözleşme koçanları; şirket unvanı, adres, iletişim ve vergi bilgileri ile ilettiğiniz sözleşme maddeleri eklenerek baskıya hazırlanır. Otokopili nüshalar aynı bilgilerin taraflar arasında paylaşılmasını, seri numaraları ise kayıtların takip edilmesini kolaylaştırır.
                         </p>
                       </div>
                     </>
@@ -2491,16 +2491,6 @@ export const MakbuzFormlarPage = () => {
               </div>
             )}
 
-            {pathId === 'sozlesme-baski' && (
-              <div className="relative z-10 border-t border-gray-100 pt-8">
-                <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                  Otokopili Sözleşme Baskı Siparişi
-                </h2>
-                <p className="text-slate-650 text-base leading-relaxed font-medium">
-                  Otokopili sözleşme baskı ürünleri, işletmelerin satış, üyelik, kiralama ve hizmet süreçlerinde kullandıkları önemli kurumsal evraklar arasında yer almaktadır. Mavi Basım tarafından üretilen numaratörlü sözleşme koçanı baskıları; firma logosu, iletişim bilgileri ve özel şartnameler eklenerek tamamen kuruma özel hazırlanır. İstanbul'da üretilen sözleşme baskıları Türkiye'nin 81 iline gönderilmektedir.
-                </p>
-              </div>
-            )}
 
             {/* Sektörler */}
             {pathId !== 'recete' && pathId !== "para-makbuzu" && pathId !== 'adisyon' && pathId !== 'arac-kiralama' && pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'sozlesme-baski' && pathId !== 'sigorta-policeleri' && (
@@ -2612,35 +2602,6 @@ export const MakbuzFormlarPage = () => {
                         <div>
                           <h3 className="text-sm font-extrabold text-black mb-1">{sec.title}</h3>
                           <p className="text-xs text-slate-600 font-medium leading-relaxed">{sec.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* 3. 4 ADIMLIK GÖRSEL İMALAT SÜRECİ AKIŞI */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
-                    Sözleşme Baskı 4 Adımlı İmalat Süreci
-                  </h2>
-                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
-                    Sözleşme siparişinizin dosya hazırlığından kargoya kadar izlediği aşamalar:
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {[
-                      { step: "01", title: "Tasarım & Mizanpaj", desc: "Şirket logonuz, adres bilgileriniz ve yasal maddeleriniz grafik ekibimizce mizanpaj yapılır.", icon: "🎨" },
-                      { step: "02", title: "Dijital PDF Onayı", desc: "Baskı öncesinde hazırlanan sözleşme taslağı WhatsApp / E-posta ile onayınıza sunulur.", icon: "📄" },
-                      { step: "03", title: "Ofset Baskı & Cilt", desc: "Otokopili kağıtlara baskı, kırmızı numaratör ve üstten bezli tutkallı ciltleme uygulanır.", icon: "🖨️" },
-                      { step: "04", title: "Adrese Kargo", desc: "Çift oluklu kolilerde paketlenen sözleşme koçanlarınız kargoya verilerek teslim edilir.", icon: "📦" }
-                    ].map((step, idx) => (
-                      <div key={idx} className="bg-gradient-to-br from-slate-50 to-white border border-gray-150 rounded-2xl p-5 relative overflow-hidden flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition-all">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="text-2xl">{step.icon}</span>
-                          <span className="text-xs font-black text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">{step.step}</span>
-                        </div>
-                        <div>
-                          <h3 className="text-base font-extrabold text-black mb-1.5">{step.title}</h3>
-                          <p className="text-xs text-slate-600 font-medium leading-relaxed">{step.desc}</p>
                         </div>
                       </div>
                     ))}
@@ -2763,14 +2724,6 @@ export const MakbuzFormlarPage = () => {
                   </p>
                 </div>
 
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Firma Logolu Sözleşme Koçanı Baskısı
-                  </h2>
-                  <p className="text-slate-650 text-base leading-relaxed font-medium">
-                    Kurumsal kimliğinizi güçlendirmek amacıyla hazırlanan firma logolu sözleşme koçanları; şirket unvanı, adres bilgileri, vergi bilgileri ve özel sözleşme maddeleri eklenerek hazırlanabilmektedir. Talebinize özel tasarlanan ve basılan <strong>otokopili sözleşme formu</strong> çeşitleri veya <strong>karbonlu sözleşme formu</strong> nüshaları, firmanızın operasyon süreçlerini mükemmel şekilde düzene sokar. Her baskı öncesinde tamamen size özel PDF prova onayı alınarak üretime geçilmektedir.
-                  </p>
-                </div>
 
                 <div className="relative z-10 border-t border-gray-100 pt-8">
                   <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
@@ -2814,16 +2767,6 @@ export const MakbuzFormlarPage = () => {
                   </p>
                   <p className="text-slate-650 text-base leading-relaxed font-medium mt-4">
                     İstanbul'da faaliyet gösteren spor salonları, güzellik merkezleri, emlak ofisleri, eğitim kurumları, teknik servisler ve araç kiralama firmaları için kurumsal sözleşme koçanı baskıları hazırlamaktayız.
-                  </p>
-                </div>
-
-                {/* Sözleşme Koçanı Baskı Siparişi Nasıl Verilir? */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
-                  <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
-                    Sözleşme Koçanı Baskı Siparişi Nasıl Verilir?
-                  </h2>
-                  <p className="text-slate-650 text-base leading-relaxed font-medium">
-                    Sözleşme baskı siparişiniz için mevcut Word, PDF veya eski sözleşme örneğinizi iletin. Grafik desteği var. Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz. Üretim ve teslim süresi teklif aşamasında paylaşılır.
                   </p>
                 </div>
 
