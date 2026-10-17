@@ -19,7 +19,7 @@ function check(d){
  assert.equal(hash(d),expectedPriceHash);
  for(const s of ['og:title','og:description','og:url','og:image'])assert.equal(d.querySelectorAll(`meta[property="${s}"]`).length,1,s);
  for(const s of ['twitter:title','twitter:description','twitter:image'])assert.equal(d.querySelectorAll(`meta[name="${s}"]`).length,1,s);
- const schemas=[...d.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent));
+ const schemas=[...d.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>{const value=JSON.parse(s.textContent);return Array.isArray(value)?value:[value];});
  for(const t of ['Product','FAQPage','BreadcrumbList'])assert.equal(schemas.filter(s=>s['@type']===t).length,1,t);
  assert.equal(schemas.find(s=>s['@type']==='Product').offers.lowPrice,'2000');
  assert.equal(d.querySelectorAll('a[href^="/makbuz/"]').length,0);
@@ -73,6 +73,10 @@ async function go(w,path){
  d.querySelector('#fiyat-tablosu table button').dispatchEvent(new w.MouseEvent('click',{bubbles:true,cancelable:true,button:0}));await sleep(300);
  assert.ok(d.body.textContent.includes('WhatsApp ile İletişim'),'Order selection did not open');
  assert.equal(hash(d),expectedPriceHash);
+ assert.ok(!/Aynı Gün Tasarım Onayı|PDF prova aynı gün|Ortalama 3–4 iş günü/.test(d.body.textContent),'Unverified modal lead-time claim');
+ assert.ok(d.body.textContent.includes('Ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.'));
+ const wa=[...d.querySelectorAll('a[href^="https://wa.me/"]')].find(a=>a.textContent.includes('WhatsApp ile İletişim'));
+ assert.ok(decodeURIComponent(wa.href).includes('5 cilt'),'Contract quantity unit must be cilt');
  dom.window.close();
  const reload=await open();reload.window.close();
  assert.deepEqual(errors,[],'Runtime or hydration errors');
