@@ -14,7 +14,7 @@ export function RouteSEOHead() {
     const install = (seo: { title: string; desc: string; canonical: string; extraHead?: string; ogImage?: string }) => {
       if (cancelled) return;
       document.head.querySelectorAll('[data-prerender-seo]').forEach(tag => tag.remove());
-      if (path === '/' || ['/arac-kiralama', '/sozlesme-baski', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(path)) document.getElementById('app-seo-metadata-jsonld')?.remove();
+      if (path === '/' || ['/arac-kiralama', '/sozlesme-baski', '/para-makbuzu', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(path)) document.getElementById('app-seo-metadata-jsonld')?.remove();
       const html = injectSEOMetadata('<html><head></head><body></body></html>',
         seo.title, seo.desc, seo.canonical, false, seo.extraHead, '', '', seo.ogImage);
       const head = new DOMParser().parseFromString(html, 'text/html').head;

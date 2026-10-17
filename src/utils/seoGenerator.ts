@@ -3145,10 +3145,10 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
   if (p === '/para-makbuzu' && staticPages['/para-makbuzu']) {
     const detail = MAKBUZ_DETAILS['para-makbuzu'];
     const tableData = PARA_MAKBUZU_DATA[0];
-    title = staticPages['/para-makbuzu'].title;
-    desc = staticPages['/para-makbuzu'].desc;
+    title = detail.seoTitle;
+    desc = detail.seoDescription;
 
-    const escapeHtml = (val: any): string =>
+    const escapeHtml = (val: unknown): string =>
       String(val ?? '')
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
@@ -3203,6 +3203,27 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       }))
     };
 
+    const prices = tableData.rows.filter(row => !row.label.includes('Renk Farkı'))
+      .flatMap(row => row.values);
+    const productSchema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "@id": `${canonical}#product`,
+      "name": detail.h1Title,
+      "description": desc,
+      "image": detail.gallery.map(image => `https://mavibasim.com${image.src}`),
+      "url": canonical,
+      "brand": { "@type": "Brand", "name": "Mavi Basım" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "TRY",
+        "lowPrice": String(Math.min(...prices)),
+        "highPrice": String(Math.max(...prices)),
+        "offerCount": String(prices.length),
+        "url": canonical
+      }
+    };
+
     const imageSchemas = detail.gallery.map(g => ({
       "@context": "https://schema.org",
       "@type": "ImageObject",
@@ -3219,101 +3240,21 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       "caption": g.alt || g.title
     }));
 
-    let extraHead = `  <script type="application/ld+json">${JSON.stringify(localBusinessSchema)}</script>\n`;
+    let extraHead = `<meta property="og:image:width" content="1536" />
+      <meta property="og:image:height" content="1024" />
+      <meta property="og:image:alt" content="${escapeHtml(detail.featureImageAlt)}" />
+      <meta property="og:type" content="product" />
+      <script type="application/ld+json">${JSON.stringify(localBusinessSchema)}</script>\n`;
     extraHead += `  <script type="application/ld+json">${JSON.stringify(websiteSchema)}</script>\n`;
     extraHead += `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n`;
     extraHead += `  <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n`;
+    extraHead += `  <script type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;
     imageSchemas.forEach(img => {
       extraHead += `  <script type="application/ld+json">${JSON.stringify(img)}</script>\n`;
     });
 
-    const headersHtml = tableData.headers.map(h => `<th scope="col" class="p-3 text-center border-b border-slate-200">${escapeHtml(h)}</th>`).join('');
-    const rowsHtml = tableData.rows.map(row => {
-      const isColorDiff = row.label.includes('Renk Farkı');
-      const trClass = isColorDiff ? 'border-b border-slate-100 bg-slate-50 font-bold' : 'border-b border-slate-100';
-      const cells = row.values.map(val => `<td class="p-3 text-center whitespace-nowrap">${val.toLocaleString('tr-TR')} ₺</td>`).join('');
-      return `<tr class="${trClass}"><th scope="row" class="p-3 font-bold text-slate-900 border-r border-slate-100">${escapeHtml(row.label)}</th>${cells}</tr>`;
-    }).join('\n            ');
-
-    const specsHtml = detail.specifications.map(s => `<tr><th scope="row" class="p-3 font-bold text-slate-800 border-b border-slate-100 text-left w-1/3">${escapeHtml(s.title)}</th><td class="p-3 text-slate-700 border-b border-slate-100">${escapeHtml(s.value)}</td></tr>`).join('\n            ');
-
-    const galleryHtml = detail.gallery.map(g => `<figure class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs"><img src="${escapeHtml(g.src)}" alt="${escapeHtml(g.alt)}" width="400" height="300" loading="lazy" class="w-full h-auto object-cover" /><figcaption class="p-3"><strong class="block text-xs font-bold text-slate-900 mb-1">${escapeHtml(g.title)}</strong><span class="text-[11px] text-slate-500">${escapeHtml(g.desc)}</span></figcaption></figure>`).join('\n        ');
-
-    const faqsHtml = detail.faqList.map((f, i) => `<article id="sss-${i + 1}" class="mb-4 p-4 rounded-xl bg-slate-50 border border-slate-100"><h3 class="font-bold text-sm text-slate-900 mb-1.5">${escapeHtml(f.q)}</h3><p class="text-xs text-slate-600 leading-relaxed">${escapeHtml(f.a)}</p></article>`).join('\n        ');
-
-    const howToFillHtml = detail.howToFillContent.length > 0
-      ? `<section id="nasil-doldurulur" class="mb-10">
-          <h2 class="text-xl font-bold text-slate-900 mb-3">${escapeHtml(detail.howToFillTitle)}</h2>
-          <ul class="list-disc list-inside space-y-1.5 text-xs text-slate-700">
-            ${detail.howToFillContent.map(c => `<li>${escapeHtml(c)}</li>`).join('\n            ')}
-          </ul>
-        </section>`
-      : '';
-
-    const requiredInfoHtml = detail.requiredInfoContent.length > 0
-      ? `<section id="bulunmasi-gerekenler" class="mb-10">
-          <h2 class="text-xl font-bold text-slate-900 mb-3">${escapeHtml(detail.requiredInfoTitle)}</h2>
-          <ul class="list-disc list-inside space-y-1.5 text-xs text-slate-700">
-            ${detail.requiredInfoContent.map(c => `<li>${escapeHtml(c)}</li>`).join('\n            ')}
-          </ul>
-        </section>`
-      : '';
-
-    const bodyContent = `<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-6 text-slate-900">
-      <nav class="text-xs text-slate-500 mb-4" aria-label="Breadcrumb">
-        <ol class="flex items-center space-x-1.5">
-          <li><a href="/" class="hover:text-primary">Ana Sayfa</a></li>
-          <li>&gt;</li>
-          <li><a href="/makbuz-ve-formlar" class="hover:text-primary">Makbuz &amp; Formlar</a></li>
-          <li>&gt;</li>
-          <li aria-current="page" class="font-bold text-slate-800">${escapeHtml(detail.breadcrumbTitle)}</li>
-        </ol>
-      </nav>
-      <header class="mb-8">
-        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 mb-2">${escapeHtml(detail.h1Title)}</h1>
-        <p class="text-sm text-slate-600 leading-relaxed">${escapeHtml(detail.subtitle)}</p>
-        <p class="text-xs text-slate-500 mt-2">${escapeHtml(detail.whatIsContent)}</p>
-      </header>
-      <section id="fiyat-tablosu" class="mb-10">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse text-xs sm:text-sm">
-            <caption class="text-left font-bold text-slate-900 pb-2 text-sm sm:text-base">Para Makbuzu Baskı Fiyat Tablosu (${escapeHtml(tableData.ebat)} - ${escapeHtml(tableData.ozellik)})</caption>
-            <thead>
-              <tr class="bg-slate-900 text-white">
-                <th scope="col" class="p-3 border-b border-slate-900">Nüsha / Seçenek</th>
-                ${headersHtml}
-              </tr>
-            </thead>
-            <tbody>
-            ${rowsHtml}
-            </tbody>
-          </table>
-        </div>
-        <p class="text-[11px] text-slate-500 mt-2">* Fiyatlar 50 takımlık cilt koçan bazındadır. 2. renk baskı tercihe bağlı ek farktır.</p>
-      </section>
-      <section id="teknik-ozellikler" class="mb-10">
-        <h2 class="text-xl font-bold text-slate-900 mb-3">Teknik Özellikler Tablosu</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse text-xs sm:text-sm max-w-2xl border border-slate-200">
-            <tbody>
-            ${specsHtml}
-            </tbody>
-          </table>
-        </div>
-      </section>
-      ${howToFillHtml}
-      ${requiredInfoHtml}
-      <section id="urun-gorselleri" class="mb-10">
-        <h2 class="text-xl font-bold text-slate-900 mb-3">Ürün Görselleri ve Örnekleri</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-        ${galleryHtml}
-        </div>
-      </section>
-      <section id="sikca-sorulan-sorular" class="mb-10">
-        <h2 class="text-xl font-bold text-slate-900 mb-3">Sıkça Sorulan Sorular</h2>
-        ${faqsHtml}
-      </section>
-    </div>`;
+    // Full content is supplied by prerenderParaMakbuzu using the existing page.
+    const bodyContent = `<h1>${escapeHtml(detail.h1Title)}</h1><p>${escapeHtml(detail.subtitle)}</p>`;
 
     return {
       title,
@@ -3321,7 +3262,8 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       canonical,
       extraHead,
       h1Text: detail.h1Title,
-      bodyContent
+      bodyContent,
+      ogImage: `https://mavibasim.com${detail.featureImage}`
     };
   }
 
