@@ -120,3 +120,11 @@ export function prerenderSozlesme() {
   );
   return renderToString(<App Router={SozlesmeRouter} MakbuzComponent={MakbuzFormlarPage} />);
 }
+
+// Reuse the existing para makbuzu page and protected pricing component.
+export function prerenderParaMakbuzu() {
+  const ParaRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/para-makbuzu']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={ParaRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}

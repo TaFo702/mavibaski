@@ -57,12 +57,13 @@ async function prerender() {
   let tahsilatContent: string;
   let aracKiralamaContent: string;
   let sozlesmeContent: string;
+  let paraContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
@@ -82,6 +83,14 @@ async function prerender() {
         !tahsilatContent.includes('id="sss-bolumu"') ||
         !tahsilatContent.includes('Tahsilat Makbuzu Ürün Fotoğraf Galerisi')) {
       throw new Error('Tahsilat prerender validation failed: existing pricing, content, gallery, FAQ or H1 missing.');
+    }
+    paraContent = prerenderParaMakbuzu();
+    if ((paraContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
+        (paraContent.match(/<h1\b/g) || []).length !== 1 ||
+        !paraContent.includes('id="sss-bolumu"') ||
+        !paraContent.includes('Para Makbuzu Ürün Fotoğraf Galerisi') ||
+        !paraContent.includes('14 x 20 cm (YARIM BOY)')) {
+      throw new Error('Para makbuzu prerender validation failed: existing pricing, gallery, FAQ or H1 missing.');
     }
     sozlesmeContent = prerenderSozlesme();
     if ((sozlesmeContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
@@ -186,6 +195,7 @@ async function prerender() {
           : pathname === '/kartvizit' ? kartvizitContent
           : pathname === '/gider-makbuzu' ? giderContent
           : pathname === '/tahsilat-makbuzu' ? tahsilatContent
+          : pathname === '/para-makbuzu' ? paraContent
           : pathname === '/sozlesme-baski' ? sozlesmeContent
           : pathname === '/arac-kiralama' ? aracKiralamaContent
           : pathname === '/recete' ? receteContent
@@ -220,6 +230,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="gider-makbuzu">')
         : pathname === '/tahsilat-makbuzu'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="tahsilat-makbuzu">')
+        : pathname === '/para-makbuzu'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="para-makbuzu">')
         : pathname === '/sozlesme-baski'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="sozlesme-baski">')
         : pathname === '/arac-kiralama'

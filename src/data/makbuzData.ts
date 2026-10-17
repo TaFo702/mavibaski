@@ -504,7 +504,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
         src: "/images/para-makbuzu/para-makbuzu-kocani.webp",
         alt: "Perforajlı telli cilt para makbuzu",
         title: "Perforajlı ve Dikişli Ciltleme",
-        desc: "Yıllar boyu dağılmadan arşivde saklanabilen tel dikişli cilt ve kolay koparmayı sağlayan perfore hat."
+        desc: "Yaprakları bir arada tutan tel dikişli cilt ve koçandan ayırmayı kolaylaştıran perfore hat."
       },
       {
         src: "/images/para-makbuzu/para-makbuzu-ornegi.webp",

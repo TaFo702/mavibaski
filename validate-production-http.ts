@@ -27,6 +27,7 @@ const ROUTES_TO_TEST: RouteTestConfig[] = [
   { path: '/magnet', expectedStatus: 200, expectedTitleSubstring: 'Magnet Baskı Fiyatları' },
   { path: '/recete', expectedStatus: 200, expectedTitleSubstring: 'Reçete Baskı Fiyatları' },
   { path: '/tediye-makbuzu', expectedStatus: 200, expectedTitleSubstring: 'Tediye Makbuzu Baskı Fiyatları' },
+  { path: '/para-makbuzu', expectedStatus: 200, expectedTitleSubstring: 'Numaratörlü Para Makbuzu Baskı Fiyatları' },
   { path: '/matbaa', expectedStatus: 200, expectedTitleSubstring: 'Biz Kimiz?' },
   { path: '/istanbul-matbaa', expectedStatus: 200, expectedTitleSubstring: 'İstanbul Matbaa' },
   { path: '/ankara-matbaa', expectedStatus: 200, expectedTitleSubstring: 'Ankara Matbaa' },

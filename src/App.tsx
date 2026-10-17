@@ -513,9 +513,11 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
 
   const isSozlesmeProduct = normalizeForSearch(category).includes('sozlesme') ||
     normalizeForSearch(product?.code || '').includes('sozlesme');
-  const usesQuotedProductionTime = isReceteProduct || isSozlesmeProduct;
-  const productSize = product?.ebat || (isSozlesmeProduct
-    ? MAKBUZ_FORMLAR_ALL_DATA.find(section => section.id === 'sozlesme-baski')?.ebat
+  const isParaMakbuzuProduct = normalizeForSearch(category).includes('para makbuzu') ||
+    normalizeForSearch(product?.code || '').includes('para makbuzu');
+  const usesQuotedProductionTime = isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct;
+  const productSize = product?.ebat || (isSozlesmeProduct || isParaMakbuzuProduct
+    ? MAKBUZ_FORMLAR_ALL_DATA.find(section => section.id === (isParaMakbuzuProduct ? 'para-makbuzu' : 'sozlesme-baski'))?.ebat
     : undefined);
 
   const isMakbuzVeForm = (() => {
@@ -1071,7 +1073,7 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
         {/* Footer / Action */}
         <div className="p-4 sm:p-8 pt-0 shrink-0 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${productSize || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${productSize || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-sm uppercase tracking-tight flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98]"
@@ -1333,6 +1335,7 @@ const LegacyCanonicalLink = () => {
   const isTediyeMakbuzuPage = path === '/tediye-makbuzu';
   const isTahsilatMakbuzuPage = path === '/tahsilat-makbuzu';
   const isSozlesmePage = path === '/sozlesme-baski';
+  const isParaMakbuzuPage = path === '/para-makbuzu';
     const isGiderMakbuzuPage = path === '/gider-makbuzu';
     const isKartvizitPage = path === '/kartvizit';
       const isDosyalarPage = path === '/dosyalar';
@@ -1961,7 +1964,7 @@ const prodSchemaDesc =
   }
 
   useEffect(() => {
-        if (isKutuPage || isKupBloknotPage || isEtiketPage || isBloknotlarPage || isAntetliPage || isZarfPage || isAmerikanServisPage || isOtoPaspasPage || isKataloglarPage || isKartonCantaPage || isYagKartiPage || isRecetePage || isTediyeMakbuzuPage || isTahsilatMakbuzuPage || isSozlesmePage || isGiderMakbuzuPage || isKartvizitPage || isDosyalarPage) {
+        if (isKutuPage || isKupBloknotPage || isEtiketPage || isBloknotlarPage || isAntetliPage || isZarfPage || isAmerikanServisPage || isOtoPaspasPage || isKataloglarPage || isKartonCantaPage || isYagKartiPage || isRecetePage || isTediyeMakbuzuPage || isTahsilatMakbuzuPage || isSozlesmePage || isParaMakbuzuPage || isGiderMakbuzuPage || isKartvizitPage || isDosyalarPage) {
       const scriptEl = document.getElementById('app-seo-metadata-jsonld');
       if (scriptEl) scriptEl.remove();
       return;
@@ -1978,7 +1981,7 @@ const prodSchemaDesc =
       document.head.appendChild(scriptEl);
     }
     scriptEl.textContent = JSON.stringify(schemas);
-        }, [canonicalUrl, schemas, isInvalidSectorPage, isKutuPage, isAmbalajPage, isKupBloknotPage, isEtiketPage, isBloknotlarPage, isAntetliPage, isZarfPage, isAmerikanServisPage, isOtoPaspasPage, isKataloglarPage, isKartonCantaPage, isYagKartiPage, isRecetePage, isTediyeMakbuzuPage, isTahsilatMakbuzuPage, isSozlesmePage, isGiderMakbuzuPage, isKartvizitPage, isDosyalarPage]);
+        }, [canonicalUrl, schemas, isInvalidSectorPage, isKutuPage, isAmbalajPage, isKupBloknotPage, isEtiketPage, isBloknotlarPage, isAntetliPage, isZarfPage, isAmerikanServisPage, isOtoPaspasPage, isKataloglarPage, isKartonCantaPage, isYagKartiPage, isRecetePage, isTediyeMakbuzuPage, isTahsilatMakbuzuPage, isSozlesmePage, isParaMakbuzuPage, isGiderMakbuzuPage, isKartvizitPage, isDosyalarPage]);
 
   if (
   isInvalidSectorPage ||
@@ -1998,6 +2001,7 @@ const prodSchemaDesc =
     isTediyeMakbuzuPage ||
   isTahsilatMakbuzuPage ||
   isSozlesmePage ||
+  isParaMakbuzuPage ||
     isGiderMakbuzuPage ||
     isKartvizitPage ||
   isDosyalarPage
@@ -5054,7 +5058,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
       <Route path="/siparis-fisi" element={<MakbuzFormlarPage />} />
       <Route path="/siparis-fisi-baski-fiyatlari" element={<MakbuzFormlarPage />} />
       <Route path="/perakende-satis-fisi" element={<MakbuzFormlarPage />} />
-      <Route path="/para-makbuzu" element={<MakbuzFormlarPage />} />
+      <Route path="/para-makbuzu" element={<MakbuzComponent />} />
       <Route path="/sozlesme" element={<Navigate to="/sozlesme-baski" replace />} />
       <Route path="/sozlesme-baski" element={<MakbuzComponent />} />
       <Route path="/sigorta-policeleri" element={<MakbuzFormlarPage />} />

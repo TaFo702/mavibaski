@@ -26,3 +26,6 @@ jobs:
 
       - name: Run Full Quality Gate
         run: npm run quality
+
+      - name: Verify para makbuzu hydration, pricing preservation and order flow
+        run: node validate-para-fix.cjs

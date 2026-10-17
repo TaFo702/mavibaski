@@ -694,7 +694,7 @@ export const MakbuzFormlarPage = () => {
 
     return (
       <div className={`bg-white min-h-screen pb-20${pathId === 'recete' ? ' recete-page' : pathId === 'arac-kiralama' ? ' arac-kiralama-page' : ''}`}>
-        {pathId !== 'recete' && pathId !== 'tediye-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && pathId !== 'sozlesme-baski' && (
+        {pathId !== 'recete' && pathId !== 'tediye-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && pathId !== 'sozlesme-baski' && pathId !== 'para-makbuzu' && (
           <Helmet>
             <title>{pageTitleForSEO}</title>
             <meta name="description" content={pageDescForSEO} />
@@ -746,7 +746,7 @@ export const MakbuzFormlarPage = () => {
                 </h2>
                 <p className="text-center md:text-justify text-slate-700">
                   {pathId === 'para-makbuzu'
-                    ? "Otokopili, logolu ve numaratörlü para makbuzlarıyla nakit teslimat ve tahsilat süreçlerinizi düzenli yönetin. Emlak ofisleri, inşaat firmaları, avukatlar, muhasebeciler, dernekler ve elden ödeme alıp veren tüm işletmeler için yüksek kalitede para makbuzu koçanı üretiyoruz."
+                    ? "Otokopili, logolu ve numaratörlü para makbuzlarıyla nakit teslimat ve tahsilat kayıtlarınızı düzenli tutun. 14×20 cm para makbuzu koçanları, 2, 3 ve 4 nüsha seçenekleriyle firma bilgilerinize göre baskıya hazırlanır."
                     : "Otokopili, logolu ve numaratörlü sipariş fişleriyle sipariş süreçlerinizi düzenli yönetin. Mağaza, atölye, üretici, toptancı, mobilya firmaları, oto servisleri ve sipariş üzerine çalışan tüm işletmeler için yüksek kalitede sipariş koçanı üretiyoruz."}
                 </p>
 
@@ -772,11 +772,11 @@ export const MakbuzFormlarPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-left pt-1">
                   <div className="bg-white border border-slate-200 p-3.5 rounded-2xl shadow-2xs">
                     <h3 className="text-xs font-black text-slate-900 uppercase tracking-tight mb-1 flex items-center gap-1.5">
-                      <span className="text-emerald-600 font-extrabold">?</span> {pathId === 'para-makbuzu' ? "Para Makbuzu Nedir?" : "Sipariş Fişi Nedir?"}
+                      <span className="text-emerald-600 font-extrabold">?</span> {pathId === 'para-makbuzu' ? "Makbuzda Hangi Alanlar Bulunur?" : "Sipariş Fişi Nedir?"}
                     </h3>
                     <p className="text-xs text-slate-600 font-medium leading-relaxed">
                       {pathId === 'para-makbuzu'
-                        ? "İki taraf arasında gerçekleşen nakit ödeme, kapora ve borç-alacak transferlerini kayıt altına alan kopyalı belgedir."
+                        ? "Tarih, ödeyen ve teslim alan bilgileri, rakam ve yazıyla tutar, açıklama ve imza alanları yer alır."
                         : "Müşteriden alınan siparişlerin miktar, birim fiyat, teslim tarihi ve peşinat detaylarını kayıt altına alan kopyalı ticari belgedir."}
                     </p>
                   </div>
@@ -869,7 +869,7 @@ export const MakbuzFormlarPage = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                 <span className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight">İçindekiler (Hızlı Gezinme)</span>
               </div>
-              {pathId !== 'recete' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && pathId !== 'tahsilat-makbuzu' && pathId !== 'sozlesme-baski' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
+              {pathId !== 'recete' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && pathId !== 'tahsilat-makbuzu' && pathId !== 'sozlesme-baski' && pathId !== 'para-makbuzu' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
             </div>
             <nav className={`grid ${pathId === 'para-makbuzu' ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'} gap-2 text-xs font-bold text-slate-700`} aria-label="Sayfa İçindekiler Navigasyonu">
               <a 
@@ -1128,7 +1128,7 @@ export const MakbuzFormlarPage = () => {
             <div className="text-center sm:text-left">
               <h3 className="text-sm font-black text-slate-900 uppercase mb-0.5">Siparişinizi Nasıl Oluşturabilirsiniz?</h3>
               <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? (
+                {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' || pathId === 'para-makbuzu' ? (
                   <>Fiyat tablosundaki <strong>"Hemen Sipariş Ver"</strong> düğmesi ürün seçim penceresini açar. Cilt adedini ve baskı rengini seçtikten sonra <strong>"WhatsApp ile İletişim"</strong> üzerinden teklif isteyebilir veya ürünü sepetinize ekleyebilirsiniz. PDF prova onayınızdan sonra baskıya başlanır.</>
                 ) : (
                   <>Fiyat listesinden seçtiğiniz adedin yanında yer alan <strong>"Hemen Sipariş Ver"</strong> butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz. Siparişiniz için logo ve bilgilerinizi WhatsApp üzerinden göndermeniz yeterlidir. PDF prova onayınız alındıktan sonra üretim başlatılır.</>
@@ -1463,11 +1463,11 @@ export const MakbuzFormlarPage = () => {
                       { key: "Kâğıt Türü", val: "1. Sınıf Kendinden Karbonlu Otokopi Kâğıdı" },
                       { key: "Cilt Kapasitesi", val: "50 Takım / Cilt" },
                       { key: "Nüsha Seçenekleri", val: "1 Asıl + 1 Suret, 1 Asıl + 2 Suret, 1 Asıl + 3 Suret" },
-                      { key: "Baskı Yöntemi", val: "Heidelberg Ofset Baskı (Siyah, Lacivert veya Özel Renk)" },
+                      { key: "Baskı Yöntemi", val: "Ofset Baskı (Siyah, Lacivert veya Özel Renk)" },
                       { key: "Numaratör", val: "Kırmızı Otomatik Seri Numarası Baskısı (Dahil)" },
                       { key: "Cilt ve Perforaj", val: "Üstten Tel Dikişli & Tırtıklı Koparma Hattı" },
                       { key: "Tasarım Desteği", val: "Mizanpaj, Tasarım Desteği ve PDF Prova Onayı" },
-                      { key: "İmalat Süresi", val: "PDF Onayından Sonra 3–5 İş Günü" },
+                      { key: "İmalat Süresi", val: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." },
                       { key: "Minimum Sipariş", val: "5 Cilt" },
                       { key: "Teslimat", val: "Çift Oluklu Kolilerle Türkiye Geneli Kargo" }
                     ] : pathId === 'siparis-fisi' ? [
@@ -2000,6 +2000,8 @@ export const MakbuzFormlarPage = () => {
                       ? `Örnek adisyon tasarımı üzerinde tarih, ürün, miktar ve tutar alanları gösterilmektedir.`
                       : pathId === 'sozlesme-baski'
                       ? 'Örnek otokopili sözleşme tasarımı üzerinde tarih, unvan, imzalar ve şartnameler gösterilmektedir.'
+                      : pathId === 'para-makbuzu'
+                      ? 'Örnek para makbuzu tasarımında tarih, ödeyen, teslim alan, tutar, açıklama ve imza alanları bulunur.'
                       : pathId === 'recete'
                       ? 'Örnek reçete tasarımında hasta adı soyadı, tarih, doktor bilgisi ve kaşe / imza alanları gösterilmektedir.'
                       : pathId === 'arac-kiralama'
@@ -2238,13 +2240,13 @@ export const MakbuzFormlarPage = () => {
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
-                      { title: "Emlak ve Gayrimenkul Ofisleri", desc: "Müşterilerden alınan emlak kaporaları ve kira teslimatlarının yazılı belgesi için." },
+                      { title: "Emlak ve Gayrimenkul Ofisleri", desc: "Müşterilerle yapılan kapora işlemlerini iç kayıtlarda takip etmek için." },
                       { title: "İnşaat Firmaları ve Şantiyeler", desc: "Şantiye nakit harcamaları ve taşeron avans ödemelerini kayıt altına almak için." },
                       { title: "Avukatlar ve Hukuk Büroları", desc: "Müvekkillerden alınan masraf avansları ve nakit tahsilatların dökümü için." },
                       { title: "Muhasebe ve Mali Müşavirler", desc: "Mükellef masraf ve harç ödemelerinin kayıt altına alınması için." },
-                      { title: "Dernekler, Vakıflar ve Kulüpler", desc: "Makbuz karşılığı nakit bağış, aidat ve katılım payı ödemelerini belgelemek için." },
+                      { title: "Dernekler, Vakıflar ve Kulüpler", desc: "Kurum içi para teslim kayıtlarını düzenli takip etmek için." },
                       { title: "Oto Galeriler ve Araç Satışı", desc: "Araç alım-satım kaporaları ve peşinat ödemelerini güvenle arşivlemek için." },
-                      { title: "Organizasyon Firmaları", desc: "Etkinlik, düğün ve kiralama kaporalarının resmi ve düzenli kaydı için." },
+                      { title: "Organizasyon Firmaları", desc: "Etkinlik ve organizasyon kaporalarını düzenli takip etmek için." },
                       { title: "Toptan ve Perakende Ticaret", desc: "Saha kuryeleri, teslimat elemanları ve elden yapılan nakit tahsilatlar için." }
                     ].map((item, idx) => (
                       <div key={idx} className="bg-slate-50 border border-slate-200/80 rounded-2xl p-4 flex flex-col justify-between hover:border-primary/40 hover:bg-white transition-all shadow-2xs">
@@ -2264,18 +2266,18 @@ export const MakbuzFormlarPage = () => {
                 <div id="uretim-sureci" className="scroll-mt-24 relative z-10 border-t border-gray-100 pt-8">
                   <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
                     <span className="w-2 h-7 bg-emerald-600 rounded-full" />
-                    Gerçek Üretim Süreci
+                    Para Makbuzu Baskı Süreci
                   </h2>
                   <p className="text-slate-650 text-sm md:text-base leading-relaxed mb-6 font-semibold">
-                    Para makbuzu siparişiniz grafik tasarımdan adresinize teslim edilene kadar 6 aşamalı yüksek kalitede matbaa imalat sürecinden geçer:
+                    Para makbuzu siparişinizde dosya kontrolü, dijital onay, baskı ve son işlem adımları izlenir. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {[
-                      { step: "01", title: "CTP Kalıp Pozlama", desc: "PDF provası onaylanan tasarımlarınız yüksek çözünürlüklü termal CTP kalıplara sıfır hatayla pozlanır." },
-                      { step: "02", title: "Heidelberg Ofset Baskı", desc: "Alman kalitesi Heidelberg ofset baskı makinelerimizde kurumsal renginiz net ve canlı olarak basılır." },
-                      { step: "03", title: "Otomatik Kırmızı Numaratör", desc: "Seri ve sıra takibini sağlayan 6 haneli kırmızı numaratör baskısı yüksek hassasiyetle vurulur." },
+                      { step: "01", title: "Dosya Kontrolü ve PDF Prova", desc: "Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz." },
+                      { step: "02", title: "Ofset Baskı", desc: "Onaylanan içerik, seçilen nüsha ve renk seçenekleriyle otokopili kâğıda basılır." },
+                      { step: "03", title: "Otomatik Kırmızı Numaratör", desc: "Koçanların sıra takibini kolaylaştırmak için ardışık kırmızı seri numarası basılır." },
                       { step: "04", title: "Hassas Perforaj (Tırtık)", desc: "Sayfaların koçandan pürüzsüz ve kolayca kopması için tırtıklı perforaj hattı çekilir." },
-                      { step: "05", title: "Tel Dikiş & Ciltleme", desc: "Koçanın dağılmasını önleyen telli dikiş, dip tutkal ve sırta bez kaplama dikiş cilt yapılır." },
+                      { step: "05", title: "Tel Dikiş & Ciltleme", desc: "Yapraklar 50 takımlık koçanlar halinde düzenlenerek üstten tel dikişli ciltleme yapılır." },
                       { step: "06", title: "Kalite Kontrol & Paketleme", desc: "Numaratör sırası ve sayfa adedi kontrol edilerek koruyucu çift oluklu kolilerde adresinize kargolanır." }
                     ].map((step, idx) => (
                       <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-5 shadow-2xs relative overflow-hidden flex flex-col justify-between">
@@ -2303,12 +2305,12 @@ export const MakbuzFormlarPage = () => {
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {[
-                      { title: "Tahsilat Makbuzu", path: "/tahsilat-makbuzu", desc: "Müşterilerden alınan ödeme ve alacakların resmi kayıt altına alınması için." },
+                      { title: "Tahsilat Makbuzu", path: "/tahsilat-makbuzu", desc: "Müşterilerden alınan ödemeleri ve cari hesap tahsilatlarını takip etmek için." },
                       { title: "Tediye Makbuzu", path: "/tediye-makbuzu", desc: "Kasadan tedarikçi ve üçüncü şahıslara yapılan nakit çıkışlarının belgelenmesi için." },
                       { title: "Gider Makbuzu", path: "/gider-makbuzu", desc: "Şirket içi harcama ve küçük masrafların düzenli kaydı için." },
                       { title: "Sipariş Fişi", path: "/siparis-fisi", desc: "Alınan ürün ve hizmet siparişlerinin detaylı takibi için." },
                       { title: "Adisyon Baskı", path: "/adisyon", desc: "Hizmet ve gıda sektörüne özel masasal adisyon takibi için." },
-                      { title: "Servis Formu", path: "/arac-kiralama", desc: "Teknik servis ve teslimat süreçlerinin kayıt altına alınması için." }
+                      { title: "Araç Kiralama Formu", path: "/arac-kiralama", desc: "Araç kiralama, teslim ve iade bilgilerini kayıt altına almak için." }
                     ].map((linkItem, idx) => (                      <Link key={idx} to={linkItem.path} className="bg-slate-50 hover:bg-white border border-slate-200 hover:border-blue-500/50 p-4 rounded-2xl transition-all shadow-2xs group flex flex-col justify-between">
                         <div>
                           <div className="flex items-center justify-between mb-1">
@@ -3506,10 +3508,10 @@ export const MakbuzFormlarPage = () => {
               <div className="space-y-2">
                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white flex items-center gap-2">
                   <span className="w-2 h-6 bg-primary rounded-full" />
-                  {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Baskı Öncesi Kontrol ve Onay' : 'Mavi Basım İmalat Güvencesi'}
+                  {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' || pathId === 'para-makbuzu' ? 'Baskı Öncesi Kontrol ve Onay' : 'Mavi Basım İmalat Güvencesi'}
                 </h3>
                 <p className="text-xs md:text-sm text-slate-300 font-medium max-w-xl leading-relaxed">
-                  {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz.' : 'Doğrudan imalathanemizden hızlı, güvenli ve kurumsal kalitede matbu evrak baskı çözümleri sunuyoruz.'}
+                  {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' || pathId === 'para-makbuzu' ? 'Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz.' : 'Doğrudan imalathanemizden hızlı, güvenli ve kurumsal kalitede matbu evrak baskı çözümleri sunuyoruz.'}
                 </p>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 shrink-0">
@@ -3519,7 +3521,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
-                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Topkapı Hizmet Noktası' : 'Topkapı Üretim Tesisi'}</span>
+                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' || pathId === 'para-makbuzu' ? 'Topkapı Hizmet Noktası' : 'Topkapı Üretim Tesisi'}</span>
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
@@ -3531,7 +3533,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center col-span-2 sm:col-span-1">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
-                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Grafik desteği var.' : 'Ücretsiz Grafik Desteği'}</span>
+                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' || pathId === 'para-makbuzu' ? 'Grafik desteği var.' : 'Ücretsiz Grafik Desteği'}</span>
                 </div>
               </div>
             </div>
