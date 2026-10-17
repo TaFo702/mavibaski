@@ -447,8 +447,8 @@ const DynamicImageContainer = ({
         loading={isPriority ? "eager" : "lazy"}
         fetchPriority={isPriority ? "high" : "auto"}
         decoding="async"
-        width={src.startsWith('/images/recete/') ? 930 : src.startsWith('/images/arac-kiralama/') ? 805 : 1200}
-        height={src.startsWith('/images/recete/') ? 1117 : src.startsWith('/images/arac-kiralama/') ? 1024 : 800}
+        width={src.startsWith('/images/recete/') ? 930 : src.startsWith('/images/arac-kiralama/') ? 805 : src.startsWith('/images/sozlesme/') ? 980 : 1200}
+        height={src.startsWith('/images/recete/') ? 1117 : src.startsWith('/images/arac-kiralama/') || src.startsWith('/images/sozlesme/') ? 1024 : 800}
         referrerPolicy="no-referrer"
         onLoad={(e) => {
           const img = e.currentTarget;
