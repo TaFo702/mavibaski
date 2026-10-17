@@ -24,6 +24,7 @@ import {
 import { WHATSAPP_LINK } from '../constants/contact';
 import { RelatedBlogPosts } from './RelatedBlogPosts';
 import { DeliveryBadge } from './DeliveryBadge';
+import { TahsilatMakbuzuResources } from './TahsilatMakbuzuResources';
 
 // --- Components ---
 
@@ -917,12 +918,17 @@ export const MakbuzFormlarPage = () => {
                   <span className="text-primary group-hover:text-white font-black">5.</span> {pathId === 'recete' ? 'Reçete Örneği' : 'Nasıl Doldurulur'}
                 </a>
               )}
+              {pathId === 'tahsilat-makbuzu' && (
+                <a href="#tahsilat-ornek-dosyalari" onClick={(e) => scrollToSection(e, 'tahsilat-ornek-dosyalari')} className="bg-white hover:bg-primary hover:text-white border border-slate-200 p-2.5 rounded-xl transition-all flex items-center gap-1.5 shadow-2xs group cursor-pointer">
+                  <span className="text-primary group-hover:text-white font-black">6.</span> Örnek Dosyalar
+                </a>
+              )}
               <a 
                 href="#sss-bolumu" 
                 onClick={(e) => scrollToSection(e, 'sss-bolumu')}
                 className="bg-white hover:bg-primary hover:text-white border border-slate-200 p-2.5 rounded-xl transition-all flex items-center gap-1.5 shadow-2xs group cursor-pointer"
               >
-                <span className="text-primary group-hover:text-white font-black">{pathId === 'para-makbuzu' ? '5.' : '6.'}</span> Sıkça Sorulan Sorular
+                <span className="text-primary group-hover:text-white font-black">{pathId === 'para-makbuzu' ? '5.' : pathId === 'tahsilat-makbuzu' ? '7.' : '6.'}</span> Sıkça Sorulan Sorular
               </a>
             </nav>
           </div>
@@ -1966,6 +1972,8 @@ export const MakbuzFormlarPage = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full -mr-32 -mt-32 blur-3xl pointer-events-none" />
 
             {/* EK GÖRSEL BLOĞU */}
+            {pathId === 'tahsilat-makbuzu' && <TahsilatMakbuzuResources />}
+
             <div id={pathId === 'recete' ? 'recete-ornegi' : undefined} className={`relative z-10 bg-gray-50 border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm${pathId === 'recete' ? ' scroll-mt-24' : ''}`}>
               <div className="flex items-center gap-2 mb-6">
                 <span className="w-2.5 h-5 bg-secondary rounded-full" />

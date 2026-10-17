@@ -23,6 +23,15 @@ function check(d){
  for(const t of ['Product','FAQPage','BreadcrumbList'])assert.equal(schemas.filter(s=>s['@type']===t).length,1,t);
  assert.equal(schemas.find(s=>s['@type']==='Product').offers.lowPrice,'1900');
  assert.equal(d.querySelectorAll('a[href^="/makbuz/"]').length,0);
+ for(const id of ['tahsilat-ornek-dosyalari','cek-senet-tahsilat-bilgileri','sehir-disindan-tahsilat-siparisi'])assert.equal(d.querySelectorAll('#'+id).length,1,id);
+ for(const extension of ['pdf','docx','xlsx']){
+  const href='/downloads/tahsilat-makbuzu-ornegi.'+extension;
+  assert.equal(d.querySelectorAll(`a[href="${href}"][download]`).length,1,href);
+  assert.ok(fs.statSync('public'+href).size>1000,'Empty download '+href);
+ }
+ const faq=schemas.find(s=>s['@type']==='FAQPage').mainEntity;
+ const visible=normalize(d.querySelector('#sss-bolumu').textContent);
+ for(const q of faq){assert.ok(visible.includes(normalize(q.name)),q.name);assert.ok(visible.includes(normalize(q.acceptedAnswer.text)),q.name+' answer');}
 }
 async function settle(w,path){
  for(let i=0;i<100;i++){

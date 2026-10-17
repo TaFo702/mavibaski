@@ -1326,7 +1326,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     seoDescription: "Logolu, otokopili ve numaratörlü tahsilat makbuzu baskı seçeneklerini ve mevcut fiyat tablosunu inceleyin. İstanbul Topkapı'dan Türkiye geneline gönderim.",
     breadcrumbTitle: "Tahsilat Makbuzu",
     h1Title: "Tahsilat Makbuzu Baskı Fiyatları ve Koçan Baskısı",
-    subtitle: "Tahsilat makbuzu, işletmelerin aldıkları ödemeleri kayıt altına almak için kullandıkları matbu evraktır. Firmanıza özel logolu, otokopili ve numaratörlü olarak hazırlanabilir. Özellikle ön muhasebe süreçlerinde belge düzeninin sağlanması, alınan ödemelerin takip edilmesi ve şirket içi kayıtların düzenli şekilde arşivlenebilmesi için tercih edilir. Farklı sektörlerde faaliyet gösteren firmalar günlük operasyonlarında tahsilat makbuzu kullanımına ihtiyaç duyabilmektedir.\n\nOtokopili tahsilat makbuzu koçanları, üst nüshaya yazılan bilgilerin alt nüshalara otomatik olarak aktarılmasını sağlayan kendinden karbonlu kağıtlardan üretilir. Bu yapı sayesinde ayrıca karbon kağıdı kullanmaya gerek kalmadan hızlı, temiz ve pratik bir kullanım elde edilir. Birden fazla nüsha oluşturulabilmesi, belge paylaşımını ve arşivleme süreçlerini kolaylaştırır.\n\nNumaratörlü tahsilat makbuzu modellerinde ise her yaprak ardışık sıra numarası ile basılır. Bu sistem, belgelerin düzenli şekilde takip edilmesine yardımcı olurken kayıp veya eksik evrakların tespit edilmesini de kolaylaştırır. 1 asıl + 1 suret veya 1 asıl + 2 suret olarak hazırlanabilen tahsilat makbuzları, farklı ölçü ve tasarım seçenekleriyle üretilebilmektedir.",
+    subtitle: "Tahsilat makbuzu, işletmelerin aldıkları ödemeleri kayıt altına almak için kullandıkları matbu evraktır. Firmanıza özel logolu, otokopili ve numaratörlü olarak hazırlanabilir. Özellikle ön muhasebe süreçlerinde belge düzeninin sağlanması, alınan ödemelerin takip edilmesi ve şirket içi kayıtların düzenli şekilde arşivlenebilmesi için tercih edilir. Farklı sektörlerde faaliyet gösteren firmalar günlük operasyonlarında tahsilat makbuzu kullanımına ihtiyaç duyabilmektedir.\n\nOtokopili tahsilat makbuzu koçanları, üst nüshaya yazılan bilgilerin alt nüshalara otomatik olarak aktarılmasını sağlayan kendinden karbonlu kağıtlardan üretilir. Bu yapı sayesinde ayrıca karbon kağıdı kullanmaya gerek kalmadan hızlı, temiz ve pratik bir kullanım elde edilir. Birden fazla nüsha oluşturulabilmesi, belge paylaşımını ve arşivleme süreçlerini kolaylaştırır.\n\nNumaratörlü tahsilat makbuzu modellerinde ise her yaprak ardışık sıra numarası ile basılır. Bu sistem, belgelerin düzenli şekilde takip edilmesine yardımcı olurken kayıp veya eksik evrakların tespit edilmesini de kolaylaştırır. 1 asıl + 1 suret, 1 asıl + 2 suret veya 1 asıl + 3 suret olarak hazırlanabilen tahsilat makbuzları, farklı ölçü ve tasarım seçenekleriyle üretilebilmektedir.",
     featureImage: "/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp",
     featureImageAlt: "Otokopili ve numaratörlü tahsilat makbuzu koçanı",
     gallery: [
@@ -1340,7 +1340,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
         src: "/images/tahsilat-makbuzu/tahsilat-makbuzu-kocani.webp",
         alt: "Tahsilat makbuzu koçanı",
         title: "Tahsilat Makbuzu Koçanı",
-        desc: "Standart olarak her ciltte 50 takım yaprak bulunur. İhtiyaca göre 1 Asıl + 1 Suret veya 1 Asıl + 2 Suret seçenekleri hazırlanabilir. Üstten tutkallı ciltleme sayesinde yapraklar düzenli şekilde koparılır ve uzun süre dağılmadan kullanılabilir."
+        desc: "Standart olarak her ciltte 50 takım yaprak bulunur. İhtiyaca göre 1 Asıl + 1 Suret, 1 Asıl + 2 Suret veya 1 Asıl + 3 Suret seçenekleri hazırlanabilir. Üstten tutkallı ciltleme sayesinde yapraklar düzenli şekilde koparılır ve uzun süre dağılmadan kullanılabilir."
       },
       {
         src: "/images/tahsilat-makbuzu/kendinden-karbonlu-tahsilat-makbuzu.webp",
@@ -1352,12 +1352,12 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     specifications: [
       { title: "Kağıt Türü", value: "Kendinden Karbonlu (Otokopili) Kağıt" },
       { title: "Ölçü", value: "A5 Yarım Boy (14x20 cm) veya A4 Tam Boy" },
-      { title: "Nüsha Sayısı", value: "1 Asıl + 1 Suret (2 Nüsha) veya 1 Asıl + 2 Suret (3 Nüsha)" },
+      { title: "Nüsha Sayısı", value: "1 Asıl + 1 Suret (2 Nüsha), 1 Asıl + 2 Suret (3 Nüsha) veya 1 Asıl + 3 Suret (4 Nüsha)" },
       { title: "Numaratör", value: "Sıralı Ardışık Numaralı Baskı" },
       { title: "Cilt Standardı", value: "Her Ciltte 50 Yaprak Takımı (50 Set)" },
       { title: "Baskı Rengi", value: "Tek Renk (Siyah / Lacivert) veya Çok Renkli Kurumsal Baskı" },
       { title: "Kullanım Amacı", value: "İşletme içi alınan ödemelerin ve tahsilatların pratik şekilde belgelenmesi." },
-      { title: "Sipariş Miktarı", value: "5 Cilt, 10 Cilt, 20 Cilt, 30 Cilt, 50 Cilt" },
+      { title: "Sipariş Miktarı", value: "5 Cilt, 10 Cilt, 20 Cilt, 30 Cilt, 50 Cilt, 100 Cilt" },
       { title: "Teslim Süresi", value: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." }
     ],
     whatIsTitle: "Tahsilat Makbuzu Baskı Ürün Özellikleri",
@@ -1415,7 +1415,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         q: "Tahsilat Makbuzu Kaç Nüsha Olarak Basılır?",
-        a: "Tahsilat makbuzları genellikle 1 Asıl + 1 Suret veya 1 Asıl + 2 Suret olarak üretilmektedir. Talebe göre farklı nüsha seçenekleri de hazırlanabilmektedir. Otokopili baskı sayesinde tüm nüshalar tek seferde doldurulabilir."
+        a: "Mevcut fiyat tablosunda 1 Asıl + 1 Suret (2 nüsha), 1 Asıl + 2 Suret (3 nüsha) ve 1 Asıl + 3 Suret (4 nüsha) seçenekleri bulunur. Otokopili baskı sayesinde üst nüshaya yazılan bilgiler alt suretlere aktarılır."
       },
       {
         q: "Tahsilat Makbuzunda Hangi Bilgiler Bulunmalıdır?",
@@ -1448,6 +1448,18 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       {
         q: "İstanbul dışına gönderim yapıyor musunuz?",
         a: "Evet, tahsilat makbuzu siparişleri Türkiye'nin tüm il ve ilçelerine kargo ile gönderilmektedir."
+      },
+      {
+        q: "Boş tahsilat makbuzu örneğini PDF, Word ve Excel olarak indirebilir miyim?",
+        a: "Evet. Bu sayfadaki örnek dosyalar bölümünden boş tahsilat makbuzu örneğini PDF, Word (DOCX) veya Excel (XLSX) olarak indirebilirsiniz. A4 sayfada hazırlanan dosyalar düzenleme örneğidir; logolu koçan baskısı için seçilen ölçü ve nüsha seçeneklerine göre ayrıca PDF prova hazırlanır."
+      },
+      {
+        q: "Çek veya senet için makbuz tasarımına hangi alanlar eklenebilir?",
+        a: "İhtiyaca göre belge türü, belge numarası, vade tarihi, tutar ve banka/şube bilgileri için alanlar eklenebilir. Açıklamada çek veya senet teslimi ile bedelin tahsil edilmesini ayırarak gerçekleşen işlemi belirtmeniz kayıt takibini kolaylaştırır."
+      },
+      {
+        q: "Ankara’dan tahsilat makbuzu baskı siparişi verebilir miyim?",
+        a: "Evet. Firma bilgilerinizi, logonuzu, cilt ve nüsha seçiminizi ve teslimat adresinizi WhatsApp üzerinden iletebilirsiniz. Siparişler İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden alınır ve Türkiye geneline kargo ile gönderilir. Üretim ve teslim süresi teklif aşamasında paylaşılır."
       }
     ]
   }
