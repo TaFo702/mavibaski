@@ -511,6 +511,10 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
   const isReceteProduct = normalizeForSearch(category).includes('recete') ||
     normalizeForSearch(product?.code || '').includes('recete');
 
+  const isSozlesmeProduct = normalizeForSearch(category).includes('sozlesme') ||
+    normalizeForSearch(product?.code || '').includes('sozlesme');
+  const usesQuotedProductionTime = isReceteProduct || isSozlesmeProduct;
+
   const isMakbuzVeForm = (() => {
     const normCategory = normalizeForSearch(category);
     const normProductTitle = product ? normalizeForSearch(product.code || product.desc || "") : "";
@@ -1037,17 +1041,17 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
                 <div className="bg-emerald-50/80 border border-emerald-200/80 rounded-2xl p-4 text-left space-y-2 shadow-sm">
                   <div className="flex items-center gap-2 text-xs font-black text-emerald-900 uppercase tracking-tight">
                     <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
-                    <span>{isReceteProduct ? 'Baskı Öncesi PDF Prova Onayı' : 'Aynı Gün Tasarım Onayı'}</span>
+                    <span>{usesQuotedProductionTime ? 'Baskı Öncesi PDF Prova Onayı' : 'Aynı Gün Tasarım Onayı'}</span>
                   </div>
                   <p className="text-[11px] text-emerald-800 font-semibold leading-relaxed pl-6">
-                    {isReceteProduct ? 'Dijital onay alınmadan baskıya başlanmaz. Prova takvimi sipariş özelliklerine göre paylaşılır.' : 'Onay gerektiren siparişlerde PDF prova aynı gün iletilir.'}
+                    {usesQuotedProductionTime ? 'Dijital onay alınmadan baskıya başlanmaz. Prova takvimi sipariş özelliklerine göre paylaşılır.' : 'Onay gerektiren siparişlerde PDF prova aynı gün iletilir.'}
                   </p>
                   <div className="flex items-center gap-2 text-xs font-black text-slate-900 uppercase tracking-tight pt-2 border-t border-emerald-200/60">
                     <Truck size={16} className="text-primary shrink-0" />
-                    <span>{isReceteProduct ? 'Üretim ve Teslim Süresi' : 'Üretim Süresi: Ortalama 3–4 iş günü'}</span>
+                    <span>{usesQuotedProductionTime ? 'Üretim ve Teslim Süresi' : 'Üretim Süresi: Ortalama 3–4 iş günü'}</span>
                   </div>
                   <p className="text-[11px] text-slate-600 font-semibold pl-6">
-                    {isReceteProduct ? 'Ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.' : '(Ürün grubuna ve adede göre değişiklik gösterebilir.)'}
+                    {usesQuotedProductionTime ? 'Ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.' : '(Ürün grubuna ve adede göre değişiklik gösterebilir.)'}
                   </p>
                   <div className="pt-2 border-t border-emerald-200/60">
                     <p className="text-[11px] text-slate-700 font-bold leading-relaxed flex items-start gap-1.5">
@@ -1064,7 +1068,7 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
         {/* Footer / Action */}
         <div className="p-4 sm:p-8 pt-0 shrink-0 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${product.ebat || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${product.ebat || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-sm uppercase tracking-tight flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98]"
@@ -5132,6 +5136,7 @@ if (
   pathname === '/katalog' ||
   pathname === '/karton-canta' ||
   pathname === '/tahsilat-makbuzu' ||
+  pathname === '/sozlesme-baski' ||
   pathname === '/yag-karti' ||
   pathname === '/recete' ||
   pathname === '/para-makbuzu' ||
