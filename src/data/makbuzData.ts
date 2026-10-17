@@ -569,7 +569,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
   },
   "sozlesme-baski": {
     seoTitle: "Sözleşme Baskı | Numaratörlü Otokopili Sözleşme Koçanı Baskısı",
-    seoDescription: "Sözleşme baskı hizmeti. Numaratörlü, otokopili, A4 20.5 x 28.5 cm net boy sözleşme koçanları. 1 asıl 1 suret, 1 asıl 2 suret ve 1 asıl 3 suret seçenekleriyle hızlı üretim.",
+    seoDescription: "Numaratörlü otokopili sözleşme baskı: 20,5 x 28,5 cm, 2–4 nüsha ve firma logolu koçan seçenekleri. Fiyat tablosunu inceleyin; baskı öncesi PDF prova onayı alınır.",
     breadcrumbTitle: "Sözleşme Baskı",
     h1Title: "Sözleşme Baskı | Numaratörlü Otokopili Sözleşme Koçanı",
     subtitle: "Hizmet, satış ve üyelik belgeleriniz için özel tasarlanan numaratörlü otokopili sözleşme koçanlarını ofset baskı tekniği ile üretime alıyoruz.",
@@ -585,7 +585,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       {
         src: "/images/sozlesme/otokopili-sozlesme-basimi.webp",
         alt: "20,5 x 28,5 cm otokopili sözleşme koçanı",
-        title: "A4 Net Boyut Ciltler",
+        title: "20,5 x 28,5 cm Tam Boy Ciltler",
         desc: "20.5 x 28.5 cm geniş alanı ile uzun hukuki maddelerin ve şartnamelerin rahat okunup basılmasına uygundur."
       },
       {
@@ -601,10 +601,10 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { title: "Baskı Türü", value: "Ofset Baskı" },
       { title: "Delik", value: "Kolay Koparma Perforeli (Fiyata dâhildir; talep halinde uygulanır)" },
       { title: "Numaratör", value: "Kırmızı Otomatik Seri Numaralı (Talep ettiğiniz başlangıç numarasından itibaren)" },
-      { title: "Ölçü / Ebat", value: "20.5 x 28.5 cm (A4 Net Bitmiş Boyut)", desc: "Standart A4 boyutu 21x29.7 cm olmasına rağmen; profesyonel cilt sırtı yapıştırma ve kenar giyotin tıraşlama (hizalama kesimi) işlemlerinden ötürü ürün kargoya net 20.5 x 28.5 cm ebadında teslim edilmektedir." },
+      { title: "Ölçü / Ebat", value: "20.5 x 28.5 cm (Tam Boy, Net Bitmiş Ölçü)", desc: "Standart A4 boyutu 21x29.7 cm olmasına rağmen; profesyonel cilt sırtı yapıştırma ve kenar giyotin tıraşlama (hizalama kesimi) işlemlerinden ötürü ürün kargoya net 20.5 x 28.5 cm ebadında teslim edilmektedir." },
       { title: "Baskı Rengi", value: "Tek Renk (Kurumsal Pantone veya Siyah) veya Çok Renkli Seçenekler" },
       { title: "Tasarım Onayı", value: "PDF Taslak Onayından Sonra Üretim Başlangıcı" },
-      { title: "Teslimat Süresi", value: "PDF Prova Onayından Sonra 3-5 İş Günü (Baskı ve Cilt Süresi)" }
+      { title: "Teslimat Süresi", value: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." }
     ],
     whatIsTitle: "Otokopili Sözleşme Koçanı Nedir?",
     whatIsContent: "Otokopili sözleşme koçanları; hizmet sözleşmeleri, üyelik formları, satış sözleşmeleri ve benzeri kurumsal evrakların düzenli şekilde kayıt altına alınmasını sağlayan matbu formlardır. Basınç duyarlı 1. sınıf otokopi kağıtları sayesinde yazılan bilgiler alt nüshalara otomatik olarak mürekkepsiz aktarılır. Firma logosu, iletişim bilgileri, genel ve özel şartnameler eklenerek kuruma özel tasarımlar hazırlanır.",
@@ -647,14 +647,14 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { q: "Otokopili sözleşme koçanlarında logo basılabilir mi?", a: "Evet. Firma logonuz, iletişim bilgileriniz ve kurumsal bilgileriniz sözleşme tasarımına eklenerek baskıya hazırlanabilir." },
       { q: "Sözleşme koçanları kaç nüsha üretilebilir?", a: "İhtiyaca göre 1 asıl 1 suret, 1 asıl 2 suret veya 1 asıl 3 suret seçenekleriyle üretilebilmektedir." },
       { q: "Sözleşme baskılarında perfore uygulanıyor mu?", a: "Evet. Talep edilmesi halinde kolay koparma amaçlı perfore uygulaması yapılabilmektedir." },
-      { q: "Türkiye'nin her iline gönderim yapıyor musunuz?", a: "Evet. İstanbul'daki üretim tesisimizden Türkiye'nin tüm illerine kargo gönderimi yapılmaktadır." },
-      { q: "Sözleşme koçanı tasarımı ücretsiz mi?", a: "Mevcut logonuz ve firma bilgileriniz kullanılarak hazırlanan baskı tasarımları ücretsiz olarak hazırlanabilmektedir." },
-      { q: "Sözleşmelerde numaratör numarası hangi renkte basılmaktadır?", a: "Sözleşme koçanlarımızda numaratör baskısı, yasal koruyuculuğu ve takibi kolaylaştırması açısından standart olarak kırmızı renkte ve otomatik sıralı olarak basılmaktadır." },
+      { q: "Türkiye'nin her iline gönderim yapıyor musunuz?", a: "Evet. İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden Türkiye geneline kargo gönderimi için sipariş desteği sağlıyoruz." },
+      { q: "Sözleşme baskısında grafik ve PDF prova desteği var mı?", a: "Grafik desteği var. Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz." },
+      { q: "Sözleşmelerde numaratör numarası hangi renkte basılmaktadır?", a: "Sözleşme koçanlarımızda numaratör baskısı, seri takibini kolaylaştırmak için standart olarak kırmızı renkte ve otomatik sıralı olarak basılmaktadır." },
       { q: "Sözleşmelerde perfore seçeneği var mı, ücretli mi?", a: "Evet, sayfaların koçandan pürüzsüz ve kolayca yırtılabilmesi için talebinize bağlı olarak perfore (tırtıklı çizgi) seçeneği eklemekteyiz ve bu işlem için ek bir ücret talep etmiyoruz." },
       { q: "Kendi özel sözleşme tasarımımızı gönderebilir miyiz?", a: "Tabii ki. Mevcut Word, PDF, Excel veya taranmış sözleşme taslağınızı bize iletebilirsiniz. Grafik ekibimiz logonuzu ekleyerek baskıya uygun hale getirir ve PDF prova gönderir." },
       { q: "1 Asıl + 2 Suret sözleşmelerde renkler nasıldır?", a: "Genellikle en üst asıl nüsha beyaz otokopi kağıdına basılırken, 1. suret pembe, 2. suret sarı renkli kendinden karbonlu kağıtlara basılarak nüshaların kolayca ayrıştırılması sağlanır." },
-      { q: "Türkiye geneli gönderimlerde kargo ücreti kime aittir?", a: "Ürünlerimizi hasar görmeyecek şekilde çift oluklu mukavemetli kolilerde ambalajlayıp anlaşmalı kargo firmamızla indirimli olarak adresinize gönderiyoruz. Kargo ücreti alıcıya aittir." },
-      { q: "A4 Tam Boy ölçüsü neden 20,5 x 28,5 cm olarak verilmektedir?", a: "Standart A4 tabakası normalde 21 x 29,7 cm'dir. Ancak matbaacılık ve ciltleme standartları uyarınca, tutkal payları ve kenarların hizalanması amacıyla yapılan milimetrik giyotin kesimleri (tıraşlama) işlemlerinin ardından, kargoya teslim edilen bitmiş net ve kullanılabilir alan 20,5 x 28,5 cm olmaktadır." },
+      { q: "Türkiye geneli gönderimlerde kargo ücreti kime aittir?", a: "KDV hariç 5.000 TL ve üzeri siparişlerde kargo ücretsizdir. Bu tutarın altındaki siparişlerde kargo ücreti alıcıya aittir. Ayrıntılar için Teslimat Şartları sayfasını inceleyebilirsiniz." },
+      { q: "Sözleşme koçanının bitmiş ölçüsü standart A4 ile aynı mı?", a: "Hayır. Standart A4 ölçüsü 21 x 29,7 cm'dir. Bu sayfadaki sözleşme koçanının ciltleme ve kesim sonrası net bitmiş ölçüsü 20,5 x 28,5 cm'dir. Tasarımınızı ürünün belirtilen net ölçüsüne göre hazırlayabilirsiniz." },
       { q: "Nüshaların renkleri farklı olabilir mi?", a: "Evet. Otokopili sözleşme koçanlarında üst yaprak beyaz, alt yapraklar ise sırasıyla pembe, sarı, yeşil veya mavi renklerde hazır üretilmektedir. Nüsha renklerinin bu standart renklerle üretilmesi fiyata dahildir ve ek ücret talep etmez." },
       { q: "Otokopili sözleşme koçanlarının arka yüzüne baskı uygulanabiliyor mu?", a: "Evet. Talebe bağlı olarak sözleşmelerin arka yüzüne kullanım şartları veya detaylı genel kurallar basılabilir; çift yönlü (arkalı önlü) baskı kalıp ve fiyat detayları için lütfen müşteri temsilcimizle iletişime geçiniz." },
       { q: "Otokopili sözleşme koçanlarında minimum sipariş miktarı nedir?", a: "Fiyat listesinde belirtilen minimum üretim miktarı 5 cilttir. Daha yüksek adetlerde birim maliyet avantajı oluşur." },

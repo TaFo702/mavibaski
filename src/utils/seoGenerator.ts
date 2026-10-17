@@ -1,6 +1,6 @@
 import { getHomeSEO } from "../data/homePageContent";
 export { injectSEOMetadata } from "./seoMetadata";
-import { MAKBUZ_DETAILS, PARA_MAKBUZU_DATA } from "../data/makbuzData";
+import { MAKBUZ_DETAILS, PARA_MAKBUZU_DATA, SOZLESME_BASKI_DATA } from "../data/makbuzData";
 import { SEO_PAGES_DATA } from "../data/seoPagesData";
 import { BLOG_POSTS } from "../data/blogData";
 import { getBlogMetadata } from "./blogMetadata";
@@ -3336,7 +3336,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
     "/siparis-fisi": "siparis-fisi",
     "/perakende-satis-fisi": "perakende-satis-fisi",
     "/para-makbuzu": "para-makbuzu",
-    "/sozlesme-baski": "sozlesme",
+    "/sozlesme-baski": "sozlesme-baski",
     "/sigorta-policeleri": "sigorta-policeleri",
     "/tahsilat-makbuzu": "tahsilat-makbuzu",
     "/arac-kiralama": "arac-kiralama",
@@ -3973,7 +3973,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
     const breadcrumbSchema = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": (p === '/gider-makbuzu' || p === '/arac-kiralama')
+      "itemListElement": (p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski')
         ? [
             {
               "@type": "ListItem",
@@ -4022,6 +4022,20 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       "category": detail.breadcrumbTitle
     };
 
+    if (p === '/sozlesme-baski') {
+      const prices = SOZLESME_BASKI_DATA.flatMap(section => section.rows
+        .filter(row => !row.label.includes('Renk Farkı'))
+        .flatMap(row => row.values));
+      productSchema.offers = {
+        "@type": "AggregateOffer",
+        "priceCurrency": "TRY",
+        "lowPrice": String(Math.min(...prices)),
+        "highPrice": String(Math.max(...prices)),
+        "offerCount": String(prices.length),
+        "url": canonical
+      };
+    }
+
     const imageObjectSchemas = [
       {
         "@context": "https://schema.org",
@@ -4054,6 +4068,10 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
     if (p === '/gider-makbuzu') {
       // Actual dimensions of the existing share image; no image or layout changes.
       extraHead += '  <meta property="og:image:width" content="1536" />\n';
+      extraHead += '  <meta property="og:image:height" content="1024" />\n';
+    } else if (p === '/sozlesme-baski') {
+      // Dimensions of the existing share image; do not alter the image asset.
+      extraHead += '  <meta property="og:image:width" content="980" />\n';
       extraHead += '  <meta property="og:image:height" content="1024" />\n';
     } else if (p === '/arac-kiralama') {
       // Existing image dimensions; the asset and protected pricing stay intact.
@@ -4089,7 +4107,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       extraHead,
       h1Text: detail.h1Title,
       bodyContent,
-      ogImage: (p === '/gider-makbuzu' || p === '/arac-kiralama')
+      ogImage: (p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski')
         ? `https://mavibasim.com${detail.featureImage}`
         : undefined
     };

@@ -112,3 +112,11 @@ export function prerenderAracKiralama() {
   );
   return renderToString(<App Router={AracKiralamaRouter} MakbuzComponent={MakbuzFormlarPage} />);
 }
+
+// Render the contract page with its existing, protected pricing component.
+export function prerenderSozlesme() {
+  const SozlesmeRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/sozlesme-baski']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={SozlesmeRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}

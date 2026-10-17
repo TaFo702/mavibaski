@@ -694,7 +694,7 @@ export const MakbuzFormlarPage = () => {
 
     return (
       <div className={`bg-white min-h-screen pb-20${pathId === 'recete' ? ' recete-page' : pathId === 'arac-kiralama' ? ' arac-kiralama-page' : ''}`}>
-        {pathId !== 'recete' && pathId !== 'tediye-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && (
+        {pathId !== 'recete' && pathId !== 'tediye-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && pathId !== 'sozlesme-baski' && (
           <Helmet>
             <title>{pageTitleForSEO}</title>
             <meta name="description" content={pageDescForSEO} />
@@ -869,7 +869,7 @@ export const MakbuzFormlarPage = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                 <span className="text-xs md:text-sm font-black text-slate-900 uppercase tracking-tight">İçindekiler (Hızlı Gezinme)</span>
               </div>
-              {pathId !== 'recete' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && pathId !== 'tahsilat-makbuzu' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
+              {pathId !== 'recete' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && pathId !== 'tahsilat-makbuzu' && pathId !== 'sozlesme-baski' && <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">TOC</span>}
             </div>
             <nav className={`grid ${pathId === 'para-makbuzu' ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'} gap-2 text-xs font-bold text-slate-700`} aria-label="Sayfa İçindekiler Navigasyonu">
               <a 
@@ -998,7 +998,7 @@ export const MakbuzFormlarPage = () => {
                   Sözleşme Baskı Fiyatları Nasıl Hesaplanır?
                 </h3>
                 <p className="text-slate-650 text-sm leading-relaxed font-semibold">
-                  Sözleşme baskı fiyatları; cilt adedi, nüsha sayısı (1 asıl + 1 suret, 1 asıl + 2 suret vb.), baskı rengi, numaratör kullanımı ve tasarım özelliklerine göre değişiklik göstermektedir. Yüksek adetli siparişlerde birim maliyet düşerken, kurumsal logo ve standart numaratör uygulamaları fiyat listesine dahil olarak sunulmaktadır.
+                  Sözleşme baskı fiyatları cilt adedi, nüsha sayısı ve baskı rengine göre değişir. Fiyat tablosundaki standart numaratör uygulaması liste fiyatına dahildir. Farklı tasarım ve baskı taleplerinizin kapsamı teklif aşamasında değerlendirilir.
                 </p>
               </div>
             )}
@@ -1128,7 +1128,7 @@ export const MakbuzFormlarPage = () => {
             <div className="text-center sm:text-left">
               <h3 className="text-sm font-black text-slate-900 uppercase mb-0.5">Siparişinizi Nasıl Oluşturabilirsiniz?</h3>
               <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? (
+                {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? (
                   <>Fiyat tablosundaki <strong>"Hemen Sipariş Ver"</strong> düğmesi ürün seçim penceresini açar. Cilt adedini ve baskı rengini seçtikten sonra <strong>"WhatsApp ile İletişim"</strong> üzerinden teklif isteyebilir veya ürünü sepetinize ekleyebilirsiniz. PDF prova onayınızdan sonra baskıya başlanır.</>
                 ) : (
                   <>Fiyat listesinden seçtiğiniz adedin yanında yer alan <strong>"Hemen Sipariş Ver"</strong> butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz. Siparişiniz için logo ve bilgilerinizi WhatsApp üzerinden göndermeniz yeterlidir. PDF prova onayınız alındıktan sonra üretim başlatılır.</>
@@ -1485,7 +1485,7 @@ export const MakbuzFormlarPage = () => {
                       { key: "Teslimat", val: "Çift Oluklu Kolilerle Türkiye Geneli Kargo" }
                     ] : [
                       { key: "Ürün Türü", val: "Numaratörlü Otokopili Sözleşme Koçanı" },
-                      { key: "Ebat", val: "20,5 x 28,5 cm (A4 Net Bitmiş Boyut)" },
+                      { key: "Ebat", val: "20,5 x 28,5 cm (Tam Boy, Net Bitmiş Ölçü)" },
                       { key: "Baskı Tekniği", val: "Ofset Baskı" },
                       { key: "Kağıt Türü", val: "1. Sınıf Kendinden Karbonlu Otokopi Kağıdı" },
                       { key: "Nüsha Seçenekleri", val: "1 Asıl + 1 Suret, 1 Asıl + 2 Suret, 1 Asıl + 3 Suret" },
@@ -1493,7 +1493,7 @@ export const MakbuzFormlarPage = () => {
                       { key: "Perfore", val: "Talebe Bağlı, Ücretsiz" },
                       { key: "Ciltleme", val: "Üstten Bezli Tutkallı Cilt" },
                       { key: "Tasarım Desteği", val: "Ücretsiz PDF Prova" },
-                      { key: "Teslim Süresi", val: "3-5 İş Günü" }
+                      { key: "Teslim Süresi", val: pathId === 'sozlesme-baski' ? "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." : "3-5 İş Günü" }
                     ]).map((row, idx) => (
                       <tr key={idx} className={idx % 2 === 0 ? "bg-white hover:bg-slate-50/50" : "bg-slate-50/30 hover:bg-slate-50/55"}>
                         {pathId === 'para-makbuzu' ? (
@@ -1602,19 +1602,19 @@ export const MakbuzFormlarPage = () => {
                       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 text-center mb-3">
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
                           <span className="text-emerald-600 font-extrabold text-xs sm:text-sm">Bugün Sipariş Verin</span>
-                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Grafik desteği var.' : 'Aynı Gün Tasarım'}</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Grafik desteği var.' : 'Aynı Gün Tasarım'}</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
-                          <span className="text-primary font-extrabold text-xs sm:text-sm">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'PDF Prova Kontrolü' : '24 Saat İçinde PDF Prova'}</span>
+                          <span className="text-primary font-extrabold text-xs sm:text-sm">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'PDF Prova Kontrolü' : '24 Saat İçinde PDF Prova'}</span>
                           <span className="text-[11px] text-slate-500 font-medium mt-0.5">WhatsApp Onaylı</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
-                          <span className="text-blue-600 font-extrabold text-xs sm:text-sm">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Türkiye Geneli Kargo' : '81 İle Hızlı Kargo'}</span>
+                          <span className="text-blue-600 font-extrabold text-xs sm:text-sm">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Türkiye Geneli Kargo' : '81 İle Hızlı Kargo'}</span>
                           <span className="text-[11px] text-slate-500 font-medium mt-0.5">Özenli Paketleme</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
                           <span className="text-amber-600 font-extrabold text-xs sm:text-sm">Yüksek Baskı Kalitesi</span>
-                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Dijital Onay' : 'İmalatçı Garantisi'}</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Dijital Onay' : 'İmalatçı Garantisi'}</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center col-span-2 sm:col-span-1">
                           <span className="text-indigo-600 font-extrabold text-xs sm:text-sm">Tasarım Desteği</span>
@@ -1727,7 +1727,7 @@ export const MakbuzFormlarPage = () => {
 
                   {pathId === 'sozlesme-baski' && (
                     <>
-                      <div id="kimler-kullanir" className="scroll-mt-24 mt-6 pt-6 border-t border-gray-100">
+                      <div className="scroll-mt-24 mt-6 pt-6 border-t border-gray-100">
                         <h3 className="text-lg md:text-xl font-black text-black mb-3 uppercase tracking-tight">
                           Otokopili Sözleşme Baskı Hizmeti
                         </h3>
@@ -1735,7 +1735,7 @@ export const MakbuzFormlarPage = () => {
                           Otokopili sözleşme baskı ürünleri, işletmelerin satış, üyelik, kiralama ve hizmet süreçlerinde kullandıkları önemli kurumsal evraklar arasında yer almaktadır. Mavi Basım tarafından üretilen numaratörlü sözleşme koçanı baskıları; firma logosu, iletişim bilgileri ve özel şartnameler eklenerek tamamen kuruma özel hazırlanır.
                         </p>
                         <p className="text-slate-650 text-base leading-relaxed font-semibold mt-4">
-                          İstanbul Topkapı Matbaacılar Sitesi'ndeki üretim tesisimizde hazırlanan sözleşme koçanı baskı siparişleri; İstanbul, Ankara, İzmir, Bursa, Antalya, Konya, Adana ve Türkiye'nin 81 iline gönderilmektedir. İsteğe bağlı olarak tek nüsha, çift nüsha veya çok nüshalı otokopili sözleşme baskı seçenekleri sunulmaktadır.
+                          İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden Türkiye geneline sipariş desteği sağlıyoruz. Fiyat tablosunda 1 asıl 1 suret, 1 asıl 2 suret ve 1 asıl 3 suret seçenekleri yer alır.
                         </p>
                       </div>
 
@@ -1846,7 +1846,7 @@ export const MakbuzFormlarPage = () => {
                       <div className="bg-slate-50 border border-slate-150 rounded-2xl p-5">
                         <div className="w-8 h-8 rounded-xl bg-primary text-white font-black text-sm flex items-center justify-center mb-3">4</div>
                         <h3 className="text-sm font-black text-black uppercase mb-1">Ofset Baskı ve Teslimat</h3>
-                        <p className="text-xs text-slate-600 font-medium leading-relaxed">{pathId === 'arac-kiralama' ? 'Dijital onaydan sonra baskı ve ciltleme yapılır. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.' : 'Heidelberg ofset makinelerimizde basılıp ciltlenen koçanlarınız kargoya verilir.'}</p>
+                        <p className="text-xs text-slate-600 font-medium leading-relaxed">{pathId === 'arac-kiralama' || pathId === 'sozlesme-baski' ? 'Dijital onaydan sonra baskı ve ciltleme yapılır. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.' : 'Heidelberg ofset makinelerimizde basılıp ciltlenen koçanlarınız kargoya verilir.'}</p>
                       </div>
                     </div>
                   </div>
@@ -2174,10 +2174,10 @@ export const MakbuzFormlarPage = () => {
             )}
 
             {pathId !== 'arac-kiralama' && pathId !== 'gider-makbuzu' && (currentDetails.howToFillTitle || currentDetails.requiredInfoTitle) ? (
-              <div id={pathId === 'tahsilat-makbuzu' ? undefined : 'nasil-doldurulur'} className={`scroll-mt-24 relative z-10 grid grid-cols-1 ${pathId === 'gider-makbuzu' ? '' : 'md:grid-cols-2'} gap-8 border-t border-gray-100 pt-8`}>
+              <div id={pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? undefined : 'nasil-doldurulur'} className={`scroll-mt-24 relative z-10 grid grid-cols-1 ${pathId === 'gider-makbuzu' ? '' : 'md:grid-cols-2'} gap-8 border-t border-gray-100 pt-8`}>
                 {/* Nasıl Doldurulur? */}
                 {(pathId === 'gider-makbuzu' || currentDetails.howToFillTitle) && (
-                  <div className={pathId === 'gider-makbuzu' ? 'max-w-4xl' : ''}>
+                  <div id={pathId === 'sozlesme-baski' ? 'nasil-doldurulur' : undefined} className={pathId === 'gider-makbuzu' ? 'max-w-4xl' : pathId === 'sozlesme-baski' ? 'scroll-mt-24' : ''}>
                     <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
                       {pathId === 'gider-makbuzu' ? 'Gider Makbuzu Nasıl Doldurulur?' : currentDetails.howToFillTitle}
                     </h2>
@@ -2547,7 +2547,7 @@ export const MakbuzFormlarPage = () => {
                       Numaratörlü otokopili sözleşme koçanları; hizmet sözleşmeleri, üyelik kayıt formları, satış sözleşmeleri, araç kiralama belgeleri, emlak yer gösterme formları ve kurumsal taahhütnameler için tercih edilen en güvenilir matbu evraklar arasında yer almaktadır. Firma logolu ve özel tasarımlı sözleşme formları, işletmelerin kayıt ve arşiv süreçlerini kolaylaştırırken müşterilerinize kurumsal ve güven veren bir imaj sunar.
                     </p>
                     <p className="text-slate-700 text-base leading-relaxed font-semibold mt-4">
-                      Mavi Basım olarak İstanbul Topkapı Matbaacılar Sitesi'ndeki yüksek kapasiteli üretim tesisimizde hazırladığımız sözleşme baskıları; isteğe bağlı kırmızı seri numaratör, tırtıklı perfore ve çok nüshalı (2-3-4 nüsha) kendinden karbonlu otokopi kağıdı seçenekleriyle üretilmektedir. Türkiye'nin tüm il ve ilçelerine hızlı ve güvenli kargo ile ulaştırılır.
+                      Sözleşme koçanlarında kırmızı seri numaratör, talebe bağlı perfore ve 2, 3 veya 4 nüshalı otokopili kağıt seçenekleri bulunur. Baskı öncesinde PDF prova kontrolü yapılır; dijital onay alınmadan baskıya başlanmaz.
                     </p>
                   </div>
                 </div>
@@ -2558,17 +2558,17 @@ export const MakbuzFormlarPage = () => {
                     Kurumsal Sözleşme Türleri
                   </h2>
                   <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
-                    Sektörünüze ve hukuki ihtiyaçlarınıza özel olarak tasarlayıp bastığımız başlıca otokopili sözleşme çeşitleri:                  </p>
+                    İlettiğiniz sözleşme metnine ve sektörel kullanımınıza göre baskıya hazırlanabilen başlıca otokopili sözleşme çeşitleri:                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
                       { title: "Hizmet Sözleşmesi", desc: "Genel hizmet alım-satım şartları, iş kapsamı, teslimat süreci, ödeme planı ve yasal taahhütnameler.", badge: "Otokopili / Numaratörlü", icon: "📋" },
-                      { title: "Üyelik Sözleşmesi", desc: "Spor salonları, fitness merkezleri, yüzme havuzları ve kulüpler için üye kayıt ve salon kuralları belgesi.", badge: "A4 / 2-3 Nüsha", icon: "🏋️" },
-                      { title: "Araç Kiralama Sözleşmesi", desc: "Rent a car firmaları için kasko şartları, günlük km sınırı, kaza/hasar sorumluluğu ve teslim tutanağı.", badge: "Yasal Standart", icon: "🚗" },
-                      { title: "Emlak Yer Gösterme", desc: "Gayrimenkul danışmanları için taşınmaz gösterme, portföy yetki ve komisyon haklarını koruyan yasal form.", badge: "Numaratörlü", icon: "🏢" },
+                      { title: "Üyelik Sözleşmesi", desc: "Spor salonları, fitness merkezleri, yüzme havuzları ve kulüpler için üye kayıt ve salon kuralları belgesi.", badge: "2-3 Nüsha", icon: "🏋️" },
+                      { title: "Araç Kiralama Sözleşmesi", desc: "Rent a car firmaları için kasko şartları, günlük km sınırı, kaza/hasar sorumluluğu ve teslim tutanağı.", badge: "Otokopili Form", icon: "🚗" },
+                      { title: "Emlak Yer Gösterme", desc: "Gayrimenkul danışmanları için taşınmaz gösterme, portföy yetki bilgileri ve komisyon koşullarının kaydı.", badge: "Numaratörlü", icon: "🏢" },
                       { title: "Eğitim Kurumu Sözleşmesi", desc: "Özel okul, kurs ve dershaneler için öğrenci kayıt, veli muvafakati ve taksitli ödeme taahhüt belgeleri.", badge: "Kurumsal Logolu", icon: "🎓" },
                       { title: "Güzellik Merkezi Sözleşmesi", desc: "Epilasyon, cilt bakımı ve estetik seans paketleri için müşteri açık rıza ve uygulama onay sözleşmeleri.", badge: "Hijyenik Kayıt", icon: "✨" },
                       { title: "Teknik Servis Sözleşmesi", desc: "Cihaz kabul, arıza teşhis, parça değişim ve garanti teslimat otokopili matbu kayıt formları.", badge: "2-3 Nüsha Cilt", icon: "🛠️" },
-                      { title: "Danışmanlık Sözleşmesi", desc: "Yönetim, finans, bilişim ve hukuk alanlarında proje kapsamı, hakediş ve NDA gizlilik anlaşmaları.", badge: "Gizlilik Uyumlu", icon: "💼" }
+                      { title: "Danışmanlık Sözleşmesi", desc: "Yönetim, finans, bilişim ve hukuk alanlarında proje kapsamı, hakediş ve NDA gizlilik anlaşmaları.", badge: "Firma Logolu", icon: "💼" }
                     ].map((card, cIdx) => (
                       <div key={cIdx} className="bg-white border border-gray-150 rounded-2xl p-5 flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition-all duration-300 group">
                         <div>
@@ -2585,7 +2585,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
 
                 {/* 2. "KİMLER KULLANIR?" SEKTÖR KART YAPISI */}
-                <div className="relative z-10 border-t border-gray-100 pt-8">
+                <div id="kimler-kullanir" className="scroll-mt-24 relative z-10 border-t border-gray-100 pt-8">
                   <h2 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-tight flex items-center gap-2">
                     Sözleşme Koçanlarını Hangi Sektörler Kullanır?
                   </h2>
@@ -2624,14 +2624,14 @@ export const MakbuzFormlarPage = () => {
                     Sözleşme Baskı 4 Adımlı İmalat Süreci
                   </h2>
                   <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
-                    İstanbul Topkapı Matbaacılar Sitesi'ndeki tesisimizde sözleşme siparişlerinizin aşama aşama imalat akışı:
+                    Sözleşme siparişinizin dosya hazırlığından kargoya kadar izlediği aşamalar:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
                       { step: "01", title: "Tasarım & Mizanpaj", desc: "Şirket logonuz, adres bilgileriniz ve yasal maddeleriniz grafik ekibimizce mizanpaj yapılır.", icon: "🎨" },
                       { step: "02", title: "Dijital PDF Onayı", desc: "Baskı öncesinde hazırlanan sözleşme taslağı WhatsApp / E-posta ile onayınıza sunulur.", icon: "📄" },
-                      { step: "03", title: "Ofset Baskı & Cilt", desc: "Otokopili kağıtlara HD kalitede baskı, kırmızı numaratör ve dikişli ciltleme uygulanır.", icon: "🖨️" },
-                      { step: "04", title: "Adrese Hızlı Kargo", desc: "Çift oluklu kolilerde paketlenen sözleşme koçanlarınız kargoya verilerek teslim edilir.", icon: "📦" }
+                      { step: "03", title: "Ofset Baskı & Cilt", desc: "Otokopili kağıtlara baskı, kırmızı numaratör ve üstten bezli tutkallı ciltleme uygulanır.", icon: "🖨️" },
+                      { step: "04", title: "Adrese Kargo", desc: "Çift oluklu kolilerde paketlenen sözleşme koçanlarınız kargoya verilerek teslim edilir.", icon: "📦" }
                     ].map((step, idx) => (
                       <div key={idx} className="bg-gradient-to-br from-slate-50 to-white border border-gray-150 rounded-2xl p-5 relative overflow-hidden flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition-all">
                         <div className="flex items-center justify-between mb-3">
@@ -2661,7 +2661,7 @@ export const MakbuzFormlarPage = () => {
                         <tr className="bg-slate-900 text-white font-extrabold text-xs uppercase tracking-wider">
                           <th className="p-3.5 md:p-4 border-b border-slate-800">Sektör</th>
                           <th className="p-3.5 md:p-4 border-b border-slate-800">Kullanılan Sözleşme / Form Türü</th>
-                          <th className="p-3.5 md:p-4 border-b border-slate-800">Temel Kullanım Amacı & Yasal Koruma</th>
+                          <th className="p-3.5 md:p-4 border-b border-slate-800">Temel Kullanım Amacı</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-150 text-slate-700 font-medium">
@@ -2677,7 +2677,7 @@ export const MakbuzFormlarPage = () => {
                             <span>🏢</span> Emlak & Gayrimenkul
                           </td>
                           <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Yer Gösterme ve Portföy Yetki Belgesi</td>
-                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Taşınmaz gösterme kaydı, gayrimenkul detayları ve komisyon hakkı güvencesi.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Taşınmaz gösterme kaydı, gayrimenkul detayları ve komisyon koşullarının kaydı.</td>
                         </tr>
                         <tr className="hover:bg-slate-50 transition-colors">
                           <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
@@ -2712,7 +2712,7 @@ export const MakbuzFormlarPage = () => {
                             <span>💼</span> Danışmanlık Firması
                           </td>
                           <td className="p-3.5 md:p-4 font-semibold text-emerald-800 bg-emerald-50/50">Hizmet ve Gizlilik (NDA) Sözleşmesi</td>
-                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Proje kapsamı, danışmanlık hakediş bedelleri ve ticari bilgi gizliliği garantisi.</td>
+                          <td className="p-3.5 md:p-4 text-xs md:text-sm">Proje kapsamı, danışmanlık hakediş bedelleri ve ticari bilgi gizliliğine ilişkin maddeler.</td>
                         </tr>
                         <tr className="hover:bg-slate-50 transition-colors">
                           <td className="p-3.5 md:p-4 font-bold text-slate-900 flex items-center gap-2">
@@ -2746,10 +2746,10 @@ export const MakbuzFormlarPage = () => {
                     Türkiye Geneli Sözleşme Koçanı Baskı Hizmeti
                   </h2>
                   <p className="text-slate-650 text-base leading-relaxed font-medium">
-                    Mavi Basım tarafından üretilen numaratörlü sözleşme koçanı baskıları; İstanbul, Ankara, İzmir, Bursa, Antalya, Kocaeli, Sakarya, Tekirdağ, Balıkesir, Konya, Kayseri, Gaziantep, Adana, Mersin, Samsun, Trabzon, Eskişehir, Denizli ve Türkiye'nin tüm illerine gönderilmektedir.
+                    Numaratörlü sözleşme koçanları Türkiye geneline kargoyla gönderilebilir. Siparişinizin üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.
                   </p>
                   <p className="text-slate-650 text-base leading-relaxed font-medium mt-4">
-                    Otokopili sözleşme baskı siparişleri, İstanbul Topkapı Matbaacılar Sitesi'ndeki üretim tesisimizde hazırlanmakta ve anlaşmalı kargo ile adreslere teslim edilmektedir. Firma logolu sözleşme formu, üyelik sözleşmesi, hizmet sözleşmesi, araç kiralama sözleşmesi ve emlak sözleşmesi baskıları için Türkiye'nin her bölgesine hizmet vermekteyiz.
+                    Baskıya hazır dosyanızı ve teslimat adresinizi mevcut WhatsApp hattından iletebilirsiniz. Kargo koşulları için sayfadaki Teslimat Şartları bağlantısını inceleyebilirsiniz.
                   </p>
                 </div>
 
@@ -2788,14 +2788,14 @@ export const MakbuzFormlarPage = () => {
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                     {[
-                      "İstanbul Topkapı Matbaacılar Sitesi üretimi",
+                      "Topkapı hizmet ve koordinasyon noktası",
                       "5 ciltten başlayan düşük adet baskı imkanı",
-                      "Ücretsiz grafik düzenleme desteği",
+                      "Grafik desteği var",
                       "PDF prova onayı sonrası üretim",
                       "Numaratör ve perfore seçenekleri",
                       "Türkiye geneli kargo gönderimi",
                       "Kurumsal logolu özel tasarım",
-                      "3-5 iş günü üretim süresi"
+                      "Teklif aşamasında paylaşılan üretim süresi"
                     ].map((feat, fIdx) => (
                       <div key={fIdx} className="bg-gray-50 border border-gray-150 rounded-2xl p-4 flex gap-3 hover:bg-white hover:border-emerald-500 hover:shadow-md transition-all duration-300">
                         <span className="text-emerald-600 text-lg font-black shrink-0">✓</span>
@@ -2810,7 +2810,7 @@ export const MakbuzFormlarPage = () => {
                   <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">                    İstanbul'da Sözleşme Baskı Yaptırmak İsteyen Firmalar İçin
                   </h2>
                   <p className="text-slate-650 text-base leading-relaxed font-medium">
-                    İstanbul sözleşme baskı hizmetlerimiz kapsamında; Zeytinburnu, Topkapı, Bayrampaşa, Güngören, Bakırköy, Bahçelievler, Esenler, Bağcılar, Küçükçekmece, Avcılar, Başakşehir, Ümraniye, Pendik, Kartal ve İstanbul'un tüm ilçelerine hizmet sunmaktayız.
+                    İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamızdan sözleşme baskısı için destek alabilirsiniz. Dosya iletimi ve PDF prova onayı uzaktan da yürütülebilir.
                   </p>
                   <p className="text-slate-650 text-base leading-relaxed font-medium mt-4">
                     İstanbul'da faaliyet gösteren spor salonları, güzellik merkezleri, emlak ofisleri, eğitim kurumları, teknik servisler ve araç kiralama firmaları için kurumsal sözleşme koçanı baskıları hazırlamaktayız.
@@ -2823,7 +2823,7 @@ export const MakbuzFormlarPage = () => {
                     Sözleşme Koçanı Baskı Siparişi Nasıl Verilir?
                   </h2>
                   <p className="text-slate-650 text-base leading-relaxed font-medium">
-                    Numaratörlü sözleşme baskı siparişleriniz için mevcut Word, PDF veya eski sözleşme örneğinizi tarafımıza göndermeniz yeterlidir. Grafik ekibimiz baskıya uygun mizanpaj çalışmasını hazırlayarak ücretsiz PDF prova sunar. Onayınızın ardından otokopili sözleşme koçanı baskı üretimi başlatılır ve ürünleriniz kısa sürede kargoya teslim edilir.
+                    Sözleşme baskı siparişiniz için mevcut Word, PDF veya eski sözleşme örneğinizi iletin. Grafik desteği var. Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz. Üretim ve teslim süresi teklif aşamasında paylaşılır.
                   </p>
                 </div>
 
@@ -2833,7 +2833,7 @@ export const MakbuzFormlarPage = () => {
                     En Çok Bastırılan Sözleşme Türleri
                   </h2>
                   <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
-                    Her biri farklı hukuki ve ticari şartlar içeren matbu sözleşmeleri, firmanızın kurumsal kimliği ve yasal şartlarına göre tam uyumlulukta üretiyoruz:
+                    Firmanızın ilettiği sözleşme metinleri, logo ve iletişim bilgileriyle baskıya hazırlanabilen form örnekleri:
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
@@ -3555,10 +3555,10 @@ export const MakbuzFormlarPage = () => {
               <div className="space-y-2">
                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white flex items-center gap-2">
                   <span className="w-2 h-6 bg-primary rounded-full" />
-                  {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Baskı Öncesi Kontrol ve Onay' : 'Mavi Basım İmalat Güvencesi'}
+                  {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Baskı Öncesi Kontrol ve Onay' : 'Mavi Basım İmalat Güvencesi'}
                 </h3>
                 <p className="text-xs md:text-sm text-slate-300 font-medium max-w-xl leading-relaxed">
-                  {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz.' : 'Doğrudan imalathanemizden hızlı, güvenli ve kurumsal kalitede matbu evrak baskı çözümleri sunuyoruz.'}
+                  {pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Dijital onay alınmadan baskıya başlanmaz.' : 'Doğrudan imalathanemizden hızlı, güvenli ve kurumsal kalitede matbu evrak baskı çözümleri sunuyoruz.'}
                 </p>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 shrink-0">
@@ -3568,7 +3568,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
-                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Topkapı Hizmet Noktası' : 'Topkapı Üretim Tesisi'}</span>
+                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Topkapı Hizmet Noktası' : 'Topkapı Üretim Tesisi'}</span>
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
@@ -3580,7 +3580,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
                 <div className="bg-slate-800/80 p-3 rounded-2xl border border-slate-700/60 text-center col-span-2 sm:col-span-1">
                   <span className="block text-emerald-400 font-black text-sm mb-0.5">✓</span>
-                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' ? 'Grafik desteği var.' : 'Ücretsiz Grafik Desteği'}</span>
+                  <span className="text-xs font-bold text-white">{pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Grafik desteği var.' : 'Ücretsiz Grafik Desteği'}</span>
                 </div>
               </div>
             </div>
