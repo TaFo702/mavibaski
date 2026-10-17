@@ -77,6 +77,7 @@ async function go(w,path){
  assert.ok(d.body.textContent.includes('Ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.'));
  const wa=[...d.querySelectorAll('a[href^="https://wa.me/"]')].find(a=>a.textContent.includes('WhatsApp ile İletişim'));
  assert.ok(decodeURIComponent(wa.href).includes('5 cilt'),'Contract quantity unit must be cilt');
+ assert.ok(decodeURIComponent(wa.href).includes('Ebat: 20,5 x 28,5 cm (TAM BOY)'),'Contract quote must include its existing size');
  dom.window.close();
  const reload=await open();reload.window.close();
  assert.deepEqual(errors,[],'Runtime or hydration errors');

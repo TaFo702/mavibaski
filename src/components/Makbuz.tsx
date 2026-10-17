@@ -2548,17 +2548,20 @@ export const MakbuzFormlarPage = () => {
                     Kurumsal Sözleşme Türleri
                   </h2>
                   <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mb-6">
-                    İlettiğiniz sözleşme metnine ve sektörel kullanımınıza göre baskıya hazırlanabilen başlıca otokopili sözleşme çeşitleri:                  </p>
+                    Sözleşme formu baskısı için kullanacağınız metni PDF, Word veya mevcut form örneği olarak iletebilirsiniz. Sayfa sayısı, okunaklı yerleşim ve nüsha tercihi dosya üzerinden değerlendirilir. Baskı kapsamı teklif aşamasında netleştirilir.
+                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
-                      { title: "Hizmet Sözleşmesi", desc: "Genel hizmet alım-satım şartları, iş kapsamı, teslimat süreci, ödeme planı ve yasal taahhütnameler.", badge: "Otokopili / Numaratörlü", icon: "📋" },
+                      { title: "Hizmet ve Satış Sözleşmesi", desc: "Hizmet veya perakende satış sözleşmesi formu için hazır metninizi iletin. Firma, işlem, ödeme planı ve imza alanları baskı yerleşiminde birlikte değerlendirilir.", badge: "Otokopili / Numaratörlü", icon: "📋" },
                       { title: "Üyelik Sözleşmesi", desc: "Spor salonları, fitness merkezleri, yüzme havuzları ve kulüpler için üye kayıt ve salon kuralları belgesi.", badge: "2-3 Nüsha", icon: "🏋️" },
                       { title: "Araç Kiralama Sözleşmesi", desc: "Rent a car firmaları için kasko şartları, günlük km sınırı, kaza/hasar sorumluluğu ve teslim tutanağı.", badge: "Otokopili Form", icon: "🚗" },
                       { title: "Emlak Yer Gösterme", desc: "Gayrimenkul danışmanları için taşınmaz gösterme, portföy yetki bilgileri ve komisyon koşullarının kaydı.", badge: "Numaratörlü", icon: "🏢" },
                       { title: "Eğitim Kurumu Sözleşmesi", desc: "Özel okul, kurs ve dershaneler için öğrenci kayıt, veli muvafakati ve taksitli ödeme taahhüt belgeleri.", badge: "Kurumsal Logolu", icon: "🎓" },
                       { title: "Güzellik Merkezi Sözleşmesi", desc: "Epilasyon, cilt bakımı ve estetik seans paketleri için müşteri açık rıza ve uygulama onay sözleşmeleri.", badge: "Hijyenik Kayıt", icon: "✨" },
                       { title: "Teknik Servis Sözleşmesi", desc: "Cihaz kabul, arıza teşhis, parça değişim ve garanti teslimat otokopili matbu kayıt formları.", badge: "2-3 Nüsha Cilt", icon: "🛠️" },
-                      { title: "Danışmanlık Sözleşmesi", desc: "Yönetim, finans, bilişim ve hukuk alanlarında proje kapsamı, hakediş ve NDA gizlilik anlaşmaları.", badge: "Firma Logolu", icon: "💼" }
+                      { title: "Gizlilik Sözleşmesi ve Protokol Baskı", desc: "Gizlilik protokolü veya NDA sözleşmenizi hazır dosya olarak iletin. Sözleşme protokolü basımı öncesinde logo, taraf bilgileri ve imza alanları dosyanızla birlikte kontrol edilir.", badge: "Hazır Metinden Baskı", icon: "💼" },
+                      { title: "İş ve Personel Sözleşmesi", desc: "İş sözleşmesi koçanı veya personel sözleşme formu baskısı için hazır dosyanızı, sayfa sayısını ve nüsha adedini iletin. Koçan yerleşimine uygunluk dosya kontrolünde değerlendirilir.", badge: "Dosya Kontrolü", icon: "📄" },
+                      { title: "Kira Sözleşmesi Koçanı", desc: "Konut veya işyeri için kullanacağınız kira sözleşmesi metnini ve nüsha ihtiyacınızı iletin. Sayfa düzeni ve koçan baskısına uygunluk teklif aşamasında değerlendirilir.", badge: "Metne Göre Yerleşim", icon: "🏠" }
                     ].map((card, cIdx) => (
                       <div key={cIdx} className="bg-white border border-gray-150 rounded-2xl p-5 flex flex-col justify-between hover:border-emerald-500 hover:shadow-md transition-all duration-300 group">
                         <div>
@@ -2572,6 +2575,11 @@ export const MakbuzFormlarPage = () => {
                       </div>
                     ))}
                   </div>
+                  <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium mt-6">
+                    Araç teslim, iade ve kiracı bilgileri içeren formlar için{' '}
+                    <Link to="/arac-kiralama" className="font-bold text-emerald-800 hover:underline">araç kiralama sözleşme formu baskı sayfasını</Link>{' '}
+                    inceleyebilirsiniz.
+                  </p>
                 </div>
 
                 {/* 2. "KİMLER KULLANIR?" SEKTÖR KART YAPISI */}

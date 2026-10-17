@@ -17,6 +17,7 @@ interface RouteTestConfig {
 }
 
 const ROUTES_TO_TEST: RouteTestConfig[] = [
+  { path: '/sozlesme', expectedStatus: 301, expectedLocation: '/sozlesme-baski' },
   { path: '/', expectedStatus: 200, expectedTitleSubstring: 'Matbaa ve Baskı Çözümleri | Mavi Basım' },
   { path: '/kartvizit', expectedStatus: 200, expectedTitleSubstring: 'Kartvizit Baskı Fiyatları' },
   { path: '/el-ilani', expectedStatus: 200, expectedTitleSubstring: 'El İlanı Baskı Fiyatları' },
