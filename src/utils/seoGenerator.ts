@@ -2,7 +2,7 @@ import { getHomeSEO } from "../data/homePageContent";
 import { PAGE_SEARCH_METADATA } from "../data/pageSearchMetadata";
 import { getCitySearchMetadata } from "./citySearchMetadata";
 export { injectSEOMetadata } from "./seoMetadata";
-import { MAKBUZ_DETAILS, PARA_MAKBUZU_DATA, SOZLESME_BASKI_DATA } from "../data/makbuzData";
+import { MAKBUZ_DETAILS, PARA_MAKBUZU_DATA, SOZLESME_BASKI_DATA, ADISYON_DATA } from "../data/makbuzData";
 import { SEO_PAGES_DATA } from "../data/seoPagesData";
 import { BLOG_POSTS } from "../data/blogData";
 import { getBlogMetadata } from "./blogMetadata";
@@ -3919,7 +3919,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
     const breadcrumbSchema = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": (p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski' || p === '/siparis-fisi')
+      "itemListElement": (p === '/adisyon' || p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski' || p === '/siparis-fisi')
         ? [
             {
               "@type": "ListItem",
@@ -3968,6 +3968,23 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       "category": detail.breadcrumbTitle
     };
 
+    if (p === '/adisyon') {
+      // Only complete products are offers; color surcharges are not products.
+      const prices = ADISYON_DATA.flatMap(section => section.rows
+        .filter(row => !row.label.includes('Renk Farkı'))
+        .flatMap(row => row.values));
+      productSchema.size = ADISYON_DATA[0].ebat;
+      productSchema.material = '70–80 gr 1. hamur beyaz kâğıt';
+      productSchema.offers = {
+        "@type": "AggregateOffer",
+        "priceCurrency": "TRY",
+        "lowPrice": String(Math.min(...prices)),
+        "highPrice": String(Math.max(...prices)),
+        "offerCount": String(prices.length),
+        "url": canonical
+      };
+    }
+
     if (p === '/sozlesme-baski') {
       const prices = SOZLESME_BASKI_DATA.flatMap(section => section.rows
         .filter(row => !row.label.includes('Renk Farkı'))
@@ -4011,7 +4028,11 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
 
     let extraHead = `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n`;
     extraHead += `  <script type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;
-    if (p === '/gider-makbuzu') {
+    if (p === '/adisyon') {
+      extraHead += '  <meta property="og:type" content="product" />\n';
+      extraHead += '  <meta property="og:image:width" content="1536" />\n';
+      extraHead += '  <meta property="og:image:height" content="1024" />\n';
+    } else if (p === '/gider-makbuzu') {
       // Actual dimensions of the existing share image; no image or layout changes.
       extraHead += '  <meta property="og:image:width" content="1536" />\n';
       extraHead += '  <meta property="og:image:height" content="1024" />\n';
@@ -4062,7 +4083,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       extraHead,
       h1Text: detail.h1Title,
       bodyContent,
-      ogImage: (p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski' || p === '/siparis-fisi')
+      ogImage: (p === '/adisyon' || p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski' || p === '/siparis-fisi')
         ? `https://mavibasim.com${detail.featureImage}`
         : undefined
     };

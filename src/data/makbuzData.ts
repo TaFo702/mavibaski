@@ -46,6 +46,8 @@ export interface MakbuzDetail {
   sectoralItems?: string[];
 }
 
+export const ADISYON_DELIVERY_TEXT = "Tasarım onayının ardından adisyon koçanlarınız 3–5 iş günü içerisinde basılarak Türkiye'nin 81 iline anlaşmalı kargo ile gönderilmektedir.";
+
 export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
   "adisyon": {
     seoTitle: "Adisyon Fişi Baskı ve Numaratörlü Adisyon Koçanı Fiyatları | Mavi Basım",
@@ -54,7 +56,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     h1Title: "Adisyon Fişi Baskı ve Numaratörlü Adisyon Koçanı Fiyatları",
     subtitle: "Restoran, kafe ve lokantalar için logolu ve numaratörlü adisyon fişi baskısı yapıyoruz. Güncel adisyon fiyatlarını inceleyerek istediğiniz cilt adedi için WhatsApp üzerinden sipariş verebilirsiniz.",
     featureImage: "/images/adisyon/restoran-adisyon-baski.webp",
-    featureImageAlt: "14 × 20 cm numaratörlü adisyon fişi örneği",
+    featureImageAlt: "Numaratörlü adisyon fişi baskı örneği",
     gallery: [
       {
         src: "/images/adisyon/otokopili-adisyon-baski.webp",
@@ -78,7 +80,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
         src: "/images/adisyon/restoran-adisyon-baski.webp",
         alt: "restoran-ve-kafe-adisyon-baski-ornegi",
         title: "Restoran & Kafe Adisyon Baskısı",
-        desc: "Masa hesabı ve garson sipariş takibinde hızlı ve hatasız kullanım sağlayan pratik adisyon tasarımı."
+        desc: "Masa hesabı ve garson sipariş takibini kolaylaştıran adisyon tasarımı."
       },
       {
         src: "/images/adisyon/adisyon-basimi-fiyatlari.webp",
@@ -90,19 +92,19 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
         src: "/images/adisyon/adisyon-baski.webp",
         alt: "numaratorlu-garson-adisyon-kocani",
         title: "Numaratörlü Garson Sipariş Fişi",
-        desc: "Ardışık seri numaralarıyla kasa açıkları ve kayıp hesap riskini ortadan kaldıran profesyonel koçan baskısı."
+        desc: "Ardışık seri numaralarıyla eksik veya kayıp hesap kayıtlarının takibini kolaylaştıran koçan baskısı."
       }
     ],
     specifications: [
-      { title: "Ebat (Standart)", value: "14 × 20 cm" },
+      { title: "Ebat (Standart)", value: "10 × 14 cm" },
       { title: "Kâğıt (Standart)", value: "70–80 gr 1. hamur beyaz kâğıt" },
       { title: "Cilt Yapısı (Standart)", value: "100 yaprak / cilt (tek nüsha)" },
       { title: "Baskı Rengi (Standart)", value: "Tek renk kurumsal baskı" },
       { title: "Numaratör (Standart)", value: "Ardışık seri numaralı baskı" },
-      { title: "İsteğe Bağlı Seçenekler", value: "10 × 14 cm özel ebat, otokopili (kendinden kopyalı), 50 takımlı cilt, çok renkli baskı" }
+      { title: "İsteğe Bağlı Seçenekler", value: "14 × 20 cm özel ebat, otokopili (kendinden kopyalı), 50 takımlı cilt, çok renkli baskı" }
     ],
     whatIsTitle: "Adisyon Fişi Nedir? Nerelerde Kullanılır?",
-    whatIsContent: "Adisyon fişi; restoran, kafe, lokanta, bar ve otel gibi yeme-içme işletmelerinde müşterilerin siparişlerini ve hesap detaylarını kayıt altına alan matbu belgedir. Üzerinde tarih, masa numarası, ürün kalemleri, adet, birim fiyatı ve genel toplam alanı yer alır. Servis personelinin sipariş hatalarının azaltılmasına yardımcı olur, mutfağa veya bara doğru iletilmesini ve kasanın gün sonu hesap takibini kolaylaştırır. Standart olarak 14 × 20 cm boyutlarında tek nüsha (100 yaprak) üretilebildiği gibi, ihtiyaca göre otokopili (kendinden kopyalı) çok nüshalı olarak da hazırlanabilir. Ardışık seri numaratör baskısı sayesinde kayıp hesapların ve iptal edilen siparişlerin takibini kolaylaştırır.",
+    whatIsContent: "Adisyon fişi; restoran, kafe, lokanta, bar ve otel gibi yeme-içme işletmelerinde müşterilerin siparişlerini ve hesap detaylarını kayıt altına alan matbu belgedir. Üzerinde tarih, masa numarası, ürün kalemleri, adet, birim fiyatı ve genel toplam alanı yer alır. Servis personelinin sipariş hatalarının azaltılmasına yardımcı olur, mutfağa veya bara doğru iletilmesini ve kasanın gün sonu hesap takibini kolaylaştırır. Fiyat tablosundaki standart ürün 10 × 14 cm, tek nüsha ve 100 yapraklıdır. İhtiyaca göre otokopili (kendinden kopyalı) çok nüshalı seçenekler ayrıca fiyatlandırılır. Ardışık seri numaratör baskısı sayesinde kayıp hesapların ve iptal edilen siparişlerin takibini kolaylaştırır.",
     whoUsesTitle: "Kimler Adisyon Kullanır?",
     whoUsesItems: ["Restoranlar", "Kafeler", "Lokantalar", "Barlar", "Pastaneler", "Otel restoranları"],
     usageAreasTitle: "Adisyonun İşletmelerde Kullanımı",
@@ -141,7 +143,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     faqList: [
       {
         q: "Minimum adisyon siparişi kaç cilttir?",
-        a: "Standart 14 × 20 cm tek nüsha adisyon baskısında minimum sipariş miktarı 5 cilttir. Her cilt 100 yapraktan oluşur. Mutfak, kafe veya restoranınızın ihtiyaçlarına göre daha yüksek adetli siparişler vererek birim maliyet avantajından yararlanabilirsiniz."
+        a: "Fiyat tablosundaki standart 10 × 14 cm tek nüsha adisyon baskısında minimum sipariş miktarı 5 cilttir. Her cilt 100 yapraktan oluşur. Mutfak, kafe veya restoranınızın ihtiyaçlarına göre daha yüksek adetli siparişler vererek birim maliyet avantajından yararlanabilirsiniz."
       },
       {
         q: "Adisyonlara logo ve firma bilgisi eklenebilir mi?",
@@ -161,7 +163,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         q: "Adisyon ölçüsü değiştirilebilir mi?",
-        a: "Standart üretim ebadımız 14 × 20 cm'dir. İşletmenizin pratik kullanım ihtiyaçlarına göre 10 × 14 cm veya özel ebatlarda da adisyon koçanı üretimi gerçekleştirilmektedir."
+        a: "Fiyat tablosundaki standart üretim ebadımız 10 × 14 cm'dir. 14 × 20 cm ve diğer özel ebat talepleri ayrıca fiyatlandırılır."
       },
       {
         q: "Renkli adisyon baskısı yapılabilir mi?",
@@ -169,7 +171,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         q: "Adisyon baskı süresi ve teslimatı ne kadardır?",
-        a: "Tasarım onayının ardından adisyon koçanlarınız 3–5 iş günü içerisinde basılarak Türkiye'nin 81 iline anlaşmalı kargo ile gönderilmektedir."
+        a: ADISYON_DELIVERY_TEXT
       }
     ],
     orderProcessTitle: "Adisyon Sipariş Süreci",
