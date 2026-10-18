@@ -156,7 +156,7 @@ const getImageUrl = (key: string, defaultUrl: string) => {
 const sortedBannerUrls = ["/b1.webp", "/b2.webp", "/b3.webp", "/b4.webp", "/b5.webp"];
 
 import { BROSUR_DATA, KATALOG_DATA, ZARF_DATA, KARTON_CANTA_DATA, KUP_BLOKNOT_DATA, BLOKNOTLAR_DATA, KITAP_AYRACI_DATA, YAG_KARTI_DATA } from './data/extraProductData';
-import { CILT_ISLERI_DATA, MAKBUZ_FORMLAR_ALL_DATA } from './data/makbuzData';
+import { CILT_ISLERI_DATA, MAKBUZ_FORMLAR_ALL_DATA, ADISYON_DELIVERY_TEXT } from './data/makbuzData';
 
 const KartvizitPage = React.lazy(() => import('./components/Kartvizit').then(m => ({ default: m.KartvizitPage })));
 const ElIlaniPage = React.lazy(() => import('./components/ElIlani').then(m => ({ default: m.ElIlaniPage })));
@@ -517,9 +517,11 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
     normalizeForSearch(product?.code || '').includes('para makbuzu');
   const isSiparisFisiProduct = normalizeForSearch(category).includes('siparis fisi') ||
     normalizeForSearch(product?.code || '').includes('siparis fisi');
+  const isAdisyonProduct = normalizeForSearch(category).includes('adisyon') ||
+    normalizeForSearch(product?.code || '').includes('adisyon');
   const usesQuotedProductionTime = isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct;
-  const productSize = product?.ebat || (isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct
-    ? MAKBUZ_FORMLAR_ALL_DATA.find(section => section.id === (isSiparisFisiProduct ? 'siparis-fisi' : isParaMakbuzuProduct ? 'para-makbuzu' : 'sozlesme-baski'))?.ebat
+  const productSize = product?.ebat || (isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct || isAdisyonProduct
+    ? MAKBUZ_FORMLAR_ALL_DATA.find(section => section.id === (isAdisyonProduct ? 'adisyon' : isSiparisFisiProduct ? 'siparis-fisi' : isParaMakbuzuProduct ? 'para-makbuzu' : 'sozlesme-baski'))?.ebat
     : undefined);
 
   const isMakbuzVeForm = (() => {
@@ -1048,17 +1050,17 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
                 <div className="bg-emerald-50/80 border border-emerald-200/80 rounded-2xl p-4 text-left space-y-2 shadow-sm">
                   <div className="flex items-center gap-2 text-xs font-black text-emerald-900 uppercase tracking-tight">
                     <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
-                    <span>{usesQuotedProductionTime ? 'Baskı Öncesi PDF Prova Onayı' : 'Aynı Gün Tasarım Onayı'}</span>
+                    <span>{usesQuotedProductionTime || isAdisyonProduct ? 'Baskı Öncesi PDF Prova Onayı' : 'Aynı Gün Tasarım Onayı'}</span>
                   </div>
                   <p className="text-[11px] text-emerald-800 font-semibold leading-relaxed pl-6">
-                    {usesQuotedProductionTime ? 'Dijital onay alınmadan baskıya başlanmaz. Prova takvimi sipariş özelliklerine göre paylaşılır.' : 'Onay gerektiren siparişlerde PDF prova aynı gün iletilir.'}
+                    {isAdisyonProduct ? 'PDF prova onayınız alınmadan baskıya başlanmaz.' : usesQuotedProductionTime ? 'Dijital onay alınmadan baskıya başlanmaz. Prova takvimi sipariş özelliklerine göre paylaşılır.' : 'Onay gerektiren siparişlerde PDF prova aynı gün iletilir.'}
                   </p>
                   <div className="flex items-center gap-2 text-xs font-black text-slate-900 uppercase tracking-tight pt-2 border-t border-emerald-200/60">
                     <Truck size={16} className="text-primary shrink-0" />
-                    <span>{usesQuotedProductionTime ? 'Üretim ve Teslim Süresi' : 'Üretim Süresi: Ortalama 3–4 iş günü'}</span>
+                    <span>{usesQuotedProductionTime || isAdisyonProduct ? 'Üretim ve Teslim Süresi' : 'Üretim Süresi: Ortalama 3–4 iş günü'}</span>
                   </div>
                   <p className="text-[11px] text-slate-600 font-semibold pl-6">
-                    {usesQuotedProductionTime ? 'Ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.' : '(Ürün grubuna ve adede göre değişiklik gösterebilir.)'}
+                    {isAdisyonProduct ? ADISYON_DELIVERY_TEXT : usesQuotedProductionTime ? 'Ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.' : '(Ürün grubuna ve adede göre değişiklik gösterebilir.)'}
                   </p>
                   <div className="pt-2 border-t border-emerald-200/60">
                     <p className="text-[11px] text-slate-700 font-bold leading-relaxed flex items-start gap-1.5">
@@ -1075,7 +1077,7 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
         {/* Footer / Action */}
         <div className="p-4 sm:p-8 pt-0 shrink-0 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${productSize || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${productSize || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct || isAdisyonProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-sm uppercase tracking-tight flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98]"
@@ -1305,7 +1307,7 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 
 export const CanonicalLink = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
+  return pathname === '/' || ['/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
 };
 
 const LegacyCanonicalLink = () => {
@@ -5056,7 +5058,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
       <Route path="/katalog" element={<Navigate to="/kataloglar" replace />} />
       <Route path="/makbuz-ve-formlar" element={<MakbuzFormlarPage />} />
       <Route path="/makbuz" element={<Navigate to="/makbuz-ve-formlar" replace />} />
-      <Route path="/adisyon" element={<MakbuzFormlarPage />} />
+      <Route path="/adisyon" element={<MakbuzComponent />} />
       <Route path="/siparis-fisi" element={<MakbuzComponent />} />
       <Route path="/siparis-fisi-baski-fiyatlari" element={<Navigate to="/siparis-fisi" replace />} />
       <Route path="/perakende-satis-fisi" element={<MakbuzFormlarPage />} />
@@ -5115,7 +5117,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
 
 const SEOMetadataManager = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
+  return pathname === '/' || ['/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
 };
 
 const LegacySEOMetadataManager = () => {

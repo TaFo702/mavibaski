@@ -696,7 +696,7 @@ export const MakbuzFormlarPage = () => {
 
     return (
       <div className={`bg-white min-h-screen pb-20${pathId === 'recete' ? ' recete-page' : pathId === 'arac-kiralama' ? ' arac-kiralama-page' : ''}`}>
-        {!isSiparisFisi && pathId !== 'recete' && pathId !== 'tediye-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && pathId !== 'sozlesme-baski' && pathId !== 'para-makbuzu' && (
+        {!isSiparisFisi && pathId !== 'adisyon' && pathId !== 'recete' && pathId !== 'tediye-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'gider-makbuzu' && pathId !== 'arac-kiralama' && pathId !== 'sozlesme-baski' && pathId !== 'para-makbuzu' && (
           <Helmet>
             <title>{pageTitleForSEO}</title>
             <meta name="description" content={pageDescForSEO} />
@@ -844,7 +844,7 @@ export const MakbuzFormlarPage = () => {
               <div className="text-slate-650 max-w-[1200px] mx-auto text-sm md:text-base text-left md:text-justify font-semibold space-y-3 mb-8 leading-relaxed">
                 <p>{currentDetails.subtitle}</p>
                 <div className="p-4 bg-slate-50 border border-slate-200/80 rounded-2xl text-slate-800 text-xs sm:text-sm font-semibold">
-                  Standart adisyon ürünümüz 14 × 20 cm, tek nüsha ve numaratörlüdür. Otokopili, farklı ölçülü ve çok renkli seçenekler ayrıca fiyatlandırılır.
+                  Fiyat tablosundaki standart adisyon ürünümüz {ADISYON_DATA[0].ebat}, tek nüsha ve numaratörlüdür. Otokopili, farklı ölçülü ve çok renkli seçenekler ayrıca fiyatlandırılır.
                 </div>
               </div>
             ) : pathId === 'arac-kiralama' || pathId === 'gider-makbuzu' || pathId === 'tahsilat-makbuzu' ? (
@@ -974,7 +974,7 @@ export const MakbuzFormlarPage = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 text-xs text-slate-800 font-bold">
                   <div className="bg-white p-3 rounded-xl border border-slate-200 text-center shadow-2xs">
                     <span className="block text-[10px] text-slate-400 font-bold uppercase mb-0.5">Ebat</span>
-                    14 × 20 cm
+                    {ADISYON_DATA[0].ebat}
                   </div>
                   <div className="bg-white p-3 rounded-xl border border-slate-200 text-center shadow-2xs">
                     <span className="block text-[10px] text-slate-400 font-bold uppercase mb-0.5">Cilt İçeriği</span>
@@ -1002,7 +1002,7 @@ export const MakbuzFormlarPage = () => {
                   </div>
                 </div>
                 <div className="p-3.5 bg-amber-50/80 border border-amber-200 rounded-xl text-slate-800 text-xs font-semibold leading-relaxed">
-                  Yukarıdaki fiyatlar 14 × 20 cm, tek nüsha, 100 yapraklı, tek renk ve numaratörlü adisyon koçanı için geçerlidir. Otokopili, çok nüshalı, farklı ölçülü ve çok renkli üretimler ayrıca fiyatlandırılır. Fiyat tablosundaki standart tek nüsha adisyon koçanlarında ardışık numaratör baskısı liste fiyatına dahildir.
+                  Yukarıdaki fiyatlar {ADISYON_DATA[0].ebat}, tek nüsha, 100 yapraklı, tek renk ve numaratörlü adisyon koçanı için geçerlidir. Otokopili, çok nüshalı, farklı ölçülü ve çok renkli üretimler ayrıca fiyatlandırılır. Fiyat tablosundaki standart tek nüsha adisyon koçanlarında ardışık numaratör baskısı liste fiyatına dahildir.
                 </div>
               </div>
             )}
@@ -1143,7 +1143,7 @@ export const MakbuzFormlarPage = () => {
             <div className="text-center sm:text-left">
               <h3 className="text-sm font-black text-slate-900 uppercase mb-0.5">Siparişinizi Nasıl Oluşturabilirsiniz?</h3>
               <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                {isSiparisFisi || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' || pathId === 'para-makbuzu' ? (
+                {isSiparisFisi || pathId === 'adisyon' || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' || pathId === 'para-makbuzu' ? (
                   <>Fiyat tablosundaki <strong>"Hemen Sipariş Ver"</strong> düğmesi ürün seçim penceresini açar. Cilt adedini ve baskı rengini seçtikten sonra <strong>"WhatsApp ile İletişim"</strong> üzerinden teklif isteyebilir veya ürünü sepetinize ekleyebilirsiniz. PDF prova onayınızdan sonra baskıya başlanır.</>
                 ) : (
                   <>Fiyat listesinden seçtiğiniz adedin yanında yer alan <strong>"Hemen Sipariş Ver"</strong> butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz. Siparişiniz için logo ve bilgilerinizi WhatsApp üzerinden göndermeniz yeterlidir. PDF prova onayınız alındıktan sonra üretim başlatılır.</>
@@ -1290,7 +1290,7 @@ export const MakbuzFormlarPage = () => {
                 />
                 <figcaption className="text-gray-550 text-[11px] mt-2.5 text-center font-bold leading-normal max-w-[280px]">
                   {pathId === 'adisyon'
-                    ? "Önyüz yakın çekim. 14 × 20 cm standart numaratörlü adisyon koçanı örneği."                    : `Önyüz yakın çekim. Otokopili numaratörlü ${currentDetails.breadcrumbTitle.toLowerCase()} koçanı ve baskı modeli.`}
+                    ? "Önyüz yakın çekim. Numaratörlü adisyon koçanı baskı örneği."                    : `Önyüz yakın çekim. Otokopili numaratörlü ${currentDetails.breadcrumbTitle.toLowerCase()} koçanı ve baskı modeli.`}
                 </figcaption>
               </figure>
 
@@ -1410,7 +1410,7 @@ export const MakbuzFormlarPage = () => {
                   <ul className="space-y-3 text-xs sm:text-sm font-semibold text-slate-700">
                     <li className="flex items-start gap-2.5">
                       <span className="text-primary font-bold">✓</span>
-                      <div><strong className="text-black font-bold">Ebat:</strong> 14 × 20 cm</div>
+                      <div><strong className="text-black font-bold">Ebat:</strong> {ADISYON_DATA[0].ebat}</div>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="text-primary font-bold">✓</span>
@@ -1439,7 +1439,7 @@ export const MakbuzFormlarPage = () => {
                   <ul className="space-y-3 text-xs sm:text-sm font-semibold text-slate-700">
                     <li className="flex items-start gap-2.5">
                       <span className="text-secondary font-bold">→</span>
-                      <div><strong className="text-black font-bold">Farklı Ölçü:</strong> 10 × 14 cm veya özel ebat üretimi</div>
+                      <div><strong className="text-black font-bold">Farklı Ölçü:</strong> 14 × 20 cm ve diğer özel ebat talepleri ayrıca fiyatlandırılır</div>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="text-secondary font-bold">→</span>

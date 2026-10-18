@@ -149,3 +149,11 @@ export function prerenderSiparisFisi() {
   );
   return renderToString(<App Router={SiparisRouter} MakbuzComponent={MakbuzFormlarPage} />);
 }
+
+// Render the existing Adisyon page and its protected price table before hydration.
+export function prerenderAdisyon() {
+  const AdisyonRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/adisyon']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={AdisyonRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}
