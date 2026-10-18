@@ -263,10 +263,14 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       "Mobilya ve dekorasyon firmaları: Ölçü, model, renk, kumaş, teslim tarihi ve kapora bilgilerinin kayıt altına alınmasında kullanılır.",
       "Tekstil ve üretim atölyeleri: Ürün kodu, beden, renk, üretim adedi ve teslim programının üretim birimine aktarılmasını kolaylaştırır.",
       "Toptancı ve distribütörler: Müşteri, ürün, miktar, birim fiyat ve sevkiyat bilgilerinin düzenli takip edilmesini sağlar.",
-      "Teknik servisler: Talep edilen işlem, ürün veya yedek parça, tahmini teslim tarihi ve müşteri notlarının kaydedilmesinde kullanılabilir.",
+      "Teknik servisler: Beyaz eşya ve elektronik cihazlarda talep edilen işlem, ürün veya yedek parça, tahmini teslim tarihi ve müşteri notlarının kaydedilmesinde kullanılabilir.",
       "Mağaza ve perakende işletmeleri: Stokta bulunmayan veya müşteri için özel hazırlanacak ürünlerin ön sipariş kaydında tercih edilir.",
       "Organizasyon ve hizmet firmaları: Hizmet kapsamı, tarih, lokasyon, katılımcı sayısı, kapora ve kalan ödeme bilgilerinin yazılı hâle getirilmesine yardımcı olur.",
-      "E-ticaret ve sosyal medya satıcıları: Telefon, WhatsApp veya sosyal medya üzerinden alınan özel siparişlerin üretim ve sevkiyat sürecine aktarılmasını kolaylaştırır."
+      "E-ticaret ve sosyal medya satıcıları: Telefon, WhatsApp veya sosyal medya üzerinden alınan özel siparişlerin üretim ve sevkiyat sürecine aktarılmasını kolaylaştırır.",
+      "Halı yıkama ve temizlik işletmeleri: Adresten alınan halı veya koltuk için hizmet talebi, müşteri iletişimi ve planlanan teslimat bilgilerinin kaydında kullanılabilir.",
+      "Oto servis ve tamir işletmeleri: Araç kabul, istenen işlem ve parça değişim bilgilerinin müşteri siparişiyle birlikte takibini sağlar.",
+      "İnşaat, yapı ve taahhüt firmaları: Şantiye malzeme siparişi, miktar, peşinat ve planlanan teslimat bilgilerinin kayıt altına alınmasında kullanılabilir.",
+      "Reklam ajansları ve tabela işletmeleri: Tabela, dijital baskı veya cephe giydirme siparişlerinde ölçü, malzeme ve uygulama notlarının kaydına yardımcı olur."
     ],
     usageAreasTitle: "Neden Otokopili Sipariş Fişi Kullanılır?",
     usageAreasItems: [
