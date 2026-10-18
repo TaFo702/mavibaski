@@ -25,6 +25,7 @@ import { WHATSAPP_LINK } from '../constants/contact';
 import { RelatedBlogPosts } from './RelatedBlogPosts';
 import { DeliveryBadge } from './DeliveryBadge';
 import { TahsilatMakbuzuResources } from './TahsilatMakbuzuResources';
+import { MakbuzFormSelectionGuide, SiparisFisiFormGuide } from './SiparisFisiFormGuide';
 
 // --- Components ---
 
@@ -3194,6 +3195,7 @@ export const MakbuzFormlarPage = () => {
 
             {pathId === 'siparis-fisi' && (
               <>
+                <SiparisFisiFormGuide />
                 {/* 1. Bu Ürün Kimler İçin Üretiliyor? (E-E-A-T) */}
                 <div id="kimler-kullanir" className="scroll-mt-24 relative z-10 border-t border-gray-100 pt-8">
                   <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
@@ -3596,6 +3598,7 @@ export const MakbuzFormlarPage = () => {
             </div>
           ))}
         </div>
+        <MakbuzFormSelectionGuide />
       </div>
     </div>
   );
