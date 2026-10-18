@@ -1,740 +1,1228 @@
 import type { SearchMetadata } from './pageSearchMetadata';
 
 export interface CitySearchContent extends SearchMetadata {
-  // Topics checked against the page's rendered text before publication.
+  // Representative examples, never an exclusive city-specific service scope.
+  products: readonly string[];
+  // Every example must exist in the city's visible page content.
   evidence: readonly string[];
 }
 
-// Editorial summaries of the actual city-page content. Do not replace this
-// with a city-name-only template or invent local offices / delivery promises.
+// All city pages serve businesses across sectors. Vary real product examples;
+// do not assign a city to a single industry or invent branches / delivery claims.
 export const CITY_SEARCH_CONTENT: Record<string, CitySearchContent> = {
   "adana-matbaa": {
-    "title": "Adana Matbaa | Restoran ve Gıda Ambalaj Baskıları",
-    "desc": "Adana restoranları için Amerikan servis ve magnet; gıda ve tarım işletmeleri için etiket ve ambalaj kutusu seçeneklerini inceleyin. Ürün ve adetle teklif alın.",
+    "title": "Adana Matbaa | Kartvizit, Broşür, Etiket | Mavi Basım",
+    "desc": "Adana için kartvizit, broşür, etiket ve katalog baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. İhtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Broşür",
+      "Etiket"
+    ],
     "evidence": [
-      "restoran",
-      "tarım",
-      "etiket"
+      "Kartvizit",
+      "Broşür",
+      "Etiket",
+      "Katalog"
     ]
   },
   "adiyaman-matbaa": {
-    "title": "Adıyaman Matbaa | Tekstil ve Turizm için Kurumsal Baskı",
-    "desc": "Adıyaman’da tekstil, turizm ve yerel işletmeler için kartvizit, tanıtım broşürü ve ürün kataloğu baskılarını inceleyin. Ebat ve adet bilgisiyle teklif isteyin.",
+    "title": "Adıyaman Matbaa | Kartvizit, Broşür, Kutu | Mavi Basım",
+    "desc": "Adıyaman için kartvizit, broşür, kutu ve katalog baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. Kâğıt, ebat ve adet seçenekleri için teklif isteyin.",
+    "products": [
+      "Kartvizit",
+      "Broşür",
+      "Kutu"
+    ],
     "evidence": [
-      "tekstil",
-      "turizm",
-      "katalog"
+      "Kartvizit",
+      "Broşür",
+      "Kutu",
+      "Katalog"
     ]
   },
   "afyonkarahisar-matbaa": {
-    "title": "Afyonkarahisar Matbaa | Gıda Etiketi ve Katalog Baskı",
-    "desc": "Afyonkarahisar için gıda etiketi, ambalaj kutusu ve mermer ürün kataloğu seçenekleri. Termal turizm için broşür baskısını inceleyin, detaylı fiyat teklifi alın.",
+    "title": "Afyonkarahisar Matbaa | Broşür, Katalog, Kutu | Mavi Basım",
+    "desc": "Afyonkarahisar ve ilçelerine broşür, katalog, kutu ve magnet baskı hizmeti. Kurumsal ürünleri inceleyin. İhtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Broşür",
+      "Katalog",
+      "Kutu"
+    ],
     "evidence": [
-      "gıda",
-      "mermer",
-      "turizm"
+      "Broşür",
+      "Katalog",
+      "Kutu",
+      "Magnet"
     ]
   },
   "agri-matbaa": {
-    "title": "Ağrı Matbaa | Ticari Evrak, Kartvizit ve Broşür Baskı",
-    "desc": "Ağrı’daki esnaf ve ticari işletmeler için kartvizit, broşür ve koçanlı makbuz baskıları. Doğubayazıt ve Patnos siparişlerinde ürün bilgisiyle teklif isteyin.",
+    "title": "Ağrı Matbaa | Katalog, Kutu, Magnet | Mavi Basım",
+    "desc": "Ağrı için katalog, kutu, magnet ve karton çanta siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. Kâğıt, ebat ve adet seçenekleri için teklif isteyin.",
+    "products": [
+      "Katalog",
+      "Kutu",
+      "Magnet"
+    ],
     "evidence": [
-      "esnaf",
-      "Doğubayazıt",
-      "makbuz"
+      "Katalog",
+      "Kutu",
+      "Magnet",
+      "Karton Çanta"
     ]
   },
   "amasya-matbaa": {
-    "title": "Amasya Matbaa | Elma ve Gıda Ambalajı, Etiket Baskı",
-    "desc": "Amasya’da elma ve gıda ürünleri için etiket ve kutu; mağazalar için karton çanta baskılarını inceleyin. Ambalaj ölçüsü ve sipariş adedini ileterek teklif alın.",
+    "title": "Amasya Matbaa | Katalog, Magnet, Karton Çanta | Mavi Basım",
+    "desc": "Amasya için katalog, magnet, karton çanta ve makbuz baskılarını inceleyin. Kurumsal ihtiyaçlarınız için baskı adedi ve ebat bilgilerini paylaşın, teklif alın.",
+    "products": [
+      "Katalog",
+      "Magnet",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "elma",
-      "gıda",
-      "karton çanta"
+      "Katalog",
+      "Magnet",
+      "Karton Çanta",
+      "Makbuz"
     ]
   },
   "ankara-matbaa": {
-    "title": "Ankara Matbaa | Antetli Kâğıt, Zarf ve Dosya Baskı",
-    "desc": "Ankara ofisleri için antetli kâğıt, diplomat zarf, kartvizit ve cepli dosya; işletmelere katalog baskısı. Kurumsal evrak seçeneklerini inceleyip teklif alın.",
+    "title": "Ankara Matbaa | Katalog, Makbuz, Zarf | Mavi Basım",
+    "desc": "Ankara için katalog, makbuz, zarf ve dosya baskıları ve kurumsal ürünler. Sipariş seçeneklerini inceleyin. Sipariş adedinizi ve ölçüyü paylaşarak teklif alın.",
+    "products": [
+      "Katalog",
+      "Makbuz",
+      "Zarf"
+    ],
     "evidence": [
-      "antetli",
-      "zarf",
-      "dosya"
+      "Katalog",
+      "Makbuz",
+      "Zarf",
+      "Dosya"
     ]
   },
   "antalya-matbaa": {
-    "title": "Antalya Matbaa | Turizm Broşürü ve Rent A Car Formları",
-    "desc": "Antalya otel ve acenteleri için broşür, restoranlara Amerikan servis, rent a car firmalarına araç kiralama formu baskısı. Evrak ve adet bilgisiyle teklif alın.",
+    "title": "Antalya Matbaa | Sipariş Fişi, Dosya, Amerikan Servis",
+    "desc": "Antalya matbaa siparişlerinizde sipariş fişi, dosya, Amerikan servis ve sözleşme baskılarını inceleyin. Baskı adedi ve ebat bilgilerini paylaşın, teklif alın.",
+    "products": [
+      "Sipariş Fişi",
+      "Dosya",
+      "Amerikan Servis"
+    ],
     "evidence": [
-      "acente",
-      "Amerikan servis",
-      "araç kiralama"
+      "Sipariş Fişi",
+      "Dosya",
+      "Amerikan Servis",
+      "Sözleşme"
     ]
   },
   "artvin-matbaa": {
-    "title": "Artvin Matbaa | Turizm Broşürü ve Ticari Baskılar",
-    "desc": "Artvin’de doğa turizmi ve dış ticaret işletmeleri için tanıtım broşürü, katalog ve kartvizit baskıları. Hopa ve Arhavi siparişlerine ebat ve adetle teklif alın.",
+    "title": "Artvin Matbaa | Etiket, Karton Çanta, Sipariş Fişi",
+    "desc": "Artvin için etiket, karton çanta, sipariş fişi ve makbuz baskılarını inceleyin. Kurumsal ihtiyaçlarınız için ölçü, malzeme ve sipariş adediyle teklif isteyin.",
+    "products": [
+      "Etiket",
+      "Karton Çanta",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "doğa turizmi",
-      "dış ticaret",
-      "Hopa"
+      "Etiket",
+      "Karton Çanta",
+      "Sipariş Fişi",
+      "Makbuz"
     ]
   },
   "aydin-matbaa": {
-    "title": "Aydın Matbaa | Tarımsal Ürün Etiketi ve Ambalaj Kutusu",
-    "desc": "Aydın için zeytin ve tarımsal ürün etiketleri, ambalaj kutuları ve turizm broşürleri. Efeler, Söke ve Kuşadası siparişlerinde ürün ölçüsüne göre teklif isteyin.",
+    "title": "Aydın Matbaa | Etiket, Karton Çanta, Makbuz | Mavi Basım",
+    "desc": "Aydın işletmeleri için etiket, karton çanta, makbuz ve kartvizit baskıları. Ürün seçeneklerini inceleyin. Kâğıt, ebat ve adet seçenekleri için teklif isteyin.",
+    "products": [
+      "Etiket",
+      "Karton Çanta",
+      "Makbuz"
+    ],
     "evidence": [
-      "zeytin",
-      "tarımsal",
-      "Kuşadası"
+      "Etiket",
+      "Karton Çanta",
+      "Makbuz",
+      "Kartvizit"
     ]
   },
   "balikesir-matbaa": {
-    "title": "Balıkesir Matbaa | Zeytinyağı Etiketi ve Gıda Kutusu",
-    "desc": "Edremit, Ayvalık zeytinyağı markalarına şişe etiketi; Balıkesir gıda işletmelerine kutu ve restoranlara menü baskısı. Ürün seçeneklerini inceleyip teklif alın.",
+    "title": "Balıkesir Matbaa | Etiket, Makbuz, Amerikan Servis",
+    "desc": "Balıkesir ve ilçelerine etiket, makbuz, Amerikan servis ve kartvizit baskı hizmeti. Kurumsal ürünleri inceleyin. Ürün, ebat ve adet bilgisiyle teklif isteyin.",
+    "products": [
+      "Etiket",
+      "Makbuz",
+      "Amerikan Servis"
+    ],
     "evidence": [
-      "zeytinyağı",
-      "Edremit",
-      "menü"
+      "Etiket",
+      "Makbuz",
+      "Amerikan Servis",
+      "Kartvizit"
     ]
   },
   "bilecik-matbaa": {
-    "title": "Bilecik Matbaa | Seramik İşletmelerine Katalog ve Etiket",
-    "desc": "Bilecik’in seramik, madencilik ve sanayi işletmeleri için ürün kataloğu, etiket ve baskılar. Bozüyük ve Söğüt siparişlerinde baskı özellikleriyle teklif alın.",
+    "title": "Bilecik Matbaa | Kartvizit, Broşür, Katalog | Mavi Basım",
+    "desc": "Bilecik için kartvizit, broşür, katalog ve magnet baskılarını inceleyin. Kurumsal ihtiyaçlarınız için siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Kartvizit",
+      "Broşür",
+      "Katalog"
+    ],
     "evidence": [
-      "seramik",
-      "madencilik",
-      "Bozüyük"
+      "Kartvizit",
+      "Broşür",
+      "Katalog",
+      "Magnet"
     ]
   },
   "bingol-matbaa": {
-    "title": "Bingöl Matbaa | Arıcılık için Etiket ve Ambalaj Baskı",
-    "desc": "Bingöl’de arıcılık ve yerel ticaret için ürün etiketi, kutu ve kartvizit seçenekleri. Genç, Solhan ve Karlıova siparişlerinde ölçü ve adetle teklif isteyin.",
+    "title": "Bingöl Matbaa | Kartvizit, Katalog, Makbuz | Mavi Basım",
+    "desc": "Bingöl için kartvizit, katalog, makbuz ve magnet siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. Sipariş adedinizi ve ölçüyü paylaşarak teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Katalog",
+      "Makbuz"
+    ],
     "evidence": [
-      "arıcılık",
-      "Solhan",
-      "Karlıova"
+      "Kartvizit",
+      "Katalog",
+      "Makbuz",
+      "Magnet"
     ]
   },
   "bitlis-matbaa": {
-    "title": "Bitlis Matbaa | Bal Etiketi, Broşür ve Sipariş Fişi",
-    "desc": "Bitlis ve Tatvan için bal ve gıda etiketi, karton kutu, tanıtım broşürü ve koçanlı sipariş fişi baskısını inceleyin. Nüsha, ebat ve adet bilgisiyle teklif alın.",
-    "evidence": [
-      "Tatvan",
-      "bal",
+    "title": "Bitlis Matbaa | Kartvizit, Etiket, Sipariş Fişi | Mavi Basım",
+    "desc": "Bitlis işletmeleri için kartvizit, etiket, sipariş fişi ve el ilanı seçenekleri. Matbaa siparişiniz için ihtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Etiket",
       "Sipariş Fişi"
+    ],
+    "evidence": [
+      "Kartvizit",
+      "Etiket",
+      "Sipariş Fişi",
+      "El İlanı"
     ]
   },
   "bolu-matbaa": {
-    "title": "Bolu Matbaa | Gıda Ambalajı ve Turizm Tanıtım Baskıları",
-    "desc": "Bolu gıda ve doğa turizmi işletmeleri için kutu, etiket, broşür ve ürün kataloğu baskıları. Gerede ve Mudurnu siparişlerinde ihtiyacınıza uygun teklif isteyin.",
+    "title": "Bolu Matbaa | Kartvizit, Broşür, Magnet | Mavi Basım",
+    "desc": "Bolu için kartvizit, broşür, magnet ve kutu siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Kartvizit",
+      "Broşür",
+      "Magnet"
+    ],
     "evidence": [
-      "gıda",
-      "doğa turizmi",
-      "Gerede"
+      "Kartvizit",
+      "Broşür",
+      "Magnet",
+      "Kutu"
     ]
   },
   "burdur-matbaa": {
-    "title": "Burdur Matbaa | Mermer Kataloğu ve Süt Ürünü Etiketleri",
-    "desc": "Burdur’da mermer ihracatçıları, süt ürünleri işletmeleri için katalog, etiket ve ambalaj kutusu seçenekleri. Bucak ve Gölhisar için ölçü ve adetle teklif alın.",
+    "title": "Burdur Matbaa | Broşür, Etiket, Karton Çanta | Mavi Basım",
+    "desc": "Burdur işletmeleri için broşür, etiket, karton çanta ve kutu baskıları. Ürün seçeneklerini inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Etiket",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "mermer",
-      "süt",
-      "Gölhisar"
+      "Broşür",
+      "Etiket",
+      "Karton Çanta",
+      "Kutu"
     ]
   },
   "bursa-matbaa": {
-    "title": "Bursa Matbaa | Mobilya Kataloğu ve Tekstil Ambalajı",
-    "desc": "Bursa otomotiv, tekstil ve İnegöl mobilya işletmeleri için katalog, etiket ve karton kutu baskıları. Kâğıt, sayfa ve adet seçeneklerini inceleyip teklif alın.",
+    "title": "Bursa Matbaa | Broşür, Kutu, Karton Çanta | Mavi Basım",
+    "desc": "Bursa için broşür, kutu, karton çanta ve magnet baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. İhtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Broşür",
+      "Kutu",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "otomotiv",
-      "tekstil",
-      "İnegöl"
+      "Broşür",
+      "Kutu",
+      "Karton Çanta",
+      "Magnet"
     ]
   },
   "canakkale-matbaa": {
-    "title": "Çanakkale Matbaa | Peynir Etiketi ve Turizm Broşürü",
-    "desc": "Çanakkale için Ezine peynir etiketi, gıda kutusu ve turizm broşürü baskılarını inceleyin. Otel ve restoranlara menü seçenekleri için ölçü ve adetle teklif alın.",
+    "title": "Çanakkale Matbaa | Kutu, Karton Çanta, Amerikan Servis",
+    "desc": "Çanakkale işletmeleri için kutu, karton çanta, Amerikan servis ve magnet seçenekleri. Matbaa siparişiniz için baskı özelliklerini ve adedi iletip teklif alın.",
+    "products": [
+      "Kutu",
+      "Karton Çanta",
+      "Amerikan Servis"
+    ],
     "evidence": [
-      "Ezine",
-      "peynir",
-      "turizm"
+      "Kutu",
+      "Karton Çanta",
+      "Amerikan Servis",
+      "Magnet"
     ]
   },
   "cankiri-matbaa": {
-    "title": "Çankırı Matbaa | Kaya Tuzu Etiketi ve Ürün Kutusu",
-    "desc": "Çankırı kaya tuzu ve gıda işletmeleri için ürün etiketi, karton kutu ve katalog baskıları. Çerkeş ve Ilgaz siparişlerinde ambalaj ölçüsüyle baskı teklifi alın.",
+    "title": "Çankırı Matbaa | Kutu, Magnet, Karton Çanta | Mavi Basım",
+    "desc": "Çankırı için kutu, magnet, karton çanta ve sipariş fişi baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. Ürün, ebat ve adet bilgisiyle teklif isteyin.",
+    "products": [
+      "Kutu",
+      "Magnet",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "kaya tuzu",
-      "gıda",
-      "Ilgaz"
+      "Kutu",
+      "Magnet",
+      "Karton Çanta",
+      "Sipariş Fişi"
     ]
   },
   "corum-matbaa": {
-    "title": "Çorum Matbaa | Leblebi Kutusu ve Sanayi Kataloğu",
-    "desc": "Çorum leblebi ve kuruyemiş markaları için kutu ve etiket; makine işletmeleri için ürün kataloğu baskısı. Ambalaj ve katalog seçeneklerini inceleyip teklif alın.",
+    "title": "Çorum Matbaa | Kutu, Sipariş Fişi, El İlanı | Mavi Basım",
+    "desc": "Çorum için kutu, sipariş fişi, el ilanı ve makbuz baskılarını inceleyin. Kurumsal ihtiyaçlarınız için siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Kutu",
+      "Sipariş Fişi",
+      "El İlanı"
+    ],
     "evidence": [
-      "leblebi",
-      "makine",
-      "katalog"
+      "Kutu",
+      "Sipariş Fişi",
+      "El İlanı",
+      "Makbuz"
     ]
   },
   "denizli-matbaa": {
-    "title": "Denizli Matbaa | Ev Tekstili Kataloğu ve Ürün Etiketi",
-    "desc": "Denizli ev tekstili ve kablo işletmelerine katalog ve ürün etiketi; Pamukkale turizmine tanıtım broşürü. Kâğıt, baskı ve sipariş adediyle fiyat teklifi isteyin.",
+    "title": "Denizli Matbaa | Kutu, Magnet, Sipariş Fişi | Mavi Basım",
+    "desc": "Denizli için kutu, magnet, sipariş fişi ve makbuz baskılarını inceleyin. Kurumsal ihtiyaçlarınız için siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Kutu",
+      "Magnet",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "ev tekstili",
-      "kablo",
-      "Pamukkale"
+      "Kutu",
+      "Magnet",
+      "Sipariş Fişi",
+      "Makbuz"
     ]
   },
   "diyarbakir-matbaa": {
-    "title": "Diyarbakır Matbaa | Sağlık ve Ticaret için Kurumsal Baskı",
-    "desc": "Diyarbakır’da sağlık, inşaat, ticaret işletmeleri için kartvizit, katalog ve broşür baskıları. Kayapınar, Bağlar ve Yenişehir siparişlerine adetle teklif alın.",
+    "title": "Diyarbakır Matbaa | Magnet, Makbuz, Sipariş Fişi",
+    "desc": "Diyarbakır işletmeleri için magnet, makbuz, sipariş fişi ve kartvizit seçenekleri. Matbaa siparişiniz için sipariş adedinizi ve ölçüyü paylaşarak teklif alın.",
+    "products": [
+      "Magnet",
+      "Makbuz",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "sağlık",
-      "inşaat",
-      "Kayapınar"
+      "Magnet",
+      "Makbuz",
+      "Sipariş Fişi",
+      "Kartvizit"
     ]
   },
   "edirne-matbaa": {
-    "title": "Edirne Matbaa | Gıda Etiketi ve Turizm Tanıtım Baskısı",
-    "desc": "Edirne’de gıda, sınır ticareti ve turizm için etiket, karton kutu ve tanıtım broşürü seçenekleri. Keşan ve Uzunköprü siparişlerine ürün bilgisiyle teklif alın.",
+    "title": "Edirne Matbaa | Kartvizit, Magnet, Makbuz | Mavi Basım",
+    "desc": "Edirne için kartvizit, magnet, makbuz ve katalog baskıları ve kurumsal ürünler. Sipariş seçeneklerini inceleyin. Ürün, ebat ve adet bilgisiyle teklif isteyin.",
+    "products": [
+      "Kartvizit",
+      "Magnet",
+      "Makbuz"
+    ],
     "evidence": [
-      "sınır",
-      "turizm",
-      "Uzunköprü"
+      "Kartvizit",
+      "Magnet",
+      "Makbuz",
+      "Katalog"
     ]
   },
   "elazig-matbaa": {
-    "title": "Elazığ Matbaa | Gıda Ambalajı ve Ticari Katalog Baskı",
-    "desc": "Elazığ mermer, gıda ve bağcılık işletmeleri için etiket, ambalaj kutusu ve katalog baskıları. Kovancılar, Karakoçan siparişlerine ölçü ve adetle teklif isteyin.",
+    "title": "Elazığ Matbaa | Kartvizit, Etiket, Makbuz | Mavi Basım",
+    "desc": "Elazığ işletmeleri için kartvizit, etiket, makbuz ve katalog baskıları. Ürün seçeneklerini inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Kartvizit",
+      "Etiket",
+      "Makbuz"
+    ],
     "evidence": [
-      "mermer",
-      "bağcılık",
-      "Karakoçan"
+      "Kartvizit",
+      "Etiket",
+      "Makbuz",
+      "Katalog"
     ]
   },
   "erzincan-matbaa": {
-    "title": "Erzincan Matbaa | Peynir Etiketi ve Kurumsal Evrak Baskı",
-    "desc": "Erzincan’da peynir üreticileri, bakırcılık, hizmet işletmeleri için etiket, kartvizit ve koçanlı evrak. Tercan ve Üzümlü siparişlerinde baskı için teklif alın.",
+    "title": "Erzincan Matbaa | Katalog, Etiket, Makbuz | Mavi Basım",
+    "desc": "Erzincan için katalog, etiket, makbuz ve sipariş fişi baskılarını inceleyin. Kurumsal ihtiyaçlarınız için ebat, malzeme ve adet bilgisiyle fiyat teklifi alın.",
+    "products": [
+      "Katalog",
+      "Etiket",
+      "Makbuz"
+    ],
     "evidence": [
-      "peynir",
-      "bakırcılık",
-      "Üzümlü"
+      "Katalog",
+      "Etiket",
+      "Makbuz",
+      "Sipariş Fişi"
     ]
   },
   "erzurum-matbaa": {
-    "title": "Erzurum Matbaa | Kış Turizmi ve Restoran Broşürleri",
-    "desc": "Erzurum kış turizmi, restoran ve eğitim işletmelerine tanıtım broşürü, kartvizit ve katalog baskıları. Palandöken ve Yakutiye için ebat ve adetle teklif alın.",
+    "title": "Erzurum Matbaa | Katalog, Etiket, Sipariş Fişi | Mavi Basım",
+    "desc": "Erzurum işletmeleri için katalog, etiket, sipariş fişi ve broşür baskıları. Ürün seçeneklerini inceleyin. Kâğıt, ebat ve adet seçenekleri için teklif isteyin.",
+    "products": [
+      "Katalog",
+      "Etiket",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "kış turizmi",
-      "restoran",
-      "Yakutiye"
+      "Katalog",
+      "Etiket",
+      "Sipariş Fişi",
+      "Broşür"
     ]
   },
   "eskisehir-matbaa": {
-    "title": "Eskişehir Matbaa | Sanayi Kataloğu ve Tanıtım Broşürü",
-    "desc": "Eskişehir havacılık, raylı sistem ve hizmet işletmeleri için katalog, broşür ve kurumsal baskılar. Tepebaşı ve Odunpazarı siparişlerinde adetle teklif alın.",
+    "title": "Eskişehir Matbaa | Broşür, Katalog, Sipariş Fişi",
+    "desc": "Eskişehir için broşür, katalog, sipariş fişi ve magnet siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. Ürün, ebat ve adet bilgisiyle teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Katalog",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "havacılık",
-      "raylı",
-      "Odunpazarı"
+      "Broşür",
+      "Katalog",
+      "Sipariş Fişi",
+      "Magnet"
     ]
   },
   "gaziantep-matbaa": {
-    "title": "Gaziantep Matbaa | Baklava Kutusu ve Ürün Kataloğu",
-    "desc": "Gaziantep gıda ve halı işletmeleri için karton kutu, etiket ve katalog baskı seçenekleri. Şahinbey, Şehitkamil ve Nizip siparişlerine ölçüyle teklif isteyin.",
+    "title": "Gaziantep Matbaa | Broşür, Magnet, Sipariş Fişi | Mavi Basım",
+    "desc": "Gaziantep ve ilçelerine broşür, magnet, sipariş fişi ve karton çanta baskı hizmeti. Kurumsal ürünleri inceleyin. Ürün, ebat ve adet bilgisiyle teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Magnet",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "baklava",
-      "halı",
-      "Şahinbey"
+      "Broşür",
+      "Magnet",
+      "Sipariş Fişi",
+      "Karton Çanta"
     ]
   },
   "giresun-matbaa": {
-    "title": "Giresun Matbaa | Fındık Ambalajı ve Gıda Etiketi",
-    "desc": "Giresun fındık ve gıda işletmelerine etiket, ambalaj kutusu ve tanıtım kataloğu baskıları. Bulancak, Espiye ve Görele için ürün ölçüsü ve adediyle teklif alın.",
+    "title": "Giresun Matbaa | Broşür, Magnet, Karton Çanta | Mavi Basım",
+    "desc": "Giresun için broşür, magnet, karton çanta ve kartvizit siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. Ürün, ebat ve adet bilgisiyle teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Magnet",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "fındık",
-      "gıda",
-      "Espiye"
+      "Broşür",
+      "Magnet",
+      "Karton Çanta",
+      "Kartvizit"
     ]
   },
   "gumushane-matbaa": {
-    "title": "Gümüşhane Matbaa | Pestil ve Köme için Etiket, Kutu",
-    "desc": "Gümüşhane pestil ve köme ürünlerine etiket ve karton kutu, yerel işletmelere kartvizit baskısı. Kelkit ve Şiran siparişlerinde ambalaj ölçüsüyle teklif alın.",
+    "title": "Gümüşhane Matbaa | Kartvizit, Magnet, Karton Çanta",
+    "desc": "Gümüşhane işletmeleri için kartvizit, magnet, karton çanta ve kutu seçenekleri. Matbaa siparişiniz için baskı adedi ve ebat bilgilerini paylaşın, teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Magnet",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "pestil",
-      "köme",
-      "Kelkit"
+      "Kartvizit",
+      "Magnet",
+      "Karton Çanta",
+      "Kutu"
     ]
   },
   "hakkari-matbaa": {
-    "title": "Hakkari Matbaa | Sınır Ticareti için Kurumsal Baskılar",
-    "desc": "Hakkari’de sınır ticareti, madencilik ve işletmeler için kartvizit, katalog ve makbuz baskısı. Yüksekova ve Şemdinli siparişlerine ebat ve adetle teklif alın.",
+    "title": "Hakkari Matbaa | Kartvizit, Kutu, Karton Çanta | Mavi Basım",
+    "desc": "Hakkari işletmeleri için kartvizit, kutu, karton çanta ve makbuz baskıları. Ürün seçeneklerini inceleyin. Kâğıt, ebat ve adet seçenekleri için teklif isteyin.",
+    "products": [
+      "Kartvizit",
+      "Kutu",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "sınır ticareti",
-      "madencilik",
-      "Yüksekova"
+      "Kartvizit",
+      "Kutu",
+      "Karton Çanta",
+      "Makbuz"
     ]
   },
   "hatay-matbaa": {
-    "title": "Hatay Matbaa | Restoran Ambalajı ve Ticari Katalog",
-    "desc": "Hatay restoran, lojistik ve sanayi işletmelerine ambalaj kutusu, etiket ve ürün kataloğu baskıları. Antakya ve İskenderun için baskı bilgisiyle teklif isteyin.",
+    "title": "Hatay Matbaa | Kartvizit, Kutu, Makbuz | Mavi Basım",
+    "desc": "Hatay için kartvizit, kutu, makbuz ve katalog siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. Baskı adedi ve ebat bilgilerini paylaşın, teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Kutu",
+      "Makbuz"
+    ],
     "evidence": [
-      "restoran",
-      "lojistik",
-      "İskenderun"
+      "Kartvizit",
+      "Kutu",
+      "Makbuz",
+      "Katalog"
     ]
   },
   "isparta-matbaa": {
-    "title": "Isparta Matbaa | Kozmetik Kutusu ve Gıda Etiketi",
-    "desc": "Isparta’da gül ve kozmetik ürünleri için etiket ve kutu; elmacılık işletmelerine ambalaj baskısı. Eğirdir ve Yalvaç siparişlerinde ürün ölçüsüyle teklif alın.",
+    "title": "Isparta Matbaa | Katalog, Kutu, Makbuz | Mavi Basım",
+    "desc": "Isparta için katalog, kutu, makbuz ve etiket baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Katalog",
+      "Kutu",
+      "Makbuz"
+    ],
     "evidence": [
-      "gül",
-      "kozmetik",
-      "Eğirdir"
+      "Katalog",
+      "Kutu",
+      "Makbuz",
+      "Etiket"
     ]
   },
   "mersin-matbaa": {
-    "title": "Mersin Matbaa | Gıda Ambalajı ve Lojistik Baskıları",
-    "desc": "Mersin gıda ve paketleme işletmelerine kutu ve etiket; restoranlara Amerikan servis ve magnet baskıları. Lojistik ve tanıtım işleriniz için fiyat teklifi alın.",
+    "title": "Mersin Matbaa | Dosya, Amerikan Servis, Oto Paspas",
+    "desc": "Mersin işletmeleri için dosya, Amerikan servis, oto paspas ve etiket baskıları. Ürün seçeneklerini inceleyin. Baskı özelliklerini ve adedi iletip teklif alın.",
+    "products": [
+      "Dosya",
+      "Amerikan Servis",
+      "Oto Paspas"
+    ],
     "evidence": [
-      "gıda",
-      "lojistik",
-      "Amerikan servis"
+      "Dosya",
+      "Amerikan Servis",
+      "Oto Paspas",
+      "Etiket"
     ]
   },
   "istanbul-matbaa": {
-    "title": "İstanbul Matbaa | Kurumsal Evrak ve E-Ticaret Ambalajı",
-    "desc": "İstanbul şirketleri için kartvizit, katalog, kurumsal evrak; e-ticaret markalarına kutu ve etiket baskısı. Topkapı hizmet noktasından sipariş için teklif alın.",
+    "title": "İstanbul Matbaa | Zarf, Dosya, Amerikan Servis | Mavi Basım",
+    "desc": "İstanbul için zarf, dosya, Amerikan servis ve etiket baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. Baskı özelliklerini ve adedi iletip teklif alın.",
+    "products": [
+      "Zarf",
+      "Dosya",
+      "Amerikan Servis"
+    ],
     "evidence": [
-      "şirket",
-      "E-Ticaret",
-      "evrak"
+      "Zarf",
+      "Dosya",
+      "Amerikan Servis",
+      "Etiket"
     ]
   },
   "izmir-matbaa": {
-    "title": "İzmir Matbaa | Ürün Etiketi, Karton Çanta ve Katalog",
-    "desc": "İzmir gıda ve perakende işletmelerine etiket, karton çanta ve kutu; sanayi firmalarına katalog baskısı. Malzeme, ebat ve sipariş adedini belirleyip teklif alın.",
+    "title": "İzmir Matbaa | Etiket, Dosya, Oto Paspas | Mavi Basım",
+    "desc": "İzmir ve ilçelerine etiket, dosya, oto paspas ve Amerikan servis baskı hizmeti. Kurumsal ürünleri inceleyin. Ölçü, malzeme ve sipariş adediyle teklif isteyin.",
+    "products": [
+      "Etiket",
+      "Dosya",
+      "Oto Paspas"
+    ],
     "evidence": [
-      "perakende",
-      "sanayi",
-      "karton çanta"
+      "Etiket",
+      "Dosya",
+      "Oto Paspas",
+      "Amerikan Servis"
     ]
   },
   "kars-matbaa": {
-    "title": "Kars Matbaa | Peynir Ambalajı ve Turizm Broşürleri",
-    "desc": "Kars peynir işletmeleri için etiket ve ürün kutusu; kültür ve kış turizmine tanıtım broşürü baskısı. Sarıkamış ve Kağızman için ürün bilgisiyle teklif isteyin.",
+    "title": "Kars Matbaa | Broşür, Etiket, Sipariş Fişi | Mavi Basım",
+    "desc": "Kars için broşür, etiket, sipariş fişi ve katalog baskılarını inceleyin. Kurumsal ihtiyaçlarınız için siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Etiket",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "peynir",
-      "kış",
-      "Sarıkamış"
+      "Broşür",
+      "Etiket",
+      "Sipariş Fişi",
+      "Katalog"
     ]
   },
   "kastamonu-matbaa": {
-    "title": "Kastamonu Matbaa | Sarımsak ve Pirinç Ambalaj Baskıları",
-    "desc": "Kastamonu için Taşköprü sarımsağı ve Tosya pirincine yönelik etiket ve kutu seçenekleri. Ahşap işletmelerine katalog baskısını inceleyin, ölçüyle teklif alın.",
+    "title": "Kastamonu Matbaa | Broşür, Karton Çanta, Sipariş Fişi",
+    "desc": "Kastamonu işletmeleri için broşür, karton çanta, sipariş fişi ve katalog seçenekleri. Matbaa siparişiniz için baskı özelliklerini ve adedi iletip teklif alın.",
+    "products": [
+      "Broşür",
+      "Karton Çanta",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "Taşköprü",
-      "sarımsak",
-      "pirinç"
+      "Broşür",
+      "Karton Çanta",
+      "Sipariş Fişi",
+      "Katalog"
     ]
   },
   "kayseri-matbaa": {
-    "title": "Kayseri Matbaa | Mobilya Kataloğu ve Gıda Ambalajı",
-    "desc": "Kayseri mobilya ve çelik kapı işletmeleri için katalog, gıda markalarına kutu ve etiket baskısı. Melikgazi ve Kocasinan için malzeme ve adetle teklif isteyin.",
+    "title": "Kayseri Matbaa | Katalog, Karton Çanta, Sipariş Fişi",
+    "desc": "Kayseri matbaa siparişlerinizde katalog, karton çanta, sipariş fişi ve magnet baskılarını inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Katalog",
+      "Karton Çanta",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "mobilya",
-      "çelik kapı",
-      "Kocasinan"
+      "Katalog",
+      "Karton Çanta",
+      "Sipariş Fişi",
+      "Magnet"
     ]
   },
   "kirklareli-matbaa": {
-    "title": "Kırklareli Matbaa | Süt Ürünü Etiketi ve Tekstil Baskıları",
-    "desc": "Kırklareli mandıra ve süt ürünlerine etiket ve ambalaj; tekstil işletmelerine katalog seçenekleri. Lüleburgaz ve Babaeski için baskı bilgileriyle teklif alın.",
+    "title": "Kırklareli Matbaa | Katalog, Karton Çanta, Makbuz",
+    "desc": "Kırklareli işletmeleri için katalog, karton çanta, makbuz ve magnet baskıları. Ürün seçeneklerini inceleyin. Ölçü, malzeme ve sipariş adediyle teklif isteyin.",
+    "products": [
+      "Katalog",
+      "Karton Çanta",
+      "Makbuz"
+    ],
     "evidence": [
-      "mandıra",
-      "tekstil",
-      "Babaeski"
+      "Katalog",
+      "Karton Çanta",
+      "Makbuz",
+      "Magnet"
     ]
   },
   "kirsehir-matbaa": {
-    "title": "Kırşehir Matbaa | Ceviz Ambalajı ve Kurumsal Baskılar",
-    "desc": "Kırşehir’de Kaman cevizi paketleme ve ticaret işletmelerine etiket, kutu ve kartvizit baskıları. Kaman ve Mucur siparişlerinde ebat ve adetle teklif isteyin.",
+    "title": "Kırşehir Matbaa | Katalog, Magnet, Makbuz | Mavi Basım",
+    "desc": "Kırşehir işletmeleri için katalog, magnet, makbuz ve kartvizit baskıları. Ürün seçeneklerini inceleyin. Baskı adedi ve ebat bilgilerini paylaşın, teklif alın.",
+    "products": [
+      "Katalog",
+      "Magnet",
+      "Makbuz"
+    ],
     "evidence": [
-      "Kaman",
-      "cevizi",
-      "Mucur"
+      "Katalog",
+      "Magnet",
+      "Makbuz",
+      "Kartvizit"
     ]
   },
   "kocaeli-matbaa": {
-    "title": "Kocaeli Matbaa | Sanayi Kataloğu, Etiket ve Ticari Evrak",
-    "desc": "Kocaeli sanayi ve ticaret firmaları için ürün kataloğu, etiket ve koçanlı makbuz baskıları. İzmit, Gebze ve Çayırova siparişlerine ürün ve adetle teklif alın.",
+    "title": "Kocaeli Matbaa | Etiket, Magnet, Makbuz | Mavi Basım",
+    "desc": "Kocaeli işletmeleri için etiket, magnet, makbuz ve kartvizit baskıları. Ürün seçeneklerini inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Etiket",
+      "Magnet",
+      "Makbuz"
+    ],
     "evidence": [
-      "sanayi",
-      "Gebze",
-      "Çayırova"
+      "Etiket",
+      "Magnet",
+      "Makbuz",
+      "Kartvizit"
     ]
   },
   "konya-matbaa": {
-    "title": "Konya Matbaa | Tarım Makinesi Kataloğu ve Ürün Etiketi",
-    "desc": "Konya’da tarım makineleri ve otomotiv yedek parça işletmeleri için katalog, etiket ve ambalaj kutusu baskısı. Sayfa, malzeme ve adet seçenekleriyle teklif alın.",
+    "title": "Konya Matbaa | Kartvizit, Etiket, Magnet | Mavi Basım",
+    "desc": "Konya için kartvizit, etiket, magnet ve kutu baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Kartvizit",
+      "Etiket",
+      "Magnet"
+    ],
     "evidence": [
-      "tarım makineleri",
-      "otomotiv",
-      "katalog"
+      "Kartvizit",
+      "Etiket",
+      "Magnet",
+      "Kutu"
     ]
   },
   "kutahya-matbaa": {
-    "title": "Kütahya Matbaa | Porselen İşletmelerine Katalog ve Kutu",
-    "desc": "Kütahya çini ve porselen işletmeleri için ürün kataloğu, etiket ve karton kutu baskıları. Tavşanlı, Simav ve Gediz siparişlerinde ebat ve adetle teklif isteyin.",
+    "title": "Kütahya Matbaa | Kartvizit, Etiket, Kutu | Mavi Basım",
+    "desc": "Kütahya için kartvizit, etiket, kutu ve broşür siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. İhtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Etiket",
+      "Kutu"
+    ],
     "evidence": [
-      "çini",
-      "porselen",
-      "Gediz"
+      "Kartvizit",
+      "Etiket",
+      "Kutu",
+      "Broşür"
     ]
   },
   "malatya-matbaa": {
-    "title": "Malatya Matbaa | Kayısı Kutusu ve Gıda Etiketi Baskı",
-    "desc": "Malatya kayısı ve gıda markaları için ambalaj kutusu ve ürün etiketi; tekstil işletmelerine katalog baskısı. Battalgazi ve Yeşilyurt için ölçüyle teklif alın.",
+    "title": "Malatya Matbaa | Broşür, Katalog, Magnet | Mavi Basım",
+    "desc": "Malatya için broşür, katalog, magnet ve kutu baskıları ve kurumsal ürünler. Sipariş seçeneklerini inceleyin. Ölçü, malzeme ve sipariş adediyle teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Katalog",
+      "Magnet"
+    ],
     "evidence": [
-      "kayısı",
-      "tekstil",
-      "Yeşilyurt"
+      "Broşür",
+      "Katalog",
+      "Magnet",
+      "Kutu"
     ]
   },
   "manisa-matbaa": {
-    "title": "Manisa Matbaa | Beyaz Eşya Kataloğu ve Zeytin Etiketi",
-    "desc": "Manisa elektronik ve beyaz eşya işletmelerine katalog, Akhisar zeytin markalarına etiket ve kutu baskısı. Yunusemre ve Turgutlu için ürün ve adetle teklif alın.",
+    "title": "Manisa Matbaa | Kartvizit, Katalog, Kutu | Mavi Basım",
+    "desc": "Manisa işletmeleri için kartvizit, katalog, kutu ve sipariş fişi baskıları. Ürün seçeneklerini inceleyin. Kâğıt, ebat ve adet seçenekleri için teklif isteyin.",
+    "products": [
+      "Kartvizit",
+      "Katalog",
+      "Kutu"
+    ],
     "evidence": [
-      "beyaz eşya",
-      "Akhisar",
-      "zeytin"
+      "Kartvizit",
+      "Katalog",
+      "Kutu",
+      "Sipariş Fişi"
     ]
   },
   "kahramanmaras-matbaa": {
-    "title": "Kahramanmaraş Matbaa | Tekstil Kataloğu ve Gıda Ambalajı",
-    "desc": "Kahramanmaraş tekstil ve mutfak eşyası işletmelerine katalog, gıda markalarına etiket ve karton ambalaj. Onikişubat ve Elbistan için adetle baskı teklifi alın.",
+    "title": "Kahramanmaraş Matbaa | Broşür, Katalog, Etiket | Mavi Basım",
+    "desc": "Kahramanmaraş matbaa siparişlerinizde broşür, katalog, etiket ve sipariş fişi baskılarını inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Katalog",
+      "Etiket"
+    ],
     "evidence": [
-      "tekstil",
-      "mutfak",
-      "Elbistan"
+      "Broşür",
+      "Katalog",
+      "Etiket",
+      "Sipariş Fişi"
     ]
   },
   "mardin-matbaa": {
-    "title": "Mardin Matbaa | Sabun Etiketi ve Yöresel Ambalaj Kutusu",
-    "desc": "Mardin’de bıttım sabunu ve yöresel ürünler için etiket ve kutu; konak otel ve restoranlara menü baskısı. Ambalaj ve tanıtım seçeneklerini inceleyip teklif alın.",
+    "title": "Mardin Matbaa | Broşür, Etiket, Amerikan Servis | Mavi Basım",
+    "desc": "Mardin için broşür, etiket, Amerikan servis ve kutu baskılarını inceleyin. Kurumsal ihtiyaçlarınız için baskı adedi ve ebat bilgilerini paylaşın, teklif alın.",
+    "products": [
+      "Broşür",
+      "Etiket",
+      "Amerikan Servis"
+    ],
     "evidence": [
-      "Bıttım",
-      "otel",
-      "menü"
+      "Broşür",
+      "Etiket",
+      "Amerikan Servis",
+      "Kutu"
     ]
   },
   "mugla-matbaa": {
-    "title": "Muğla Matbaa | Otel, Marina ve Araç Kiralama Baskıları",
-    "desc": "Muğla otel ve marinalarına broşür, restoranlara Amerikan servis, araç kiralama firmalarına sözleşme baskısı. Bodrum ve Fethiye siparişleri için teklif isteyin.",
+    "title": "Muğla Matbaa | Sözleşme, Afiş, Bloknot | Mavi Basım",
+    "desc": "Muğla işletmeleri için sözleşme, afiş, bloknot ve oto paspas baskıları. Ürün seçeneklerini inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Sözleşme",
+      "Afiş",
+      "Bloknot"
+    ],
     "evidence": [
-      "marina",
-      "araç kiralama",
-      "Fethiye"
+      "Sözleşme",
+      "Afiş",
+      "Bloknot",
+      "Oto Paspas"
     ]
   },
   "mus-matbaa": {
-    "title": "Muş Matbaa | Tarım ve Ticaret için Etiket, Evrak Baskı",
-    "desc": "Muş tarım, hayvancılık ve ticaret işletmeleri için ürün etiketi, kartvizit ve koçanlı makbuz seçenekleri. Bulanık ve Malazgirt siparişlerine adetle teklif alın.",
+    "title": "Muş Matbaa | Kutu, Karton Çanta, Sipariş Fişi | Mavi Basım",
+    "desc": "Muş işletmeleri için kutu, karton çanta, sipariş fişi ve makbuz baskıları. Ürün seçeneklerini inceleyin. İhtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Kutu",
+      "Karton Çanta",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "hayvancılık",
-      "Bulanık",
-      "Malazgirt"
+      "Kutu",
+      "Karton Çanta",
+      "Sipariş Fişi",
+      "Makbuz"
     ]
   },
   "nevsehir-matbaa": {
-    "title": "Nevşehir Matbaa | Turizm Broşürü ve Hediyelik Ambalajı",
-    "desc": "Nevşehir’de Kapadokya otelleri ve balon acentelerine broşür, çömlekçilik ve gıda işletmelerine kutu baskısı. Ürgüp ve Avanos için ürün bilgisiyle teklif alın.",
+    "title": "Nevşehir Matbaa | Kutu, Makbuz, Sipariş Fişi | Mavi Basım",
+    "desc": "Nevşehir için kutu, makbuz, sipariş fişi ve kartvizit baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. Baskı için ürün ve adet bilgisiyle teklif alın.",
+    "products": [
+      "Kutu",
+      "Makbuz",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "Kapadokya",
-      "balon",
-      "Avanos"
+      "Kutu",
+      "Makbuz",
+      "Sipariş Fişi",
+      "Kartvizit"
     ]
   },
   "nigde-matbaa": {
-    "title": "Niğde Matbaa | Elma ve Patates İşletmelerine Etiket Baskı",
-    "desc": "Niğde’de elma ve patates işletmeleri için ambalaj etiketi, ürün kutusu ve kurumsal katalog seçenekleri. Bor siparişlerinde malzeme, ölçü ve adetle teklif alın.",
+    "title": "Niğde Matbaa | Kartvizit, Makbuz, Sipariş Fişi | Mavi Basım",
+    "desc": "Niğde ve ilçelerine kartvizit, makbuz, sipariş fişi ve magnet baskı hizmeti. Kurumsal ürünleri inceleyin. Kâğıt, ebat ve adet seçenekleri için teklif isteyin.",
+    "products": [
+      "Kartvizit",
+      "Makbuz",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "elma",
-      "patates",
-      "Bor"
+      "Kartvizit",
+      "Makbuz",
+      "Sipariş Fişi",
+      "Magnet"
     ]
   },
   "ordu-matbaa": {
-    "title": "Ordu Matbaa | Fındık Etiketi, Ambalaj ve Tanıtım Baskısı",
-    "desc": "Ordu fındık ve gıda markalarına etiket ve kutu; restoran ve mağazalara broşür, magnet ve karton çanta baskısı. Ünye ve Fatsa için ürün bilgisiyle teklif alın.",
+    "title": "Ordu Matbaa | Dosya, Amerikan Servis, El İlanı | Mavi Basım",
+    "desc": "Ordu için dosya, Amerikan servis, el ilanı ve magnet siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. Baskı için ürün ve adet bilgisiyle teklif alın.",
+    "products": [
+      "Dosya",
+      "Amerikan Servis",
+      "El İlanı"
+    ],
     "evidence": [
-      "fındık",
-      "mağaza",
-      "Fatsa"
+      "Dosya",
+      "Amerikan Servis",
+      "El İlanı",
+      "Magnet"
     ]
   },
   "rize-matbaa": {
-    "title": "Rize Matbaa | Çay Ambalajı ve Turizm Tanıtım Ürünleri",
-    "desc": "Rize çay ve gıda işletmelerine ambalaj kutusu ve etiket; turizm işletmelerine broşür ve karton çanta baskısı. Çayeli ve Ardeşen siparişleri için teklif isteyin.",
+    "title": "Rize Matbaa | Zarf, Dosya, El İlanı | Mavi Basım",
+    "desc": "Rize için zarf, dosya, el ilanı ve Amerikan servis baskıları ve kurumsal ürünler. Sipariş seçeneklerini inceleyin. Ölçü ve adet bilgisiyle fiyat teklifi alın.",
+    "products": [
+      "Zarf",
+      "Dosya",
+      "El İlanı"
+    ],
     "evidence": [
-      "çay",
-      "turizm",
-      "Ardeşen"
+      "Zarf",
+      "Dosya",
+      "El İlanı",
+      "Amerikan Servis"
     ]
   },
   "sakarya-matbaa": {
-    "title": "Sakarya Matbaa | Otomotiv Kataloğu ve Kurumsal Evrak",
-    "desc": "Sakarya otomotiv, vagon ve süs bitkisi işletmeleri için katalog, etiket ve kurumsal evrak baskısı. Adapazarı ve Hendek siparişlerine ebat ve adetle teklif alın.",
+    "title": "Sakarya Matbaa | Magnet, Karton Çanta, Makbuz | Mavi Basım",
+    "desc": "Sakarya için magnet, karton çanta, makbuz ve kartvizit baskılarını inceleyin. Kurumsal ihtiyaçlarınız için sipariş adedinizi ve ölçüyü paylaşarak teklif alın.",
+    "products": [
+      "Magnet",
+      "Karton Çanta",
+      "Makbuz"
+    ],
     "evidence": [
-      "otomotiv",
-      "süs bitkisi",
-      "Hendek"
+      "Magnet",
+      "Karton Çanta",
+      "Makbuz",
+      "Kartvizit"
     ]
   },
   "samsun-matbaa": {
-    "title": "Samsun Matbaa | Gıda Etiketi, Katalog ve Servis Baskıları",
-    "desc": "Samsun gıda ve sanayi işletmelerine etiket, kutu ve katalog; araç servislerine oto paspas ve form baskıları. Bafra ve Tekkeköy için ürün bilgisiyle teklif alın.",
+    "title": "Samsun Matbaa | Magnet, Dosya, Oto Paspas | Mavi Basım",
+    "desc": "Samsun için magnet, dosya, oto paspas ve Amerikan servis baskılarını inceleyin. Kurumsal ihtiyaçlarınız için ölçü, malzeme ve sipariş adediyle teklif isteyin.",
+    "products": [
+      "Magnet",
+      "Dosya",
+      "Oto Paspas"
+    ],
     "evidence": [
-      "sanayi",
-      "oto paspas",
-      "Bafra"
+      "Magnet",
+      "Dosya",
+      "Oto Paspas",
+      "Amerikan Servis"
     ]
   },
   "siirt-matbaa": {
-    "title": "Siirt Matbaa | Fıstık ve Bal Etiketi, Ürün Kutusu Baskı",
-    "desc": "Siirt fıstığı ve Pervari balı için etiket ve ambalaj kutusu; battaniye işletmelerine katalog baskısı. Kurtalan siparişlerinde ürün ve adetle teklif isteyin.",
+    "title": "Siirt Matbaa | Kartvizit, Kutu, Magnet | Mavi Basım",
+    "desc": "Siirt için kartvizit, kutu, magnet ve broşür baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Kartvizit",
+      "Kutu",
+      "Magnet"
+    ],
     "evidence": [
-      "fıstığı",
-      "Pervari",
-      "battaniye"
+      "Kartvizit",
+      "Kutu",
+      "Magnet",
+      "Broşür"
     ]
   },
   "sinop-matbaa": {
-    "title": "Sinop Matbaa | Su Ürünü Etiketi ve Turizm Baskıları",
-    "desc": "Sinop konaklama ve restoran işletmelerine menü ve broşür; su ürünleri firmalarına etiket ve kutu baskısı. Gerze ve Ayancık siparişlerinde ölçüyle teklif alın.",
+    "title": "Sinop Matbaa | Kartvizit, Dosya, El İlanı | Mavi Basım",
+    "desc": "Sinop işletmeleri için kartvizit, dosya, el ilanı ve Amerikan servis baskıları. Ürün seçeneklerini inceleyin. Baskı özelliklerini ve adedi iletip teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Dosya",
+      "El İlanı"
+    ],
     "evidence": [
-      "konaklama",
-      "su ürünleri",
-      "Ayancık"
+      "Kartvizit",
+      "Dosya",
+      "El İlanı",
+      "Amerikan Servis"
     ]
   },
   "sivas-matbaa": {
-    "title": "Sivas Matbaa | Teknik Katalog ve Kurumsal Evrak Baskısı",
-    "desc": "Sivas demiryolu, medikal ve sanayi firmalarına ürün kataloğu, kartvizit ve koçanlı evrak baskıları. Şarkışla ve Suşehri için ebat ve adetle fiyat teklifi alın.",
+    "title": "Sivas Matbaa | Kartvizit, Broşür, Karton Çanta | Mavi Basım",
+    "desc": "Sivas için kartvizit, broşür, karton çanta ve sipariş fişi baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. Ölçü ve adet bilgisiyle fiyat teklifi alın.",
+    "products": [
+      "Kartvizit",
+      "Broşür",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "demiryolu",
-      "medikal",
-      "Şarkışla"
+      "Kartvizit",
+      "Broşür",
+      "Karton Çanta",
+      "Sipariş Fişi"
     ]
   },
   "tekirdag-matbaa": {
-    "title": "Tekirdağ Matbaa | Tekstil Kataloğu ve Gıda Ambalajı",
-    "desc": "Tekirdağ tekstil, un ve yağ işletmelerine katalog, ambalaj kutusu ve etiket baskısı. Çorlu, Çerkezköy ve Kapaklı siparişlerine ürün ölçüsüyle teklif isteyin.",
+    "title": "Tekirdağ Matbaa | Broşür, Katalog, Karton Çanta | Mavi Basım",
+    "desc": "Tekirdağ ve ilçelerine broşür, katalog, karton çanta ve sipariş fişi baskı hizmeti. Kurumsal ürünleri inceleyin. Ürün, ebat ve adet bilgisiyle teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Katalog",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "tekstil",
-      "un",
-      "Çerkezköy"
+      "Broşür",
+      "Katalog",
+      "Karton Çanta",
+      "Sipariş Fişi"
     ]
   },
   "tokat-matbaa": {
-    "title": "Tokat Matbaa | Gıda Etiketi ve Tekstil Tanıtım Baskısı",
-    "desc": "Tokat tekstil ve gıda işletmeleri için katalog, ambalaj etiketi ve karton kutu baskıları. Erbaa, Niksar ve Turhal siparişlerine ölçü ve adetle teklif alın.",
+    "title": "Tokat Matbaa | Broşür, Katalog, Makbuz | Mavi Basım",
+    "desc": "Tokat için broşür, katalog, makbuz ve sipariş fişi baskıları ve kurumsal ürünler. Sipariş seçeneklerini inceleyin. Ölçü ve adet bilgisiyle fiyat teklifi alın.",
+    "products": [
+      "Broşür",
+      "Katalog",
+      "Makbuz"
+    ],
     "evidence": [
-      "tekstil",
-      "Niksar",
-      "Turhal"
+      "Broşür",
+      "Katalog",
+      "Makbuz",
+      "Sipariş Fişi"
     ]
   },
   "trabzon-matbaa": {
-    "title": "Trabzon Matbaa | Konaklama Broşürü ve Gıda Ambalajı",
-    "desc": "Trabzon konaklama ve restoran işletmelerine broşür ve menü; yöresel gıda markalarına etiket ve kutu baskısı. Akçaabat ve Yomra için ürün bilgisiyle teklif alın.",
+    "title": "Trabzon Matbaa | Broşür, Amerikan Servis, El İlanı",
+    "desc": "Trabzon işletmeleri için broşür, Amerikan servis, el ilanı ve dosya seçenekleri. Matbaa siparişiniz için ihtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Broşür",
+      "Amerikan Servis",
+      "El İlanı"
+    ],
     "evidence": [
-      "konaklama",
-      "yöresel",
-      "Yomra"
+      "Broşür",
+      "Amerikan Servis",
+      "El İlanı",
+      "Dosya"
     ]
   },
   "tunceli-matbaa": {
-    "title": "Tunceli Matbaa | Bal ve Bakliyat Etiketi, Turizm Broşürü",
-    "desc": "Tunceli bal ve bakliyat işletmeleri için etiket ve karton kutu; doğa turizmine broşür baskıları. Ovacık ve Pertek siparişlerinde ürün ve adetle teklif isteyin.",
+    "title": "Tunceli Matbaa | Broşür, Kutu, Sipariş Fişi | Mavi Basım",
+    "desc": "Tunceli için broşür, kutu, sipariş fişi ve etiket baskılarını inceleyin. Kurumsal ihtiyaçlarınız için siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Kutu",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "bal",
-      "bakliyat",
-      "Pertek"
+      "Broşür",
+      "Kutu",
+      "Sipariş Fişi",
+      "Etiket"
     ]
   },
   "sanliurfa-matbaa": {
-    "title": "Şanlıurfa Matbaa | İsot Ambalajı ve Turizm Broşürleri",
-    "desc": "Şanlıurfa’da isot ve tarımsal ürünlere etiket ve kutu; turizm işletmelerine tanıtım broşürü baskısı. Haliliye ve Karaköprü için ürün ölçüsüyle teklif isteyin.",
+    "title": "Şanlıurfa Matbaa | Etiket, Kutu, Sipariş Fişi | Mavi Basım",
+    "desc": "Şanlıurfa için etiket, kutu, sipariş fişi ve magnet baskılarını inceleyin. Kurumsal ihtiyaçlarınız için baskı adedi ve ebat bilgilerini paylaşın, teklif alın.",
+    "products": [
+      "Etiket",
+      "Kutu",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "isot",
-      "turizm",
-      "Karaköprü"
+      "Etiket",
+      "Kutu",
+      "Sipariş Fişi",
+      "Magnet"
     ]
   },
   "usak-matbaa": {
-    "title": "Uşak Matbaa | Deri ve Tekstil için Katalog, Etiket Baskı",
-    "desc": "Uşak deri, tekstil ve battaniye işletmelerine ürün kataloğu, etiket ve karton ambalaj seçenekleri. Banaz ve Eşme siparişlerinde baskı ve adetle teklif isteyin.",
+    "title": "Uşak Matbaa | Etiket, Magnet, Sipariş Fişi | Mavi Basım",
+    "desc": "Uşak için etiket, magnet, sipariş fişi ve karton çanta baskılarını inceleyin. Kurumsal ihtiyaçlarınız için sipariş adedinizi ve ölçüyü paylaşarak teklif alın.",
+    "products": [
+      "Etiket",
+      "Magnet",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "deri",
-      "tekstil",
-      "Eşme"
+      "Etiket",
+      "Magnet",
+      "Sipariş Fişi",
+      "Karton Çanta"
     ]
   },
   "van-matbaa": {
-    "title": "Van Matbaa | Otlu Peynir Etiketi ve Kahvaltı Menü Baskısı",
-    "desc": "Van’da otlu peynir ve bal için etiket ve kutu; kahvaltı salonları ve otellere menü ve broşür baskısı. İpekyolu ve Erciş siparişlerinde ürünle teklif isteyin.",
+    "title": "Van Matbaa | Etiket, Magnet, Amerikan Servis | Mavi Basım",
+    "desc": "Van işletmeleri için etiket, magnet, Amerikan servis ve karton çanta baskıları. Ürün seçeneklerini inceleyin. Baskı özelliklerini ve adedi iletip teklif alın.",
+    "products": [
+      "Etiket",
+      "Magnet",
+      "Amerikan Servis"
+    ],
     "evidence": [
-      "otlu peynir",
-      "kahvaltı",
-      "Erciş"
+      "Etiket",
+      "Magnet",
+      "Amerikan Servis",
+      "Karton Çanta"
     ]
   },
   "yozgat-matbaa": {
-    "title": "Yozgat Matbaa | Tarım ve Gıda için Ambalaj Baskıları",
-    "desc": "Yozgat tarım, gıda ve ticaret işletmelerine ürün etiketi, kutu ve kurumsal kartvizit baskıları. Sorgun ve Akdağmadeni için ebat ve adetle fiyat teklifi isteyin.",
+    "title": "Yozgat Matbaa | Etiket, Magnet, Karton Çanta | Mavi Basım",
+    "desc": "Yozgat ve ilçelerine etiket, magnet, karton çanta ve makbuz baskı hizmeti. Kurumsal ürünleri inceleyin. Baskı adedi ve ebat bilgilerini paylaşın, teklif alın.",
+    "products": [
+      "Etiket",
+      "Magnet",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "tarım",
-      "gıda",
-      "Akdağmadeni"
+      "Etiket",
+      "Magnet",
+      "Karton Çanta",
+      "Makbuz"
     ]
   },
   "zonguldak-matbaa": {
-    "title": "Zonguldak Matbaa | Sanayi Kataloğu ve Ürün Etiketleri",
-    "desc": "Zonguldak demir-çelik ve ticaret firmaları için katalog, etiket ve kurumsal baskılar. Ereğli, Çaycuma ve Devrek siparişlerinde ürün ve adetle teklif isteyin.",
+    "title": "Zonguldak Matbaa | Kartvizit, Etiket, Karton Çanta",
+    "desc": "Zonguldak ve ilçelerine kartvizit, etiket, karton çanta ve makbuz baskı hizmeti. Kurumsal ürünleri inceleyin. Baskı özelliklerini ve adedi iletip teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Etiket",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "demir",
-      "Çaycuma",
-      "Devrek"
+      "Kartvizit",
+      "Etiket",
+      "Karton Çanta",
+      "Makbuz"
     ]
   },
   "aksaray-matbaa": {
-    "title": "Aksaray Matbaa | Otomotiv Kataloğu ve Süt Ürünü Etiketi",
-    "desc": "Aksaray otomotiv ve süt ürünleri işletmelerine katalog, kartvizit ve ambalaj etiketi baskıları. Eskil ve Ortaköy siparişlerinde ölçü ve adetle teklif isteyin.",
+    "title": "Aksaray Matbaa | Kartvizit, Karton Çanta, Makbuz",
+    "desc": "Aksaray işletmeleri için kartvizit, karton çanta, makbuz ve katalog seçenekleri. Matbaa siparişiniz için ihtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Karton Çanta",
+      "Makbuz"
+    ],
     "evidence": [
-      "otomotiv",
-      "süt",
-      "Ortaköy"
+      "Kartvizit",
+      "Karton Çanta",
+      "Makbuz",
+      "Katalog"
     ]
   },
   "bayburt-matbaa": {
-    "title": "Bayburt Matbaa | Doğal Taş Kataloğu ve Kurumsal Baskı",
-    "desc": "Bayburt mermer, doğal taş ve kurumsal işletmeler için ürün kataloğu, broşür ve kartvizit. Aydıntepe ve Demirözü siparişlerinde baskı bilgisiyle teklif alın.",
+    "title": "Bayburt Matbaa | Kutu, Karton Çanta, Makbuz | Mavi Basım",
+    "desc": "Bayburt için kutu, karton çanta, makbuz ve katalog baskıları ve kurumsal ürünler. Sipariş seçeneklerini inceleyin. Ölçü ve adet bilgisiyle fiyat teklifi alın.",
+    "products": [
+      "Kutu",
+      "Karton Çanta",
+      "Makbuz"
+    ],
     "evidence": [
-      "mermer",
-      "doğal taş",
-      "Demirözü"
+      "Kutu",
+      "Karton Çanta",
+      "Makbuz",
+      "Katalog"
     ]
   },
   "karaman-matbaa": {
-    "title": "Karaman Matbaa | Bisküvi ve Çikolata Ambalaj Baskıları",
-    "desc": "Karaman’da bisküvi, çikolata ve gıda markaları için etiket ve karton ambalaj kutusu seçenekleri. Ermenek siparişlerinde ürün ölçüsü ve adediyle teklif isteyin.",
+    "title": "Karaman Matbaa | Broşür, Kutu, Makbuz | Mavi Basım",
+    "desc": "Karaman için broşür, kutu, makbuz ve katalog baskıları ve kurumsal ürünler. Sipariş seçeneklerini inceleyin. Ölçü, malzeme ve sipariş adediyle teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Kutu",
+      "Makbuz"
+    ],
     "evidence": [
-      "bisküvi",
-      "çikolata",
-      "Ermenek"
+      "Broşür",
+      "Kutu",
+      "Makbuz",
+      "Katalog"
     ]
   },
   "kirikkale-matbaa": {
-    "title": "Kırıkkale Matbaa | Makine Kataloğu ve Kurumsal Evrak",
-    "desc": "Kırıkkale makine ve çelik işletmelerine ürün kataloğu, kartvizit ve koçanlı evrak baskısı. Yahşihan ve Keskin siparişlerinde kâğıt, ebat ve adetle teklif alın.",
+    "title": "Kırıkkale Matbaa | Katalog, Kutu, Sipariş Fişi | Mavi Basım",
+    "desc": "Kırıkkale işletmeleri için katalog, kutu, sipariş fişi ve kartvizit baskıları. Ürün seçeneklerini inceleyin. Ölçü, malzeme ve sipariş adediyle teklif isteyin.",
+    "products": [
+      "Katalog",
+      "Kutu",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "makine",
-      "çelik",
-      "Yahşihan"
+      "Katalog",
+      "Kutu",
+      "Sipariş Fişi",
+      "Kartvizit"
     ]
   },
   "batman-matbaa": {
-    "title": "Batman Matbaa | Hazır Giyim Kataloğu ve Ticari Evrak",
-    "desc": "Batman hazır giyim, gıda ve yapı işletmelerine katalog, etiket ve koçanlı evrak baskıları. Kozluk ve Sason siparişlerinde ürün, ölçü ve adetle teklif isteyin.",
+    "title": "Batman Matbaa | Kartvizit, Katalog, Sipariş Fişi",
+    "desc": "Batman için kartvizit, katalog, sipariş fişi ve magnet baskılarını inceleyin. Kurumsal ihtiyaçlarınız için sipariş adedinizi ve ölçüyü paylaşarak teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Katalog",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "hazır giyim",
-      "gıda",
-      "Kozluk"
+      "Kartvizit",
+      "Katalog",
+      "Sipariş Fişi",
+      "Magnet"
     ]
   },
   "sirnak-matbaa": {
-    "title": "Şırnak Matbaa | Sınır Ticareti için Katalog ve Makbuz",
-    "desc": "Şırnak’ta sınır ticareti, lojistik ve yerel firmalara katalog, kartvizit ve makbuz baskısı. Cizre ve Silopi siparişlerinde evrak ve adet bilgisiyle teklif alın.",
+    "title": "Şırnak Matbaa | Katalog, Magnet, Sipariş Fişi | Mavi Basım",
+    "desc": "Şırnak işletmeleri için katalog, magnet, sipariş fişi ve makbuz baskıları. Ürün seçeneklerini inceleyin. İhtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Katalog",
+      "Magnet",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "sınır ticareti",
-      "Cizre",
-      "Silopi"
+      "Katalog",
+      "Magnet",
+      "Sipariş Fişi",
+      "Makbuz"
     ]
   },
   "bartin-matbaa": {
-    "title": "Bartın Matbaa | Amasra Turizmi ve Sanayi Tanıtım Baskısı",
-    "desc": "Bartın’da Amasra turizmine broşür ve kartvizit, tekne ve sanayi işletmelerine ürün kataloğu baskısı. Ulus siparişlerinde sayfa ve adet bilgisiyle teklif alın.",
+    "title": "Bartın Matbaa | Katalog, Makbuz, Sipariş Fişi | Mavi Basım",
+    "desc": "Bartın için katalog, makbuz, sipariş fişi ve kartvizit siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. Ürün, ebat ve adet bilgisiyle teklif isteyin.",
+    "products": [
+      "Katalog",
+      "Makbuz",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "Amasra",
-      "tekne",
-      "Ulus"
+      "Katalog",
+      "Makbuz",
+      "Sipariş Fişi",
+      "Kartvizit"
     ]
   },
   "ardahan-matbaa": {
-    "title": "Ardahan Matbaa | Kaşar Etiketi ve Ticari Baskı Ürünleri",
-    "desc": "Ardahan’da Göle kaşarı için ambalaj etiketi ve kutu; yerel esnafa kartvizit ve makbuz baskıları. Posof siparişlerinde ürün ölçüsü ve adetle fiyat teklifi alın.",
+    "title": "Ardahan Matbaa | Broşür, Makbuz, Sipariş Fişi | Mavi Basım",
+    "desc": "Ardahan için broşür, makbuz, sipariş fişi ve kartvizit siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. Ürün, ebat ve adet bilgisiyle teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Makbuz",
+      "Sipariş Fişi"
+    ],
     "evidence": [
-      "Göle",
-      "kaşarı",
-      "Posof"
+      "Broşür",
+      "Makbuz",
+      "Sipariş Fişi",
+      "Kartvizit"
     ]
   },
   "igdir-matbaa": {
-    "title": "Iğdır Matbaa | Kayısı Kutusu ve Tarımsal Ürün Etiketi",
-    "desc": "Iğdır kayısı ve tarım işletmelerine karton kutu ve ürün etiketi; ticari firmalara katalog baskısı. Aralık ve Tuzluca siparişlerine ebat ve adetle teklif alın.",
+    "title": "Iğdır Matbaa | Kartvizit, Broşür, Makbuz | Mavi Basım",
+    "desc": "Iğdır için kartvizit, broşür, makbuz ve etiket siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. İhtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Kartvizit",
+      "Broşür",
+      "Makbuz"
+    ],
     "evidence": [
-      "kayısı",
-      "tarımsal",
-      "Tuzluca"
+      "Kartvizit",
+      "Broşür",
+      "Makbuz",
+      "Etiket"
     ]
   },
   "yalova-matbaa": {
-    "title": "Yalova Matbaa | Çiçekçilik Etiketi ve Turizm Broşürü",
-    "desc": "Yalova çiçekçilik ve seracılık işletmelerine etiket, termal turizme broşür ve katalog baskısı. Altınova ve Çiftlikköy için ürün ölçüsü ve adetle teklif isteyin.",
+    "title": "Yalova Matbaa | Broşür, Etiket, Makbuz | Mavi Basım",
+    "desc": "Yalova için broşür, etiket, makbuz ve kutu baskıları ve kurumsal ürünler. Sipariş seçeneklerini inceleyin. Sipariş adedinizi ve ölçüyü paylaşarak teklif alın.",
+    "products": [
+      "Broşür",
+      "Etiket",
+      "Makbuz"
+    ],
     "evidence": [
-      "çiçekçilik",
-      "termal",
-      "Çiftlikköy"
+      "Broşür",
+      "Etiket",
+      "Makbuz",
+      "Kutu"
     ]
   },
   "karabuk-matbaa": {
-    "title": "Karabük Matbaa | Lokum Kutusu ve Sanayi Kataloğu",
-    "desc": "Karabük için Safranbolu lokum kutuları, turizm broşürleri ve sanayi ürün katalogları. Yenice siparişlerinde kâğıt, ambalaj ölçüsü ve adetle baskı teklifi alın.",
+    "title": "Karabük Matbaa | Broşür, Etiket, Kutu | Mavi Basım",
+    "desc": "Karabük için broşür, etiket, kutu ve magnet siparişlerinizi planlayın. Baskı seçeneklerini inceleyin. Siparişinizin ölçüsünü ve adedini iletip teklif isteyin.",
+    "products": [
+      "Broşür",
+      "Etiket",
+      "Kutu"
+    ],
     "evidence": [
-      "Safranbolu",
-      "lokum",
-      "Yenice"
+      "Broşür",
+      "Etiket",
+      "Kutu",
+      "Magnet"
     ]
   },
   "kilis-matbaa": {
-    "title": "Kilis Matbaa | Zeytinyağı ve Sabun Etiketi Baskısı",
-    "desc": "Kilis’te zeytinyağı ve sabun markaları için ürün etiketi, karton kutu ve tanıtım broşürü. Elbeyli siparişlerinde ambalaj ölçüsü ve adetle fiyat teklifi isteyin.",
+    "title": "Kilis Matbaa | Etiket, Kutu, Magnet | Mavi Basım",
+    "desc": "Kilis için etiket, kutu, magnet ve karton çanta baskı seçenekleri. İşletmenize uygun ürünleri inceleyin. İhtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Etiket",
+      "Kutu",
+      "Magnet"
+    ],
     "evidence": [
-      "zeytinyağı",
-      "sabun",
-      "Elbeyli"
+      "Etiket",
+      "Kutu",
+      "Magnet",
+      "Karton Çanta"
     ]
   },
   "osmaniye-matbaa": {
-    "title": "Osmaniye Matbaa | Tarım, Gıda ve Sanayi Baskıları",
-    "desc": "Osmaniye tarım ve gıda işletmelerine etiket ve kutu; sanayi firmalarına katalog ve form baskısı. Kadirli ve Düziçi için ürün ve sipariş adediyle teklif isteyin.",
+    "title": "Osmaniye Matbaa | Kutu, Dosya, Oto Paspas | Mavi Basım",
+    "desc": "Osmaniye için kutu, dosya, oto paspas ve Amerikan servis baskılarını inceleyin. Kurumsal ihtiyaçlarınız için ölçü, malzeme ve sipariş adediyle teklif isteyin.",
+    "products": [
+      "Kutu",
+      "Dosya",
+      "Oto Paspas"
+    ],
     "evidence": [
-      "tarım",
-      "sanayi",
-      "Kadirli"
+      "Kutu",
+      "Dosya",
+      "Oto Paspas",
+      "Amerikan Servis"
     ]
   },
   "duzce-matbaa": {
-    "title": "Düzce Matbaa | Fındık Etiketi ve Otomotiv Kataloğu",
-    "desc": "Düzce fındık ve otomotiv işletmeleri için etiket ve ürün kataloğu, Akçakoca turizmine broşür baskısı. Gümüşova siparişlerine ebat ve adetle fiyat teklifi alın.",
+    "title": "Düzce Matbaa | Katalog, Kutu, Karton Çanta | Mavi Basım",
+    "desc": "Düzce işletmeleri için katalog, kutu, karton çanta ve kartvizit baskıları. Ürün seçeneklerini inceleyin. İhtiyacınızı ve sipariş adedini ileterek teklif alın.",
+    "products": [
+      "Katalog",
+      "Kutu",
+      "Karton Çanta"
+    ],
     "evidence": [
-      "fındık",
-      "otomotiv",
-      "Akçakoca"
+      "Katalog",
+      "Kutu",
+      "Karton Çanta",
+      "Kartvizit"
     ]
   }
 };

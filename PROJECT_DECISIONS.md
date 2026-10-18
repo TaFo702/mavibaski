@@ -87,6 +87,12 @@ Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün 
 
 ## 5. İptal Edilen veya Değiştirilen Kararlar
 
+* **[2026-10-18] Şehir Sayfalarında Genel İşletme Kapsamı (Kullanıcı Düzeltmesi):**
+  * **Karar:** Her şehirde tüm işletmelerin matbaa ihtiyaçlarına hizmet verilir. Şehir başlık ve meta açıklamaları kayısı, porselen, seramik, arıcılık gibi yerel sektörlerle sınırlandırılmaz.
+  * **Başlık:** Şehir adı + Matbaa + sayfanın görünür içeriğinde gerçekten bulunan birkaç temel ürün. Kullanıcının talebiyle şehirler arasında ürün örnekleri çeşitlendirilir; aynı ürün üçlüsü tekrar edilmez. Ürün seçimi şehre özel hizmet veya talep kanıtı olarak sunulmaz.
+  * **H1 ve Açıklama:** Ana başlık genel matbaa ve baskı hizmetlerini kapsar. Açıklama gerçek ürün örnekleri ve teklif adımını özetler. Başlıkta sayılmayan ürünlerin de sunulduğu hizmet kapsamı korunur; ürünler sadece örnektir.
+  * **Sınır:** Ürünleri veya kelimeleri çeşitlendirmek, ortak ana gövde sorununun çözüldüğü veya Google sıralamasının artacağı anlamına gelmez. Fiyat listeleri ve fiyat tabloları değiştirilmez.
+
 * **[2026-09-13] Güvenilirlik, İçerik Doğruluğu, Görsel Yönetimi ve Schema Kuralları Güncellemesi (Tüm Eski Çelişkili Kararların Yerine Geçer):**
   * **Geçersiz Kılınan Eski İfadeler:** Eski kararlarda yer alan "fabrika", "doğrudan üretici", "imalat tesisi", "81 ile anlaşmalı kargo", "anlaşmalı kurye", "aracısız fabrika fiyatı", "ücretsiz grafik tasarımı", kesin teslimat süreleri/garantileri ve zorunlu `AggregateRating` hükümleri geçersiz kılınmıştır. Tarihsel kaydın korunması adına eski maddeler silinmemiş olup, bu yeni karar bağlayıcıdır.
   * **Görsel Yönetimi:** Görseller kullanıcı tarafından daha sonra manuel olarak yüklenir. Eksik veya bozuk görselde güvenli placeholder kullanılır. Yeni görsel oluşturulmaz, indirilmez, kopyalanmaz veya dönüştürülmez.
