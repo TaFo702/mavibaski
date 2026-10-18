@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getHomeSEO } from '../data/homePageContent';
 import { injectSEOMetadata } from '../utils/seoMetadata';
+import { synchronizeSearchMetadata } from '../utils/searchMetadataDOM';
 
 // React 19 hoists Helmet tags. Prerender tags therefore need explicit ownership:
 // remove the previous route's tags and retain native page tags where present.
@@ -47,14 +48,21 @@ export function RouteSEOHead() {
           });
           if (duplicate) tag.remove();
         });
+        synchronizeSearchMetadata(document.head, seo);
       };
       deduplicateFallbacks();
       observer = new MutationObserver(deduplicateFallbacks);
-      observer.observe(document.head, { childList: true, subtree: true, attributes: true });
+      observer.observe(document.head, { childList: true, subtree: true, attributes: true, characterData: true });
     };
 
     if (path === '/') install(getHomeSEO());
-    else import('../utils/seoGenerator').then(({ getRouteSEO }) => {
+    else import('../utils/seoGenerator').then(({ getRouteSEO, isKnownRoute }) => {
+      if (cancelled) return;
+      // Let the native error/redirect page keep its own noindex metadata.
+      if (!isKnownRoute(path)) {
+        document.head.querySelectorAll('[data-prerender-seo]').forEach(tag => tag.remove());
+        return;
+      }
       const seo = getRouteSEO(path);
       // Preserve existing route-specific share images and dimensions.
       install(seo);

@@ -1,3 +1,5 @@
+import { PAGE_SEARCH_METADATA } from './pageSearchMetadata';
+
 export const HOME_FAQS = [
   {
     question: "Tasarım onayı ne kadar sürer?",
@@ -71,8 +73,7 @@ export const HOME_FAQS = [
 
 
 export function getHomeSEO() {
-  const title = "Matbaa ve Baskı Çözümleri | Mavi Basım";
-  const desc = "Kartvizit, broşür, kutu, etiket, makbuz, ambalaj ve kurumsal baskı ürünleri için Mavi Basım'dan baskı çözümleri ve teklif alın.";
+  const { title, desc } = PAGE_SEARCH_METADATA['/'];
     const orgAndLocalBusinessSchema = {
       "@context": "https://schema.org",
       "@type": ["Organization", "LocalBusiness"],

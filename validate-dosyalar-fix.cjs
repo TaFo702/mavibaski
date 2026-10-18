@@ -134,7 +134,7 @@ async function go(w,path,label) {
   const home=await open('/');
   await go(home.w,'/dosyalar'); checkDosyalar(home.w.document);
   await go(home.w,'/','MAVİ BASIM');
-  assert.equal(home.w.document.title,'Matbaa ve Baskı Çözümleri | Mavi Basım');
+  assert.equal(home.w.document.title,'Online Matbaa ve Baskı Fiyatları | Mavi Basım');
   assert(!schemas(home.w.document).some(n=>['Product','BreadcrumbList'].includes(n['@type'])));
   results.homeDosyalarHome='passed';
   home.dom.window.close();
