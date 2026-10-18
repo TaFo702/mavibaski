@@ -1,4 +1,5 @@
 import React from 'react';
+import { getCitySearchMetadata } from '../utils/citySearchMetadata';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -55,6 +56,7 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
   }
 
   const priorityContent = getPriorityCityContent(city.slug);
+  const searchMetadata = getCitySearchMetadata(city);
 
   const nearbyCities = CITIES_DATA.filter(c => c.region === city.region && c.slug !== city.slug).slice(0, 8);
 
@@ -135,8 +137,8 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
     return (
       <>
         <Helmet>
-          <title>{priorityContent.metaTitle}</title>
-          <meta name="description" content={priorityContent.metaDescription} />
+          <title>{searchMetadata.title}</title>
+          <meta name="description" content={searchMetadata.desc} />
           <link rel="canonical" href={`https://mavibasim.com/${priorityContent.slug}`} />
           <meta property="og:url" content={`https://mavibasim.com/${priorityContent.slug}`} />
           <meta name="robots" content="index, follow" />
@@ -659,8 +661,8 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
   return (
     <>
       <Helmet>
-        <title>{`${city.name} Matbaa | Kartvizit, Broşür, Kutu Baskı Fiyatları`}</title>
-        <meta name="description" content={`İstanbul Topkapı üretim tesisimizden ${city.name} ve tüm ilçelerine kargo ile kartvizit, broşür, etiket, kutu, ambalaj ve kurumsal matbaa baskı hizmeti.`} />
+        <title>{searchMetadata.title}</title>
+        <meta name="description" content={searchMetadata.desc} />
         <link rel="canonical" href={`https://mavibasim.com/${city.slug}`} />
         <meta property="og:url" content={`https://mavibasim.com/${city.slug}`} />
         <script type="application/ld+json">

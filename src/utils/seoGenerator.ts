@@ -1,4 +1,6 @@
 import { getHomeSEO } from "../data/homePageContent";
+import { PAGE_SEARCH_METADATA } from "../data/pageSearchMetadata";
+import { getCitySearchMetadata } from "./citySearchMetadata";
 export { injectSEOMetadata } from "./seoMetadata";
 import { MAKBUZ_DETAILS, PARA_MAKBUZU_DATA, SOZLESME_BASKI_DATA } from "../data/makbuzData";
 import { SEO_PAGES_DATA } from "../data/seoPagesData";
@@ -123,8 +125,8 @@ export function isKnownRoute(pathname: string): boolean {
 // Predefined Static SEO Pages Dictionary
 export const staticPages: Record<string, { title: string; desc: string }> = {
   "/": {
-    title: "Matbaa ve Baskı Çözümleri | Mavi Basım",
-    desc: "Kartvizit, broşür, kutu, etiket, makbuz, ambalaj ve kurumsal baskı ürünleri için Mavi Basım'dan baskı çözümleri ve teklif alın."
+    title: PAGE_SEARCH_METADATA["/"].title,
+    desc: PAGE_SEARCH_METADATA["/"].desc
   },
   "/el-ilani": {
     title: "El İlanı Baskı Fiyatları | A3, A4, A5 ve Dar Ebat",
@@ -151,12 +153,12 @@ export const staticPages: Record<string, { title: string; desc: string }> = {
     desc: "1.000, 2.000 ve 5.000 adet logolu oto paspas baskı fiyatlarını inceleyin. 34x49 cm, 80 gr kraft kağıt ve tek renk baskı seçenekleri."
   },
   "/kitap-ayraci": {
-    title: "Kitap Ayracı Baskı Fiyatları | 350 gr Kuşe - Mavi Basım",
-    desc: "Özel tasarımlı 350 gr kuşe mat selefonlu püsküllü kitap ayracı baskısı. Topkapı koordinasyon noktamızdan kitap ayracı çözümleri ile hemen sipariş verin."
+    title: PAGE_SEARCH_METADATA["/kitap-ayraci"].title,
+    desc: PAGE_SEARCH_METADATA["/kitap-ayraci"].desc
   },
   "/yag-karti": {
-    title: "Yağ Değişim Kartı Baskı Fiyatları | 350 gr Kuşe - Mavi Basım",
-    desc: "Oto servisler için 350 gr kuşe veya 700 gr sıvama yağ kartı baskısı. Üretim ve kargo planı teklif veya sipariş aşamasında netleştirilir."
+    title: PAGE_SEARCH_METADATA["/yag-karti"].title,
+    desc: PAGE_SEARCH_METADATA["/yag-karti"].desc
   },
   "/bloknotlar": {
     title: BLOKNOTLAR_SEO_METADATA.title,
@@ -183,32 +185,32 @@ export const staticPages: Record<string, { title: string; desc: string }> = {
     desc: "Toplantı ve promosyon hediyelik not defteri olarak spiralli, tutkallı, kapaklı veya düz bloknot baskısı. Topkapı hizmet noktamızdan toptan bloknot defterleri."
   },
   "/siparis-fisi-baski-fiyatlari": {
-    title: "Sipariş Fişi Baskı Fiyatları 2026 | Otokopili Sipariş Fişi - Mavi Basım",
-    desc: "Firmalara özel otokopili kendinden karbonlu koçanlı sipariş fişi baskı fiyatları. Numaratörlü ve perforeli sipariş koçanları Topkapı hizmet noktamızdan."
+    title: PAGE_SEARCH_METADATA["/siparis-fisi-baski-fiyatlari"].title,
+    desc: PAGE_SEARCH_METADATA["/siparis-fisi-baski-fiyatlari"].desc
   },
   "/cilt-isleri": {
-    title: "Cilt İşleri ve Mücellit Hizmetleri | Mavi Basım Topkapı",
-    desc: "Tel dikiş, Amerikan cilt, iplik dikiş, sert kapak ve spiralleme gibi tüm mücellit ve ciltleme işlemleri Topkapı matbaa hizmet ve koordinasyon noktamız üzerinden yapılmaktadır."
+    title: PAGE_SEARCH_METADATA["/cilt-isleri"].title,
+    desc: PAGE_SEARCH_METADATA["/cilt-isleri"].desc
   },
   "/makine-parkuru": {
-    title: "Makine Parkurumuz | Ofset, Dijital & Mücellit Çözümlerimiz - Mavi Basım",
-    desc: "Mavi Basım Topkapı makine parkurundaki Heidelberg ofset baskı makineleri, dijital baskı sistemleri, giyotin ve kesim otomasyonları hakkında detaylar."
+    title: PAGE_SEARCH_METADATA["/makine-parkuru"].title,
+    desc: PAGE_SEARCH_METADATA["/makine-parkuru"].desc
   },
   "/amerikan-servis": {
     title: "Amerikan Servis Baskı Fiyatları | Kağıt Servis Altlığı",
     desc: "2.000 adet Amerikan servis baskı fiyatlarını inceleyin. 90 gr ve 120 gr 1. hamur ile 100 gr kuşe kağıt servis altlığı seçenekleri."
   },
   "/karton-canta": {
-    title: "Karton Çanta Baskı Fiyatları | İpli Poşet - Mavi Basım",
-    desc: "210 gr Amerikan Bristol ipli karton çanta baskı fiyatlarını inceleyin. 4 ebatta 500 ve 1.000 adet seçenekleri, mat veya parlak selefon ve Mavi Basım’dan teklif alın."
+    title: PAGE_SEARCH_METADATA["/karton-canta"].title,
+    desc: PAGE_SEARCH_METADATA["/karton-canta"].desc
   },
   "/zarf": {
     title: "Zarf Baskı Fiyatları | Diplomat ve Torba Zarf - Mavi Basım",
     desc: "Diplomat ve torba zarf baskı fiyatlarını inceleyin. Pencereli, penceresiz ve logolu zarf seçenekleri için ölçü, adet ve baskı bilgilerinize göre teklif alın."
   },
   "/kataloglar": {
-    title: "Katalog Baskı Fiyatları | Çok Sayfalı Ürün Kataloğu - Mavi Basım",
-    desc: "Ürün vitrininizi tanıtan spiralsiz tel dikişli, iplik dikişli veya Amerikan cilt lüks katalog ve dergi baskısı. Topkapı matbaasından toptan katalog imalatı."
+    title: PAGE_SEARCH_METADATA["/kataloglar"].title,
+    desc: PAGE_SEARCH_METADATA["/kataloglar"].desc
   },
   "/magnet": {
     title: "Magnet Baskı Fiyatları | Buzdolabı ve Özel Kesim Magnet",
@@ -219,24 +221,24 @@ export const staticPages: Record<string, { title: string; desc: string }> = {
     desc: "1.000 adet kartvizit baskı fiyatlarını inceleyin. 250–800 gr, mat veya parlak selefon, kabartma lak, sıvama, özel kesim ve PVC seçenekleri."
   },
   "/makbuz-ve-formlar": {
-    title: "Makbuz ve Form Baskı Fiyatları | Mavi Basım",
-    desc: "Adisyon, sipariş fişi, makbuz ve matbu form fiyatlarını; cilt, nüsha ve baskı seçenekleriyle tek sayfada inceleyin."
+    title: PAGE_SEARCH_METADATA["/makbuz-ve-formlar"].title,
+    desc: PAGE_SEARCH_METADATA["/makbuz-ve-formlar"].desc
   },
   "/para-makbuzu": {
     title: "Numaratörlü Para Makbuzu Baskı Fiyatları | Mavi Basım Matbaa",
     desc: "14×20 cm numaratörlü, otokopili para makbuzu baskı fiyatlarını; 2, 3 ve 4 nüsha seçenekleriyle 5 ciltten itibaren inceleyin."
   },
   "/matbaa": {
-    title: "Biz Kimiz? | Mavi Basım Matbaa & Reklam ve Topkapı Fabrikamız",
-    desc: "Mavi Basım Matbaa & Reklam'ın kurumsal geçmişi, basım vizyonu, Topkapı tesislerimizdeki makine parkurumuz ve üretim felsefemiz hakkında kapsamlı bilgiler."
+    title: PAGE_SEARCH_METADATA["/matbaa"].title,
+    desc: PAGE_SEARCH_METADATA["/matbaa"].desc
   },
   "/referanslar": {
     title: "Referanslarımız | Mavi Basım Matbaa & Reklam",
     desc: "Mavi Basım Matbaa & Reklam olarak bugüne kadar başarıyla tamamladığımız kurumsal referanslarımız, matbaa baskı işlerimiz ve müşteri memnuniyeti mesajları."
   },
   "/sikca-sorulan": {
-    title: "Sıkça Sorulan Sorular | Mavi Basım Matbaa & Reklam",
-    desc: "Sipariş süreçleri, tasarım onay aşaması, minimum üretim adetleri, yangın ve kayıp toleransı, kargo teslimatı ve ödeme yöntemleri hakkında tüm detaylar."
+    title: PAGE_SEARCH_METADATA["/sikca-sorulan"].title,
+    desc: PAGE_SEARCH_METADATA["/sikca-sorulan"].desc
   },
   "/grafik-tasarim": {
     title: "Grafik Tasarım Hizmetleri | Mavi Basım Matbaa & Reklam",
@@ -247,12 +249,12 @@ export const staticPages: Record<string, { title: string; desc: string }> = {
     desc: "İstanbul Topkapı'da faaliyet gösteren Mavi Basım Matbaa & Reklam'ın kuruluş felsefesi, teknolojik kalite standartları ve sürdürülebilir baskı çözümleri."
   },
   "/iletisim": {
-    title: "İletişim | Mavi Basım Matbaa & Reklam Topkapı İstanbul",
-    desc: "Mavi Basım Matbaa & Reklam Topkapı İstanbul adresi, telefon numaralarımız, WhatsApp sipariş hattımız ve e-posta adreslerimizle yol tarifi bilgilendirmeleri."
+    title: PAGE_SEARCH_METADATA["/iletisim"].title,
+    desc: PAGE_SEARCH_METADATA["/iletisim"].desc
   },
   "/blog": {
-    title: "Kurumsal Matbaacılık ve Baskı Çözümleri Bloğu | Mavi Basım",
-    desc: "Doğru kağıt gramajı seçimi, CMYK ve taşma payı rehberliği, otokopili evrak tasarımı ve ofset printing teknolojileri hakkında profesyonel makaleler."
+    title: PAGE_SEARCH_METADATA["/blog"].title,
+    desc: PAGE_SEARCH_METADATA["/blog"].desc
   },
   "/teslimat-sartlari": {
     title: "Teslimat Şartları ve Kargo Gönderim Rehberi | Mavi Basım Matbaa",
@@ -4461,8 +4463,7 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
   const cleanSlug = p.startsWith("/") ? p.substring(1) : p;
   const city = CITIES_DATA.find((c) => c.slug === cleanSlug);
   if (city) {
-    title = `${city.name} Matbaa & Baskı Hizmetleri | Mavi Basım`;
-    desc = `${city.name} ve çevresindeki işletmeler için kartvizit, broşür, magnet, katalog ve kutu baskı hizmetleri. Topkapı fabrikamızdan ${city.name} adresinize hızlı teslimat.`;
+    ({ title, desc } = getCitySearchMetadata(city));
     return { title, desc, canonical };
   }
 
@@ -4477,6 +4478,17 @@ export function getRouteSEO(pathname: string): { title: string; desc: string; ca
     p = p.substring(0, p.length - 1);
   }
   if (!p) p = "/";
+
+  const searchMetadata = PAGE_SEARCH_METADATA[p];
+  if (searchMetadata) {
+    res.title = searchMetadata.title;
+    res.desc = searchMetadata.desc;
+    // The injector derives Open Graph and Twitter text from the same copy.
+    res.extraHead = res.extraHead?.replace(
+      /<meta\b(?=[^>]*\b(?:name|property)\s*=\s*["'](?:og:description|twitter:description)["'])[^>]*\/?>/gi,
+      ''
+    );
+  }
 
   const priorityMeta = PRIORITY_PRODUCT_OG[p];
   if (priorityMeta) {
