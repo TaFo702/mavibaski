@@ -756,7 +756,8 @@ export const MakbuzFormlarPage = () => {
                 <div className="bg-emerald-50/90 border-l-4 border-emerald-600 p-4 rounded-r-2xl text-left text-xs md:text-sm font-semibold text-slate-800 shadow-2xs space-y-1">
                   <div className="flex items-center gap-2 font-black text-emerald-900 uppercase tracking-tight text-xs">
                     <span className="w-2 h-2 rounded-full bg-emerald-600" />
-                    <span>Kısa Cevap</span>                  </div>
+                    {isSiparisFisi ? <h2 className="text-xs">Sipariş Fişi Nedir?</h2> : <span>Kısa Cevap</span>}
+                  </div>
                   <p className="leading-relaxed">
                     {pathId === 'para-makbuzu' ? (
                       <>
@@ -771,6 +772,7 @@ export const MakbuzFormlarPage = () => {
                 </div>
 
                 {/* AI Snippet - Hızlı Soru Cevap Kutuları */}
+                {!isSiparisFisi && (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-left pt-1">
                   <div className="bg-white border border-slate-200 p-3.5 rounded-2xl shadow-2xs">
                     <h3 className="text-xs font-black text-slate-900 uppercase tracking-tight mb-1 flex items-center gap-1.5">
@@ -801,6 +803,7 @@ export const MakbuzFormlarPage = () => {
                     </p>
                   </div>
                 </div>
+                )}
 
                 <div className="pt-2 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 text-center">
                   {[
@@ -1376,7 +1379,7 @@ export const MakbuzFormlarPage = () => {
                           <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full mt-1.5 shrink-0" />
                           <p className="leading-relaxed text-sm">
                             <strong className="text-emerald-600 font-black uppercase text-xs block mb-0.5">1 Asıl + 3 Suret (50x4 Cilt):</strong> 
-                            Cilt başına toplam 200 yapraktan oluşur (50 asıl + 150 suret takımı). Muhasebe, müşteri ve acente kopyasını aynı anda dökerek alt üç nüshaya aktarır.
+                            Cilt başına toplam 200 yapraktan oluşur (50 asıl + 150 suret takımı). {isSiparisFisi ? 'Üst nüshaya yazılan bilgiler alt üç surete aktarılır; muhasebe, müşteri ve acente için aynı kaydın kopyaları hazırlanır.' : 'Muhasebe, müşteri ve acente kopyasını aynı anda dökerek alt üç nüshaya aktarır.'}
                           </p>
                         </div>
                       )}
@@ -1643,7 +1646,7 @@ export const MakbuzFormlarPage = () => {
                   )}
                 </div>
 
-                {pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && (
+                {pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && !isSiparisFisi && (
                   <div>
                     <h2 className="text-xl md:text-2xl font-black text-black mb-3 uppercase tracking-tight flex items-center gap-2">
                       {currentDetails.whatIsTitle}
@@ -1864,7 +1867,7 @@ export const MakbuzFormlarPage = () => {
                   </div>
                 )}
 
-                {pathId !== 'adisyon' && pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'para-makbuzu' && (
+                {pathId !== 'adisyon' && pathId !== 'gider-makbuzu' && pathId !== 'tahsilat-makbuzu' && pathId !== 'para-makbuzu' && !isSiparisFisi && (
                   <div className="border-t border-gray-100 pt-8">
                     <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
                       {currentDetails.usageAreasTitle}
@@ -3212,19 +3215,16 @@ export const MakbuzFormlarPage = () => {
                     Sipariş Fişi Gerçek Üretim Sürecimiz
                   </h2>
                   <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
-                    Siparişleriniz İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden alınır. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır:
+                    PDF prova onayından sonra sipariş fişleri aşağıdaki üretim aşamalarından geçer. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır:
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {[
-                      { step: "01", title: "Logo & Bilgi İletimi", desc: "Logonuzu WhatsApp veya e-posta ile iletin. Vektörel formatlar (PDF, AI, CDR) veya yüksek çözünürlüklü görseller kabul edilir." },
-                      { step: "02", title: "Grafik Mizanpajı", desc: "Grafik ekibimiz firmanıza özel tablo düzenini, iletişim alanlarını ve şartnameleri ekleyerek tasarlar." },
-                      { step: "03", title: "Ücretsiz PDF Prova", desc: "Baskı öncesinde sipariş fişinizin dijital PDF provası WhatsApp üzerinden tarafınıza gönderilir ve yazılı onayınız alınır." },
-                      { step: "04", title: "CTP Kalıp Pozlama", desc: "Onaylanan tasarım CTP sisteminde ofset kalıbına pozlanır." },
-                      { step: "05", title: "Ofset Baskı", desc: "Onaylanan tasarım, seçilen baskı rengi ve nüsha seçenekleriyle otokopili kâğıda basılır." },
-                      { step: "06", title: "Kırmızı Numaratör", desc: "İstediğiniz başlangıç numarasından itibaren seri kırmızı numaratör basılır." },
-                      { step: "07", title: "Perforaj & Ciltleme", desc: "Yaprakların koçandan kolayca kopması için perforaj çekilir ve sağlam üst dikiş cilt yapılır." },
-                      { step: "08", title: "Kalite Kontrol", desc: "Nüsha kopyalama netliği ve numaratör sıralaması titizlikle denetlenir." },
-                      { step: "09", title: "Türkiye Geneli Kargo", desc: "Özenle paketlenen sipariş fişi koçanları Türkiye geneline kargo ile gönderilir." }
+                      { step: "01", title: "CTP Kalıp Pozlama", desc: "Onaylanan tasarım CTP sisteminde ofset kalıbına pozlanır." },
+                      { step: "02", title: "Ofset Baskı", desc: "Onaylanan tasarım, seçilen baskı rengi ve nüsha seçenekleriyle otokopili kâğıda basılır." },
+                      { step: "03", title: "Kırmızı Numaratör", desc: "İstediğiniz başlangıç numarasından itibaren seri kırmızı numaratör basılır." },
+                      { step: "04", title: "Perforaj & Ciltleme", desc: "Yaprakların koçandan kolayca kopması için perforaj çekilir ve sağlam üst dikiş cilt yapılır." },
+                      { step: "05", title: "Kalite Kontrol", desc: "Nüsha kopyalama netliği ve numaratör sıralaması titizlikle denetlenir." },
+                      { step: "06", title: "Türkiye Geneli Kargo", desc: "Özenle paketlenen sipariş fişi koçanları Türkiye geneline kargo ile gönderilir." }
                     ].map((st, stIdx) => (
                       <div key={stIdx} className="bg-slate-50 border border-slate-200 rounded-2xl p-5 relative overflow-hidden group hover:border-emerald-500 hover:bg-white transition-all duration-300">
                         <span className="text-3xl font-black text-slate-200 group-hover:text-emerald-100 transition-colors absolute top-2 right-3 font-mono">{st.step}</span>
@@ -3240,7 +3240,7 @@ export const MakbuzFormlarPage = () => {
                   <h2 className="text-xl md:text-2xl font-black text-black mb-4 uppercase tracking-tight flex items-center gap-2">
                     İlgili Kurumsal Matbu Ürünlerimiz                  </h2>
                   <p className="text-slate-650 text-base leading-relaxed font-medium mb-6">
-                    Sipariş fişi siparişinizin yanında işletmenizin ihtiyaç duyabileceği diğer matbu belgeler:
+                    İşletmenizin diğer kayıt işlemleri için ilgili matbu belgeler:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {[
@@ -3277,12 +3277,9 @@ export const MakbuzFormlarPage = () => {
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {[
-                      { title: "Baskıya Uygun Tasarım Nasıl Hazırlanır?", path: "/blog/baskiya-uygun-tasarim-nasil-hazirlanir", desc: "Sipariş fişi ve matbu evraklarda vektörel logo, CMYK renk modu ve çözünürlük kuralları." },
-                      { title: "Kaliteli Baskı Nasıl Anlaşılır?", path: "/blog/kaliteli-baski-nasil-anlasilir", desc: "Otokopi kâğıt kalitesi, net kopyalama yeteneği ve kaliteli ciltleme kriterleri." },
-                      { title: "Matbaa Fiyatlarını Neler Belirler?", path: "/blog/matbaa-fiyatlarini-neler-belirler", desc: "Sipariş adedi, cilt sayısı, suret adedi ve numaratör maliyet hesaplama detayları." },
-                      { title: "Hızlı Üretim Süreci Nasıl Planlanır?", path: "/blog/hizli-uretim-sureci-nasil-planlanir", desc: "Sipariş koçanlarının grafik onayından kargoya kadar acil üretim aşamaları." },
-                      { title: "Baskılı Ürünlerle Pazarlama", path: "/blog/baskili-urunlerle-pazarlama-markanizi-buyuten-matbaa-urunleri", desc: "Kurumsal sipariş koçanlarının müşteri güveni ve marka imajına katkısı." },
-                      { title: "Broşür Baskıda En Doğru Kâğıt", path: "/blog/brosur-baskida-en-dogru-kagit-nasil-secilir", desc: "Broşür baskısında kuşe kâğıt ve gramaj seçimi." }
+                      { title: "Baskıya Uygun Tasarım Nasıl Hazırlanır?", path: "/blog/baskiya-uygun-tasarim-nasil-hazirlanir", desc: "Baskıya hazır dosyada renk modu, çözünürlük ve taşma payı kontrolü." },
+                      { title: "Kaliteli Baskı Nasıl Anlaşılır?", path: "/blog/kaliteli-baski-nasil-anlasilir", desc: "Renk netliği, kâğıt seçimi ve baskı kalitesi hakkında genel rehber." },
+                      { title: "Matbaa Fiyatlarını Neler Belirler?", path: "/blog/matbaa-fiyatlarini-neler-belirler", desc: "Adet, ölçü, kâğıt ve sonlandırma işlemlerinin maliyete etkisi." }
                     ].map((blog, bIdx) => (
                       <Link 
                         to={blog.path} 
