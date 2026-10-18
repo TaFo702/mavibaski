@@ -128,3 +128,11 @@ export function prerenderParaMakbuzu() {
   );
   return renderToString(<App Router={ParaRouter} MakbuzComponent={MakbuzFormlarPage} />);
 }
+
+// Reuse the sipariş fişi page, including its protected pricing component.
+export function prerenderSiparisFisi() {
+  const SiparisRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/siparis-fisi']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={SiparisRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}
