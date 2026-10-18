@@ -515,9 +515,11 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
     normalizeForSearch(product?.code || '').includes('sozlesme');
   const isParaMakbuzuProduct = normalizeForSearch(category).includes('para makbuzu') ||
     normalizeForSearch(product?.code || '').includes('para makbuzu');
-  const usesQuotedProductionTime = isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct;
-  const productSize = product?.ebat || (isSozlesmeProduct || isParaMakbuzuProduct
-    ? MAKBUZ_FORMLAR_ALL_DATA.find(section => section.id === (isParaMakbuzuProduct ? 'para-makbuzu' : 'sozlesme-baski'))?.ebat
+  const isSiparisFisiProduct = normalizeForSearch(category).includes('siparis fisi') ||
+    normalizeForSearch(product?.code || '').includes('siparis fisi');
+  const usesQuotedProductionTime = isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct;
+  const productSize = product?.ebat || (isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct
+    ? MAKBUZ_FORMLAR_ALL_DATA.find(section => section.id === (isSiparisFisiProduct ? 'siparis-fisi' : isParaMakbuzuProduct ? 'para-makbuzu' : 'sozlesme-baski'))?.ebat
     : undefined);
 
   const isMakbuzVeForm = (() => {
@@ -1073,7 +1075,7 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
         {/* Footer / Action */}
         <div className="p-4 sm:p-8 pt-0 shrink-0 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${productSize || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${productSize || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-sm uppercase tracking-tight flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98]"
@@ -1303,7 +1305,7 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 
 export const CanonicalLink = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/arac-kiralama', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
+  return pathname === '/' || ['/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
 };
 
 const LegacyCanonicalLink = () => {
@@ -5055,8 +5057,8 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
       <Route path="/makbuz-ve-formlar" element={<MakbuzFormlarPage />} />
       <Route path="/makbuz" element={<Navigate to="/makbuz-ve-formlar" replace />} />
       <Route path="/adisyon" element={<MakbuzFormlarPage />} />
-      <Route path="/siparis-fisi" element={<MakbuzFormlarPage />} />
-      <Route path="/siparis-fisi-baski-fiyatlari" element={<MakbuzFormlarPage />} />
+      <Route path="/siparis-fisi" element={<MakbuzComponent />} />
+      <Route path="/siparis-fisi-baski-fiyatlari" element={<Navigate to="/siparis-fisi" replace />} />
       <Route path="/perakende-satis-fisi" element={<MakbuzFormlarPage />} />
       <Route path="/para-makbuzu" element={<MakbuzComponent />} />
       <Route path="/sozlesme" element={<Navigate to="/sozlesme-baski" replace />} />
@@ -5113,7 +5115,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
 
 const SEOMetadataManager = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/arac-kiralama', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
+  return pathname === '/' || ['/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
 };
 
 const LegacySEOMetadataManager = () => {

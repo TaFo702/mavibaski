@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/siparis-fisi-baski-fiyatlari",
+      "destination": "/siparis-fisi",
+      "permanent": true
+    },
+    {
       "source": "/sozlesme",
       "destination": "/sozlesme-baski",
       "permanent": true

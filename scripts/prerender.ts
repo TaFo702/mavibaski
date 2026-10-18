@@ -58,12 +58,13 @@ async function prerender() {
   let aracKiralamaContent: string;
   let sozlesmeContent: string;
   let paraContent: string;
+  let siparisContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
@@ -85,6 +86,16 @@ async function prerender() {
       throw new Error('Tahsilat prerender validation failed: existing pricing, content, gallery, FAQ or H1 missing.');
     }
     paraContent = prerenderParaMakbuzu();
+    siparisContent = prerenderSiparisFisi();
+    if ((siparisContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
+        (siparisContent.match(/<h1\b/g) || []).length !== 1 ||
+        !siparisContent.includes('id="kimler-kullanir"') ||
+        !siparisContent.includes('id="uretim-sureci"') ||
+        !siparisContent.includes('id="sss-bolumu"') ||
+        !siparisContent.includes('Sipariş Fişi Ürün Fotoğraf Galerisi') ||
+        !siparisContent.includes('14 x 20 cm (YARIM BOY)')) {
+      throw new Error('Sipariş fişi prerender validation failed: existing pricing, content, gallery, FAQ or H1 missing.');
+    }
     if ((paraContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
         (paraContent.match(/<h1\b/g) || []).length !== 1 ||
         !paraContent.includes('id="sss-bolumu"') ||
@@ -196,6 +207,7 @@ async function prerender() {
           : pathname === '/gider-makbuzu' ? giderContent
           : pathname === '/tahsilat-makbuzu' ? tahsilatContent
           : pathname === '/para-makbuzu' ? paraContent
+          : pathname === '/siparis-fisi' ? siparisContent
           : pathname === '/sozlesme-baski' ? sozlesmeContent
           : pathname === '/arac-kiralama' ? aracKiralamaContent
           : pathname === '/recete' ? receteContent
@@ -232,6 +244,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="tahsilat-makbuzu">')
         : pathname === '/para-makbuzu'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="para-makbuzu">')
+        : pathname === '/siparis-fisi'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="siparis-fisi">')
         : pathname === '/sozlesme-baski'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="sozlesme-baski">')
         : pathname === '/arac-kiralama'

@@ -252,7 +252,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { title: "Baskı", value: "Tek renk veya ilave renkli" },
       { title: "Numaratör", value: "Ardışık seri numarası dahil" },
       { title: "Tasarım", value: "Firma logosuna ve kullanım alanına özel" },
-      { title: "Üretim süresi", value: "PDF prova onayından sonra 3–5 iş günü" },
+      { title: "Üretim süresi", value: "Ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır." },
       { title: "Minimum sipariş", value: "5 cilt" },
       { title: "Gönderim", value: "Türkiye geneli kargo" }
     ],
@@ -280,9 +280,9 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     howToFillContent: [
       "1. Adet ve nüsha seçeneğinizi belirleyin: Fiyat tablosundan ihtiyacınıza uygun cilt adedini ve nüsha sayısını seçin.",
       "2. Logo ve firma bilgilerinizi gönderin: Firma logonuzu, iletişim bilgilerinizi ve fişte bulunmasını istediğiniz alanları WhatsApp üzerinden iletin. PDF, Word, Excel veya daha önce kullandığınız eski sipariş fişinin fotoğrafını gönderebilirsiniz.",
-      "3. Tasarımınız hazırlansın: Mevcut logonuz ve firma bilgileriniz kullanılarak sipariş fişi mizanpajı hazırlanır. Standart mizanpaj ve en fazla üç revizyon ücretsizdir. Yeni logo tasarımı ve kapsamlı kurumsal kimlik çalışmaları ayrıca fiyatlandırılır.",
+      "3. Tasarımınız hazırlansın: Mevcut logonuz ve firma bilgileriniz kullanılarak sipariş fişi mizanpajı hazırlanır. Grafik desteği var. Tasarım kapsamı ve varsa ücreti teklif aşamasında paylaşılır.",
       "4. PDF provayı kontrol edin: Baskıya girmeden önce hazırlanmış PDF prova size gönderilir. Firma bilgilerini, telefon numaralarını, sipariş alanlarını, numaratörü ve metinleri kontrol ederek onay verirsiniz.",
-      "5. Üretim ve kargo: Yazılı onayınızın ardından üretim başlatılır. Standart üretim süresi 3–5 iş günüdür. Tamamlanan ürünler özenle paketlenerek adresinize gönderilir."
+      "5. Üretim ve kargo: Yazılı onayınızın ardından üretim başlatılır. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır. Tamamlanan ürünler özenle paketlenerek adresinize gönderilir."
     ],
     requiredInfoTitle: "Sipariş Fişi Tasarımında Bulunabilecek Alanlar",
     requiredInfoContent: [
@@ -314,7 +314,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { label: "Fatura yerine geçme", col1: "Hayır", col2: "Evet" }
     ],
     importanceTitle: "Mavi Basım Üretim ve Tasarım Güvencesi",
-    importanceContent: "Sipariş fişleri İstanbul Topkapı’daki üretim tesisimizde hazırlanır. Yıllara dayanan matbaa üretim deneyimi, baskı öncesi PDF prova onayı, ücretsiz standart mizanpaj desteği, numaratör dahil fiyatlandırma, düşük adetli ve toptan üretim seçenekleri, Türkiye’nin 81 iline gönderim ve baskı öncesi dosya kontrolü ile sunulmaktadır. PDF prova onayınız alınmadan üretime başlanmaz.",
+    importanceContent: "Siparişleriniz İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden alınır. Yıllara dayanan matbaa üretim deneyimi, baskı öncesi PDF prova onayı, grafik desteği, numaratör dahil fiyatlandırma, düşük adetli ve toptan üretim seçenekleri, Türkiye’nin 81 iline gönderim ve baskı öncesi dosya kontrolü ile sunulmaktadır. PDF prova onayınız alınmadan üretime başlanmaz.",
     otokopiTitle: "Baskıya Uygun Dosya Nasıl Gönderilir?",
     otokopiContent: "Hazır tasarımınız bulunuyorsa PDF, Adobe Illustrator veya yüksek çözünürlüklü görsel formatında gönderebilirsiniz. Yazıların okunabilir büyüklükte olması, kesim kenarlarına çok yakın bilgi yerleştirilmemesi ve logonun vektörel olması önerilir. Hazır tasarımınız yoksa eski fişinizin fotoğrafını, Word veya Excel örneğini göndermeniz yeterlidir. Baskıya uygun sayfa düzeni tarafımızdan hazırlanır.",
     faqList: [
@@ -328,7 +328,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         q: "Tasarım hizmeti ücretli mi?",
-        a: "Mevcut logonuz ve firma bilgileriniz kullanılarak hazırlanan standart mizanpaj ile en fazla üç revizyon ücretsizdir. Kapsamlı logo çizimi çalışmaları ayrıca fiyatlandırılır."
+        a: "Grafik desteği var. Tasarım kapsamı ve varsa ücreti teklif aşamasında paylaşılır. Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir."
       },
       {
         q: "Kaç nüshalı sipariş fişi bastırabilirim?",
@@ -372,7 +372,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         q: "Üretim süresi ne kadardır ve acil baskı yapılır mı?",
-        a: "PDF prova onayının ardından standart üretim süresi 3–5 iş günüdür. Acil sipariş durumlarında üretim programına göre öncelik sağlanabilmektedir."
+        a: "Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır. Acil taleplerin uygunluğu sipariş öncesinde değerlendirilir."
       },
       {
         q: "Otokopili kâğıtta alt suret renk sıralaması nasıldır?",
@@ -384,7 +384,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         q: "İstanbul dışına gönderim yapılıyor mu?",
-        a: "Evet. Üretimi tamamlanan sipariş fişleri İstanbul Topkapı tesisimizden Türkiye’nin 81 iline anlaşmalı kargo ile sevk edilmektedir."
+        a: "Evet. Siparişler İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden alınır; tamamlanan sipariş fişleri Türkiye geneline kargo ile gönderilir."
       },
       {
         q: "Kargo ücretli mi?",

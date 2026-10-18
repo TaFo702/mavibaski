@@ -72,6 +72,7 @@ export const knownStaticRoutes = new Set([
 ]);
 
 export const URL_REDIRECTS: Record<string, string> = {
+  "/siparis-fisi-baski-fiyatlari": "/siparis-fisi",
   "/sozlesme": "/sozlesme-baski",
   "/bloknot": "/bloknotlar",
   "/antetli-kagit": "/antetli",
@@ -3916,7 +3917,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
     const breadcrumbSchema = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": (p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski')
+      "itemListElement": (p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski' || p === '/siparis-fisi')
         ? [
             {
               "@type": "ListItem",
@@ -4022,6 +4023,9 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       // Dimensions of the existing share image; do not alter the image asset.
       extraHead += '  <meta property="og:image:width" content="980" />\n';
       extraHead += '  <meta property="og:image:height" content="1024" />\n';
+    } else if (p === '/siparis-fisi') {
+      extraHead += '  <meta property="og:image:width" content="1536" />\n';
+      extraHead += '  <meta property="og:image:height" content="1024" />\n';
     } else if (p === '/arac-kiralama') {
       // Existing image dimensions; the asset and protected pricing stay intact.
       extraHead += '  <meta property="og:image:width" content="805" />\n';
@@ -4056,7 +4060,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       extraHead,
       h1Text: detail.h1Title,
       bodyContent,
-      ogImage: (p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski')
+      ogImage: (p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski' || p === '/siparis-fisi')
         ? `https://mavibasim.com${detail.featureImage}`
         : undefined
     };

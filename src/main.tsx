@@ -21,6 +21,7 @@ if ((container.dataset.prerendered === 'home' && path === '/') ||
     (container.dataset.prerendered === 'tahsilat-makbuzu' && path === '/tahsilat-makbuzu') ||
     (container.dataset.prerendered === 'recete' && path === '/recete') ||
     (container.dataset.prerendered === 'para-makbuzu' && path === '/para-makbuzu') ||
+    (container.dataset.prerendered === 'siparis-fisi' && path === '/siparis-fisi') ||
     (container.dataset.prerendered === 'sozlesme-baski' && path === '/sozlesme-baski') ||
     (container.dataset.prerendered === 'arac-kiralama' && path === '/arac-kiralama')) {
   hydrateRoot(container, application);
