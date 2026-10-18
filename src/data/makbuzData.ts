@@ -348,7 +348,11 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         q: "Sipariş fişi ölçüsü değiştirilebilir mi?",
-        a: "Standart ürün ölçümüz 14 × 20 cm’dir (A5 boyuna yakın). İsteğe göre 10 × 14 cm veya A4 (21 × 29.7 cm) özel ebatlarda da üretim yapılmaktadır."
+        a: "Standart ürün ölçümüz 14 × 20 cm’dir (A5 boyuna yakın). İsteğe göre 10 × 14 cm veya A4 (21 × 29.7 cm) özel ebatlarda da üretim yapılmaktadır. ISO A5 ölçüsü 14,8 × 21 cm’dir; fiyat tablosundaki 14 × 20 cm ürünle aynı ölçü değildir."
+      },
+      {
+        q: "Sipariş fişi ile sipariş formu arasındaki fark nedir?",
+        a: "Bu sayfadaki basılı ürün için iki ad da müşteri siparişini kaydeden otokopili formu anlatır. Sipariş fişi genellikle koçan biçimindeki ürünü, sipariş formu ise müşteri, ürün, fiyat ve teslimat alanlarının düzenini ifade eder. Ayrı ürün siparişi vermeden aynı koçanın alanları işletmenizin kullanımına göre hazırlanabilir."
       },
       {
         q: "Sipariş fişi fatura yerine geçer mi?",
