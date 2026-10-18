@@ -17,6 +17,8 @@ assert.deepEqual(Object.keys(CITY_SEARCH_CONTENT).sort(), keys, 'Every current c
 const normalizedDescriptions = new Set<string>();
 const descriptions = new Set<string>();
 const titles = new Set<string>();
+const productSets = new Set<string>();
+let evidenceCount = 0;
 for (const city of CITIES_DATA) {
   const route = `/${city.slug}`, reviewed = CITY_SEARCH_CONTENT[city.slug];
   const seo = getCitySearchMetadata(city), resolved = getRouteSEO(route);
@@ -25,6 +27,12 @@ for (const city of CITIES_DATA) {
   assert.ok(seo.title.length <= 60, route);
   assert.ok(seo.desc.length >= 155 && seo.desc.length <= 160, `${route}: description length`);
   assert.ok(seo.title.includes(city.name) && seo.desc.includes(city.name), route);
+  assert.equal(reviewed.products.length, 3, `${route}: three representative products`);
+  const productSet = [...reviewed.products].sort().join('|');
+  assert.ok(!productSets.has(productSet), `${route}: repeated product combination`);
+  productSets.add(productSet);
+  const baseTitle = `${city.name} Matbaa | ${reviewed.products.join(', ')}`;
+  assert.equal(seo.title, baseTitle.length + ' | Mavi Basım'.length <= 60 ? `${baseTitle} | Mavi Basım` : baseTitle);
   assert.ok(/teklif/.test(seo.desc), `${route}: order/quote action`);
   assert.ok(!/fabrikamız|tesisimiz|şubemiz|en ucuz|garantili|hızlı teslimat|\d+\s*(saat|iş günü)/i.test(seo.desc), route);
   assert.ok(!titles.has(seo.title)); titles.add(seo.title);
@@ -40,7 +48,13 @@ for (const city of CITIES_DATA) {
   const text = normalize(d.body.textContent || '');
   assert.ok(reviewed.evidence.length >= 3, `${route}: missing content evidence`);
   for (const term of reviewed.evidence) assert.ok(text.includes(normalize(term)), `${route}: evidence absent from visible text: ${term}`);
+  evidenceCount += reviewed.evidence.length;
+  for (const product of reviewed.products) {
+    assert.ok(text.includes(normalize(product)), `${route}: title product absent from page: ${product}`);
+    assert.ok(normalize(seo.desc).includes(normalize(product)), `${route}: description must cover title products`);
+  }
   assert.equal(d.querySelectorAll('h1').length, 1, route);
+  assert.equal(d.querySelector('h1')?.textContent?.trim(), `${city.name} Matbaa ve Baskı Hizmetleri`, `${route}: broad business scope`);
   assert.ok(d.querySelector('a[href^="https://wa.me/"]'), `${route}: order link`);
   dom.window.close();
 
@@ -55,5 +69,5 @@ for (const city of CITIES_DATA) {
   built.window.close();
 }
 const sharedCount = CITIES_DATA.filter(city => !getPriorityCityContent(city.slug)).length;
-console.log('PASS: 81 editorial city summaries; 243 visible-content evidence checks, unique copy beyond city names, first HTML and share metadata parity.');
+console.log(`PASS: 81 city summaries; 81 distinct product triples, ${evidenceCount} visible-content evidence checks, broad H1 scope, first HTML and share metadata parity.`);
 console.log(`ASSESSMENT: ${sharedCount} city pages share the default body template; metadata edits do not resolve that content limitation.`);

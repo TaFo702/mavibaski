@@ -200,7 +200,7 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
                 </div>
 
                 <h1 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight mb-2">
-                  {priorityContent.h1}
+                  {city.name} Matbaa ve Baskı Hizmetleri
                 </h1>
                 
                 <p className="text-base md:text-lg font-bold text-primary">
@@ -697,7 +697,7 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
                 </span>
               </div>
               <h1 className="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tight leading-tight">
-                {city.name} Matbaa Baskı Hizmetleri
+                {city.name} Matbaa ve Baskı Hizmetleri
               </h1>
               <p className="text-base md:text-lg font-bold text-primary mt-2">
                 {city.name} ve tüm ilçelerine kartvizit, broşür, katalog, kutu, etiket ve kurumsal baskı çözümleri.
