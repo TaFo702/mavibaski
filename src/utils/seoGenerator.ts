@@ -4468,7 +4468,14 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
   const city = CITIES_DATA.find((c) => c.slug === cleanSlug);
   if (city) {
     ({ title, desc } = getCitySearchMetadata(city));
-    return { title, desc, canonical };
+    const breadcrumb = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://mavibasim.com/' },
+      { '@type': 'ListItem', position: 2, name: `${city.name} Matbaa`, item: canonical }
+    ] };
+    // Service and FAQ are rendered with CityPage so the initial tree and its
+    // hydrated script nodes match; this route owns only the breadcrumb here.
+    const extraHead = `<script type="application/ld+json">${JSON.stringify(breadcrumb)}</script>`;
+    return { title, desc, canonical, extraHead, h1Text: `${city.name} Matbaa ve Baskı Hizmetleri` };
   }
 
   return { title, desc, canonical };

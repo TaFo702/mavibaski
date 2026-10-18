@@ -4,6 +4,7 @@ import { getRouteSEO, injectSEOMetadata, URL_REDIRECTS } from "../src/utils/seoG
 import { build } from "esbuild";
 import { createRequire } from "node:module";
 import { optimizeReceteHTML, optimizeProductHTML } from "./recetePerformance";
+import { CITIES_DATA } from '../src/data/cityData';
 
 async function prerender() {
   console.log("--- Starting Static HTML Metadata Prerendering ---");
@@ -61,10 +62,11 @@ async function prerender() {
   let siparisContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
+  const cityContent: Record<string, string> = {};
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderCity } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
@@ -157,6 +159,13 @@ async function prerender() {
     }
     zarfBlogContent = prerenderZarfBlog();
     antetliBlogContent = prerenderZarfBlog('/blog/antetli-kagit-baskisinda-80gr-1.hamur');
+    for (const city of CITIES_DATA) {
+      const route = `/${city.slug}`;
+      cityContent[route] = prerenderCity(route);
+      if ((cityContent[route].match(/<h1\b/g) || []).length !== 1 || !cityContent[route].includes('id="teklif-bilgileri"')) {
+        throw new Error(`City prerender missing H1 or order content: ${route}`);
+      }
+    }
   } finally { fs.rmSync(rendererPath, { force: true }); }
 
   // Extract all <loc> URLs from sitemap.xml
@@ -213,7 +222,7 @@ async function prerender() {
           : pathname === '/recete' ? receteContent
           : pathname === '/tediye-makbuzu' ? tediyeContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
-          : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent : seo.bodyContent,
+          : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent : cityContent[pathname] || seo.bodyContent,
         seo.ogImage
       );
 
@@ -255,6 +264,7 @@ async function prerender() {
         : pathname === '/kataloglar'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="kataloglar">')
         : html;
+      if (cityContent[pathname]) output = output.replace('<div id="root">', `<div id="root" data-prerendered="${pathname.slice(1)}">`);
       if (pathname === "/recete") output = optimizeReceteHTML(output, distDir);
       if (pathname === "/arac-kiralama") output = optimizeProductHTML(output, distDir, "arac-kiralama");
       fs.writeFileSync(targetPath, output, "utf-8");

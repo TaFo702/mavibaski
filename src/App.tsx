@@ -5024,7 +5024,7 @@ const HomePage = () => {
 
 
 
-export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage, MakbuzComponent = MakbuzFormlarPage }: { ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType; MakbuzComponent?: React.ComponentType } = {}) => {
+export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage, MakbuzComponent = MakbuzFormlarPage, CityComponent = CityPage }: { ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType; MakbuzComponent?: React.ComponentType; CityComponent?: React.ComponentType } = {}) => {
   return (
     <React.Suspense fallback={
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
@@ -5105,7 +5105,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
       })}
 
       {/* Dynamic 81 Cities SEO Landing Pages */}
-      <Route path="/:citySlug" element={<CityPage />} />
+      <Route path="/:citySlug" element={<CityComponent />} />
 
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
@@ -5223,7 +5223,7 @@ pathname === '/kartvizit' ||
   return null;
 };
 
-export default function App({ Router = BrowserRouter, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent, MakbuzComponent }: {
+export default function App({ Router = BrowserRouter, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent, MakbuzComponent, CityComponent }: {
   Router?: React.ComponentType<{ children: React.ReactNode }>;
   ZarfComponent?: React.ComponentType;
   BlogComponent?: React.ComponentType;
@@ -5233,6 +5233,7 @@ export default function App({ Router = BrowserRouter, ZarfComponent, BlogCompone
   KatalogComponent?: React.ComponentType;
   KartvizitComponent?: React.ComponentType;
   MakbuzComponent?: React.ComponentType;
+  CityComponent?: React.ComponentType;
 } = {}) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -5279,7 +5280,7 @@ export default function App({ Router = BrowserRouter, ZarfComponent, BlogCompone
             <Navbar />
             
             <main className="flex-grow">
-              <AppRoutes ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} MakbuzComponent={MakbuzComponent} />
+              <AppRoutes ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} MakbuzComponent={MakbuzComponent} CityComponent={CityComponent} />
             </main>
 
             <Footer />
