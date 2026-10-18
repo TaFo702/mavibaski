@@ -6,7 +6,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { JSDOM } from 'jsdom';
 import { CityPage } from './src/components/CityPage';
 import { TestWrapper } from './src/App';
-import { CITIES_DATA, getPriorityCityContent } from './src/data/cityData';
+import { CITIES_DATA } from './src/data/cityData';
 import { CITY_SEARCH_CONTENT } from './src/data/citySearchContent';
 import { getCitySearchMetadata } from './src/utils/citySearchMetadata';
 import { getRouteSEO } from './src/utils/seoGenerator';
@@ -60,6 +60,8 @@ for (const city of CITIES_DATA) {
 
   const built = new JSDOM(fs.readFileSync(path.join('dist', city.slug, 'index.html'), 'utf8'));
   const bd = built.window.document;
+  assert.equal(bd.querySelectorAll('h1').length, 1, `${route}: first-HTML content`);
+  assert.equal(bd.querySelector('h1')?.textContent?.trim(), `${city.name} Matbaa ve Baskı Hizmetleri`, route);
   assert.equal(bd.querySelectorAll('title').length, 1, route);
   assert.equal(bd.title, seo.title, route);
   for (const selector of ['meta[name="description"]', 'meta[property="og:description"]', 'meta[name="twitter:description"]']) {
@@ -68,6 +70,5 @@ for (const city of CITIES_DATA) {
   }
   built.window.close();
 }
-const sharedCount = CITIES_DATA.filter(city => !getPriorityCityContent(city.slug)).length;
 console.log(`PASS: 81 city summaries; 81 distinct product triples, ${evidenceCount} visible-content evidence checks, broad H1 scope, first HTML and share metadata parity.`);
-console.log(`ASSESSMENT: ${sharedCount} city pages share the default body template; metadata edits do not resolve that content limitation.`);
+console.log('ASSESSMENT: product decisions vary; common service facts remain shared. No city-level search demand or ranking result is inferred.');

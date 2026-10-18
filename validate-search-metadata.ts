@@ -57,7 +57,7 @@ async function settleRoute(d: Document, route: string) {
   throw new Error(`Route metadata did not settle: ${route}: ${d.title}`);
 }
 const errors: string[] = [];
-const nativeRoutes = ['/sozlesme-baski', '/sikca-sorulan', '/kataloglar', '/kitap-ayraci', '/yag-karti', '/karton-canta', '/blog', '/iletisim', '/ankara-matbaa', '/afyonkarahisar-matbaa'];
+const nativeRoutes = ['/sozlesme-baski', '/sikca-sorulan', '/kataloglar', '/kitap-ayraci', '/yag-karti', '/karton-canta', '/blog', '/iletisim', '/ankara-matbaa', '/afyonkarahisar-matbaa', '/kutahya-matbaa', '/istanbul-matbaa', '/bitlis-matbaa', '/mardin-matbaa'];
 for (const route of nativeRoutes) {
   const vc = new VirtualConsole(); vc.on('error', (...args) => errors.push(args.map(String).join(' ')));
   vc.on('jsdomError', error => errors.push(String(error)));
@@ -77,6 +77,13 @@ for (const route of nativeRoutes) {
   assert.ok(settled, `${route} did not settle`);
   await wait(100);
   checkHead(w.document, route);
+  if (CITIES_DATA.some(city => `/${city.slug}` === route)) {
+    assert.equal(w.document.querySelectorAll('[data-city-content]').length, 1, `${route}: city hydration ownership`);
+    assert.equal(w.document.querySelectorAll('[data-order-guide]').length, 3, `${route}: hydrated product decisions`);
+    const schemas = [...w.document.querySelectorAll('script[type="application/ld+json"]')].map(el => JSON.parse(el.textContent || '{}'));
+    assert.equal(schemas.filter(schema => schema['@type'] === 'Service').length, 1, `${route}: hydrated Service schema`);
+    assert.equal(schemas.filter(schema => schema['@type'] === 'FAQPage').length, 1, `${route}: hydrated FAQ schema`);
+  }
   // A lazy page component arriving late must not restore stale/home metadata.
   w.document.querySelector('title')!.firstChild!.textContent = 'Eski genel matbaa başlığı';
   w.document.querySelector<HTMLMetaElement>('meta[name="description"]')!.content = 'Eski genel açıklama';
@@ -104,4 +111,4 @@ assert.match(errorDOM.window.document.title, /404/);
 assert.match(errorDOM.window.document.querySelector<HTMLMetaElement>('meta[name="robots"]')!.content, /noindex/);
 errorDOM.window.close();
 assert.deepEqual(errors, [], 'Client runtime or hydration error');
-console.log('PASS: 10 client routes, late metadata changes, route transitions and 404 noindex retention.');
+console.log(`PASS: ${nativeRoutes.length} client routes, late metadata changes, route transitions and 404 noindex retention.`);

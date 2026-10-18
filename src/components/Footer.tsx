@@ -152,7 +152,7 @@ export const Footer = () => {
           <div className="py-6 border-b border-white/10 text-center space-y-2">
             <span className="text-white text-xs font-black uppercase tracking-widest block">Türkiye Geneli Kargo Gönderimi</span>
             <p className="text-gray-400 text-xs max-w-2xl mx-auto font-medium">
-              Türkiye geneline anlaşmalı kargo ile gönderim yapılmaktadır.
+              Türkiye geneline kargo ile gönderim yapılmaktadır. Gönderim planı siparişin özelliklerine göre paylaşılır.
             </p>
             <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-xs font-bold text-gray-400 pt-1">
               <Link to="/istanbul-matbaa" className="hover:text-[#00E5FF] transition-colors">İstanbul Matbaa</Link>

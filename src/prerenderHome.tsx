@@ -10,6 +10,19 @@ import { KatalogPage } from './components/Katalog';
 import { KartvizitPage } from './components/Kartvizit';
 import { BlogPage } from './components/Blog';
 import { MakbuzFormlarPage } from './components/Makbuz';
+import { CityPage } from './components/CityPage';
+
+export function prerenderCity(pathname: string) {
+  const CityRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={[pathname]}>{children}</MemoryRouter>
+  );
+  // The first-HTML head is owned by getRouteSEO/injectSEOMetadata. React 19
+  // can return native metadata with the body; keep it out of the root tree.
+  return renderToString(<App Router={CityRouter} CityComponent={CityPage} />)
+    .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
+    .replace(/<meta\b[^>]*\/?>/gi, '')
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
+}
 
 export function prerenderHome() {
   const HomeRouter = ({ children }: { children: React.ReactNode }) => (

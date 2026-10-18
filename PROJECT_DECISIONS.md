@@ -87,6 +87,11 @@ Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün 
 
 ## 5. İptal Edilen veya Değiştirilen Kararlar
 
+* **[2026-10-18] Şehir Sayfası Sipariş İçeriği ve İlk HTML:**
+  * **Karar:** Yerel sektör varsayımları ve doğrulanmamış fabrika / sabit süre ifadeleri yerine gerçek ürün seçim bilgileri, ürüne göre teklif alanları, dosya / prova onayı ve gönderim planı sunulur. Gerçek süreç aynıysa ortak anlatılır; sırf farklı görünmek için şehir hakkında bilgi uydurulmaz.
+  * **Uygulama:** Şehir sayfalarının tam React içeriği ilk HTML’de bulunur ve aynı bileşen hydrate edilir. Service ve görünür SSS aynı veri kaynağından gelir. İçerik kontrolü uydurma paragrafla değil, gerçek 81 HTML çıktısıyla yapılır.
+  * **Sınır:** Farklı ürün rehberi bileşimleri yerel arama talebi veya sıralama sonucu kanıtı değildir. Şehir sayfalarının ayrı faydası GSC ve dönüşüm verileriyle ayrıca değerlendirilir. Fiyatlar ve fiyat tabloları korunur.
+
 * **[2026-10-18] Şehir Sayfalarında Genel İşletme Kapsamı (Kullanıcı Düzeltmesi):**
   * **Karar:** Her şehirde tüm işletmelerin matbaa ihtiyaçlarına hizmet verilir. Şehir başlık ve meta açıklamaları kayısı, porselen, seramik, arıcılık gibi yerel sektörlerle sınırlandırılmaz.
   * **Başlık:** Şehir adı + Matbaa + sayfanın görünür içeriğinde gerçekten bulunan birkaç temel ürün. Kullanıcının talebiyle şehirler arasında ürün örnekleri çeşitlendirilir; aynı ürün üçlüsü tekrar edilmez. Ürün seçimi şehre özel hizmet veya talep kanıtı olarak sunulmaz.
