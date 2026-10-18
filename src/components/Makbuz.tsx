@@ -756,7 +756,8 @@ export const MakbuzFormlarPage = () => {
                 <div className="bg-emerald-50/90 border-l-4 border-emerald-600 p-4 rounded-r-2xl text-left text-xs md:text-sm font-semibold text-slate-800 shadow-2xs space-y-1">
                   <div className="flex items-center gap-2 font-black text-emerald-900 uppercase tracking-tight text-xs">
                     <span className="w-2 h-2 rounded-full bg-emerald-600" />
-                    <span>Kısa Cevap</span>                  </div>
+                    {isSiparisFisi ? <h2 className="text-xs">Sipariş Fişi Nedir?</h2> : <span>Kısa Cevap</span>}
+                  </div>
                   <p className="leading-relaxed">
                     {pathId === 'para-makbuzu' ? (
                       <>
