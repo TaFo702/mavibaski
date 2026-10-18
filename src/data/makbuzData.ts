@@ -280,13 +280,11 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { title: "Eş Zamanlı Nüsha", desc: "Müşteri ve işletme nüshalarının aynı anda hazırlanmasını sağlar." },
       { title: "Seri Arşivleme", desc: "Siparişlerin seri numarasına göre arşivlenmesini kolaylaştırır." }
     ],
-    howToFillTitle: "Sipariş Fişi Siparişi Nasıl Verilir?",
+    howToFillTitle: "Sipariş Fişi Sipariş Adımları",
     howToFillContent: [
-      "1. Adet ve nüsha seçeneğinizi belirleyin: Fiyat tablosundan ihtiyacınıza uygun cilt adedini ve nüsha sayısını seçin.",
-      "2. Logo ve firma bilgilerinizi gönderin: Firma logonuzu, iletişim bilgilerinizi ve fişte bulunmasını istediğiniz alanları WhatsApp üzerinden iletin. PDF, Word, Excel veya daha önce kullandığınız eski sipariş fişinin fotoğrafını gönderebilirsiniz.",
-      "3. Tasarımınız hazırlansın: Mevcut logonuz ve firma bilgileriniz kullanılarak sipariş fişi mizanpajı hazırlanır. Grafik desteği var. Tasarım kapsamı ve varsa ücreti teklif aşamasında paylaşılır.",
-      "4. PDF provayı kontrol edin: Baskıya girmeden önce hazırlanmış PDF prova size gönderilir. Firma bilgilerini, telefon numaralarını, sipariş alanlarını, numaratörü ve metinleri kontrol ederek onay verirsiniz.",
-      "5. Üretim ve kargo: Yazılı onayınızın ardından üretim başlatılır. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır. Tamamlanan ürünler özenle paketlenerek adresinize gönderilir."
+      "1. Seçiminizi yapın: Fiyat tablosundan cilt adedini, nüsha sayısını ve baskı rengini belirleyin.",
+      "2. Firma bilgilerinizi ve örneğinizi iletin: Logonuzu, iletişim bilgilerinizi ve fişte istediğiniz alanları WhatsApp üzerinden gönderin. PDF, Word, Excel veya eski fişinizin fotoğrafını paylaşabilirsiniz.",
+      "3. PDF provayı onaylayın: Hazırlanan tasarımda firma bilgilerini, sipariş alanlarını ve numaratörü kontrol edin. Yazılı onayınızdan sonra üretime geçilir."
     ],
     requiredInfoTitle: "Sipariş Fişi Tasarımında Bulunabilecek Alanlar",
     requiredInfoContent: [
@@ -318,7 +316,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       { label: "Fatura yerine geçme", col1: "Hayır", col2: "Evet" }
     ],
     importanceTitle: "Mavi Basım Üretim ve Tasarım Güvencesi",
-    importanceContent: "Siparişleriniz İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden alınır. Yıllara dayanan matbaa üretim deneyimi, baskı öncesi PDF prova onayı, grafik desteği, numaratör dahil fiyatlandırma, düşük adetli ve toptan üretim seçenekleri, Türkiye’nin 81 iline gönderim ve baskı öncesi dosya kontrolü ile sunulmaktadır. PDF prova onayınız alınmadan üretime başlanmaz.",
+    importanceContent: "Siparişleriniz İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden alınır. Yıllara dayanan matbaa deneyimiyle düşük adetli ve toptan üretim seçenekleri sunuyoruz. Numaratör dahil fiyatlandırma, grafik desteği ve baskı öncesi dosya kontrolü sağlanır. Tamamlanan ürünler Türkiye’nin 81 iline gönderilir. PDF prova onayınız alınmadan üretime başlanmaz.",
     otokopiTitle: "Baskıya Uygun Dosya Nasıl Gönderilir?",
     otokopiContent: "Hazır tasarımınız bulunuyorsa PDF, Adobe Illustrator veya yüksek çözünürlüklü görsel formatında gönderebilirsiniz. Yazıların okunabilir büyüklükte olması, kesim kenarlarına çok yakın bilgi yerleştirilmemesi ve logonun vektörel olması önerilir. Hazır tasarımınız yoksa eski fişinizin fotoğrafını, Word veya Excel örneğini göndermeniz yeterlidir. Baskıya uygun sayfa düzeni tarafımızdan hazırlanır.",
     faqList: [
