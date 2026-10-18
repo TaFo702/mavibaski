@@ -24,7 +24,8 @@
     "validate:http": "npx tsx validate-production-http.ts",
     "validate:mutations": "npx tsx validate-controlled-mutations.ts",
     "validate:spinner": "npx tsx validate-no-infinite-spinner.ts",
-    "quality": "npm run typecheck && npm run lint && npm run build && npm run validate:routes && npm run validate:sitemap && npm run validate:metadata && npm run validate:links && npm run validate:content && npm run validate:http && npm run validate:mutations && npm run validate:spinner"
+    "quality": "npm run typecheck && npm run lint && npm run build && npm run validate:routes && npm run validate:sitemap && npm run validate:metadata && npm run validate:city-search && npm run validate:links && npm run validate:content && npm run validate:http && npm run validate:mutations && npm run validate:spinner",
+    "validate:city-search": "esbuild validate-city-search-content.tsx --bundle --platform=node --format=cjs --packages=external --outfile=node_modules/.cache/validate-city-search-content.cjs && node node_modules/.cache/validate-city-search-content.cjs"
   },
   "dependencies": {
     "@google/genai": "^1.46.0",
