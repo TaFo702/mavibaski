@@ -131,7 +131,7 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
         "name": priorityContent.name
       },
       "url": `https://mavibasim.com/${priorityContent.slug}`,
-      "description": priorityContent.metaDescription
+      "description": searchMetadata.desc
     };
 
     return (
@@ -655,7 +655,7 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
       "name": city.name
     },
     "url": `https://mavibasim.com/${city.slug}`,
-    "description": `İstanbul Topkapı üretim tesisimizden ${city.name} ve tüm ilçelerine kargo ile kartvizit, broşür, etiket, kutu, ambalaj ve kurumsal matbaa baskı hizmeti.`
+    "description": searchMetadata.desc
   };
 
   return (
