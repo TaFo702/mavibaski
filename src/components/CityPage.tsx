@@ -63,7 +63,7 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
             <h2 id="price-examples-title" className={headingClass}>Örnek Baskı Fiyatları</h2>
             <p className="text-sm text-slate-600 mb-4">Belirtilen adet ve özellikler için toplam baskı bedellerini inceleyin. Kartı seçerek ürünün tüm fiyatlarına ulaşabilirsiniz.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {priceExamples.map(example => <Link key={example.path} to={example.path} data-price-example={example.item.code} className="group flex flex-col rounded-xl border border-sky-200 bg-sky-50/50 p-5 text-slate-900 transition-colors hover:border-primary hover:bg-sky-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-700">
+              {priceExamples.map(example => <a key={example.path} href={example.path} data-price-example={example.item.code} className="group flex flex-col rounded-xl border border-sky-200 bg-sky-50/50 p-5 text-slate-900 transition-colors hover:border-primary hover:bg-sky-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-700">
                 <h3 className="text-lg font-black mb-2">{example.quantity} {example.name} Baskı</h3>
                 <p className="text-sm text-slate-700 leading-relaxed mb-3">{example.item.ebat ? `${example.item.ebat} · ` : ''}{example.item.desc}</p>
                 <p className="text-xs text-slate-500 mb-3">Ürün kodu: {example.item.code}</p>
@@ -73,7 +73,7 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
                   <p className="text-xs font-semibold text-slate-600 mt-1">%20 KDV dahil değildir.</p>
                   <span className="inline-flex items-center gap-2 min-h-11 text-primary font-bold mt-3">Tüm {example.name} Fiyatlarını İncele<ChevronRight size={16} /></span>
                 </div>
-              </Link>)}
+              </a>)}
             </div>
             <p className="text-xs text-slate-600 mt-4">Fiyatlar yalnızca gösterilen baskı seçenekleri içindir. Kargo bedeli ve gönderim planı sipariş sırasında netleştirilir.</p>
           </section>
