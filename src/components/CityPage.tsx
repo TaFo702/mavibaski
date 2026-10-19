@@ -7,6 +7,7 @@ import { CITY_PRODUCT_GROUPS, PRINT_ORDER_GUIDES, getCityOrderGuides, getCityOrd
 import { getCitySearchMetadata } from '../utils/citySearchMetadata';
 import { PHONE_LINK, WHATSAPP_NUMBER } from '../constants/contact';
 import { WhatsAppIcon } from './WhatsAppIcon';
+import { getCityPriceExamples } from '../data/cityPriceExamples';
 
 const sectionClass = 'bg-white rounded-2xl border border-slate-200 p-6 md:p-8 mb-8 shadow-sm';
 const headingClass = 'text-xl md:text-2xl font-black text-slate-900 mb-4';
@@ -25,10 +26,15 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
   const guides = getCityOrderGuides(city);
   const faq = getCityOrderFAQ(city);
   const priority = getPriorityCityContent(city.slug);
+  const priceExamples = getCityPriceExamples(city.slug);
   const nearby = CITIES_DATA.filter(item => item.region === city.region && item.slug !== city.slug).slice(0, 8);
   const canonical = `https://mavibasim.com/${city.slug}`;
   const quoteText = `Merhaba, ${city.name} için matbaa fiyat teklifi almak istiyorum.\nÜrün:\nÖlçü:\nAdet / cilt adedi:\nMalzeme ve baskı tercihi:\nDosya durumu:\nTeslimat ilçesi ve ihtiyaç tarihi:`;
   const quoteLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(quoteText)}`;
+  const serviceInfo = <>
+    <p className="text-slate-700 leading-relaxed mb-4">Reklam, ambalaj, kurumsal evrak ve makbuz / form ihtiyaçlarında farklı ürünleri birlikte değerlendirebilirsiniz. Bu sayfadaki ürün örnekleri hizmet kapsamını sınırlandırmaz; {city.name} ve ilçelerindeki tüm işletmeler için ihtiyaca göre teklif hazırlanır.</p>
+    <p className="text-sm text-slate-600 mb-5">Sipariş ve dosya iletişimi İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktası üzerinden yürütülür. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.</p>
+  </>;
 
   return <>
     <Helmet>
@@ -47,12 +53,32 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
         <p className="text-xs font-bold text-primary mb-2">{city.region} · Sipariş ve kargo ile gönderim</p>
         <h1 id="city-title" className="text-2xl md:text-4xl font-black text-slate-900 leading-tight mb-4">{city.name} Matbaa ve Baskı Hizmetleri</h1>
         <p className="text-base md:text-lg font-semibold text-primary mb-4">{seo.desc}</p>
-        <p className="text-slate-700 leading-relaxed mb-4">Reklam, ambalaj, kurumsal evrak ve makbuz / form ihtiyaçlarında farklı ürünleri birlikte değerlendirebilirsiniz. Bu sayfadaki ürün örnekleri hizmet kapsamını sınırlandırmaz; {city.name} ve ilçelerindeki tüm işletmeler için ihtiyaca göre teklif hazırlanır.</p>
-        <p className="text-sm text-slate-600 mb-5">Sipariş ve dosya iletişimi İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktası üzerinden yürütülür. Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.</p>
+        {priceExamples.length === 0 ? serviceInfo : null}
         <div className="flex flex-wrap gap-3">
           <a href={quoteLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white font-bold px-5 py-3 rounded-xl"><WhatsAppIcon size={18} />Teklif Bilgilerini WhatsApp ile İlet</a>
           <a href={PHONE_LINK} className="inline-flex items-center gap-2 bg-slate-900 text-white font-bold px-5 py-3 rounded-xl"><PhoneCall size={18} />Müşteri Hizmetleri</a>
         </div>
+        {priceExamples.length > 0 ? <>
+          <section id="ornek-fiyatlar" aria-labelledby="price-examples-title" className="mt-7 pt-6 border-t border-slate-200 scroll-mt-24">
+            <h2 id="price-examples-title" className={headingClass}>Örnek Baskı Fiyatları</h2>
+            <p className="text-sm text-slate-600 mb-4">Belirtilen adet ve özellikler için toplam baskı bedellerini inceleyin. Kartı seçerek ürünün tüm fiyatlarına ulaşabilirsiniz.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {priceExamples.map(example => <Link key={example.path} to={example.path} data-price-example={example.item.code} className="group flex flex-col rounded-xl border border-sky-200 bg-sky-50/50 p-5 text-slate-900 transition-colors hover:border-primary hover:bg-sky-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-700">
+                <h3 className="text-lg font-black mb-2">{example.quantity} {example.name} Baskı</h3>
+                <p className="text-sm text-slate-700 leading-relaxed mb-3">{example.item.ebat ? `${example.item.ebat} · ` : ''}{example.item.desc}</p>
+                <p className="text-xs text-slate-500 mb-3">Ürün kodu: {example.item.code}</p>
+                <div className="mt-auto">
+                  <p className="text-xs font-semibold text-slate-600">Toplam baskı bedeli</p>
+                  <p className="text-3xl font-black text-slate-900 mt-1">{example.item.price}</p>
+                  <p className="text-xs font-semibold text-slate-600 mt-1">%20 KDV dahil değildir.</p>
+                  <span className="inline-flex items-center gap-2 min-h-11 text-primary font-bold mt-3">Tüm {example.name} Fiyatlarını İncele<ChevronRight size={16} /></span>
+                </div>
+              </Link>)}
+            </div>
+            <p className="text-xs text-slate-600 mt-4">Fiyatlar yalnızca gösterilen baskı seçenekleri içindir. Kargo bedeli ve gönderim planı sipariş sırasında netleştirilir.</p>
+          </section>
+          <div className="mt-6">{serviceInfo}</div>
+        </> : null}
         <nav aria-label="Sayfa bölümleri" className="flex flex-wrap gap-x-5 gap-y-2 mt-6 text-sm font-bold text-primary">
           <a href="#urun-secimi">Ürün seçimi</a><a href="#teklif-bilgileri">Teklif bilgileri</a><a href="#tum-urunler">Tüm ürünler</a><a href="#dosya-onay">Dosya ve onay</a><a href="#kargo-plani">Gönderim</a>
         </nav>
