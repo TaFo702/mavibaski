@@ -329,7 +329,7 @@ export const PRIORITY_PRODUCT_OG: Record<string, {
     type: "image/webp",
     width: "800",
     height: "533",
-    alt: "Mavi Basım A5 ve A4 el ilanı baskı fiyatları ve kuşe kağıt modelleri"
+    alt: "Yeşil ve turuncu tasarımlı tanıtım el ilanı örnekleri"
   },
   "/afis": {
     image: "https://mavibasim.com/images/afis/afis-baski-fiyatlari.webp",
@@ -436,10 +436,10 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
 
   // 1. Match from our Static Pages Dictionary
   if (p === '/el-ilani') {
-    const { jsonLdBreadcrumb: breadcrumbSchema, jsonLdProduct: productSchema, jsonLdFAQ: faqSchema } = EL_ILANI_SCHEMAS;
+    const { jsonLdBreadcrumb: breadcrumbSchema, jsonLdService: serviceSchema, jsonLdFAQ: faqSchema } = EL_ILANI_SCHEMAS;
 
     let extraHead = `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n`;
-    extraHead += `  <script type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;
+    extraHead += `  <script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>\n`;
     extraHead += `  <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n`;
 
     const bodyContent = `<h1>El İlanı Baskı Fiyatları ve Ölçüleri</h1>

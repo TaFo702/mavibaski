@@ -162,3 +162,8 @@ Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün 
 - Sayfa içi ve legacy JSON-LD üretimi bu rotada kaldırılır; getRouteSEO/RouteSEOHead ortak şemayı kullanır. Canonical tek sahibinden üretilir, şemalar sabit entity kimlikleri taşır.
 - Fiyat aralığı ve teklif sayısı değiştirilmeyen EL_ILANI_DATA kaynağından salt okunur hesaplanır. Ürün açıklamasındaki eski A6 ifadesi mevcut A3/A4/A5/dar ebat kapsamıyla eşleştirilir.
 - Fiyat bölümü, tablo HTML/kod/stilleri, butonlar, tarifeler, içerik ve tasarım korunur. CI testi kaynak hashlerini ve hydration sırasında mevcut tablo düğümünü denetler.
+
+### 2026-10-19 — El ilanı kalan şema ve galeri hataları
+- Ebat/adet seçeneklerini tek AggregateOffer altında toplayan işaretleme, siparişe özel baskı için Service + OfferCatalog olarak düzeltildi. Her teklifin fiyatı, kodu, ölçüsü ve adedi mevcut EL_ILANI_DATA kaynağından salt okunur üretilir. KDV hariç bilgisi PriceSpecification ile belirtilir; doğrulanmamış stok ve fiyat bitiş tarihi kaldırılır.
+- Mevcut galeri fotoğraflarında bulunmayan ölçü/gramaj diyagramı ve teknik süreç anlatımları, fotoğrafların gerçek diş kliniği, dönerci, güzellik merkezi ve tanıtım tasarımı konularıyla eşleştirildi. Görseller, sayıları ve yerleşimleri değişmedi.
+- Title, meta description, H1, fiyatlar, tablo HTML/kod/stilleri, sipariş düğmeleri ve tarife verileri korunur. Koruma testi tüm sayfa yerine tam fiyat bölümü ve tarife dosyasının sabit hashlerini denetler; diğer içerik düzeltmeleri bu korumayı aşmaz.

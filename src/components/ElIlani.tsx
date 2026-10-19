@@ -34,38 +34,38 @@ import { WhatsAppIcon } from './WhatsAppIcon';
 const GALLERY_ITEMS = [
   {
     id: "fiyat-cesit",
-    title: "El İlanı Baskı Fiyatları ve Çeşitleri",
+    title: "Renkli Tanıtım El İlanı Örnekleri",
     src: "/images/el-ilani/el-ilani-baski-fiyatlari.webp",
-    desc: "105 gr, 115 gr ve 135 gr kuşe kâğıt seçenekleriyle tek ve çift yön baskı çeşitleri.",
-    badge: "Fiyat & Çeşit"
+    desc: "Yeşil ve turuncu zeminli, farklı yazı ve görsel yerleşimleri içeren tanıtım tasarımları.",
+    badge: "Tanıtım Tasarımı"
   },
   {
     id: "olculer",
-    title: "A5 ve Standart El İlanı Ölçüleri",
+    title: "Diş Kliniği El İlanı Örneği",
     src: "/images/el-ilani/a5-el-ilani-baski.webp",
-    desc: "Standart referans ebatları ve satın alınabilir net kesim ölçüleri karşılaştırması.",
-    badge: "Ölçü & Ebat"
+    desc: "Diş kliniği hizmetlerini ve iletişim bilgilerini görsellerle bir araya getiren tasarım örneği.",
+    badge: "Sağlık Tanıtımı"
   },
   {
     id: "kagit-secenekleri",
-    title: "Ekonomik ve Hızlı El İlanı Baskısı",
+    title: "Dönerci Menü El İlanı Örneği",
     src: "/images/el-ilani/ucuz-el-ilani-basimi.webp",
-    desc: "Dağıtım amacına uygun parlak ve mat kuşe kâğıt gramaj alternatifleri.",
-    badge: "Kâğıt & Gramaj"
+    desc: "Döner görseli, menü seçenekleri ve iletişim bilgileri içeren siyah zeminli tanıtım tasarımı.",
+    badge: "Menü Tasarımı"
   },
   {
     id: "sektorel-ornekler",
-    title: "Reklam El İlanı Örneği ve Dağıtım",
+    title: "Sağlık Hizmeti Tanıtım Tasarımı",
     src: "/images/el-ilani/sektorel-el-ilani-dagitim.webp",
-    desc: "Restoran, kafe, perakende ve hizmet sektörlerine yönelik mizanpaj modelleri.",
+    desc: "Diş kliniği el ilanında başlık, hizmet açıklaması ve iletişim alanlarının yerleşimi.",
     badge: "Sektörel Tasarım"
   },
   {
     id: "cmyk-tasma-payi",
-    title: "El İlanı Tasarımı ve Baskı Aşaması",
+    title: "Güzellik Merkezi El İlanı Örneği",
     src: "/images/el-ilani/el-ilani-tasarimi.webp",
-    desc: "300 PPI çözünürlük, CMYK renk modu ve 3 mm giyotin kesim payı standartları.",
-    badge: "Teknik Dosya"
+    desc: "Güzellik merkezi hizmetleri ve kampanyalarını tanıtan pembe tasarım örneği.",
+    badge: "Güzellik & Bakım"
   },
   {
     id: "prova-kargo",
@@ -106,7 +106,7 @@ export const ElIlaniPage: React.FC = () => {
         <meta property="og:image:type" content="image/webp" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="533" />
-        <meta property="og:image:alt" content="Mavi Basım A5 ve A4 el ilanı baskı fiyatları ve kuşe kağıt modelleri" />
+        <meta property="og:image:alt" content="Yeşil ve turuncu tasarımlı tanıtım el ilanı örnekleri" />
         <meta property="og:site_name" content="Mavi Basım" />
         
         {/* Twitter */}

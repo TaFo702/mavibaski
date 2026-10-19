@@ -13,10 +13,23 @@ function check(d) {
   assert.equal(d.querySelectorAll('main table').length,1);
   assert.equal(d.querySelectorAll('main table tbody tr').length,14);
   const schemas=[...d.querySelectorAll('script[type="application/ld+json"]')].flatMap(e=>{const v=JSON.parse(e.textContent);return Array.isArray(v)?v:v['@graph']||[v]});
-  for(const type of ['Product','FAQPage','BreadcrumbList']) assert.equal(schemas.filter(e=>e['@type']===type).length,1,type);
-  const product=schemas.find(e=>e['@type']==='Product');
-  assert.ok(product.description.includes('A3, A4, A5 ve dar ebat'));
-  assert.equal(product.offers.lowPrice,'1550');assert.equal(product.offers.highPrice,'9400');assert.equal(product.offers.offerCount,'14');
+  for(const type of ['Service','FAQPage','BreadcrumbList']) assert.equal(schemas.filter(e=>e['@type']===type).length,1,type);
+  assert.equal(schemas.filter(e=>e['@type']==='Product').length,0);
+  const service=schemas.find(e=>e['@type']==='Service');
+  const offers=service.hasOfferCatalog.itemListElement;
+  const rows=[...d.querySelectorAll('main table tbody tr')];
+  assert.equal(offers.length,rows.length);
+  for(const row of rows) {
+    const cells=[...row.querySelectorAll('td')].slice(-6);
+    const offer=offers.find(e=>e['@id'].endsWith('#teklif-'+cells[1].textContent.trim()));
+    assert.ok(offer);
+    assert.equal(offer.price,cells[4].textContent.replace(/\./g,'').replace(/[^0-9,]/g,'').replace(',','.'));
+    assert.equal(offer.priceCurrency,'TRY');
+    assert.equal(offer.priceSpecification.valueAddedTaxIncluded,false);
+    assert.ok(offer.itemOffered.name.includes(normalize(cells[0].textContent)));
+    assert.ok(offer.itemOffered.name.includes(normalize(cells[3].textContent)));
+    assert.ok(!('availability' in offer)&&!('priceValidUntil' in offer));
+  }
   const faqs=schemas.find(e=>e['@type']==='FAQPage').mainEntity;
   assert.equal(faqs.length,8);
   const faqText=normalize(d.querySelector('#faq-section').textContent);
@@ -28,7 +41,7 @@ function check(d) {
   // Baseline hashes protect the existing pricing markup, styles and tariff.
   const hash = text => createHash('sha256').update(text).digest('hex');
   const source = fs.readFileSync('src/components/ElIlani.tsx', 'utf8');
-  assert.equal(hash(source.slice(source.indexOf('        {/* PRICE TABLE SECTION */}'))), '12a9eed706edf26df25e722526a6ef5e5d2c172026b5647d5313ac483b0edfce', 'Protected pricing or page content changed');
+  assert.equal(hash(source.slice(source.indexOf('        {/* PRICE TABLE SECTION */}'),source.indexOf('        {/* FİYAT TABLOSU ALTI'))), 'd0e77a4d83319dcf79991e300a5e71571c8d5915172eb08961ed5c8fd283282d', 'Protected pricing markup changed');
   assert.equal(hash(fs.readFileSync('src/data/productData.ts')), '6f1d1f55befcf92660884061c5c29fbb27c42afc24f9e286e61a73ad0211095a', 'Protected tariff changed');
   const vc=new VirtualConsole();vc.on('error',(...v)=>errors.push(v.map(String).join(' ')));vc.on('jsdomError',e=>errors.push(String(e)));
   const dom=new JSDOM(fs.readFileSync('dist/el-ilani/index.html','utf8'),{url:'https://mavibasim.com/el-ilani',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc});

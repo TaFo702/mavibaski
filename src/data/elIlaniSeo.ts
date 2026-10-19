@@ -35,11 +35,6 @@ export const EL_ILANI_FAQS = [
   }
 ];
 
-// Read the protected tariff without changing it.
-const prices = EL_ILANI_DATA.flatMap(group => group.items).map(item =>
-  Number(item.price.replace(/\./g, '').replace(/[^0-9,]/g, '').replace(',', '.'))
-);
-
 const jsonLdBreadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -66,33 +61,49 @@ const jsonLdBreadcrumb = {
     ]
   };
 
-const jsonLdProduct = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": "https://mavibasim.com/el-ilani#product",
-    "name": "El İlanı Baskı Fiyatları ve Ölçüleri",
-    "image": "https://mavibasim.com/images/el-ilani/el-ilani-baski-fiyatlari.webp",
-    "description": "A3, A4, A5 ve dar ebat el ilanı baskı fiyatlarını inceleyin. 105 gr kuşe fiyatları ile farklı gramaj, ölçü, baskı yönü ve adet teklifleri.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Mavi Basım"
-    },
-    "category": "El İlanı Baskı",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "TRY",
-      "lowPrice": String(Math.min(...prices)),
-      "highPrice": String(Math.max(...prices)),
-      "offerCount": String(prices.length),
-      "priceValidUntil": "2026-12-31",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "Organization",
-        "@id": "https://mavibasim.com/#organization",
-        "name": "Mavi Basım Matbaa & Reklam"
-      }
-    }
-  };
+// Made-to-order print service. Read each existing tariff entry without modifying it.
+const jsonLdService = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://mavibasim.com/el-ilani#service",
+  "url": "https://mavibasim.com/el-ilani",
+  "name": "El İlanı Baskı Hizmeti",
+  "serviceType": "Siparişe özel el ilanı baskısı",
+  "image": "https://mavibasim.com/images/el-ilani/el-ilani-baski-fiyatlari.webp",
+  "description": "A3, A4, A5 ve dar ebat el ilanı baskısı. 105 gr kuşe tek yön renkli baskı tarifesi ile farklı gramaj, ölçü, baskı yönü ve adetler için özel teklif seçenekleri.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://mavibasim.com/#organization",
+    "name": "Mavi Basım Matbaa & Reklam",
+    "url": "https://mavibasim.com"
+  },
+  "areaServed": { "@type": "Country", "name": "Türkiye" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "El İlanı Baskı Tarifesi",
+    "itemListElement": EL_ILANI_DATA.flatMap(group => group.items).map(item => {
+      const price = item.price.replace(/\./g, '').replace(/[^0-9,]/g, '').replace(',', '.');
+      return {
+        "@type": "Offer",
+        "@id": `https://mavibasim.com/el-ilani#teklif-${item.code}`,
+        "name": `${item.code} — ${item.miktar}`,
+        "url": "https://mavibasim.com/el-ilani",
+        "price": price,
+        "priceCurrency": "TRY",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": price,
+          "priceCurrency": "TRY",
+          "valueAddedTaxIncluded": false
+        },
+        "itemOffered": {
+          "@type": "Service",
+          "name": `${item.ebat} ${item.desc} — ${item.miktar} el ilanı baskısı`
+        }
+      };
+    })
+  }
+};
 
 const jsonLdFAQ = {
     "@context": "https://schema.org",
@@ -108,4 +119,4 @@ const jsonLdFAQ = {
     }))
   };
 
-export const EL_ILANI_SCHEMAS = { jsonLdBreadcrumb, jsonLdProduct, jsonLdFAQ };
+export const EL_ILANI_SCHEMAS = { jsonLdBreadcrumb, jsonLdService, jsonLdFAQ };

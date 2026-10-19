@@ -662,7 +662,7 @@ async function validateProductionHTTP() {
   const elBreadcrumbObj = elJsonLdObjects.find(obj => obj['@type'] === 'BreadcrumbList');
   const elFaqObj = elJsonLdObjects.find(obj => obj['@type'] === 'FAQPage');
   const elFaqQuestionsCount = elFaqObj?.mainEntity?.length || 0;
-  const elProductObj = elJsonLdObjects.find(obj => obj['@type'] === 'Product');
+  const elServiceObj = elJsonLdObjects.find(obj => obj['@type'] === 'Service');
 
   console.log(` - HTTP Status: ${elIlaniRes.status} ${elIlaniRes.status === 200 ? '✅' : '🔴'}`);
   console.log(` - Title Exact Match: "${elTitle}" ${elTitle === 'El İlanı Baskı Fiyatları | A3, A4, A5 ve Dar Ebat' ? '✅' : '🔴'}`);
@@ -676,7 +676,7 @@ async function validateProductionHTTP() {
   console.log(` - Open Graph URL: "${elOgUrl}" ${elOgUrl === elCanonical ? '✅' : '🔴'}`);
   console.log(` - Twitter Title: "${elTwTitle}" ${elTwTitle === elTitle ? '✅' : '🔴'}`);
   console.log(` - Twitter Description: "${elTwDesc}" ${elTwDesc === elDesc ? '✅' : '🔴'}`);
-  console.log(` - JSON-LD Types Found: [${elJsonLdTypes.join(', ')}] ${elJsonLdTypes.includes('BreadcrumbList') && elJsonLdTypes.includes('Product') && elJsonLdTypes.includes('FAQPage') ? '✅' : '🔴'}`);
+  console.log(` - JSON-LD Types Found: [${elJsonLdTypes.join(', ')}] ${elJsonLdTypes.includes('BreadcrumbList') && elJsonLdTypes.includes('Service') && elJsonLdTypes.includes('FAQPage') ? '✅' : '🔴'}`);
   console.log(` - FAQPage Questions Count: ${elFaqQuestionsCount} ${elFaqQuestionsCount === 8 ? '✅ (Exact 8 questions)' : '🔴'}`);
 
   // Prohibited words check on /el-ilani
@@ -725,6 +725,8 @@ async function validateProductionHTTP() {
   console.log(` - Target Keyword Phrases Check (${targetPhrases.length - missingPhrases.length}/${targetPhrases.length}): ${missingPhrases.length === 0 ? 'PASSED (All 13 present) ✅' : `FAILED (Missing: ${missingPhrases.join(', ')}) 🔴`}`);
 
   if (
+    elServiceObj?.hasOfferCatalog?.itemListElement?.length !== 14 ||
+    elJsonLdTypes.includes('Product') ||
     foundElIlaniProhibited.length > 0 || 
     elFaqQuestionsCount !== 8 || 
     missingPhrases.length > 0 ||
