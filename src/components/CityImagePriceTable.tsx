@@ -7,9 +7,9 @@ export const CityImagePriceTable: React.FC<{ examples: readonly CityPriceExample
     <h2 id="price-examples-title" className="text-xl md:text-2xl font-black text-[#101828] mb-3">Ekonomik Baskı Fiyatlarımız</h2>
     <p className="text-sm text-slate-600 mb-5">Ürünleri görselleri, baskı özellikleri ve toplam sipariş bedelleriyle karşılaştırın. Diğer seçeneklere ürünün fiyat listesinden ulaşabilirsiniz.</p>
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-      {examples.map(example => <article key={example.path} data-price-example={example.item.code} className="min-w-0 overflow-hidden rounded-xl border-2 border-slate-400 bg-white flex flex-col">
+      {examples.map((example, index) => <article key={example.path} data-price-example={example.item.code} className="min-w-0 overflow-hidden rounded-xl border-2 border-slate-400 bg-white flex flex-col">
         <a href={example.path} aria-label={`${example.name} fiyat listesini incele`} className="group flex flex-1 min-w-0 flex-col cursor-pointer focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#101828]">
-          <img src={example.image} alt={`${example.name} baskı örneği`} width={800} height={533} decoding="async" className="w-full aspect-[800/533] object-contain bg-white" />
+          <img src={example.image} alt={`${example.name} baskı örneği`} width={800} height={533} loading={index === 0 ? 'eager' : 'lazy'} fetchPriority={index === 0 ? 'high' : 'auto'} decoding="async" className="w-full aspect-[800/533] object-contain bg-white" />
           <h3 className="bg-[#101828] text-white text-base font-black px-4 py-3">{example.name} Baskı</h3>
           <table className="w-full text-sm text-[#101828] border-collapse table-fixed [&_th]:border-r [&_th]:border-slate-300">
             <caption className="sr-only">{example.name} örnek baskı fiyatı ve sipariş özellikleri</caption>
