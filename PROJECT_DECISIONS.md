@@ -2,6 +2,11 @@
 
 Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün ve dönüşüm kararlarının tarihsel kaydını tutar. Yeni geliştirme önerilerinin geçmiş kararlarla çelişmemesi için bu dosya esas alınır.
 
+* **[2026-10-18] Mardin Örnek Fiyat Kartları — Tek Sayfalık Deneme:**
+  * **Kapsam:** Kullanıcı önce yalnız bir şehirde incelemek istedi. Kartlar yalnız `/mardin-matbaa` adresinde gösterilir; diğer şehirlere ayrıca talep gelmeden yayılmaz.
+  * **Fiyat kaynağı:** Kartvizit ve etiket kartları mevcut `productData.ts` satırlarından 1.000 adetlik ekonomik seçeneği okur. Tutar ve özellikler ayrı kopyalanmaz; mevcut fiyat verisi ve fiyat tabloları değiştirilmez.
+  * **Sunum:** Adet, özellik, ürün kodu, toplam baskı bedeli ve mevcut listelerdeki %20 KDV hariç bilgisi birlikte gösterilir. Kargo bedeli ve gönderim planı sipariş sırasında netleştirilir. Her kart ilgili ürünün fiyat sayfasına bağlanır. Genel şehir hizmeti tek ürün için `Product` şemasına dönüştürülmez.
+
 ---
 
 ## 1. Mimari ve Altyapı Kararları
