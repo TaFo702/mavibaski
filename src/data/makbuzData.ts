@@ -78,19 +78,19 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
       },
       {
         src: "/images/adisyon/restoran-adisyon-baski.webp",
-        alt: "restoran-ve-kafe-adisyon-baski-ornegi",
+        alt: "Restoran ve kafe için adisyon baskı örneği",
         title: "Restoran & Kafe Adisyon Baskısı",
         desc: "Masa hesabı ve garson sipariş takibini kolaylaştıran adisyon tasarımı."
       },
       {
         src: "/images/adisyon/adisyon-basimi-fiyatlari.webp",
-        alt: "adisyon-basimi-fiyatlari-ve-ebatlari",
+        alt: "Adisyon koçanı baskı ve ebat örneği",
         title: "Adisyon Basımı ve Ebat Seçenekleri",
         desc: "14x20 cm ve 10x14 cm boyutlarında, üstten perforajlı ve kolay koparılabilen cilt yapısı."
       },
       {
         src: "/images/adisyon/adisyon-baski.webp",
-        alt: "numaratorlu-garson-adisyon-kocani",
+        alt: "Numaratörlü garson adisyon koçanı örneği",
         title: "Numaratörlü Garson Sipariş Fişi",
         desc: "Ardışık seri numaralarıyla eksik veya kayıp hesap kayıtlarının takibini kolaylaştıran koçan baskısı."
       }

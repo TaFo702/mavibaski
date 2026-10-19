@@ -1307,7 +1307,8 @@ export const MakbuzFormlarPage = () => {
                       <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Siparişlerin düzenli kayıt altına alınmasını sağlar.</li>
                       <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Mutfak, bar ve kasa arası sipariş aktarımını düzenler.</li>
                       <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Kurumsal logo ve iletişim bilgilerinizle kişiselleştirilir.</li>
-                      <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Ardışık seri numaratör baskısı ile takip etmeyi kolaylaştırır.</li>
+                      <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> Ardışık seri numaralarıyla eksik veya kayıp adisyon kayıtlarının takibini kolaylaştırır.</li>
+                      <li className="flex items-center gap-2"><span className="text-primary font-bold">✓</span> İsteğe bağlı otokopili seçeneklerde aynı bilgiyi alt nüshaya aktarır.</li>
                     </ul>
                   ) : (pathId === 'siparis-fisi' || pathId === 'para-makbuzu') ? (
                     <ul className="space-y-2 text-gray-700 text-xs sm:text-sm font-bold pl-1 list-none">
@@ -1347,7 +1348,7 @@ export const MakbuzFormlarPage = () => {
                         <div className="w-2.5 h-2.5 bg-slate-500 rounded-full mt-1.5 shrink-0" />
                         <p className="leading-relaxed text-xs sm:text-sm">
                           <strong className="text-slate-900 font-black uppercase text-xs block mb-0.5">Tek Nüsha Adisyon (100'lük Cilt):</strong> 
-                          80 gr 1. hamur beyaz kâğıda basılır. Mutfak, kasa veya garson kullanımı için pratik standart koçandır.
+                          70–80 gr 1. hamur beyaz kâğıda basılır. Mutfak, kasa veya garson kullanımı için pratik standart koçandır.
                         </p>
                       </div>
                       <div className="border-t border-gray-200 pt-3 flex items-start gap-2.5">
@@ -1701,39 +1702,6 @@ export const MakbuzFormlarPage = () => {
                             <span>{itemStr}</span>
                           </div>
                         ))}
-                      </div>
-                      <h3 className="text-lg font-black text-black mb-3 uppercase tracking-tight">
-                        Adisyon Koçanının İşletmeler İçin Avantajları
-                      </h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div className="bg-gray-50 border border-gray-150 rounded-2xl p-5 flex items-start gap-3">
-                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
-                          <div>
-                            <h3 className="text-sm font-black text-black mb-1">Düzenli Hesap ve Sipariş Takibi</h3>
-                            <p className="text-xs text-slate-600 font-medium leading-relaxed">Sipariş akışının düzenli yürütülmesine yardımcı olur.</p>
-                          </div>
-                        </div>
-                        <div className="bg-gray-50 border border-gray-150 rounded-2xl p-5 flex items-start gap-3">
-                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
-                          <div>
-                            <h3 className="text-sm font-black text-black mb-1">Numaratör ile Güvenli Kayıt</h3>
-                            <p className="text-xs text-slate-600 font-medium leading-relaxed">Ardışık numaralar sayesinde kayıp veya eksik adisyon takibini kolaylaştırır.</p>
-                          </div>
-                        </div>
-                        <div className="bg-gray-50 border border-gray-150 rounded-2xl p-5 flex items-start gap-3">
-                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
-                          <div>
-                            <h3 className="text-sm font-black text-black mb-1">Kurumsal Kimliğe Uygun Baskı</h3>
-                            <p className="text-xs text-slate-600 font-medium leading-relaxed">Firmanıza ait logo ve bilgiler tüm koçanlarda standart olarak yer alabilir.</p>
-                          </div>
-                        </div>
-                        <div className="bg-gray-50 border border-gray-150 rounded-2xl p-5 flex items-start gap-3">
-                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
-                          <div>
-                            <h3 className="text-sm font-black text-black mb-1">Hızlı ve Pratik Kullanım</h3>
-                            <p className="text-xs text-slate-600 font-medium leading-relaxed">Otokopili seçeneklerde kendinden kopyalı kâğıt yapısı sayesinde alt nüshaya anında kopyalama sağlar.</p>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </>
