@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -21,6 +21,8 @@ import {
   FireWarning, 
   FeatureTooltip 
 } from '../App';
+import { BROSUR_FAQS } from '../data/brosurFaqs';
+import { BROSUR_SCHEMAS } from '../data/brosurSchemas';
 import { CategoryHero } from './CategoryHero';
 import { RelatedBlogPosts } from './RelatedBlogPosts';
 import { 
@@ -111,49 +113,8 @@ export const BrosurPage = () => {
     openProductDetail(item, "Broşür");
   };
 
-  // 10 high-value, verified FAQ items
-  const faqItems = useMemo(() => [
-    {
-      q: "A4, A5 ve A3 broşür ölçüleri arasındaki temel farklar nelerdir?",
-      a: "A4 sınıfı (20×28 cm veya 21×30 cm), kurumsal firma tanıtımları, detaylı ürün föyleri ve katlamalı menülerde yaygın formattır. A5 sınıfı (14×20 cm veya 15×21 cm), elden veya posta kutusu dağıtımlarında pratik ve ekonomik bir tercihtir. A3 sınıfı (28×40 cm veya 30×42 cm) ise katlandığında A4 paneller oluşturan geniş ürün listeleri ve çok panelli sunumlar için uygundur."
-    },
-    {
-      q: "115 gr, 130 gr ve 200 gr kuşe kâğıt arasındaki farklar nelerdir?",
-      a: "115 gr kuşe kâğıt hafif yapısıyla yüksek tirajlı dağıtımlar için uygundur. 130 gr kuşe kâğıt, daha tok kâğıt yapısıyla kurumsal tanıtım ve broşürlerde dengeli bir standart sunar. 200 gr kuşe kâğıt ise daha tok gövdesi ve parlak selefon kaplama seçeneğiyle fuar föyleri ve dayanıklı ürün tanıtımlarında tercih edilir."
-    },
-    {
-      q: "Broşür baskı fiyatı ve broşür bastırma fiyatları nasıl hesaplanır?",
-      a: "Broşür baskı fiyatı ve broşür bastırma fiyatları; seçilen ebat (A4, A5, A3 veya dar ebat), kâğıt gramajı (115 gr, 130 gr, 200 gr), sipariş adedi (1.000, 2.000, 5.000 veya 10.000 adet), selefon kaplama ve katlama (kırım) işlemine göre belirlenir. Yüksek tirajlarda kalıp ve makine hazırlık maliyetleri genele yayıldığı için adet başına düşen birim maliyet daha uygun hale gelir."
-    },
-    {
-      q: "Minimum broşür baskı adedi kaçtır ve 1.000, 2.000, 5.000 veya 10.000 adet seçimi maliyeti nasıl etkiler?",
-      a: "Ofset baskı sisteminde kalıp ve makine hazırlık maliyetleri tiraja bölündüğü için ekonomik minimum üretim 1.000 adettir. 2.000, 5.000 ve 10.000 gibi yüksek adetli siparişlerde birim başına düşen maliyet belirgin şekilde düşer."
-    },
-    {
-      q: "Broşürlerde hangi katlama (kırım) modelleri uygulanabilir?",
-      a: "Broşür tasarımına ve sayfa sayısına bağlı olarak Ortadan Tek Kırım (4 panel), Z-Kırım / Akordeon Katlama (6 panel) ve C-Kırım / İçe Katlama (6 panel) modelleri uygulanabilmektedir."
-    },
-    {
-      q: "Kırım ve katlama işlemi fiyata dahil midir?",
-      a: "Standart fiyat listesindeki ürünler düz kesim esasına dayanır. Kırım ve katlama işlemleri opsiyonel son işlemlerdir; seçilen katlama modeline ve tiraja göre işlem detayları teklif ve onay sürecinde netleştirilir."
-    },
-    {
-      q: "Baskı dosyası hangi formatta hazırlanmalı ve taşma payı ne kadar olmalıdır?",
-      a: "Tasarım dosyalarınızın CMYK renk modunda, en az 300 DPI çözünürlükte ve her kenardan 3 mm taşma payı (bleed) verilmiş olarak iletilmesi gerekir. Fontların eğriye (convert/outline) dönüştürülmesi ve dosyanın PDF/X formatında kaydedilmesi önerilir."
-    },
-    {
-      q: "CMYK renk modu ile ekran (RGB) renkleri arasında ton farkı oluşur mu?",
-      a: "Monitör ve telefon ekranları ışık tabanlı RGB renk uzayında çalışırken matbaa makineleri mürekkep tabanlı CMYK renk uzayında baskı yapar. Bu nedenle ekranda çok parlak görünen bazı tonlar baskıda doğal matbaa renklerine dönüşebilir; standart toleranslar dahilinde hafif ton değişimleri olağandır."
-    },
-    {
-      q: "Dijital PDF prova onayı nedir ve neleri kapsar?",
-      a: "Baskıya hazır dosyalar teknik açıdan kontrol edilir ve baskı öncesinde dijital PDF prova onaya sunulur. PDF prova, içeriğin ve yerleşimin doğruluğunu gösterir; fiziksel baskı rengini ve kâğıt dokusunu birebir garanti etmez."
-    },
-    {
-      q: "Fiyat listenizdeki tutarlara KDV ve kargo dahil midir?",
-      a: "Fiyat listemizde yer alan tutarlar %20 KDV hariçtir. Kargo ücreti, siparişinizin toplam ağırlığına ve teslim edilecek şehre göre anlaşmalı kargo tarifesi üzerinden ayrıca hesaplanır."
-    }
-  ], []);
+  // Shared questions keep visible answers and structured data in sync.
+  const faqItems = BROSUR_FAQS;
 
   const renderBrosurTable = (
     title: string,
@@ -285,74 +246,7 @@ export const BrosurPage = () => {
     );
   };
 
-  // Structured Data Schemas
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Ana Sayfa",
-        "item": "https://mavibasim.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Broşür Baskı",
-        "item": "https://mavibasim.com/brosur"
-      }
-    ]
-  };
-
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Broşür Baskı & Katlamalı Broşür",
-    "description": "115 gr, 130 gr ve 200 gr kuşe kâğıda çift yön renkli A4, A5, A3 ve özel ebat broşür baskı seçenekleri. Tek kırım, Z-kırım ve C-kırım katlama modelleri.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Mavi Basım"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "TRY",
-      "lowPrice": "1550",
-      "highPrice": "17950",
-      "offerCount": "40",
-      "priceValidUntil": "2027-12-31",
-      "availability": "https://schema.org/InStock"
-    }
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqItems.map(item => ({
-      "@type": "Question",
-      "name": item.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.a
-      }
-    }))
-  };
-
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Mavi Basım Matbaa & Reklam",
-    "url": "https://mavibasim.com",
-    "logo": "https://mavibasim.com/logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Litros Yolu 2. Matbaacılar Sitesi Topkapı",
-      "addressLocality": "Zeytinburnu",
-      "addressRegion": "İstanbul",
-      "postalCode": "34010",
-      "addressCountry": "TR"
-    }
-  };
+  const { breadcrumbSchema, productSchema, faqSchema, organizationSchema } = BROSUR_SCHEMAS;
 
   return (
     <div className="bg-neutral-50 min-h-screen pb-20">
@@ -668,6 +562,24 @@ export const BrosurPage = () => {
             </span>
           </div>
 
+          <div className="mb-6 space-y-3 text-sm text-slate-600 leading-relaxed">
+            <h3 className="font-bold text-slate-900">A4 İki Kırımlı Broşür Ölçüleri ve Panel Yerleşimi</h3>
+            <p>
+              A4 iki kırımlı broşürde açık ölçü, katlama öncesindeki net kesim ebadını; kapalı ölçü ise katlanmış boyutu belirtir.
+              İki kırım üç bölüm oluşturur; kâğıdın ön ve arka yüzü birlikte altı paneldir.
+              Panel genişlikleri seçilen katlama düzenine göre kontrol edilir; içe kapanan panelin payı baskı dosyasında ayrıca değerlendirilir.
+            </p>
+            <h3 className="font-bold text-slate-900">C-Kırım ve Z-Kırım Broşür Seçimi</h3>
+            <p>
+              C-kırım broşürde paneller içe doğru kapanır; Z-kırımda zıt yönlere katlanarak akordeon biçiminde açılır.
+              Menü, ürün listesi veya kurumsal tanıtım için seçim yaparken okuma sırasını ve panel yerleşimini birlikte değerlendirin.
+              Ayrıntılar için{' '}
+              <Link to="/blog/brosur-katlama-kirim-modelleri-nelerdir" className="text-primary underline underline-offset-2">broşür katlama ve kırım modelleri rehberini</Link> inceleyebilirsiniz.
+              Restoran menüsü için{' '}
+              <Link to="/sektor/restoran-brosur-baski" className="text-primary underline underline-offset-2">restoran broşür baskı seçeneklerine</Link> bakabilirsiniz.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {[
               {
@@ -768,7 +680,8 @@ export const BrosurPage = () => {
               Broşür Baskı Örnekleri
             </h2>
             <p className="text-xs text-slate-500 font-medium mt-1">
-              Ebat, kâğıt türü, katlama modelleri ve baskı öncesi hazırlık örnekleri
+              Broşür örneklerini incelerken açık ve kapalı ölçüyü, kâğıt gramajını, katlama yönünü ve panel sayısını birlikte değerlendirin.
+              Aynı ebatta görünen iki çalışma, kırım ve yüzey kaplaması farklıysa aynı teknik özelliklere sahip değildir.
             </p>
           </div>
 

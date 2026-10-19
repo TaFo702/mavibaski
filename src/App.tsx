@@ -1330,6 +1330,7 @@ const LegacyCanonicalLink = () => {
   const isBloknotlarPage = path === '/bloknotlar';
   const isAntetliPage = path === '/antetli';
   const isZarfPage = path === '/zarf';
+  const isBrosurPage = path === '/brosur';
   const isAmerikanServisPage = path === '/amerikan-servis';
   const isOtoPaspasPage = path === '/oto-paspas';
   const isKataloglarPage = path === '/kataloglar' || path === '/katalog';
@@ -1968,7 +1969,7 @@ const prodSchemaDesc =
   }
 
   useEffect(() => {
-        if (isKutuPage || isKupBloknotPage || isEtiketPage || isBloknotlarPage || isAntetliPage || isZarfPage || isAmerikanServisPage || isOtoPaspasPage || isKataloglarPage || isKartonCantaPage || isYagKartiPage || isRecetePage || isTediyeMakbuzuPage || isTahsilatMakbuzuPage || isSozlesmePage || isParaMakbuzuPage || isGiderMakbuzuPage || isKartvizitPage || isDosyalarPage) {
+        if (isBrosurPage || isKutuPage || isKupBloknotPage || isEtiketPage || isBloknotlarPage || isAntetliPage || isZarfPage || isAmerikanServisPage || isOtoPaspasPage || isKataloglarPage || isKartonCantaPage || isYagKartiPage || isRecetePage || isTediyeMakbuzuPage || isTahsilatMakbuzuPage || isSozlesmePage || isParaMakbuzuPage || isGiderMakbuzuPage || isKartvizitPage || isDosyalarPage) {
       const scriptEl = document.getElementById('app-seo-metadata-jsonld');
       if (scriptEl) scriptEl.remove();
       return;
@@ -1985,10 +1986,11 @@ const prodSchemaDesc =
       document.head.appendChild(scriptEl);
     }
     scriptEl.textContent = JSON.stringify(schemas);
-        }, [canonicalUrl, schemas, isInvalidSectorPage, isKutuPage, isAmbalajPage, isKupBloknotPage, isEtiketPage, isBloknotlarPage, isAntetliPage, isZarfPage, isAmerikanServisPage, isOtoPaspasPage, isKataloglarPage, isKartonCantaPage, isYagKartiPage, isRecetePage, isTediyeMakbuzuPage, isTahsilatMakbuzuPage, isSozlesmePage, isParaMakbuzuPage, isGiderMakbuzuPage, isKartvizitPage, isDosyalarPage]);
+        }, [canonicalUrl, schemas, isBrosurPage, isInvalidSectorPage, isKutuPage, isAmbalajPage, isKupBloknotPage, isEtiketPage, isBloknotlarPage, isAntetliPage, isZarfPage, isAmerikanServisPage, isOtoPaspasPage, isKataloglarPage, isKartonCantaPage, isYagKartiPage, isRecetePage, isTediyeMakbuzuPage, isTahsilatMakbuzuPage, isSozlesmePage, isParaMakbuzuPage, isGiderMakbuzuPage, isKartvizitPage, isDosyalarPage]);
 
   if (
   isInvalidSectorPage ||
+  isBrosurPage ||
   isKutuPage ||
   isAmbalajPage ||
   isKupBloknotPage ||
@@ -5026,7 +5028,7 @@ const HomePage = () => {
 
 
 
-export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage, MakbuzComponent = MakbuzFormlarPage, CityComponent = CityPage }: { ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType; MakbuzComponent?: React.ComponentType; CityComponent?: React.ComponentType } = {}) => {
+export const AppRoutes = ({ BrosurComponent = BrosurPage, ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage, MakbuzComponent = MakbuzFormlarPage, CityComponent = CityPage }: { BrosurComponent?: React.ComponentType; ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType; MakbuzComponent?: React.ComponentType; CityComponent?: React.ComponentType } = {}) => {
   return (
     <React.Suspense fallback={
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
@@ -5038,7 +5040,7 @@ export const AppRoutes = ({ ZarfComponent = ZarfPage, BlogComponent = BlogPage, 
       <Route path="/kutu" element={<KutuPage />} />
       <Route path="/ambalaj" element={<AmbalajPage />} />
       <Route path="/kartvizit" element={<KartvizitComponent />} />
-      <Route path="/brosur" element={<BrosurPage />} />
+      <Route path="/brosur" element={<BrosurComponent />} />
       <Route path="/el-ilani" element={<ElIlaniPage />} />
       <Route path="/afis" element={<AfisPage />} />
       <Route path="/antetli" element={<AntetliComponent />} />
@@ -5225,8 +5227,9 @@ pathname === '/kartvizit' ||
   return null;
 };
 
-export default function App({ Router = BrowserRouter, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent, MakbuzComponent, CityComponent }: {
+export default function App({ Router = BrowserRouter, BrosurComponent, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent, MakbuzComponent, CityComponent }: {
   Router?: React.ComponentType<{ children: React.ReactNode }>;
+  BrosurComponent?: React.ComponentType;
   ZarfComponent?: React.ComponentType;
   BlogComponent?: React.ComponentType;
   AntetliComponent?: React.ComponentType;
@@ -5282,7 +5285,7 @@ export default function App({ Router = BrowserRouter, ZarfComponent, BlogCompone
             <Navbar />
             
             <main className="flex-grow">
-              <AppRoutes ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} MakbuzComponent={MakbuzComponent} CityComponent={CityComponent} />
+              <AppRoutes BrosurComponent={BrosurComponent} ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} MakbuzComponent={MakbuzComponent} CityComponent={CityComponent} />
             </main>
 
             <Footer />

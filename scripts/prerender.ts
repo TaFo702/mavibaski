@@ -47,6 +47,7 @@ async function prerender() {
   const rendererPath = path.join(distDir, '.prerender-home.cjs');
   let homeContent: string;
   let zarfContent: string;
+  let brosurContent: string;
   let antetliContent: string;
   let dosyalarContent: string;
   let bloknotlarContent: string;
@@ -68,8 +69,17 @@ async function prerender() {
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
+    brosurContent = prerenderBrosur();
+    if ((brosurContent.match(/<h1\b/g) || []).length !== 1 ||
+        (brosurContent.match(/id="fiyat-listesi"/g) || []).length !== 1 ||
+        (brosurContent.match(/<table\b/g) || []).length !== 3 ||
+        !brosurContent.includes('id="ebat-rehberi"') ||
+        !brosurContent.includes('Broşür Baskı Örnekleri') ||
+        !brosurContent.includes('Z-kırım ile C-kırım broşür arasındaki fark nedir?')) {
+      throw new Error('Broşür prerender is missing existing pricing, content, gallery or FAQ.');
+    }
     zarfContent = prerenderZarf();
     antetliContent = prerenderAntetli();
     dosyalarContent = prerenderDosyalar();
@@ -224,6 +234,7 @@ async function prerender() {
         seo.extraHead,
         seo.h1Text,
         pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent
+          : pathname === '/brosur' ? brosurContent
           : pathname === '/antetli' ? antetliContent
           : pathname === '/dosyalar' ? dosyalarContent
           : pathname === '/bloknotlar' ? bloknotlarContent
@@ -259,6 +270,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
         : pathname === '/zarf'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="zarf">')
+        : pathname === '/brosur'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="brosur">')
         : pathname === '/antetli'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="antetli">')
         : pathname === '/dosyalar'
