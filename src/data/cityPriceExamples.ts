@@ -30,7 +30,7 @@ function example(name: string, path: string, image: string, rows: readonly Price
 }
 
 // Existing product tables own every price and specification below.
-const brochure = example('Broşür', '/brosur', LOCAL_ASSETS.brosur, BROSUR_DATA.flatMap(group => group.items));
+const brochure = example('Broşür', '/brosur', '/images/brosur/tanitim-brosuru-ornegi.webp', BROSUR_DATA.flatMap(group => group.items));
 const otherProducts: readonly CityPriceExample[] = [
   example('Kartvizit', '/kartvizit', LOCAL_ASSETS.kartvizit, KARTVIZIT_DATA.flatMap(group => group.items)
     .map(item => ({ ...item, miktar: 'miktar' in item && typeof item.miktar === 'string' ? item.miktar : '1.000 Adet' }))),
