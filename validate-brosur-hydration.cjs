@@ -15,7 +15,31 @@ function check(document) {
     const value = JSON.parse(node.textContent);
     return Array.isArray(value) ? value : value['@graph'] || [value];
   });
-  for (const type of ['Product', 'FAQPage', 'BreadcrumbList', 'Organization']) assert.equal(schemas.filter(item => item['@type'] === type).length, 1, type);
+  for (const type of ['Service', 'FAQPage', 'BreadcrumbList', 'Organization']) assert.equal(schemas.filter(item => item['@type'] === type).length, 1, type);
+  assert.equal(schemas.filter(item => item['@type'] === 'Product').length, 0);
+  assert.equal(document.querySelector('meta[property="og:image:width"]').content, '1536');
+  assert.equal(document.querySelector('meta[property="og:image:height"]').content, '1024');
+  assert.equal(schemas.find(item => item['@type'] === 'Organization').logo, 'https://mavibasim.com/mavilogo.png');
+  const offers = schemas.find(item => item['@type'] === 'Service').hasOfferCatalog.itemListElement;
+  const rows = [...document.querySelectorAll('#fiyat-listesi tbody tr')];
+  assert.equal(offers.length, rows.length);
+  for (const row of rows) {
+    const cells = [...row.querySelectorAll('td')].slice(-6);
+    const code = cells[1].textContent.trim();
+    const offer = offers.find(item => item['@id'].endsWith('#teklif-' + code));
+    assert.ok(offer, code);
+    assert.equal(offer.price, cells[4].textContent.replace(/\./g, '').replace(/[^0-9,]/g, '').replace(',', '.'));
+    assert.equal(offer.priceCurrency, 'TRY');
+    assert.equal(offer.priceSpecification.valueAddedTaxIncluded, false);
+    assert.ok(offer.itemOffered.name.includes(normalize(cells[3].textContent)), code + ' quantity');
+    assert.ok(!('availability' in offer) && !('priceValidUntil' in offer));
+  }
+  const ids = [...document.querySelectorAll('[id]')].map(item => item.id);
+  assert.equal(new Set(ids).size, ids.length, 'Duplicate IDs');
+  const disclosure = document.querySelector('[aria-controls="brosur-advanced-tech"]');
+  assert.ok(disclosure);
+  assert.equal(disclosure.getAttribute('aria-expanded'), 'false');
+  assert.equal(document.getElementById('brosur-advanced-tech').hidden, true);
   const faq = schemas.find(item => item['@type'] === 'FAQPage').mainEntity;
   assert.equal(faq.length, 12);
   const text = normalize(document.querySelector('main').textContent);
@@ -43,6 +67,12 @@ function check(document) {
     assert.strictEqual(d.querySelector('#fiyat-listesi table'), table, 'Hydration replaced price table');
     assert.equal(normalize(d.querySelector('main').textContent), content, 'Hydration changed content');
     assert.deepEqual([...d.querySelectorAll('#fiyat-listesi tbody tr')].map(node => normalize(node.textContent)), prices);
+    const disclosure = d.querySelector('[aria-controls="brosur-advanced-tech"]');
+    disclosure.click(); await pause(50);
+    assert.equal(disclosure.getAttribute('aria-expanded'), 'true');
+    assert.equal(d.getElementById('brosur-advanced-tech').hidden, false);
+    disclosure.click(); await pause(50);
+    check(d);
     const filters = [...d.querySelectorAll('#fiyat-listesi button')].slice(0, 6);
     const light = () => filters.findIndex(node => node.className.includes('brightness-125'));
     const initialLight = light();

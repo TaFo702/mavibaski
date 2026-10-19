@@ -147,3 +147,12 @@ Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün 
 - Broşür JSON-LD kaynağı yalnız getRouteSEO/RouteSEOHead oldu; sayfa içi scriptler ve eski global yöneticinin broşür kapsamı kaldırıldı. İçerik, title, açıklama ve H1 değişmedi.
 - Doğrudan yükleme ve geri gezinmede gerçek hydration, tekil şema/metadata, 12 SSS, fiyat tablosu düğümünün korunması, ebat filtresi ve mevcut ışıklandırma döngüsü CI testine eklendi.
 - Fiyat verisi, tablo renderer'ı, fiyat/filtre bölümü ve 700 ms ışıklandırma kodu değişmedi.
+
+### 2026-10-19 — Broşür 65 maddelik inceleme
+- Farklı ebat, gramaj ve tirajları tek Product/AggregateOffer ve stokta var beyanıyla göstermek yerine siparişe özel baskı Service + OfferCatalog olarak tanımlandı. 40 tarife kalemi mevcut veri kaynağından salt okunur üretilir; KDV hariç durumu görünür bilgiyle eşleşir. Doğrulanmamış stok ve fiyat bitiş tarihi yoktur.
+- Organization logo adresindeki 404 giderildi; adres mevcut iletişim kaydıyla eşlendi. Gerçek paylaşım görseli ölçüsü 1536×1024 olarak düzeltildi.
+- Galeri açıklamaları mevcut görsellerin gerçek konusuyla eşleştirildi. Görsel dosyaları ve galeri sayısı değiştirilmedi.
+- Mevcut ileri teknik bilgi düğmesinin aria-expanded/aria-controls ilişkisi ve gizli panel hedefi eklendi. Yeni bölüm veya tasarım eklenmedi.
+- Yalnız /brosur sitemap lastmod değeri gerçek içerik değişikliği günü 2026-10-19 olarak güncellendi.
+- Koruma: fiyat verileri, tablo renderer'ı, tüm fiyat/filtre bölümü ve ışıklandırma kodu ana daldaki sürümle aynı. Testler şema tarifesini satır satır karşılaştırır.
+- İnceleme sınırı: PageSpeed API 429 döndü; farklı telefon ekranları ve bağımsız güncel hız ölçümü tamamlanmadan nihai tam puan verilmez.

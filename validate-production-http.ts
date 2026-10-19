@@ -568,7 +568,7 @@ async function validateProductionHTTP() {
   const brBreadcrumbObj = brJsonLdObjects.find(obj => obj['@type'] === 'BreadcrumbList');
   const brFaqObj = brJsonLdObjects.find(obj => obj['@type'] === 'FAQPage');
   const brFaqQuestionsCount = brFaqObj?.mainEntity?.length || 0;
-  const brProductObj = brJsonLdObjects.find(obj => obj['@type'] === 'Product');
+  const brServiceObj = brJsonLdObjects.find(obj => obj['@type'] === 'Service');
   const brVisibleText = brosurDoc.querySelector('main')?.textContent || '';
   const brFaqMatchesVisible = BROSUR_FAQS.every(({ q, a }) =>
     brVisibleText.includes(q) && brVisibleText.includes(a) &&
@@ -587,8 +587,19 @@ async function validateProductionHTTP() {
   console.log(` - Open Graph URL: "${brOgUrl}" ${brOgUrl === brCanonical ? '✅' : '🔴'}`);
   console.log(` - Twitter Title: "${brTwTitle}" ${brTwTitle === brTitle ? '✅' : '🔴'}`);
   console.log(` - Twitter Description: "${brTwDesc}" ${brTwDesc === brDesc ? '✅' : '🔴'}`);
-  console.log(` - JSON-LD Types Found: [${brJsonLdTypes.join(', ')}] ${brJsonLdTypes.includes('BreadcrumbList') && brJsonLdTypes.includes('Product') && brJsonLdTypes.includes('FAQPage') ? '✅' : '🔴'}`);
+  console.log(` - JSON-LD Types Found: [${brJsonLdTypes.join(', ')}] ${brJsonLdTypes.includes('BreadcrumbList') && brJsonLdTypes.includes('Service') && brJsonLdTypes.includes('FAQPage') ? '✅' : '🔴'}`);
   console.log(` - FAQPage Questions Count: ${brFaqQuestionsCount} ${brFaqQuestionsCount === BROSUR_FAQS.length && brFaqMatchesVisible ? '✅ (All visible questions and answers match schema)' : '🔴'}`);
+
+  const brOffers = brServiceObj?.hasOfferCatalog?.itemListElement || [];
+  const brRows = Array.from(brosurDoc.querySelectorAll('#fiyat-listesi tbody tr'));
+  const brTariffMatches = brOffers.length === brRows.length && brRows.every(row => {
+    const cells = Array.from(row.querySelectorAll('td')).slice(-6);
+    const code = cells[1]?.textContent?.trim();
+    const price = cells[4]?.textContent?.replace(/\./g, '').replace(/[^0-9,]/g, '').replace(',', '.');
+    return brOffers.some((offer: { '@id': string; price: string; priceCurrency: string }) =>
+      offer['@id'].endsWith(`#teklif-${code}`) && offer.price === price && offer.priceCurrency === 'TRY');
+  });
+  if (!brTariffMatches || brJsonLdTypes.includes('Product')) totalPassed = -1;
 
   // Prohibited words check on /brosur
   const brosurProhibited = [

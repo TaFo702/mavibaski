@@ -46,49 +46,49 @@ interface BrosurGalleryItem {
 const BROSUR_GALLERY_ITEMS: BrosurGalleryItem[] = [
   {
     id: 1,
-    title: "Broşür Baskı Fiyatları ve Çeşitleri",
-    shortDesc: "A4, A5 ve A3 ebat seçenekleri",
-    alt: "Broşür Baskı Fiyatları ve Çeşitleri",
+    title: "Düz Broşür Baskı Örneği",
+    shortDesc: "Eğitim merkezi tanıtımı",
+    alt: "Çocuk etkinlikleri ve eğitim programlarını tanıtan broşür örneği",
     hasRealImage: true,
     imageSrc: "/images/brosur/brosur-baski-fiyatlari.webp"
   },
   {
     id: 2,
-    title: "Broşür Ölçüleri ve Ebat Rehberi",
-    shortDesc: "Standart ve özel kesim ebatları",
-    alt: "Broşür Ölçüleri ve Ebat Rehberi",
+    title: "Restoran Broşürü Örneği",
+    shortDesc: "Menü ve kampanya sunumu",
+    alt: "Dürüm menüsü ve kampanya bilgileri içeren restoran broşürü",
     hasRealImage: true,
     imageSrc: "/images/brosur/tanitim-brosuru-ornegi.webp"
   },
   {
     id: 3,
-    title: "Katlama ve Kırım Modelleri",
-    shortDesc: "Tek kırım, Z-kırım ve C-kırım",
-    alt: "Katlama ve Kırım Modelleri",
+    title: "Katlamalı Broşür Örneği",
+    shortDesc: "İç mimarlık tanıtımı",
+    alt: "Üç paneli açık görünen iç mimarlık tanıtım broşürü",
     hasRealImage: true,
     imageSrc: "/images/brosur/katlamali-brosur-baski.webp"
   },
   {
     id: 4,
-    title: "115, 130 ve 200 gr Kuşe Kâğıtlar",
-    shortDesc: "Gramaj ve selefon seçenekleri",
-    alt: "115, 130 ve 200 gr Kuşe Kâğıtlar",
+    title: "Güzellik Salonu Broşürü",
+    shortDesc: "Hizmet ve kampanya tanıtımı",
+    alt: "Güzellik salonu hizmetlerini tanıtan pembe broşür örneği",
     hasRealImage: true,
     imageSrc: "/images/brosur/ucuz-brosur-baski.webp"
   },
   {
     id: 5,
-    title: "CMYK, Çözünürlük ve Taşma Payı",
-    shortDesc: "300 DPI ve 3 mm taşma rehberi",
-    alt: "CMYK, Çözünürlük ve Taşma Payı",
+    title: "Üç Panelli Broşür Tasarımı",
+    shortDesc: "Açık hâlde panel yerleşimi",
+    alt: "Mobilya görselleri bulunan üç panelli broşürün açık tasarımı",
     hasRealImage: true,
     imageSrc: "/images/brosur/brosur-tasarimi-ve-baski.webp"
   },
   {
     id: 6,
-    title: "PDF Prova, Paketleme ve Gönderim",
-    shortDesc: "Teknik kontrol ve sevk aşaması",
-    alt: "PDF Prova, Paketleme ve Gönderim",
+    title: "Eğitim Tanıtım Broşürü",
+    shortDesc: "Etkinlik ve program sunumu",
+    alt: "Eğitim merkezi programlarını tanıtan broşürlerin görünümü",
     hasRealImage: true,
     imageSrc: "/images/brosur/brosur-baski-fiyatlari.webp"
   }
@@ -260,8 +260,8 @@ export const BrosurPage = () => {
         <meta property="og:image" content="https://mavibasim.com/images/brosur/brosur-baski-fiyatlari.webp" />
         <meta property="og:image:secure_url" content="https://mavibasim.com/images/brosur/brosur-baski-fiyatlari.webp" />
         <meta property="og:image:type" content="image/webp" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="533" />
+        <meta property="og:image:width" content="1536" />
+        <meta property="og:image:height" content="1024" />
         <meta property="og:image:alt" content="Mavi Basım broşür baskı fiyatları, A4, A5 ve katlamalı broşür çeşitleri" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Broşür Baskı Fiyatları | A4, A5 ve Katlamalı Broşür" />
@@ -775,6 +775,9 @@ export const BrosurPage = () => {
             {/* Collapsible Advanced Technical Details for Graphic Designers */}
             <div className="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50 mb-6">
               <button
+                type="button"
+                aria-expanded={showAdvancedTech}
+                aria-controls="brosur-advanced-tech"
                 onClick={() => setShowAdvancedTech(!showAdvancedTech)}
                 className="w-full text-left p-4 font-black text-xs md:text-sm text-slate-800 flex justify-between items-center hover:bg-slate-100 transition-colors cursor-pointer"
               >
@@ -785,8 +788,7 @@ export const BrosurPage = () => {
                 <ChevronDown size={16} className={`transition-transform text-slate-400 ${showAdvancedTech ? 'rotate-180' : ''}`} />
               </button>
 
-              {showAdvancedTech && (
-                <div className="p-5 pt-0 text-xs text-slate-600 font-medium border-t border-slate-200 space-y-4 bg-white">
+              <div id="brosur-advanced-tech" hidden={!showAdvancedTech} className="p-5 pt-0 text-xs text-slate-600 font-medium border-t border-slate-200 space-y-4 bg-white">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
                     <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
                       <div className="font-black text-slate-900 mb-1">ICC Renk Profili Standartları</div>
@@ -816,8 +818,7 @@ export const BrosurPage = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-              )}
+              </div>
             </div>
           </div>
         </section>
