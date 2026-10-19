@@ -5,7 +5,7 @@ import { getHomeSEO } from "../data/homePageContent";
 import { PAGE_SEARCH_METADATA } from "../data/pageSearchMetadata";
 import { getCitySearchMetadata } from "./citySearchMetadata";
 export { injectSEOMetadata } from "./seoMetadata";
-import { MAKBUZ_DETAILS, PARA_MAKBUZU_DATA, SOZLESME_BASKI_DATA, ADISYON_DATA, SIPARIS_FISI_DATA, SIGORTA_POLICELERI_DATA } from "../data/makbuzData";
+import { MAKBUZ_DETAILS, PARA_MAKBUZU_DATA, SOZLESME_BASKI_DATA, ADISYON_DATA, SIPARIS_FISI_DATA, SIGORTA_POLICELERI_DATA, ARAC_KIRALAMA_DATA } from "../data/makbuzData";
 import { SEO_PAGES_DATA } from "../data/seoPagesData";
 import { BLOG_POSTS } from "../data/blogData";
 import { getBlogMetadata } from "./blogMetadata";
@@ -3671,6 +3671,21 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
         .flatMap(row => row.values));
       productSchema.size = ADISYON_DATA[0].ebat;
       productSchema.material = '70–80 gr 1. hamur beyaz kâğıt';
+      productSchema.offers = {
+        "@type": "AggregateOffer",
+        "priceCurrency": "TRY",
+        "lowPrice": String(Math.min(...prices)),
+        "highPrice": String(Math.max(...prices)),
+        "offerCount": String(prices.length),
+        "url": canonical
+      };
+    }
+
+    if (p === '/arac-kiralama') {
+      // Use published package prices, excluding additional-color charges.
+      const prices = ARAC_KIRALAMA_DATA.flatMap(section => section.rows
+        .filter(row => !row.label.includes('Renk Farkı'))
+        .flatMap(row => row.values));
       productSchema.offers = {
         "@type": "AggregateOffer",
         "priceCurrency": "TRY",
