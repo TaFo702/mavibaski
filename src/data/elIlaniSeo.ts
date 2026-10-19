@@ -27,7 +27,7 @@ export const EL_ILANI_FAQS = [
   },
   {
     q: "El ilanı siparişinde grafik tasarım hizmeti veriliyor mu?",
-    a: "Baskıya hazır olarak iletilen tasarımlar için teknik ölçü ve çözünürlük kontrolü ile dijital PDF prova ücretsiz sunulmaktadır. Grafik desteği var."
+    a: "Baskıya hazır olarak iletilen tasarımlar için teknik ölçü ve çözünürlük kontrolü ile dijital PDF prova ücretsiz sunulmaktadır. Grafik desteği var. Bu kontrol yeni bir el ilanı tasarımı hazırlanmasıyla aynı hizmet değildir. Yeni tasarım veya mevcut dosyada düzenleme talebinizi sipariş öncesinde ileterek kapsam ve varsa ek ücret hakkında bilgi alabilirsiniz."
   },
   {
     q: "Üretim ve kargoya teslim süresi ne kadardır?",

@@ -138,7 +138,7 @@ export const ElIlaniPage: React.FC = () => {
                 Kurumsal tanıtım ve bölgesel dağıtım projeleriniz için 105 gr kuşe başta olmak üzere tek ve çift yön <strong className="text-slate-900 font-black">el ilanı baskı</strong> seçeneklerimizi inceleyebilirsiniz. İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktası üzerinden Türkiye geneline anlaşmalı kargo seçeneği sunulmaktadır.
               </p>
               <p className="text-xs text-slate-600">
-                Katlamalı ve kırımlı tanıtım materyali ihtiyaçlarınız için <Link to="/brosur" className="text-primary font-bold hover:underline">broşür baskı</Link> seçeneklerimizi inceleyebilirsiniz.
+                El ilanı veya el broşürü, kampanya ve hizmet bilgilerini tek yaprak üzerinde sunan tanıtım materyalidir. A5 el broşürü gibi kompakt seçeneklerde kısa mesaj ve iletişim bilgileri öne çıkar. Daha fazla içeriği katlama panellerine ayırmak istediğinizde <Link to="/brosur" className="text-primary font-bold hover:underline">katlamalı broşür baskı</Link> seçeneklerimizi inceleyebilirsiniz.
               </p>
             </div>
           }
@@ -500,7 +500,7 @@ export const ElIlaniPage: React.FC = () => {
               <ul className="space-y-2.5 text-xs md:text-sm text-slate-700 font-medium">
                 <li className="flex items-start gap-2">
                   <AlertCircle size={16} className="text-amber-600 shrink-0 mt-0.5" />
-                  <span><strong>Grafik Tasarım:</strong> Grafik desteği var.</span>
+                  <span><strong>Grafik Tasarım:</strong> Grafik desteği var. Baskıya hazır dosyanın teknik kontrolü ile yeni el ilanı tasarımı farklı ihtiyaçlardır. Yeni tasarım veya mevcut dosyada düzenleme talebinizi sipariş öncesinde ileterek kapsam ve varsa ek ücret hakkında bilgi alabilirsiniz.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <AlertCircle size={16} className="text-amber-600 shrink-0 mt-0.5" />
@@ -511,6 +511,9 @@ export const ElIlaniPage: React.FC = () => {
                   <span><strong>Teslimat:</strong> Üretim ve kargoya teslim süresi; ürün, adet, dosya onayı ve sipariş yoğunluğuna göre teklif aşamasında bildirilir.</span>
                 </li>
               </ul>
+              <p className="mt-4 text-xs md:text-sm text-slate-700 leading-relaxed">
+                El broşürü baskı fiyatlarını karşılaştırırken aynı net kesim ölçüsünü, kâğıt gramajını, baskı yönünü ve adedi esas alın. Daha küçük ebat veya tek yön baskı her tanıtım ihtiyacını karşılamayabilir; önce aktaracağınız içeriğe uygun seçeneği belirleyip aynı özellikler için teklif isteyin. Tasarım ve ek işlem taleplerini de karşılaştırmaya dahil edin.
+              </p>
             </div>
             <p className="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
               İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktası üzerinden destek verilmektedir.

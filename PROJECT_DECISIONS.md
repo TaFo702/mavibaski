@@ -1,5 +1,11 @@
 # PROJECT_DECISIONS.md - Proje Karar Kayıt Dosyası (Architecture & SEO Decision Log)
 
+### 2026-10-19 — El ilanı Planner/GSC içerik uygulaması
+- Kullanıcının uygulama talebiyle mevcut /el-ilani açıklamasında tek yaprak el ilanı/el broşürü ile katlamalı broşür niyeti ayrıldı; mevcut /brosur bağlantısı bu niyeti açıklar.
+- Grafik desteği standart ifadesi korunur. Baskıya hazır dosya kontrolü ile yeni tasarım ayrımı, kapsam ve varsa ek ücretin sipariş öncesinde sorulması açıklanır. Ücretsiz yeni tasarım veya sabit tasarım ücreti vaat edilmez.
+- Mevcut teknik bilgilendirme alanında aynı ölçü, gramaj, baskı yönü ve adetle teklif karşılaştırma açıklaması eklenir. Anahtar kelime veya GSC istatistiği listesi müşteri sayfasına taşınmaz.
+- Tasarım SSS cevabı görünür içerik ve FAQPage için ortak kaynaktan güncellenir. Title, meta description, H1, tarife, fiyat tablosu, adetler, teslimat ve filtre/ışıklandırma kodu korunur. Yeni ürün URL'si açılmaz.
+
 Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün ve dönüşüm kararlarının tarihsel kaydını tutar. Yeni geliştirme önerilerinin geçmiş kararlarla çelişmemesi için bu dosya esas alınır.
 
 * **[2026-10-19] Adisyon GSC İçerik ve Rehber Bağlantıları:**
