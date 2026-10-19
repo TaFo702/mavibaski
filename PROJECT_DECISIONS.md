@@ -2,6 +2,10 @@
 
 Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün ve dönüşüm kararlarının tarihsel kaydını tutar. Yeni geliştirme önerilerinin geçmiş kararlarla çelişmemesi için bu dosya esas alınır.
 
+* **[2026-10-19] Kütahya Ekonomik Fiyat Alanı Gezinme Düzeltmesi:**
+  * **Karar:** Bölüm başlığı kullanıcı isteğiyle `Ekonomik Baskı Fiyatlarımız` olur. Her ürünün görseli, tablosu ve alt düğmesi tek bir gerçek HTML bağlantısı içinde ilgili ürün fiyat sayfasını açar; iç içe bağlantı veya yalnız JavaScript ile yönlendirme kullanılmaz.
+  * **Okunabilirlik:** Satır ve sütun ayraçları ile ürünlerin dış çerçeveleri belirginleştirilir. Turkuaz `Fiyat Listesini İncele` düğmesinin görünümü korunur. Kapsam yalnız Kütahya örneğidir; fiyat verileri ve mevcut ürün fiyat tabloları değişmez.
+
 * **[2026-10-19] Kütahya Üç Görselli Fiyat Tablosu — Karşılaştırma Örneği:**
   * **Kapsam:** Mardin'deki ilk örnek korunur. Kullanıcının görsel referansına göre yalnız `/kutahya-matbaa` için üç ürünlü ikinci örnek hazırlanır; diğer şehirlere yayılmaz.
   * **Sunum:** Mevcut kartvizit, etiket ve magnet görselleri üstte; ürün kodu, özellik, adet ve fiyat bilgileri altta gerçek HTML tablolarında gösterilir. Referanstaki koyu lacivert `#101828`, turkuaz `#29addf` ve beyaz kullanılır. Kullanıcı isteğiyle bu yeni bölümde KDV metni gösterilmez.
