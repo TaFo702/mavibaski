@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { EL_ILANI_FAQS as FAQ_ITEMS } from '../data/elIlaniSeo';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -76,40 +77,6 @@ const GALLERY_ITEMS = [
 ];
 
 // 8 Adet Dengeli Sıkça Sorulan Soru (2 Sütunlu Grid İçin Çift Sayı)
-const FAQ_ITEMS = [
-  {
-    q: "El ilanı baskı fiyatı ve el ilanı bastırma fiyatları nasıl hesaplanır?",
-    a: "El ilanı baskı fiyatı ve el ilanı bastırma fiyatları; tercih edilen net kesim ölçüsü, kâğıt gramajı (105 gr, 115 gr veya 135 gr kuşe), tek veya çift yön renkli baskı seçeneği, sipariş adedi ve talep edilen ek mücellit işlemlerine göre hesaplanır. Net maliyet sipariş özelliklerine göre belirlenir."
-  },
-  {
-    q: "A5 el ilanı ölçüleri ve standart referans ebatları nelerdir?",
-    a: "Standart A5 ebat referansı 14,8 × 21 cm olmakla birlikte, matbaa baskı ve giyotin kesim standartlarında satın alınabilir net kesim ölçüsü 13,8 × 20 cm olarak uygulanmaktadır. Baskı öncesinde bu ölçülere uygun dosya hazırlanması önerilir."
-  },
-  {
-    q: "Fiyat listesinde olmayan adet ve ölçüler için özel teklif alınabilir mi?",
-    a: "Evet, fiyat tablosunda yer almayan 1.000 adet, 5.000 adet, 10.000 adet veya özel el ilanı ölçüleri için talep ettiğiniz ebat, adet, kâğıt cinsi ve baskı yönü bilgilerini ileterek özel teklif alabilirsiniz."
-  },
-  {
-    q: "Tek ve çift yön el ilanı arasındaki fark nedir?",
-    a: "Tek yön el ilanı yalnızca ön yüzeyine renkli baskı yapılan seçenektir. Çift yön el ilanı ise ön ve arka yüzeyin her ikisine de baskı uygulanarak daha kapsamlı bilgi, menü veya kampanya içeriği aktarılmasına olanak tanır."
-  },
-  {
-    q: "El ilanı baskı dosyası nasıl hazırlanmalıdır?",
-    a: "Baskı dosyalarının CMYK renk modunda, en az 300 DPI çözünürlükte ve kenarlardan en az 3 mm kesim payı (taşma payı) bırakılarak PDF, AI veya yüksek kaliteli TIFF formatında hazırlanması gerekmektedir."
-  },
-  {
-    q: "KDV ve kargo ücreti fiyata dahil midir?",
-    a: "Fiyat tablosundaki tutarlar koli bazlı liste fiyatları olup %20 KDV ve kargo bedeli hariçtir. Türkiye geneline anlaşmalı kargo seçeneği ile gönderim sağlanmakta olup kargo bedeli sipariş hacmine göre belirlenir."
-  },
-  {
-    q: "El ilanı siparişinde grafik tasarım hizmeti veriliyor mu?",
-    a: "Baskıya hazır olarak iletilen tasarımlar için teknik ölçü ve çözünürlük kontrolü ile dijital PDF prova ücretsiz sunulmaktadır. Grafik desteği var."
-  },
-  {
-    q: "Üretim ve kargoya teslim süresi ne kadardır?",
-    a: "Üretim ve kargoya teslim süresi; ürün özellikleri, sipariş adedi, grafik dosya onay süreci ve üretim yoğunluğuna göre teklif aşamasında bildirilir. Onaylanan işler tamamlandığında anlaşmalı kargoya teslim edilir."
-  }
-];
 
 export const ElIlaniPage: React.FC = () => {
   const { openProductDetail } = useCart();
@@ -119,71 +86,6 @@ export const ElIlaniPage: React.FC = () => {
   };
 
   // Structured Data Schemas for Google SEO
-  const jsonLdBreadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Ana Sayfa",
-        "item": "https://mavibasim.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Matbaa Ürünleri",
-        "item": "https://mavibasim.com/matbaa"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "El İlanı Baskı Fiyatları",
-        "item": "https://mavibasim.com/el-ilani"
-      }
-    ]
-  };
-
-  const jsonLdProduct = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "El İlanı Baskı Fiyatları ve Ölçüleri",
-    "image": "https://mavibasim.com/images/el-ilani/el-ilani-baski-fiyatlari.webp",
-    "description": "A3, A4, A5 ve dar ebat el ilanı baskı fiyatlarını inceleyin. 105 gr kuşe fiyatları ile farklı gramaj, ölçü, baskı yönü ve adet teklifleri.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Mavi Basım"
-    },
-    "category": "El İlanı Baskı",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "TRY",
-      "lowPrice": "1550",
-      "highPrice": "9400",
-      "offerCount": "14",
-      "priceValidUntil": "2026-12-31",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@type": "PrintingService",
-        "@id": "https://mavibasim.com/#localbusiness",
-        "name": "Mavi Basım Matbaa & Reklam"
-      }
-    }
-  };
-
-  const jsonLdFAQ = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": FAQ_ITEMS.map((item) => ({
-      "@type": "Question",
-      "name": item.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.a
-      }
-    }))
-  };
-
   const customQuoteWhatsappUrl = `https://wa.me/905366022373?text=${encodeURIComponent("Merhaba, web sitenizdeki /el-ilani sayfasından ulaşıyorum. Fiyat listesinde yer almayan özel el ilanı ölçüleri, kâğıt gramajı ve adet seçenekleri için özel teklif almak istiyorum.")}`;
 
   return (
@@ -213,10 +115,7 @@ export const ElIlaniPage: React.FC = () => {
         <meta name="twitter:description" content="A3, A4, A5 ve dar ebat el ilanı baskı fiyatlarını inceleyin. 105 gr kuşe fiyatları ile farklı gramaj, ölçü, baskı yönü ve adet teklifleri." />
         <meta name="twitter:image" content="https://mavibasim.com/images/el-ilani/el-ilani-baski-fiyatlari.webp" />
 
-        {/* Schema Scripts */}
-        <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumb)}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdProduct)}</script>
-        <script type="application/ld+json">{JSON.stringify(jsonLdFAQ)}</script>
+        {/* RouteSEOHead owns the shared JSON-LD for this route. */}
       </Helmet>
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mt-2">

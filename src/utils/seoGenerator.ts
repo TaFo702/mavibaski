@@ -1,3 +1,4 @@
+import { EL_ILANI_SCHEMAS } from '../data/elIlaniSeo';
 import { BROSUR_SCHEMAS } from '../data/brosurSchemas';
 import { getHomeSEO } from "../data/homePageContent";
 import { PAGE_SEARCH_METADATA } from "../data/pageSearchMetadata";
@@ -435,100 +436,7 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
 
   // 1. Match from our Static Pages Dictionary
   if (p === '/el-ilani') {
-    const breadcrumbSchema = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Ana Sayfa",
-          "item": "https://mavibasim.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Matbaa Ürünleri",
-          "item": "https://mavibasim.com/matbaa"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "El İlanı Baskı Fiyatları",
-          "item": "https://mavibasim.com/el-ilani"
-        }
-      ]
-    };
-
-    const productSchema = {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "El İlanı Baskı Fiyatları ve Ölçüleri",
-      "image": "https://mavibasim.com/images/el-ilani/el-ilani-baski-fiyatlari.webp",
-      "description": "A4, A5 ve A6 el ilanı baskı fiyatlarını inceleyin. 105, 115 ve 135 gr kuşe, tek-çift yön baskı, ölçü, adet ve özel teklif bilgileri.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mavi Basım"
-      },
-      "category": "El İlanı Baskı",
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "TRY",
-        "lowPrice": "1550",
-        "highPrice": "9400",
-        "offerCount": "14",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock"
-      }
-    };
-
-    const elIlaniFaqs = [
-      {
-        q: "El ilanı baskı fiyatı ve el ilanı bastırma fiyatları nasıl hesaplanır?",
-        a: "El ilanı baskı fiyatı ve el ilanı bastırma fiyatları; tercih edilen net kesim ölçüsü, kâğıt gramajı (105 gr, 115 gr veya 135 gr kuşe), tek veya çift yön renkli baskı seçeneği, sipariş adedi ve talep edilen ek mücellit işlemlerine göre hesaplanır. Net maliyet sipariş özelliklerine göre belirlenir."
-      },
-      {
-        q: "A5 el ilanı ölçüleri ve standart referans ebatları nelerdir?",
-        a: "Standart A5 ebat referansı 14,8 × 21 cm olmakla birlikte, matbaa baskı ve giyotin kesim standartlarında satın alınabilir net kesim ölçüsü 13,8 × 20 cm olarak uygulanmaktadır. Baskı öncesinde bu ölçülere uygun dosya hazırlanması önerilir."
-      },
-      {
-        q: "Fiyat listesinde olmayan adet ve ölçüler için özel teklif alınabilir mi?",
-        a: "Evet, fiyat tablosunda yer almayan 1.000 adet, 5.000 adet, 10.000 adet veya özel el ilanı ölçüleri için talep ettiğiniz ebat, adet, kâğıt cinsi ve baskı yönü bilgilerini ileterek özel teklif alabilirsiniz."
-      },
-      {
-        q: "Tek ve çift yön el ilanı arasındaki fark nedir?",
-        a: "Tek yön el ilanı yalnızca ön yüzeyine renkli baskı yapılan seçenektir. Çift yön el ilanı ise ön ve arka yüzeyin her ikisine de baskı uygulanarak daha kapsamlı bilgi, menü veya kampanya içeriği aktarılmasına olanak tanır."
-      },
-      {
-        q: "El ilanı baskı dosyası nasıl hazırlanmalıdır?",
-        a: "Baskı dosyalarının CMYK renk modunda, en az 300 DPI çözünürlükte ve kenarlardan en az 3 mm kesim payı (taşma payı) bırakılarak PDF, AI veya yüksek kaliteli TIFF formatında hazırlanması gerekmektedir."
-      },
-      {
-        q: "KDV ve kargo ücreti fiyata dahil midir?",
-        a: "Fiyat tablosundaki tutarlar koli bazlı liste fiyatları olup %20 KDV ve kargo bedeli hariçtir. Türkiye geneline anlaşmalı kargo seçeneği ile gönderim sağlanmakta olup kargo bedeli sipariş hacmine göre belirlenir."
-      },
-      {
-        q: "El ilanı siparişinde grafik tasarım hizmeti veriliyor mu?",
-        a: "Baskıya hazır olarak iletilen tasarımlar için teknik ölçü ve çözünürlük kontrolü ile dijital PDF prova ücretsiz sunulmaktadır. Grafik desteği var."
-      },
-      {
-        q: "Üretim ve kargoya teslim süresi ne kadardır?",
-        a: "Üretim ve kargoya teslim süresi; ürün özellikleri, sipariş adedi, grafik dosya onay süreci ve üretim yoğunluğuna göre teklif aşamasında bildirilir. Onaylanan işler tamamlandığında anlaşmalı kargoya teslim edilir."
-      }
-    ];
-
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": elIlaniFaqs.map(f => ({
-        "@type": "Question",
-        "name": f.q,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": f.a
-        }
-      }))
-    };
+    const { jsonLdBreadcrumb: breadcrumbSchema, jsonLdProduct: productSchema, jsonLdFAQ: faqSchema } = EL_ILANI_SCHEMAS;
 
     let extraHead = `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n`;
     extraHead += `  <script type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;

@@ -156,3 +156,9 @@ Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün 
 - Yalnız /brosur sitemap lastmod değeri gerçek içerik değişikliği günü 2026-10-19 olarak güncellendi.
 - Koruma: fiyat verileri, tablo renderer'ı, tüm fiyat/filtre bölümü ve ışıklandırma kodu ana daldaki sürümle aynı. Testler şema tarifesini satır satır karşılaştırır.
 - İnceleme sınırı: PageSpeed API 429 döndü; farklı telefon ekranları ve bağımsız güncel hız ölçümü tamamlanmadan nihai tam puan verilmez.
+
+### 2026-10-19 — El ilanı ilk HTML ve şema tekilliği
+- /el-ilani mevcut React sayfasıyla prerender edilir ve aynı ağaç hydrate edilir. Mevcut 14 satır, altı galeri görseli, sekiz SSS ve bağlantılar ilk HTML içinde sunulur.
+- Sayfa içi ve legacy JSON-LD üretimi bu rotada kaldırılır; getRouteSEO/RouteSEOHead ortak şemayı kullanır. Canonical tek sahibinden üretilir, şemalar sabit entity kimlikleri taşır.
+- Fiyat aralığı ve teklif sayısı değiştirilmeyen EL_ILANI_DATA kaynağından salt okunur hesaplanır. Ürün açıklamasındaki eski A6 ifadesi mevcut A3/A4/A5/dar ebat kapsamıyla eşleştirilir.
+- Fiyat bölümü, tablo HTML/kod/stilleri, butonlar, tarifeler, içerik ve tasarım korunur. CI testi kaynak hashlerini ve hydration sırasında mevcut tablo düğümünü denetler.

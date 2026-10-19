@@ -1,3 +1,4 @@
+import { ElIlaniPage } from './components/ElIlani';
 import { BrosurPage } from './components/Brosur';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -165,6 +166,18 @@ export function prerenderBrosur() {
     <MemoryRouter initialEntries={['/brosur']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={BrosurRouter} BrosurComponent={BrosurPage} />)
+    .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
+    .replace(/<meta\b[^>]*\/?>/gi, '')
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
+}
+
+// Render the existing page and protected table with the same tree the client hydrates.
+export function prerenderElIlani() {
+  const ElIlaniRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/el-ilani']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={ElIlaniRouter} ElIlaniComponent={ElIlaniPage} />)
     .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
     .replace(/<meta\b[^>]*\/?>/gi, '')

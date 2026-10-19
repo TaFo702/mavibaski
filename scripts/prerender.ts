@@ -48,6 +48,7 @@ async function prerender() {
   let homeContent: string;
   let zarfContent: string;
   let brosurContent: string;
+  let elIlaniContent: string;
   let antetliContent: string;
   let dosyalarContent: string;
   let bloknotlarContent: string;
@@ -69,8 +70,16 @@ async function prerender() {
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
+    elIlaniContent = prerenderElIlani();
+    if ((elIlaniContent.match(/<h1\b/g) || []).length !== 1 ||
+        (elIlaniContent.match(/<table\b/g) || []).length !== 1 ||
+        !elIlaniContent.includes('ELI16') ||
+        !elIlaniContent.includes('El İlanı Baskı Örnekleri') ||
+        !elIlaniContent.includes('id="faq-section"')) {
+      throw new Error('El ilanı prerender is missing the protected table, gallery, FAQ or H1.');
+    }
     brosurContent = prerenderBrosur();
     if ((brosurContent.match(/<h1\b/g) || []).length !== 1 ||
         (brosurContent.match(/id="fiyat-listesi"/g) || []).length !== 1 ||
@@ -234,6 +243,7 @@ async function prerender() {
         seo.extraHead,
         seo.h1Text,
         pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent
+          : pathname === '/el-ilani' ? elIlaniContent
           : pathname === '/brosur' ? brosurContent
           : pathname === '/antetli' ? antetliContent
           : pathname === '/dosyalar' ? dosyalarContent
@@ -270,6 +280,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
         : pathname === '/zarf'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="zarf">')
+        : pathname === '/el-ilani'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="el-ilani">')
         : pathname === '/brosur'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="brosur">')
         : pathname === '/antetli'

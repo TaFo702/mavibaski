@@ -1307,7 +1307,7 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 
 export const CanonicalLink = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/brosur', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
+  return pathname === '/' || ['/brosur', '/el-ilani', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
 };
 
 const LegacyCanonicalLink = () => {
@@ -5028,7 +5028,7 @@ const HomePage = () => {
 
 
 
-export const AppRoutes = ({ BrosurComponent = BrosurPage, ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage, MakbuzComponent = MakbuzFormlarPage, CityComponent = CityPage }: { BrosurComponent?: React.ComponentType; ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType; MakbuzComponent?: React.ComponentType; CityComponent?: React.ComponentType } = {}) => {
+export const AppRoutes = ({ BrosurComponent = BrosurPage, ElIlaniComponent = ElIlaniPage, ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage, MakbuzComponent = MakbuzFormlarPage, CityComponent = CityPage }: { BrosurComponent?: React.ComponentType; ElIlaniComponent?: React.ComponentType; ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType; MakbuzComponent?: React.ComponentType; CityComponent?: React.ComponentType } = {}) => {
   return (
     <React.Suspense fallback={
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
@@ -5041,7 +5041,7 @@ export const AppRoutes = ({ BrosurComponent = BrosurPage, ZarfComponent = ZarfPa
       <Route path="/ambalaj" element={<AmbalajPage />} />
       <Route path="/kartvizit" element={<KartvizitComponent />} />
       <Route path="/brosur" element={<BrosurComponent />} />
-      <Route path="/el-ilani" element={<ElIlaniPage />} />
+      <Route path="/el-ilani" element={<ElIlaniComponent />} />
       <Route path="/afis" element={<AfisPage />} />
       <Route path="/antetli" element={<AntetliComponent />} />
       <Route path="/dosyalar" element={<DosyalarComponent />} />
@@ -5119,7 +5119,7 @@ export const AppRoutes = ({ BrosurComponent = BrosurPage, ZarfComponent = ZarfPa
 
 const SEOMetadataManager = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/brosur', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
+  return pathname === '/' || ['/brosur', '/el-ilani', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
 };
 
 const LegacySEOMetadataManager = () => {
@@ -5227,9 +5227,10 @@ pathname === '/kartvizit' ||
   return null;
 };
 
-export default function App({ Router = BrowserRouter, BrosurComponent, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent, MakbuzComponent, CityComponent }: {
+export default function App({ Router = BrowserRouter, BrosurComponent, ElIlaniComponent, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent, MakbuzComponent, CityComponent }: {
   Router?: React.ComponentType<{ children: React.ReactNode }>;
   BrosurComponent?: React.ComponentType;
+  ElIlaniComponent?: React.ComponentType;
   ZarfComponent?: React.ComponentType;
   BlogComponent?: React.ComponentType;
   AntetliComponent?: React.ComponentType;
@@ -5285,7 +5286,7 @@ export default function App({ Router = BrowserRouter, BrosurComponent, ZarfCompo
             <Navbar />
             
             <main className="flex-grow">
-              <AppRoutes BrosurComponent={BrosurComponent} ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} MakbuzComponent={MakbuzComponent} CityComponent={CityComponent} />
+              <AppRoutes ElIlaniComponent={ElIlaniComponent} BrosurComponent={BrosurComponent} ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} MakbuzComponent={MakbuzComponent} CityComponent={CityComponent} />
             </main>
 
             <Footer />
