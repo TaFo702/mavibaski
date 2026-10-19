@@ -1,3 +1,4 @@
+import { BROSUR_FAQS } from './src/data/brosurFaqs';
 import { createServer } from 'http';
 import express from 'express';
 import path from 'path';
@@ -568,6 +569,11 @@ async function validateProductionHTTP() {
   const brFaqObj = brJsonLdObjects.find(obj => obj['@type'] === 'FAQPage');
   const brFaqQuestionsCount = brFaqObj?.mainEntity?.length || 0;
   const brProductObj = brJsonLdObjects.find(obj => obj['@type'] === 'Product');
+  const brVisibleText = brosurDoc.querySelector('main')?.textContent || '';
+  const brFaqMatchesVisible = BROSUR_FAQS.every(({ q, a }) =>
+    brVisibleText.includes(q) && brVisibleText.includes(a) &&
+    brFaqObj?.mainEntity?.some((entry: { name: string; acceptedAnswer?: { text: string } }) =>
+      entry.name === q && entry.acceptedAnswer?.text === a));
 
   console.log(` - HTTP Status: ${brosurRes.status} ${brosurRes.status === 200 ? '✅' : '🔴'}`);
   console.log(` - Title Exact Match: "${brTitle}" ${brTitle === 'Broşür Baskı Fiyatları | A4, A5 ve Katlamalı Broşür' ? '✅' : '🔴'}`);
@@ -582,7 +588,7 @@ async function validateProductionHTTP() {
   console.log(` - Twitter Title: "${brTwTitle}" ${brTwTitle === brTitle ? '✅' : '🔴'}`);
   console.log(` - Twitter Description: "${brTwDesc}" ${brTwDesc === brDesc ? '✅' : '🔴'}`);
   console.log(` - JSON-LD Types Found: [${brJsonLdTypes.join(', ')}] ${brJsonLdTypes.includes('BreadcrumbList') && brJsonLdTypes.includes('Product') && brJsonLdTypes.includes('FAQPage') ? '✅' : '🔴'}`);
-  console.log(` - FAQPage Questions Count: ${brFaqQuestionsCount} ${brFaqQuestionsCount === 10 ? '✅ (Exact 10 questions)' : '🔴'}`);
+  console.log(` - FAQPage Questions Count: ${brFaqQuestionsCount} ${brFaqQuestionsCount === BROSUR_FAQS.length && brFaqMatchesVisible ? '✅ (All visible questions and answers match schema)' : '🔴'}`);
 
   // Prohibited words check on /brosur
   const brosurProhibited = [
@@ -607,7 +613,7 @@ async function validateProductionHTTP() {
   const hasDuplicateCtaText = /Sipariş Oluştur\s*Sipariş Oluştur/i.test(brosurBody);
   console.log(` - Duplicate CTA Text Check: ${!hasDuplicateCtaText ? 'PASSED ✅' : 'FAILED (Duplicate text found) 🔴'}`);
 
-  if (foundBrosurProhibited.length > 0 || brFaqQuestionsCount !== 10 || hasDuplicateCtaText) {
+  if (foundBrosurProhibited.length > 0 || brFaqQuestionsCount !== BROSUR_FAQS.length || !brFaqMatchesVisible || hasDuplicateCtaText) {
     totalPassed = -1;
   }
 
