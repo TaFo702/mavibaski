@@ -2,6 +2,12 @@
 
 Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün ve dönüşüm kararlarının tarihsel kaydını tutar. Yeni geliştirme önerilerinin geçmiş kararlarla çelişmemesi için bu dosya esas alınır.
 
+* **[2026-10-19] Adisyon GSC İçerik ve Rehber Bağlantıları:**
+  * **Hedefleme:** Ticari adisyon baskı/fiyat/örnek sorgularının ana hedefi `/adisyon`; otokopili kâğıt anlamı ve çalışma biçimi için mevcut `/blog/adisyon-ve-makbuzlarda-otokopili-kagit` rehberi kullanılır. Aynı niyete yeni URL açılmaz.
+  * **İçerik:** Adisyon örneklerinde boş/doldurulmuş alan ayrımı, galeriye içindekiler bağlantısı ve rehbere geçiş eklendi. Rehberde kısa tanım, tek nüsha/otokopili ayrımı, görünür SSS ve ilgili form/koçan bağlantıları birlikte sunulur.
+  * **Teknik kapsam:** Bu rehberin mevcut React içeriği ilk HTML’de render edilir ve aynı ağaç hydrate edilir. Görünür SSS ve şema aynı kaynaktan gelir; güncelleme tarihi yalnız bu yazıda 19 Ekim 2026’dır.
+  * **Korunan bilgiler:** Mevcut title, meta description, H1, fiyat tabloları, fiyatlar, adetler ve teslimat bilgileri korunur. GSC sayıları veya fırsat puanları müşteri sayfasına konulmaz; sıralama garantisi verilmez.
+
 * **[2026-10-19] Ekonomik Baskı Fiyatlarının 81 Şehre Uygulanması:**
   * **Kapsam:** Kullanıcı iki örneği inceledikten sonra üç görselli, tamamı tıklanabilir düzeni mevcut 81 şehir sayfası için onayladı. İlk ürün her zaman broşürdür. Diğer iki ürün, fiyatı ve görseli bulunan 14 gerçek ürün arasından plaka koduna göre sabit seçilir; 81 şehirde aynı ürün çifti tekrarlanmaz, ardışık şehirlerde ikinci ve üçüncü konumlar değişir.
   * **Fiyat doğruluğu:** Tutar, ebat ve özellikler mevcut ürün veri kaynaklarından okunur. Kullanıcı seçimiyle 81 şehrin ilk broşür kartında `1CA5` satırının fiyatı ve bilgileri gösterilir. Adet her ürünün kendi paket adedidir. İlave sipariş, özel cm² ve yalnız teklif istenen satırlar başlangıç paket bedeli olarak gösterilmez. Ürün fiyat verileri ve mevcut fiyat tabloları korunur.

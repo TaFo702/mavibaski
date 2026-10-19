@@ -21,12 +21,13 @@ export function blogDateISO(label: string): string {
 }
 
 export function getBlogMetadata(post: BlogPost) {
+  const modifiedLabel = post.updatedDate || BLOG_METADATA_UPDATED_DATE;
   return {
     title: post.seoTitle || `${post.title} - Mavi Basım`,
     author: BLOG_AUTHOR,
     publishedLabel: post.date,
-    modifiedLabel: BLOG_METADATA_UPDATED_DATE,
+    modifiedLabel,
     datePublished: blogDateISO(post.date),
-    dateModified: blogDateISO(BLOG_METADATA_UPDATED_DATE),
+    dateModified: blogDateISO(modifiedLabel),
   };
 }

@@ -938,12 +938,17 @@ export const MakbuzFormlarPage = () => {
                   </a>
                 </>
               )}
+              {pathId === 'adisyon' && (
+                <a href="#adisyon-baski-ornekleri" onClick={(e) => scrollToSection(e, 'adisyon-baski-ornekleri')} className="bg-white hover:bg-primary hover:text-white border border-slate-200 p-2.5 rounded-xl transition-all flex items-center gap-1.5 shadow-2xs group cursor-pointer">
+                  <span className="text-primary group-hover:text-white font-black">6.</span> Baskı Örnekleri
+                </a>
+              )}
               <a 
                 href="#sss-bolumu" 
                 onClick={(e) => scrollToSection(e, 'sss-bolumu')}
                 className="bg-white hover:bg-primary hover:text-white border border-slate-200 p-2.5 rounded-xl transition-all flex items-center gap-1.5 shadow-2xs group cursor-pointer"
               >
-                <span className="text-primary group-hover:text-white font-black">{isSiparisFisi ? '8.' : pathId === 'para-makbuzu' ? '5.' : pathId === 'tahsilat-makbuzu' ? '7.' : '6.'}</span> Sıkça Sorulan Sorular
+                <span className="text-primary group-hover:text-white font-black">{isSiparisFisi ? '8.' : pathId === 'para-makbuzu' ? '5.' : pathId === 'tahsilat-makbuzu' || pathId === 'adisyon' ? '7.' : '6.'}</span> Sıkça Sorulan Sorular
               </a>
             </nav>
           </div>
@@ -1203,7 +1208,7 @@ export const MakbuzFormlarPage = () => {
 
 
           {/* ÜRÜN FOTOĞRAF GALERİSİ */}
-          <div className="mb-12">
+          <div id={pathId === 'adisyon' ? 'adisyon-baski-ornekleri' : undefined} className="mb-12 scroll-mt-24">
             <div className="flex justify-between items-center mb-6 px-2">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-8 bg-primary rounded-full" />
@@ -1358,6 +1363,9 @@ export const MakbuzFormlarPage = () => {
                           Otokopili seçeneğinde kendinden karbonlu kâğıda basım yapılır. Üst nüshaya yazılanlar doğrudan alt kopyaya geçer.
                         </p>
                       </div>
+                      <p className="text-xs sm:text-sm leading-relaxed">
+                        Nüshalar arasındaki aktarımı ve kâğıt seçimini <Link to="/blog/adisyon-ve-makbuzlarda-otokopili-kagit" className="font-bold text-primary underline underline-offset-2 hover:no-underline">otokopili kâğıt nedir, nasıl çalışır?</Link> rehberimizden inceleyebilirsiniz.
+                      </p>
                     </div>
                   ) : (
                     <>
@@ -2003,9 +2011,14 @@ export const MakbuzFormlarPage = () => {
                       </p>
                     </>
                   ) : pathId === 'adisyon' ? (
-                    <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">
-                      Adisyon basımı siparişlerinizde firma logonuz, adres bilgileriniz ve masa düzeninize uygun sütun alanları kurumsal kimliğinize özel olarak hazırlanmaktadır.
-                    </p>
+                    <>
+                      <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">
+                        Adisyon basımı siparişlerinizde firma logonuz, adres bilgileriniz ve masa düzeninize uygun sütun alanları kurumsal kimliğinize özel olarak hazırlanmaktadır.
+                      </p>
+                      <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">
+                        Boş adisyon örneğinde ürün, miktar ve tutar sütunları sipariş sırasında doldurulmak üzere bırakılır. Doldurulmuş örnek, bu alanların kullanımını gösterir. İşletmenize uygun satır sayısını ve masa/garson alanlarını baskı öncesi PDF provada kontrol edebilirsiniz.
+                      </p>
+                    </>
                   ) : (
                     <>
                       <p className="text-gray-600 text-sm md:text-base font-medium leading-relaxed">

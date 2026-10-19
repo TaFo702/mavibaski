@@ -15,6 +15,24 @@ const getRelatedProducts = (slug: string, category: string) => {
   const normSlug = slug.toLowerCase();
   const normCategory = category.toLowerCase();
 
+  if (normSlug === 'adisyon-ve-makbuzlarda-otokopili-kagit') {
+    return {
+      introTitle: 'Otokopili Kâğıtla Basılan Form ve Koçanlar',
+      introDesc: 'Kaydetmek istediğiniz işleme göre uygun ürünü seçin; ölçü, cilt ve nüsha seçeneklerini ilgili ürün sayfasında karşılaştırın.',
+      bullets: [
+        'Restoran ve kafe siparişleri için adisyon koçanları.',
+        'Müşteri ve ürün siparişlerini kaydetmek için sipariş fişleri.',
+        'Alınan ve yapılan ödemeleri ayrı kayıtlarda tutmak için tahsilat ve tediye makbuzları.'
+      ],
+      products: [
+        { name: 'Adisyon Baskı', desc: 'Restoran ve Kafe Koçanları', reason: 'Tek nüsha standart ürün ile ayrıca fiyatlanan otokopili seçenekleri karşılaştırın.', path: '/adisyon', img: '/images/adisyon/otokopili-adisyon-baski.webp', alt: 'Otokopili adisyon koçanı örneği', title: 'Adisyon Baskı Seçenekleri' },
+        { name: 'Sipariş Fişi Baskı', desc: 'Otokopili Sipariş Formları', reason: 'Sipariş bilgilerini müşteri ve işletme nüshalarıyla kaydetmek için inceleyin.', path: '/siparis-fisi', img: '/images/siparis-fisi/siparis-fisi-basimi.webp', alt: 'Otokopili sipariş fişi örneği', title: 'Sipariş Fişi Baskı Seçenekleri' },
+        { name: 'Tahsilat Makbuzu', desc: 'Alınan Ödemelerin Kaydı', reason: 'Tahsilat bilgilerini numaratörlü ve otokopili koçanlarda kaydetmek için inceleyin.', path: '/tahsilat-makbuzu', img: '/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp', alt: 'Otokopili tahsilat makbuzu örneği', title: 'Tahsilat Makbuzu Baskı' },
+        { name: 'Tediye Makbuzu', desc: 'Yapılan Ödemelerin Kaydı', reason: 'Ödeme ve avans çıkışları için kullanılan koçan seçeneklerini inceleyin.', path: '/tediye-makbuzu', img: '/images/tediye-makbuzu/numaratorlu-tediye-makbuzu.webp', alt: 'Numaratörlü tediye makbuzu örneği', title: 'Tediye Makbuzu Baskı' }
+      ]
+    };
+  }
+
   // 1. Emlak / Makbuz / Form / Sözleşme
   if (
     normSlug.includes('yer-gosterme') || 
@@ -580,7 +598,7 @@ export const BlogPage = () => {
     // Render Detail View
     return (
       <div className="bg-neutral-50 min-h-screen pb-24">
-        {!['zarf-baskisinda-diplomat-ve-torba-zarf', 'antetli-kagit-baskisinda-80gr-1.hamur'].includes(activePost.slug) && <Helmet>
+        {!['zarf-baskisinda-diplomat-ve-torba-zarf', 'antetli-kagit-baskisinda-80gr-1.hamur', 'adisyon-ve-makbuzlarda-otokopili-kagit'].includes(activePost.slug) && <Helmet>
           <title>{displayTitle}</title>
           <meta name="description" content={displayDesc} />
           <meta property="og:title" content={displayTitle} />

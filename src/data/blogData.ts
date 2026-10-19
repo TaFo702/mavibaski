@@ -4,6 +4,7 @@ export interface BlogPost {
   seoTitle?: string;
   excerpt: string;
   date: string;
+  updatedDate?: string;
   readTime: string;
   category: string;
   image: string;
@@ -3233,15 +3234,22 @@ BTN_LINK: https://wa.me/905366022373
     title: 'Resmi Evraklarda Otokopili (Kendinden Karbonlu) Kağıt Teknolojisi',
     excerpt: 'Adisyon koçanları, tahsilat makbuzları ve teslimat fişlerinde alttaki nüshaya karbon kağıtsız yazıyı pürüzsüz geçiren mikrokapsül sırrı.',
     date: '25 Nisan 2026',
+    updatedDate: '19 Ekim 2026',
     readTime: '6 Dk Okuma',
     category: 'Makbuz & Muhasebe',
     image: '/images/adisyon/otokopili-adisyon-baski.webp',
     schemaType: 'Article',
-    content: `## Resmi Evraklarda Otokopili (Kendinden Karbonlu) Kağıt Teknolojisi
+    content: `## Otokopili Kâğıt Nedir, Ne İşe Yarar?
 
-Adisyon defterlerinde, tediye ve tahsilat makbuzlarında, üste yazılan kalemin yazısını alttaki sarı, pembe nüshalara karbon kağıdı koymadan sihirli bir şekilde geçiren kağıda **Otokopili Kağıt** denir. 
+Otokopili kâğıt, üst nüshaya kalemle yazılan bilgiyi araya ayrı bir karbon kâğıdı koymadan alt nüshalara aktaran kendinden kopyalı kâğıttır. Adisyon, sipariş fişi ve makbuz gibi aynı kaydın birden fazla kişide veya birimde kalması gereken basılı formlarda kullanılır. Kalem basıncıyla çalışan bu kopyalama özelliği NCR olarak da adlandırılır.
 
-Resmi dökümler için [Adisyon ve Makbuz Baskı](/makbuz-ve-formlar) döküm sitemizi gezebilir, yanına kurumsal [Diplomat Zarflar sayfasına](/zarf) ait zarfları sipariş verebilir ve ödeme kayıtları için [Tahsilat Makbuzu sayfasına](/tahsilat-makbuzu) ait koçanları inceleyebilirsiniz.
+Restoran ve kafe kayıtları için [adisyon baskı seçeneklerini](/adisyon), genel ticari siparişler için [otokopili sipariş fişini](/siparis-fisi), alınan ödemelerin kaydı için [tahsilat makbuzunu](/tahsilat-makbuzu) inceleyebilirsiniz. Farklı kullanım amaçlarını [makbuz ve form çeşitleri](/makbuz-ve-formlar) sayfasında karşılaştırabilirsiniz.
+
+### Tek Nüsha ve Otokopili Adisyon Arasındaki Fark
+
+Tek nüsha adisyonda yalnız üzerine yazılan yaprak bulunur; altta aynı kaydı alan bir suret yoktur. Otokopili adisyonda ise üst yaprağa yazılan sipariş alt nüshalara da aktarılır. Mutfak, kasa veya işletme arşivinde aynı kaydın kalması gerekiyorsa nüsha sayısı bu iş akışına göre seçilir.
+
+[Adisyon fiyat tablosu](/adisyon#fiyat-tablosu) standart tek nüsha ürüne aittir. Otokopili, çok nüshalı ve farklı ölçülü üretimler ayrıca fiyatlandırılır; seçenekleri teklif öncesinde belirtmeniz gerekir.
 
 :::info-cards
 NCR Kimyasal Mikrokapsüller
@@ -3303,6 +3311,14 @@ BTN_TEXT: WhatsApp Makbuz Hattı
 BTN_LINK: https://wa.me/905366022373
 :::`,
     faq: [
+      {
+        question: 'Otokopili ne demek?',
+        answer: 'Otokopili, üst nüshaya yazılan bilgilerin ayrı bir karbon kâğıdı kullanılmadan alt nüshalara aktarılması demektir. Bu amaçla kullanılan kendinden kopyalı otokopili kâğıt, adisyon, sipariş fişi ve makbuz gibi birden fazla nüshası gereken formlarda tercih edilir.'
+      },
+      {
+        question: 'Her adisyon koçanı otokopili midir?',
+        answer: 'Hayır. Tek nüsha adisyonun alt kopyası bulunmaz. Otokopili adisyon, aynı sipariş kaydının mutfak, kasa veya arşiv için alt nüshalara da aktarılmasını sağlar. Adisyon sayfamızdaki standart tek nüsha fiyatları ile ayrıca fiyatlandırılan otokopili seçenekler birbirinden ayrıdır.'
+      },
       {
         question: 'Otokopili kağıtlar kaç nüsha yapılabilir?',
         answer: 'İhtiyaca göre 2 nüshadan (Asıl + Suret) başlayıp 4 nüshaya kadar ardışık dökümler sorunsuzca sağlanabilmektedir.'
