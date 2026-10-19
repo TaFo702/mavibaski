@@ -1307,7 +1307,7 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 
 export const CanonicalLink = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
+  return pathname === '/' || ['/brosur', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
 };
 
 const LegacyCanonicalLink = () => {
@@ -5119,7 +5119,7 @@ export const AppRoutes = ({ BrosurComponent = BrosurPage, ZarfComponent = ZarfPa
 
 const SEOMetadataManager = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
+  return pathname === '/' || ['/brosur', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
 };
 
 const LegacySEOMetadataManager = () => {

@@ -22,7 +22,6 @@ import {
   FeatureTooltip 
 } from '../App';
 import { BROSUR_FAQS } from '../data/brosurFaqs';
-import { BROSUR_SCHEMAS } from '../data/brosurSchemas';
 import { CategoryHero } from './CategoryHero';
 import { RelatedBlogPosts } from './RelatedBlogPosts';
 import { 
@@ -246,10 +245,9 @@ export const BrosurPage = () => {
     );
   };
 
-  const { breadcrumbSchema, productSchema, faqSchema, organizationSchema } = BROSUR_SCHEMAS;
-
   return (
     <div className="bg-neutral-50 min-h-screen pb-20">
+      {/* RouteSEOHead owns JSON-LD in the head for initial HTML and navigation. */}
       <Helmet>
         <title>Broşür Baskı Fiyatları | A4, A5 ve Katlamalı Broşür</title>
         <meta name="description" content="A4, A5 ve A3 broşür baskı fiyatlarını; 115, 130 ve 200 gr kuşe seçeneklerini inceleyin. Katlama, ölçü ve baskı dosyası bilgilerini öğrenin." />
@@ -269,10 +267,6 @@ export const BrosurPage = () => {
         <meta name="twitter:title" content="Broşür Baskı Fiyatları | A4, A5 ve Katlamalı Broşür" />
         <meta name="twitter:description" content="A4, A5 ve A3 broşür baskı fiyatlarını; 115, 130 ve 200 gr kuşe seçeneklerini inceleyin. Katlama, ölçü ve baskı dosyası bilgilerini öğrenin." />
         <meta name="twitter:image" content="https://mavibasim.com/images/brosur/brosur-baski-fiyatlari.webp" />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
       </Helmet>
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mt-2">
