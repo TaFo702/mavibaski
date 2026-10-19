@@ -54,32 +54,12 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
         <p className="text-xs font-bold text-primary mb-2">{city.region} · Sipariş ve kargo ile gönderim</p>
         <h1 id="city-title" className="text-2xl md:text-4xl font-black text-slate-900 leading-tight mb-4">{city.name} Matbaa ve Baskı Hizmetleri</h1>
         <p className="text-base md:text-lg font-semibold text-primary mb-4">{seo.desc}</p>
-        {priceExamples.length === 0 ? serviceInfo : null}
         <div className="flex flex-wrap gap-3">
           <a href={quoteLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white font-bold px-5 py-3 rounded-xl"><WhatsAppIcon size={18} />Teklif Bilgilerini WhatsApp ile İlet</a>
           <a href={PHONE_LINK} className="inline-flex items-center gap-2 bg-slate-900 text-white font-bold px-5 py-3 rounded-xl"><PhoneCall size={18} />Müşteri Hizmetleri</a>
         </div>
-        {priceExamples.length > 0 ? <>
-          {city.slug === 'kutahya-matbaa' ? <CityImagePriceTable examples={priceExamples} /> : <section id="ornek-fiyatlar" aria-labelledby="price-examples-title" className="mt-7 pt-6 border-t border-slate-200 scroll-mt-24">
-            <h2 id="price-examples-title" className={headingClass}>Örnek Baskı Fiyatları</h2>
-            <p className="text-sm text-slate-600 mb-4">Belirtilen adet ve özellikler için toplam baskı bedellerini inceleyin. Kartı seçerek ürünün tüm fiyatlarına ulaşabilirsiniz.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {priceExamples.map(example => <a key={example.path} href={example.path} data-price-example={example.item.code} className="group flex flex-col rounded-xl border border-sky-200 bg-sky-50/50 p-5 text-slate-900 transition-colors hover:border-primary hover:bg-sky-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-700">
-                <h3 className="text-lg font-black mb-2">{example.quantity} {example.name} Baskı</h3>
-                <p className="text-sm text-slate-700 leading-relaxed mb-3">{example.item.ebat ? `${example.item.ebat} · ` : ''}{example.item.desc}</p>
-                <p className="text-xs text-slate-500 mb-3">Ürün kodu: {example.item.code}</p>
-                <div className="mt-auto">
-                  <p className="text-xs font-semibold text-slate-600">Toplam baskı bedeli</p>
-                  <p className="text-3xl font-black text-slate-900 mt-1">{example.item.price}</p>
-                  <p className="text-xs font-semibold text-slate-600 mt-1">%20 KDV dahil değildir.</p>
-                  <span className="inline-flex items-center gap-2 min-h-11 text-primary font-bold mt-3">Tüm {example.name} Fiyatlarını İncele<ChevronRight size={16} /></span>
-                </div>
-              </a>)}
-            </div>
-            <p className="text-xs text-slate-600 mt-4">Fiyatlar yalnızca gösterilen baskı seçenekleri içindir. Kargo bedeli ve gönderim planı sipariş sırasında netleştirilir.</p>
-          </section>}
-          <div className="mt-6">{serviceInfo}</div>
-        </> : null}
+        <CityImagePriceTable examples={priceExamples} />
+        <div className="mt-6">{serviceInfo}</div>
         <nav aria-label="Sayfa bölümleri" className="flex flex-wrap gap-x-5 gap-y-2 mt-6 text-sm font-bold text-primary">
           <a href="#urun-secimi">Ürün seçimi</a><a href="#teklif-bilgileri">Teklif bilgileri</a><a href="#tum-urunler">Tüm ürünler</a><a href="#dosya-onay">Dosya ve onay</a><a href="#kargo-plani">Gönderim</a>
         </nav>

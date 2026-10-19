@@ -2,6 +2,12 @@
 
 Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün ve dönüşüm kararlarının tarihsel kaydını tutar. Yeni geliştirme önerilerinin geçmiş kararlarla çelişmemesi için bu dosya esas alınır.
 
+* **[2026-10-19] Ekonomik Baskı Fiyatlarının 81 Şehre Uygulanması:**
+  * **Kapsam:** Kullanıcı iki örneği inceledikten sonra üç görselli, tamamı tıklanabilir düzeni mevcut 81 şehir sayfası için onayladı. İlk ürün her zaman broşürdür. Diğer iki ürün, fiyatı ve görseli bulunan 14 gerçek ürün arasından plaka koduna göre sabit seçilir; 81 şehirde aynı ürün çifti tekrarlanmaz, ardışık şehirlerde ikinci ve üçüncü konumlar değişir.
+  * **Fiyat doğruluğu:** Tutar, ebat ve özellikler mevcut ürün veri kaynaklarından okunur. Adet her ürünün kendi paket adedidir. İlave sipariş, özel cm² ve yalnız teklif istenen satırlar başlangıç paket bedeli olarak gösterilmez. Ürün fiyat verileri ve mevcut fiyat tabloları korunur.
+  * **SEO ve erişim:** Mevcut şehir başlıkları, meta açıklamaları, canonical, hizmet ve SSS şemaları korunur. Yeni bölüm ilk HTML ve tarayıcıda aynı veriden oluşur. Ürün bağlantıları gerçek HTML bağlantılarıdır; görünür içerik ve görseller hedef ürünü açıklar. Ürün sıralaması şehir bazlı talep veya tek başına SEO özgünlüğü kanıtı olarak sunulmaz. Şube, süre, yerel müşteri veya sektörel iddia uydurulmaz.
+  * **Sunum:** Onaylı renkler, belirgin ayraçlar ve turkuaz düğme korunur. Kullanıcı isteğiyle yeni fiyat alanında KDV metni bulunmaz. Mevcut görseller yeniden kullanılır; mobilde aşağıda kalan ikinci ve üçüncü görseller tembel yüklenir.
+
 * **[2026-10-19] Kütahya Ekonomik Fiyat Alanı Gezinme Düzeltmesi:**
   * **Karar:** Bölüm başlığı kullanıcı isteğiyle `Ekonomik Baskı Fiyatlarımız` olur. Her ürünün görseli, tablosu ve alt düğmesi tek bir gerçek HTML bağlantısı içinde ilgili ürün fiyat sayfasını açar; iç içe bağlantı veya yalnız JavaScript ile yönlendirme kullanılmaz.
   * **Okunabilirlik:** Satır ve sütun ayraçları ile ürünlerin dış çerçeveleri belirginleştirilir. Turkuaz `Fiyat Listesini İncele` düğmesinin görünümü korunur. Kapsam yalnız Kütahya örneğidir; fiyat verileri ve mevcut ürün fiyat tabloları değişmez.
