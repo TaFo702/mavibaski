@@ -29,3 +29,6 @@ jobs:
 
       - name: Verify para makbuzu hydration, pricing preservation and order flow
         run: node validate-para-fix.cjs
+
+      - name: Verify brochure hydration, schema ownership and protected filters
+        run: node validate-brosur-hydration.cjs

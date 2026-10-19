@@ -141,3 +141,9 @@ Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün 
   * **Üretim ve Teslim Süresi:** Kesin gün vaadi verilmez; `Üretim ve teslim süresi ürün, adet, malzeme ve onay sürecine göre teklif aşamasında paylaşılır.`
   * **Schema Değerlendirmeleri:** Review ve AggregateRating yalnız gerçek, görünür ve doğrulanabilir değerlendirme verisi varsa kullanılabilir. Doğrulanabilir veri yoksa kesinlikle eklenemez.
 
+
+### 2026-10-19 — Broşür hydration ve JSON-LD sahipliği
+- React 19, Helmet içindeki JSON-LD scriptlerini gövde içinde bırakır. Prerender sırasında bu scriptlerin kaldırılması istemci ağacıyla eşleşmeyi bozuyordu.
+- Broşür JSON-LD kaynağı yalnız getRouteSEO/RouteSEOHead oldu; sayfa içi scriptler ve eski global yöneticinin broşür kapsamı kaldırıldı. İçerik, title, açıklama ve H1 değişmedi.
+- Doğrudan yükleme ve geri gezinmede gerçek hydration, tekil şema/metadata, 12 SSS, fiyat tablosu düğümünün korunması, ebat filtresi ve mevcut ışıklandırma döngüsü CI testine eklendi.
+- Fiyat verisi, tablo renderer'ı, fiyat/filtre bölümü ve 700 ms ışıklandırma kodu değişmedi.
