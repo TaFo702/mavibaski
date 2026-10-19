@@ -12,6 +12,7 @@ const application = (
 
 const path = window.location.pathname.replace(/\/$/, '') || '/';
 if ((container.dataset.prerendered === 'home' && path === '/') ||
+    (container.dataset.prerendered === 'afis' && path === '/afis') ||
     (container.dataset.prerendered === 'el-ilani' && path === '/el-ilani') ||
     (container.dataset.prerendered === 'brosur' && path === '/brosur') ||
     (container.dataset.prerendered === 'zarf' && path === '/zarf') ||

@@ -1,3 +1,4 @@
+import { AfisPage } from './components/Afis';
 import { ElIlaniPage } from './components/ElIlani';
 import { BrosurPage } from './components/Brosur';
 import React from 'react';
@@ -178,6 +179,18 @@ export function prerenderElIlani() {
     <MemoryRouter initialEntries={['/el-ilani']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={ElIlaniRouter} ElIlaniComponent={ElIlaniPage} />)
+    .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
+    .replace(/<meta\b[^>]*\/?>/gi, '')
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
+}
+
+// Render the existing afiş page without changing its protected table.
+export function prerenderAfis() {
+  const AfisRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/afis']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={AfisRouter} AfisComponent={AfisPage} />)
     .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
     .replace(/<meta\b[^>]*\/?>/gi, '')

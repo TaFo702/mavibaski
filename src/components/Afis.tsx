@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { AFIS_SSS } from '../data/afisSeo';
 import { Link } from 'react-router-dom';
 import { 
   Printer, 
@@ -116,88 +116,44 @@ const AFIS_GALLERY = [
   {
     filename: "afis-baski-fiyatlari.webp",
     src: "/images/afis/afis-baski-fiyatlari.webp",
-    title: "Afiş Baskı Fiyatları ve Çeşitleri",
-    desc: "105 gr, 135 gr ve 170 gr kuşe kâğıt seçenekleriyle farklı ebatlarda ofset afiş baskı çözümleri.",
-    badge: "105 - 170 gr Kuşe"
+    title: "Kiralık ve Satılık Emlak Afişleri",
+    desc: "Sarı zemin ve kırmızı başlıklarla hazırlanmış kiralık ve satılık emlak ilanı tasarımları.",
+    badge: "Emlak İlanı"
   },
   {
     filename: "duvar-afisi-ornegi.webp",
     src: "/images/afis/duvar-afisi-ornegi.webp",
-    title: "Duvar Afişi ve Poster Baskı Örneği",
-    desc: "34×49 cm ve 49×69 cm net kesim ölçüleri ile büyük afiş boyutlarının karşılaştırmalı sunumu.",
-    badge: "Duvar Afişi"
+    title: "Gayrimenkul Tanıtım Posteri",
+    desc: "Bina görseli, gayrimenkul hizmetleri ve iletişim alanı içeren dikey tanıtım posteri.",
+    badge: "Gayrimenkul"
   },
   {
     filename: "afis-ve-poster-baski.webp",
     src: "/images/afis/afis-ve-poster-baski.webp",
-    title: "Kuşe Afiş ve Poster Baskı",
-    desc: "Ekonomik ve tok gramajlı afiş kağıdı dokuları, parlak yüzey yansıması ve renk doygunluğu.",
-    badge: "Parlak Kuşe Kâğıt"
+    title: "Dekorasyon Hizmetleri Afişi",
+    desc: "Siyah ve sarı renklerle dekorasyon hizmetlerini ve uygulama örneklerini tanıtan afiş tasarımı.",
+    badge: "Dekorasyon"
   },
   {
     filename: "reklam-afis-tasarimi.webp",
     src: "/images/afis/reklam-afis-tasarimi.webp",
-    title: "Reklam ve Kampanya Afiş Tasarımı",
-    desc: "Vitrin, mağaza içi ve sokak duyurularında kullanılan reklam afiş baskı ve tanıtım tasarımları.",
+    title: "Mavi Basım Kurumsal Tanıtım Afişi",
+    desc: "Matbaa ürünleri, hizmet ikonları ve iletişim bilgilerini bir araya getiren kurumsal tanıtım tasarımı.",
     badge: "Reklam Afişi"
   },
   {
     filename: "afis-baski-detayi.webp",
     src: "/images/afis/afis-baski-detayi.webp",
-    title: "Afiş ve Poster Baskı Detayı",
-    desc: "CMYK renk modu, taşma payı ve tipografi hiyerarşisiyle profesyonel afiş hazırlama adımları.",
-    badge: "Baskı Detayı"
+    title: "Papağan Görselli Tanıtım Posteri",
+    desc: "Renkli papağan görseli ve baskı hizmetleri listesiyle hazırlanmış Mavi Basım tanıtım posteri.",
+    badge: "Tanıtım Posteri"
   },
   {
     filename: "afis-baski-fiyatlari.webp",
     src: "/images/afis/afis-baski-fiyatlari.webp",
-    title: "Ofset Afiş Baskı Çözümleri",
-    desc: "Yüksek tirajlı kampanya ve duyurular için ofset baskı, paketleme ve sevk aşaması.",
-    badge: "Ofset Baskı"
-  }
-];
-
-// 10 ADET SSS (TAM OLARAK server.ts VE JSON-LD İLE EŞLEŞİR)
-const AFIS_SSS = [
-  {
-    q: "Afiş baskı fiyatları ve afiş bastırma fiyatları nasıl hesaplanır?",
-    a: "Afiş baskı fiyatları ve afiş bastırma fiyatları; tercih edilen baskı ebadı (34×49 cm / 35×50 cm veya 49×69 cm / 50×70 cm), kâğıt gramajı (105 gr, 135 gr veya 170 gr kuşe ile 120 gr Blueback), sipariş adedi ve selefon gibi ek işlemlere göre hesaplanır."
-  },
-  {
-    q: "35x50 cm ve 50x70 cm afiş ölçüleri ile net kesim ebatları nelerdir?",
-    a: "Matbaacılık tabaka kesim standartlarında 35×50 cm afiş için satın alınabilir net kesim ölçüsü 34×49 cm; 50×70 cm afiş için satın alınabilir net kesim ölçüsü 49×69 cm olarak uygulanmaktadır. Büyük boy 70×100 cm afişler ise tam tabaka olarak işlenir."
-  },
-  {
-    q: "Fiyat listesinde olmayan adet, gramaj ve ölçüler için özel teklif alınabilir mi?",
-    a: "Evet, fiyat listemizde yer almayan 135 gr, 170 gr kuşe, 70×100 cm dev boy, 120 gr Blueback dış mekan kağıdı veya farklı adetler için talep ettiğiniz ebat, gramaj ve adet bilgilerini ileterek özel teklif alabilirsiniz."
-  },
-  {
-    q: "Kuşe kağıt afiş ile Blueback afiş arasındaki fark nedir?",
-    a: "Kuşe kağıt afişler iç mekan, mağaza vitrini ve duyuru panoları için yüksek renk canlılığı sunar. 120 gr Blueback afişler ise arka yüzeyindeki mavi opak kaplama sayesinde alttaki görselin görünürlüğünü azaltmaya yardımcı olan bir afiş kâğıdıdır. Dış mekân uygunluğu; malzeme, baskı yöntemi, uygulama yüzeyi, hava koşulları ve kullanım süresine göre sipariş öncesinde teyit edilmelidir."
-  },
-  {
-    q: "Afiş baskı dosyası nasıl hazırlanmalı, çözünürlük nasıl olmalıdır?",
-    a: "Afiş baskı dosyalarının CMYK renk modunda, 4 kenarından en az +3 mm kesim taşma payı (bleed) verilerek ve yazılar konvertlenmiş şekilde PDF, TIFF veya AI formatında hazırlanması gerekir. Nihai baskı ölçüsündeki raster görseller için kullanım ve izleme mesafesine göre genellikle 150–300 PPI aralığı değerlendirilebilir. Logo, yazı ve ikonlar mümkünse vektörel korunmalıdır."
-  },
-  {
-    q: "Afiş baskısında minimum sipariş adedi kaçtır?",
-    a: "Ofset büyük boy afiş baskılarında ekonomik kalıp maliyeti avantajı için fiyat listemizdeki standart seçenekler 250 adet, 500 adet ve 1.000 adettir. Özel projeler için farklı tirajlarda teklif verilebilir."
-  },
-  {
-    q: "KDV ve kargo ücreti afiş fiyatlarına dahil midir?",
-    a: "Fiyat listemizde yer alan tutarlar %20 KDV ve kargo bedeli hariçtir. İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktası üzerinden Türkiye geneline anlaşmalı kargo ile gönderim sağlanmaktadır."
-  },
-  {
-    q: "Afişler kargo ve sevkiyatta nasıl paketlenir?",
-    a: "Afişleriniz kargo sürecinde ezilme, katlanma ve kırışma riskine karşı dayanıklı rulo silindir tüplere veya koruyucu mukavva destekli ambalajlara sarılarak güvenle sevk edilir."
-  },
-  {
-    q: "Afiş siparişinde dijital prova onayı sunuluyor mu?",
-    a: "Evet, tarafımıza iletilen tasarım dosyaları teknik kontrollerden geçirilir ve baskı öncesinde dijital PDF prova onayı sunularak onayınız alındıktan sonra üretime geçilir."
-  },
-  {
-    q: "Üretim ve kargoya teslim süresi ne kadardır?",
-    a: "Üretim ve kargoya teslim süresi; ürün, adet, dosya onayı ve sipariş yoğunluğuna göre teklif aşamasında bildirilir."
+    title: "Emlak İlanlarında Kontrast Kullanımı",
+    desc: "Kiralık ve satılık ilanlarında sarı, kırmızı ve siyah renklerle başlık ve telefon bilgisinin öne çıkarılması.",
+    badge: "Kontrast Örneği"
   }
 ];
 
@@ -218,102 +174,8 @@ export const AfisPage: React.FC = () => {
     return `${WA_BASE}?text=${encodeURIComponent(text)}`;
   }, []);
 
-  // JSON-LD SCHEMAS
-  const jsonLdBreadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Ana Sayfa",
-        "item": "https://mavibasim.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Matbaa Ürünleri",
-        "item": "https://mavibasim.com/matbaa"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Afiş Baskı Fiyatları",
-        "item": "https://mavibasim.com/afis"
-      }
-    ]
-  };
-
-  const jsonLdProduct = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Afiş Baskı Fiyatları ve Poster Ölçüleri",
-    "image": "https://mavibasim.com/images/afis/afis-baski-fiyatlari.webp",
-    "description": "35x50, 50x70 ve 70x100 cm afiş baskı fiyatlarını inceleyin. 105, 135, 170 gr kuşe ve Blueback afiş poster baskı seçenekleri için teklif alın.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Mavi Basım"
-    },
-    "category": "Afiş Baskı",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "TRY",
-      "lowPrice": "2550",
-      "highPrice": "4550",
-      "offerCount": "6",
-      "priceValidUntil": "2026-12-31",
-      "availability": "https://schema.org/InStock"
-    }
-  };
-
-  const jsonLdFAQ = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": AFIS_SSS.map(f => ({
-      "@type": "Question",
-      "name": f.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.a
-      }
-    }))
-  };
-
   return (
     <div data-page-root="afis" className="bg-[#f8fafc] min-h-screen pb-20">
-      <Helmet>
-        <title>Afiş Baskı Fiyatları | 35x50 - 50x70 - 70x100 cm</title>
-        <meta name="description" content="35x50, 50x70 ve 70x100 cm afiş baskı fiyatlarını inceleyin. 105, 135, 170 gr kuşe ve Blueback afiş poster baskı seçenekleri için teklif alın." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mavibasim.com/afis" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Afiş Baskı Fiyatları | 35x50 - 50x70 - 70x100 cm" />
-        <meta property="og:description" content="35x50, 50x70 ve 70x100 cm afiş baskı fiyatlarını inceleyin. 105, 135, 170 gr kuşe ve Blueback afiş poster baskı seçenekleri için teklif alın." />
-        <meta property="og:type" content="product" />
-        <meta property="og:url" content="https://mavibasim.com/afis" />
-        <meta property="og:image" content="https://mavibasim.com/images/afis/afis-baski-fiyatlari.webp" />
-        <meta property="og:image:secure_url" content="https://mavibasim.com/images/afis/afis-baski-fiyatlari.webp" />
-        <meta property="og:image:type" content="image/webp" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="533" />
-        <meta property="og:image:alt" content="Mavi Basım 35x50 ve 50x70 cm ofset afiş ve poster baskı fiyatları" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Afiş Baskı Fiyatları | 35x50 - 50x70 - 70x100 cm" />
-        <meta name="twitter:description" content="35x50, 50x70 ve 70x100 cm afiş baskı fiyatlarını inceleyin. 105, 135, 170 gr kuşe ve Blueback afiş poster baskı seçenekleri için teklif alın." />
-        <meta name="twitter:image" content="https://mavibasim.com/images/afis/afis-baski-fiyatlari.webp" />
-
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLdBreadcrumb)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLdProduct)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLdFAQ)}
-        </script>
-      </Helmet>
 
       {/* BREADCRUMB */}
       <nav aria-label="Breadcrumb" className="bg-white border-b border-slate-200 py-2.5 px-4">
@@ -552,7 +414,7 @@ export const AfisPage: React.FC = () => {
                 </div>
                 <h3 className="text-sm font-black text-slate-900 mb-1">70x100 Afiş Baskı</h3>
                 <div className="space-y-1 my-3 text-xs text-slate-600">
-                  <p className="text-primary font-bold"><strong>Satın Alınabilir Net Kesim:</strong> 68 × 98 cm</p>
+                  <p className="text-primary font-bold"><strong>Net Kesim:</strong> Teklif aşamasında teyit edilir</p>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   AVM ana girişleri, açık hava etkinlik alanları, büyük boy sergi ve sinema salonu posterleri için kullanılan dev boy afiş seçeneğidir.
@@ -637,7 +499,7 @@ export const AfisPage: React.FC = () => {
               Afiş Baskı Örnekleri
             </h2>
             <p className="text-slate-600 text-xs md:text-sm mt-2 max-w-2xl mx-auto">
-              Afiş örnekleri ve afiş resimleri; reklam kampanyaları, etkinlik duyuruları ve afiş poster örnekleri üzerinden farklı kullanım biçimlerini gösterir. Afiş resmi ve afiş poster resmi alanlarına gerçek görseller daha sonra eklenecektir.
+              Emlak ilanları, dekorasyon hizmetleri ve kurumsal tanıtım için hazırlanmış afiş ve poster tasarımı örneklerini inceleyebilirsiniz.
             </p>
           </div>
 

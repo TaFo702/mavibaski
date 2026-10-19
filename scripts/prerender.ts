@@ -49,6 +49,7 @@ async function prerender() {
   let zarfContent: string;
   let brosurContent: string;
   let elIlaniContent: string;
+  let afisContent: string;
   let antetliContent: string;
   let dosyalarContent: string;
   let bloknotlarContent: string;
@@ -70,8 +71,15 @@ async function prerender() {
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
+    afisContent = prerenderAfis();
+    if ((afisContent.match(/<h1\b/g) || []).length !== 1 ||
+        (afisContent.match(/<table\b/g) || []).length !== 2 ||
+        !afisContent.includes('AF6') || !afisContent.includes('id="gorsel-galeri"') ||
+        !afisContent.includes('id="faq-section"')) {
+      throw new Error('Afiş prerender is missing existing tables, gallery, FAQ or H1.');
+    }
     elIlaniContent = prerenderElIlani();
     if ((elIlaniContent.match(/<h1\b/g) || []).length !== 1 ||
         (elIlaniContent.match(/<table\b/g) || []).length !== 1 ||
@@ -243,6 +251,7 @@ async function prerender() {
         seo.extraHead,
         seo.h1Text,
         pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent
+          : pathname === '/afis' ? afisContent
           : pathname === '/el-ilani' ? elIlaniContent
           : pathname === '/brosur' ? brosurContent
           : pathname === '/antetli' ? antetliContent
@@ -280,6 +289,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
         : pathname === '/zarf'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="zarf">')
+        : pathname === '/afis'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="afis">')
         : pathname === '/el-ilani'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="el-ilani">')
         : pathname === '/brosur'

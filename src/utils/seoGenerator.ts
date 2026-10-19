@@ -1,3 +1,4 @@
+import { AFIS_SCHEMAS } from '../data/afisSeo';
 import { EL_ILANI_SCHEMAS } from '../data/elIlaniSeo';
 import { BROSUR_SCHEMAS } from '../data/brosurSchemas';
 import { getHomeSEO } from "../data/homePageContent";
@@ -463,130 +464,13 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
   }
 
   if (p === '/afis') {
-    const breadcrumbSchema = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Ana Sayfa",
-          "item": "https://mavibasim.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Matbaa Ürünleri",
-          "item": "https://mavibasim.com/matbaa"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Afiş Baskı Fiyatları",
-          "item": "https://mavibasim.com/afis"
-        }
-      ]
-    };
-
-    const productSchema = {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Afiş Baskı Fiyatları ve Poster Ölçüleri",
-      "image": "https://mavibasim.com/images/afis/afis-baski-fiyatlari-ve-cesitleri.webp",
-      "description": "35x50, 50x70 ve 70x100 cm afiş baskı fiyatlarını inceleyin. 105, 135, 170 gr kuşe ve Blueback afiş poster baskı seçenekleri için teklif alın.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mavi Basım"
-      },
-      "category": "Afiş Baskı",
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "TRY",
-        "lowPrice": "2550",
-        "highPrice": "4550",
-        "offerCount": "6",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock"
-      }
-    };
-
-    const afisFaqs = [
-      {
-        q: "Afiş baskı fiyatları ve afiş bastırma fiyatları nasıl hesaplanır?",
-        a: "Afiş baskı fiyatları ve afiş bastırma fiyatları; tercih edilen baskı ebadı (34×49 cm / 35×50 cm veya 49×69 cm / 50×70 cm), kâğıt gramajı (105 gr, 135 gr veya 170 gr kuşe ile 120 gr Blueback), sipariş adedi ve selefon gibi ek işlemlere göre hesaplanır."
-      },
-      {
-        q: "35x50 cm ve 50x70 cm afiş ölçüleri ile net kesim ebatları nelerdir?",
-        a: "Matbaacılık tabaka kesim standartlarında 35×50 cm afiş için satın alınabilir net kesim ölçüsü 34×49 cm; 50×70 cm afiş için satın alınabilir net kesim ölçüsü 49×69 cm olarak uygulanmaktadır. Büyük boy 70×100 cm afişler ise tam tabaka olarak işlenir."
-      },
-      {
-        q: "Fiyat listesinde olmayan adet, gramaj ve ölçüler için özel teklif alınabilir mi?",
-        a: "Evet, fiyat listemizde yer almayan 135 gr, 170 gr kuşe, 70×100 cm dev boy, 120 gr Blueback dış mekan kağıdı veya farklı adetler için talep ettiğiniz ebat, gramaj ve adet bilgilerini ileterek özel teklif alabilirsiniz."
-      },
-      {
-        q: "Kuşe kağıt afiş ile Blueback afiş arasındaki fark nedir?",
-        a: "Kuşe kağıt afişler iç mekan, mağaza vitrini ve duyuru panoları için yüksek renk canlılığı sunar. 120 gr Blueback afişler ise arka yüzeyindeki mavi opak kaplama sayesinde alttaki görselin görünürlüğünü azaltmaya yardımcı olan bir afiş kâğıdıdır. Dış mekân uygunluğu; malzeme, baskı yöntemi, uygulama yüzeyi, hava koşulları ve kullanım süresine göre sipariş öncesinde teyit edilmelidir."
-      },
-      {
-        q: "Afiş baskı dosyası nasıl hazırlanmalı, çözünürlük nasıl olmalıdır?",
-        a: "Afiş baskı dosyalarının CMYK renk modunda, 4 kenarından en az +3 mm kesim taşma payı (bleed) verilerek ve yazılar konvertlenmiş şekilde PDF, TIFF veya AI formatında hazırlanması gerekir. Nihai baskı ölçüsündeki raster görseller için kullanım ve izleme mesafesine göre genellikle 150–300 PPI aralığı değerlendirilebilir. Logo, yazı ve ikonlar mümkünse vektörel korunmalıdır."
-      },
-      {
-        q: "Afiş baskısında minimum sipariş adedi kaçtır?",
-        a: "Ofset büyük boy afiş baskılarında ekonomik kalıp maliyeti avantajı için fiyat listemizdeki standart seçenekler 250 adet, 500 adet ve 1.000 adettir. Özel projeler için farklı tirajlarda teklif verilebilir."
-      },
-      {
-        q: "KDV ve kargo ücreti afiş fiyatlarına dahil midir?",
-        a: "Fiyat listemizde yer alan tutarlar %20 KDV ve kargo bedeli hariçtir. İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktası üzerinden Türkiye geneline anlaşmalı kargo ile gönderim sağlanmaktadır."
-      },
-      {
-        q: "Afişler kargo ve sevkiyatta nasıl paketlenir?",
-        a: "Afişleriniz kargo sürecinde ezilme, katlanma ve kırışma riskine karşı dayanıklı rulo silindir tüplere veya koruyucu mukavva destekli ambalajlara sarılarak güvenle sevk edilir."
-      },
-      {
-        q: "Afiş siparişinde dijital prova onayı sunuluyor mu?",
-        a: "Evet, tarafımıza iletilen tasarım dosyaları teknik kontrollerden geçirilir ve baskı öncesinde dijital PDF prova onayı sunularak onayınız alındıktan sonra üretime geçilir."
-      },
-      {
-        q: "Üretim ve kargoya teslim süresi ne kadardır?",
-        a: "Üretim ve kargoya teslim süresi; ürün, adet, dosya onayı ve sipariş yoğunluğuna göre teklif aşamasında bildirilir."
-      }
-    ];
-
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": afisFaqs.map(f => ({
-        "@type": "Question",
-        "name": f.q,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": f.a
-        }
-      }))
-    };
-
-    let extraHead = `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n`;
-    extraHead += `  <script type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;
-    extraHead += `  <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n`;
-
-    const bodyContent = `<h1>Afiş Baskı Fiyatları ve Poster Ölçüleri</h1>
-<p>Kurumsal tanıtım, mağaza vitrinleri ve etkinlik duyurularınız için 105 gr kuşe tek yön renkli olmak üzere 35x50 cm ve 50x70 cm <strong>afiş baskı</strong> seçeneklerimizi inceleyebilirsiniz. İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktamız üzerinden Türkiye geneline anlaşmalı kargo seçeneği sunulmaktadır.</p>
-<p>Afiş baskı fiyatları; ebat (34×49 cm / 35×50 cm veya 49×69 cm / 50×70 cm), kâğıt gramajı (105 gr, 135 gr, 170 gr kuşe ve 120 gr Blueback), baskı yönü ve sipariş adedine göre belirlenir. 35x50 afiş baskı ile 50x70 afiş baskı fiyatlarını AF1–AF6 ürün kodları ve 250, 500, 1.000 adet seçenekleri üzerinden karşılaştırabilirsiniz.</p>
-<h2>Afiş Ölçüleri ve Kullanım Alanları</h2>
-<p>35x50 afiş ölçüleri satın alınabilir net kesim ölçüsü 34×49 cm, 50x70 afiş ölçüleri ise satın alınabilir net kesim ölçüsü 49×69 cm olarak uygulanmaktadır. Büyük boy 70x100 afiş baskı seçenekleri ise tam tabaka olarak işlenmektedir.</p>
-<p>250 adet, 500 adet ve 1.000 adet afiş seçeneklerini mevcut fiyat tablosundan inceleyebilir; daha yüksek adetler veya özel ebatlar için WhatsApp destek hattımızdan özel teklif alabilirsiniz.</p>
-<h2>Fiyat Listesinde Olmayan Afiş Seçenekleri</h2>
-<p>Fiyat listesinde yer almayan 135 gr kuşe afiş, 170 gr kuşe afiş, 70x100 afiş baskı ve 120 gr Blueback afiş seçenekleri malzeme tedariki ve teknik uygunluğa göre değerlendirilebilir.</p>
-<p>Mağaza afişi, vitrin afişi, etkinlik afişi, konser afişi, kampanya afişi, indirim afişi, emlak afişi, seçim afişi, açılış afişi, festival afişi, dış mekan afiş, iç mekan afiş, reklam afişi ve büyük boy poster talepleriniz için tek yön renkli afiş ve özel çözümler sunmaktayız.</p>`;
-
     return {
       title: staticPages["/afis"].title,
       desc: staticPages["/afis"].desc,
       canonical,
-      extraHead,
-      h1Text: "Afiş Baskı Fiyatları ve Poster Ölçüleri",
-      bodyContent
+      extraHead: Object.values(AFIS_SCHEMAS).map(schema =>
+        `<script type="application/ld+json">${JSON.stringify(schema)}</script>`).join('\n'),
+      h1Text: "Afiş Baskı Fiyatları ve Poster Ölçüleri"
     };
   }
 

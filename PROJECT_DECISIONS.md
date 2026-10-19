@@ -1,5 +1,13 @@
 # PROJECT_DECISIONS.md - Proje Karar Kayıt Dosyası (Architecture & SEO Decision Log)
 
+### 2026-10-19 — Afiş sayfası teknik denetim ve düzeltmesi
+- /afis mevcut React sayfasıyla prerender edilir; aynı ağaç hydrate edilir. Mevcut fiyat ve teknik tablo, altı galeri kartı, on SSS ve bağlantılar ilk HTML'dedir.
+- Canonical ve JSON-LD üretimi bu rotada getRouteSEO/RouteSEOHead tarafından yönetilir; legacy üreticiler ve sayfa içi Helmet tekrarları kaldırıldı. Breadcrumb görünür üç seviyeli yolla, FAQ görünür ortak kaynakla eşleşir.
+- Siparişe özel baskı Service + OfferCatalog olarak temsil edilir. AF1–AF6 fiyat, ölçü, özellik ve adetleri değişmeyen AFIS_DATA'dan salt okunur üretilir. Stok ve fiyat bitiş tarihi uydurulmaz. Schema mevcut erişilebilir afiş görselini kullanır.
+- 70×100 kartındaki kesin net ölçü ile tam tabaka SSS çelişkisi, net kesimin teklif aşamasında teyit edilmesiyle giderildi. Galeri metinleri görsellerde gerçekten bulunan emlak, dekorasyon ve kurumsal tanıtım konularıyla eşleşir; görseller ve yerleşim korunur.
+- Fiyat listesi giriş/alt açıklamaları, fiyat tablosu HTML/stilleri/düğmeleri, teknik tablo, WhatsApp sipariş işlemi ve tarife dosyası korunur. Test fiyat alanı ve tarifenin sabit hashlerini, hydration sırasında tablo düğümlerini, metadata ve şema tekilliğini, altı teklifi ve on SSS'yi denetler. CI'ya eklendi.
+- npm run build, npm run typecheck, validate-afis-fix.cjs, validate-el-ilani-fix.cjs ve validate-brosur-hydration.cjs geçti. DOM testleri jsdom tabanlıdır; gerçek telefon/viewport ve bağımsız güncel Core Web Vitals ölçümü yapılmadı.
+
 ### 2026-10-19 — El ilanı Planner/GSC içerik uygulaması
 - Kullanıcının uygulama talebiyle mevcut /el-ilani açıklamasında tek yaprak el ilanı/el broşürü ile katlamalı broşür niyeti ayrıldı; mevcut /brosur bağlantısı bu niyeti açıklar.
 - Grafik desteği standart ifadesi korunur. Baskıya hazır dosya kontrolü ile yeni tasarım ayrımı, kapsam ve varsa ek ücretin sipariş öncesinde sorulması açıklanır. Ücretsiz yeni tasarım veya sabit tasarım ücreti vaat edilmez.

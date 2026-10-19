@@ -35,3 +35,6 @@ jobs:
 
       - name: Verify el ilani hydration, protected tariff and schema ownership
         run: node validate-el-ilani-fix.cjs
+
+      - name: Verify afis hydration, protected tariff and schema ownership
+        run: node validate-afis-fix.cjs
