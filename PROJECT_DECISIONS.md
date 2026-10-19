@@ -30,6 +30,13 @@ Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün 
 
 ---
 
+* **[2026-10-19] Broşür İlk HTML, Canonical ve Katlama Rehberi Düzeltmesi:**
+  * **Kapsam:** `/brosur` mevcut React bileşeniyle prerender edilir ve aynı ağaç hydrate edilir. Ürün içeriği, galeri, fiyat tabloları ve SSS ilk HTML içinde bulunur; yeni eş niyetli URL oluşturulmaz.
+  * **Korunan alanlar:** Kullanıcının açık talebiyle Ebat Filtrele düğmelerinin ışıklandırma döngüsü, görünümü ve davranışı; fiyat bölümü, tablo oluşturma kodu, adetler ve ürün fiyat verileri bayt düzeyinde korunur. Title, meta description ve H1 değiştirilmez.
+  * **Metadata:** Broşür kendi canonical ve JSON-LD sahibi olduğu için genel legacy kopyası bu rotada üretilmez. SSS ve şemalar ilk HTML ile tarayıcı arasında ortak kaynak kullanır; sabit entity kimlikleriyle fallback şemalar tekilleştirilir. Product şemasına mevcut broşür görseli eklenir; fiyat tutarları değiştirilmez.
+  * **İçerik:** A4 iki kırımlı broşürde açık/kapalı ölçü ve panel ayrımı, C-kırım/Z-kırım farkı ile mevcut katlama rehberi ve restoran broşür sayfasına doğal bağlantılar eklenir. Galeri açıklaması örnekleri karşılaştırma kriterlerini açıklar. Yeni görsel, doğrulanmamış teslimat veya hizmet vaadi eklenmez.
+  * **Doğrulama:** TypeScript ve production build geçer. Üç mevcut fiyat tablosu ve 40 satır ilk HTML’de bulunur; 12 görünür SSS cevabı ortak FAQPage şemasıyla eşleşir. Canlı yayın ve tarayıcı sonucu ayrıca doğrulanmadan tamamlandı sayılmaz.
+
 ## 1. Mimari ve Altyapı Kararları
 
 * **[2026-07-23] Single Page Application (SPA) + Express Server Mimarisi:**

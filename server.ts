@@ -89,6 +89,8 @@ async function startServer() {
             };
         const homeContent = req.path === '/'
           ? (await vite.ssrLoadModule('/src/prerenderHome.tsx')).prerenderHome()
+          : req.path === '/brosur'
+          ? (await vite.ssrLoadModule('/src/prerenderHome.tsx')).prerenderBrosur()
           : req.path === '/arac-kiralama'
           ? (await vite.ssrLoadModule('/src/prerenderHome.tsx')).prerenderAracKiralama()
           : citySlugs.has(req.path.replace(/^\//, ''))
@@ -96,6 +98,7 @@ async function startServer() {
           : seo.bodyContent;
         let html = injectSEOMetadata(template, seo.title, seo.desc, seo.canonical, !known, seo.extraHead, seo.h1Text, homeContent, seo.ogImage);
         if (req.path === '/') html = html.replace('<div id="root">', '<div id="root" data-prerendered="home">');
+        if (req.path === '/brosur') html = html.replace('<div id="root">', '<div id="root" data-prerendered="brosur">');
         if (req.path === '/arac-kiralama') html = html.replace('<div id="root">', '<div id="root" data-prerendered="arac-kiralama">');
         if (citySlugs.has(req.path.replace(/^\//, ''))) html = html.replace('<div id="root">', `<div id="root" data-prerendered="${req.path.slice(1)}">`);
         res.status(statusCode).set({ "Content-Type": "text/html" }).end(html);

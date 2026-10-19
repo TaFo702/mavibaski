@@ -1,3 +1,4 @@
+import { BrosurPage } from './components/Brosur';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
@@ -156,4 +157,16 @@ export function prerenderAdisyon() {
     <MemoryRouter initialEntries={['/adisyon']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={AdisyonRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}
+
+// Render the existing page unchanged, including its protected filter and tables.
+export function prerenderBrosur() {
+  const BrosurRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/brosur']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={BrosurRouter} BrosurComponent={BrosurPage} />)
+    .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
+    .replace(/<meta\b[^>]*\/?>/gi, '')
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
 }
