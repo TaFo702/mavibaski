@@ -687,7 +687,7 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
       title: staticPages["/brosur"].title,
       desc: staticPages["/brosur"].desc,
       canonical,
-      extraHead: Object.values(BROSUR_SCHEMAS)
+      extraHead: '<meta property="og:image:width" content="1536" /><meta property="og:image:height" content="1024" />\n' + Object.values(BROSUR_SCHEMAS)
         .map(schema => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`)
         .join('\n'),
       h1Text: "Broşür Baskı Fiyatları ve Ölçüleri"
