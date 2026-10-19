@@ -31,6 +31,19 @@ function check(d) {
   for (const id of ['kimler-kullanir','uretim-sureci','nasil-doldurulur','sss-bolumu']) assert.equal(d.querySelectorAll('#'+id).length, 1, id);
   const schemas = [...d.querySelectorAll('script[type="application/ld+json"]')].flatMap(e => {const value=JSON.parse(e.textContent);return Array.isArray(value)?value:[value]});
   for (const type of ['Product','FAQPage','BreadcrumbList']) assert.equal(schemas.filter(s=>s['@type']===type).length, 1, type);
+  const offers = schemas.find(s=>s['@type']==='Product').offers;
+  assert.equal(offers?.['@type'], 'AggregateOffer', 'Product snippets need valid pricing');
+  assert.equal(offers.priceCurrency, 'TRY');
+  const priceRows = [...d.querySelectorAll('#fiyat-tablosu tr')]
+    .filter(row => /1 Asıl \+ [123] Suret/.test(row.textContent));
+  const publishedPrices = priceRows.flatMap(row => [...row.querySelectorAll('td')]
+    .filter(cell => cell.textContent.includes('₺'))
+    .map(cell => Number(cell.textContent.replace(/[^0-9]/g, ''))));
+  assert.equal(publishedPrices.length, 21);
+  assert.equal(Number(offers.lowPrice), Math.min(...publishedPrices));
+  assert.equal(Number(offers.highPrice), Math.max(...publishedPrices));
+  assert.equal(Number(offers.offerCount), publishedPrices.length);
+  assert.equal(offers.url, 'https://mavibasim.com/siparis-fisi');
   const breadcrumb = schemas.find(s=>s['@type']==='BreadcrumbList').itemListElement;
   assert.deepEqual(breadcrumb.map(x=>x.name), ['Ana Sayfa','Makbuz & Formlar','Sipariş Fişi']);
   const visible = normalize(d.querySelector('#sss-bolumu').textContent);
