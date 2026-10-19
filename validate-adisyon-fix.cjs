@@ -24,7 +24,7 @@ function check(d) {
   const ids = [...d.querySelectorAll('[id]')].map(e => e.id);
   assert.equal(new Set(ids).size, ids.length, 'Duplicate IDs');
   const toc = d.querySelector('nav[aria-label="Sayfa İçindekiler Navigasyonu"]');
-  assert.equal(toc.querySelectorAll('a').length, 6);
+  assert.equal(toc.querySelectorAll('a').length, 7);
   for (const a of toc.querySelectorAll('a')) assert.equal(d.querySelectorAll(a.getAttribute('href')).length, 1, a.textContent);
   const schemas = [...d.querySelectorAll('script[type="application/ld+json"]')].flatMap(e => { const v = JSON.parse(e.textContent); return Array.isArray(v) ? v : [v]; });
   for (const type of ['Product', 'FAQPage', 'BreadcrumbList']) assert.equal(schemas.filter(s => s['@type'] === type).length, 1, type);

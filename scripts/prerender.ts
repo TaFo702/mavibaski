@@ -63,6 +63,7 @@ async function prerender() {
   let adisyonContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
+  let otokopiliBlogContent: string;
   const cityContent: Record<string, string> = {};
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
@@ -168,6 +169,12 @@ async function prerender() {
     }
     zarfBlogContent = prerenderZarfBlog();
     antetliBlogContent = prerenderZarfBlog('/blog/antetli-kagit-baskisinda-80gr-1.hamur');
+    otokopiliBlogContent = prerenderZarfBlog('/blog/adisyon-ve-makbuzlarda-otokopili-kagit');
+    if (!otokopiliBlogContent.includes('Otokopili ne demek?') ||
+        !otokopiliBlogContent.includes('href="/adisyon"') ||
+        (otokopiliBlogContent.match(/<h1\b/g) || []).length !== 1) {
+      throw new Error('Otokopili guide prerender validation failed: article, FAQ or product link missing.');
+    }
     for (const city of CITIES_DATA) {
       const route = `/${city.slug}`;
       cityContent[route] = prerenderCity(route);
@@ -232,7 +239,8 @@ async function prerender() {
           : pathname === '/recete' ? receteContent
           : pathname === '/tediye-makbuzu' ? tediyeContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
-          : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent : cityContent[pathname] || seo.bodyContent,
+          : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent
+          : pathname === '/blog/adisyon-ve-makbuzlarda-otokopili-kagit' ? otokopiliBlogContent : cityContent[pathname] || seo.bodyContent,
         seo.ogImage
       );
 
@@ -267,6 +275,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="siparis-fisi">')
         : pathname === '/adisyon'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="adisyon">')
+        : pathname === '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="otokopili-kagit-blog">')
         : pathname === '/sozlesme-baski'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="sozlesme-baski">')
         : pathname === '/arac-kiralama'
