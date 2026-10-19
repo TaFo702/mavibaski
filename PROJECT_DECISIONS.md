@@ -2,6 +2,11 @@
 
 Bu dosya, Mavi Basım projesi boyunca alınan kritik SEO, teknik mimari, ürün ve dönüşüm kararlarının tarihsel kaydını tutar. Yeni geliştirme önerilerinin geçmiş kararlarla çelişmemesi için bu dosya esas alınır.
 
+* **[2026-10-19] Kütahya Üç Görselli Fiyat Tablosu — Karşılaştırma Örneği:**
+  * **Kapsam:** Mardin'deki ilk örnek korunur. Kullanıcının görsel referansına göre yalnız `/kutahya-matbaa` için üç ürünlü ikinci örnek hazırlanır; diğer şehirlere yayılmaz.
+  * **Sunum:** Mevcut kartvizit, etiket ve magnet görselleri üstte; ürün kodu, özellik, adet ve fiyat bilgileri altta gerçek HTML tablolarında gösterilir. Referanstaki koyu lacivert `#101828`, turkuaz `#29addf` ve beyaz kullanılır. Kullanıcı isteğiyle bu yeni bölümde KDV metni gösterilmez.
+  * **Veri ve bağlantı:** Fiyat ve özellikler mevcut ürün verisinden okunur; özel cm² magnet fiyatı paket toplamıyla karıştırılmaz. Bağlantılar gerçek ürün fiyat sayfalarını doğrudan açar. Mevcut fiyat tabloları ve fiyat verileri değiştirilmez; yeni görsel oluşturulmaz.
+
 * **[2026-10-18] Mardin Örnek Fiyat Kartları — Tek Sayfalık Deneme:**
   * **Kapsam:** Kullanıcı önce yalnız bir şehirde incelemek istedi. Kartlar yalnız `/mardin-matbaa` adresinde gösterilir; diğer şehirlere ayrıca talep gelmeden yayılmaz.
   * **Fiyat kaynağı:** Kartvizit ve etiket kartları mevcut `productData.ts` satırlarından 1.000 adetlik ekonomik seçeneği okur. Tutar ve özellikler ayrı kopyalanmaz; mevcut fiyat verisi ve fiyat tabloları değiştirilmez.

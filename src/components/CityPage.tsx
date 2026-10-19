@@ -8,6 +8,7 @@ import { getCitySearchMetadata } from '../utils/citySearchMetadata';
 import { PHONE_LINK, WHATSAPP_NUMBER } from '../constants/contact';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { getCityPriceExamples } from '../data/cityPriceExamples';
+import { CityImagePriceTable } from './CityImagePriceTable';
 
 const sectionClass = 'bg-white rounded-2xl border border-slate-200 p-6 md:p-8 mb-8 shadow-sm';
 const headingClass = 'text-xl md:text-2xl font-black text-slate-900 mb-4';
@@ -59,7 +60,7 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
           <a href={PHONE_LINK} className="inline-flex items-center gap-2 bg-slate-900 text-white font-bold px-5 py-3 rounded-xl"><PhoneCall size={18} />Müşteri Hizmetleri</a>
         </div>
         {priceExamples.length > 0 ? <>
-          <section id="ornek-fiyatlar" aria-labelledby="price-examples-title" className="mt-7 pt-6 border-t border-slate-200 scroll-mt-24">
+          {city.slug === 'kutahya-matbaa' ? <CityImagePriceTable examples={priceExamples} /> : <section id="ornek-fiyatlar" aria-labelledby="price-examples-title" className="mt-7 pt-6 border-t border-slate-200 scroll-mt-24">
             <h2 id="price-examples-title" className={headingClass}>Örnek Baskı Fiyatları</h2>
             <p className="text-sm text-slate-600 mb-4">Belirtilen adet ve özellikler için toplam baskı bedellerini inceleyin. Kartı seçerek ürünün tüm fiyatlarına ulaşabilirsiniz.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -76,7 +77,7 @@ export const CityPage: React.FC<{ citySlug?: string }> = ({ citySlug: propCitySl
               </a>)}
             </div>
             <p className="text-xs text-slate-600 mt-4">Fiyatlar yalnızca gösterilen baskı seçenekleri içindir. Kargo bedeli ve gönderim planı sipariş sırasında netleştirilir.</p>
-          </section>
+          </section>}
           <div className="mt-6">{serviceInfo}</div>
         </> : null}
         <nav aria-label="Sayfa bölümleri" className="flex flex-wrap gap-x-5 gap-y-2 mt-6 text-sm font-bold text-primary">
