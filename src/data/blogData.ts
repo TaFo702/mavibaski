@@ -2693,35 +2693,36 @@ BTN_LINK: https://wa.me/905366022373
   {
     slug: 'oto-paspas-baskida-emici-kraft-farki',
     title: 'Oto Paspas Baskısında Emici Kraft Kağıt ve Sülfit Kağıt Farkları',
-    excerpt: 'Oto yıkama ve teknik servislerin kullandığı kağıt oto paspas siparişlerinde emici kraft kağıdın çamuru tutması ve yırtılmama mukavemeti.',
+    excerpt: 'Kağıt oto paspas baskısında kraft ve beyaz kağıt seçenekleri, standart ölçü, geçici taban koruması ve nemle temasın sınırları.',
     date: '06 Mayıs 2026',
+    updatedDate: '20 Ekim 2026',
     readTime: '6 Dk Okuma',
     category: 'Masaüstü & Promosyon',
     image: '/images/oto-paspas/oto-paspas-kagit-baski.webp',
     schemaType: 'Article',
     content: `## Oto Paspas Baskısında Emici Kraft Kağıt ve Sülfit Kağıt Farkları
 
-Oto yıkama salonlarından sıfır gibi tertemiz çıkan bir aracın tabanına serilen kağıt paspaslar esnafın imajıdır. Ayak altındaki suyu ve çamuru emerek orijinal döşemeye geçirmemesi gerekir.
+Kağıt oto paspaslar, oto yıkama ve servis işlemlerinden sonra araç tabanının kirlenmesini azaltmaya yardımcı olan tek kullanımlık koruyuculardır. Kuru toz ve sınırlı yüzeysel neme karşı geçici koruma sağlar; yoğun sıvı, çamur birikintisi veya su geçirmezlik gerektiren kullanım için uygun değildir.
 
-Hemen üretmek için [Baskılı Kağıt Oto Paspas](/oto-paspas) sitemizi gezebilir, ofis içi kurumsal [Bloknot Defteri sayfasına](/bloknotlar) ait imalatları görebilir ya da şık kurumsal paketler için [Karton Çanta sayfasına](/karton-canta) ait fiyatları öğrenebilirsiniz.
+Standart ürünün ölçüsünü, baskı seçeneklerini ve mevcut adet paketlerini [oto paspas baskı fiyatları](/oto-paspas) sayfasında inceleyebilirsiniz. Logolu baskı için tasarım dosyanızı ve sipariş talebinizi aynı sayfadaki teklif bağlantısından iletebilirsiniz.
 
 :::info-cards
 Kraft Kağıt (Emici)
-- Doğal ahşap selülozundan üretilen, ağartma işlemine maruz kalmayan kahverengi kart.
-- Ayak altındaki ıslaklığı ve çamuru hızla içine çeker, çamurun döşemeye bulaşmasını kesin önler.
-- Islakken yırtılması son derece zordur, araca binip inerken ayak altında bükülüp parçalanmaz.
-- Doğal ahşap tonuyla oto yıkamalarda "premium ve kaliteli" esnaf imajı çizer.
+- Doğal esmer görünümüyle tek renk logolu baskılarda tercih edilen kraft kağıttır.
+- Kuru tozun ve sınırlı yüzeysel kirin araç tabanına geçmesini azaltmaya yardımcı olur.
+- Kağıt ürün olduğu için yoğun ıslaklıkta yırtılabilir; su geçirmez veya yırtılmaz kabul edilmemelidir.
+- Logo ve iletişim bilgileriyle servis veya oto yıkama işletmesinin tanıtımını destekler.
 ---
 Sülfit Kağıt (Ekonomik)
-- Beyaz renkli, bir yönü pürüzsüz sıvamalı ve hafif kaygan olan ekonomik kağıt.
-- Metrekare birim fiyatı çok ucuzdur, kısıtlı bütçeye sahip esnaflar için verimlidir.
-- Beyaz zemin üzerine basılan kurumsal logoların pırıl pırıl ve keskin görünmesini sağlar.
-- Su emicilik mukavemeti Kraft kağıt kadar yüksek ve dayanıklı değildir.
+- Beyaz zeminli kağıt seçeneklerinin yüzey ve baskı özellikleri seçilen malzemeye göre değerlendirilir.
+- Beyaz kağıt, mevcut 80 gr esmer kraft standart paketinden ayrıdır; özel teklif kapsamında ele alınır.
+- Beyaz zeminde logo görünümü, baskı rengi ve dosya hazırlığı birlikte değerlendirilmelidir.
+- Nem dayanımı yalnız kağıdın rengine bakılarak belirlenemez; kullanım sınırları seçilen malzemeyle birlikte netleştirilmelidir.
 ---
 Ölçü ve Kesim Detayları
-- Evrensel oto paspas ölçü standardı araç tabanlarına tam sığan **35x50 cm**'dir.
-- Hassas giyotin kesimleri sayesinde kenarları düzgün ve pürüzsüz hatlara sahiptir.
-- Kalın lif yapısı, paspasın ayakkabı tırnaklarına takılıp sıyrılmasını engeller.
+- Mavi Basım’ın standart fiyat listesindeki oto paspas ölçüsü **34x49 cm**’dir. Her araç için evrensel ölçü veya tam uyum iddiası kurulmaz.
+- 50x70 cm gibi farklı ölçü talepleri standart listeden ayrı, özel teklif kapsamında değerlendirilir.
+- Kağıt paspas pedal hareketlerini engellememelidir; araç hareket etmeden önce konumu kontrol edilmeli ve gerektiğinde kaldırılmalıdır.
 :::
 
 ---
@@ -2729,20 +2730,20 @@ Sülfit Kağıt (Ekonomik)
 ## Oto Paspas Baskılarında Yapılan Kritik Hatalar
 
 :::warning-box
-- Çok ince (50-60g) kağıtlar tercih edip, ayakkabı nemiyle saniyeler içinde yırtılması.
-- Sülfit kağıt seçip ıslak ayakkabının kaymasına ve sürüş konforunu riske atmaya yol açmak.
-- Çabuk solan, nemle dağılan kalitesiz solvent bazlı kimyasal boyalar kullanmak.
+- Kağıt paspası su geçirmez veya yoğun sıvıya dayanıklı bir zemin kaplaması gibi kullanmak.
+- Sürücü tarafındaki kağıdın gaz, fren veya debriyaj pedallarının altına kaymasına izin vermek.
+- Baskı dosyasını ve logo yerleşimini dijital prova üzerinden kontrol etmeden onaylamak.
 - Paspas alanını gereksiz yazılarla doldurup logonun kurumsal gücünü gölgelemek.
 :::
 
 ---
 
-## Mavi Basım Sağlam Oto Paspas Ayrıcalıkları
+## Mavi Basım Oto Paspas Baskı Özellikleri
 
 :::importance-cards
-80 gr İthal Emici Kraft | Sudan ve çamurdan etkilenerek kesinlikle parçalanmayan, ayak altında sıyrılma yapmayan 1. sınıf emici Kraft paspas kağıdı.
-Solmaz Sıvı Mürekkep | Ayakkabı altındaki suyla temas ettiğinde asla dağılmayan, otomobil döşemesine boya kusmayan fırınlanmış özel matbaa boyalarımız.
-Evrensel 35x50cm Ebat | Tüm binek ve ticari araçların ön ve arka taban bölmelerine milimetrik olarak uyum sağlayan ideal paspas kesim ölçüsü.
+80 gr Esmer Kraft | Standart fiyat listesindeki kağıt seçeneği; servis ve temizlik sonrasında araç tabanında geçici koruma için kullanılır.
+Tek Yön Tek Renk Baskı | Firma logosu ve iletişim bilgilerinin uygulanabildiği standart baskı seçeneği; beyaz kağıt ve çok renkli baskı talepleri özel teklifle değerlendirilir.
+34x49 cm Standart Ebat | Mevcut fiyat listesinin ölçüsüdür. Yerleşim aracın tabanına göre kontrol edilmeli; pedalların hareket alanı açık bırakılmalıdır.
 :::
 
 ---
@@ -2758,15 +2759,15 @@ Evrensel 35x50cm Ebat | Tüm binek ve ticari araçların ön ve arka taban bölm
 ---
 
 :::cta
-TITLE: Markanıze Özel Oto Paspas
-DESC: Oto yıkama ve servis noktanızın kalitesini müşterilerinize hissettirecek, ıslakken yırtılmayan ve kaymayan Kraft oto paspasların basımını yapıyoruz. Hızlı logo tasarımı hazırlatmak için hemen yazın.
+TITLE: Markanıza Özel Oto Paspas
+DESC: Oto yıkama ve servis işletmeniz için logolu kağıt oto paspas baskı seçeneklerini inceleyin. Standart dışı ölçü, kağıt ve renk talepleriniz için özel teklif isteyebilirsiniz.
 BTN_TEXT: WhatsApp Paspas Siparişi
 BTN_LINK: https://wa.me/905366022373
 :::`,
     faq: [
       {
         question: 'Paspasların standart ölçüsü nedir?',
-        answer: 'Genellikle araç tabanlarına tam sığacak şekilde tasarlanan 35x50 cm boyutları oto yıkama sektörü için evrensel standarttır.'
+        answer: 'Mavi Basım’ın standart fiyat listesindeki kağıt oto paspas ölçüsü 34x49 cm’dir. 50x70 cm gibi farklı ölçüler özel teklif kapsamında değerlendirilir. Kağıt paspas her araç için evrensel uyum sağlamaz; yerleşimi pedal hareketlerini engellemeyecek şekilde kontrol edilmelidir.'
       }
     ]
   },

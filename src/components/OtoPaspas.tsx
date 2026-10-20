@@ -445,10 +445,16 @@ className="w-full h-full object-cover group-hover:scale-105 transition-transform
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg">
             <div className="space-y-2 text-center md:text-left">
               <h2 className="text-lg sm:text-xl font-black">
-                Fiyat Listesinde Bulunmayan Seçenekler İçin Özel Teklif Alın
+                Toptan Oto Paspas ve Özel Baskı Teklifi
               </h2>
               <p className="text-xs sm:text-sm text-gray-300 max-w-2xl leading-relaxed">
                 Beyaz kâğıt, çok renkli baskı, 50x70 cm ebat veya yüksek tirajlı siparişleriniz için müşteri temsilcimizle WhatsApp üzerinden görüşebilir ve hızlı teklif alabilirsiniz.
+              </p>
+              <p className="text-xs sm:text-sm text-gray-300 max-w-2xl leading-relaxed">
+                Toptan oto kağıt paspas siparişiniz için firma logonuzu, istediğiniz adedi ve baskı rengini iletebilirsiniz. Baskıya hazır dosyanız teknik kontrolden geçirilir ve dijital PDF prova üzerinden değerlendirilir. Standart listede bulunmayan ölçü, malzeme ve adet talepleri özel teklif kapsamında ele alınır.
+              </p>
+              <p className="text-xs sm:text-sm text-gray-300 max-w-2xl leading-relaxed">
+                Ankara’dan kağıt oto paspas siparişleri de İstanbul Topkapı’daki hizmet ve koordinasyon noktamız üzerinden, Türkiye geneline anlaşmalı kargo kapsamında yürütülür. Teslimat koşulları siparişin özelliklerine göre teklif aşamasında netleştirilir. Diğer baskı ihtiyaçlarınız için <Link to="/ankara-matbaa" className="underline underline-offset-4 hover:text-white">Ankara matbaa hizmetlerini</Link> inceleyebilirsiniz.
               </p>
             </div>
             <a
@@ -501,6 +507,9 @@ className="w-full h-full object-cover group-hover:scale-105 transition-transform
 
         {/* Blog Rehberleri */}
         <div className="my-10">
+          <p className="text-sm text-slate-700 leading-relaxed mb-4">
+            Malzeme seçimi ve geçici taban korumasının sınırları hakkında <Link to="/blog/oto-paspas-baskida-emici-kraft-farki" className="text-primary font-semibold underline underline-offset-4">oto paspas baskısında kraft kağıt rehberini</Link> inceleyebilirsiniz.
+          </p>
           <RelatedBlogPosts
             category="oto-paspas"
             excludeImages={["/images/oto-paspas/oto-paspas-kagit-baski.webp"]}
