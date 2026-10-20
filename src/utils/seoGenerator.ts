@@ -860,8 +860,8 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
         a: "İşletmeler için sunulan oto paspas modelleri; üzerine marka logosu, iletişim bilgileri ve kurumsal renklerin uygulandığı baskılı oto paspas ve baskılı oto paspas kağıdı seçeneklerinden oluşur. Doğal görünüm için esmer kraft, parlak zeminler için ise beyaz kâğıt modelleri tercih edilebilir."
       },
       {
-        q: "Oto kağıt paspas tasarla aşamasında ve baskıya hazır dosya hazırlığında nelere dikkat edilmelidir?",
-        a: "Kendi firmanız için oto kağıt paspas tasarla sürecinde firma logonuz, adresiniz ve telefon numaralarınız vektörel formatta (PDF, AI) ve en az 300 DPI çözünürlükte hazırlanmalıdır. Kesim payı olarak 3 mm taşma bırakılmalıdır. Baskıya hazır dosyanız için teknik kontrol ve dijital PDF prova sunulmaktadır. Grafik desteği var."
+        q: "Oto paspas tasarımı ve baskıya hazır dosya hazırlığında nelere dikkat edilmelidir?",
+        a: "Firma logonuzu ve yazılarınızı vektörel olarak PDF veya AI dosyasında hazırlayın. Tasarımda kullanılan piksel tabanlı görseller, baskı boyutunda en az 300 DPI çözünürlükte olmalıdır; vektörel çizimler için DPI şartı aranmaz. Kesim payı olarak 3 mm taşma bırakılmalıdır. Baskıya hazır dosyanız için teknik kontrol, dijital PDF prova ve grafik desteği sunulmaktadır."
       },
       {
         q: "Oto kağıt paspas baskı için tek renk ile CMYK çok renkli baskı arasındaki fark nedir?",

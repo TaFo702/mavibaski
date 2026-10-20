@@ -1,3 +1,4 @@
+import { OtoPaspasPage } from './components/OtoPaspas';
 import { AfisPage } from './components/Afis';
 import { ElIlaniPage } from './components/ElIlani';
 import { BrosurPage } from './components/Brosur';
@@ -191,6 +192,18 @@ export function prerenderAfis() {
     <MemoryRouter initialEntries={['/afis']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={AfisRouter} AfisComponent={AfisPage} />)
+    .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
+    .replace(/<meta\b[^>]*\/?>/gi, '')
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
+}
+
+// Use the existing page, including the unchanged protected price section.
+export function prerenderOtoPaspas() {
+  const OtoPaspasRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/oto-paspas']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={OtoPaspasRouter} OtoPaspasComponent={OtoPaspasPage} />)
     .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
     .replace(/<meta\b[^>]*\/?>/gi, '')

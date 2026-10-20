@@ -54,8 +54,8 @@ export const OTO_PASPAS_FAQS = [
     a: "İşletmeler için sunulan oto paspas modelleri; üzerine marka logosu, iletişim bilgileri ve kurumsal renklerin uygulandığı baskılı oto paspas ve baskılı oto paspas kağıdı seçeneklerinden oluşur. Doğal görünüm için esmer kraft, parlak zeminler için ise beyaz kâğıt modelleri tercih edilebilir."
   },
   {
-    q: "Oto kağıt paspas tasarla aşamasında ve baskıya hazır dosya hazırlığında nelere dikkat edilmelidir?",
-    a: "Kendi firmanız için oto kağıt paspas tasarla sürecinde firma logonuz, adresiniz ve telefon numaralarınız vektörel formatta (PDF, AI) ve en az 300 DPI çözünürlükte hazırlanmalıdır. Kesim payı olarak 3 mm taşma bırakılmalıdır. Baskıya hazır dosyanız için teknik kontrol ve dijital PDF prova sunulmaktadır. Grafik desteği var."
+    q: "Oto paspas tasarımı ve baskıya hazır dosya hazırlığında nelere dikkat edilmelidir?",
+    a: "Firma logonuzu ve yazılarınızı vektörel olarak PDF veya AI dosyasında hazırlayın. Tasarımda kullanılan piksel tabanlı görseller, baskı boyutunda en az 300 DPI çözünürlükte olmalıdır; vektörel çizimler için DPI şartı aranmaz. Kesim payı olarak 3 mm taşma bırakılmalıdır. Baskıya hazır dosyanız için teknik kontrol, dijital PDF prova ve grafik desteği sunulmaktadır."
   },
   {
     q: "Oto kağıt paspas baskı için tek renk ile CMYK çok renkli baskı arasındaki fark nedir?",
@@ -184,7 +184,7 @@ export const OtoPaspasPage = () => {
                 Oto Paspas Baskı Fiyatları ve Logolu Kağıt Paspas
               </h1>
               <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-  Oto servis, bakım istasyonları, ekspertiz ve oto yıkama işletmeleri için <strong className="text-slate-900 font-semibold">oto paspas baskı</strong>, <strong className="text-slate-900 font-semibold">baskılı oto paspas</strong>, <strong className="text-slate-900 font-semibold">logolu oto paspas</strong> ve <strong className="text-slate-900 font-semibold">baskılı oto paspas kağıdı</strong> çözümleri sunuyoruz. 80 gr esmer kraft kâğıt üzerine tek renk ofset baskıyla hazırlanan <strong className="text-slate-900 font-semibold">oto kağıt paspas</strong> ve <strong className="text-slate-900 font-semibold">kağıt oto paspas</strong> ürünleri; <strong className="text-slate-900 font-semibold">araç içi kağıt paspas</strong> veya <strong className="text-slate-900 font-semibold">araba için kağıt paspas</strong> olarak değerlendirilebilir. Tek kullanımlık oto paspas seçenekleri, servis ve temizlik işlemleri sırasında araç tabanının kirlenmesini azaltmaya yardımcı olur. Siparişleriniz <strong className="text-slate-900 font-semibold">İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktası</strong> üzerinden koordine edilerek anlaşmalı kargo ile tarafınıza ulaştırılır.
+  Oto servis, bakım istasyonları, ekspertiz ve oto yıkama işletmeleri için <strong className="text-slate-900 font-semibold">logolu kağıt oto paspas baskısı</strong> sunuyoruz. 80 gr esmer kraft kâğıt üzerine tek renk ofset baskıyla hazırlanan bu tek kullanımlık ürünler, servis ve temizlik işlemleri sırasında araç tabanının kirlenmesini azaltmaya yardımcı olur. Siparişleriniz İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktası üzerinden koordine edilerek anlaşmalı kargo ile tarafınıza ulaştırılır.
 </p>
             </div>
 
