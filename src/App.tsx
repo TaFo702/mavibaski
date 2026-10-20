@@ -5028,7 +5028,7 @@ const HomePage = () => {
 
 
 
-export const AppRoutes = ({ OtoPaspasComponent = OtoPaspasPage, AfisComponent = AfisPage, BrosurComponent = BrosurPage, ElIlaniComponent = ElIlaniPage, ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage, MakbuzComponent = MakbuzFormlarPage, CityComponent = CityPage }: { OtoPaspasComponent?: React.ComponentType; AfisComponent?: React.ComponentType; BrosurComponent?: React.ComponentType; ElIlaniComponent?: React.ComponentType; ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType; MakbuzComponent?: React.ComponentType; CityComponent?: React.ComponentType } = {}) => {
+export const AppRoutes = ({ AmerikanServisComponent = AmerikanServisPage, OtoPaspasComponent = OtoPaspasPage, AfisComponent = AfisPage, BrosurComponent = BrosurPage, ElIlaniComponent = ElIlaniPage, ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage, MakbuzComponent = MakbuzFormlarPage, CityComponent = CityPage }: { AmerikanServisComponent?: React.ComponentType; OtoPaspasComponent?: React.ComponentType; AfisComponent?: React.ComponentType; BrosurComponent?: React.ComponentType; ElIlaniComponent?: React.ComponentType; ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType; MakbuzComponent?: React.ComponentType; CityComponent?: React.ComponentType } = {}) => {
   return (
     <React.Suspense fallback={
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
@@ -5053,7 +5053,7 @@ export const AppRoutes = ({ OtoPaspasComponent = OtoPaspasPage, AfisComponent = 
       <Route path="/yag-karti" element={<YagKartiPage />} />
       <Route path="/bloknotlar" element={<BloknotlarComponent />} />
       <Route path="/bloknot" element={<Navigate to="/bloknotlar" replace />} />
-      <Route path="/amerikan-servis" element={<AmerikanServisPage />} />
+      <Route path="/amerikan-servis" element={<AmerikanServisComponent />} />
       <Route path="/karton-canta" element={<KartonCantaPage />} />
       <Route path="/zarf" element={<ZarfComponent />} />
       <Route path="/kataloglar" element={<KatalogComponent />} />
@@ -5227,8 +5227,9 @@ pathname === '/kartvizit' ||
   return null;
 };
 
-export default function App({ Router = BrowserRouter, OtoPaspasComponent, AfisComponent, BrosurComponent, ElIlaniComponent, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent, MakbuzComponent, CityComponent }: {
+export default function App({ Router = BrowserRouter, AmerikanServisComponent, OtoPaspasComponent, AfisComponent, BrosurComponent, ElIlaniComponent, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent, MakbuzComponent, CityComponent }: {
   Router?: React.ComponentType<{ children: React.ReactNode }>;
+  AmerikanServisComponent?: React.ComponentType;
   OtoPaspasComponent?: React.ComponentType;
   AfisComponent?: React.ComponentType;
   BrosurComponent?: React.ComponentType;
@@ -5288,7 +5289,7 @@ export default function App({ Router = BrowserRouter, OtoPaspasComponent, AfisCo
             <Navbar />
             
             <main className="flex-grow">
-              <AppRoutes OtoPaspasComponent={OtoPaspasComponent} AfisComponent={AfisComponent} ElIlaniComponent={ElIlaniComponent} BrosurComponent={BrosurComponent} ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} MakbuzComponent={MakbuzComponent} CityComponent={CityComponent} />
+              <AppRoutes AmerikanServisComponent={AmerikanServisComponent} OtoPaspasComponent={OtoPaspasComponent} AfisComponent={AfisComponent} ElIlaniComponent={ElIlaniComponent} BrosurComponent={BrosurComponent} ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} MakbuzComponent={MakbuzComponent} CityComponent={CityComponent} />
             </main>
 
             <Footer />

@@ -51,6 +51,7 @@ async function prerender() {
   let elIlaniContent: string;
   let afisContent: string;
   let otoPaspasContent: string;
+  let amerikanServisContent: string;
   let antetliContent: string;
   let dosyalarContent: string;
   let bloknotlarContent: string;
@@ -72,8 +73,14 @@ async function prerender() {
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
+    amerikanServisContent = prerenderAmerikanServis();
+    if ((amerikanServisContent.match(/<h1\b/g) || []).length !== 1 ||
+        (amerikanServisContent.match(/<table\b/g) || []).length !== 1 ||
+        !['SRV1', 'SRV2', 'SRV3', 'id="gorsel-galeri"', 'id="faq-section"'].every(value => amerikanServisContent.includes(value))) {
+      throw new Error('Amerikan servis prerender is missing the existing table, gallery, FAQ or H1.');
+    }
     otoPaspasContent = prerenderOtoPaspas();
     if ((otoPaspasContent.match(/<h1\b/g) || []).length !== 1 ||
         (otoPaspasContent.match(/<table\b/g) || []).length !== 1 ||
@@ -259,6 +266,7 @@ async function prerender() {
         seo.extraHead,
         seo.h1Text,
         pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent
+          : pathname === '/amerikan-servis' ? amerikanServisContent
           : pathname === '/oto-paspas' ? otoPaspasContent
           : pathname === '/afis' ? afisContent
           : pathname === '/el-ilani' ? elIlaniContent
@@ -298,6 +306,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
         : pathname === '/zarf'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="zarf">')
+        : pathname === '/amerikan-servis'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="amerikan-servis">')
         : pathname === '/oto-paspas'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="oto-paspas">')
         : pathname === '/afis'

@@ -1,3 +1,4 @@
+import { AmerikanServisPage } from './components/AmerikanServis';
 import { OtoPaspasPage } from './components/OtoPaspas';
 import { AfisPage } from './components/Afis';
 import { ElIlaniPage } from './components/ElIlani';
@@ -204,6 +205,18 @@ export function prerenderOtoPaspas() {
     <MemoryRouter initialEntries={['/oto-paspas']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={OtoPaspasRouter} OtoPaspasComponent={OtoPaspasPage} />)
+    .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
+    .replace(/<meta\b[^>]*\/?>/gi, '')
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
+}
+
+// Render the existing page and protected price table without changing their markup.
+export function prerenderAmerikanServis() {
+  const AmerikanServisRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/amerikan-servis']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={AmerikanServisRouter} AmerikanServisComponent={AmerikanServisPage} />)
     .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
     .replace(/<meta\b[^>]*\/?>/gi, '')

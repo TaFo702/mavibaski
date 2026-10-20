@@ -363,8 +363,8 @@ export const PRIORITY_PRODUCT_OG: Record<string, {
   "/amerikan-servis": {
     image: "https://mavibasim.com/images/amerikan-servis/amerikan-servis-baski.webp",
     type: "image/webp",
-    width: "1536",
-    height: "1024",
+    width: "768",
+    height: "512",
     alt: "Mavi Basım restoran ve kafe için kağıt Amerikan servis baskı çeşitleri"
   },
   "/oto-paspas": {
