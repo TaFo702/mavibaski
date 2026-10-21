@@ -3867,7 +3867,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
       extraHead,
       h1Text: detail.h1Title,
       bodyContent,
-      ogImage: (p === '/adisyon' || p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski' || p === '/siparis-fisi')
+      ogImage: detail.featureImage
         ? `https://mavibasim.com${detail.featureImage}`
         : undefined
     };
