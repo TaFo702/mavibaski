@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/cepli-dosya",
+      "destination": "/dosyalar",
+      "statusCode": 301
+    },
+    {
       "source": "/siparis-fisi-baski-fiyatlari",
       "destination": "/siparis-fisi",
       "permanent": true

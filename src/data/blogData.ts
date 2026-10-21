@@ -90,7 +90,7 @@ Yerel işletmeler, restoranlar ve mağazalar için hedef bölgedeki müşteriler
 Buzdolabı ve metal yüzeylere yapışan [Magnet](/magnet) baskılar, müşterilerinizin evinde ve ofisinde aylar boyunca göz önünde kalarak markanızın akılda kalıcılığını sağlar.
 
 ### Katalog ve Cepli Dosya ile Kurumsal Tanıtım
-Ürün gamınızı detaylı sergilemek için hazırlanan bir [Katalog](/kataloglar) ve sunum klasörünüz olan [Cepli Dosya](/cepli-dosya), kurumsal müşterilerinizin satın alma kararlarını doğrudan etkiler.
+Ürün gamınızı detaylı sergilemek için hazırlanan bir [Katalog](/kataloglar) ve sunum klasörünüz olan [Cepli Dosya](/dosyalar), kurumsal müşterilerinizin satın alma kararlarını doğrudan etkiler.
 
 ### Etiket ve Ambalaj Baskılarının Satışa Etkisi
 Raftaki ürünün albenisini belirleyen en temel unsur [Etiket](/etiket) ve ürün kutusudur. Özel tasarımlı kaliteli ambalaj baskıları, ürünün algılanan değerini ve satış fiyatını artırır.
@@ -703,7 +703,7 @@ Tek başına reklam ürünleri yerel tanıtımda başarılı olsa da, birlikte k
 • [Karton Çanta](/karton-canta)
 • [Adisyon](/adisyon)
 • [Sipariş Fişi](/siparis-fisi)
-• [Cepli Dosya](/cepli-dosya)
+• [Cepli Dosya](/dosyalar)
 • [Bloknot](/bloknot)
 • [Antetli Kağıt](/antetli-kagit)
 
