@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/blog/matbaa-tasarimi-nasil-hazirlanir",
+      "destination": "/blog/baskiya-uygun-tasarim-nasil-hazirlanir",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/ofset-baski-ile-dijital-baski-farki",
       "destination": "/blog/ofset-baski-ile-dijital-baski-farklari",
       "statusCode": 301

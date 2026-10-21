@@ -77,6 +77,7 @@ export const knownStaticRoutes = new Set([
 ]);
 
 export const URL_REDIRECTS: Record<string, string> = {
+  "/blog/matbaa-tasarimi-nasil-hazirlanir": "/blog/baskiya-uygun-tasarim-nasil-hazirlanir",
   "/siparis-fisi-baski-fiyatlari": "/siparis-fisi",
   "/sozlesme": "/sozlesme-baski",
   "/bloknot": "/bloknotlar",
