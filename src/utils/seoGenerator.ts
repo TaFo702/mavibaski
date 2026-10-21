@@ -319,11 +319,11 @@ export const PRIORITY_PRODUCT_OG: Record<string, {
     alt: "Mavi Basım 1000 adet kabartma laklı, sıvamalı ve kalın kartvizit baskı çeşitleri"
   },
   "/brosur": {
-    image: "https://mavibasim.com/images/brosur/brosur-baski-fiyatlari.webp",
+    image: "https://mavibasim.com/images/brosur/tanitim-brosuru-ornegi.webp",
     type: "image/webp",
     width: "1536",
     height: "1024",
-    alt: "Mavi Basım broşür baskı fiyatları, A4, A5 ve katlamalı broşür çeşitleri"
+    alt: "Mavi Basım A4, A5 ve katlamalı tanıtım broşürü baskı örneği"
   },
   "/el-ilani": {
     image: "https://mavibasim.com/images/el-ilani/el-ilani-baski-fiyatlari.webp",
@@ -4304,7 +4304,25 @@ export function getRouteSEO(pathname: string): { title: string; desc: string; ca
       `  <meta property="og:image:alt" content="${priorityMeta.alt}" />\n` +
       `  <meta name="twitter:card" content="summary_large_image" />\n` +
       `  <meta name="twitter:image" content="${priorityMeta.image}" />\n`;
-    res.extraHead = (res.extraHead || "") + ogTags;
+    // Identify one relevant product photograph for Google page-image discovery.
+    // Do not modify visible content, protected prices, or product offers.
+    const pageImageSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${res.canonical}#webpage`,
+      "url": res.canonical,
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": `${res.canonical}#primary-image`,
+        "url": priorityMeta.image,
+        "contentUrl": priorityMeta.image,
+        "caption": priorityMeta.alt,
+        "width": Number(priorityMeta.width),
+        "height": Number(priorityMeta.height)
+      }
+    };
+    res.extraHead = (res.extraHead || "") + ogTags +
+      `  <script type="application/ld+json">${JSON.stringify(pageImageSchema)}</script>\\n`;
   }
   return res;
 }
