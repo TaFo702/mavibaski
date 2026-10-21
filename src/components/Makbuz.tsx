@@ -1148,7 +1148,7 @@ export const MakbuzFormlarPage = () => {
             <div className="text-center sm:text-left">
               <h3 className="text-sm font-black text-slate-900 uppercase mb-0.5">Siparişinizi Nasıl Oluşturabilirsiniz?</h3>
               <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                {isSiparisFisi || pathId === 'adisyon' || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' || pathId === 'para-makbuzu' ? (
+                {isSiparisFisi || pathId === 'perakende-satis-fisi' || pathId === 'adisyon' || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' || pathId === 'para-makbuzu' ? (
                   <>Fiyat tablosundaki <strong>"Hemen Sipariş Ver"</strong> düğmesi ürün seçim penceresini açar. Cilt adedini ve baskı rengini seçtikten sonra <strong>"WhatsApp ile İletişim"</strong> üzerinden teklif isteyebilir veya ürünü sepetinize ekleyebilirsiniz. PDF prova onayınızdan sonra baskıya başlanır.</>
                 ) : (
                   <>Fiyat listesinden seçtiğiniz adedin yanında yer alan <strong>"Hemen Sipariş Ver"</strong> butonuna tıkladığınızda WhatsApp hattımıza yönlendirilirsiniz. Siparişiniz için logo ve bilgilerinizi WhatsApp üzerinden göndermeniz yeterlidir. PDF prova onayınız alındıktan sonra üretim başlatılır.</>
@@ -1626,19 +1626,19 @@ export const MakbuzFormlarPage = () => {
                       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 text-center mb-3">
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
                           <span className="text-emerald-600 font-extrabold text-xs sm:text-sm">Bugün Sipariş Verin</span>
-                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{isSiparisFisi || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Grafik desteği var.' : 'Aynı Gün Tasarım'}</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{isSiparisFisi || pathId === 'perakende-satis-fisi' || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Grafik desteği var.' : 'Aynı Gün Tasarım'}</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
-                          <span className="text-primary font-extrabold text-xs sm:text-sm">{isSiparisFisi || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'PDF Prova Kontrolü' : '24 Saat İçinde PDF Prova'}</span>
+                          <span className="text-primary font-extrabold text-xs sm:text-sm">{isSiparisFisi || pathId === 'perakende-satis-fisi' || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'PDF Prova Kontrolü' : '24 Saat İçinde PDF Prova'}</span>
                           <span className="text-[11px] text-slate-500 font-medium mt-0.5">WhatsApp Onaylı</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
-                          <span className="text-blue-600 font-extrabold text-xs sm:text-sm">{isSiparisFisi || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Türkiye Geneli Kargo' : '81 İle Hızlı Kargo'}</span>
+                          <span className="text-blue-600 font-extrabold text-xs sm:text-sm">{isSiparisFisi || pathId === 'perakende-satis-fisi' || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Türkiye Geneli Kargo' : '81 İle Hızlı Kargo'}</span>
                           <span className="text-[11px] text-slate-500 font-medium mt-0.5">Özenli Paketleme</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center">
                           <span className="text-amber-600 font-extrabold text-xs sm:text-sm">Yüksek Baskı Kalitesi</span>
-                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{isSiparisFisi || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Dijital Onay' : 'İmalatçı Garantisi'}</span>
+                          <span className="text-[11px] text-slate-500 font-medium mt-0.5">{isSiparisFisi || pathId === 'perakende-satis-fisi' || pathId === 'recete' || pathId === 'arac-kiralama' || pathId === 'tahsilat-makbuzu' || pathId === 'sozlesme-baski' ? 'Dijital Onay' : 'İmalatçı Garantisi'}</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center col-span-2 sm:col-span-1">
                           <span className="text-indigo-600 font-extrabold text-xs sm:text-sm">Tasarım Desteği</span>

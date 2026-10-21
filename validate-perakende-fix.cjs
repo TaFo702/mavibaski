@@ -38,6 +38,12 @@ function check(d){
  const toc=d.querySelector('nav[aria-label="Sayfa İçindekiler Navigasyonu"]');
  for(const a of toc.querySelectorAll('a[href^="#"]'))assert.equal(d.querySelectorAll(a.getAttribute('href')).length,1,a.textContent);
  assert.ok(!/\bTOC\b/.test(d.querySelector('main').textContent));
+ const main=normalize(d.querySelector('main').textContent);
+ assert.ok(main.includes('1 Asıl + 1 Suret, 1 Asıl + 2 Suret veya 1 Asıl + 3 Suret'),'Nüsha options do not match tariff');
+ assert.ok(main.includes('düğmesi ürün seçim penceresini açar'),'Order instructions mismatch');
+ assert.ok(!main.includes('WhatsApp hattımıza yönlendirilirsiniz'),'Incorrect direct WhatsApp instructions');
+ assert.ok(!/Aynı Gün Tasarım|24 Saat İçinde PDF Prova|İmalatçı Garantisi/.test(main),'Unqualified promise remains');
+
  for(const img of d.querySelectorAll('main img')){assert.ok(img.alt);assert.ok(img.width>0&&img.height>0);assert.ok(fs.existsSync('public'+img.getAttribute('src')));}
 }
 async function settle(w,p){for(let i=0;i<100;i++){if(w.location.pathname===p&&w.document.querySelector('link[rel="canonical"]')?.href==='https://mavibasim.com'+p&&w.document.querySelector('h1')){await sleep(500);return;}await sleep(50);}throw Error('Route failed '+p);}

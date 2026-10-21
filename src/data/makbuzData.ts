@@ -439,7 +439,7 @@ export const MAKBUZ_DETAILS: Record<string, MakbuzDetail> = {
     specifications: [
       { title: "Ölçü", value: "10 x 14 cm (Küçük Boy)" },
       { title: "Kağıt Türü", value: "Otokopili Kendinden Karbonlu Kağıt" },
-      { title: "Nüsha Sayısı", value: "1 Asıl + 1 Suret veya 1 Asıl + 2 Suret" },
+      { title: "Nüsha Sayısı", value: "1 Asıl + 1 Suret, 1 Asıl + 2 Suret veya 1 Asıl + 3 Suret" },
       { title: "Numaratör", value: "Sıralı Numaralı Seri Baskı" },
       { title: "Ciltleme", value: "Yırtılabilir Perforeli Üstten Tutkallı" },
       { title: "Baskı Rengi", value: "Siyah veya Kurumsal Renk" },
