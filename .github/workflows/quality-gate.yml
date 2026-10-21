@@ -38,3 +38,6 @@ jobs:
 
       - name: Verify afis hydration, protected tariff and schema ownership
         run: node validate-afis-fix.cjs
+
+      - name: Verify perakende menus, hydration, protected pricing and WhatsApp quote
+        run: node validate-perakende-fix.cjs

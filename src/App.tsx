@@ -519,9 +519,11 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
     normalizeForSearch(product?.code || '').includes('siparis fisi');
   const isAdisyonProduct = normalizeForSearch(category).includes('adisyon') ||
     normalizeForSearch(product?.code || '').includes('adisyon');
-  const usesQuotedProductionTime = isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct;
-  const productSize = product?.ebat || (isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct || isAdisyonProduct
-    ? MAKBUZ_FORMLAR_ALL_DATA.find(section => section.id === (isAdisyonProduct ? 'adisyon' : isSiparisFisiProduct ? 'siparis-fisi' : isParaMakbuzuProduct ? 'para-makbuzu' : 'sozlesme-baski'))?.ebat
+  const isPerakendeFisiProduct = normalizeForSearch(category).includes('perakende satis fisi') ||
+    normalizeForSearch(product?.code || '').includes('perakende satis fisi');
+  const usesQuotedProductionTime = isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct || isPerakendeFisiProduct;
+  const productSize = product?.ebat || (isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct || isAdisyonProduct || isPerakendeFisiProduct
+    ? MAKBUZ_FORMLAR_ALL_DATA.find(section => section.id === (isPerakendeFisiProduct ? 'perakende-satis-fisi' : isAdisyonProduct ? 'adisyon' : isSiparisFisiProduct ? 'siparis-fisi' : isParaMakbuzuProduct ? 'para-makbuzu' : 'sozlesme-baski'))?.ebat
     : undefined);
 
   const isMakbuzVeForm = (() => {
@@ -1077,7 +1079,7 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
         {/* Footer / Action */}
         <div className="p-4 sm:p-8 pt-0 shrink-0 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${productSize || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct || isAdisyonProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Merhaba, ${category} - ${product.code} (${product.desc}, Ebat: ${productSize || '-'}) için ${quantity.toLocaleString('tr-TR')} ${isReceteProduct || isSozlesmeProduct || isParaMakbuzuProduct || isSiparisFisiProduct || isAdisyonProduct || isPerakendeFisiProduct ? 'cilt' : 'adet'} (${formatPrice(totalPrice)} + KDV) hakkında bilgi almak ve sipariş vermek istiyorum.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-sm uppercase tracking-tight flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98]"
@@ -1307,7 +1309,7 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 
 export const CanonicalLink = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
+  return pathname === '/' || ['/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
 };
 
 const LegacyCanonicalLink = () => {
@@ -2148,6 +2150,7 @@ const MEGA_MENU_DATA = [
     items: [
       { name: "Adisyon", path: "/adisyon" },
       { name: "Sipariş Fişi", path: "/siparis-fisi" },
+      { name: "Perakende Satış Fişi", path: "/perakende-satis-fisi" },
       { name: "Para Makbuzu", path: "/para-makbuzu" },
       { name: "Sözleşme", path: "/sozlesme-baski" },
       { name: "Sigorta Poliçeleri", path: "/sigorta-policeleri" },
@@ -2713,7 +2716,17 @@ const Navbar = () => {
                 <div className="px-3 py-4">
                   <span className="block text-base font-bold text-black mb-2 uppercase tracking-tight">Makbuz & Formlar</span>
                   <div className="grid grid-cols-1 gap-1 pl-2">
-                    {MAKBUZ_FORMLAR_MENU.map((item, idx) => (
+                    {MAKBUZ_FORMLAR_MENU.map((item, idx) => item.path === '/perakende-satis-fisi' ? (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="flex items-center gap-2 py-2 text-sm w-full text-left border-b border-gray-50 last:border-0"
+                      >
+                        <ChevronRight size={12} className="text-black" />
+                        <span className="text-black font-medium uppercase tracking-tight">{item.name}</span>
+                      </Link>
+                    ) : (
                       <button 
                         key={idx} 
                         onClick={() => {
@@ -5063,7 +5076,7 @@ export const AppRoutes = ({ AmerikanServisComponent = AmerikanServisPage, OtoPas
       <Route path="/adisyon" element={<MakbuzComponent />} />
       <Route path="/siparis-fisi" element={<MakbuzComponent />} />
       <Route path="/siparis-fisi-baski-fiyatlari" element={<Navigate to="/siparis-fisi" replace />} />
-      <Route path="/perakende-satis-fisi" element={<MakbuzFormlarPage />} />
+      <Route path="/perakende-satis-fisi" element={<MakbuzComponent />} />
       <Route path="/para-makbuzu" element={<MakbuzComponent />} />
       <Route path="/sozlesme" element={<Navigate to="/sozlesme-baski" replace />} />
       <Route path="/sozlesme-baski" element={<MakbuzComponent />} />
@@ -5119,7 +5132,7 @@ export const AppRoutes = ({ AmerikanServisComponent = AmerikanServisPage, OtoPas
 
 const SEOMetadataManager = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
+  return pathname === '/' || ['/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
 };
 
 const LegacySEOMetadataManager = () => {

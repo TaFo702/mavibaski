@@ -222,3 +222,11 @@ export function prerenderAmerikanServis() {
     .replace(/<meta\b[^>]*\/?>/gi, '')
     .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
 }
+
+// Reuse the existing page and protected table for the initial HTML and hydration.
+export function prerenderPerakendeSatisFisi() {
+  const PerakendeRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/perakende-satis-fisi']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={PerakendeRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}

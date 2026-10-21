@@ -5,7 +5,7 @@ import { getHomeSEO } from "../data/homePageContent";
 import { PAGE_SEARCH_METADATA } from "../data/pageSearchMetadata";
 import { getCitySearchMetadata } from "./citySearchMetadata";
 export { injectSEOMetadata } from "./seoMetadata";
-import { MAKBUZ_DETAILS, PARA_MAKBUZU_DATA, SOZLESME_BASKI_DATA, ADISYON_DATA, SIPARIS_FISI_DATA, SIGORTA_POLICELERI_DATA, ARAC_KIRALAMA_DATA, GIDER_MAKBUZU_DATA, GIRIS_BILETI_DATA } from "../data/makbuzData";
+import { MAKBUZ_DETAILS, PARA_MAKBUZU_DATA, SOZLESME_BASKI_DATA, ADISYON_DATA, SIPARIS_FISI_DATA, SIGORTA_POLICELERI_DATA, ARAC_KIRALAMA_DATA, GIDER_MAKBUZU_DATA, GIRIS_BILETI_DATA, PERAKENDE_SATIS_FISI_DATA } from "../data/makbuzData";
 import { SEO_PAGES_DATA } from "../data/seoPagesData";
 import { BLOG_POSTS } from "../data/blogData";
 import { getBlogMetadata } from "./blogMetadata";
@@ -3628,7 +3628,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
     const breadcrumbSchema = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": (p === '/adisyon' || p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski' || p === '/siparis-fisi')
+      "itemListElement": (p === '/adisyon' || p === '/gider-makbuzu' || p === '/arac-kiralama' || p === '/sozlesme-baski' || p === '/siparis-fisi' || p === '/perakende-satis-fisi')
         ? [
             {
               "@type": "ListItem",
@@ -3684,6 +3684,21 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
         .flatMap(row => row.values));
       productSchema.size = ADISYON_DATA[0].ebat;
       productSchema.material = '70–80 gr 1. hamur beyaz kâğıt';
+      productSchema.offers = {
+        "@type": "AggregateOffer",
+        "priceCurrency": "TRY",
+        "lowPrice": String(Math.min(...prices)),
+        "highPrice": String(Math.max(...prices)),
+        "offerCount": String(prices.length),
+        "url": canonical
+      };
+    }
+
+    if (p === '/perakende-satis-fisi') {
+      // Read complete package prices from the protected tariff, excluding color surcharges.
+      const prices = PERAKENDE_SATIS_FISI_DATA.flatMap(section => section.rows
+        .filter(row => !row.label.includes('Renk Farkı'))
+        .flatMap(row => row.values));
       productSchema.offers = {
         "@type": "AggregateOffer",
         "priceCurrency": "TRY",

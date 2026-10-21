@@ -26,6 +26,7 @@ if ((container.dataset.prerendered === 'home' && path === '/') ||
     (container.dataset.prerendered === 'tahsilat-makbuzu' && path === '/tahsilat-makbuzu') ||
     (container.dataset.prerendered === 'recete' && path === '/recete') ||
     (container.dataset.prerendered === 'para-makbuzu' && path === '/para-makbuzu') ||
+    (container.dataset.prerendered === 'perakende-satis-fisi' && path === '/perakende-satis-fisi') ||
     (container.dataset.prerendered === 'siparis-fisi' && path === '/siparis-fisi') ||
     (container.dataset.prerendered === 'adisyon' && path === '/adisyon') ||
     (container.dataset.prerendered === 'otokopili-kagit-blog' && path === '/blog/adisyon-ve-makbuzlarda-otokopili-kagit') ||

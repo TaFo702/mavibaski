@@ -65,6 +65,7 @@ async function prerender() {
   let sozlesmeContent: string;
   let paraContent: string;
   let siparisContent: string;
+  let perakendeContent: string;
   let adisyonContent: string;
   let zarfBlogContent: string;
   let antetliBlogContent: string;
@@ -73,7 +74,7 @@ async function prerender() {
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderPerakendeSatisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
     amerikanServisContent = prerenderAmerikanServis();
     if ((amerikanServisContent.match(/<h1\b/g) || []).length !== 1 ||
@@ -133,6 +134,13 @@ async function prerender() {
     }
     paraContent = prerenderParaMakbuzu();
     siparisContent = prerenderSiparisFisi();
+    perakendeContent = prerenderPerakendeSatisFisi();
+    if ((perakendeContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
+        (perakendeContent.match(/<h1\b/g) || []).length !== 1 ||
+        !perakendeContent.includes('id="sss-bolumu"') ||
+        !perakendeContent.includes('Perakende Satış Fişi')) {
+      throw new Error('Perakende prerender missing existing content, FAQ or protected price table.');
+    }
     adisyonContent = prerenderAdisyon();
     if ((adisyonContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
         (adisyonContent.match(/<h1\b/g) || []).length !== 1 ||
@@ -280,6 +288,7 @@ async function prerender() {
           : pathname === '/tahsilat-makbuzu' ? tahsilatContent
           : pathname === '/para-makbuzu' ? paraContent
           : pathname === '/siparis-fisi' ? siparisContent
+          : pathname === '/perakende-satis-fisi' ? perakendeContent
           : pathname === '/adisyon' ? adisyonContent
           : pathname === '/sozlesme-baski' ? sozlesmeContent
           : pathname === '/arac-kiralama' ? aracKiralamaContent
@@ -328,6 +337,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="tahsilat-makbuzu">')
         : pathname === '/para-makbuzu'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="para-makbuzu">')
+        : pathname === '/perakende-satis-fisi'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="perakende-satis-fisi">')
         : pathname === '/siparis-fisi'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="siparis-fisi">')
         : pathname === '/adisyon'
