@@ -268,7 +268,7 @@ const calculateDiscount = (quantity: number, category: string, code?: string) =>
 
   const excludedCategories = [
     "Kataloglar", "Makbuz", "Ambalaj", "Kutu", "Zarf", "Form", 
-    "Fiş", "Bilet", "Reçete", "Senet", "Poliçe", "Sözleşme", "Adisyon", "Kiralama", "Oto Paspas", "Amerikan Servis", "Antetli Kağıt", "Dosya", "Bloknot",
+    "Fiş", "Bilet", "Reçete", "Poliçe", "Sözleşme", "Adisyon", "Kiralama", "Oto Paspas", "Amerikan Servis", "Antetli Kağıt", "Dosya", "Bloknot",
     "broşür", "brosur", "el ilanı", "el ilani", "etiket", "kitap ayracı", "kitap ayraci", "yağ kartı", "yag karti", "karton çanta", "karton canta"
   ];
 
@@ -325,7 +325,6 @@ const isRestrictedQuantityProduct = (category: string, description: string = "")
     "KİRALAMA",
     "BİLETİ",
     "REÇETE",
-    "SENET",
     "PERAKENDE SATIŞ FİŞİ"
   ];
   const isBloknot = category.toLowerCase().includes("bloknot");
@@ -533,7 +532,7 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
     // Explicit exclusion if category or code contains 'afiş' or 'afis' or 'etiket'
     if (normCategory.includes("afis") || normProductTitle.includes("afis") || normCategory.includes("etiket")) return false;
     
-    const keywords = ["makbuz", "form", "fis", "bilet", "recete", "senet", "police", "sozlesme", "adisyon", "kiralama"];
+    const keywords = ["makbuz", "form", "fis", "bilet", "recete", "police", "sozlesme", "adisyon", "kiralama"];
     return keywords.some(word => normCategory.includes(word) || normProductTitle.includes(word));
   })();
   
@@ -1016,7 +1015,7 @@ const ProductDetailModal = ({ product, category, isOpen, onClose, onAddToCart }:
                     <span className="font-black text-gray-700">{formatPrice(totalPrice)}</span>
                   </div>
                   
-                  {quantity >= 7000 && quantity < 10000 && !["Kataloglar", "Makbuz", "Ambalaj", "Kutu", "Zarf", "Form", "Fiş", "Bilet", "Reçete", "Senet", "Poliçe", "Sözleşme", "Adisyon", "Kiralama", "broşür", "brosur", "el ilanı", "el ilani", "etiket", "kitap ayracı", "kitap ayraci", "yağ kartı", "yag karti", "karton çanta", "karton canta"].some(cat => category.toLowerCase().includes(cat.toLowerCase())) && (
+                  {quantity >= 7000 && quantity < 10000 && !["Kataloglar", "Makbuz", "Ambalaj", "Kutu", "Zarf", "Form", "Fiş", "Bilet", "Reçete", "Poliçe", "Sözleşme", "Adisyon", "Kiralama", "broşür", "brosur", "el ilanı", "el ilani", "etiket", "kitap ayracı", "kitap ayraci", "yağ kartı", "yag karti", "karton çanta", "karton canta"].some(cat => category.toLowerCase().includes(cat.toLowerCase())) && (
                     <motion.div 
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
