@@ -15,6 +15,14 @@ const SPECIAL_QUOTE_WHATSAPP_LINK = `https://wa.me/905366022373?text=${encodeURI
 
 // 10 Adet Senkronize Sıkça Sorulan Sorular Listesi
 export const AMERIKAN_SERVIS_FAQS = [
+      {
+        q: "Logolu ve baskılı servis kağıdı restoranlar için nasıl hazırlanır?",
+        a: "Baskılı servis kağıdı, restoran ve kafelerin logosu, kurumsal renkleri ve isteğe bağlı QR kod bilgileriyle hazırlanabilir. Amerikan servis baskı siparişinde kağıt türü, ölçü ve adet seçimi mevcut fiyat listesindeki seçeneklerden yapılır; farklı talepler özel teklif kapsamında değerlendirilir."
+      },
+      {
+        q: "2.000 adet Amerikan servis kağıdı baskısında hangi bilgiler gerekir?",
+        a: "Standart Amerikan servis kağıdı baskı seçenekleri için tercih edilen ebat, 90 gr veya 120 gr 1. hamur ya da 100 gr kuşe kağıt türü ve baskı tasarımı belirtilmelidir. Fiyatlar sayfadaki mevcut tablodan incelenebilir; listede olmayan seçenekler için özel teklif istenebilir."
+      },
   {
     q: "Amerikan servis baskı fiyatları nasıl hesaplanır?",
     a: "Amerikan servis baskı fiyatları; seçilen ebat, kâğıt türü ve gramajı (90 gr 1. Hamur, 100 gr kuşe veya 120 gr 1. Hamur), baskı adedi ve renk seçeneklerine göre belirlenir. Standart paketlerimiz 2.000 adet üzerinden sunulmakta olup farklı adet seçenekleri için fiyat bilgisi sipariş detaylarına göre paylaşılır."
@@ -601,6 +609,16 @@ height={512}
             ))}
           </div>
         </div>
+
+        <section aria-labelledby="servis-kagidi-baski-rehberi" className="mb-10 rounded-2xl border border-gray-200 bg-white p-5 sm:p-7 text-black">
+          <h2 id="servis-kagidi-baski-rehberi" className="text-lg sm:text-xl font-black mb-3">Baskılı Servis Kağıdı ve Logolu Amerikan Servis Seçenekleri</h2>
+          <p className="text-sm leading-relaxed text-gray-700">
+            Restoran ve kafeler için baskılı servis kağıdı, markanın logosunu ve menüye yönlendiren QR kodunu masada görünür kılabilir. Kağıt Amerikan servis baskı seçeneklerini karşılaştırırken mevcut fiyat listesindeki ebat, gramaj ve sipariş adetlerini esas alın. Tek kullanımlık kağıt Amerikan servis ihtiyacınız için listede olmayan talepler özel teklif kapsamında değerlendirilir.
+          </p>
+          <p className="text-sm leading-relaxed text-gray-700 mt-3">
+            Masa üstü tanıtım ürünlerinizi <Link to="/adisyon" className="font-semibold text-primary underline">adisyon baskısı</Link> ve <Link to="/siparis-fisi" className="font-semibold text-primary underline">sipariş fişi</Link> ile tamamlayabilirsiniz.
+          </p>
+        </section>
 
         {/* Blog Rehberleri */}
         <div className="my-10">
