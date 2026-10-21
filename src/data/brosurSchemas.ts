@@ -31,7 +31,7 @@ const serviceSchema = {
   "url": "https://mavibasim.com/brosur",
   "name": "Broşür Baskı Hizmeti",
   "serviceType": "Siparişe özel broşür baskısı",
-  "image": "https://mavibasim.com/images/brosur/brosur-baski-fiyatlari.webp",
+  "image": "https://mavibasim.com/images/brosur/tanitim-brosuru-ornegi.webp",
   "description": "115 gr, 130 gr ve 200 gr kuşe kâğıda çift yön renkli A4, A5, A3 ve özel ebat broşür baskı seçenekleri. Kırım ve katlama opsiyonel olarak tekliflendirilir.",
   "provider": { "@id": "https://mavibasim.com/#organization" },
   "areaServed": { "@type": "Country", "name": "Türkiye" },
