@@ -46,19 +46,19 @@ interface BrosurGalleryItem {
 const BROSUR_GALLERY_ITEMS: BrosurGalleryItem[] = [
   {
     id: 1,
-    title: "Düz Broşür Baskı Örneği",
-    shortDesc: "Eğitim merkezi tanıtımı",
-    alt: "Çocuk etkinlikleri ve eğitim programlarını tanıtan broşür örneği",
-    hasRealImage: true,
-    imageSrc: "/images/brosur/brosur-baski-fiyatlari.webp"
-  },
-  {
-    id: 2,
     title: "Restoran Broşürü Örneği",
     shortDesc: "Menü ve kampanya sunumu",
     alt: "Dürüm menüsü ve kampanya bilgileri içeren restoran broşürü",
     hasRealImage: true,
     imageSrc: "/images/brosur/tanitim-brosuru-ornegi.webp"
+  },
+  {
+    id: 2,
+    title: "Düz Broşür Baskı Örneği",
+    shortDesc: "Eğitim merkezi tanıtımı",
+    alt: "Çocuk etkinlikleri ve eğitim programlarını tanıtan broşür örneği",
+    hasRealImage: true,
+    imageSrc: "/images/brosur/brosur-baski-fiyatlari.webp"
   },
   {
     id: 3,
