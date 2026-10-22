@@ -1,3 +1,4 @@
+import { MAGNET_DATA } from '../data/productData';
 import { AFIS_SCHEMAS } from '../data/afisSeo';
 import { EL_ILANI_SCHEMAS } from '../data/elIlaniSeo';
 import { BROSUR_SCHEMAS } from '../data/brosurSchemas';
@@ -514,27 +515,27 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
       ]
     };
 
-    const productSchema = {
+    // Each fixed package is a distinct printed model. The custom cm² tariff
+    // is not a complete product price and must not enter a package price range.
+    const productSchemas = MAGNET_DATA[0].items.filter(item => !item.isCustom).map(item => ({
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "Magnet Baskı Fiyatları ve Buzdolabı Magnet Modelleri",
-      "image": "https://mavibasim.com/images/magnet/magnet-baski-fiyatlari-ve-cesitleri.webp",
-      "description": "1.000 adet magnet baskı fiyatlarını inceleyin. 0.50 mm mıknatıslı, parlak selefonlu buzdolabı, oval ve özel kesim magnet seçenekleri.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Mavi Basım"
-      },
+      "@id": `${canonical}#${item.code.toLowerCase()}`,
+      "url": canonical,
+      "sku": item.code,
+      "name": `${item.miktar} ${item.ebat} Magnet — ${item.desc}`,
+      "image": "https://mavibasim.com/images/magnet/magnet-baski-fiyatlari.webp",
+      "description": `${item.miktar}, ${item.ebat}, ${item.desc}. 0.50 mm mıknatıs, renkli baskı. Fiyatlara %20 KDV dahil değildir.`,
+      "brand": { "@type": "Brand", "name": "Mavi Basım" },
       "category": "Magnet Baskı",
       "offers": {
-        "@type": "AggregateOffer",
+        "@type": "Offer",
+        "url": `${canonical}#fiyat-tablosu`,
         "priceCurrency": "TRY",
-        "lowPrice": "1180",
-        "highPrice": "1250",
-        "offerCount": "3",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock"
+        "price": item.price.replace(/\./g, '').replace(',', '.').replace(/[^\d.]/g, ''),
+        "itemOffered": { "@id": `${canonical}#${item.code.toLowerCase()}` }
       }
-    };
+    }));
 
     const magnetFaqs = [
       {
@@ -593,7 +594,7 @@ function resolveRawRouteSEO(pathname: string): { title: string; desc: string; ca
     };
 
     let extraHead = `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n`;
-    extraHead += `  <script type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;
+    extraHead += productSchemas.map(schema => `  <script type="application/ld+json">${JSON.stringify(schema)}</script>\n`).join('');
     extraHead += `  <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n`;
 
     const bodyContent = `<h1>Magnet Baskı Fiyatları ve Buzdolabı Magnet Modelleri</h1>

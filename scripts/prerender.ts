@@ -46,6 +46,7 @@ async function prerender() {
   // CJS interop also supports react-helmet-async's Node package exports.
   const rendererPath = path.join(distDir, '.prerender-home.cjs');
   let homeContent: string;
+  let magnetContent: string;
   let etiketContent: string;
   let zarfContent: string;
   let brosurContent: string;
@@ -75,8 +76,14 @@ async function prerender() {
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderEtiket, prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderPerakendeSatisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderMagnet, prerenderEtiket, prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderPerakendeSatisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
+    magnetContent = prerenderMagnet();
+    if ((magnetContent.match(/<h1\b/g) || []).length !== 1 ||
+        (magnetContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
+        !['MAG1', 'MAG2', 'MAG3', 'id="gorsel-galeri"', 'id="faq-section"'].every(value => magnetContent.includes(value))) {
+      throw new Error('Magnet prerender is missing the existing protected tariff, gallery, FAQ or H1.');
+    }
     etiketContent = prerenderEtiket();
     if ((etiketContent.match(/<h1\b/g) || []).length !== 1 ||
         (etiketContent.match(/<table\b/g) || []).length !== 2 ||
@@ -282,6 +289,7 @@ async function prerender() {
         seo.extraHead,
         seo.h1Text,
         pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent
+          : pathname === '/magnet' ? magnetContent
           : pathname === '/etiket' ? etiketContent
           : pathname === '/amerikan-servis' ? amerikanServisContent
           : pathname === '/oto-paspas' ? otoPaspasContent
@@ -324,6 +332,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
         : pathname === '/zarf'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="zarf">')
+        : pathname === '/magnet'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="magnet">')
         : pathname === '/etiket'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="etiket">')
         : pathname === '/amerikan-servis'

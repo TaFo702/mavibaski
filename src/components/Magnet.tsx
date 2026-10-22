@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { 
   ChevronDown, 
   ShoppingCart, 
@@ -148,28 +147,7 @@ export const MagnetPage: React.FC = () => {
 
   return (
     <div className="bg-slate-50 min-h-screen pb-20 text-slate-900" data-page-root="magnet">
-      <Helmet>
-        <title>Magnet Baskı Fiyatları | Buzdolabı ve Özel Kesim Magnet</title>
-        <meta 
-          name="description" 
-          content="1.000 adet magnet baskı fiyatlarını inceleyin. 0.50 mm mıknatıslı, parlak selefonlu buzdolabı, oval ve özel kesim magnet seçenekleri." 
-        />
-        <link rel="canonical" href="https://mavibasim.com/magnet" />
-        <meta property="og:title" content="Magnet Baskı Fiyatları | Buzdolabı ve Özel Kesim Magnet" />
-        <meta property="og:description" content="1.000 adet magnet baskı fiyatlarını inceleyin. 0.50 mm mıknatıslı, parlak selefonlu buzdolabı, oval ve özel kesim magnet seçenekleri." />
-        <meta property="og:url" content="https://mavibasim.com/magnet" />
-        <meta property="og:type" content="product" />
-        <meta property="og:image" content="https://mavibasim.com/images/magnet/magnet-baski-fiyatlari.webp" />
-        <meta property="og:image:secure_url" content="https://mavibasim.com/images/magnet/magnet-baski-fiyatlari.webp" />
-        <meta property="og:image:type" content="image/webp" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="533" />
-        <meta property="og:image:alt" content="Mavi Basım buzdolabı magnet baskı fiyatları ve özel kesim magnet modelleri" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Magnet Baskı Fiyatları | Buzdolabı ve Özel Kesim Magnet" />
-        <meta name="twitter:description" content="1.000 adet magnet baskı fiyatlarını inceleyin. 0.50 mm mıknatıslı, parlak selefonlu buzdolabı, oval ve özel kesim magnet seçenekleri." />
-        <meta name="twitter:image" content="https://mavibasim.com/images/magnet/magnet-baski-fiyatlari.webp" />
-      </Helmet>
+
 
       {/* BREADCRUMB NAVIGATION */}
       <nav aria-label="Breadcrumb" className="bg-white border-b border-slate-200">
