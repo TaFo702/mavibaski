@@ -46,6 +46,7 @@ async function prerender() {
   // CJS interop also supports react-helmet-async's Node package exports.
   const rendererPath = path.join(distDir, '.prerender-home.cjs');
   let homeContent: string;
+  let yagKartiContent: string;
   let magnetContent: string;
   let etiketContent: string;
   let zarfContent: string;
@@ -76,8 +77,17 @@ async function prerender() {
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderMagnet, prerenderEtiket, prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderPerakendeSatisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderYagKarti, prerenderMagnet, prerenderEtiket, prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderPerakendeSatisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
+    yagKartiContent = prerenderYagKarti();
+    if ((yagKartiContent.match(/<h1\b/g) || []).length !== 1 ||
+        (yagKartiContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
+        !['Yag-cok-k', 'Yag-sek-k', 'Yag-cok-b', 'Yag-sek-b',
+          'Yağ Kartı Modeli Nasıl Seçilir?', 'Sektörel Yağ Kartı Kullanım Senaryoları',
+          'Baskıya Gönderilecek Yağ Kartı Dosyası Hazırlama Rehberi',
+          'Yağ Kartı Baskı Sıkça Sorulan Sorular'].every(value => yagKartiContent.includes(value))) {
+      throw new Error('Yağ kartı prerender is missing the existing protected tariff, content, FAQ or H1.');
+    }
     magnetContent = prerenderMagnet();
     if ((magnetContent.match(/<h1\b/g) || []).length !== 1 ||
         (magnetContent.match(/id="fiyat-tablosu"/g) || []).length !== 1 ||
@@ -289,6 +299,7 @@ async function prerender() {
         seo.extraHead,
         seo.h1Text,
         pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent
+          : pathname === '/yag-karti' ? yagKartiContent
           : pathname === '/magnet' ? magnetContent
           : pathname === '/etiket' ? etiketContent
           : pathname === '/amerikan-servis' ? amerikanServisContent
@@ -332,6 +343,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
         : pathname === '/zarf'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="zarf">')
+        : pathname === '/yag-karti'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="yag-karti">')
         : pathname === '/magnet'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="magnet">')
         : pathname === '/etiket'

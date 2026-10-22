@@ -1,3 +1,4 @@
+import { YagKartiPage } from './components/YagKarti';
 import { MagnetPage } from './components/Magnet';
 import { EtiketPage } from './components/Etiket';
 import { AmerikanServisPage } from './components/AmerikanServis';
@@ -251,6 +252,18 @@ export function prerenderMagnet() {
     <MemoryRouter initialEntries={['/magnet']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={MagnetRouter} MagnetComponent={MagnetPage} />)
+    .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
+    .replace(/<meta\b[^>]*\/?>/gi, '')
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
+}
+
+// Use the existing page and protected tariff unchanged for the first HTML.
+export function prerenderYagKarti() {
+  const YagKartiRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/yag-karti']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={YagKartiRouter} YagKartiComponent={YagKartiPage} />)
     .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
     .replace(/<meta\b[^>]*\/?>/gi, '')

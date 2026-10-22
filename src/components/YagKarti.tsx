@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
@@ -189,6 +189,25 @@ export const YagKartiPage = () => {
   const { openProductDetail, cart, setIsCartOpen } = useCart();
   const [selectedImage, setSelectedImage] = useState<typeof YAG_KARTI_GALLERY[0] | null>(null);
   const [showMobileSticky, setShowMobileSticky] = useState(false);
+  const lightboxClose = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!selectedImage) return;
+    const trigger = document.activeElement as HTMLElement | null;
+    lightboxClose.current?.focus();
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setSelectedImage(null);
+      if (event.key === 'Tab') {
+        event.preventDefault();
+        lightboxClose.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('keydown', handleKey);
+      trigger?.focus();
+    };
+  }, [selectedImage]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -377,8 +396,18 @@ export const YagKartiPage = () => {
             {YAG_KARTI_GALLERY.map((img, idx) => (
               <div 
                 key={idx}
+                role="button"
+                tabIndex={0}
+                aria-label={`${img.title} — Detaylı İncele`}
+                aria-haspopup="dialog"
                 onClick={() => setSelectedImage(img)}
-                className="group cursor-pointer bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl transition-all overflow-hidden flex flex-col"
+                onKeyDown={event => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    setSelectedImage(img);
+                  }
+                }}
+                className="focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary group cursor-pointer bg-white rounded-2xl border border-slate-200 hover:border-primary/50 hover:shadow-xl transition-all overflow-hidden flex flex-col"
               >
                 <div className="relative aspect-[4/3] bg-slate-100 overflow-hidden">
                   <img 
@@ -566,9 +595,9 @@ export const YagKartiPage = () => {
 
         {/* 5. Internal Links Section */}
         <section className="mb-14 bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200">
-          <h3 className="text-lg font-black text-slate-900 uppercase tracking-tight mb-3">
+          <h2 className="text-lg font-black text-slate-900 uppercase tracking-tight mb-3">
             Oto Servis ve Bakım İstasyonları İçin Tamamlayıcı Baskı Çözümleri
-          </h3>
+          </h2>
           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
             Araç bakım teslimatında araç zemin temizliğini korumak için <Link to="/oto-paspas" className="text-primary hover:underline font-bold">Oto Paspas Baskı</Link> ürünlerimizin yanı sıra, servis kayıtları ve ödeme işlemleri için <Link to="/makbuz-ve-formlar" className="text-primary hover:underline font-bold">Tahsilat Makbuzu ve Form Baskı</Link> koçanlarımızı inceleyebilirsiniz. Servis danışmanlarınız ve ustalarınız için kurumsal <Link to="/kartvizit" className="text-primary hover:underline font-bold">Kartvizit Baskı</Link>, dönemsel araç bakım kampanyalarınızı duyurmak için <Link to="/brosur" className="text-primary hover:underline font-bold">Broşür Baskı</Link>, yedek parça ve filtre kutularında kullanabileceğiniz <Link to="/etiket" className="text-primary hover:underline font-bold">Yapışkanlı Etiket Baskı</Link> ve acil yol yardım numaralarınızı hatırlatacak <Link to="/magnet" className="text-primary hover:underline font-bold">Promosyon Magnet</Link> siparişlerinizi birlikte planlayabilirsiniz.
           </p>
@@ -655,14 +684,19 @@ export const YagKartiPage = () => {
             onClick={() => setSelectedImage(null)}
             className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4"
           >
-            <motion.div 
+            <motion.div
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="yag-karti-lightbox-title"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
               className="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-slate-200 relative"
             >
-              <button 
+              <button
+                ref={lightboxClose}
+                aria-label="Görseli kapat"
                 onClick={() => setSelectedImage(null)}
                 className="absolute top-4 right-4 z-10 bg-slate-900/80 hover:bg-slate-900 text-white p-2 rounded-full transition-colors cursor-pointer"
               >
@@ -681,7 +715,7 @@ export const YagKartiPage = () => {
                 <span className="text-xs font-bold text-primary uppercase tracking-wider block mb-1">
                   {selectedImage.subtitle}
                 </span>
-                <h3 className="font-black text-slate-900 text-lg mb-2">
+                <h3 id="yag-karti-lightbox-title" className="font-black text-slate-900 text-lg mb-2">
                   {selectedImage.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">

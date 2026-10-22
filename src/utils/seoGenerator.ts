@@ -18,7 +18,7 @@ import { KUP_BLOKNOT_SEO_METADATA, KUP_BLOKNOT_SCHEMAS, generateKupBloknotSSRBod
 import { ETIKET_SEO_METADATA, ETIKET_SCHEMAS, generateEtiketSSRBodyContent } from "../data/etiketPageContent";
 import { BLOKNOTLAR_SEO_METADATA, BLOKNOTLAR_SCHEMAS } from "../data/bloknotlarPageContent";
 import { ANTETLI_SEO_METADATA, ANTETLI_SCHEMAS } from "../data/antetliPageContent";
-import { KATALOG_FAQS, KATALOG_DATA, KARTON_CANTA_DATA, ZARF_FAQS } from "../data/extraProductData";
+import { KATALOG_FAQS, KATALOG_DATA, KARTON_CANTA_DATA, ZARF_FAQS, YAG_KARTI_DATA } from "../data/extraProductData";
 import { DOSYALAR_DETAILS } from "../data/dosyalarPageContent";
 export const citySlugs = new Set(CITIES_DATA.map(c => c.slug));
 
@@ -2594,20 +2594,35 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
         "https://mavibasim.com/images/yag-karti/mat-selefon-yag-karti.webp"
       ],
       "description": "Oto servisleri ve bakım istasyonları için 350 gr ve 700 gr mat selefonlu, 4 mm delikli, ipli özel kesim araç periyodik bakım ve yağ değişim takip kartı imalatı.",
-      "sku": "YAG-KARTI-1000",
       "brand": {
         "@type": "Brand",
         "name": "Mavi Basım"
       },
-      "category": "Yağ Kartı Baskı",
-      "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "TRY",
-        "lowPrice": "2760",
-        "highPrice": "4100",
-                "offerCount": "4"
-      }
+      "category": "Yağ Kartı Baskı"
     };
+    // These are four size/material variants, not offers from multiple sellers.
+    // Read prices from the unchanged tariff, never write to its data source.
+    const productSchemas = YAG_KARTI_DATA.flatMap(category => category.items).map(item => ({
+      ...productSchema,
+      "@id": `${canonical}#product-${item.code}`,
+      "url": canonical,
+      "sku": item.code,
+      "name": `${item.miktar} ${item.ebat} Yağ Kartı — ${item.desc}`,
+      "description": `${item.miktar} ${item.ebat} ${item.desc}. Fiyat KDV hariçtir; baskı sipariş üzerine üretilir.`,
+      "offers": {
+        "@type": "Offer",
+        "url": canonical,
+        "priceCurrency": "TRY",
+        "price": item.price.replace(/\./g, '').replace(',', '.').replace(/[^0-9.]/g, ''),
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "TRY",
+          "price": item.price.replace(/\./g, '').replace(',', '.').replace(/[^0-9.]/g, ''),
+          "valueAddedTaxIncluded": false
+        },
+        "seller": { "@type": "Organization", "name": "Mavi Basım", "url": "https://mavibasim.com/" }
+      }
+    }));
 
     const yagKartiFaqs = [
       {
@@ -2658,7 +2673,7 @@ ${kartvizitFaqs.map(f => `      <div class="bg-white border border-gray-200 roun
     };
 
     let extraHead = `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>\n`;
-    extraHead += `  <script type="application/ld+json">${JSON.stringify(productSchema)}</script>\n`;
+    extraHead += `  <script type="application/ld+json">${JSON.stringify(productSchemas)}</script>\n`;
     extraHead += `  <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>\n`;
 
     const faqsHtml = yagKartiFaqs.map(item => `
