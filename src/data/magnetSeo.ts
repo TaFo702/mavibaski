@@ -1,8 +1,8 @@
 // Shared visible FAQ content and FAQPage schema for /magnet.
 export const MAGNET_SSS = [
   {
-    "q": "Magnet baskı fiyatları nasıl hesaplanır?",
-    "a": "Magnet baskı fiyatları; kesim türü, ürün ebadı ve sipariş adedine göre değerlendirilir. Standart 48x68 mm modellerin 1.000 adetlik fiyatları tabloda yer alır. Özel ölçü ve kesim talepleri için proje bilgileriyle teklif alınabilir."
+    "q": "Magnet yaptırma fiyatları nasıl hesaplanır?",
+    "a": "Magnet yaptırma fiyatları; kesim türü, ürün ebadı ve sipariş adedine göre değerlendirilir. Standart 48x68 mm modellerin 1.000 adetlik fiyatları tabloda yer alır. Özel ölçü ve kesim talepleri için proje bilgileriyle teklif alınabilir."
   },
   {
     "q": "1.000 adet magnet fiyatı nedir?",
@@ -10,7 +10,7 @@ export const MAGNET_SSS = [
   },
   {
     "q": "Toptan buzdolabı magnet fiyatları için hangi bilgiler gerekir?",
-    "a": "Toptan magnet baskı teklifi için sipariş adedi, net ölçü, kesim şekli ve baskıya hazır dosyanızın bulunup bulunmadığı belirtilmelidir. Aynı ebat ve kesim özelliklerini karşılaştırarak fiyat listesini inceleyebilirsiniz. Standart listede bulunmayan toplu magnet siparişi için özel teklif isteyebilirsiniz."
+    "a": "Toptan magnet fiyatları için sipariş adedi, net ölçü, kesim şekli ve baskıya hazır dosyanızın bulunup bulunmadığı belirtilmelidir. Aynı ebat ve kesim özelliklerini karşılaştırarak fiyat listesini inceleyebilirsiniz. Standart listede bulunmayan toplu magnet siparişi için özel teklif isteyebilirsiniz."
   },
   {
     "q": "Magnet çeşitleri ve modelleri nasıl seçilir?",
@@ -18,7 +18,7 @@ export const MAGNET_SSS = [
   },
   {
     "q": "Logolu promosyon magnet ve reklam magneti nasıl hazırlanır?",
-    "a": "Kurumsal magnet tasarımında firma logosu, sipariş telefonu ve kısa hizmet bilgileri birlikte düzenlenir. Promosyon magnet dağıtımı için hazırlanan reklam magneti, işletmenizin iletişim bilgilerini müşterinin erişebileceği metal yüzeylerde bir araya getirir. Grafik desteği var."
+    "a": "Kurumsal magnet tasarımında firma logosu, sipariş telefonu ve kısa hizmet bilgileri birlikte düzenlenir. Reklam magnet fiyatları değerlendirilirken bu tasarımın uygulanacağı ölçü, kesim modeli ve adet birlikte belirtilmelidir. Promosyon magnet dağıtımı için hazırlanan reklam magneti, işletmenizin iletişim bilgilerini müşterinin erişebileceği metal yüzeylerde bir araya getirir. Grafik desteği var."
   },
   {
     "q": "Magnetli kartvizit ile mıknatıslı kartvizit aynı ürün müdür?",

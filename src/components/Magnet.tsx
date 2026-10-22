@@ -379,6 +379,41 @@ export const MagnetPage: React.FC = () => {
           </div>
         </section>
 
+        <section id="magnet-siparis-secimi" className="scroll-mt-24 mb-12 bg-white rounded-3xl border border-slate-200 p-6 md:p-8">
+          <h2 className="text-xl md:text-2xl font-black text-slate-900">
+            Magnet Yaptırma: Model, Ölçü ve Sipariş Seçimi
+          </h2>
+          <p className="mt-3 text-sm text-slate-650 leading-relaxed">
+            İşletmeniz için magnet bastırma sürecinde önce kullanım alanını ve iletişim bilgilerini belirleyin. Magnet basımı için hazırlanan tasarımın ölçüsü ile seçilen kesim modeli birbiriyle uyumlu olmalıdır. Baskılı magnet fiyatları karşılaştırılırken paket adedi ve teknik özellikler birlikte incelenmelidir.
+          </p>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-base font-bold text-slate-900">Magnet Kartvizit Fiyatları</h3>
+              <p className="mt-2 text-sm text-slate-650 leading-relaxed">
+                Magnet kartvizit baskı, firma adı ve telefon numarasını manyetik tabakalı bir tanıtım kartında bir araya getirir. Magnet kartvizit fiyatları, seçilen ölçü ve kesim şekline göre değerlendirilir. Bu sayfadaki 50x80 mm veya özel cm² ebat talepleri MAG3 kapsamında tekliflendirilir. Standart 48x68 mm MAG1 ve MAG2 paketleriyle karşılaştırırken aynı ölçü ve adet üzerinden bilgi isteyin.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-base font-bold text-slate-900">Büyük Magnet Baskı ve Özel Kesim</h3>
+              <p className="mt-2 text-sm text-slate-650 leading-relaxed">
+                Büyük magnet baskı talebinde en ve boy ölçüsünü, sipariş adedini ve kesim çizgisini birlikte paylaşın. Logo şeklinde magnet baskı veya ürün siluetine uygun özel magnet yaptırma taleplerinde dış kontur, tasarım dosyasında ayrıca belirtilmelidir. Özel ebat için kullanılan MAG3 cm² birim fiyatı, hazır bir ürün paketinin toplam fiyatı değildir.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-base font-bold text-slate-900">Online Magnet Siparişi Nasıl Verilir?</h3>
+              <p className="mt-2 text-sm text-slate-650 leading-relaxed">
+                Standart model için <a href="#fiyat-tablosu" className="text-primary hover:underline font-bold">magnet baskı fiyat listesini</a> inceleyin ve seçtiğiniz satırdaki Hemen Sipariş Ver düğmesini kullanın. Listede bulunmayan ebat veya kesim için Özel Teklif Al bağlantısından talebinizi iletebilirsiniz. Buzdolabı magnetini toptan sipariş ederken aynı tasarımdan istediğiniz adedi ve teslimat adresini de belirtin.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-base font-bold text-slate-900">İstanbul Magnet Baskı ve Türkiye Geneli Gönderim</h3>
+              <p className="mt-2 text-sm text-slate-650 leading-relaxed">
+                İstanbul magnet baskı talepleri için iletişim ve dosya hazırlığı, Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktası üzerinden yürütülür. Türkiye geneline anlaşmalı kargo seçeneği sunulur. Kurumsal magnet baskı teklifinde logo ve iletişim bilgilerinizle birlikte net ölçüyü, kesim tercihini ve adedi paylaşabilirsiniz; üretim ve kargoya teslim süresi teklif aşamasında bildirilir.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* MAGNET ÖLÇÜLERİ VE KESİM ÇEŞİTLERİ */}
         <section id="magnet-olculeri" className="scroll-mt-24 mb-12">
           <div className="text-center max-w-3xl mx-auto mb-8">
