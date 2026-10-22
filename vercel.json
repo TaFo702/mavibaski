@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/sivas-emlakci-kartvizit-baski",
+      "destination": "/sektor/emlakci-kartvizit-baski",
+      "statusCode": 301
+    },
+    {
       "source": "/fiyat-sor",
       "destination": "/iletisim",
       "statusCode": 301
