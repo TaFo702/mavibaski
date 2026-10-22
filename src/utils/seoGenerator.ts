@@ -79,6 +79,7 @@ export const knownStaticRoutes = new Set([
 ]);
 
 export const URL_REDIRECTS: Record<string, string> = {
+  "/blog/grafik-tasarimda-tasma-payi-ayarlama": "/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi",
   "/blog/baskida-cmyk-nedir": "/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi",
   "/blog/kitap-ayraci-baskisinda-puskul-ve-lak": "/kitap-ayraci",
   "/blog/matbaa-tasarimi-nasil-hazirlanir": "/blog/baskiya-uygun-tasarim-nasil-hazirlanir",

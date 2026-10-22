@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/blog/grafik-tasarimda-tasma-payi-ayarlama",
+      "destination": "/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/baskida-cmyk-nedir",
       "destination": "/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi",
       "statusCode": 301
