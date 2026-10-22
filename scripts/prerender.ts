@@ -75,10 +75,12 @@ async function prerender() {
   let otokopiliBlogContent: string;
   const cityContent: Record<string, string> = {};
   const reportedGuideContent: Record<string, string> = {};
+  let staticPageContent: Record<string, string>;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderYagKarti, prerenderMagnet, prerenderEtiket, prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderPerakendeSatisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderStaticPages, prerenderYagKarti, prerenderMagnet, prerenderEtiket, prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderPerakendeSatisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
+    staticPageContent = prerenderStaticPages();
     homeContent = prerenderHome();
     yagKartiContent = prerenderYagKarti();
     if ((yagKartiContent.match(/<h1\b/g) || []).length !== 1 ||
@@ -340,7 +342,7 @@ async function prerender() {
           : pathname === '/tediye-makbuzu' ? tediyeContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
           : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent
-          : pathname === '/blog/adisyon-ve-makbuzlarda-otokopili-kagit' ? otokopiliBlogContent : reportedGuideContent[pathname] || cityContent[pathname] || seo.bodyContent,
+          : pathname === '/blog/adisyon-ve-makbuzlarda-otokopili-kagit' ? otokopiliBlogContent : staticPageContent[pathname] || reportedGuideContent[pathname] || cityContent[pathname] || seo.bodyContent,
         seo.ogImage
       );
 
@@ -404,6 +406,7 @@ async function prerender() {
         : pathname === '/kataloglar'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="kataloglar">')
         : html;
+      if (staticPageContent[pathname]) output = output.replace('<div id="root">', `<div id="root" data-prerendered="${pathname.slice(1)}">`);
       if (cityContent[pathname]) output = output.replace('<div id="root">', `<div id="root" data-prerendered="${pathname.slice(1)}">`);
       if (pathname === "/recete") output = optimizeReceteHTML(output, distDir);
       if (pathname === "/arac-kiralama") output = optimizeProductHTML(output, distDir, "arac-kiralama");
