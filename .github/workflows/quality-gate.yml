@@ -41,3 +41,6 @@ jobs:
 
       - name: Verify perakende menus, hydration, protected pricing and WhatsApp quote
         run: node validate-perakende-fix.cjs
+
+      - name: Verify first HTML and hydration for audited pages, featured prices and business hours
+        run: node validate-site-audit-fix.cjs

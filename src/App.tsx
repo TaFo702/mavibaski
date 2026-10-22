@@ -68,6 +68,7 @@ import { useProductSearch } from './components/HeaderActions';
 import { CityLinksSection } from './components/CityLinksSection';
 import { WhatsAppIcon } from './components/WhatsAppIcon';
 import { HOME_FAQS } from './data/homePageContent';
+import { STATIC_PAGE_ROUTES } from './data/staticPageRoutes';
 import { RouteSEOHead } from './components/RouteSEOHead';
 
 // Route Pages lazy loading
@@ -118,6 +119,7 @@ export const useCart = () => {
 import { LOCAL_ASSETS } from './constants/assets';
 import { 
   PRODUCT_FEATURES_INFO,
+  PRODUCTS as CATALOG_PRODUCTS,
   KARTVIZIT_DATA,
   EL_ILANI_DATA,
   AFIS_DATA,
@@ -1152,29 +1154,12 @@ const banners = [
   }
 ];
 
-const PRODUCTS = [
-  { id: "kartvizit", name: "KARTVİZİT BASKI", price: "580 ₺", desc: "1.000 Adet", subtext: "Profesyonel çift taraflı kartvizit baskı çözümleri.", image: LOCAL_ASSETS.kartvizit, type: "kartvizit" },
-  { id: "el_ilani", name: "EL İLANI BASKI", price: "1.150 ₺", desc: "2.000 Adet", subtext: "Hızlı, ucuz ve etkili kitlelere ulaşım sağlayan çift taraflı el ilanı.", image: LOCAL_ASSETS.el_ilani, type: "el-ilani" },
-  { id: "brosur", name: "BROŞÜR BASKI", price: "1.200 ₺", desc: "1.000 Adet", subtext: "A6, A5, A4 ve kırım katlamalı yüksek kaliteli broşür baskı seçenekleri.", image: LOCAL_ASSETS.brosur, type: "brosur" },
-  { id: "magnet", name: "MAGNET BASKI", price: "960 ₺", desc: "1.000 Adet", subtext: "Dolaplarda kalıcı reklam sağlayan oval/özel kesim magnet baskı.", image: LOCAL_ASSETS.magnet, type: "magnet" },
-  { id: "kitap_ayraci", name: "KİTAP AYRACI BASKI", price: "1.250 ₺", desc: "1.000 Adet", subtext: "Kitap kurtları için özel tasarımlı parlak/mat selefonlu kitap ayraçları.", image: LOCAL_ASSETS.kitap_ayraci, type: "kitap-ayraci" },
-  { id: "yag_karti", name: "YAĞ KARTI BASKI", price: "950 ₺", desc: "1.000 Adet", subtext: "Oto servisler için dayanıklı ve pratik araç periyodik bakım takip kartı.", image: LOCAL_ASSETS.yag_karti, type: "yag-karti" },
-  { id: "etiket", name: "ETİKET BASKI", price: "690 ₺", desc: "1.000 Adet", subtext: "Ürünlerinizi ön plana çıkaran dayanıklı kendinden yapışkanlı etiket çeşitleri.", image: LOCAL_ASSETS.etiket, type: "etiket" },
-  { id: "zarf", name: "ZARF BASKI", price: "2.100 ₺", desc: "1.000 Adet", subtext: "Kurumsal yazışmalarınız için pencereli ve penceresiz antetli diplomatik zarflar.", image: LOCAL_ASSETS.zarf, type: "zarf" },
-  { id: "anteli_kagit", name: "ANTETLİ KAĞIT BASKI", price: "1.800 ₺", desc: "2.000 Adet", subtext: "Marka prestijinizi yansıtan yüksek kaliteli kurumsal antetli kağıt.", image: LOCAL_ASSETS.anteli_kagit, type: "antetli" },
-  { id: "cep", name: "CEPLİ DOSYA BASKI", price: "5.600 ₺", desc: "500 Adet", subtext: "Teklif, sözleşme ve evraklarınızı koruyan prestijli cepli dosyalar.", image: LOCAL_ASSETS.cep, type: "dosyalar" },
-  { id: "bloknot", name: "BLOKNOT BASKI", price: "6.200 ₺", desc: "500 Adet", subtext: "Baş tarafı tutkallı veya tel dikişli pratik kurumsal not defterleri.", image: LOCAL_ASSETS.bloknot, type: "bloknotlar" },
-  { id: "kup", name: "KÜP BLOKNOT BASKI", price: "8.350 ₺", desc: "100 Adet", subtext: "Masalarda her an el altında olan pratik ve kalıcı küp bloknotlar.", image: LOCAL_ASSETS.kup, type: "kup-bloknot" },
-  { id: "katalog", name: "KATALOG BASKI", price: "5.400 ₺", desc: "50 Adet", subtext: "Ürün ve hizmetlerinizi detaylı anlatan çok sayfalı kaliteli kataloglar.", image: LOCAL_ASSETS.katalog, type: "katalog" },
-  { id: "amerikan_servis", name: "AMERİKAN SERVİS BASKI", price: "2.900 ₺", desc: "2.000 Adet", subtext: "Restoran ve kafeler için hijyenik ve özel marka logolu masa örtüleri.", image: LOCAL_ASSETS.amerikan_servis, type: "amerikan-servis" },
-  { id: "karton_canta", name: "KARTON ÇANTA BASKI", price: "8.400 ₺", desc: "500 Adet", subtext: "Doğa dostu, şık ve dayanıklı kurumsal ambalaj taşıma çantaları.", image: LOCAL_ASSETS.karton_canta, type: "karton-canta" },
-  { id: "otopaspas", name: "OTO PASPAS BASKI", price: "2.300 ₺", desc: "1.000 Adet", subtext: "Oto yıkamalar için kalın kuşe kağıttan üretilmiş emici oto paspas kağıdı.", image: LOCAL_ASSETS.otopaspas, type: "oto-paspas" },
-  { id: "afis", name: "AFİŞ BASKI", price: "2.100 ₺", desc: "250 Adet", subtext: "Etkinlik duyuruları ve campaigns için canlı renklerde büyük boy afişler.", image: LOCAL_ASSETS.afis, type: "afis" },
-  { id: "siparis_fisi", name: "SİPARİŞ FİŞİ BASKI", price: "1.900 ₺", desc: "5 Cilt", subtext: "Sipariş ve satış süreçlerini hızlandıran, kendinden karbonlu pratik sipariş fişleri.", image: LOCAL_ASSETS.siparis_fisi, type: "siparis-fisi" },
-  { id: "ambalaj", name: "AMBALAJ BASKI", price: "Fiyat Alınız", desc: "100 kg", subtext: "Esnek, hijyenik ve gıdaya uygun özel ambalaj paketleme kağıtları.", image: LOCAL_ASSETS.ambalaj, type: "ambalaj" },
-  { id: "makbuz", name: "MAKBUZ & FORM BASKI", price: "1.850 ₺", desc: "5 Cilt", subtext: "Sipariş fişi, fatura, adisyon ve tediye makbuzu gibi otokopili resmi formlar.", image: LOCAL_ASSETS.makbuz, type: "makbuz-ve-formlar" },
-  { id: "kutu", name: "KUTU BASKI", price: "Fiyat Alınız", desc: "1.000 Adet", subtext: "Gıda, giyim ve e-ticaret sektörü için özel ölçülerde kurumsal kutular.", image: LOCAL_ASSETS.kutu, type: "kutu" },
-];
+// Reuse the catalogue; these two cards read their displayed tariff directly.
+const PRODUCTS = CATALOG_PRODUCTS.map(product => {
+  if (product.id === 'katalog') return { ...product, price: KATALOG_DATA.rows[0].p50.replace(' TL', ' ₺') };
+  if (product.id === 'otopaspas') return { ...product, price: OTO_PASPAS_DATA[0].price };
+  return product;
+});
 
 // KUTU_DATA, AMBALAJ_DATA, and PRICE_LIST are imported from ./data/productData
 
@@ -1308,7 +1293,7 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 
 export const CanonicalLink = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
+  return pathname === '/' || STATIC_PAGE_ROUTES.some(route => route === pathname.replace(/\/$/, '')) || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
 };
 
 const LegacyCanonicalLink = () => {
@@ -5040,7 +5025,7 @@ const HomePage = () => {
 
 
 
-export const AppRoutes = ({ YagKartiComponent = YagKartiPage, MagnetComponent = MagnetPage, EtiketComponent = EtiketPage, AmerikanServisComponent = AmerikanServisPage, OtoPaspasComponent = OtoPaspasPage, AfisComponent = AfisPage, BrosurComponent = BrosurPage, ElIlaniComponent = ElIlaniPage, ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage, MakbuzComponent = MakbuzFormlarPage, CityComponent = CityPage }: { YagKartiComponent?: React.ComponentType; MagnetComponent?: React.ComponentType; EtiketComponent?: React.ComponentType; AmerikanServisComponent?: React.ComponentType; OtoPaspasComponent?: React.ComponentType; AfisComponent?: React.ComponentType; BrosurComponent?: React.ComponentType; ElIlaniComponent?: React.ComponentType; ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType; MakbuzComponent?: React.ComponentType; CityComponent?: React.ComponentType } = {}) => {
+export const AppRoutes = ({ YagKartiComponent = YagKartiPage, MagnetComponent = MagnetPage, EtiketComponent = EtiketPage, AmerikanServisComponent = AmerikanServisPage, OtoPaspasComponent = OtoPaspasPage, AfisComponent = AfisPage, BrosurComponent = BrosurPage, ElIlaniComponent = ElIlaniPage, ZarfComponent = ZarfPage, BlogComponent = BlogPage, AntetliComponent = AntetliPage, DosyalarComponent = DosyalarPage, BloknotlarComponent = BloknotlarPage, KatalogComponent = KatalogPage, KartvizitComponent = KartvizitPage, MakbuzComponent = MakbuzFormlarPage, CityComponent = CityPage, StaticPages }: { YagKartiComponent?: React.ComponentType; MagnetComponent?: React.ComponentType; EtiketComponent?: React.ComponentType; AmerikanServisComponent?: React.ComponentType; OtoPaspasComponent?: React.ComponentType; AfisComponent?: React.ComponentType; BrosurComponent?: React.ComponentType; ElIlaniComponent?: React.ComponentType; ZarfComponent?: React.ComponentType; BlogComponent?: React.ComponentType; AntetliComponent?: React.ComponentType; DosyalarComponent?: React.ComponentType; BloknotlarComponent?: React.ComponentType; KatalogComponent?: React.ComponentType; KartvizitComponent?: React.ComponentType; MakbuzComponent?: React.ComponentType; CityComponent?: React.ComponentType; StaticPages?: Partial<Record<string, React.ComponentType>> } = {}) => {
   return (
     <React.Suspense fallback={
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
@@ -5061,7 +5046,7 @@ export const AppRoutes = ({ YagKartiComponent = YagKartiPage, MagnetComponent = 
       <Route path="/oto-paspas" element={<OtoPaspasComponent />} />
       <Route path="/kup-bloknot" element={<KupBloknotPage />} />
       <Route path="/magnet" element={<MagnetComponent />} />
-      <Route path="/kitap-ayraci" element={<KitapAyraciPage />} />
+      <Route path="/kitap-ayraci" element={React.createElement(StaticPages?.['/kitap-ayraci'] || KitapAyraciPage)} />
       <Route path="/yag-karti" element={<YagKartiComponent />} />
       <Route path="/bloknotlar" element={<BloknotlarComponent />} />
       <Route path="/bloknot" element={<Navigate to="/bloknotlar" replace />} />
@@ -5070,7 +5055,7 @@ export const AppRoutes = ({ YagKartiComponent = YagKartiPage, MagnetComponent = 
       <Route path="/zarf" element={<ZarfComponent />} />
       <Route path="/kataloglar" element={<KatalogComponent />} />
       <Route path="/katalog" element={<Navigate to="/kataloglar" replace />} />
-      <Route path="/makbuz-ve-formlar" element={<MakbuzFormlarPage />} />
+      <Route path="/makbuz-ve-formlar" element={React.createElement(StaticPages?.['/makbuz-ve-formlar'] || MakbuzFormlarPage)} />
       <Route path="/makbuz" element={<Navigate to="/makbuz-ve-formlar" replace />} />
       <Route path="/adisyon" element={<MakbuzComponent />} />
       <Route path="/siparis-fisi" element={<MakbuzComponent />} />
@@ -5087,22 +5072,22 @@ export const AppRoutes = ({ YagKartiComponent = YagKartiPage, MagnetComponent = 
       <Route path="/recete" element={<MakbuzComponent />} />
       <Route path="/tediye-makbuzu" element={<MakbuzComponent />} />
       <Route path="/cilt-isleri" element={<GenericPriceTablePage data={CILT_ISLERI_DATA} />} />
-      <Route path="/matbaa" element={<MatbaaPage />} />
-      <Route path="/referanslar" element={<ReferanslarPage />} />
-      <Route path="/sikca-sorulan" element={<SikcaSorulanPage />} />
-      <Route path="/grafik-tasarim" element={<GrafikTasarimPage />} />
-      <Route path="/hakkimizda" element={<HakkimizdaPage />} />
-      <Route path="/iletisim" element={<IletisimPage />} />
-      <Route path="/kullanim-sartlari" element={<KullanimSartlariPage />} />
-      <Route path="/gizlilik-politikasi" element={<GizlilikPolitikasiPage />} />
-      <Route path="/cerez-politikasi" element={<CerezPolitikasiPage />} />
-      <Route path="/mesafeli-satis-sozlesmesi" element={<MesafeliSatisSozlesmesiPage />} />
+      <Route path="/matbaa" element={React.createElement(StaticPages?.['/matbaa'] || MatbaaPage)} />
+      <Route path="/referanslar" element={React.createElement(StaticPages?.['/referanslar'] || ReferanslarPage)} />
+      <Route path="/sikca-sorulan" element={React.createElement(StaticPages?.['/sikca-sorulan'] || SikcaSorulanPage)} />
+      <Route path="/grafik-tasarim" element={React.createElement(StaticPages?.['/grafik-tasarim'] || GrafikTasarimPage)} />
+      <Route path="/hakkimizda" element={React.createElement(StaticPages?.['/hakkimizda'] || HakkimizdaPage)} />
+      <Route path="/iletisim" element={React.createElement(StaticPages?.['/iletisim'] || IletisimPage)} />
+      <Route path="/kullanim-sartlari" element={React.createElement(StaticPages?.['/kullanim-sartlari'] || KullanimSartlariPage)} />
+      <Route path="/gizlilik-politikasi" element={React.createElement(StaticPages?.['/gizlilik-politikasi'] || GizlilikPolitikasiPage)} />
+      <Route path="/cerez-politikasi" element={React.createElement(StaticPages?.['/cerez-politikasi'] || CerezPolitikasiPage)} />
+      <Route path="/mesafeli-satis-sozlesmesi" element={React.createElement(StaticPages?.['/mesafeli-satis-sozlesmesi'] || MesafeliSatisSozlesmesiPage)} />
       <Route path="/teslimat-sartlari" element={<TeslimatSartlariPage />} />
-      <Route path="/iptal-ve-iade-sartlari" element={<IptalVeiadeSartlariPage />} />
+      <Route path="/iptal-ve-iade-sartlari" element={React.createElement(StaticPages?.['/iptal-ve-iade-sartlari'] || IptalVeiadeSartlariPage)} />
       <Route path="/teslimat-ve-iade" element={<Navigate to="/teslimat-sartlari" replace />} />
-      <Route path="/lisans" element={<LisansPage />} />
+      <Route path="/lisans" element={React.createElement(StaticPages?.['/lisans'] || LisansPage)} />
       <Route path="/servis-formu" element={<Navigate to="/arac-kiralama" replace />} />
-      <Route path="/blog" element={<BlogComponent />} />
+      <Route path="/blog" element={React.createElement(StaticPages?.['/blog'] || BlogComponent)} />
       <Route path="/blog/:slug" element={<BlogComponent />} />
       <Route path="/makine-parkuru" element={<MakineParkuruPage />} />
       <Route path="/sektor/gida-kooperatif-baski" element={<Navigate to="/sektor/kutu-ambalaj-baski-cozumleri" replace />} />
@@ -5131,7 +5116,7 @@ export const AppRoutes = ({ YagKartiComponent = YagKartiPage, MagnetComponent = 
 
 const SEOMetadataManager = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
+  return pathname === '/' || STATIC_PAGE_ROUTES.some(route => route === pathname.replace(/\/$/, '')) || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
 };
 
 const LegacySEOMetadataManager = () => {
@@ -5239,7 +5224,7 @@ pathname === '/kartvizit' ||
   return null;
 };
 
-export default function App({ Router = BrowserRouter, YagKartiComponent, MagnetComponent, EtiketComponent, AmerikanServisComponent, OtoPaspasComponent, AfisComponent, BrosurComponent, ElIlaniComponent, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent, MakbuzComponent, CityComponent }: {
+export default function App({ Router = BrowserRouter, YagKartiComponent, MagnetComponent, EtiketComponent, AmerikanServisComponent, OtoPaspasComponent, AfisComponent, BrosurComponent, ElIlaniComponent, ZarfComponent, BlogComponent, AntetliComponent, DosyalarComponent, BloknotlarComponent, KatalogComponent, KartvizitComponent, MakbuzComponent, CityComponent, StaticPages }: {
   Router?: React.ComponentType<{ children: React.ReactNode }>;
   YagKartiComponent?: React.ComponentType;
   MagnetComponent?: React.ComponentType;
@@ -5258,6 +5243,7 @@ export default function App({ Router = BrowserRouter, YagKartiComponent, MagnetC
   KartvizitComponent?: React.ComponentType;
   MakbuzComponent?: React.ComponentType;
   CityComponent?: React.ComponentType;
+  StaticPages?: Partial<Record<string, React.ComponentType>>;
 } = {}) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -5304,7 +5290,7 @@ export default function App({ Router = BrowserRouter, YagKartiComponent, MagnetC
             <Navbar />
             
             <main className="flex-grow">
-              <AppRoutes YagKartiComponent={YagKartiComponent} MagnetComponent={MagnetComponent} EtiketComponent={EtiketComponent} AmerikanServisComponent={AmerikanServisComponent} OtoPaspasComponent={OtoPaspasComponent} AfisComponent={AfisComponent} ElIlaniComponent={ElIlaniComponent} BrosurComponent={BrosurComponent} ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} MakbuzComponent={MakbuzComponent} CityComponent={CityComponent} />
+              <AppRoutes YagKartiComponent={YagKartiComponent} MagnetComponent={MagnetComponent} EtiketComponent={EtiketComponent} AmerikanServisComponent={AmerikanServisComponent} OtoPaspasComponent={OtoPaspasComponent} AfisComponent={AfisComponent} ElIlaniComponent={ElIlaniComponent} BrosurComponent={BrosurComponent} ZarfComponent={ZarfComponent} BlogComponent={BlogComponent} AntetliComponent={AntetliComponent} DosyalarComponent={DosyalarComponent} BloknotlarComponent={BloknotlarComponent} KatalogComponent={KatalogComponent} KartvizitComponent={KartvizitComponent} MakbuzComponent={MakbuzComponent} CityComponent={CityComponent} StaticPages={StaticPages} />
             </main>
 
             <Footer />

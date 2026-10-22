@@ -1,6 +1,7 @@
 import {StrictMode} from 'react';
 import {createRoot, hydrateRoot} from 'react-dom/client';
 import App from './App.tsx';
+import { STATIC_PAGE_ROUTES } from './data/staticPageRoutes';
 import './index.css';
 
 const container = document.getElementById('root')!;
@@ -11,7 +12,8 @@ const application = (
 );
 
 const path = window.location.pathname.replace(/\/$/, '') || '/';
-if ((container.dataset.prerendered === 'home' && path === '/') ||
+if ((STATIC_PAGE_ROUTES.some(route => route === path) && container.dataset.prerendered === path.slice(1)) ||
+    (container.dataset.prerendered === 'home' && path === '/') ||
     (container.dataset.prerendered === 'yag-karti' && path === '/yag-karti') ||
     (container.dataset.prerendered === 'magnet' && path === '/magnet') ||
     (container.dataset.prerendered === 'etiket' && path === '/etiket') ||

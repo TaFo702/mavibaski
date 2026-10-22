@@ -20,6 +20,56 @@ import { BlogPage } from './components/Blog';
 import { MakbuzFormlarPage } from './components/Makbuz';
 import { CityPage } from './components/CityPage';
 
+import { STATIC_PAGE_ROUTES } from './data/staticPageRoutes';
+import { KitapAyraciPage } from './components/KitapAyraci';
+import { IletisimPage } from './components/Contact';
+import { MatbaaPage } from './components/Matbaa';
+import { ReferanslarPage } from './components/References';
+import { SikcaSorulanPage } from './components/FAQ';
+import { GrafikTasarimPage } from './components/GrafikTasarim';
+import { HakkimizdaPage } from './components/About';
+import { KullanimSartlariPage } from './components/KullanimSartlari';
+import { GizlilikPolitikasiPage } from './components/GizlilikPolitikasi';
+import { CerezPolitikasiPage } from './components/CerezPolitikasi';
+import { MesafeliSatisSozlesmesiPage } from './components/MesafeliSatisSozlesmesi';
+import { IptalVeiadeSartlariPage } from './components/IptalVeiadeSartlari';
+import { LisansPage } from './components/Lisans';
+
+const staticPages: Partial<Record<string, React.ComponentType>> = {
+  '/kitap-ayraci': KitapAyraciPage,
+  '/makbuz-ve-formlar': MakbuzFormlarPage,
+  '/matbaa': MatbaaPage,
+  '/referanslar': ReferanslarPage,
+  '/sikca-sorulan': SikcaSorulanPage,
+  '/grafik-tasarim': GrafikTasarimPage,
+  '/hakkimizda': HakkimizdaPage,
+  '/iletisim': IletisimPage,
+  '/kullanim-sartlari': KullanimSartlariPage,
+  '/gizlilik-politikasi': GizlilikPolitikasiPage,
+  '/cerez-politikasi': CerezPolitikasiPage,
+  '/mesafeli-satis-sozlesmesi': MesafeliSatisSozlesmesiPage,
+  '/iptal-ve-iade-sartlari': IptalVeiadeSartlariPage,
+  '/lisans': LisansPage,
+  '/blog': BlogPage,
+};
+
+export function prerenderStaticPages() {
+  return Object.fromEntries(STATIC_PAGE_ROUTES.map(pathname => {
+    const PageRouter = ({ children }: { children: React.ReactNode }) => (
+      <MemoryRouter initialEntries={[pathname]}>{children}</MemoryRouter>
+    );
+    // Use the existing page and layout; the SEO head stays owned by injectSEOMetadata.
+    const html = renderToString(<App Router={PageRouter} StaticPages={staticPages} />)
+      .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
+      .replace(/<meta\b[^>]*\/?>/gi, '')
+      .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
+    if ((html.match(/<h1\b/g) || []).length !== 1 || !html.includes('<main')) {
+      throw new Error(`Static page is missing its existing H1 or main content: ${pathname}`);
+    }
+    return [pathname, html];
+  }));
+}
+
 export function prerenderCity(pathname: string) {
   const CityRouter = ({ children }: { children: React.ReactNode }) => (
     <MemoryRouter initialEntries={[pathname]}>{children}</MemoryRouter>
