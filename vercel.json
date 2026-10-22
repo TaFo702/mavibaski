@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/blog/kitap-ayraci-baskisinda-puskul-ve-lak",
+      "destination": "/kitap-ayraci",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/matbaa-tasarimi-nasil-hazirlanir",
       "destination": "/blog/baskiya-uygun-tasarim-nasil-hazirlanir",
       "statusCode": 301
