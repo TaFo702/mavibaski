@@ -4352,7 +4352,7 @@ export function getRouteSEO(pathname: string): { title: string; desc: string; ca
       }
     };
     res.extraHead = (res.extraHead || "") + ogTags +
-      `  <script type="application/ld+json">${JSON.stringify(pageImageSchema)}</script>\\n`;
+      `  <script type="application/ld+json">${JSON.stringify(pageImageSchema)}</script>\n`;
   }
   return res;
 }

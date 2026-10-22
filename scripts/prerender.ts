@@ -46,6 +46,7 @@ async function prerender() {
   // CJS interop also supports react-helmet-async's Node package exports.
   const rendererPath = path.join(distDir, '.prerender-home.cjs');
   let homeContent: string;
+  let etiketContent: string;
   let zarfContent: string;
   let brosurContent: string;
   let elIlaniContent: string;
@@ -74,8 +75,15 @@ async function prerender() {
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
-    const { prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderPerakendeSatisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
+    const { prerenderEtiket, prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderPerakendeSatisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
     homeContent = prerenderHome();
+    etiketContent = prerenderEtiket();
+    if ((etiketContent.match(/<h1\b/g) || []).length !== 1 ||
+        (etiketContent.match(/<table\b/g) || []).length !== 2 ||
+        !['id="fiyat-tablosu"', 'Etiket Teknik Özellikleri', 'Etiket Baskı İçin Teknik Tasarım Rehberi',
+          'Kurumsal Ambalaj Ve Tanıtım Ürünleri', '/blog/baskiya-uygun-tasarim-nasil-hazirlanir'].every(value => etiketContent.includes(value))) {
+      throw new Error('Etiket prerender is missing its existing pricing, content or links.');
+    }
     amerikanServisContent = prerenderAmerikanServis();
     if ((amerikanServisContent.match(/<h1\b/g) || []).length !== 1 ||
         (amerikanServisContent.match(/<table\b/g) || []).length !== 1 ||
@@ -274,6 +282,7 @@ async function prerender() {
         seo.extraHead,
         seo.h1Text,
         pathname === '/' ? homeContent : pathname === '/zarf' ? zarfContent
+          : pathname === '/etiket' ? etiketContent
           : pathname === '/amerikan-servis' ? amerikanServisContent
           : pathname === '/oto-paspas' ? otoPaspasContent
           : pathname === '/afis' ? afisContent
@@ -315,6 +324,8 @@ async function prerender() {
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="home">')
         : pathname === '/zarf'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="zarf">')
+        : pathname === '/etiket'
+        ? html.replace('<div id="root">', '<div id="root" data-prerendered="etiket">')
         : pathname === '/amerikan-servis'
         ? html.replace('<div id="root">', '<div id="root" data-prerendered="amerikan-servis">')
         : pathname === '/oto-paspas'

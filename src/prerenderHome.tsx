@@ -1,3 +1,4 @@
+import { EtiketPage } from './components/Etiket';
 import { AmerikanServisPage } from './components/AmerikanServis';
 import { OtoPaspasPage } from './components/OtoPaspas';
 import { AfisPage } from './components/Afis';
@@ -229,4 +230,16 @@ export function prerenderPerakendeSatisFisi() {
     <MemoryRouter initialEntries={['/perakende-satis-fisi']}>{children}</MemoryRouter>
   );
   return renderToString(<App Router={PerakendeRouter} MakbuzComponent={MakbuzFormlarPage} />);
+}
+
+// Reuse the existing page, including the protected price table, for hydration.
+export function prerenderEtiket() {
+  const EtiketRouter = ({ children }: { children: React.ReactNode }) => (
+    <MemoryRouter initialEntries={['/etiket']}>{children}</MemoryRouter>
+  );
+  return renderToString(<App Router={EtiketRouter} EtiketComponent={EtiketPage} />)
+    .replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
+    .replace(/<meta\b[^>]*\/?>/gi, '')
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
 }
