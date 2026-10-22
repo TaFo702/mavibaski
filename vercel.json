@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/restoran-magnet-baski",
+      "destination": "/magnet",
+      "statusCode": 301
+    },
+    {
       "source": "/kafe-menu-baski",
       "destination": "/sektor/kafe-menu-baski",
       "statusCode": 301
