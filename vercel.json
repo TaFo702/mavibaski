@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/kafe-menu-baski",
+      "destination": "/sektor/kafe-menu-baski",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/grafik-tasarimda-tasma-payi-ayarlama",
       "destination": "/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi",
       "statusCode": 301
