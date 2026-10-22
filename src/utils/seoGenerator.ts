@@ -79,6 +79,7 @@ export const knownStaticRoutes = new Set([
 ]);
 
 export const URL_REDIRECTS: Record<string, string> = {
+  "/corum-restoran-siparis-fisi": "/restaurant-siparis-fisi",
   "/sivas-emlakci-kartvizit-baski": "/sektor/emlakci-kartvizit-baski",
   "/fiyat-sor": "/iletisim",
   "/restoran-magnet-baski": "/magnet",

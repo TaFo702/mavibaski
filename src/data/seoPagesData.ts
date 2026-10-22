@@ -1962,7 +1962,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
   },
   'erzurum-emlakci-katalog-baski': {
     path: '/erzurum-emlakci-katalog-baski',
-    title: 'Erzurum Halı ve Koltuk Yıkama Baskı | Lüks Konut Portföy Kitapçığı',
+    title: 'Erzurum Emlak Katalog Baskı | Konut Portföy Kitapçığı',
     metaDesc: 'Erzurum gayrimenkul ofisleri ve inşaat firmaları için lüks metal dikişli, kalın kuşe kapaklı, 170 gr iç sayfa lüks konut ve arsa katalog döküm hizmetleri.',
     h1: 'Erzurum Emlak Yatırım Firmaları ve İnşaat Ofisleri İçin Katalog Baskısı',
     tagline: 'Doğu Anadolu\'nun Yatırım Hamlelerine Yakışır Kalın ve Lüks Gayrimenkul Katalogları',
@@ -2056,7 +2056,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
     internalLinks: [
       { text: 'Genel Kartvizit Baskı', path: '/kartvizit' },
       { text: 'Antalya Emlakçı Kartvizit Baskı', path: '/antalya-emlakci-kartvizit-baski' },
-      { text: 'Erzurum Halı ve Koltuk Yıkama', path: '/erzurum-emlakci-katalog-baski' }
+      { text: 'Erzurum Emlak Katalog Baskı', path: '/erzurum-emlakci-katalog-baski' }
     ],
     offers: { lowPrice: '340', highPrice: '2600', count: '12' }
   },

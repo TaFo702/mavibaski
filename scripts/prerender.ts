@@ -74,6 +74,7 @@ async function prerender() {
   let antetliBlogContent: string;
   let otokopiliBlogContent: string;
   const cityContent: Record<string, string> = {};
+  const reportedGuideContent: Record<string, string> = {};
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
@@ -245,6 +246,21 @@ async function prerender() {
     zarfBlogContent = prerenderZarfBlog();
     antetliBlogContent = prerenderZarfBlog('/blog/antetli-kagit-baskisinda-80gr-1.hamur');
     otokopiliBlogContent = prerenderZarfBlog('/blog/adisyon-ve-makbuzlarda-otokopili-kagit');
+    for (const slug of [
+      'oto-paspas-baskida-emici-kraft-farki',
+      'kartvizitte-mat-mi-parlak-mi',
+      'magnet-baski-musteri-kazandirir-mi',
+      'paket-servis-icin-magnet-rehberi',
+      'lokantalar-icin-amerikan-servis-ebatlari'
+    ]) {
+      const route = `/blog/${slug}`;
+      const content: string = prerenderZarfBlog(route);
+      if ((content.match(/<h1\b/g) || []).length !== 1 ||
+          !content.includes('<h2') || content.includes(':::info-cards')) {
+        throw new Error(`Guide prerender missing semantic article content: ${route}`);
+      }
+      reportedGuideContent[route] = content;
+    }
     if (!otokopiliBlogContent.includes('Otokopili ne demek?') ||
         !otokopiliBlogContent.includes('href="/adisyon"') ||
         (otokopiliBlogContent.match(/<h1\b/g) || []).length !== 1) {
@@ -324,7 +340,7 @@ async function prerender() {
           : pathname === '/tediye-makbuzu' ? tediyeContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
           : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent
-          : pathname === '/blog/adisyon-ve-makbuzlarda-otokopili-kagit' ? otokopiliBlogContent : cityContent[pathname] || seo.bodyContent,
+          : pathname === '/blog/adisyon-ve-makbuzlarda-otokopili-kagit' ? otokopiliBlogContent : reportedGuideContent[pathname] || cityContent[pathname] || seo.bodyContent,
         seo.ogImage
       );
 

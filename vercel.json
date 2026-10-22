@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/corum-restoran-siparis-fisi",
+      "destination": "/restaurant-siparis-fisi",
+      "statusCode": 301
+    },
+    {
       "source": "/sivas-emlakci-kartvizit-baski",
       "destination": "/sektor/emlakci-kartvizit-baski",
       "statusCode": 301
