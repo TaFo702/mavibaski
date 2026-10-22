@@ -87,7 +87,7 @@ const SEKTOREL_KULLANIM_ALANLARI = [
   {
     icon: Wrench,
     title: "Oto Servisleri & Bakım Noktaları",
-    desc: "Binek ve hafif ticari araçlarda değişen motor yağı viskozitesini (5W-30, 10W-40), değişim kilometresini ve filtre onaylarını kaydeden özel ve yetkili servisler."
+    desc: "Servis logosuyla hazırlanan araç yağ değişim kartı; binek ve hafif ticari araçların motor yağı viskozitesini (5W-30, 10W-40), değişim kilometresini ve filtre işlemlerini kaydetmek için kullanılır."
   },
   {
     icon: Truck,
@@ -244,7 +244,7 @@ export const YagKartiPage = () => {
             </h1>
           </div>
           <p className="text-sm md:text-base font-bold text-slate-700 mb-2">
-            350 gr kuşe veya 700 gr sıvama seçenekleri, mat selefonlu yüzey, asma deliği ve bağlama ipliği içeren yağ kartı modellerini inceleyebilirsiniz. Yağ kartı baskı ürünü, oto servislerin yağ değişim tarihi, kilometre ve filtre bilgilerini müşterilerine hatırlatmak için kullandığı logolu bir yağ bakım kartıdır.
+            350 gr kuşe veya 700 gr sıvama seçenekleri, mat selefonlu yüzey, asma deliği ve bağlama ipliği içeren yağ kartı modellerini inceleyebilirsiniz. Yağ kartı baskı ürünü, oto servislerin yağ değişim tarihi, kilometre ve filtre bilgilerini müşterilerine hatırlatmak için kullandığı logolu bir oto yağ kartıdır.
           </p>
           <p className="text-xs sm:text-sm text-slate-600 font-medium">
             Sipariş öncesinde ürün modeli, adet, tasarım dosyası ve baskı onayı değerlendirilir. Üretim ve kargo planı teklif veya sipariş aşamasında netleştirilir.
@@ -318,6 +318,9 @@ export const YagKartiPage = () => {
           <h2 className="text-xl sm:text-2xl font-black text-slate-900 mb-4">
             Yağ Kartı Modeli Nasıl Seçilir?
           </h2>
+          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium mb-4">
+            Araç yağ bakım kartı seçerken kullanılacak bilgi miktarını ve kartın araç içinde asılacağı alanı dikkate alabilirsiniz. Oto yağ bakım kartı üzerinde servis logosunun yanında bakım tarihi, kilometre ve filtre kayıtları için okunaklı alan bırakılması önerilir.
+          </p>
           <ul className="space-y-2.5 text-xs sm:text-sm text-slate-700 font-medium">
             <li className="flex items-start gap-2.5">
               <span className="w-2 h-2 rounded-full bg-primary shrink-0 mt-1.5" />
@@ -336,6 +339,9 @@ export const YagKartiPage = () => {
               <span><strong>Tasarım Dosyası:</strong> Baskıya hazır dosyanızı iletebilir veya tasarım ihtiyacınızı paylaşabilirsiniz.</span>
             </li>
           </ul>
+          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium mt-4">
+            Kabartma laklı yağ kartı modellerinde lak uygulaması, tasarımın belirli alanlarına kabarık bir yüzey etkisi verir. Model seçerken mevcut ürün açıklamalarındaki karton türünü, ebadı ve mat selefon gibi yüzey uygulamalarını birlikte karşılaştırabilirsiniz.
+          </p>
         </section>
 
         {/* Pricing Guide Explanations */}

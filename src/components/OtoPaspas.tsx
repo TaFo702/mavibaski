@@ -454,6 +454,9 @@ className="w-full h-full object-cover group-hover:scale-105 transition-transform
                 Toptan oto kağıt paspas siparişiniz için firma logonuzu, istediğiniz adedi ve baskı rengini iletebilirsiniz. Baskıya hazır dosyanız teknik kontrolden geçirilir ve dijital PDF prova üzerinden değerlendirilir. Standart listede bulunmayan ölçü, malzeme ve adet talepleri özel teklif kapsamında ele alınır.
               </p>
               <p className="text-xs sm:text-sm text-gray-300 max-w-2xl leading-relaxed">
+                Servisinizin bakım tarihini ve kilometresini müşterilerinize hatırlatmak için <Link to="/yag-karti" className="underline underline-offset-4 hover:text-white">logolu yağ kartı baskı</Link> seçeneklerini de inceleyebilirsiniz.
+              </p>
+              <p className="text-xs sm:text-sm text-gray-300 max-w-2xl leading-relaxed">
                 Ankara’dan kağıt oto paspas siparişleri de İstanbul Topkapı’daki hizmet ve koordinasyon noktamız üzerinden, Türkiye geneline anlaşmalı kargo kapsamında yürütülür. Teslimat koşulları siparişin özelliklerine göre teklif aşamasında netleştirilir. Diğer baskı ihtiyaçlarınız için <Link to="/ankara-matbaa" className="underline underline-offset-4 hover:text-white">Ankara matbaa hizmetlerini</Link> inceleyebilirsiniz.
               </p>
             </div>
