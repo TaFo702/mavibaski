@@ -71,7 +71,7 @@ export const ETIKET_GALLERY: EtiketGalleryItem[] = [
     src: "/images/etiket/etiket-baski-fiyatlari.webp",
     alt: "Özel Kesimli Sticker Baskı",
     title: "Özel Kesim Yapışkanlı Sticker",
-    desc: "Özel kesim yapışkanlı etiket baskı örneği; kesim bilgileri sipariş öncesinde netleştirilir.",
+    desc: "Özel kesim sticker örneği. İstenen dış şekil, en ve boy ölçüsü ile tasarım dosyası sipariş öncesinde birlikte değerlendirilir.",
     width: 1536,
     height: 1024
   },
@@ -79,7 +79,7 @@ export const ETIKET_GALLERY: EtiketGalleryItem[] = [
     src: "/images/etiket/etiket-baski-ornegi.webp",
     alt: "Kavanoz ve Ambalaj Etiketi",
     title: "Kavanoz ve Ambalaj Etiketi",
-    desc: "Ürün etiketi baskı ve ambalaj etiketi örneği.",
+    desc: "Kavanoz, şişe veya kutu için ürün etiketi baskı örneği. Ambalaj yüzeyi ve etiketin yerleşeceği alan, ölçü ve malzeme seçimiyle birlikte değerlendirilir.",
     width: 1536,
     height: 1024
   }
@@ -139,7 +139,7 @@ export const ETIKET_FAQS: EtiketFaqItem[] = [
   },
   {
     q: "Grafik unsurları içeren etiketlerde nelere dikkat edilir?",
-    a: "Grafik unsurların baskıdaki görünümü; tasarım, ölçü ve zemin özellikleri birlikte değerlendirilerek ele alınır."
+    a: "Logo, ürün adı ve bilgilendirme metinlerini etiketin son baskı ölçüsünde kontrol edin. Küçük yazıların okunabilirliğini ve logonun kesim sınırına uzaklığını değerlendirin. Şeffaf etiketlerde uygulanan ambalajın rengi de görünümü etkileyebileceği için zemin bilgisini paylaşın."
   },
   {
     q: "Etiket malzemesi kullanım alanına göre nasıl değerlendirilir?",
@@ -151,7 +151,7 @@ export const ETIKET_FAQS: EtiketFaqItem[] = [
   },
   {
     q: "Özel kesim etiket seçenekleri nelerdir?",
-    a: "Özel kesim yapışkanlı etiket seçenekleri, mevcut ürün bilgileri ve sipariş detayları doğrultusunda değerlendirilir. Kesim biçimi ve ölçüsü sipariş öncesinde netleştirilir."
+    a: "Yuvarlak, oval veya tasarımın dış hattını izleyen bir kesim talebiniz varsa istediğiniz şekli ve en-boy ölçüsünü örnek görselle birlikte iletin. Uygulanabilecek özel kesim etiket seçeneği malzeme, ölçü ve tasarım birlikte değerlendirilerek sipariş öncesinde netleştirilir."
   },
   {
     q: "Etiket baskıda minimum sipariş adedi nasıldır?",
@@ -159,7 +159,7 @@ export const ETIKET_FAQS: EtiketFaqItem[] = [
   },
   {
     q: "Özel kesim etiket nedir?",
-    a: "Özel kesim etiketlerde kesim bilgisi, ürün ölçüsü ve tasarım özellikleri birlikte değerlendirilir. Kullanılacak kesim seçeneği sipariş öncesinde netleştirilir."
+    a: "Özel kesim etiket, dış şekli tasarıma ve kullanım alanına göre belirlenen etikettir. Özel kesim sticker için bitmiş ölçü, kesim hattı ve baskı içeriği birlikte ele alınır. Standart kuşe fiyat listesi her özel kesim talebinin fiyatını göstermez; siparişin kapsamına göre bilgi alınmalıdır."
   },
   {
     q: "Yapışkanlı etiket seçimi nasıl yapılır?",
@@ -175,11 +175,23 @@ export const ETIKET_FAQS: EtiketFaqItem[] = [
   },
   {
     q: "Etiket tasarımında kesim bilgisi nasıl netleştirilir?",
-    a: "Etiket tasarımında kesim bilgisi; ürün ölçüsü, tasarım ve seçilen etiket seçeneği birlikte değerlendirilerek netleştirilir."
+    a: "Tasarımı bitmiş etiket ölçüsüyle birlikte iletin ve kesilmesini istediğiniz dış hattı belirtin. Logo ve metinlerin bu hattın içinde rahatça okunabildiğini kontrol edin. Kesim biçimi ve baskı alanının uyumu seçilen ürün bilgileri üzerinden netleştirilir."
   },
   {
     q: "Etiket sipariş süreci nasıl ilerler?",
-    a: "Etiket siparişinde ürün, malzeme, ölçü ve adet bilgileri netleştirilir; ardından mevcut fiyat ve sipariş seçenekleri üzerinden süreç planlanır."
+    a: "Etiket bastırma veya sticker yaptırma talebinizde ölçü, adet, malzeme, uygulama yüzeyi, kesim biçimi ve hazır dosya bilgilerini iletin. Standart kuşe ürünlerinde tablodaki sipariş düğmesini kullanabilirsiniz. Farklı ölçü veya malzeme için teklif isteyerek ürün kapsamını netleştirin; ardından mevcut sipariş süreci üzerinden ilerlenir."
+  },
+  {
+    q: "Ürün ve ambalaj etiketi baskısı için hangi bilgiler gereklidir?",
+    a: "Kavanoz, şişe, kutu veya paketin yüzeyini ve etiketin yerleşeceği alanın ölçüsünü belirtin. Ürün adı, logo ve basılacak diğer metinleri dosyanıza ekleyin. Ambalajın düz veya kavisli olması ile zemin rengi, ölçü ve malzeme seçimiyle birlikte değerlendirilir."
+  },
+  {
+    q: "Logo etiket baskı için dosya nasıl hazırlanır?",
+    a: "Logonuzu mümkünse vektörel dosya halinde, etiketin bitmiş ölçüsü ve kesim tercihiyle birlikte gönderin. Marka etiket baskı çalışmasında logonun ve küçük yazıların son ölçüde okunabildiğini kontrol edin. Şeffaf veya opak zemin tercihinizi ve ambalaj rengini de belirtin."
+  },
+  {
+    q: "Toptan etiket ve sticker siparişi için nasıl teklif alınır?",
+    a: "Toptan etiket baskı veya sticker üretimi talebinizde toplam adedi, ölçüyü, malzemeyi, kesim biçimini ve rulo ya da tabaka tercihinizi paylaşın. Birden fazla tasarım varsa her tasarım için istenen adedi ayrı belirtin. Teklif, bu bilgiler üzerinden değerlendirilir; standart listedeki fiyatın farklı adet ve özelliklere aynen uygulanacağı varsayılmamalıdır."
   }
 ];
 

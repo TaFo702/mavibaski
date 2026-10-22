@@ -356,7 +356,15 @@ export const EtiketPage = () => {
               </p>
 
               <p className="text-base md:text-lg">
-                Ürün sticker baskı ve etiket basım taleplerinde ürün, malzeme, ölçü ve adet bilgileri netleştirilir. Toptan etiket baskı siparişlerinde baskı ve kesim seçenekleri mevcut ürün bilgileri doğrultusunda değerlendirilir.
+                Ürün etiketi baskı için kavanoz, şişe, kutu veya paket üzerinde etiketin yerleşeceği alanı ölçün. Ambalaj etiket baskı talebinizde yüzeyin cam, plastik veya karton olduğunu ve düz ya da kavisli yapısını belirtin. Logo, ürün adı ve bilgilendirme metinlerinin bu alana sığması; malzeme, ölçü ve tasarımın birlikte seçilmesini kolaylaştırır.
+              </p>
+
+              <p className="text-base md:text-lg mt-6">
+                Kağıt etiket baskı için kuşe seçeneklerini, plastik bazlı bir zemin için PP opak veya şeffaf seçenekleri karşılaştırabilirsiniz. Rulo etiket baskı fiyatları hakkında bilgi isterken ölçü ve adedin yanında rulo ya da tabaka tercihinizi de iletin. Uygulama biçimine göre seçim yapmak için{' '}
+                <Link to="/blog/etiket-baskida-rulo-mu-tabaka-mi" className="text-primary font-bold underline underline-offset-4">
+                  rulo ve tabaka etiket karşılaştırma rehberini
+                </Link>{' '}
+                inceleyebilirsiniz.
               </p>
             </div>
           </section>
@@ -577,6 +585,15 @@ export const EtiketPage = () => {
             </section>
           </div>
 
+          <section>
+            <h2 className="text-2xl md:text-3xl font-black text-black mb-6 uppercase tracking-tight">
+              Özel Kesim Etiket ve Sticker İçin Ölçü Seçimi
+            </h2>
+            <p className="text-base md:text-lg text-black leading-relaxed">
+              Özel kesim sticker talebinde yalnız dış şekli değil, etiketin en ve boy ölçüsünü de belirtin. Yuvarlak, oval veya tasarımın dış hattını izleyen bir kesim düşünüyorsanız örnek görselinizi paylaşın; uygulanabilecek kesim biçimi ürün ve tasarım bilgileri üzerinden netleştirilir. Logo ve küçük yazıları kesim sınırına çok yaklaştırmadan hazırlamak, tasarımın son ölçüde okunmasını kolaylaştırır. Kesim ve malzeme seçeneği kesinleşmeden standart kuşe fiyat listesini özel kesim siparişinin fiyatı olarak değerlendirmeyin.
+            </p>
+          </section>
+
           <section className="bg-slate-900 text-white p-8 md:p-12 rounded-[32px]">
             <div className="flex items-center gap-3 mb-8">
               <Scissors className="text-primary shrink-0" size={32} />
@@ -585,6 +602,14 @@ export const EtiketPage = () => {
                 Etiket Baskı İçin Teknik Tasarım Rehberi
               </h2>
             </div>
+
+            <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-8">
+              Logo etiket baskı ve marka etiket baskı çalışmalarında logonuzu mümkünse vektörel dosya olarak, etiketin bitmiş ölçüsüyle birlikte iletin. Ürün adı, iletişim bilgileri ve diğer metinleri son baskı ölçüsünde kontrol edin. Yapışkanlı logo baskı için açık veya koyu ambalaj zemininin görünümü nasıl etkileyeceğini de belirtin. Dosya hazırlığı konusunda{' '}
+              <Link to="/grafik-tasarim" className="text-white font-bold underline underline-offset-4">
+                baskıya uygun grafik tasarım bilgilerini
+              </Link>{' '}
+              inceleyebilirsiniz.
+            </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
@@ -637,6 +662,10 @@ export const EtiketPage = () => {
                 Etiket Baskı ve Sipariş Süreci
               </h2>
             </div>
+
+            <p className="text-base md:text-lg text-black leading-relaxed mb-8">
+              Etiket bastırma veya sticker sipariş talebiniz için etiketin ölçüsünü, adedini, malzemesini, kesim biçimini ve hazır tasarım dosyanızı birlikte iletin. Online etiket siparişi verirken standart kuşe seçeneklerinde tablodaki “Hemen Sipariş Ver” düğmesini kullanabilirsiniz. Farklı malzeme, ölçü veya toptan etiket baskı taleplerinde aynı bilgileri paylaşarak teklif isteyin; fiyat ve ürün kapsamı sipariş öncesinde netleştirilir.
+            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
