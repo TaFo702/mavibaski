@@ -47,5 +47,9 @@ export const BROSUR_FAQS = [
     {
       q: "Z-kırım ile C-kırım broşür arasındaki fark nedir?",
       a: "Z-kırımda paneller zıt yönlere katlanarak akordeon biçiminde açılır. C-kırımda dış paneller içe doğru kapanır. Her iki model de iki kırımda altı baskı paneli oluşturabilir; okuma sırası ve panel yerleşimi farklıdır. Katlama türü ve teknik dosya yerleşimi PDF prova aşamasında kontrol edilir. Kırım işlemi mevcut fiyat listesinden ayrı, opsiyonel işlem olarak teklif aşamasında netleştirilir."
+    },
+    {
+      q: "1.000 adet A5 broşür fiyatı için hangi seçenekleri karşılaştırmalıyım?",
+      a: "1.000 adet A5 broşür fiyatı için 115 gr kuşe tablosundaki 14×20 cm ile 130 gr kuşe tablosundaki 15×21 cm seçeneklerini inceleyebilirsiniz. Bu iki ürünün net kesim ölçüsü ve kâğıt gramajı farklıdır; karşılaştırırken yalnız toplam tutara bakmayın. 200 gr selefonlu seçeneklerde tabloda belirtilen farklı sipariş adetleri esas alınır. Kırım işlemi opsiyoneldir; KDV ve kargo bilgileri fiyat listesinin altında ayrıca açıklanır."
     }
   ];

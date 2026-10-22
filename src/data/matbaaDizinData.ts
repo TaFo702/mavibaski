@@ -74,7 +74,7 @@ export const MATBAA_DIZIN_LINKS: MatbaaDizinLink[] = [
   },
   {
     "path": "/brosur-baski-fiyatlari",
-    "title": "Broşür ve El İlanı Baskı Fiyatlarını Belirleyen Teknik Parametreler"
+    "title": "Broşür Baskı Maliyeti Nasıl Hesaplanır?"
   },
   {
     "path": "/magnet-baski-fiyatlari",

@@ -912,31 +912,31 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
   },
   'brosur-baski-fiyatlari': {
     path: '/brosur-baski-fiyatlari',
-    title: 'Kuşe Broşür Baskı Fiyatları | 115 gr & 135 gr Katlama Seçenekleri',
-    metaDesc: 'Broşür fiyatlarını etkileyen kağıt gramajı, ebat, adet kırımları ve selefon laminasyon farkları. En ucuz 1000 adet el ilanı fiyat tablosu kuralları.',
-    h1: 'Broşür ve El İlanı Baskı Fiyatlarını Belirleyen Teknik Parametreler',
-    intro: 'Broşür baskı fiyatları sadece kağıt olarak belirlenmez. Matbaa dünyasında her kalıbın ayrı bir kurulum süreci (ayarlar, fire, boya dökümleri) vardır. Bu makalede broşür bütçenizi en verimli şekilde kullanmanın matbaa içi formüllerini inceliyoruz.',
+    title: 'Broşür Baskı Maliyeti Nasıl Hesaplanır? | Mavi Basım',
+    metaDesc: 'Broşür baskı maliyetinde ebat, kuşe kâğıt, sipariş adedi, selefon ve katlamanın etkisini öğrenin. Güncel fiyatları ana broşür sayfasında karşılaştırın ve teklif alın.',
+    h1: 'Broşür Baskı Maliyeti Nasıl Hesaplanır?',
+    intro: 'Bu rehber, broşür baskı tekliflerini aynı teknik özellikler üzerinden karşılaştırmanıza yardımcı olur. Güncel ürün fiyatları ve sipariş seçenekleri ana broşür sayfasındaki tablolarda yer alır; burada maliyeti etkileyen ölçü, kâğıt, adet ve son işlemler açıklanır.',
     sections: [
       {
         title: 'Broşür Fiyatlarını Etkileyen Faktörler',
         paragraphs: [
-          '1. Kağıt Gramajı Farkı: 115 gr kuşe kağıt standart dağıtımlar için bütçeyi korur. 135 gr kuşe her sektörün amiral gemisidir ve yırtılmaz. 170 gr kuşe ise lüks duruş katarken yüksek bütçe baremi çeker.',
-          '2. Ofset Ortak Kalıp Sistemi (Pool): Matbaamızda binlerce farklı esnafın el ilanı siparişlerini tek bir Heildelberg tabakasında harmanlıyoruz. Kalıp maliyeti ortak bölündüğü için 1000 adet fiyatı fason makinelere oranla çok daha hesaplıya mal olmaktadır.',
-          '3. Kırım (Katlama) Makine İşçiliği: Broşürünüzün tek katlama mı yoksa üçe katlamalı C-kırım mı olacağı, katlama giyotinlerinin ayar süresini etkileyerek küçük dikey fiyat baremlerini değiştirir.'
+          '1. Net Kesim Ölçüsü ve Kâğıt: Aynı A4 veya A5 sınıfındaki ürünlerin net ölçüleri gramaja göre değişebilir. Karşılaştırma yaparken ürün kodunu, santimetre cinsinden ölçüyü, kâğıt gramajını ve baskı yönünü birlikte kontrol edin. Ana broşür sayfasında 115 gr, 130 gr ve 200 gr kuşe seçenekleri ayrı tablolarla gösterilir.',
+          '2. Sipariş Adedi ve Birim Maliyet: Toplam baskı bedeli ile adet başına maliyet aynı şey değildir. Aynı ürünün toplam bedelini sipariş adedine bölerek birim maliyeti karşılaştırabilirsiniz. Farklı gramaj, ölçü veya yüzey uygulamasına sahip ürünler yalnız toplam tutara göre karşılaştırılmamalıdır.',
+          '3. Selefon ve Kırım: Selefon kaplama ile kırım veya katlama farklı işlemlerdir. Standart fiyat listesindeki broşürler düz kesim esasına dayanır; opsiyonel katlama işleminin kapsamı teklif aşamasında netleştirilir. C-kırım veya Z-kırım seçimi yapılırken açık ölçü, kapalı ölçü ve panel yerleşimi dosya kontrolünde birlikte değerlendirilir.'
         ]
       }
     ],
     faqs: [
-      { question: 'Yüksek adetlerde broşür fiyatı ne kadar düşer?', answer: 'Ofset baskı teknolojisinde döküm adet limiti yükseldikçe (örn. 1000 adetten 10.000 adete) birim kağıt fiyatı neredeyse yarı yarıya ucuza gerilemektedir.' },
-      { question: 'Broşür fiyatına kargo ve KDV dahil midir?', answer: 'Fiyat bültenimiz sipariş panosunda net olarak listelenmekte olup, kargo ve yasal KDV baremleri sepet alanında şeffafça kalibre edilmektedir.' }
+      { question: 'Broşür siparişinde birim maliyet nasıl karşılaştırılır?', answer: 'Aynı ebat, kâğıt ve baskı özelliklerine sahip seçeneklerde toplam baskı bedelini sipariş adedine bölerek adet başına maliyeti bulabilirsiniz. Adet artışının etkisi ürün seçeneğine göre değişir; sabit bir indirim oranı varsaymak yerine ana broşür sayfasındaki mevcut fiyatları esas alın.' },
+      { question: 'Güncel broşür fiyatları ve sipariş seçenekleri nerede?', answer: 'Güncel fiyat listesi, gramaj ve adet seçenekleri /brosur adresindeki ana ürün sayfasındadır. Fiyat karşılaştırması yaparken o sayfada belirtilen KDV, kargo ve opsiyonel işlem açıklamalarını da inceleyin.' }
     ],
     internalLinks: [
-      { text: 'Güncel Broşür Fiyat Tablosu', path: '/brosur' },
+      { text: 'Broşür Fiyatları ve Baskı Siparişi', path: '/brosur' },
       { text: 'Buzdolabı Magnet Fiyatları', path: '/magnet' },
       { text: 'Lüks Kartvizit Sipariş Paneli', path: '/kartvizit' }
     ],
     offers: { lowPrice: '620', highPrice: '4800', count: '10' },
-    tagline: 'Ortak Ofset Kalıbıyla En Hesaplı Matbaacılık Çözümleri'
+    tagline: 'Ölçü, Kâğıt ve Adet Seçimine Göre Baskı Maliyeti Rehberi'
   },
   'magnet-baski-fiyatlari': {
     path: '/magnet-baski-fiyatlari',

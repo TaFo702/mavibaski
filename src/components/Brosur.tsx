@@ -278,7 +278,7 @@ export const BrosurPage = () => {
           description={
             <div className="space-y-3">
               <p>
-                İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktamız üzerinden Türkiye geneline broşür ve matbaa çözümleri sunuyoruz. 115 gr, 130 gr ve 200 gr kuşe seçenekleriyle <strong className="text-slate-900">A4, A5, A3 ve katlamalı broşür</strong> baskı çözümleri sunuyoruz.
+                Broşür fiyatları için 115 gr, 130 gr ve 200 gr kuşe seçeneklerini mevcut fiyat listemizden karşılaştırabilirsiniz. <strong className="text-slate-900">A4, A5, A3 ve katlamalı broşür</strong> basımı hizmetini İstanbul Topkapı 2. Matbaacılar Sitesi’ndeki hizmet ve koordinasyon noktamız üzerinden Türkiye geneline sunuyoruz.
               </p>
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <a
@@ -401,13 +401,13 @@ export const BrosurPage = () => {
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 flex flex-col justify-between">
                 <div>
                   <span className="text-[10px] font-black text-primary bg-primary/10 px-2 py-0.5 rounded-md uppercase">A4 Sınıfı</span>
-                  <h3 className="font-black text-slate-900 text-sm mt-2 mb-1">A4 Broşür</h3>
+                  <h3 className="font-black text-slate-900 text-sm mt-2 mb-1">A4 Broşür Baskı Fiyatları ve Ölçüleri</h3>
                   <div className="text-xs text-slate-600 space-y-1 mb-3">
                     <p><strong className="text-slate-800">115 gr:</strong> 20×28 cm</p>
                     <p><strong className="text-slate-800">130/200 gr:</strong> 21×30 cm</p>
                   </div>
                   <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                    Kurumsal tanıtımlar, ürün föyleri, tek kırım veya Z-kırım çok panelli menüler için geniş sunum alanı sağlar.
+                    A4 broşür fiyatları karşılaştırılırken aynı gramaj ve sipariş adedi esas alınmalıdır. Kurumsal tanıtımlar, ürün föyleri, tek kırım veya Z-kırım çok panelli menüler için geniş sunum alanı sağlar. Katlama işlemi standart düz kesim fiyatından ayrı değerlendirilir.
                   </p>
                 </div>
               </div>
@@ -415,13 +415,13 @@ export const BrosurPage = () => {
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 flex flex-col justify-between">
                 <div>
                   <span className="text-[10px] font-black text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-md uppercase">A5 Sınıfı</span>
-                  <h3 className="font-black text-slate-900 text-sm mt-2 mb-1">A5 Broşür</h3>
+                  <h3 className="font-black text-slate-900 text-sm mt-2 mb-1">A5 Broşür Fiyatları ve Ölçüleri</h3>
                   <div className="text-xs text-slate-600 space-y-1 mb-3">
                     <p><strong className="text-slate-800">115 gr:</strong> 14×20 cm</p>
                     <p><strong className="text-slate-800">130/200 gr:</strong> 15×21 cm</p>
                   </div>
                   <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                    A5 broşür ölçüleri, ürün grubuna göre 14×20 cm veya 15×21 cm olarak sunulur. A5 broşür baskı fiyatı; gramaj, adet ve varsa selefon ya da kırım işlemine göre değişir. Posta kutusu, elden dağıtım ve kampanya duyuruları için uygundur.
+                    A5 broşür ölçüleri, ürün grubuna göre 14×20 cm veya 15×21 cm olarak sunulur. A5 broşür baskı fiyatı; gramaj, adet ve varsa selefon ya da kırım işlemine göre değişir. A5 broşür fiyatları için 115 gr ve 130 gr tablolardaki aynı adet seçeneklerini karşılaştırabilirsiniz. Posta kutusu, elden dağıtım ve kampanya duyuruları için uygundur.
                   </p>
                 </div>
               </div>
@@ -429,13 +429,13 @@ export const BrosurPage = () => {
               <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 flex flex-col justify-between">
                 <div>
                   <span className="text-[10px] font-black text-purple-700 bg-purple-100 px-2 py-0.5 rounded-md uppercase">A3 Sınıfı</span>
-                  <h3 className="font-black text-slate-900 text-sm mt-2 mb-1">A3 Broşür</h3>
+                  <h3 className="font-black text-slate-900 text-sm mt-2 mb-1">A3 Broşür Fiyatları ve Kullanım Alanları</h3>
                   <div className="text-xs text-slate-600 space-y-1 mb-3">
                     <p><strong className="text-slate-800">115 gr:</strong> 28×40 cm</p>
                     <p><strong className="text-slate-800">130/200 gr:</strong> 30×42 cm</p>
                   </div>
                   <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                    Katlandığında A4 panellere dönüşen geniş katalog föyleri, harita broşürleri ve sektörel ürün bültenleri için kullanılır.
+                    A3 broşür fiyatları; seçilen kuşe kâğıt, sipariş adedi ve katlama ihtiyacına göre değerlendirilir. Katlandığında A4 panellere dönüşen geniş ürün föyleri, harita broşürleri ve sektörel ürün bültenleri için kullanılır.
                   </p>
                 </div>
               </div>
@@ -830,10 +830,10 @@ export const BrosurPage = () => {
               <CheckCircle2 size={15} /> SİPARİŞ ADIMLARI
             </div>
             <h2 className="text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight mb-2">
-              Teknik Kontrol ve Dijital PDF Prova Onay Süreci
+              Broşür Basımı ve Sipariş Süreci
             </h2>
             <p className="text-xs md:text-sm text-slate-600 font-medium mb-6">
-              Siparişiniz üretime alınmadan önce teknik kontrol ve prova süreçlerinden geçer:
+              Broşür basımı için fiyat tablosundan ebat, gramaj ve adet seçerek ilgili ürünün sipariş butonunu kullanabilirsiniz. Broşür siparişi, baskıya hazır dosyanın teknik kontrolü ve dijital PDF prova onayından sonra üretime alınır:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">

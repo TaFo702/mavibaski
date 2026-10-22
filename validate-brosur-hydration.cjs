@@ -41,7 +41,7 @@ function check(document) {
   assert.equal(disclosure.getAttribute('aria-expanded'), 'false');
   assert.equal(document.getElementById('brosur-advanced-tech').hidden, true);
   const faq = schemas.find(item => item['@type'] === 'FAQPage').mainEntity;
-  assert.equal(faq.length, 12);
+  assert.equal(faq.length, 13);
   const text = normalize(document.querySelector('main').textContent);
   for (const item of faq) {
     assert.ok(text.includes(normalize(item.name)), item.name);
@@ -92,5 +92,5 @@ function check(document) {
     check(d);
     assert.deepEqual(errors, [], 'Runtime or hydration errors');
   } finally { dom.window.close(); }
-  process.stdout.write('PASS: brochure hydration retains price table and content; unique schemas/metadata, 12 FAQs, light animation, size filters and return navigation.\n');
+  process.stdout.write('PASS: brochure hydration retains price table and content; unique schemas/metadata, 13 FAQs, light animation, size filters and return navigation.\n');
 })().catch(error => { process.stderr.write(String(error.stack) + '\n'); process.exit(1); });
