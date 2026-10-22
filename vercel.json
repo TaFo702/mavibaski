@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/blog/baskida-cmyk-nedir",
+      "destination": "/blog/cmyk-ofset-baski-ve-tasima-payi-rehberi",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/kitap-ayraci-baskisinda-puskul-ve-lak",
       "destination": "/kitap-ayraci",
       "statusCode": 301
