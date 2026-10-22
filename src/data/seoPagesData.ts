@@ -173,6 +173,12 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
     intro: 'Dükkan aramalarında kaybolmadan doğrudan telefonla paket çekmek isteyen insanların ilk refleks noktası buzdolabındaki magnetlerdir. Telefon numarasının devasa büyüklükte olması ve sıcak dürüm görselinin canlılığı sipariş adetlerini doğrudan artırır.',
     sections: [
       {
+        title: 'Döner ve Kebapçı Magnetinde Logo, Telefon ve QR Kod',
+        paragraphs: [
+          "Döner magnet tasarımında işletme logosu, sipariş telefonu ve paket servis bölgesi öncelikli olmalıdır. Kebapçı magneti üzerinde menüye yönlendiren bir QR kod kullanılacaksa, basılacak ölçüde telefonla okunabilirliği kontrol edilmelidir. Kesim şekli ve net ebat, tasarımla birlikte teklif talebinde belirtilmelidir.",
+        ]
+      },
+      {
         title: 'Neden İnce ve Zayıf Fason Mıknatıs Tercih Etmemelisiniz?',
         paragraphs: [
           'Piyasada fason etiketle internetten satılan merdiven altı magnetler 0.30 mm gibi zayıf manyetik dökümlerden üretilir. Bu magnetler dolap kapağının günde 15 kez sarsılmasıyla yerçekimine yenik düşerek kayar veya zamanla kıvrılarak çöpe gider.',
@@ -192,7 +198,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
       { question: 'Magnet üzerine QR kod yerleşimi randıman verir mi?', answer: 'Kesinlikle. Müşterinin el ilanı aramasına gerek kalmadan telefon kamerasını doğrultarak güncel paket fiyat listesine ve sipariş hattına geçmesini sağlar.' }
     ],
     internalLinks: [
-      { text: 'Uzun Ömürlü Magnet Seçenekleri', path: '/magnet' },
+      { text: 'Magnet Baskı Modelleri ve Güncel Fiyat Listesi', path: '/magnet' },
       { text: 'Lokanta Amerikan Servis Baskısı', path: '/sektor/lokanta-amerikan-servis-baski' },
       { text: 'Dönerci Paket El İlanları', path: '/el-ilani' },
       { text: 'Resmi Adisyon ve Sipariş Koçanları', path: '/makbuz-ve-formlar' }
@@ -856,6 +862,12 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
     intro: 'Ankara nın Çankaya, Yenimahalle veya Keçiören gibi yoğun yerleşim ilçelerinde paket sirkülasyonu yapan dükkanların can simidi mıknatıslı magnetlerdir. Kağıt el ilanlarının kaybolduğu evlerde buzdolabı üzeri ömürlük sipariş tabelasıdır.',
     sections: [
       {
+        title: 'Ankara Magnet Siparişi İçin Dosya ve Model Seçimi',
+        paragraphs: [
+          "Ankara magnet baskı siparişinde kullanılacak logo, telefon numarası, teslimat adresi ve kesim tercihi birlikte paylaşılmalıdır. Ankara’daki işletmeler, baskı ve dosya hazırlığı için Mavi Basım ile İstanbul Topkapı hizmet ve koordinasyon noktası üzerinden iletişim kurabilir. Standart modellerin paket fiyatları ana magnet sayfasında incelenebilir.",
+        ]
+      },
+      {
         title: 'Kargo Takip ve Hızlı Ankara Lojistik Ağı',
         paragraphs: [
           'Topkapı fabrikamızdan kargoya teslim edilen Ankara kolileri, dikey otoyol hızı sayesinde kargolamanın ertesi günü Ankara teslim merkezlerine ulaşarak kapınıza dağıtılır. Çatlama yapmayan dikey kıvrılmaz magnetlerle Ankara piyasasında yerinizi alın.'
@@ -866,7 +878,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
       { question: 'Ankara teslimat süreçlerinde kolilerin ezilmesi önlenir mi?', answer: 'Kesinlikle. Çift dalga oluklu kalın Kraft kutulara dizilerek şerit çemberlerle kaynatılan kolilerimiz sıfır ezilmeyle Ankara dükkanınıza sevk edilir.' }
     ],
     internalLinks: [
-      { text: 'Ankara Magnet Siparişi', path: '/magnet' },
+      { text: 'Magnet Baskı Modelleri ve Güncel Fiyat Listesi', path: '/magnet' },
       { text: 'Ekonomik Bölgesel El İlanı', path: '/el-ilani' },
       { text: 'Logolu Lüks Karton Çanta', path: '/karton-canta' }
     ],
@@ -1112,6 +1124,12 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
     intro: 'Ordu ilimizin ana can damarı olan fındık sanayisi, yöresel gıda üreticileri ve her gün büyüyen paket servis dükkanları için buzdolabı magneti en kalıcı ve kazançlı fiziksel reklam aracıdır. Marka logonuzun ve sipariş hattınızın göz önünde yer alması sadık müşteri oranınızı doğrudan katlar. Mavi Basım olarak Ordu\'daki tüm üreticilere 0.40 mm kalınlığında, yüksek çekim gücüne sahip lüks selefonlu magnet çözümleri sunuyoruz.',
     sections: [
       {
+        title: 'Ordu İşletmeleri İçin Kurumsal Magnet Siparişi',
+        paragraphs: [
+          "Ordu magnet siparişlerinde fındık markaları ve paket servis işletmeleri için logo ile sipariş hattını aynı tasarımda toplamak mümkündür. Reklam magneti üzerinde kısa ürün bilgisi ve iletişim numarasına öncelik verilebilir. Toptan buzdolabı magnet teklifi isterken net ebat, kesim şekli ve adet bilgisi birlikte iletilmelidir.",
+        ]
+      },
+      {
         title: 'Ordu Fındık Üreticileri ve Şarküteriler İçin Markalı Magnetler',
         paragraphs: [
           'Fındık ambalajlama tesisleri ve kuru fındık yağı satan işletmeler için özel kesimli (figürlü) mıknatıs tasarımları yapmaktayız. 350 gr kuşe sıvamalı kart üzerinde gıda mürekkebi kullanarak basılan canlı renkler, nemli Karadeniz havasından etkilenerek bükülmez.',
@@ -1130,7 +1148,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
       { question: 'Fiyatlarda yüksek fındık sipariş adetlerine özel indirim var mı?', answer: 'Toptan adetlerde (5000 ve üzeri) birim fiyatlarımız inanılmaz derecede ucuzlamaktadır. WhatsApp teklif hattımızdan özel barem alabilirsiniz.' }
     ],
     internalLinks: [
-      { text: 'Magnet Baskı', path: '/magnet' },
+      { text: 'Magnet Baskı Modelleri ve Güncel Fiyat Listesi', path: '/magnet' },
       { text: 'Broşür Baskı', path: '/brosur' },
       { text: 'Kartvizit Baskı', path: '/kartvizit' },
       { text: 'Katalog Baskı', path: '/kataloglar' },
@@ -1287,6 +1305,12 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
     intro: 'Sinop, meşhur mantısı, tarihi cezaevi müzesi, butik otelleri ve gelişen kafe-restoran esnafı ile magnet reklamcılığına özel bir ilgi gösterir. Turistlere hediye edilecek sanatsal temalı magnetlerden her gün paket servis çeken restoran magnetlerine kadar her boyutta üretim sağlamaktayız. Mavi Basım, Sinop esnafına 0.40 mm kalın manyetik levhalarla donatılmış aşınmaz magnetleri sunuyor.',
     sections: [
       {
+        title: 'Sinop Restoranları İçin Paket Servis Magneti',
+        paragraphs: [
+          "Sinop magnet baskı hizmetinin bu bölümdeki odağı restoran, kafe ve yerel işletmelerin kurumsal tanıtımıdır. Paket servis magneti hazırlanırken işletme adı, sipariş telefonu ve hizmet bölgesi kolay okunmalıdır. Standart modelleri ana magnet fiyat listesinde karşılaştırabilir, özel kesim için ölçü ve adet bilgileriyle teklif isteyebilirsiniz.",
+        ]
+      },
+      {
         title: 'Sinop Mantısı ve Yöresel Ürün Tanıtımlarında Özel Kesimli Tasarımlar',
         paragraphs: [
           'Mantı figürlü, tarihi motifli veya dükkan yapınıza uygun amorf kesilmiş bıçak kalıbı mıknatıslarımız, Sinop kültürünü ve markanızı dolaplarda parlatır. Kalın kuşe sıvama yüzeyi parlak koruyucu selefon ile kaplandığı için suya dayanıklıdır.',
@@ -1305,7 +1329,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
       { question: 'Magnet üzerine yerleştirilecek QR kodlar cep telefonlarınca okunur mu?', answer: 'Kesinlikle! 300 DPI gerçek ofset basım uyguladığımız için QR kodlar pürüzsüz çıkar ve müşterilerinizi anında web menünüze ulaştırır.' }
     ],
     internalLinks: [
-      { text: 'Magnet Baskı', path: '/magnet' },
+      { text: 'Magnet Baskı Modelleri ve Güncel Fiyat Listesi', path: '/magnet' },
       { text: 'Broşür Baskı', path: '/brosur' },
       { text: 'Kartvizit Baskı', path: '/kartvizit' },
       { text: 'Kutu Baskı', path: '/kutu' },
@@ -1497,6 +1521,12 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
     intro: 'Elazığ, meşhur geleneksel orcik tatlısı, tulum peyniri imalatçıları, tarihi bakırcılar esnafı ve her geçen gün yaygınlaşan paket servis lokantalarıyla magnet reklam ürünlerine yoğun ilgi gösterir. Evlerin buzdolaplarına yapıştırılan bir dükkan magneti, sipariş hattınızın ve marka isminizin günde 15 kere hatırlanarak kalıcı yer edinmesini sağlar. Mavi Basım olarak Elazığ esnafına özel 0.40 mm kalın manyetik levhaya sıvanmış yüksek çözünürlüklü magnetler basıyor ve doğrudan kapınıza sevk ediyoruz.',
     sections: [
       {
+        title: 'Elazığ İşletmeleri İçin Logolu Magnet Baskı',
+        paragraphs: [
+          "Elazığ magnet baskı taleplerinde yöresel ürün markaları, şarküteriler ve paket servis işletmeleri için firma logosu ile iletişim hattı birlikte planlanabilir. Kurumsal magnet siparişi için tasarım dosyası, net ölçü, kesim şekli ve adet bilgileri paylaşılmalıdır. Standart paket seçenekleri ana magnet sayfasında incelenebilir.",
+        ]
+      },
+      {
         title: 'Elazığ Yöresel Orcik ve Şarküteri Markalarına Özel Figürlü Magnetler',
         paragraphs: [
           'Orcik rulosu şeklinde, tulum peyniri tekeri şeklinde ya da kebap tepsisi şeklinde hidrolik bıçak pres kesimlerimizle ürettiğimiz şekilli magnetler, klasik kare magnetlere kıyasla 3 kat daha fazla dikkat çekmektedir. Üzeri koruyucu parlak lüks selefon kaplıdır.',
@@ -1515,7 +1545,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
       { question: 'Orcik ambalaj kutusuna sığacak magnet ebadı nedir?', answer: 'Kutuların içine rahatlıkla sığabilecek 46x68 mm veya 50x70 mm ebatları yössel hediye paketlerinde en verimli olanıdır.' }
     ],
     internalLinks: [
-      { text: 'Magnet Baskı', path: '/magnet' },
+      { text: 'Magnet Baskı Modelleri ve Güncel Fiyat Listesi', path: '/magnet' },
       { text: 'Broşür Baskı', path: '/brosur' },
       { text: 'Kartvizit Baskı', path: '/kartvizit' },
       { text: 'Kutu Baskı', path: '/kutu' },

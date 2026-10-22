@@ -28,6 +28,8 @@ import {
 } from 'lucide-react';
 import { useCart, FireWarning } from '../App';
 import { MAGNET_DATA } from '../data/productData';
+import { MAGNET_SSS } from '../data/magnetSeo';
+export { MAGNET_SSS } from '../data/magnetSeo';
 import { CategoryHero } from './CategoryHero';
 import { RelatedBlogPosts } from './RelatedBlogPosts';
 import { WhatsAppIcon } from './WhatsAppIcon';
@@ -75,50 +77,6 @@ const MAGNET_GALLERY = [
     title: "0.50 mm Kaliteli Magnet Baskı",
     desc: "250 gr Bristol sıvama, parlak selefon koruması ve 0.50 mm magnet mıknatısı tabakası.",
     badge: "0.50 mm Mıknatıs"
-  }
-];
-
-// 10 ADET TAM SSS (server.ts VE JSON-LD İLE BİREBİR EŞLEŞİR)
-export const MAGNET_SSS = [
-  {
-    q: "Magnet baskı fiyatları ve magnet yaptırma fiyatları nasıl hesaplanır?",
-    a: "Magnet baskı fiyatları ve magnet yaptırma fiyatları; tercih edilen kesim türü (düz, oval veya özel kesim), ürün ebadı (48x68 mm veya özel cm² ölçüleri), 0.50 mm mıknatıs kalınlığı, koruyucu parlak selefon kaplama ve sipariş adedine göre hesaplanır. Net maliyetler proje özelliklerine ve baskı adedine göre teklif aşamasında belirlenir."
-  },
-  {
-    q: "1.000 tane magnet ne kadar ve 1.000 adet magnet fiyatı nedir?",
-    a: "Fiyat tablomuzda 48x68 mm standart ölçü için 1.000 adet magnet fiyatı MAG1 özel kesimli modelde 1.250 ₺, MAG2 oval kesimli modelde ise 1.180 ₺ olarak sunulmaktadır. '1.000 tane magnet ne kadar' veya 'magnet fiyatları 1000 adet' araması yapan kurumsal müşterilerimiz için en uygun toptan buzdolabı magnet fiyatları ve toptan magnet fiyatları bu standart listede yer almaktadır."
-  },
-  {
-    q: "100 adet magnet fiyatı, 50 tane magnet ne kadar ve 1 adet magnet kaç TL?",
-    a: "Standart fiyat listemiz 1.000 adetlik tirajlar için geçerlidir; 100 adet magnet fiyatı, 50 tane magnet ne kadar ve 1 adet magnet kaç TL soruları için standart sabit bir liste fiyatı bulunmamaktadır. Düşük adetli veya numune talepleriniz için WhatsApp destek hattımızdan özel teklif isteyebilirsiniz."
-  },
-  {
-    q: "Magnet çeşitleri nelerdir ve magnet modelleri nasıl seçilir?",
-    a: "Piyasada bulunan başlıca magnet çeşitleri nelerdir sorusunun cevabı; düz kesim, oval kesim, özel şekil kesimli buzdolabı magnet modelleri, bloknotlu magnet ve mıknatıslı kartvizit olarak özetlenebilir. Firmanızın tanıtım ihtiyacına ve bütçesine göre magnet modelleri ve fiyatları karşılaştırılarak en uygun model belirlenir."
-  },
-  {
-    q: "Buzdolabı magnet modelleri ile hediyelik magnetlerin farkı nedir?",
-    a: "Buzdolabı magnet modelleri genellikle kurumsal tanıtım, paket servis ve iletişim amaçlı 0.50 mm mıknatıs üzerine 250 gr Bristol karton sıvamasıyla hazırlanır. Hediyelik magnet fiyatları ve nikah/kına magnetleri ise daha çok magnet fotoğraf veya resimli magnet formatında kişisel anı amaçlı tasarlanmaktadır. Sayfamızda kurumsal ve ticari amaçlı buzdolabı magnet fiyatları listelenmektedir."
-  },
-  {
-    q: "Magnet mıknatısı, mıknatıslı magnet ve tabaka mıknatıs aynı ürün müdür?",
-    a: "Hayır. Tabaka mıknatıs ve magnet mıknatısı ham hammadde malzemesidir; mıknatıslı magnet ise bu mıknatıs tabakasının üzerine baskılı ve selefonlu karton sıvanarak kesilmiş bitmiş ürünü ifade eder. Mavi Basım olarak ham mıknatıs malzemesi değil, firmanıza özel bitmiş baskılı magnet siparişi ve magnet üretimi gerçekleştirmekteyiz."
-  },
-  {
-    q: "Magnet mıknatısı nerede satılır ve magnet mıknatısı toptan alınabilir mi?",
-    a: "Magnet mıknatısı nerede satılır ve magnet mıknatısı toptan nasıl tedarik edilir soruları ham manyetik rulo ve tabaka arayanlar tarafından sorulmaktadır. Sayfamız ham hammadde satışı yapmamakta; 0.50 mm mıknatıs tabakası üzerine renkli ofset baskı ve parlak selefon uygulanmış bitmiş kurumsal magnet siparişi sunmaktadır."
-  },
-  {
-    q: "Magnet mıknatısı nasıl yapıştırılır ve yapışkanlı magnet mıknatısı nedir?",
-    a: "Yapışkanlı magnet mıknatısı, bir yüzeyi kendinden yapışkanlı olan ham manyetik bant veya tabakadır. Profesyonel matbaa üretiminde 'magnet mıknatısı nasıl yapıştırılır' süreci endüstriyel sıvama makineleriyle 250 gr Bristol baskılı kağıdın 0.50 mm tabaka mıknatıs yüzeyine preslenmesiyle gerçekleştirilir."
-  },
-  {
-    q: "Buzdolabı magnet mıknatısı ve büyük magnet mıknatısı için ölçü nasıl seçilir?",
-    a: "Standart buzdolabı magnet mıknatısı için 48x68 mm en yaygın ölçüdür. Büyük magnet mıknatısı veya özel ebatlı projeler için MAG3 cm² birim fiyatı (32.50 ₺) üzerinden hesaplama yapılır. Magnetin tutunması; yüzey türüne, yüzey temizliğine, ölçüye ve ürün ağırlığına göre değişebilir."
-  },
-  {
-    q: "Magnet tasarımı ve özel kesim magnet siparişi nasıl hazırlanır?",
-    a: "Magnet tasarımı dosyasının CMYK renk modunda, en az 300 DPI çözünürlükte ve kenarlarından en az 3 mm kesim taşma payı bırakılarak hazırlanması gerekir. Özel kesim magnet siparişi için bıçak kesim çizgisinin vektörel olarak belirtilmesi önerilir. Grafik desteği var."
   }
 ];
 
@@ -384,11 +342,11 @@ export const MagnetPage: React.FC = () => {
                       <ShoppingCart size={18} />
                     </div>
                     <h3 className="text-base font-black text-slate-900 tracking-tight">
-                      Magnet Fiyatları ve Çeşitleri
+                      Toptan Magnet Baskı ve Fiyat Seçimi
                     </h3>
                   </div>
                   <p className="text-xs md:text-sm text-slate-650 leading-relaxed font-medium">
-                    <strong>Magnet fiyatları</strong>, <strong>magnet baskı fiyatları</strong> ve <strong>magnet çeşitleri</strong>; ürünün kesim türüne, ebadına ve sipariş adedine göre şekillenir. Standart 48x68 mm ölçüde <strong>magnet fiyatları 1000 adet</strong> tirajlı paketlerde kurumsal işletmeler için uygun seçenekler sunar. Ticari siparişlerde <strong>buzdolabı magnet fiyatları</strong>, <strong>toptan magnet fiyatları</strong> ve <strong>toptan buzdolabı magnet fiyatları</strong> en ekonomik birim maliyetleri oluşturur.
+                    <strong>Toptan buzdolabı magnet fiyatları</strong> karşılaştırılırken ölçü, kesim türü ve sipariş adedi birlikte değerlendirilmelidir. Tablodaki MAG1 ve MAG2 modelleri, 48x68 mm ölçüde 1.000 adetlik paketlerdir. <strong>Toptan magnet baskı</strong> veya farklı tirajlarda <strong>toplu magnet siparişi</strong> için bu bilgileri paylaşarak teklif alabilirsiniz. Özel ebatlı MAG3 seçeneği cm² birim fiyatıyla hesaplanır; hazır paket fiyatından ayrı değerlendirilir.
                   </p>
                 </div>
                 <div className="mt-4 pt-3 border-t border-sky-200/50 flex items-center justify-between text-xs">
@@ -405,11 +363,11 @@ export const MagnetPage: React.FC = () => {
                       <FileCheck size={18} />
                     </div>
                     <h3 className="text-base font-black text-slate-900 tracking-tight">
-                      Magnet Tasarımı ve Hazırlama
+                      Logolu Magnet Tasarımı ve Kurumsal Tanıtım
                     </h3>
                   </div>
                   <p className="text-xs md:text-sm text-slate-650 leading-relaxed font-medium">
-                    Etkili bir <strong>magnet tasarımı</strong> için telefon numarası ve iletişim bilgilerinin okunaklı olması önerilir. Düğün, nişan veya hatıra amaçlı <strong>hediyelik magnet fiyatları</strong>, <strong>resimli magnet</strong> veya kişisel <strong>magnet fotoğraf</strong> ürünlerinin aksine, sunduğumuz hizmet doğrudan kurumsal ve ticari buzdolabı tanıtım magnetleridir. Grafik desteği var. Dosya hazırlığı veya özel ebat talepleriniz için ekibimizle görüşebilirsiniz.
+                    <strong>Logolu magnet</strong> tasarımında işletme adı, telefon numarası ve kısa hizmet bilgileri kolay okunmalıdır. <strong>Promosyon magnet</strong> veya <strong>reklam magneti</strong> hazırlarken tek bir iletişim çağrısına odaklanmak, küçük alandaki metin kalabalığını azaltır. Kurumsal tanıtım dosyanız için grafik desteği var. Ölçü, taşma payı ve özel kesim dosyası hakkında <Link to="/blog/magnet-baski-olculeri-ve-tasarim-rehberi" className="text-primary hover:underline font-bold">magnet tasarım rehberini</Link> inceleyebilirsiniz.
                   </p>
                 </div>
                 <div className="mt-4 pt-3 border-t border-emerald-200/50 flex items-center justify-between text-xs">
@@ -500,7 +458,7 @@ export const MagnetPage: React.FC = () => {
                 <h3 className="text-base font-black text-slate-900 mb-1">Mıknatıslı Kartvizit</h3>
                 <p className="text-xs text-amber-800 font-bold mb-2">50x80 mm / Özel cm² Ebat</p>
                 <p className="text-xs text-slate-650 leading-relaxed">
-                  Kartvizit formatındaki bu model buzdolabı üzerinde saklanabilen bir mıknatıslı tanıtım kartıdır. Bloknotlu veya farklı türevler için uygundur.
+                  <strong>Magnetli kartvizit</strong>, işletmenizin logosunu ve iletişim bilgilerini manyetik tabakalı bir kartta birleştirir. Mıknatıslı kartvizit tasarımında telefon numarası ve hizmet alanı öne çıkarılabilir; özel ölçü için cm² üzerinden teklif alınır.
                 </p>
               </div>
               <div className="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 font-semibold">
@@ -739,6 +697,9 @@ export const MagnetPage: React.FC = () => {
               );
             })}
           </div>
+          <p className="mt-5 text-sm text-slate-650 leading-relaxed">
+            Döner ve kebap salonlarında paket servis magneti için logo, sipariş telefonu ve hizmet bölgesini birlikte planlayabilirsiniz. Menü bağlantısı kullanacaksanız QR kodun baskı ölçüsünde okunabilirliğini kontrol edin. Sektöre uygun yerleşim için <Link to="/sektor/donerci-magnet-baski" className="text-primary hover:underline font-bold">dönerci magnet baskı seçeneklerini</Link> inceleyin.
+          </p>
         </section>
 
         {/* İKİNCİ ÖZEL TEKLİF AL BAĞLANTISI (FİYAT TABLOSU DIŞINDA) */}
