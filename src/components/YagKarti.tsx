@@ -247,7 +247,7 @@ export const YagKartiPage = () => {
             350 gr kuşe veya 700 gr sıvama seçenekleri, mat selefonlu yüzey, asma deliği ve bağlama ipliği içeren yağ kartı modellerini inceleyebilirsiniz. Yağ kartı baskı ürünü, oto servislerin yağ değişim tarihi, kilometre ve filtre bilgilerini müşterilerine hatırlatmak için kullandığı logolu bir oto yağ kartıdır.
           </p>
           <p className="text-xs sm:text-sm text-slate-600 font-medium">
-            Sipariş öncesinde ürün modeli, adet, tasarım dosyası ve baskı onayı değerlendirilir. Üretim ve kargo planı teklif veya sipariş aşamasında netleştirilir.
+            Yağ kartı bastırma talebinizde ürün modeli, adet ve tasarım dosyası birlikte değerlendirilir. Araç bakım kartı baskı sürecinde dosya kontrolünün ardından baskı onayı alınır. Üretim ve kargo planı teklif veya sipariş aşamasında netleştirilir.
           </p>
         </div>
 
@@ -350,7 +350,7 @@ export const YagKartiPage = () => {
             <span className="text-xs font-bold text-primary uppercase block mb-1">Maliyet Faktörü</span>
             <h3 className="font-black text-slate-900 text-sm mb-1.5">Yağ Kartı Fiyatları Neye Göre Değişiyor?</h3>
             <p className="text-xs text-slate-600 leading-relaxed font-medium">
-              Fiyatlar; seçilen ebat, karton türü, baskı sonrası uygulamalar ve sipariş adedine göre değişebilir. Standart 1.000 adet seçenekleri fiyat tablosunda yer alır; farklı adet talepleri teklif aşamasında değerlendirilir.
+              Toptan yağ kartı baskı fiyatları; seçilen ebat, karton türü, baskı sonrası uygulamalar ve sipariş adedine göre değişebilir. Standart 1.000 adet seçenekleri fiyat tablosunda yer alır; farklı adet talepleri teklif aşamasında değerlendirilir.
             </p>
           </div>
 
