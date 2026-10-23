@@ -5,6 +5,13 @@ const { buildSync } = require('esbuild');
 const routes = [...fs.readFileSync('src/data/staticPageRoutes.ts', 'utf8').matchAll(/'([^']+)'/g)].map(match => match[1]).filter(route => !process.env.AUDIT_ROUTE || route === process.env.AUDIT_ROUTE);
 const client = buildSync({ entryPoints: ['src/main.tsx'], bundle: true, platform: 'browser', format: 'iife', write: false, loader: { '.css': 'empty' } }).outputFiles[0].text;
 const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
+async function waitUntil(check, label) {
+  const deadline = Date.now() + 10000;
+  while (!check()) {
+    if (Date.now() >= deadline) throw new Error('Timed out waiting for ' + label);
+    await pause(25);
+  }
+}
 const normalize = text => text.replace(/\s+/g, ' ').trim();
 function checkMetadata(document, route) {
   for (const selector of ['h1', 'title', 'meta[name="description"]', 'link[rel="canonical"]']) {
@@ -45,10 +52,14 @@ function checkMetadata(document, route) {
       assert.deepEqual(errors, [], route + ': runtime or hydration errors');
       if (['/kitap-ayraci', '/iletisim', '/referanslar', '/kullanim-sartlari'].includes(route)) {
         d.querySelector('header nav a[href="/"]').dispatchEvent(new w.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
-        await pause(350);
+        await waitUntil(() => w.location.pathname === '/' &&
+          d.querySelector('link[rel="canonical"]')?.href === 'https://mavibasim.com/' &&
+          d.querySelector('#featured-products'), route + ': home navigation and metadata');
         checkMetadata(d, '/');
         w.history.back();
-        await pause(350);
+        await waitUntil(() => w.location.pathname === route &&
+          d.querySelector('link[rel="canonical"]')?.href === 'https://mavibasim.com' + route &&
+          normalize(d.querySelector('main')?.textContent || '') === content, route + ': return navigation and metadata');
         checkMetadata(d, route);
         assert.equal(normalize(d.querySelector('main').textContent), content, route + ': return navigation lost content');
         assert.deepEqual(errors, [], route + ': navigation errors');
