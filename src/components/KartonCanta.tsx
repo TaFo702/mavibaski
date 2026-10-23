@@ -28,6 +28,7 @@ import { CategoryHero } from './CategoryHero';
 import { WHATSAPP_LINK } from '../constants/contact';
 import { RelatedBlogPosts } from './RelatedBlogPosts';
 import { DeliveryBadge } from './DeliveryBadge';
+import { CantaCalculatorLauncher } from './CantaCalculatorLauncher';
 
 import { KARTON_CANTA_DATA } from '../data/extraProductData';
 export { KARTON_CANTA_DATA };
@@ -285,6 +286,8 @@ export const KartonCantaPage = () => {
           ]}
           customCtaText="Özel Ebat Çanta Teklifi Al"
         />
+
+        <CantaCalculatorLauncher />
 
         {/* Dynamic Delivery Date Banner */}
         <DeliveryBadge categoryKey="karton-canta" days={5} variant="banner" className="my-6" />
