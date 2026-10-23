@@ -253,6 +253,7 @@ async function prerender() {
       'kartvizitte-mat-mi-parlak-mi',
       'magnet-baski-musteri-kazandirir-mi',
       'paket-servis-icin-magnet-rehberi',
+      'brosur-baskida-en-dogru-kagit-nasil-secilir',
       'lokantalar-icin-amerikan-servis-ebatlari'
     ]) {
       const route = `/blog/${slug}`;
