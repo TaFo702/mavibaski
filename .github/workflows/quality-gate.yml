@@ -25,7 +25,8 @@ jobs:
         run: npm ci
 
       - name: Install Chromium for required browser checks
-        run: node node_modules/playwright/cli.js install --with-deps chromium
+        timeout-minutes: 10
+        run: node node_modules/playwright/cli.js install --with-deps --only-shell chromium
 
       - name: Run Full Quality Gate
         run: npm run quality
