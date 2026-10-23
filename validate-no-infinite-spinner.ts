@@ -1,65 +1,78 @@
 import { chromium } from 'playwright';
+import express from 'express';
+import { createServer } from 'node:http';
+import { once } from 'node:events';
+import fs from 'node:fs';
+import path from 'node:path';
+import { STATIC_PAGE_ROUTES } from './src/data/staticPageRoutes';
 
 async function testNoInfiniteSpinner() {
-  console.log('🧪 Running Playwright Infinite Loading Spinner Regression Test...');
+  console.log('Running real-browser production loading and navigation checks...');
+  const dist = path.resolve('dist');
+  if (!fs.existsSync(path.join(dist, 'index.html'))) throw new Error('Build dist first.');
+
+  // Own the test server: quality does not require an unrelated dev server on port 3000.
+  const app = express();
+  app.use(express.static(dist, { index: false, redirect: false }));
+  app.get('*', (req, res) => {
+    const route = req.path.replace(/^\/+|\/+$/g, '');
+    const file = path.resolve(dist, route, 'index.html');
+    if ((file !== path.join(dist, 'index.html') && !file.startsWith(dist + path.sep)) || !fs.existsSync(file)) {
+      res.status(404).end();
+      return;
+    }
+    res.sendFile(file);
+  });
+  const server = createServer(app);
+  server.listen(0, '127.0.0.1');
+  await once(server, 'listening');
+  const address = server.address();
+  if (!address || typeof address === 'string') throw new Error('Missing test server address');
+  const origin = `http://127.0.0.1:${address.port}`;
   let browser;
   try {
-    browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage();
-
-    const consoleErrors: string[] = [];
-    page.on('console', msg => {
-      if (msg.type() === 'error') {
-        consoleErrors.push(msg.text());
+    // A missing browser is a failed prerequisite, never a silently passing test.
+    const executablePath = process.argv.find(arg => arg.startsWith('--executable-path='))?.slice('--executable-path='.length);
+    browser = await chromium.launch({ headless: true, ...(executablePath ? { executablePath } : {}) });
+    for (const viewport of [{ width: 1365, height: 900 }, { width: 390, height: 844 }]) {
+      const context = await browser.newContext({ viewport });
+      const page = await context.newPage();
+      const runtimeErrors: string[] = [];
+      page.on('pageerror', error => runtimeErrors.push(error.message));
+      // Exercise application assets locally; analytics, fonts and third-party media
+      // are outside this regression and must not delay it or send test telemetry.
+      await page.route('**/*', route => route.request().url().startsWith(origin + '/') ? route.continue() : route.abort());
+      const routes = [...new Set(['/', '/kartvizit', '/afis', '/brosur', '/istanbul-matbaa', '/sektor/restoran-brosur-baski', ...STATIC_PAGE_ROUTES])];
+      for (const route of routes) {
+        const response = await page.goto(origin + route, { waitUntil: 'domcontentloaded', timeout: 20000 });
+        if (response?.status() !== 200) throw new Error(`${route}: HTTP ${response?.status()}`);
+        await page.waitForFunction(() => {
+          const main = document.querySelector('main');
+          return main?.querySelectorAll('h1').length === 1 && (main.textContent?.trim().length || 0) > 100 &&
+            !Array.from(main.querySelectorAll('.animate-spin')).some(node => node.getClientRects().length > 0);
+        }, undefined, { timeout: 10000 });
+        const root = await page.locator('#root').innerHTML();
+        if (!root.trim() || runtimeErrors.length) throw new Error(`${route}: ${runtimeErrors.join('; ') || 'Empty root'}`);
+        console.log(`PASS ${viewport.width}px ${route}: content loaded, no stuck spinner or JavaScript crash`);
       }
-    });
-    page.on('pageerror', err => {
-      consoleErrors.push(err.message);
-    });
-
-    const routesToTest = [
-      '/',
-      '/kartvizit',
-      '/afis',
-      '/istanbul-matbaa',
-      '/sektor/restoran-brosur-baski'
-    ];
-
-    for (const route of routesToTest) {
-      const url = `http://localhost:3000${route}`;
-      await page.goto(url, { waitUntil: 'networkidle', timeout: 15000 });
-      
-      // Check if #root contains rendered content
-      const rootHTML = await page.innerHTML('#root');
-      if (!rootHTML || rootHTML.trim() === '') {
-        throw new Error(`#root is empty on route ${route}! Site failed to mount React application.`);
-      }
-
-      // Verify loading spinner is not stuck
-      const spinner = page.locator('text=Yükleniyor...');
-      const isSpinnerVisible = await spinner.isVisible().catch(() => false);
-      if (isSpinnerVisible) {
-        throw new Error(`Infinite loading spinner ("Yükleniyor...") is visible on route ${route}!`);
-      }
-
-      console.log(`✅ PASS: Route ${route} rendered successfully with content length ${rootHTML.length}`);
+      // Verify the lazy route transition as well as direct-load rendering.
+      await page.goto(origin + '/kitap-ayraci', { waitUntil: 'domcontentloaded' });
+      await page.locator('main h1').waitFor({ state: 'visible' });
+      await page.locator('header nav a[href="/"]').click();
+      await page.locator('#featured-products').waitFor({ state: 'attached' });
+      await page.goBack({ waitUntil: 'domcontentloaded' });
+      await page.locator('[data-page-root="kitap-ayraci"] h1').waitFor({ state: 'visible' });
+      if (runtimeErrors.length) throw new Error(runtimeErrors.join('; '));
+      await context.close();
     }
-
-    if (consoleErrors.length > 0) {
-      console.log(`ℹ️ Note: ${consoleErrors.length} console errors recorded (non-fatal).`);
-    }
-
-    await browser.close();
-    process.exit(0);
-  } catch (err: any) {
+    console.log('PASS: desktop/mobile production routes and return navigation.');
+  } finally {
     if (browser) await browser.close();
-    if (err.message && (err.message.includes("Executable doesn't exist") || err.message.includes('browserType.launch'))) {
-      console.warn('⚠️ SKIPPED: Playwright browser executable is not installed in this environment. Skipping browser UI test.');
-      process.exit(0);
-    }
-    console.error('🔴 FAIL: Playwright Regression Test Failed:', err.message || err);
-    process.exit(1);
+    await new Promise<void>((resolve, reject) => server.close(error => error ? reject(error) : resolve()));
   }
 }
 
-testNoInfiniteSpinner();
+testNoInfiniteSpinner().catch(error => {
+  console.error('FAIL:', error instanceof Error ? error.message : error);
+  process.exitCode = 1;
+});

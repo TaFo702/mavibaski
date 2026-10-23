@@ -5071,7 +5071,7 @@ export const AppRoutes = ({ YagKartiComponent = YagKartiPage, MagnetComponent = 
       <Route path="/giris-bileti" element={<MakbuzFormlarPage />} />
       <Route path="/recete" element={<MakbuzComponent />} />
       <Route path="/tediye-makbuzu" element={<MakbuzComponent />} />
-      <Route path="/cilt-isleri" element={<GenericPriceTablePage data={CILT_ISLERI_DATA} />} />
+      <Route path="/cilt-isleri" element={StaticPages?.['/cilt-isleri'] ? React.createElement(StaticPages['/cilt-isleri']) : <GenericPriceTablePage data={CILT_ISLERI_DATA} />} />
       <Route path="/matbaa" element={React.createElement(StaticPages?.['/matbaa'] || MatbaaPage)} />
       <Route path="/referanslar" element={React.createElement(StaticPages?.['/referanslar'] || ReferanslarPage)} />
       <Route path="/sikca-sorulan" element={React.createElement(StaticPages?.['/sikca-sorulan'] || SikcaSorulanPage)} />
