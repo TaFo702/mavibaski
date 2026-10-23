@@ -1,6 +1,7 @@
 // These existing pages must have their complete content before JavaScript runs.
 export const STATIC_PAGE_ROUTES = [
   '/kitap-ayraci',
+  '/cilt-isleri',
   '/makbuz-ve-formlar',
   '/matbaa',
   '/referanslar',

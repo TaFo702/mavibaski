@@ -17,9 +17,10 @@ import { AntetliPage } from './components/Antetli';
 import { KatalogPage } from './components/Katalog';
 import { KartvizitPage } from './components/Kartvizit';
 import { BlogPage } from './components/Blog';
-import { MakbuzFormlarPage } from './components/Makbuz';
+import { GenericPriceTablePage, MakbuzFormlarPage } from './components/Makbuz';
 import { CityPage } from './components/CityPage';
 
+import { CILT_ISLERI_DATA } from './data/makbuzData';
 import { STATIC_PAGE_ROUTES } from './data/staticPageRoutes';
 import { KitapAyraciPage } from './components/KitapAyraci';
 import { IletisimPage } from './components/Contact';
@@ -35,8 +36,11 @@ import { MesafeliSatisSozlesmesiPage } from './components/MesafeliSatisSozlesmes
 import { IptalVeiadeSartlariPage } from './components/IptalVeiadeSartlari';
 import { LisansPage } from './components/Lisans';
 
+const CiltIsleriPage = () => <GenericPriceTablePage data={CILT_ISLERI_DATA} />;
+
 const staticPages: Partial<Record<string, React.ComponentType>> = {
   '/kitap-ayraci': KitapAyraciPage,
+  '/cilt-isleri': CiltIsleriPage,
   '/makbuz-ve-formlar': MakbuzFormlarPage,
   '/matbaa': MatbaaPage,
   '/referanslar': ReferanslarPage,

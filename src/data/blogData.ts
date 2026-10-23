@@ -792,7 +792,7 @@ Aşağıdaki hızlı karar kılavuzu, işletmenizin bütçesine ve pazarlama hed
 | **Pide & Lahmacun, Kebapçı, Pizza, Burger** | Lezzet görselleri ve tanıdık amblemler iştah kabartır ve sipariş hızlandırır. | **Figürlü Özel Kesim Magnet** | Özel şekliyle buzdolabı kapağında anında fark edilir, kurye ile doğrudan sipariş paketine eklenebilir. |
 | **Veterinerler, Kombi Servisleri, Özel Ders** | Hizmet kalitesi, teknik güven ve prestij ön plandadır. | **Bloknotlu / Kalemli Lüks Magnet** | Müşterinin her gün not alacağı fonksiyonel bir alan yaratarak dolap kapağında yıllarca kalıcı olmasını sağlar. |
 
-### Magnetinizi Seçtiniz mi?
+### İşletmenize Uygun Magneti Sipariş Edin
 
 Karşılaştırma tablosunu inceleyerek işletmeniz için en uygun magnet modelini belirlediyseniz şimdi güncel fiyatları inceleyebilir ve sipariş oluşturabilirsiniz.
 
@@ -820,7 +820,7 @@ Hangi tanıtım materyalinin işletmeniz ve hedefleriniz için en doğrusu oldu�
 | **Karar & Satış Odaklı Avantajı** | Doğrudan **anı kurtaran ve acil ihtiyaç anında** (sipariş, servis vb.) müşteriyi size yönlendiren en hızlı satış aracıdır. | Detaylı menü ve ürün resimleriyle müşterinin sipariş iştahını açar, sepet tutarını ve ortalama harcamasını artırır. | Kısa vadeli promosyonlar veya indirim kodlarıyla o hafta dükkana gelecek müşteri sayısını (mağaza trafiğini) hemen tetikler. | İlk kurumsal tanışmada prestij ve güven verir; müşteri rehberine eklenmeden önce cüzdanda uzun süre yer edinir. |
 | **Kampanya & Dağıtım Yapısı** | Uzun vadeli, kalıcı ve **sürekli tekrarlanan** siparişlerin (su, tüp, paket yemek, kombi servis) anahtarıdır. | Mevsimlik kampanya duyuruları, yeni ürün serisi tanıtımları veya **paket içine konulacak detaylı menüler** için idealdir. | **Günübirlik veya haftalık** broşür dağıtımları, sokak/meydan elden dağıtımları ve posta kutusu yerleştirmeleri için uygundur. | Ofis içi ziyaretler, fuarlar, kargo paketlerinin içi veya **birebir kurumsal iş görüşmelerinde** kullanılmak üzere saklanır. |
 
-### Magnetinizi Seçtiniz mi?
+### Magnet Fiyatlarını İnceleyin
 
 Karşılaştırma tablosunu inceleyerek işletmeniz için en uygun magnet modelini belirlediyseniz şimdi güncel fiyatları inceleyebilir ve sipariş oluşturabilirsiniz.
 

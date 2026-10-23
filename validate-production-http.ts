@@ -774,7 +774,7 @@ async function validateProductionHTTP() {
   const afisBreadcrumbObj = afisJsonLdObjects.find(obj => obj['@type'] === 'BreadcrumbList');
   const afisFaqObj = afisJsonLdObjects.find(obj => obj['@type'] === 'FAQPage');
   const afisFaqQuestionsCount = afisFaqObj?.mainEntity?.length || 0;
-  const afisProductObj = afisJsonLdObjects.find(obj => obj['@type'] === 'Product');
+  const afisServiceObj = afisJsonLdObjects.find(obj => obj['@type'] === 'Service');
 
   const expectedAfisTitle = 'Afiş Baskı Fiyatları | 35x50 - 50x70 - 70x100 cm';
   const expectedAfisDesc = '35x50, 50x70 ve 70x100 cm afiş baskı fiyatlarını inceleyin. 105, 135, 170 gr kuşe ve Blueback afiş poster baskı seçenekleri için teklif alın.';
@@ -793,16 +793,31 @@ async function validateProductionHTTP() {
   console.log(` - Open Graph URL: "${afisOgUrl}" ${afisOgUrl === expectedAfisCanonical ? '✅' : '🔴'}`);
   console.log(` - Twitter Title: "${afisTwTitle}" ${afisTwTitle === expectedAfisTitle ? '✅' : '🔴'}`);
   console.log(` - Twitter Description: "${afisTwDesc}" ${afisTwDesc === expectedAfisDesc ? '✅' : '🔴'}`);
-  console.log(` - JSON-LD Types Found: [${afisJsonLdTypes.join(', ')}] ${afisJsonLdTypes.includes('BreadcrumbList') && afisJsonLdTypes.includes('Product') && afisJsonLdTypes.includes('FAQPage') ? '✅' : '🔴'}`);
+  console.log(` - JSON-LD Types Found: [${afisJsonLdTypes.join(', ')}] ${afisJsonLdTypes.includes('BreadcrumbList') && afisJsonLdTypes.includes('Service') && afisJsonLdTypes.includes('FAQPage') ? '✅' : '🔴'}`);
   console.log(` - FAQPage Questions Count: ${afisFaqQuestionsCount} ${afisFaqQuestionsCount === 10 ? '✅ (Exact 10 questions)' : '🔴'}`);
   
-  // Product prices check (AF1-AF6)
-  const productOffers = afisProductObj?.offers;
-  const productLowPrice = productOffers?.lowPrice;
-  const productHighPrice = productOffers?.highPrice;
-  const productOfferCount = productOffers?.offerCount;
-  const productOffersValid = productLowPrice === '2550' && productHighPrice === '4550' && productOfferCount === '6';
-  console.log(` - Product Schema Prices (Low: ${productLowPrice}, High: ${productHighPrice}, Count: ${productOfferCount}): ${productOffersValid ? '✅ (Aligned with AF1–AF6)' : '🔴'}`);
+  // Verify the established made-to-order Service against every visible tariff row.
+  const afisOffers = afisServiceObj?.hasOfferCatalog?.itemListElement || [];
+  const afisRows = Array.from(afisDoc.querySelectorAll('main table')[0]?.querySelectorAll('tbody tr') || []);
+  const afisNormalize = (value: string) => value.replace(/\s+/g, ' ').trim();
+  const afisOffersValid = afisJsonLdObjects.filter(obj => obj['@type'] === 'Service').length === 1 &&
+    !afisJsonLdTypes.includes('Product') && afisRows.length === 6 && afisOffers.length === 6 &&
+    new Set(afisOffers.map((offer: { '@id': string }) => offer['@id'])).size === 6 &&
+    afisRows.every(row => {
+      const cells = Array.from(row.querySelectorAll('td'));
+      const code = cells.find(cell => /^AF[1-6]$/.test(cell.textContent?.trim() || ''))?.textContent?.trim();
+      if (!code) return false;
+      const codeIndex = cells.findIndex(cell => cell.textContent?.trim() === code);
+      const quantity = afisNormalize(cells[codeIndex + 2]?.textContent || '');
+      const price = cells[codeIndex + 3]?.textContent?.replace(/\./g, '').replace(/[^0-9,]/g, '').replace(',', '.');
+      const offer = afisOffers.find((item: { '@id': string }) => item['@id'] === `https://mavibasim.com/afis#teklif-${code}`);
+      return offer?.['@type'] === 'Offer' && offer.price === price && offer.priceCurrency === 'TRY' &&
+        offer.url === expectedAfisCanonical && offer.priceSpecification?.price === price &&
+        offer.priceSpecification?.priceCurrency === 'TRY' && offer.priceSpecification?.valueAddedTaxIncluded === false &&
+        offer.itemOffered?.['@type'] === 'Service' && offer.itemOffered.name.includes(quantity) &&
+        !('availability' in offer) && !('priceValidUntil' in offer);
+    });
+  console.log(` - Service Schema Offers: ${afisOffersValid ? '✅ Six unique offers aligned with visible AF1–AF6 prices, quantities and tax status' : '🔴 Tariff/schema mismatch'}`);
 
   // Prohibited / certainty claims check on /afis
   const afisProhibited = [
@@ -813,7 +828,6 @@ async function validateProductionHTTP() {
     'heidelberg',
     'polar giyotin',
     'iso 12647-2',
-    '81 il',
     'kesin teslimat süresi',
     'sıfır arka gösterme',
     'dalgalanma yapmaz',
@@ -821,7 +835,7 @@ async function validateProductionHTTP() {
     'alttaki görseli kapatan'
   ];
   const foundAfisProhibited = afisProhibited.filter(w => 
-    afisBody.toLowerCase().includes(w.toLowerCase())
+    (afisDoc.querySelector('main')?.textContent || '').toLowerCase().includes(w.toLowerCase())
   );
   console.log(` - Prohibited & Certainty Claims Check: ${foundAfisProhibited.length === 0 ? 'PASSED (0 found) ✅' : `FAILED (Found: ${foundAfisProhibited.join(', ')}) 🔴`}`);
 
@@ -844,10 +858,10 @@ async function validateProductionHTTP() {
     afisTwTitle !== expectedAfisTitle ||
     afisTwDesc !== expectedAfisDesc ||
     !afisJsonLdTypes.includes('BreadcrumbList') ||
-    !afisJsonLdTypes.includes('Product') ||
+    !afisJsonLdTypes.includes('Service') ||
     !afisJsonLdTypes.includes('FAQPage') ||
     afisFaqQuestionsCount !== 10 ||
-    !productOffersValid ||
+    !afisOffersValid ||
     foundAfisProhibited.length > 0
   ) {
     totalPassed = -1;
