@@ -19,6 +19,14 @@ import { KartvizitPage } from './components/Kartvizit';
 import { BlogPage } from './components/Blog';
 import { GenericPriceTablePage, MakbuzFormlarPage } from './components/Makbuz';
 import { CityPage } from './components/CityPage';
+import { SectorPriceExamples } from './components/SectorPriceExamples';
+import { SECTOR_PRICE_PRODUCTS } from './data/sectorPriceExamples';
+
+export function prerenderSectorPriceCards(): Record<string, string> {
+  return Object.fromEntries(Object.keys(SECTOR_PRICE_PRODUCTS).map(pathname => [
+    pathname, renderToString(<SectorPriceExamples pathname={pathname} />),
+  ]));
+}
 
 import { CILT_ISLERI_DATA } from './data/makbuzData';
 import { STATIC_PAGE_ROUTES } from './data/staticPageRoutes';

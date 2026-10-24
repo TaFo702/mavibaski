@@ -31,6 +31,9 @@ jobs:
       - name: Run Full Quality Gate
         run: npm run quality
 
+      - name: Verify sector price cards, lowest packs and first HTML parity
+        run: npm run validate:sector-prices
+
       - name: Verify para makbuzu hydration, pricing preservation and order flow
         run: node validate-para-fix.cjs
 

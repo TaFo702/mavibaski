@@ -29,6 +29,7 @@ import {
 import { PHONE_NUMBER, WHATSAPP_LINK } from '../constants/contact';
 import { SEO_PAGES_DATA, SEOPageData } from '../data/seoPagesData';
 import { SECTOR_IMAGE_MANIFEST } from '../generated/sectorImageManifest';
+import { SectorPriceExamples } from './SectorPriceExamples';
 
 export { SEO_PAGES_DATA };
 export type { SEOPageData };
@@ -896,6 +897,8 @@ export const SEOPages = () => {
           </div>
         </div>
       </div>
+
+      <SectorPriceExamples pathname={page.path} />
 
       {/* Main Copy Area */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mt-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
