@@ -147,7 +147,7 @@ export const ZarfPage = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen pb-20 animate-in fade-in duration-500">
+    <div className="zarf-contrast-trial bg-white min-h-screen pb-20 animate-in fade-in duration-500">
             {/* Breadcrumb Navigation */}
       <div className="bg-gray-50 border-b border-gray-100 py-3">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
