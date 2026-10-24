@@ -668,8 +668,8 @@ export const SEOPages = () => {
         </div>
       </div>
 
-      {activeKey === 'kayseri-emlakci-afis-baski' && <KayseriBrandaQuote />}
       <SectorPriceExamples pathname={page.path} />
+      {activeKey === 'kayseri-emlakci-afis-baski' && <KayseriBrandaQuote />}
 
       {/* Main Copy Area */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 mt-16 grid grid-cols-1 lg:grid-cols-12 gap-12">

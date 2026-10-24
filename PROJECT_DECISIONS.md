@@ -1,5 +1,8 @@
 # PROJECT_DECISIONS.md - Proje Karar Kayıt Dosyası (Architecture & SEO Decision Log)
 
+### 2026-10-24 — Kayseri fiyat bölümlerinin sıralaması
+- Kullanıcı isteğiyle Kayseri sayfasında önce Ekonomik Baskı Fiyatlarımız, hemen altında Branda ve Selefonlu Folyo Afiş Fiyatları gösterilir. İki fiyat alanı ana açıklama içeriğinden önce birlikte yer alır.
+
 ### 2026-10-24 — Kullanıcı onaylı Kayseri afiş fiyat örnekleri
 - Bir adet 50×70 cm selefonlu folyo 500 TL; 200×100 cm (2×1 m) branda 700 TL; 35×50 cm branda 350 TL olarak kullanıcı tarafından bildirildi. Aynı ölçü için önce yazılan 800 TL yerine son yazılan 700 TL esas alınır.
 - Ürün/malzeme, ölçü ve adet fiyatın yanında görünür; her satırın WhatsApp bağlantısı ilgili örneğin bilgilerini taşır. Fiyat tablosu, açıklama ve SSS aynı veri kaynağını kullanır.
