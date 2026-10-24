@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { Calculator, X } from 'lucide-react';
 import './CantaCalculatorLauncher.css';
 
@@ -8,6 +8,7 @@ export function CantaCalculatorLauncher() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const outlineGradientId = `canta-outline-${useId()}`;
 
   useEffect(() => {
     if (!isOpen) return;
@@ -41,6 +42,18 @@ export function CantaCalculatorLauncher() {
         aria-controls="canta-calculator-dialog"
         className="canta-calculator-launcher min-h-11 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 font-bold text-white hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
+        <svg className="canta-calculator-outline" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id={outlineGradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#4285f4" />
+              <stop offset="25%" stopColor="#9b72cb" />
+              <stop offset="50%" stopColor="#d96570" />
+              <stop offset="75%" stopColor="#fbbc05" />
+              <stop offset="100%" stopColor="#34a853" />
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" rx="15" pathLength="100" fill="none" stroke={`url(#${outlineGradientId})`} strokeWidth="2.5" strokeLinecap="round" strokeDasharray="28 72" />
+        </svg>
         <Calculator size={20} aria-hidden="true" />
         Çanta Fiyatı Hesapla
       </button>
