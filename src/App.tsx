@@ -1238,6 +1238,21 @@ const getCategoryPath = (cat: string) => {
 const ScrollToTop = () => {
   const { pathname, hash, key } = useLocation();
   useEffect(() => {
+    if (pathname === '/kayseri-emlakci-afis-baski' && hash === '#branda-teklif') {
+      const scrollToQuote = () => {
+        const target = document.getElementById('branda-teklif');
+        if (!target) return false;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return true;
+      };
+      if (scrollToQuote()) return;
+      // Direct links may reach the anchor before the lazy page has mounted.
+      const observer = new MutationObserver(() => {
+        if (scrollToQuote()) observer.disconnect();
+      });
+      observer.observe(document.getElementById('root') || document.body, { childList: true, subtree: true });
+      return () => observer.disconnect();
+    }
     if (pathname === '/' && hash) {
       const target = document.getElementById(decodeURIComponent(hash.slice(1)));
       if (target) { target.scrollIntoView({ behavior: 'smooth' }); return; }
@@ -1293,7 +1308,7 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 
 export const CanonicalLink = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || STATIC_PAGE_ROUTES.some(route => route === pathname.replace(/\/$/, '')) || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
+  return pathname === '/' || STATIC_PAGE_ROUTES.some(route => route === pathname.replace(/\/$/, '')) || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/kayseri-emlakci-afis-baski', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
 };
 
 const LegacyCanonicalLink = () => {
@@ -5116,7 +5131,7 @@ export const AppRoutes = ({ YagKartiComponent = YagKartiPage, MagnetComponent = 
 
 const SEOMetadataManager = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || STATIC_PAGE_ROUTES.some(route => route === pathname.replace(/\/$/, '')) || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
+  return pathname === '/' || STATIC_PAGE_ROUTES.some(route => route === pathname.replace(/\/$/, '')) || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/kayseri-emlakci-afis-baski', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
 };
 
 const LegacySEOMetadataManager = () => {

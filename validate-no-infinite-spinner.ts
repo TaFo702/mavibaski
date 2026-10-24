@@ -42,7 +42,7 @@ async function testNoInfiniteSpinner() {
       // Exercise application assets locally; analytics, fonts and third-party media
       // are outside this regression and must not delay it or send test telemetry.
       await page.route('**/*', route => route.request().url().startsWith(origin + '/') ? route.continue() : route.abort());
-      const routes = [...new Set(['/', '/kartvizit', '/afis', '/brosur', '/istanbul-matbaa', '/sektor/restoran-brosur-baski', ...STATIC_PAGE_ROUTES])];
+      const routes = [...new Set(['/', '/kartvizit', '/afis', '/brosur', '/istanbul-matbaa', '/sektor/restoran-brosur-baski', '/kayseri-emlakci-afis-baski', ...STATIC_PAGE_ROUTES])];
       for (const route of routes) {
         const response = await page.goto(origin + route, { waitUntil: 'domcontentloaded', timeout: 20000 });
         if (response?.status() !== 200) throw new Error(`${route}: HTTP ${response?.status()}`);
@@ -62,6 +62,27 @@ async function testNoInfiniteSpinner() {
       await page.locator('#featured-products').waitFor({ state: 'attached' });
       await page.goBack({ waitUntil: 'domcontentloaded' });
       await page.locator('[data-page-root="kitap-ayraci"] h1').waitFor({ state: 'visible' });
+      // Branda must lead to its own quote, including a direct fragment URL.
+      const brandaPath = '/kayseri-emlakci-afis-baski';
+      await page.goto(origin + brandaPath, { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+      await page.locator('a[href="#branda-teklif"]').first().click();
+      const quoteInView = () => {
+        const top = document.getElementById('branda-teklif')?.getBoundingClientRect().top;
+        return top !== undefined && top >= 120 && top < 300;
+      };
+      await page.waitForFunction(quoteInView);
+      await page.goto(origin + brandaPath + '#branda-teklif', { waitUntil: 'domcontentloaded' });
+      await page.waitForLoadState('networkidle');
+      await page.waitForFunction(quoteInView);
+      const quoteLink = await page.locator('#branda-teklif a').getAttribute('href');
+      const quoteURL = new URL(quoteLink || '');
+      if (quoteURL.hostname !== 'wa.me' || !quoteURL.searchParams.get('text')?.includes('440 gr vinil branda')) {
+        throw new Error('Branda quote must carry the actual material and product');
+      }
+      if (!(await page.locator('[data-price-example="AF1"]').innerText()).includes('Kuşe Kâğıt Afiş')) {
+        throw new Error('Paper package must be distinguished from custom branda');
+      }
       if (runtimeErrors.length) throw new Error(runtimeErrors.join('; '));
       await context.close();
     }

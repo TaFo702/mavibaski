@@ -56,6 +56,6 @@ export function getSectorPriceExamples(pathname: string): CityPriceExample[] {
   return [
     { ...a5Brochure, image: brochureImage },
     { ...magnet, image: '/images/magnet/magnet-baski-tasarimi.webp' },
-    third,
+    path === '/kayseri-emlakci-afis-baski' ? { ...third, name: 'Kuşe Kâğıt Afiş' } : third,
   ];
 }

@@ -5,6 +5,9 @@ export interface SEOPageData {
   h1: string;
   intro: string;
   heroImage?: string;
+  breadcrumbParent?: { name: string; path: string };
+  primaryCta?: { text: string; href: string };
+  recommendedProducts?: { path: string; text: string; spec: string; tag?: string; cta?: string }[];
   sections: { title: string; paragraphs: string[] }[];
   faqs: { question: string; answer: string }[];
   internalLinks: { text: string; path: string }[];
@@ -1994,39 +1997,144 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
     ],
     offers: { lowPrice: '2200', highPrice: '28000', count: '18' }
   },
-    'kayseri-emlakci-afis-baski': {
-    path: '/kayseri-emlakci-afis-baski',
-    title: 'Kayseri Emlakçı Afiş Baskı | Satılık Kiralık Branda ve Bez Afişler',
-    metaDesc: 'Kayseri\'deki emlak danışmanları ve emlak ofisleri için dış mekana dayanıklı, delikli kuşgözlü satılık/kiralık branda afiş basımı. Akma ve solma yapmayan dijital baskılar.',
-    h1: 'Kayseri Gayrimenkul Ofisleri İçin Branda ve Satılık/Kiralık Emlakçı Afişi',
-    tagline: 'İç Anadolu Rüzgarlarına ve Güneşe Meydan Okuyan Solmaz Branda Afişleri',
-    intro: 'Kayseri Melikgazi, Kocasinan, Talas ilçelerindeki yoğun kentsel dönüşüm ve gayrimenkul hareketliliğinde, bir gayrimenkulün satılmasını sağlayan en etkili araç pencerelere asılan branda afiştir. Mavi Basım olarak solmaya karşı dirençli solvent-dışı UV mürekkeplerle bez ve vinil emlakçı afişlerini hızlı teslimatla döküp sevk ediyoruz.',
-    sections: [
-      {
-        title: 'Aşırı Sıcağa ve Don Ayazına Dayanıklı Branda Malzemesi',
-        paragraphs: [
-          'Kayseri\'nin kış ayazı rüzgarlarına ve yaz sıcağına asılan afişlerin yırtılmaması için 440 gr döküm Avrupa branda vinil malzemesi kullanıyoruz. Kenar kırma dikişlerimizi dikey dikiş makinesi yerine ısıl frekans yapıştırmayla eritip birleştiriyoruz.',
-          'Afişin binalardan uçmasını önleyen rüzgara karşı delikli gözenek gömülü "kuşgözü" (metal pullar) sayısını artırarak güvenli bağlama noktaları oluşturmaktayız.'
-        ]
-      },
-      {
-        title: 'Göz Alıcı Renk Kontrastı ve Büyük Harf Tasarımları',
-        paragraphs: [
-          'Yoldan geçen sürücü ve yayaların telefon numaranızı tek bakışta hafızaya kazıması için yüksek kontrastlı floresan sarısı, parlak kırmızı veya zıt siyah şablonlarla basım gerçekleştirip Kayseri adreslerinize sigortalı sevk ediyoruz.'
-        ]
-      }
+  'kayseri-emlakci-afis-baski': {
+    "path": "/kayseri-emlakci-afis-baski",
+    "title": "Kayseri Emlakçı Afiş Baskı | 440 gr Branda | Mavi Basım",
+    "metaDesc": "Kayseri için 440 gr vinil branda üzerine satılık ve kiralık emlakçı afiş baskısı. Ölçü, adet ve montaj detaylarını paylaşın; üretim planı ve fiyat teklifi alın.",
+    "h1": "Kayseri Emlakçı Afiş ve Satılık Kiralık Branda Baskı",
+    "breadcrumbParent": {
+        "name": "Afiş Baskı",
+        "path": "/afis"
+    },
+    "primaryCta": {
+        "text": "440 gr Branda Afiş İçin Teklif Al",
+        "href": "#branda-teklif"
+    },
+    "tagline": "440 gr vinil branda, ihtiyaca uygun ölçü ve okunaklı emlak ilanı tasarımı",
+    "intro": "Kayseri’deki emlak ofisleri ve gayrimenkul danışmanları için 440 gr vinil branda üzerine satılık ve kiralık afiş baskısı yapıyoruz. Konut, arsa, dükkân ve iş yeri ilanlarında kullanılacak afişinizi; ölçü, adet, iletişim bilgileri ve asılacağı alana göre hazırlıyoruz. Melikgazi, Kocasinan, Talas ve Kayseri’nin diğer ilçeleri için sipariş ve gönderim planını teklif aşamasında paylaşıyoruz.",
+    "sections": [
+        {
+            "title": "440 gr Vinil Branda Emlakçı Afişi",
+            "paragraphs": [
+                "Branda afiş, gayrimenkulün cephesinde, balkonunda, vitrininde veya ilan için ayrılan alanda satılık ve kiralık bilgisini görünür kılmak için kullanılır. Bu ürünün malzemesi 440 gr vinil brandadır; standart kuşe kâğıt afişten farklıdır.",
+                "Sipariş öncesinde afişin eni ve boyu, kaç adet hazırlanacağı ve kullanım alanı birlikte değerlendirilir. Aynı tasarımı birden fazla portföyünüzde kullanabilir veya her taşınmaz için farklı telefon, ilan başlığı ve gayrimenkul bilgisi iletebilirsiniz."
+            ]
+        },
+        {
+            "title": "Satılık ve Kiralık Afişte Hangi Bilgiler Bulunmalı?",
+            "paragraphs": [
+                "İlanın ana mesajı kolay okunmalıdır: SATILIK veya KİRALIK başlığı, emlak ofisi adı, telefon numarası ve gerekiyorsa gayrimenkulün türü öne çıkarılabilir. Arsa, daire, dükkân, depo veya ofis için ayrılan bilgi alanları kullanım amacına göre düzenlenir.",
+                "Telefon numarasının yazı büyüklüğü ve zeminle renk karşıtlığı, afişin görüleceği mesafeye göre seçilmelidir. Çok sayıda küçük metin yerine birkaç temel bilgiyi belirgin tutmak okumayı kolaylaştırır. Telefon ve ilan bilgilerinin son kontrolü baskı öncesi PDF prova üzerinden yapılır."
+            ]
+        },
+        {
+            "title": "Ölçü, Kuşgözü ve Kenar İşlemleri Nasıl Belirlenir?",
+            "paragraphs": [
+                "Baskı ölçüsünü santimetre cinsinden en × boy olarak paylaşın. Balkon, pencere, vitrin ve cephe gibi farklı yerlerde kullanılacak afişlerde uygun ölçü ve sabitleme ihtiyacı değişebilir. İstenen ölçünün üretime uygunluğu teklif aşamasında değerlendirilir.",
+                "Kuşgözü, afişi bağlamak için kullanılan metal halkalı deliktir. Kuşgözü istenip istenmediği, yerleri ve kenar sonlandırma ihtiyacı asılacak alanla birlikte görüşülür. Her sipariş için aynı halka aralığı veya aynı uygulama yöntemi varsayılmaz; gerekli detaylar baskı öncesinde netleştirilir."
+            ]
+        },
+        {
+            "title": "Kayseri Branda Afiş Fiyatı Neye Göre Hesaplanır?",
+            "paragraphs": [
+                "Branda afiş fiyatı; en ve boy ölçüsü, baskı adedi, farklı tasarım sayısı ve kuşgözü ile kenar işlemleri gibi sipariş ayrıntılarına göre hazırlanır. Net teklif için ölçü, adet, hazır tasarım durumu ve teslimat ilçesini WhatsApp üzerinden iletebilirsiniz.",
+                "Bu sayfadaki ekonomik ürün kartında yer alan kuşe kâğıt afişin paket bedeli, 440 gr vinil branda afişin fiyatı değildir. Branda siparişiniz için ayrı fiyat teklifi alın; kâğıt afiş seçeneklerini ise Afiş Baskı sayfasından inceleyin."
+            ]
+        },
+        {
+            "title": "Üretim Süresi ve Kayseri’ye Kargo Gönderimi",
+            "paragraphs": [
+                "Üretim süresi çoğu siparişte yaklaşık 3 gün olarak planlanır; uygun dosya ve iş yoğunluğunda bazı işler 1 günde de hazırlanabilir. Ölçü, adet, dosyanın baskıya hazır olması ve prova onayı süreyi etkiler. Siparişinizin planlanan üretim tarihi teklif aşamasında teyit edilir.",
+                "Üretim süresi ile kargonun teslim süresi ayrı aşamalardır. Hazırlanan afişlerin Kayseri’ye gönderimi, teslimat adresi ve sipariş özellikleriyle birlikte planlanır. Sipariş iletişimi İstanbul Topkapı 2. Matbaacılar Sitesi hizmet ve koordinasyon noktamız üzerinden yürütülür."
+            ]
+        },
+        {
+            "title": "Baskı Dosyası, PDF Prova ve Sipariş Adımları",
+            "paragraphs": [
+                "Önce en × boy ölçüsünü, adet bilgisini, ilan metnini, telefon numarasını ve varsa logonuzu iletin. Hazır tasarımınız varsa dosyayı paylaşın; yoksa grafik desteği hakkında bilgi alın. Grafik desteği var.",
+                "Baskıya hazır dosyanın teknik kontrolü ve PDF prova kontrolü ücretsizdir. Ölçü, metinler ve baskıya uygunluk kontrol edilerek dijital prova onayınıza sunulur. Dijital onay alınmadan baskıya başlanmaz. Prova üzerindeki telefon, ilan türü ve ofis bilgilerinin doğru olduğundan emin olduktan sonra onay verin."
+            ]
+        }
     ],
-    faqs: [
-      { question: 'Kayseri rüzgarlarına karşı kuşgözü metal halkaların sıklığı nedir?', answer: 'Metrik rüzgar yükünü dikeyde paylaştırmak için paslanmaz halkalarımızı her 50 cm aralıkla yerleştiriyoruz; böylece yırtılma riski minimize edilir.' },
-      { question: 'Branda afiş sevk süreci nasıldır?', answer: 'Kayseri ve çevre ilçelere özel rulo rulo sarılı sert mukavva tüplerde, hasar riski sıfırlanmış olarak en geç 3 iş gününde ulaştırıyoruz.' }
+    "faqs": [
+        {
+            "question": "Kayseri emlakçı afişlerinde hangi branda kullanılıyor?",
+            "answer": "Satılık ve kiralık emlakçı afişleri için 440 gr vinil branda üzerine baskı yapıyoruz. Ölçü, adet ve istenen kenar işlemleri sipariş öncesinde netleştirilir."
+        },
+        {
+            "question": "Branda afiş ile kuşe kâğıt afiş aynı ürün mü?",
+            "answer": "Hayır. 440 gr vinil branda ile kuşe kâğıt farklı baskı malzemeleridir. Sayfadaki kuşe kâğıt afiş paket bedeli branda için geçerli değildir; branda afiş ölçü ve adet bilgisine göre ayrıca fiyatlandırılır."
+        },
+        {
+            "question": "Branda afiş fiyatı almak için hangi bilgiler gerekiyor?",
+            "answer": "En × boy ölçüsü, adet, farklı tasarım sayısı, kuşgözü ve kenar işlemi ihtiyacı, hazır dosya durumu ve teslimat ilçesini paylaşmanız yeterlidir. Bu bilgilerle siparişinize uygun teklif hazırlanır."
+        },
+        {
+            "question": "Satılık ve kiralık afişler 1 günde hazırlanabilir mi?",
+            "answer": "Uygun dosya ve iş yoğunluğunda bazı işler 1 günde hazırlanabilir. Çoğu siparişte üretim yaklaşık 3 gün olarak planlanır. Siparişinizin üretim tarihi teklif aşamasında teyit edilir; kargo teslim süresi ayrıca değerlendirilir."
+        },
+        {
+            "question": "Kuşgözü ve kenar işlemlerini nasıl belirtmeliyim?",
+            "answer": "Afişin asılacağı alanı ve ölçüsünü ileterek kuşgözü isteğinizi belirtin. Halka konumları ve kenar sonlandırma ihtiyacı siparişe göre görüşülür; her iş için sabit bir aralık varsayılmaz."
+        },
+        {
+            "question": "Melikgazi, Kocasinan ve Talas’a gönderim yapılıyor mu?",
+            "answer": "Kayseri’nin Melikgazi, Kocasinan ve Talas ilçeleri dahil teslimat adresinize göre kargo gönderimi planlanır. Üretimin tamamlanma tarihi ile kargo teslim tarihi ayrı olarak değerlendirilir."
+        },
+        {
+            "question": "Baskı öncesinde tasarımı ve telefon numarasını görebilir miyim?",
+            "answer": "Evet. Baskıya hazır dosya teknik kontrolden geçirilir ve dijital PDF prova onayınıza sunulur. Telefon numarası, satılık veya kiralık başlığı ve emlak ofisi bilgileri onaydan önce kontrol edilir. Dijital onay alınmadan baskıya başlanmaz."
+        }
     ],
-    internalLinks: [
-      { text: 'Afiş Baskı Sayfası', path: '/afis' },
-      { text: 'Kayseri Kutu Baskı', path: '/kayseri-kutu-baski' },
-      { text: 'Emlakçı Kartvizit Çözümleri', path: '/emlakci-kartvizit' }
+    "recommendedProducts": [
+        {
+            "path": "/afis",
+            "text": "Kuşe Kâğıt Afiş",
+            "spec": "Kâğıt afişin ölçü, adet ve paket fiyatlarını inceleyin. Branda için bu sayfadan özel teklif alın.",
+            "tag": "Kâğıt Afiş",
+            "cta": "Kâğıt Afiş Fiyatlarını İncele"
+        },
+        {
+            "path": "/kartvizit",
+            "text": "Emlak Ofisi Kartviziti",
+            "spec": "Ofis ve danışman iletişim bilgileri için kartvizit seçenekleri.",
+            "tag": "Kartvizit",
+            "cta": "Kartvizit Fiyatlarını İncele"
+        },
+        {
+            "path": "/brosur",
+            "text": "Gayrimenkul Tanıtım Broşürü",
+            "spec": "Portföy ve proje tanıtımlarında kullanılabilecek kuşe broşür seçenekleri.",
+            "tag": "Broşür",
+            "cta": "Broşür Fiyatlarını İncele"
+        },
+        {
+            "path": "/kataloglar",
+            "text": "Proje ve Portföy Kataloğu",
+            "spec": "Birden fazla gayrimenkulü veya projeyi anlatan çok sayfalı katalog seçenekleri.",
+            "tag": "Katalog",
+            "cta": "Katalog Fiyatlarını İncele"
+        }
     ],
-    offers: { lowPrice: '190', highPrice: '2800', count: '10' }
-  },
+    "internalLinks": [
+        {
+            "text": "Kuşe Kâğıt Afiş Baskı Fiyatları",
+            "path": "/afis"
+        },
+        {
+            "text": "Emlakçı Kartvizit Çözümleri",
+            "path": "/emlakci-kartvizit"
+        },
+        {
+            "text": "Gayrimenkul Tanıtım Broşürü",
+            "path": "/brosur"
+        },
+        {
+            "text": "Proje ve Portföy Katalog Baskısı",
+            "path": "/kataloglar"
+        }
+    ]
+},
   'emlakci-kartvizit': {
     path: '/emlakci-kartvizit',
     title: 'Emlakçı Kartvizit Baskı | Lüks Kabartmalı Gayrimenkul Kartları',
