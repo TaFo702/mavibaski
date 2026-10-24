@@ -55,8 +55,7 @@ export function getSectorPriceExamples(pathname: string): CityPriceExample[] {
     : isFood ? a5Brochure.image : '/images/el-ilani/el-ilani-baski-fiyatlari.webp';
   return [
     { ...a5Brochure, image: brochureImage },
-    { ...magnet, image: /hali-koltuk/.test(path) ? magnet.image
-      : isFood ? '/images/magnet/magnet-baski.webp' : '/images/magnet/ozel-figur-kesimli-magnet.webp' },
+    { ...magnet, image: '/images/magnet/magnet-baski-tasarimi.webp' },
     third,
   ];
 }
