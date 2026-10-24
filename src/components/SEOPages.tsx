@@ -21,14 +21,13 @@ import {
   Layers,
   Tag,
   Scissors,
-  Image as ImageIcon,
   Sparkles,
   ShoppingBag,
   GraduationCap
 } from 'lucide-react';
 import { PHONE_NUMBER, WHATSAPP_LINK } from '../constants/contact';
 import { SEO_PAGES_DATA, SEOPageData } from '../data/seoPagesData';
-import { SECTOR_IMAGE_MANIFEST } from '../generated/sectorImageManifest';
+import { SECTOR_HERO_IMAGES } from '../data/sectorImages';
 import { SectorPriceExamples } from './SectorPriceExamples';
 
 export { SEO_PAGES_DATA };
@@ -278,60 +277,6 @@ const getProductPagePath = (key: string): string => {
   return '/matbaa';
 };
 
-interface ImagePlaceholderProps {
-  number: number;
-  title: string;
-  aspectRatio?: string;
-  isDarkTheme?: boolean;
-  className?: string;
-}
-
-const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
-  number,
-  title,
-  aspectRatio = '900 / 650',
-  isDarkTheme = false,
-  className = 'my-6'
-}) => {
-  return (
-    <div
-      aria-hidden="true"
-      data-placeholder="true"
-      data-image-placeholder="true"
-      data-placeholder-number={number}
-      data-aspect-ratio={aspectRatio}
-      aria-label="Henüz yüklenmemiş görsel alanı"
-      style={{ aspectRatio }}
-      className={`w-full border-2 border-dashed rounded-2xl flex flex-col items-center justify-center p-4 text-center transition-all ${
-        isDarkTheme
-          ? 'bg-neutral-900/90 border-neutral-700 text-neutral-300 shadow-xl'
-          : 'bg-neutral-100/90 border-neutral-300 text-neutral-700'
-      } ${className}`}
-    >
-      <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 ${
-        isDarkTheme ? 'bg-neutral-800 text-neutral-400' : 'bg-neutral-200/80 text-neutral-500'
-      }`}>
-        <ImageIcon size={20} />
-      </div>
-      <span className={`text-[11px] font-extrabold tracking-widest uppercase ${
-        isDarkTheme ? 'text-primary' : 'text-neutral-500'
-      }`}>
-        GÖRSEL {number}
-      </span>
-      <span className={`text-xs sm:text-sm font-bold mt-0.5 ${
-        isDarkTheme ? 'text-white' : 'text-neutral-800'
-      }`}>
-        {title}
-      </span>
-      <span className={`text-[11px] font-medium mt-1 ${
-        isDarkTheme ? 'text-neutral-400' : 'text-neutral-500'
-      }`}>
-        WebP görseli daha sonra eklenecek
-      </span>
-    </div>
-  );
-};
-
 interface SeoContentImageProps {
   src: string;
   alt: string;
@@ -456,6 +401,8 @@ export const SEOPages = () => {
     return CLUSTERS[activeClusterKey];
   }, [activeClusterKey]);
 
+  const sectorHero = SECTOR_HERO_IMAGES[page.path];
+
   const canonicalUrl = `https://mavibasim.com${page.path}`;
 
   const featuredPaths = useMemo(() => {
@@ -573,7 +520,7 @@ export const SEOPages = () => {
         <meta property="og:title" content={page.title} />
         <meta property="og:description" content={page.metaDesc} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={activeKey === 'kutu-ambalaj-baski-cozumleri' ? (SECTOR_IMAGE_MANIFEST.kutuAmbalaj?.["kutu-ambalaj-baski-cozumleri.webp"] ? "https://mavibasim.com/images/sektor/kutu-ambalaj/kutu-ambalaj-baski-cozumleri.webp" : "https://mavibasim.com/mavilogo.png") : (page.heroImage ? `https://mavibasim.com${page.heroImage}` : "https://mavibasim.com/mavilogo.png")} />
+        <meta property="og:image" content={sectorHero ? `https://mavibasim.com${sectorHero.src}` : "https://mavibasim.com/mavilogo.png"} />
       </Helmet>
 
       {/* Hero Banner Area */}
@@ -597,17 +544,17 @@ export const SEOPages = () => {
         </div>
 
         <div className={`max-w-6xl mx-auto relative z-10 ${
-          activeKey === 'kuafor-kartvizit-baski' || activeKey === 'restoran-brosur-baski' || activeKey === 'kozmetik-guzellik-merkezi-baski' || activeKey === 'e-ticaret-perakende-baski' || activeKey === 'egitim-kurumlari-baski' || activeKey === 'kutu-ambalaj-baski-cozumleri'
+          sectorHero
             ? 'grid grid-cols-1 md:grid-cols-12 gap-8 items-center text-left'
             : 'text-center max-w-4xl space-y-4'
         }`}>
           <div className={`${
-            activeKey === 'kuafor-kartvizit-baski' || activeKey === 'restoran-brosur-baski' || activeKey === 'kozmetik-guzellik-merkezi-baski' || activeKey === 'e-ticaret-perakende-baski' || activeKey === 'egitim-kurumlari-baski' || activeKey === 'kutu-ambalaj-baski-cozumleri'
+            sectorHero
               ? 'md:col-span-7 space-y-4'
               : 'space-y-4'
           }`}>
             <div className={`flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-[0.2em] ${
-              activeKey === 'kuafor-kartvizit-baski' || activeKey === 'restoran-brosur-baski' || activeKey === 'kozmetik-guzellik-merkezi-baski' || activeKey === 'e-ticaret-perakende-baski' || activeKey === 'egitim-kurumlari-baski' || activeKey === 'kutu-ambalaj-baski-cozumleri'
+              sectorHero
                 ? ''
                 : 'justify-center'
             }`}>
@@ -662,200 +609,16 @@ export const SEOPages = () => {
             </div>
           </div>
 
-          {/* Görsel 1: Ana Hero Görseli veya Taslak Kutu (Kuaför) */}
-          {activeKey === 'kuafor-kartvizit-baski' && (
-            SECTOR_IMAGE_MANIFEST.kuafor["kuafor-kartvizit-baski.webp"] ? (
-              <div className="md:col-span-5">
-                <SeoContentImage
-                  src="/images/sektor/kuafor-kartvizit/kuafor-kartvizit-baski.webp"
-                  alt="Kuaför ve güzellik salonları için çift yönlü kartvizit baskı örneği"
-                  width={1200}
-                  height={800}
-                  loading="eager"
-                  fetchPriority="high"
-                  figureClassName="rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900"
-                  className="w-full h-auto object-cover rounded-2xl"
-                />
-              </div>
-            ) : (
-              <div className="md:col-span-5">
-                <ImagePlaceholder
-                  number={1}
-                  title="Ana Kuaför Kartvizit Görseli"
-                  aspectRatio="1200 / 800"
-                  isDarkTheme={true}
-                  className="my-0"
-                />
-              </div>
-            )
-          )}
-
-          {/* Görsel 1: Ana Hero Görseli veya Taslak Kutu (Restoran) */}
-          {activeKey === 'restoran-brosur-baski' && (
-            SECTOR_IMAGE_MANIFEST.restoran["restoran-brosur-baski.webp"] ? (
-              <div className="md:col-span-5">
-                <SeoContentImage
-                  src="/images/sektor/restoran-brosur/restoran-brosur-baski.webp"
-                  alt="Restoran ve paket servis işletmeleri için katlamalı menü broşürü baskı örneği"
-                  width={1200}
-                  height={800}
-                  loading="eager"
-                  fetchPriority="high"
-                  figureClassName="rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900"
-                  className="w-full h-auto object-cover rounded-2xl"
-                />
-              </div>
-            ) : (
-              <div className="md:col-span-5">
-                <ImagePlaceholder
-                  number={1}
-                  title="Ana Restoran Broşür Görseli"
-                  aspectRatio="1200 / 800"
-                  isDarkTheme={true}
-                  className="my-0"
-                />
-              </div>
-            )
-          )}
-
-          {/* Görsel 1: Ana Hero Görseli veya Taslak Kutu (Kozmetik Sağlık) */}
-          {activeKey === 'kozmetik-guzellik-saglik-baski' && (
-            SECTOR_IMAGE_MANIFEST.kozmetik["kozmetik-guzellik-saglik-baski-cozumleri.webp"] ? (
-              <div className="md:col-span-5">
-                <SeoContentImage
-                  src="/images/sektor/kozmetik-guzellik-saglik/kozmetik-guzellik-saglik-baski-cozumleri.webp"
-                  alt="Kozmetik ve güzellik merkezleri için kutu, broşür, kartvizit ve form baskıları"
-                  width={1200}
-                  height={800}
-                  loading="eager"
-                  fetchPriority="high"
-                  figureClassName="rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900"
-                  className="w-full h-auto object-cover rounded-2xl"
-                />
-              </div>
-            ) : (
-              <div className="md:col-span-5">
-                <ImagePlaceholder
-                  number={1}
-                  title="Kozmetik ve Güzellik Merkezi Baskı Çözümleri"
-                  aspectRatio="1200 / 800"
-                  isDarkTheme={true}
-                  className="my-0"
-                />
-              </div>
-            )
-          )}
-
-          {/* Görsel 1: Ana Hero Görseli veya Taslak Kutu (Güzellik Merkezi) */}
-          {activeKey === 'kozmetik-guzellik-merkezi-baski' && (
-            SECTOR_IMAGE_MANIFEST.kozmetikGuzellikMerkezi["kozmetik-guzellik-merkezi-baski-cozumleri.webp"] ? (
-              <div className="md:col-span-5">
-                <SeoContentImage
-                  src="/images/sektor/kozmetik-guzellik-merkezi/kozmetik-guzellik-merkezi-baski-cozumleri.webp"
-                  alt="Güzellik merkezleri için kutu, form, kartvizit ve broşür baskı çözümleri"
-                  width={1200}
-                  height={800}
-                  loading="eager"
-                  fetchPriority="high"
-                  figureClassName="rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900"
-                  className="w-full h-auto object-cover rounded-2xl"
-                />
-              </div>
-            ) : (
-              <div className="md:col-span-5">
-                <ImagePlaceholder
-                  number={1}
-                  title="Güzellik Merkezi ve Kozmetik Baskı Çözümleri"
-                  aspectRatio="1200 / 800"
-                  isDarkTheme={true}
-                  className="my-0"
-                />
-              </div>
-            )
-          )}
-
-          {/* Görsel 1: Ana Hero Görseli veya Taslak Kutu (E-Ticaret Perakende) */}
-          {activeKey === 'e-ticaret-perakende-baski' && (
-            SECTOR_IMAGE_MANIFEST.eTicaretPerakende["e-ticaret-perakende-baski-cozumleri.webp"] ? (
-              <div className="md:col-span-5">
-                <SeoContentImage
-                  src="/images/sektor/e-ticaret-perakende/e-ticaret-perakende-baski-cozumleri.webp"
-                  alt="E-ticaret ve perakende markaları için kargo kutusu, karton çanta, etiket ve ambalaj kâğıdı baskıları"
-                  width={1200}
-                  height={800}
-                  loading="eager"
-                  fetchPriority="high"
-                  figureClassName="rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900"
-                  className="w-full h-auto object-cover rounded-2xl"
-                />
-              </div>
-            ) : (
-              <div className="md:col-span-5">
-                <ImagePlaceholder
-                  number={1}
-                  title="E-Ticaret ve Perakende Baskı Çözümleri"
-                  aspectRatio="1200 / 800"
-                  isDarkTheme={true}
-                  className="my-0"
-                />
-              </div>
-            )
-          )}
-
-          {/* Görsel 1: Ana Hero Görseli veya Taslak Kutu (Eğitim Kurumları) */}
-          {activeKey === 'egitim-kurumlari-baski' && (
-            SECTOR_IMAGE_MANIFEST.egitimKurumlari?.["egitim-kurumlari-baski-cozumleri.webp"] ? (
-              <div className="md:col-span-5">
-                <SeoContentImage
-                  src="/images/sektor/egitim-kurumlari/egitim-kurumlari-baski-cozumleri.webp"
-                  alt="Eğitim kurumları için deneme kitapçığı, fasikül, broşür, katalog ve kurumsal baskı çözümleri"
-                  width={1200}
-                  height={800}
-                  loading="eager"
-                  fetchPriority="high"
-                  figureClassName="rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900"
-                  className="w-full h-auto object-cover rounded-2xl"
-                />
-              </div>
-            ) : (
-              <div className="md:col-span-5">
-                <ImagePlaceholder
-                  number={1}
-                  title="Eğitim Kurumları Baskı Çözümleri"
-                  aspectRatio="1200 / 800"
-                  isDarkTheme={true}
-                  className="my-0"
-                />
-              </div>
-            )
-          )}
-
-          {/* Görsel 1: Ana Hero Görseli veya Taslak Kutu (Kutu ve Ambalaj) */}
-          {activeKey === 'kutu-ambalaj-baski-cozumleri' && (
-            SECTOR_IMAGE_MANIFEST.kutuAmbalaj?.["kutu-ambalaj-baski-cozumleri.webp"] ? (
-              <div className="md:col-span-5">
-                <SeoContentImage
-                  src="/images/sektor/kutu-ambalaj/kutu-ambalaj-baski-cozumleri.webp"
-                  alt="İlaç, parfüm, kozmetik, fast-food ve perakende ürünleri için baskılı kutu ve ambalaj seçenekleri"
-                  width={1200}
-                  height={800}
-                  loading="eager"
-                  fetchPriority="high"
-                  figureClassName="rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-neutral-900"
-                  className="w-full h-auto object-cover rounded-2xl"
-                />
-              </div>
-            ) : (
-              <div className="md:col-span-5">
-                <ImagePlaceholder
-                  number={1}
-                  title="Kutu ve Ambalaj Baskı Çözümleri"
-                  aspectRatio="1200 / 800"
-                  isDarkTheme={true}
-                  className="my-0"
-                />
-              </div>
-            )
+          {sectorHero && (
+            <div className="md:col-span-5" data-sector-hero>
+              <SeoContentImage
+                {...sectorHero}
+                loading="eager"
+                fetchPriority="high"
+                figureClassName="rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl bg-white"
+                className="w-full h-auto object-contain rounded-2xl"
+              />
+            </div>
           )}
         </div>
       </div>
@@ -918,623 +681,375 @@ export const SEOPages = () => {
                     </p>
                     {/* Görsel 4: Dosya Kontrolü ve PDF Prova (Kuaför) */}
                     {activeKey === 'kuafor-kartvizit-baski' && sIdx === 3 && pIdx === 2 && (
-                      SECTOR_IMAGE_MANIFEST.kuafor["kartvizit-dosya-kontrolu-pdf-prova.webp"] ? (
-                        <SeoContentImage
-                          src="/images/sektor/kuafor-kartvizit/kartvizit-dosya-kontrolu-pdf-prova.webp"
-                          alt="Kuaför kartviziti baskı öncesi dosya kontrolü ve PDF prova süreci"
-                          width={900}
-                          height={650}
+                      <SeoContentImage
+                          src="/images/el-ilani/el-ilani-prova-paketleme-sevk.webp"
+                          alt="Ekranda tasarım kontrolü ve paketlenmiş baskı işleri"
+                          width={1264}
+                          height={848}
                           loading="lazy"
-                          caption="Baskıya hazır dosya kontrolü ve PDF prova onayı"
+                          caption="Ekranda tasarım kontrolü ve paketlenmiş baskı işleri"
                         />
-                      ) : (
-                        <ImagePlaceholder
-                          number={4}
-                          title="Dosya Kontrolü ve PDF Prova"
-                          aspectRatio="900 / 650"
-                        />
-                      )
                     )}
                     {/* Görsel 4: Dosya Kontrolü ve PDF Prova (Restoran - 3. adımdan sonra) */}
                     {activeKey === 'restoran-brosur-baski' && sIdx === 2 && pIdx === 2 && (
-                      SECTOR_IMAGE_MANIFEST.restoran["restoran-brosur-dosya-kontrolu-pdf-prova.webp"] ? (
-                        <SeoContentImage
-                          src="/images/sektor/restoran-brosur/restoran-brosur-dosya-kontrolu-pdf-prova.webp"
-                          alt="Restoran broşürü baskı öncesi dosya kontrolü ve PDF prova süreci"
-                          width={900}
-                          height={650}
+                      <SeoContentImage
+                          src="/images/el-ilani/el-ilani-prova-paketleme-sevk.webp"
+                          alt="Baskı öncesi tasarım kontrolü ve hazırlanmış baskı paketleri"
+                          width={1264}
+                          height={848}
                           loading="lazy"
-                          caption="Baskıya hazır dosya kontrolü ve PDF prova onayı"
+                          caption="Baskı öncesi tasarım kontrolü ve hazırlanmış baskı paketleri"
                         />
-                      ) : (
-                        <ImagePlaceholder
-                          number={4}
-                          title="Dosya Kontrolü ve PDF Prova"
-                          aspectRatio="900 / 650"
-                        />
-                      )
                     )}
                   </React.Fragment>
                 ))}
 
                 {/* Görsel 2: Selefon ve Yüzey Seçenekleri (Kuaför) */}
                 {activeKey === 'kuafor-kartvizit-baski' && sIdx === 1 && (
-                  SECTOR_IMAGE_MANIFEST.kuafor["kuafor-kartvizit-selefon-secenekleri.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kuafor-kartvizit/kuafor-kartvizit-selefon-secenekleri.webp"
-                      alt="Mat ve parlak selefonlu kuaför kartviziti baskı seçenekleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/hakkimizda/selefon-nedir-mat-parlak-selefon-farklari.webp"
+                      alt="Mat ve parlak selefon yüzeylerinin karşılaştırılması"
+                      width={756}
+                      height={504}
                       loading="lazy"
-                      caption="Mat selefon, parlak selefon, lokal lak ve oval köşe seçenekleri"
+                      caption="Mat ve parlak selefon yüzeylerinin karşılaştırılması"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={2}
-                      title="Selefon ve Yüzey Seçenekleri"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 2: Kâğıt ve Katlama Seçenekleri (Restoran) */}
                 {activeKey === 'restoran-brosur-baski' && sIdx === 0 && (
-                  SECTOR_IMAGE_MANIFEST.restoran["restoran-brosur-kagit-katlama-secenekleri.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/restoran-brosur/restoran-brosur-kagit-katlama-secenekleri.webp"
-                      alt="Restoran broşürü için kuşe kâğıt ve katlama seçenekleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/el-ilani/ucuz-el-ilani-basimi.webp"
+                      alt="Restoran menüsü için katlamalı renkli broşür örneği"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="115 gr ve 130 gr kuşe, tek ve çok kırımlı broşür seçenekleri"
+                      caption="Restoran menüsü için katlamalı renkli broşür örneği"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={2}
-                      title="Kâğıt ve Katlama Seçenekleri"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 2: Parfüm ve Kozmetik Kutusu Bristol Seçenekleri (Kozmetik Sağlık) */}
                 {activeKey === 'kozmetik-guzellik-saglik-baski' && sIdx === 0 && (
-                  SECTOR_IMAGE_MANIFEST.kozmetik["parfum-kozmetik-kutusu-bristol-secenekleri.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kozmetik-guzellik-saglik/parfum-kozmetik-kutusu-bristol-secenekleri.webp"
-                      alt="300, 350 ve 400 gr Bristol parfüm ve kozmetik kutusu seçenekleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/kutu/urun-kutusu-baski.webp"
+                      alt="Parfüm şişesi için baskılı karton ürün kutusu"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="300, 350 ve 400 gr Bristol parfüm ve kozmetik kutusu seçenekleri"
+                      caption="Parfüm şişesi için baskılı karton ürün kutusu"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={2}
-                      title="Parfüm ve Kozmetik Kutusu Bristol Seçenekleri"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 2: Güzellik Merkezi Formları ve Danışan Kayıt (Güzellik Merkezi) */}
                 {activeKey === 'kozmetik-guzellik-merkezi-baski' && sIdx === 0 && (
-                  SECTOR_IMAGE_MANIFEST.kozmetikGuzellikMerkezi["guzellik-merkezi-formlari-danisan-kayit.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kozmetik-guzellik-merkezi/guzellik-merkezi-formlari-danisan-kayit.webp"
-                      alt="Güzellik merkezi danışan kayıt, konsültasyon ve işlem takip formları"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/bloknot/bloknot-baski-fiyatlari.webp"
+                      alt="Güzellik merkezinde not ve takip için kullanılabilecek spiralli not defteri örneği"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Güzellik merkezi danışan kayıt, konsültasyon ve işlem takip formları"
+                      caption="Güzellik merkezinde not ve takip için kullanılabilecek spiralli not defteri örneği"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={2}
-                      title="Güzellik Merkezi Formları ve Danışan Kayıt"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 2: E-Ticaret Ürün Kutusu ve Kargo Paketleme (E-Ticaret Perakende) */}
                 {activeKey === 'e-ticaret-perakende-baski' && sIdx === 0 && (
-                  SECTOR_IMAGE_MANIFEST.eTicaretPerakende["e-ticaret-urun-kutusu-kargo-paketleme.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/e-ticaret-perakende/e-ticaret-urun-kutusu-kargo-paketleme.webp"
-                      alt="E-ticaret ürün kutuları ve kargo paketleme çözümleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/etiket/kuse-gorsel-etiket.webp"
+                      alt="Etiketli kraft ürün ve gönderi kutuları"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Oluklu mukavva ve Bristol e-ticaret kargo kutusu seçenekleri"
+                      caption="Etiketli kraft ürün ve gönderi kutuları"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={2}
-                      title="E-Ticaret Ürün Kutusu ve Kargo Paketleme"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 2: Deneme Sınavı, Soru Kitapçığı ve Fasikül (Eğitim Kurumları) */}
                 {activeKey === 'egitim-kurumlari-baski' && sIdx === 0 && (
-                  SECTOR_IMAGE_MANIFEST.egitimKurumlari?.["deneme-sinavi-soru-kitapcigi-fasikul.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/egitim-kurumlari/deneme-sinavi-soru-kitapcigi-fasikul.webp"
-                      alt="TYT AYT LGS deneme sınavı, soru kitapçığı, fasikül ve yaprak test baskıları"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/brosur/brosur-baski-fiyatlari.webp"
+                      alt="Eğitim kurumu için renkli kayıt ve program tanıtım broşürleri"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="TYT AYT LGS deneme sınavı, soru kitapçığı, fasikül ve yaprak test baskıları"
+                      caption="Eğitim kurumu için renkli kayıt ve program tanıtım broşürleri"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={2}
-                      title="Deneme Sınavı, Soru Kitapçığı ve Fasikül Baskıları"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 3: Randevu Kartı ve QR Kod Örneği (Kuaför) */}
                 {activeKey === 'kuafor-kartvizit-baski' && sIdx === 2 && (
-                  SECTOR_IMAGE_MANIFEST.kuafor["kuafor-randevu-karti-qr-kod.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kuafor-kartvizit/kuafor-randevu-karti-qr-kod.webp"
-                      alt="QR kod ve randevu alanı bulunan çift yönlü kuaför kartviziti"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/el-ilani/hizli-uretim-sureci-acil-matbaa-baski.webp"
+                      alt="Güzellik salonu hizmetleri ve iletişim bilgilerini gösteren tanıtım baskısı"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="İletişim, sosyal medya, QR kod ve randevu alanı örneği"
+                      caption="Güzellik salonu hizmetleri ve iletişim bilgilerini gösteren tanıtım baskısı"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={3}
-                      title="Randevu Kartı ve QR Kod"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 3: Restoran Menü Broşürü Tasarımı (Restoran) */}
                 {activeKey === 'restoran-brosur-baski' && sIdx === 1 && (
-                  SECTOR_IMAGE_MANIFEST.restoran["restoran-menu-brosuru-tasarim.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/restoran-brosur/restoran-menu-brosuru-tasarim.webp"
-                      alt="Yemek kategorileri ve sipariş bilgileri bulunan restoran menü broşürü tasarımı"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/el-ilani/cuz-el-ilani-basimi.webp"
+                      alt="Yemek ve içecek seçenekleri için katlamalı menü düzeni"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Menü kategorileri, iletişim bilgileri ve sipariş alanı düzeni"
+                      caption="Yemek ve içecek seçenekleri için katlamalı menü düzeni"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={3}
-                      title="Restoran Menü Broşürü Tasarımı"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 3: Epilasyon ve Botoks İşlem Takip Formları (Kozmetik Sağlık) */}
                 {activeKey === 'kozmetik-guzellik-saglik-baski' && sIdx === 1 && (
-                  SECTOR_IMAGE_MANIFEST.kozmetik["epilasyon-botoks-islem-takip-formlari.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kozmetik-guzellik-saglik/epilasyon-botoks-islem-takip-formlari.webp"
-                      alt="Epilasyon, botoks ve cilt bakımı işlem takip formları"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/bloknot/bloknot-baski-fiyatlari.webp"
+                      alt="Not ve takip bilgileri için basılı yapraklı bloknot örneği"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Epilasyon, botoks ve cilt bakımı işlem takip formları"
+                      caption="Not ve takip bilgileri için basılı yapraklı bloknot örneği"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={3}
-                      title="Epilasyon ve Botoks İşlem Takip Formları"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 3: Lazer Epilasyon ve Seans Takip Formu (Güzellik Merkezi) */}
                 {activeKey === 'kozmetik-guzellik-merkezi-baski' && sIdx === 1 && (
-                  SECTOR_IMAGE_MANIFEST.kozmetikGuzellikMerkezi["lazer-epilasyon-seans-takip-formu.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kozmetik-guzellik-merkezi/lazer-epilasyon-seans-takip-formu.webp"
-                      alt="Lazer epilasyon seans takip formu ve güzellik merkezi seans çizelgesi"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/bloknot/bloknot-baski-fiyatlari.webp"
+                      alt="Seans ve görüşme notlarında kullanılabilecek basılı bloknot örneği"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Lazer epilasyon seans takip formu ve güzellik merkezi seans çizelgesi"
+                      caption="Seans ve görüşme notlarında kullanılabilecek basılı bloknot örneği"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={3}
-                      title="Lazer Epilasyon ve Seans Takip Formu"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 3: Saten ve Polyester İpli Karton Çanta (E-Ticaret Perakende) */}
                 {activeKey === 'e-ticaret-perakende-baski' && sIdx === 1 && (
-                  SECTOR_IMAGE_MANIFEST.eTicaretPerakende["saten-polyester-ipli-karton-canta.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/e-ticaret-perakende/saten-polyester-ipli-karton-canta.webp"
-                      alt="Saten ve polyester ipli lüks karton çanta ve kraft poşet baskısı"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/karton-canta/karton-canta-tasarimi.webp"
+                      alt="İpli karton çantanın açık ve katlanmış görünümü"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="230–300 gr Bristol saten veya polyester ipli karton çantalar"
+                      caption="İpli karton çantanın açık ve katlanmış görünümü"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={3}
-                      title="Saten ve Polyester İpli Karton Çanta"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 3: Öğrenci Kayıt ve Takip Formları (Eğitim Kurumları) */}
                 {activeKey === 'egitim-kurumlari-baski' && sIdx === 1 && (
-                  SECTOR_IMAGE_MANIFEST.egitimKurumlari?.["ogrenci-kayit-takip-formlari.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/egitim-kurumlari/ogrenci-kayit-takip-formlari.webp"
-                      alt="Öğrenci kayıt, veli bilgi, rehberlik, etüt ve başarı takip formu baskıları"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/dosya/cepli-dosya-baski-detayi.webp"
+                      alt="Eğitim kurumuna ait evrak ve kartların yerleştirildiği cepli dosya"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Öğrenci kayıt, veli bilgi, rehberlik, etüt ve başarı takip formu baskıları"
+                      caption="Eğitim kurumuna ait evrak ve kartların yerleştirildiği cepli dosya"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={3}
-                      title="Öğrenci Kayıt ve Takip Formları"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 4: Sözleşme, Tahsilat Makbuzu ve Senet Formları (Kozmetik Sağlık) */}
                 {activeKey === 'kozmetik-guzellik-saglik-baski' && sIdx === 2 && (
-                  SECTOR_IMAGE_MANIFEST.kozmetik["sozlesme-tahsilat-makbuzu-senet-formlari.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kozmetik-guzellik-saglik/sozlesme-tahsilat-makbuzu-senet-formlari.webp"
-                      alt="Güzellik merkezi sözleşmesi, tahsilat makbuzu ve ödeme takip formları"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp"
+                      alt="Ödeme takibi için otokopili tahsilat makbuzu örneği"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Güzellik merkezi sözleşmesi, tahsilat makbuzu ve ödeme takip formları"
+                      caption="Ödeme takibi için otokopili tahsilat makbuzu örneği"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={4}
-                      title="Sözleşme, Tahsilat Makbuzu ve Senet Formları"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 4: Güzellik Merkezi Sözleşmesi ve Tahsilat Makbuzu (Güzellik Merkezi) */}
                 {activeKey === 'kozmetik-guzellik-merkezi-baski' && sIdx === 2 && (
-                  SECTOR_IMAGE_MANIFEST.kozmetikGuzellikMerkezi["guzellik-merkezi-sozlesme-tahsilat-makbuzu.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kozmetik-guzellik-merkezi/guzellik-merkezi-sozlesme-tahsilat-makbuzu.webp"
-                      alt="Güzellik merkezi hizmet sözleşmesi ve otokopili tahsilat makbuzu"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/tahsilat-makbuzu/otokopili-tahsilat-makbuzu.webp"
+                      alt="Ödeme işlemleri için otokopili tahsilat makbuzu örneği"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Güzellik merkezi hizmet sözleşmesi ve otokopili tahsilat makbuzu"
+                      caption="Ödeme işlemleri için otokopili tahsilat makbuzu örneği"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={4}
-                      title="Güzellik Merkezi Sözleşmesi ve Tahsilat Makbuzu"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 4: Baskılı Ambalaj Kâğıdı ve Teşekkür Kartı (E-Ticaret Perakende) */}
                 {activeKey === 'e-ticaret-perakende-baski' && sIdx === 2 && (
-                  SECTOR_IMAGE_MANIFEST.eTicaretPerakende["baskili-ambalaj-kagidi-tesekkur-karti.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/e-ticaret-perakende/baskili-ambalaj-kagidi-tesekkur-karti.webp"
-                      alt="Logo baskılı pelür ambalaj kâğıdı ve müşteri teşekkür kartları"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/ambalaj/kuse-ambalaj-baski.webp"
+                      alt="Tekrarlayan logo deseni basılmış ambalaj kâğıdı"
+                      width={1024}
+                      height={1024}
                       loading="lazy"
-                      caption="Pelür ve sülfit ambalaj kâğıdı ile paket içi teşekkür kartları"
+                      caption="Tekrarlayan logo deseni basılmış ambalaj kâğıdı"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={4}
-                      title="Baskılı Ambalaj Kâğıdı ve Teşekkür Kartı"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 4: Eğitim Broşür, Afiş ve Katalog (Eğitim Kurumları) */}
                 {activeKey === 'egitim-kurumlari-baski' && sIdx === 2 && (
-                  SECTOR_IMAGE_MANIFEST.egitimKurumlari?.["egitim-brosur-afis-katalog.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/egitim-kurumlari/egitim-brosur-afis-katalog.webp"
-                      alt="Eğitim kurumları için kayıt broşürü, afiş, katalog ve tanıtım materyalleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/brosur/brosur-baski-fiyatlari.webp"
+                      alt="Okul ve kurs tanıtımı için baskılı eğitim broşürleri"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Eğitim kurumları için kayıt broşürü, afiş, katalog ve tanıtım materyalleri"
+                      caption="Okul ve kurs tanıtımı için baskılı eğitim broşürleri"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={4}
-                      title="Eğitim Broşür, Afiş ve Katalog"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 5: Randevu Kartı, Broşür ve Karton Çanta (Kozmetik Sağlık) */}
                 {activeKey === 'kozmetik-guzellik-saglik-baski' && sIdx === 3 && (
-                  SECTOR_IMAGE_MANIFEST.kozmetik["randevu-karti-brosur-karton-canta.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kozmetik-guzellik-saglik/randevu-karti-brosur-karton-canta.webp"
-                      alt="Hasta randevu kartı, tanıtım broşürü ve kozmetik karton çantası"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/brosur/ucuz-brosur-baski.webp"
+                      alt="Güzellik merkezi hizmetlerini tanıtan baskılı broşürler"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Hasta randevu kartı, tanıtım broşürü ve kozmetik karton çantası"
+                      caption="Güzellik merkezi hizmetlerini tanıtan baskılı broşürler"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={5}
-                      title="Randevu Kartı, Broşür ve Karton Çanta"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 5: Parfüm ve Kozmetik Kutusu Bristol Seçenekleri (Güzellik Merkezi) */}
                 {activeKey === 'kozmetik-guzellik-merkezi-baski' && sIdx === 3 && (
-                  SECTOR_IMAGE_MANIFEST.kozmetikGuzellikMerkezi["parfum-kozmetik-kutusu-300-350-400-gr.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kozmetik-guzellik-merkezi/parfum-kozmetik-kutusu-300-350-400-gr.webp"
-                      alt="300, 350 ve 400 gr Bristol parfüm ve kozmetik kutusu seçenekleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/kutu/urun-kutusu-baski.webp"
+                      alt="Parfüm ürününü taşıyan baskılı karton kutu örneği"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="300, 350 ve 400 gr Bristol parfüm ve kozmetik kutusu seçenekleri"
+                      caption="Parfüm ürününü taşıyan baskılı karton kutu örneği"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={5}
-                      title="300, 350 ve 400 Gr Bristol Parfüm ve Kozmetik Kutuları"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 5: Barkod, Koli, Adres ve Ürün Etiketleri (E-Ticaret Perakende) */}
                 {activeKey === 'e-ticaret-perakende-baski' && sIdx === 3 && (
-                  SECTOR_IMAGE_MANIFEST.eTicaretPerakende["barkod-koli-adres-urun-etiketleri.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/e-ticaret-perakende/barkod-koli-adres-urun-etiketleri.webp"
-                      alt="Rulo termal barkod, kuşe koli adres ve raf etiketleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/etiket/rulet-etiket-tasarimi.webp"
+                      alt="Rulo hâlinde renkli baskılı ürün etiketleri"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Rulo termal barkod, kuşe koli adres ve suya dayanıklı etiketler"
+                      caption="Rulo hâlinde renkli baskılı ürün etiketleri"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={5}
-                      title="Barkod, Koli, Adres ve Ürün Etiketleri"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 6: Randevu Kartı, Broşür, Etiket ve Karton Çanta (Güzellik Merkezi) */}
                 {activeKey === 'kozmetik-guzellik-merkezi-baski' && sIdx === 4 && (
-                  SECTOR_IMAGE_MANIFEST.kozmetikGuzellikMerkezi["randevu-karti-brosur-etiket-karton-canta.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kozmetik-guzellik-merkezi/randevu-karti-brosur-etiket-karton-canta.webp"
-                      alt="Randevu kartı, tanıtım broşürü, kozmetik etiketi ve karton çanta"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/karton-canta/magaza-karton-canta-baski.webp"
+                      alt="Mağaza ve hizmet işletmeleri için ipli karton çanta örnekleri"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Randevu kartı, tanıtım broşürü, kozmetik etiketi ve karton çanta"
+                      caption="Mağaza ve hizmet işletmeleri için ipli karton çanta örnekleri"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={6}
-                      title="Randevu Kartı, Broşür, Etiket ve Karton Çanta"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 5: Baskı, Kesim ve Paketleme Süreci (Kuaför) */}
                 {activeKey === 'kuafor-kartvizit-baski' && sIdx === 3 && (
-                  SECTOR_IMAGE_MANIFEST.kuafor["kartvizit-baski-kesim-paketleme.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kuafor-kartvizit/kartvizit-baski-kesim-paketleme.webp"
-                      alt="Kartvizit baskı, hassas kesim ve kargo için paketleme aşamaları"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/el-ilani/el-ilani-prova-paketleme-sevk.webp"
+                      alt="Baskı işlerinin kontrol ve paketleme sürecinden örnek"
+                      width={1264}
+                      height={848}
                       loading="lazy"
-                      caption="Baskı, kesim ve paketleme aşamaları"
+                      caption="Baskı işlerinin kontrol ve paketleme sürecinden örnek"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={5}
-                      title="Baskı, Kesim ve Paketleme"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 5: Baskı, Kırım ve Paketleme Süreci (Restoran) */}
                 {activeKey === 'restoran-brosur-baski' && sIdx === 2 && (
-                  SECTOR_IMAGE_MANIFEST.restoran["restoran-brosur-baski-kirim-paketleme.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/restoran-brosur/restoran-brosur-baski-kirim-paketleme.webp"
-                      alt="Restoran broşürlerinin baskı, kırım ve kargo için paketleme aşamaları"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/el-ilani/el-ilani-prova-paketleme-sevk.webp"
+                      alt="Baskı dosyası kontrolü ve sevke hazırlanmış baskı paketleri"
+                      width={1264}
+                      height={848}
                       loading="lazy"
-                      caption="Baskı, kırım, paketleme ve gönderim aşamaları"
+                      caption="Baskı dosyası kontrolü ve sevke hazırlanmış baskı paketleri"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={5}
-                      title="Baskı, Kırım ve Paketleme"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 5: Çocuk Etkinlik Kitapları ve Eğitici Kartlar (Eğitim Kurumları) */}
                 {activeKey === 'egitim-kurumlari-baski' && sIdx === 4 && (
-                  SECTOR_IMAGE_MANIFEST.egitimKurumlari?.["cocuk-etkinlik-kitabi-egitici-kart.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/egitim-kurumlari/cocuk-etkinlik-kitabi-egitici-kart.webp"
-                      alt="Çocuk etkinlik kitabı, boyama kitabı, eğitici oyun kartı ve flashcard setleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/kitap-ayraci/ozel-kesim-kitap-ayraci.webp"
+                      alt="Çocuklara yönelik çizimli ve baskılı kitap ayracı örneği"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Çocuk etkinlik kitabı, boyama kitabı, eğitici oyun kartı ve flashcard setleri"
+                      caption="Çocuklara yönelik çizimli ve baskılı kitap ayracı örneği"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={5}
-                      title="Çocuk Etkinlik Kitabı ve Eğitici Kart Setleri"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 6: Eğitim Seti Kutusu ve Kurumsal Okul Ürünleri (Eğitim Kurumları) */}
                 {activeKey === 'egitim-kurumlari-baski' && sIdx === 5 && (
-                  SECTOR_IMAGE_MANIFEST.egitimKurumlari?.["egitim-seti-kutusu-kurumsal-urunler.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/egitim-kurumlari/egitim-seti-kutusu-kurumsal-urunler.webp"
-                      alt="Eğitim seti kutusu, cepli dosya, karton çanta, sertifika ve kurumsal okul ürünleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/dosya/cepli-dosya-baski-detayi.webp"
+                      alt="Eğitim kurumu için cepli dosya ve kurumsal basılı evrak örneği"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Eğitim seti kutusu, cepli dosya, karton çanta, sertifika ve kurumsal okul ürünleri"
+                      caption="Eğitim kurumu için cepli dosya ve kurumsal basılı evrak örneği"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={6}
-                      title="Eğitim Seti Kutusu ve Kurumsal Ürünler"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 2: İlaç, Medikal, Parfüm ve Kozmetik Kutuları (Kutu ve Ambalaj) */}
                 {activeKey === 'kutu-ambalaj-baski-cozumleri' && sIdx === 1 && (
-                  SECTOR_IMAGE_MANIFEST.kutuAmbalaj?.["ilac-medikal-parfum-kozmetik-kutulari.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kutu-ambalaj/ilac-medikal-parfum-kozmetik-kutulari.webp"
-                      alt="İlaç, medikal ürün, vitamin, parfüm ve kozmetik kutusu modelleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/kutu/urun-kutusu-baski.webp"
+                      alt="Parfüm ve kozmetik ürünleri için baskılı karton kutu"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="İlaç, medikal, vitamin, parfüm ve kozmetik kutusu modelleri"
+                      caption="Parfüm ve kozmetik ürünleri için baskılı karton kutu"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={2}
-                      title="İlaç, Medikal, Parfüm ve Kozmetik Kutuları"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 3: Zurna Dürüm, Taco ve Fast-Food Kutuları (Kutu ve Ambalaj) */}
                 {activeKey === 'kutu-ambalaj-baski-cozumleri' && sIdx === 2 && (
-                  SECTOR_IMAGE_MANIFEST.kutuAmbalaj?.["zurna-durum-taco-fast-food-kutulari.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kutu-ambalaj/zurna-durum-taco-fast-food-kutulari.webp"
-                      alt="Zurna dürüm kutusu, klasik dürüm, taco ve fast-food servis kutusu seçenekleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/kutu/karton-kutu-baski-fiyatlari.webp"
+                      alt="Dürüm ve paket servis için uzun karton yiyecek kutuları"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Zurna dürüm, taco, burger ve fast-food paket servis kutuları"
+                      caption="Dürüm ve paket servis için uzun karton yiyecek kutuları"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={3}
-                      title="Zurna Dürüm, Taco ve Fast-Food Kutuları"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 4: Popcorn, Cips ve Atıştırmalık Kutuları (Kutu ve Ambalaj) */}
                 {activeKey === 'kutu-ambalaj-baski-cozumleri' && sIdx === 3 && (
-                  SECTOR_IMAGE_MANIFEST.kutuAmbalaj?.["popcorn-cips-atistirmalik-kutulari.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kutu-ambalaj/popcorn-cips-atistirmalik-kutulari.webp"
-                      alt="Popcorn kutusu, patlamış mısır, cips ve atıştırmalık servis kutuları"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/ambalaj/ambalaj-baski-fiyatlari.webp"
+                      alt="Patates, popcorn ve atıştırmalık servisi için baskılı karton kutular"
+                      width={800}
+                      height={533}
                       loading="lazy"
-                      caption="Popcorn, patlamış mısır, cips ve atıştırmalık servis kutuları"
+                      caption="Patates, popcorn ve atıştırmalık servisi için baskılı karton kutular"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={4}
-                      title="Popcorn, Cips ve Atıştırmalık Kutuları"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 5: Baklava, Pasta, Kurabiye ve Çikolata Kutuları (Kutu ve Ambalaj) */}
                 {activeKey === 'kutu-ambalaj-baski-cozumleri' && sIdx === 4 && (
-                  SECTOR_IMAGE_MANIFEST.kutuAmbalaj?.["baklava-pasta-kurabiye-cikolata-kutulari.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kutu-ambalaj/baklava-pasta-kurabiye-cikolata-kutulari.webp"
-                      alt="Baklava kutusu, pasta, kurabiye, lokum ve pencereli çikolata kutuları"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/kutu/gida-ambalaji-baski-ornegi.webp"
+                      alt="Baklava ve tatlı sunumu için kapaklı baskılı kutular"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Baklava, pasta, kurabiye, lokum ve çikolata kutusu seçenekleri"
+                      caption="Baklava ve tatlı sunumu için kapaklı baskılı kutular"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={5}
-                      title="Baklava, Pasta, Kurabiye ve Çikolata Kutuları"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 {/* Görsel 6: Etiket, Ambalaj Kâğıdı ve Karton Çanta (Kutu ve Ambalaj) */}
                 {activeKey === 'kutu-ambalaj-baski-cozumleri' && sIdx === 5 && (
-                  SECTOR_IMAGE_MANIFEST.kutuAmbalaj?.["etiket-ambalaj-kagidi-karton-canta.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kutu-ambalaj/etiket-ambalaj-kagidi-karton-canta.webp"
-                      alt="Kutu ve kavanoz etiketi, baskılı ambalaj kâğıdı ve karton çanta ürünleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/etiket/kuse-gorsel-etiket.webp"
+                      alt="Etiketle kapatılmış kraft ürün ve ambalaj kutuları"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Kutu ve kavanoz etiketi, pelür ambalaj kâğıdı ve karton taşıma çantaları"
+                      caption="Etiketle kapatılmış kraft ürün ve ambalaj kutuları"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={6}
-                      title="Etiket, Ambalaj Kâğıdı ve Karton Çanta"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
               </section>
@@ -1661,86 +1176,54 @@ export const SEOPages = () => {
 
                 {/* Görsel 6: Kuaförlere Yönelik İlgili Baskı Ürünleri */}
                 {activeKey === 'kuafor-kartvizit-baski' && (
-                  SECTOR_IMAGE_MANIFEST.kuafor["kuafor-guzellik-salonu-baski-urunleri.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kuafor-kartvizit/kuafor-guzellik-salonu-baski-urunleri.webp"
-                      alt="Kuaför ve güzellik salonları için kartvizit, broşür, magnet ve etiket baskıları"
-                      width={1200}
-                      height={800}
+                  <SeoContentImage
+                      src="/images/el-ilani/el-ilani-tasarimi.webp"
+                      alt="Kuaför ve güzellik salonları için tanıtım el ilanları"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Kuaför ve güzellik salonlarına uygun tamamlayıcı baskı ürünleri"
+                      caption="Kuaför ve güzellik salonları için tanıtım el ilanları"
                       figureClassName="rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200/80 p-2 shadow-sm my-6"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={6}
-                      title="Kuaför Baskı Ürünleri"
-                      aspectRatio="1200 / 800"
-                    />
-                  )
                 )}
 
                 {/* Görsel 6: Restoran Baskı Ürünleri */}
                 {activeKey === 'restoran-brosur-baski' && (
-                  SECTOR_IMAGE_MANIFEST.restoran["restoran-paket-servis-baski-urunleri.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/restoran-brosur/restoran-paket-servis-baski-urunleri.webp"
-                      alt="Restoran ve paket servis işletmeleri için broşür, magnet, menü ve ambalaj baskıları"
-                      width={1200}
-                      height={800}
+                  <SeoContentImage
+                      src="/images/magnet/magnet-baski-fiyatlari.webp"
+                      alt="Paket servis ve restoran tanıtımı için farklı kesimlerde reklam magnetleri"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Restoran ve paket servis işletmelerine uygun tamamlayıcı baskı ürünleri"
+                      caption="Paket servis ve restoran tanıtımı için farklı kesimlerde reklam magnetleri"
                       figureClassName="rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200/80 p-2 shadow-sm my-6"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={6}
-                      title="Restoran Baskı Ürünleri"
-                      aspectRatio="1200 / 800"
-                    />
-                  )
                 )}
 
                 {/* Görsel 6: Kozmetik ve Güzellik Merkezi Baskı Çözümleri / Etiket ve Föy */}
                 {activeKey === 'kozmetik-guzellik-saglik-baski' && (
-                  SECTOR_IMAGE_MANIFEST.kozmetik["kozmetik-etiket-urun-bilgilendirme-foyu.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/kozmetik-guzellik-saglik/kozmetik-etiket-urun-bilgilendirme-foyu.webp"
-                      alt="Kozmetik etiketi ve katlamalı ürün bilgilendirme föyü baskısı"
-                      width={1200}
-                      height={800}
+                  <SeoContentImage
+                      src="/images/etiket/etiket-baski-fiyatlari.webp"
+                      alt="Şişeli kozmetik ürünleri için baskılı etiket örneği"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Kozmetik etiketi ve katlamalı ürün bilgilendirme föyü baskısı"
+                      caption="Şişeli kozmetik ürünleri için baskılı etiket örneği"
                       figureClassName="rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200/80 p-2 shadow-sm my-6"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={6}
-                      title="Kozmetik Etiketi ve Ürün Bilgilendirme Föyü"
-                      aspectRatio="1200 / 800"
-                    />
-                  )
                 )}
 
                 {/* Görsel 6: Amerikan Servis ve Perakende Baskı Ürünleri (E-Ticaret Perakende) */}
                 {activeKey === 'e-ticaret-perakende-baski' && (
-                  SECTOR_IMAGE_MANIFEST.eTicaretPerakende["amerikan-servis-perakende-baski-urunleri.webp"] ? (
-                    <SeoContentImage
-                      src="/images/sektor/e-ticaret-perakende/amerikan-servis-perakende-baski-urunleri.webp"
-                      alt="Amerikan servis ve perakende işletmeleri için tamamlayıcı baskı ürünleri"
-                      width={900}
-                      height={650}
+                  <SeoContentImage
+                      src="/images/karton-canta/magaza-karton-canta-baski.webp"
+                      alt="Perakende satış ve ürün teslimi için ipli karton çanta örnekleri"
+                      width={1536}
+                      height={1024}
                       loading="lazy"
-                      caption="Amerikan servis, karton çanta, kargo kutusu ve etiket ürünleri"
+                      caption="Perakende satış ve ürün teslimi için ipli karton çanta örnekleri"
                       figureClassName="rounded-2xl overflow-hidden bg-neutral-100 border border-neutral-200/80 p-2 shadow-sm my-6"
                     />
-                  ) : (
-                    <ImagePlaceholder
-                      number={6}
-                      title="Amerikan Servis ve Perakende Baskı Ürünleri"
-                      aspectRatio="900 / 650"
-                    />
-                  )
                 )}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

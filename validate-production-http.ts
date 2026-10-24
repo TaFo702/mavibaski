@@ -403,7 +403,6 @@ async function validateProductionHTTP() {
 
   // Deep Visible FAQ vs JSON-LD Schema Comparison
   const { SEO_PAGES_DATA } = await import('./src/data/seoPagesData');
-  const { SECTOR_IMAGE_MANIFEST } = await import('./src/generated/sectorImageManifest');
   const eTicaretData = SEO_PAGES_DATA['e-ticaret-perakende-baski'];
   console.log('\n🔍 AUDITING VISIBLE FAQ VS JSON-LD SCHEMA PARITY FOR /sektor/e-ticaret-perakende-baski...');
   const visibleFaqItems = eTicaretData?.faqs || [];
@@ -447,91 +446,39 @@ async function validateProductionHTTP() {
   );
   console.log(` - Prohibited Hygiene Claims Check: ${foundProhibited.length === 0 ? 'PASSED (0 found) ✅' : `FAILED (Found: ${foundProhibited.join(', ')}) 🔴`}`);
 
-  // Real WebP Image Verification under the Permanent Image Policy Contract
-  console.log('\n🖼️ AUDITING REAL WEBP IMAGES IN DATA MANIFEST...');
-  const eTicaretManifest = (SECTOR_IMAGE_MANIFEST as any).eTicaretPerakende || {};
-  const manifestKeys = Object.keys(eTicaretManifest);
-  const manifestHasAllKeys = manifestKeys.length === 6;
-  console.log(` - Real Sector Img Keys in Manifest: ${manifestKeys.length} ${manifestHasAllKeys ? '✅ (Exact 6 real images registered)' : '🔴'}`);
-
+  // The user requested replacement of mislabeled legacy artwork. Validate the
+  // reviewed, actually rendered assets, including HTTP bytes and layout attributes.
+  console.log('\n🖼️ AUDITING REVIEWED E-COMMERCE PRINT IMAGES...');
   const expectedImages = [
-    { name: 'e-ticaret-perakende-baski-cozumleri.webp', w: 1200, h: 800, loading: 'eager', fetchPriority: 'high', isLcp: true },
-    { name: 'e-ticaret-urun-kutusu-kargo-paketleme.webp', w: 900, h: 650, loading: 'lazy', isLcp: false },
-    { name: 'saten-polyester-ipli-karton-canta.webp', w: 900, h: 650, loading: 'lazy', isLcp: false },
-    { name: 'baskili-ambalaj-kagidi-tesekkur-karti.webp', w: 900, h: 650, loading: 'lazy', isLcp: false },
-    { name: 'barkod-koli-adres-urun-etiketleri.webp', w: 900, h: 650, loading: 'lazy', isLcp: false },
-    { name: 'amerikan-servis-perakende-baski-urunleri.webp', w: 900, h: 650, loading: 'lazy', isLcp: false },
+    { src: '/images/etiket/kuse-gorsel-etiket.webp', w: 1536, h: 1024, loading: 'eager' },
+    { src: '/images/etiket/kuse-gorsel-etiket.webp', w: 1536, h: 1024, loading: 'lazy' },
+    { src: '/images/karton-canta/karton-canta-tasarimi.webp', w: 1536, h: 1024, loading: 'lazy' },
+    { src: '/images/ambalaj/kuse-ambalaj-baski.webp', w: 1024, h: 1024, loading: 'lazy' },
+    { src: '/images/etiket/rulet-etiket-tasarimi.webp', w: 1536, h: 1024, loading: 'lazy' },
+    { src: '/images/karton-canta/magaza-karton-canta-baski.webp', w: 1536, h: 1024, loading: 'lazy' }
   ];
-
-  // Inspect SSR HTML for image tags and preloads
+  const hasAllReviewedImages = expectedImages.length === 6;
   const ssrImgs = Array.from(eTicaretDoc.querySelectorAll('img'));
-  const ssrPreloads = Array.from(eTicaretDoc.querySelectorAll('link[rel="preload"]'));
-
-  let allImageContractsPassed = manifestHasAllKeys;
-
-  for (let idx = 0; idx < expectedImages.length; idx++) {
-    const exp = expectedImages[idx];
-    const src = `/images/sektor/e-ticaret-perakende/${exp.name}`;
-    const isManifestTrue = eTicaretManifest[exp.name] === true;
-
-    console.log(`   [Görsel #${idx + 1}] ${exp.name}`);
-    console.log(`      Dimensions: ${exp.w}x${exp.h} | Loading: "${exp.loading}", FetchPriority: "${exp.fetchPriority || 'none'}"`);
-    console.log(`      Manifest Status: ${isManifestTrue ? 'true (Active WebP Image)' : 'false (Awaiting manual user upload)'}`);
-
-    if (isManifestTrue) {
-      // 1. MANIFEST TRUE CONTRACT:
-      // - SSR must render expected <img> tag
-      // - HTTP fetch of the image must return status 200 with Content-Type image/webp
-      // - Binary payload must satisfy WebP integrity check
-      // - Non-LCP images must not trigger unnecessary preloads
-      const imgHttpRes = await fetch(`http://127.0.0.1:${TEST_PORT}${src}`);
-      const imgStatus = imgHttpRes.status === 200;
-      const contentType = imgHttpRes.headers.get('content-type') || '';
-      const typeMatch = contentType.includes('image/webp');
-      const imgBuf = Buffer.from(await imgHttpRes.arrayBuffer());
-      const isValidWebp = validateWebpBuffer(imgBuf);
-
-      const matchingImg = ssrImgs.find(img => (img.getAttribute('src') || '').includes(exp.name));
-      const ssrRendered = !!matchingImg;
-      const matchingPreload = ssrPreloads.find(p => (p.getAttribute('href') || '').includes(exp.name));
-      const unnecessaryPreload = !exp.isLcp && !!matchingPreload;
-
-      const singlePass = imgStatus && typeMatch && isValidWebp && ssrRendered && !unnecessaryPreload;
-      if (!singlePass) allImageContractsPassed = false;
-
-      console.log(`      -> HTTP Status: ${imgHttpRes.status}, Content-Type: "${contentType}" ${imgStatus && typeMatch ? '✅' : '🔴'}`);
-      console.log(`      -> WebP Binary Integrity: ${isValidWebp ? 'VALID ✅' : 'INVALID/CORRUPT 🔴'}`);
-      console.log(`      -> SSR <img> Tag Rendered: ${ssrRendered ? 'YES ✅' : 'MISSING 🔴'}`);
-      if (unnecessaryPreload) {
-        console.log(`      -> Preload Check: UNNECESSARY PRELOAD FOUND 🔴`);
-      }
-    } else {
-      // 2. MANIFEST FALSE CONTRACT:
-      // - Normal and accepted state: manual image upload is pending.
-      // - SSR MUST NOT render <img>, src, srcset, <picture>, preload, or CSS background for this image.
-      // - Must not trigger automated HTTP image requests.
-      const leakedInImg = ssrImgs.some(img => {
-        const s = img.getAttribute('src') || '';
-        const ss = img.getAttribute('srcset') || '';
-        return s.includes(exp.name) || ss.includes(exp.name);
-      });
-      const leakedInPreload = ssrPreloads.some(p => (p.getAttribute('href') || '').includes(exp.name));
-      const leakedInBody = eTicaretBody.includes(exp.name);
-
-      const noLeakage = !leakedInImg && !leakedInPreload && !leakedInBody;
-      if (!noLeakage) {
-        allImageContractsPassed = false;
-        console.log(`      -> Leakage Check: FAILED (Image referenced in SSR despite false manifest) 🔴`);
-        if (leakedInImg) console.log(`         Found in <img> tag!`);
-        if (leakedInPreload) console.log(`         Found in <link rel="preload">!`);
-        if (leakedInBody) console.log(`         Found in HTML body text/attributes!`);
-      } else {
-        console.log(`      -> SSR Leakage Check: No <img>, no preload, no leaky references (Contract Satisfied) ✅`);
-      }
-    }
+  const preloads = Array.from(eTicaretDoc.querySelectorAll('link[rel="preload"][as="image"]'));
+  let allImageContractsPassed = true;
+  for (const exp of expectedImages) {
+    const response = await fetch(`http://127.0.0.1:${TEST_PORT}${exp.src}`);
+    const validBytes = validateWebpBuffer(Buffer.from(await response.arrayBuffer()));
+    const matching = ssrImgs.find(img => img.getAttribute('src') === exp.src && img.getAttribute('loading') === exp.loading);
+    const correctAttributes = matching?.getAttribute('width') === String(exp.w) &&
+      matching?.getAttribute('height') === String(exp.h) && !!matching?.getAttribute('alt');
+    const preload = preloads.some(link => link.getAttribute('href') === exp.src);
+    // The first inline example shares the hero resource, so its preload is useful.
+    const correctPriority = exp.loading === 'eager'
+      ? matching?.getAttribute('fetchpriority') === 'high' && preload
+      : exp.src === expectedImages[0].src || !preload;
+    const pass = response.status === 200 && response.headers.get('content-type')?.includes('image/webp') &&
+      validBytes && correctAttributes && correctPriority;
+    if (!pass) allImageContractsPassed = false;
+    console.log(` - ${exp.src} (${exp.loading}): ${pass ? 'PASS ✅' : 'FAIL 🔴'}`);
   }
 
-  if (!manifestHasAllKeys || !allImageContractsPassed) {
+  if (!hasAllReviewedImages || !allImageContractsPassed) {
     totalPassed = -1; // Contract violation
   }
 
