@@ -75,7 +75,7 @@ async function testNoInfiniteSpinner() {
       await page.goto(origin + brandaPath + '#branda-teklif', { waitUntil: 'domcontentloaded' });
       await page.waitForLoadState('networkidle');
       await page.waitForFunction(quoteInView);
-      const quoteLink = await page.locator('#branda-teklif a').getAttribute('href');
+      const quoteLink = await page.locator('[data-branda-custom-quote]').getAttribute('href');
       const quoteURL = new URL(quoteLink || '');
       if (quoteURL.hostname !== 'wa.me' || !quoteURL.searchParams.get('text')?.includes('440 gr vinil branda')) {
         throw new Error('Branda quote must carry the actual material and product');
