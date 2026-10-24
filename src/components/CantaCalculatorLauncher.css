@@ -1,0 +1,64 @@
+@property --canta-border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.canta-calculator-launcher {
+  position: relative;
+  isolation: isolate;
+}
+
+.canta-calculator-launcher::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  padding: 2px;
+  border-radius: calc(0.75rem + 4px);
+  pointer-events: none;
+  background: conic-gradient(
+    from var(--canta-border-angle),
+    transparent 0deg 175deg,
+    #4285f4 220deg,
+    #9b72cb 255deg,
+    #d96570 285deg,
+    #fbbc05 315deg,
+    #34a853 340deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  animation: canta-calculator-border 6s linear infinite;
+}
+
+@keyframes canta-calculator-border {
+  0% {
+    --canta-border-angle: 0deg;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  70%, 100% {
+    --canta-border-angle: 360deg;
+    opacity: 0;
+  }
+}
+
+.canta-calculator-launcher[aria-expanded='true']::before {
+  animation: none;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .canta-calculator-launcher::before {
+    animation: none;
+    opacity: 1;
+  }
+}

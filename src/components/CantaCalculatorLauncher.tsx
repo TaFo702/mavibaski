@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { Calculator, ExternalLink, X } from 'lucide-react';
+import { Calculator, X } from 'lucide-react';
+import './CantaCalculatorLauncher.css';
 
 const CALCULATOR_URL = 'https://canta-hesaplayici.vercel.app/';
 
@@ -36,13 +37,16 @@ export function CantaCalculatorLauncher() {
         type="button"
         onClick={openCalculator}
         aria-haspopup="dialog"
-        className="min-h-11 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 font-bold text-white hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        aria-expanded={isOpen}
+        aria-controls="canta-calculator-dialog"
+        className="canta-calculator-launcher min-h-11 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 font-bold text-white hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
         <Calculator size={20} aria-hidden="true" />
         Çanta Fiyatı Hesapla
       </button>
 
       <dialog
+        id="canta-calculator-dialog"
         ref={dialogRef}
         aria-labelledby="canta-calculator-title"
         onClose={() => setIsOpen(false)}
@@ -53,14 +57,9 @@ export function CantaCalculatorLauncher() {
             <h2 id="canta-calculator-title" className="text-sm sm:text-base font-bold text-slate-900">Karton Çanta Fiyat Hesaplayıcı</h2>
             {isLoading && isOpen && <p role="status" className="text-xs text-slate-500">Hesaplayıcı açılıyor…</p>}
           </div>
-          <div className="flex items-center gap-2">
-            <a href={CALCULATOR_URL} target="_blank" rel="noopener noreferrer" className="min-h-11 inline-flex items-center gap-1.5 rounded-lg px-2 text-xs sm:text-sm font-semibold text-slate-700 hover:bg-slate-100">
-              Yeni sekmede aç <ExternalLink size={15} aria-hidden="true" />
-            </a>
-            <button type="button" aria-label="Hesaplayıcıyı kapat" onClick={() => dialogRef.current?.close()} className="min-h-11 min-w-11 inline-flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
-              <X size={24} aria-hidden="true" />
-            </button>
-          </div>
+          <button type="button" aria-label="Hesaplayıcıyı kapat" onClick={() => dialogRef.current?.close()} className="min-h-11 min-w-11 inline-flex items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+            <X size={24} aria-hidden="true" />
+          </button>
         </div>
         {isOpen && (
           <iframe
