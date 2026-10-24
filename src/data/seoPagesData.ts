@@ -1,3 +1,5 @@
+import { KAYSERI_AFIS_PRICE_SUMMARY } from './kayseriAfisPrices';
+
 export interface SEOPageData {
   path: string;
   title: string;
@@ -2007,7 +2009,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
         "path": "/afis"
     },
     "primaryCta": {
-        "text": "440 gr Branda Afiş İçin Teklif Al",
+        "text": "Branda ve Folyo Afiş Fiyatlarını Gör",
         "href": "#branda-teklif"
     },
     "tagline": "440 gr vinil branda, ihtiyaca uygun ölçü ve okunaklı emlak ilanı tasarımı",
@@ -2037,7 +2039,7 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
         {
             "title": "Kayseri Branda Afiş Fiyatı Neye Göre Hesaplanır?",
             "paragraphs": [
-                "Branda afiş fiyatı; en ve boy ölçüsü, baskı adedi, farklı tasarım sayısı ve kuşgözü ile kenar işlemleri gibi sipariş ayrıntılarına göre hazırlanır. Net teklif için ölçü, adet, hazır tasarım durumu ve teslimat ilçesini WhatsApp üzerinden iletebilirsiniz.",
+                KAYSERI_AFIS_PRICE_SUMMARY + " Bu örnekler bir adet baskı içindir. Farklı ölçü ve adetlerde fiyat, tasarım sayısı ve kenar işlemleriyle birlikte yeniden belirlenir. KDV, kargo ve kuşgözü/kenar işlemlerinin kapsama dahil olup olmadığı sipariş öncesinde teyit edilir.",
                 "Bu sayfadaki ekonomik ürün kartında yer alan kuşe kâğıt afişin paket bedeli, 440 gr vinil branda afişin fiyatı değildir. Branda siparişiniz için ayrı fiyat teklifi alın; kâğıt afiş seçeneklerini ise Afiş Baskı sayfasından inceleyin."
             ]
         },
@@ -2066,8 +2068,8 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
             "answer": "Hayır. 440 gr vinil branda ile kuşe kâğıt farklı baskı malzemeleridir. Sayfadaki kuşe kâğıt afiş paket bedeli branda için geçerli değildir; branda afiş ölçü ve adet bilgisine göre ayrıca fiyatlandırılır."
         },
         {
-            "question": "Branda afiş fiyatı almak için hangi bilgiler gerekiyor?",
-            "answer": "En × boy ölçüsü, adet, farklı tasarım sayısı, kuşgözü ve kenar işlemi ihtiyacı, hazır dosya durumu ve teslimat ilçesini paylaşmanız yeterlidir. Bu bilgilerle siparişinize uygun teklif hazırlanır."
+            "question": "Kayseri branda ve selefonlu folyo afiş fiyatları ne kadar?",
+            "answer": KAYSERI_AFIS_PRICE_SUMMARY + " Fiyatlar belirtilen ürün ve ölçüler için bir adet baskı örneğidir. KDV, kargo ve kenar işlemlerinin kapsama dahil olup olmadığı sipariş öncesinde teyit edilir. Farklı ölçü ve adetler için özel teklif alın."
         },
         {
             "question": "Satılık ve kiralık afişler 1 günde hazırlanabilir mi?",

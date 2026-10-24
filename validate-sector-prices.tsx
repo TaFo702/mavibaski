@@ -66,13 +66,28 @@ for (const pathname of routes) {
       const mainText = doc.body.textContent || '';
       const quote = doc.querySelector('#branda-teklif');
       assert.ok(quote?.textContent?.includes('440 gr vinil branda'), 'Branda needs its own quote area');
-      const href = quote?.querySelector('a')?.getAttribute('href');
+      const href = quote?.querySelector('[data-branda-custom-quote]')?.getAttribute('href');
       const whatsapp = new URL(href || '');
       assert.equal(whatsapp.hostname, 'wa.me');
       assert.equal(whatsapp.pathname, '/905366022373');
       for (const field of ['440 gr vinil branda', 'En × boy', 'Adet:', 'Teslimat ilçesi:', 'üretim tarihi']) {
         assert.ok(whatsapp.searchParams.get('text')?.includes(field), `Missing branda quote field: ${field}`);
       }
+      const priceRows = doc.querySelectorAll('[data-afis-offer]');
+      assert.equal(priceRows.length, 3, 'Three user-confirmed print prices');
+      for (const [id, price, material] of [
+        ['folyo-50x70', '500 TL', 'Selefonlu Folyo'],
+        ['branda-200x100', '700 TL', '440 gr Vinil Branda'],
+        ['branda-35x50', '350 TL', '440 gr Vinil Branda'],
+      ]) {
+        const row = doc.querySelector(`[data-afis-offer="${id}"]`);
+        assert.ok(row?.textContent?.includes(price));
+        assert.ok(row?.textContent?.includes(material));
+        const selectedQuote = new URL(row?.querySelector('a')?.getAttribute('href') || '');
+        assert.ok(selectedQuote.searchParams.get('text')?.includes(price));
+        assert.ok(selectedQuote.searchParams.get('text')?.includes(material));
+      }
+      assert.ok(!doc.querySelector('[data-kayseri-afis-prices]')?.textContent?.includes('800 TL'), 'Later 700 TL correction supersedes 800 TL');
       assert.ok(doc.querySelector('a[href="#branda-teklif"]'), 'Hero must link to branda quote');
       assert.ok(cards[2].textContent?.includes('Kuşe Kâğıt Afiş'));
       assert.ok(cards[2].textContent?.includes('105 gr. Kuşe'));
@@ -94,6 +109,8 @@ for (const pathname of routes) {
     const faq = schemas.filter(s => s['@type'] === 'FAQPage');
     assert.equal(faq.length, 1);
     assert.equal(faq[0].mainEntity.length, 7);
+    const priceAnswer = faq[0].mainEntity.find(q => q.name.includes('fiyatları ne kadar'));
+    for (const price of ['500 TL', '700 TL', '350 TL']) assert.ok(priceAnswer?.acceptedAnswer.text.includes(price));
     assert.ok(initial.title.length <= 60);
   }
   assert.equal(initial.querySelector('meta[property="og:image"]')?.getAttribute('content'), `https://mavibasim.com${SECTOR_HERO_IMAGES[pathname].src}`, `${pathname}: sharing image must match hero`);
