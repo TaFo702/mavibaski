@@ -5100,7 +5100,7 @@ export const AppRoutes = ({ YagKartiComponent = YagKartiPage, MagnetComponent = 
           <Route 
             key={key} 
             path={pData.path} 
-            element={<SEOPages />} 
+            element={React.createElement(StaticPages?.[pData.path] || SEOPages)}
           />
         );
       })}

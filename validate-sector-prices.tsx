@@ -9,11 +9,13 @@ import { SEO_PAGES_DATA } from './src/data/seoPagesData';
 import { SECTOR_PRICE_PRODUCTS, getSectorPriceExamples } from './src/data/sectorPriceExamples';
 import { BROSUR_DATA } from './src/data/extraProductData';
 import { MAGNET_DATA } from './src/data/productData';
+import { SECTOR_HERO_IMAGES } from './src/data/sectorImages';
 
 const amount = (price: string) => Number(price.replace(/[^\d,]/g, '').replace(',', '.'));
 const a5Minimum = Math.min(...BROSUR_DATA.flatMap(g => g.items).filter(r => r.size === 'A5').map(r => amount(r.price)));
 const magnetMinimum = Math.min(...MAGNET_DATA.flatMap(g => g.items).filter(r => !('isCustom' in r && r.isCustom)).map(r => amount(r.price)));
 const routes = Object.keys(SECTOR_PRICE_PRODUCTS);
+assert.deepEqual(Object.keys(SECTOR_HERO_IMAGES).sort(), [...routes].sort(), 'All 30 sectors need a reviewed hero');
 assert.equal(routes.length, 30);
 assert.equal(routes.filter(path => path.startsWith('/sektor/')).length, 13);
 assert.equal(getSectorPriceExamples('/ordu-matbaa').length, 0);
@@ -29,6 +31,21 @@ for (const pathname of routes) {
   const client = new JSDOM(renderToStaticMarkup(<TestWrapper initialPath={pathname}><SEOPages /></TestWrapper>)).window.document;
   const initial = new JSDOM(fs.readFileSync(`dist${pathname}/index.html`, 'utf8')).window.document;
   for (const doc of [client, initial]) {
+    const hero = doc.querySelector('[data-sector-hero] img');
+    const reviewed = SECTOR_HERO_IMAGES[pathname];
+    assert.ok(hero, `${pathname}: missing hero image`);
+    assert.equal(hero.getAttribute('src'), reviewed.src, pathname);
+    assert.equal(hero.getAttribute('alt'), reviewed.alt, pathname);
+    assert.equal(hero.getAttribute('width'), String(reviewed.width), pathname);
+    assert.equal(hero.getAttribute('height'), String(reviewed.height), pathname);
+    assert.equal(doc.querySelectorAll('[data-placeholder]').length, 0, `${pathname}: unfinished image placeholder`);
+    for (const img of doc.querySelectorAll('main img')) {
+      const src = img.getAttribute('src');
+      if (!src?.startsWith('/images/')) continue;
+      assert.ok(fs.existsSync(`public${src}`), `${pathname}: missing image ${src}`);
+      assert.ok(!src.startsWith('/images/sektor/'), `${pathname}: unreviewed legacy sector artwork`);
+      assert.ok(img.getAttribute('alt'), `${pathname}: missing image description`);
+    }
     const cards = doc.querySelectorAll('[data-sector-price-cards] [data-price-example]');
     assert.equal(cards.length, 3, pathname);
     assert.equal(doc.querySelectorAll('h1').length, 1, pathname);
@@ -46,6 +63,7 @@ for (const pathname of routes) {
     });
     assert.ok(doc.querySelector('[data-sector-price-cards]')?.textContent?.includes('KDV hariç'));
   }
+  assert.equal(initial.querySelector('meta[property="og:image"]')?.getAttribute('content'), `https://mavibasim.com${SECTOR_HERO_IMAGES[pathname].src}`, `${pathname}: sharing image must match hero`);
   const selectors = '[data-sector-price-cards] [data-price-example]';
   assert.deepEqual([...initial.querySelectorAll(selectors)].map(c => c.textContent), [...client.querySelectorAll(selectors)].map(c => c.textContent), `${pathname}: first HTML/client prices differ`);
 }

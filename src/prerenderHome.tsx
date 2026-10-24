@@ -19,13 +19,24 @@ import { KartvizitPage } from './components/Kartvizit';
 import { BlogPage } from './components/Blog';
 import { GenericPriceTablePage, MakbuzFormlarPage } from './components/Makbuz';
 import { CityPage } from './components/CityPage';
-import { SectorPriceExamples } from './components/SectorPriceExamples';
+import { SEOPages } from './components/SEOPages';
 import { SECTOR_PRICE_PRODUCTS } from './data/sectorPriceExamples';
 
-export function prerenderSectorPriceCards(): Record<string, string> {
-  return Object.fromEntries(Object.keys(SECTOR_PRICE_PRODUCTS).map(pathname => [
-    pathname, renderToString(<SectorPriceExamples pathname={pathname} />),
-  ]));
+export function prerenderSectorPages(): Record<string, string> {
+  const sectorPages = Object.fromEntries(Object.keys(SECTOR_PRICE_PRODUCTS).map(pathname => [pathname, SEOPages]));
+  return Object.fromEntries(Object.keys(sectorPages).map(pathname => {
+    const SectorRouter = ({ children }: { children: React.ReactNode }) => (
+      <MemoryRouter initialEntries={[pathname]}>{children}</MemoryRouter>
+    );
+    const html = renderToString(<App Router={SectorRouter} StaticPages={sectorPages} />)
+      .replace(/<link\b[^>]*rel="canonical"[^>]*\/?>/gi, '')
+      .replace(/<meta\b[^>]*\/?>/gi, '')
+      .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '');
+    if (!html.includes('data-sector-hero') || (html.match(/<h1\b/g) || []).length !== 1) {
+      throw new Error(`Missing sector hero or H1: ${pathname}`);
+    }
+    return [pathname, html];
+  }));
 }
 
 import { CILT_ISLERI_DATA } from './data/makbuzData';

@@ -1,5 +1,11 @@
 # PROJECT_DECISIONS.md - Proje Karar Kayıt Dosyası (Architecture & SEO Decision Log)
 
+### 2026-10-24 — Sektörel sayfalarda konuya uygun görseller
+- 30 destek sayfasının her birinde görünür sağ üst görsel bulunur. Dosya adları yerine gerçek görsel içerikleri incelenerek mevcut arşivden seçilir. Eğitim sayfasındaki emlak afişi ve eksik kutu görselleri kaldırılır; konuya uygun eğitim tanıtım baskıları ve kutu örnekleri kullanılır.
+- Uzun içeriklerdeki 35 görsel alanı mevcut, kontrol edilmiş ürün ve süreç görsellerine bağlanır. Alt metinler, açıklamalar ve boyutlar resimde gerçekten görünen içeriği anlatır; görselde bulunmayan sınav kitapçığı, seans formu veya üretim işlemi varmış gibi yazılmaz.
+- Ekonomik kartlardaki broşür/magnet örnekleri de sayfanın sektörüne göre seçilir. Fiyatlar, ürün kodları ve adetler değişmez. İlgisiz sektöre ait magnet yerine genel logo magneti kullanılabilir.
+- Aynı 30 sayfanın tamamı mevcut React sayfasıyla ilk HTML'de üretilir; paylaşım görseli görünür üst görselle eşleşir. Boş görsel taslakları gösterilmez. Yeni görsel üretimi veya mevcut görsel dosyalarının değiştirilmesi yapılmaz.
+
 ### 2026-10-24 — 30 sektörel destek sayfasında ekonomik ürün kartları
 - Kullanıcı seçimiyle üst bölümde toplam üç kart gösterilir: en düşük toplam paket bedelli A5 broşür, magnet ve sayfanın sektörüne uygun üçüncü ürün. Üçüncü ürün sayfalar arasında değişir; zamanlayıcı veya rastgele seçim kullanılmaz.
 - Ordu Matbaa sayfasındaki görsel/fiyat tablosu bileşeni kullanılır. Görsel, özellikler, adet, fiyat ve düğme tek bağlantının içindedir; ilgili ana ürün sayfasını açar. KDV hariç bilgisi görünürdür.

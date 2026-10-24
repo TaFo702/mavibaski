@@ -1,3 +1,4 @@
+import { SECTOR_HERO_IMAGES } from '../data/sectorImages';
 import { MAGNET_DATA } from '../data/productData';
 import { MAGNET_SSS } from '../data/magnetSeo';
 import { AFIS_SCHEMAS } from '../data/afisSeo';
@@ -4248,12 +4249,13 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
     } : null;
 
     let extraHead = "";
-    if ((seoPage.path.includes('kutu-ambalaj-baski-cozumleri') || seoSlug === 'kutu-ambalaj-baski-cozumleri') && SECTOR_IMAGE_MANIFEST.kutuAmbalaj?.["kutu-ambalaj-baski-cozumleri.webp"]) {
-      extraHead += `  <link rel="preload" as="image" href="/images/sektor/kutu-ambalaj/kutu-ambalaj-baski-cozumleri.webp" fetchpriority="high" />\n`;
-      extraHead += `  <meta property="og:image" content="https://mavibasim.com/images/sektor/kutu-ambalaj/kutu-ambalaj-baski-cozumleri.webp" />\n`;
-      extraHead += `  <meta property="og:image:width" content="1200" />\n`;
-      extraHead += `  <meta property="og:image:height" content="800" />\n`;
-      extraHead += `  <meta property="og:image:alt" content="Kutu ve Ambalaj Baskı Çözümleri | Mavi Basım" />\n`;
+    const hero = SECTOR_HERO_IMAGES[seoPage.path];
+    if (hero) {
+      extraHead += `  <link rel="preload" as="image" href="${hero.src}" fetchpriority="high" />\n`;
+      extraHead += `  <meta property="og:image" content="https://mavibasim.com${hero.src}" />\n`;
+      extraHead += `  <meta property="og:image:width" content="${hero.width}" />\n`;
+      extraHead += `  <meta property="og:image:height" content="${hero.height}" />\n`;
+      extraHead += `  <meta property="og:image:alt" content="${hero.alt}" />\n`;
     } else {
       extraHead += `  <meta property="og:image" content="https://mavibasim.com/mavilogo.png" />\n`;
     }

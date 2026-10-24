@@ -47,5 +47,16 @@ export function getSectorPriceExamples(pathname: string): CityPriceExample[] {
   const magnet = byPath.get('/magnet');
   const third = byPath.get(thirdPath);
   if (!magnet || !third) throw new Error(`Missing sector price product: ${path}`);
-  return [a5Brochure, magnet, third];
+  const isFood = /restoran|restaurant|lokanta|doner|fast-food|pastane|kafe/.test(path);
+  const brochureImage = /egitim/.test(path) ? '/images/brosur/brosur-baski-fiyatlari.webp'
+    : /kuafor|guzellik|kozmetik/.test(path) ? '/images/brosur/ucuz-brosur-baski.webp'
+    : /eczane/.test(path) ? '/images/el-ilani/baski-sonrasi-islemler-mucellit-surecleri.webp'
+    : /emlak/.test(path) ? '/images/brosur/katlamali-brosur-baski.webp'
+    : isFood ? a5Brochure.image : '/images/el-ilani/el-ilani-baski-fiyatlari.webp';
+  return [
+    { ...a5Brochure, image: brochureImage },
+    { ...magnet, image: /hali-koltuk/.test(path) ? magnet.image
+      : isFood ? '/images/magnet/magnet-baski.webp' : '/images/magnet/ozel-figur-kesimli-magnet.webp' },
+    third,
+  ];
 }

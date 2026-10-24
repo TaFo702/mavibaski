@@ -75,14 +75,14 @@ async function prerender() {
   let otokopiliBlogContent: string;
   const cityContent: Record<string, string> = {};
   const reportedGuideContent: Record<string, string> = {};
-  let sectorPriceCards: Record<string, string>;
+  let sectorContent: Record<string, string>;
   let staticPageContent: Record<string, string>;
   try {
     await build({ entryPoints: ['src/prerenderHome.tsx'], outfile: rendererPath,
       bundle: true, platform: 'node', format: 'cjs', packages: 'external' });
     const { prerenderStaticPages, prerenderYagKarti, prerenderMagnet, prerenderEtiket, prerenderAmerikanServis, prerenderOtoPaspas, prerenderAfis, prerenderHome, prerenderElIlani, prerenderBrosur, prerenderZarf, prerenderZarfBlog, prerenderAntetli, prerenderDosyalar, prerenderBloknotlar, prerenderKatalog, prerenderKartvizit, prerenderTediyeMakbuzu, prerenderRecete, prerenderGiderMakbuzu, prerenderTahsilatMakbuzu, prerenderAracKiralama, prerenderSozlesme, prerenderParaMakbuzu, prerenderSiparisFisi, prerenderPerakendeSatisFisi, prerenderAdisyon, prerenderCity } = createRequire(import.meta.url)(rendererPath);
-    const { prerenderSectorPriceCards } = createRequire(import.meta.url)(rendererPath);
-    sectorPriceCards = prerenderSectorPriceCards();
+    const { prerenderSectorPages } = createRequire(import.meta.url)(rendererPath);
+    sectorContent = prerenderSectorPages();
     staticPageContent = prerenderStaticPages();
     homeContent = prerenderHome();
     yagKartiContent = prerenderYagKarti();
@@ -312,11 +312,6 @@ async function prerender() {
 
     try {
       const seo = getRouteSEO(pathname);
-      // Render the same catalogue cards as the client, before the editorial copy.
-      if (sectorPriceCards[pathname]) {
-        if (!seo.bodyContent?.includes('</header>')) throw new Error(`Missing sector hero: ${pathname}`);
-        seo.bodyContent = seo.bodyContent.replace('</header>', `</header>${sectorPriceCards[pathname]}`);
-      }
       const html = injectSEOMetadata(
         template,
         seo.title,
@@ -351,7 +346,7 @@ async function prerender() {
           : pathname === '/tediye-makbuzu' ? tediyeContent
           : pathname === '/blog/zarf-baskisinda-diplomat-ve-torba-zarf' ? zarfBlogContent
           : pathname === '/blog/antetli-kagit-baskisinda-80gr-1.hamur' ? antetliBlogContent
-          : pathname === '/blog/adisyon-ve-makbuzlarda-otokopili-kagit' ? otokopiliBlogContent : staticPageContent[pathname] || reportedGuideContent[pathname] || cityContent[pathname] || seo.bodyContent,
+          : pathname === '/blog/adisyon-ve-makbuzlarda-otokopili-kagit' ? otokopiliBlogContent : sectorContent[pathname] || staticPageContent[pathname] || reportedGuideContent[pathname] || cityContent[pathname] || seo.bodyContent,
         seo.ogImage
       );
 
