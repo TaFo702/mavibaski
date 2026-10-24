@@ -29,6 +29,7 @@ import { PHONE_NUMBER, WHATSAPP_LINK } from '../constants/contact';
 import { SEO_PAGES_DATA, SEOPageData } from '../data/seoPagesData';
 import { SECTOR_HERO_IMAGES } from '../data/sectorImages';
 import { SectorPriceExamples } from './SectorPriceExamples';
+import { KayseriBrandaQuote } from './KayseriBrandaQuote';
 
 export { SEO_PAGES_DATA };
 export type { SEOPageData };
@@ -401,6 +402,10 @@ export const SEOPages = () => {
     return CLUSTERS[activeClusterKey];
   }, [activeClusterKey]);
 
+  const breadcrumbParent = useMemo(() => page.breadcrumbParent
+    ? { name: page.breadcrumbParent.name, parentPath: page.breadcrumbParent.path }
+    : cluster, [page.breadcrumbParent, cluster]);
+
   const sectorHero = SECTOR_HERO_IMAGES[page.path];
 
   const canonicalUrl = `https://mavibasim.com${page.path}`;
@@ -456,12 +461,12 @@ export const SEOPages = () => {
         "name": "Ana Sayfa",
         "item": "https://mavibasim.com"
       },
-      ...(cluster && cluster.parentPath !== page.path && cluster.parentPath !== `/sektor/${activeKey}` ? [
+      ...(breadcrumbParent && breadcrumbParent.parentPath !== page.path && breadcrumbParent.parentPath !== `/sektor/${activeKey}` ? [
         {
           "@type": "ListItem",
           "position": 2,
-          "name": cluster.name,
-          "item": `https://mavibasim.com${cluster.parentPath}`
+          "name": breadcrumbParent.name,
+          "item": `https://mavibasim.com${breadcrumbParent.parentPath}`
         },
         {
           "@type": "ListItem",
@@ -478,7 +483,7 @@ export const SEOPages = () => {
         }
       ])
     ]
-  }), [cluster, page.path, page.h1, activeKey, canonicalUrl]);
+  }), [breadcrumbParent, page.path, page.h1, activeKey, canonicalUrl]);
 
   const faqSchema = useMemo(() => {
     if (!page.faqs || page.faqs.length === 0) return null;
@@ -533,9 +538,9 @@ export const SEOPages = () => {
           <nav className="flex items-center justify-center gap-2 text-xs font-semibold text-gray-400 tracking-wide bg-neutral-950/40 py-2 px-4 rounded-full w-fit mx-auto border border-neutral-800/50">
             <Link to="/" className="hover:text-primary transition-colors text-neutral-300">Ana Sayfa</Link>
             <span className="text-neutral-600">/</span>
-            {cluster && cluster.parentPath !== page.path && cluster.parentPath !== `/sektor/${activeKey}` ? (
+            {breadcrumbParent && breadcrumbParent.parentPath !== page.path && breadcrumbParent.parentPath !== `/sektor/${activeKey}` ? (
               <>
-                <Link to={cluster.parentPath} className="hover:text-primary transition-colors text-neutral-300">{cluster.name}</Link>
+                <Link to={breadcrumbParent.parentPath} className="hover:text-primary transition-colors text-neutral-300">{breadcrumbParent.name}</Link>
                 <span className="text-neutral-600">/</span>
               </>
             ) : null}
@@ -570,7 +575,9 @@ export const SEOPages = () => {
               {page.intro}
             </p>
             <div className="pt-2">
-              {activeKey === 'kutu-ambalaj-baski-cozumleri' ? (
+              {page.primaryCta ? (
+                <a href={page.primaryCta.href} className="inline-flex min-h-11 items-center gap-2 rounded-2xl bg-primary px-6 py-4 text-sm font-black text-black hover:bg-white">{page.primaryCta.text} →</a>
+              ) : activeKey === 'kutu-ambalaj-baski-cozumleri' ? (
                 <a 
                   href="#kutu-ambalaj-urunleri" 
                   className="inline-flex items-center gap-2 bg-primary text-black font-black uppercase tracking-widest text-xs sm:text-sm px-8 py-4 rounded-2xl hover:bg-white hover:text-black transition-all shadow-xl hover:scale-105"
@@ -661,6 +668,7 @@ export const SEOPages = () => {
         </div>
       </div>
 
+      {activeKey === 'kayseri-emlakci-afis-baski' && <KayseriBrandaQuote />}
       <SectorPriceExamples pathname={page.path} />
 
       {/* Main Copy Area */}
@@ -1227,7 +1235,7 @@ export const SEOPages = () => {
                 )}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {cluster.popularPrints.map((print, pIdx) => {
+                  {(page.recommendedProducts || cluster.popularPrints).map((print, pIdx) => {
                     const isExternal = print.path.startsWith('http');
                     if (isExternal) {
                       return (

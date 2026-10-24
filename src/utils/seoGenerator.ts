@@ -3994,8 +3994,8 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
   const isKutu = slug === 'kutu-ambalaj-baski-cozumleri' || seoPage.path.includes('kutu-ambalaj');
   const isETicaret = slug === 'e-ticaret-perakende-baski' || seoPage.path.includes('e-ticaret-perakende-baski');
   
-  const parentName = seoPage.path.includes('brosur') ? "Broşür Baskı" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "Matbaa Ürünleri" : "Kartvizit Baskı";
-  const parentItem = seoPage.path.includes('brosur') ? "/brosur" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "/matbaa" : "/kartvizit";
+  const parentName = seoPage.breadcrumbParent?.name || (seoPage.path.includes('brosur') ? "Broşür Baskı" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "Matbaa Ürünleri" : "Kartvizit Baskı");
+  const parentItem = seoPage.breadcrumbParent?.path || (seoPage.path.includes('brosur') ? "/brosur" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "/matbaa" : "/kartvizit");
 
   let html = `<div class="bg-neutral-50 min-h-screen pb-20">`;
   
@@ -4223,8 +4223,8 @@ function generateSectorBodyContent(slug: string, seoPage: any, _canonicalUrl?: s
         {
           "@type": "ListItem",
           "position": 2,
-          "name": seoPage.path.includes('brosur') ? "Broşür Baskı" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "Matbaa Ürünleri" : "Kartvizit Baskı",
-          "item": seoPage.path.includes('brosur') ? "https://mavibasim.com/brosur" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "https://mavibasim.com/matbaa" : "https://mavibasim.com/kartvizit"
+          "name": seoPage.breadcrumbParent?.name || (seoPage.path.includes('brosur') ? "Broşür Baskı" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "Matbaa Ürünleri" : "Kartvizit Baskı"),
+          "item": seoPage.breadcrumbParent ? `https://mavibasim.com${seoPage.breadcrumbParent.path}` : seoPage.path.includes('brosur') ? "https://mavibasim.com/brosur" : (seoPage.path.includes('kozmetik') || seoPage.path.includes('kutu') || seoPage.path.includes('e-ticaret') || seoPage.path.includes('perakende')) ? "https://mavibasim.com/matbaa" : "https://mavibasim.com/kartvizit"
         },
         {
           "@type": "ListItem",

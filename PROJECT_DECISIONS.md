@@ -1,5 +1,11 @@
 # PROJECT_DECISIONS.md - Proje Karar Kayıt Dosyası (Architecture & SEO Decision Log)
 
+### 2026-10-24 — Kayseri emlakçı branda afiş sayfası
+- Kullanıcı, 440 gr vinil branda üretimini ve siparişlerin yaklaşık 3 günde, bazı uygun işlerin 1 günde çıkabildiğini doğruladı. Bu bilgi yalnız üretim planı olarak sunulur; kargo teslim garantisine dönüştürülmez. Kesin üretim tarihi teklif ve dosya onayı sırasında teyit edilir.
+- Ana CTA ve ayrı teklif alanı ölçü, adet, tasarım ve kenar işlemleriyle branda teklifi toplar. Mevcut kuşe kâğıt afiş kartı açıkça adlandırılır ve branda fiyatından ayrılır; hiçbir tarife veya ürün fiyatı değiştirilmez.
+- Title, açıklama, içerik ve yedi SSS gerçek ürün/sipariş bilgilerine göre yenilenir. Doğrulanmamış solmama, sıfır hasar, UV mürekkep, sabit halka aralığı ve sigortalı gönderim iddiaları kaldırılır. Fiyatı doğrulanmayan eski offers alanı silinir.
+- Görünür gezinme yolu ve BreadcrumbList: Ana Sayfa → Afiş Baskı → Kayseri sayfası. Bu rotada metadata ve JSON-LD tek sahibi RouteSEOHead/getRouteSEO olur; legacy kopyalar devre dışıdır. Kullanıcının seçtiği magnet görseli korunur.
+
 ### 2026-10-24 — Sektörel sayfalarda konuya uygun görseller
 - 30 destek sayfasının her birinde görünür sağ üst görsel bulunur. Dosya adları yerine gerçek görsel içerikleri incelenerek mevcut arşivden seçilir. Eğitim sayfasındaki emlak afişi ve eksik kutu görselleri kaldırılır; konuya uygun eğitim tanıtım baskıları ve kutu örnekleri kullanılır.
 - Uzun içeriklerdeki 35 görsel alanı mevcut, kontrol edilmiş ürün ve süreç görsellerine bağlanır. Alt metinler, açıklamalar ve boyutlar resimde gerçekten görünen içeriği anlatır; görselde bulunmayan sınav kitapçığı, seans formu veya üretim işlemi varmış gibi yazılmaz.

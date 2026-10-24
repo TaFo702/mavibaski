@@ -62,6 +62,39 @@ for (const pathname of routes) {
       assert.ok(fs.existsSync(`dist${product.path}/index.html`), `${pathname}: destination exists`);
     });
     assert.ok(doc.querySelector('[data-sector-price-cards]')?.textContent?.includes('KDV hariç'));
+    if (pathname === '/kayseri-emlakci-afis-baski') {
+      const mainText = doc.body.textContent || '';
+      const quote = doc.querySelector('#branda-teklif');
+      assert.ok(quote?.textContent?.includes('440 gr vinil branda'), 'Branda needs its own quote area');
+      const href = quote?.querySelector('a')?.getAttribute('href');
+      const whatsapp = new URL(href || '');
+      assert.equal(whatsapp.hostname, 'wa.me');
+      assert.equal(whatsapp.pathname, '/905366022373');
+      for (const field of ['440 gr vinil branda', 'En × boy', 'Adet:', 'Teslimat ilçesi:', 'üretim tarihi']) {
+        assert.ok(whatsapp.searchParams.get('text')?.includes(field), `Missing branda quote field: ${field}`);
+      }
+      assert.ok(doc.querySelector('a[href="#branda-teklif"]'), 'Hero must link to branda quote');
+      assert.ok(cards[2].textContent?.includes('Kuşe Kâğıt Afiş'));
+      assert.ok(cards[2].textContent?.includes('105 gr. Kuşe'));
+      assert.ok(doc.querySelector('[data-branda-price-note]')?.textContent?.includes('ayrı fiyatlandırılır'));
+      assert.ok(!/solmaz|sigortalı sevk|hasar riski sıfırlanmış|en geç 3 iş gününde/.test(mainText), 'Unverified promises must be removed');
+      const breadcrumb = doc.querySelector('nav');
+      // TestWrapper contains only the page; the complete initial HTML includes site navigation.
+      assert.ok([...doc.querySelectorAll('nav a')].some(a => a.getAttribute('href') === '/afis' && a.textContent === 'Afiş Baskı'), breadcrumb?.textContent || 'Breadcrumb');
+    }
+  }
+  if (pathname === '/kayseri-emlakci-afis-baski') {
+    const schemas = [...initial.querySelectorAll('script[type="application/ld+json"]')].flatMap(el => {
+      const value = JSON.parse(el.textContent || '{}');
+      return Array.isArray(value) ? value : [value];
+    });
+    const breadcrumbs = schemas.filter(s => s['@type'] === 'BreadcrumbList');
+    assert.equal(breadcrumbs.length, 1);
+    assert.equal(breadcrumbs[0].itemListElement[1].item, 'https://mavibasim.com/afis');
+    const faq = schemas.filter(s => s['@type'] === 'FAQPage');
+    assert.equal(faq.length, 1);
+    assert.equal(faq[0].mainEntity.length, 7);
+    assert.ok(initial.title.length <= 60);
   }
   assert.equal(initial.querySelector('meta[property="og:image"]')?.getAttribute('content'), `https://mavibasim.com${SECTOR_HERO_IMAGES[pathname].src}`, `${pathname}: sharing image must match hero`);
   const selectors = '[data-sector-price-cards] [data-price-example]';
