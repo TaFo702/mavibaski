@@ -1,5 +1,11 @@
 # PROJECT_DECISIONS.md - Proje Karar Kayıt Dosyası (Architecture & SEO Decision Log)
 
+### 2026-10-24 — Erzurum emlakçı katalog sayfası
+- Sayfa, emlak ve inşaat portföylerinin hazırlanmasına odaklanır; ebat/yön, kapak dahil sayfa hesabı, kâğıt/cilt, PDF kontrolü, üretim ve kargo ayrımı açıklanır. Doğrulanmamış fabrika/makine, parmak izi bırakmama, kopmama ve sabit süre vaatleri kaldırılır.
+- Üçüncü ekonomik ürün antetli kâğıt yerine KATALOG_DATA tarifesindeki A4 4 iç + 4 kapak sayfası, 50 adet tel dikişli katalog olur. Fiyat kopyalanmaz; standart tarifenin p50 alanından okunur. Mevcut tarifeler değişmez. Eski doğrulanmamış offers aralığı silinir.
+- Görünür yol ve BreadcrumbList, Ana Sayfa → Katalog Baskı → Erzurum emlakçı katalog sayfasıdır. Metadata ve şema tek sahibi RouteSEOHead/getRouteSEO olur. Sekiz görünür SSS aynı kaynaktan şemaya taşınır; ölçü/sayfa/adet/cilt/dosya/teslimat bilgilerini isteyen WhatsApp bağlantısı üstte ve yan alanda yer alır.
+- Mevcut katalog görselleri örnek sayfa yerleşimi olarak kullanılır; mobilya kataloğu görseli gerçek Erzurum emlak işi veya proje fotoğrafı olarak tanıtılmaz.
+
 ### 2026-10-24 — Kayseri fiyat bölümlerinin sıralaması
 - Kullanıcı isteğiyle Kayseri sayfasında önce Ekonomik Baskı Fiyatlarımız, hemen altında Branda ve Selefonlu Folyo Afiş Fiyatları gösterilir. İki fiyat alanı ana açıklama içeriğinden önce birlikte yer alır.
 
