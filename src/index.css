@@ -137,33 +137,3 @@ html {
     animation: none !important;
   }
 }
-
-/* Reversible /zarf-only palette. The page marker also scopes the shared header
-   and WhatsApp links on initial HTML and client-side navigation. */
-body:has(.zarf-contrast-trial) header,
-.zarf-contrast-trial {
-  --color-primary: #08749c;
-  --color-secondary: #08749c;
-}
-
-/* Keep the bright blue accents readable on the existing dark panels. */
-.zarf-contrast-trial :is(.bg-black, .bg-slate-900) {
-  --color-primary: #29addf;
-  --color-secondary: #29addf;
-}
-
-.zarf-contrast-trial .text-slate-400 {
-  color: var(--color-slate-500);
-}
-
-.zarf-contrast-trial .text-emerald-600 {
-  color: var(--color-emerald-700);
-}
-
-body:has(.zarf-contrast-trial) a[class~="bg-[#25D366]"] {
-  background-color: #16833e;
-}
-
-body:has(.zarf-contrast-trial) a[class~="bg-[#25D366]"]:hover {
-  background-color: #126f35;
-}
