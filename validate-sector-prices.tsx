@@ -7,7 +7,7 @@ import { TestWrapper } from './src/App';
 import { SEOPages } from './src/components/SEOPages';
 import { SEO_PAGES_DATA } from './src/data/seoPagesData';
 import { SECTOR_PRICE_PRODUCTS, getSectorPriceExamples } from './src/data/sectorPriceExamples';
-import { BROSUR_DATA } from './src/data/extraProductData';
+import { BROSUR_DATA, KATALOG_DATA } from './src/data/extraProductData';
 import { MAGNET_DATA } from './src/data/productData';
 import { SECTOR_HERO_IMAGES } from './src/data/sectorImages';
 
@@ -62,6 +62,25 @@ for (const pathname of routes) {
       assert.ok(fs.existsSync(`dist${product.path}/index.html`), `${pathname}: destination exists`);
     });
     assert.ok(doc.querySelector('[data-sector-price-cards]')?.textContent?.includes('KDV hariç'));
+    if (pathname === '/erzurum-emlakci-katalog-baski') {
+      const card = cards[2];
+      assert.equal(card.querySelector('a')?.getAttribute('href'), '/kataloglar');
+      for (const detail of [KATALOG_DATA.rows[0].p50, '50 Adet', '4 iç + 4 kapak', '135 gr', '300 gr', 'Tel dikiş']) {
+        assert.ok(card.textContent?.includes(detail), `Missing catalogue tariff detail: ${detail}`);
+      }
+      const quoteLinks = doc.querySelectorAll('[data-sector-custom-quote]');
+      assert.equal(quoteLinks.length, 2, 'Product-specific quote in hero and sidebar');
+      for (const anchor of quoteLinks) {
+        const url = new URL(anchor.getAttribute('href') || '');
+        assert.equal(url.hostname, 'wa.me');
+        assert.equal(url.pathname, '/905366022373');
+        for (const field of ['Erzurum', 'Bitmiş ebat', 'Kapak dahil toplam sayfa', 'Baskı adedi', 'Cilt', 'PDF', 'Teslimat ilçesi']) {
+          assert.ok(url.searchParams.get('text')?.includes(field), `Missing catalogue quote field: ${field}`);
+        }
+      }
+      assert.ok([...doc.querySelectorAll('nav a')].some(a => a.getAttribute('href') === '/kataloglar' && a.textContent === 'Katalog Baskı'));
+      assert.ok(!/Topkapı fabrikamızdaki|350 DPI ultra|parmak izi lekelerini barındırmaz|kopmasına izin vermiyoruz|5-6 iş gününde/.test(doc.body.textContent || ''));
+    }
     if (pathname === '/kayseri-emlakci-afis-baski') {
       const mainText = doc.body.textContent || '';
       const quote = doc.querySelector('#branda-teklif');
@@ -97,6 +116,24 @@ for (const pathname of routes) {
       // TestWrapper contains only the page; the complete initial HTML includes site navigation.
       assert.ok([...doc.querySelectorAll('nav a')].some(a => a.getAttribute('href') === '/afis' && a.textContent === 'Afiş Baskı'), breadcrumb?.textContent || 'Breadcrumb');
     }
+  }
+  if (pathname === '/erzurum-emlakci-katalog-baski') {
+    const schemas = [...initial.querySelectorAll('script[type="application/ld+json"]')].flatMap(el => {
+      const value = JSON.parse(el.textContent || '{}');
+      return Array.isArray(value) ? value : [value];
+    });
+    assert.equal(schemas.filter(s => s['@type'] === 'Service').length, 1);
+    const breadcrumbs = schemas.filter(s => s['@type'] === 'BreadcrumbList');
+    assert.equal(breadcrumbs.length, 1);
+    assert.equal(breadcrumbs[0].itemListElement[1].item, 'https://mavibasim.com/kataloglar');
+    const faqs = schemas.filter(s => s['@type'] === 'FAQPage');
+    assert.equal(faqs.length, 1);
+    const expected = SEO_PAGES_DATA['erzurum-emlakci-katalog-baski'].faqs;
+    assert.equal(expected.length, 8);
+    assert.deepEqual(faqs[0].mainEntity.map(q => ({ question: q.name, answer: q.acceptedAnswer.text })), expected);
+    assert.ok(initial.title.length <= 60);
+    const descriptionLength = initial.querySelector('meta[name="description"]')?.getAttribute('content')?.length || 0;
+    assert.ok(descriptionLength >= 155 && descriptionLength <= 160);
   }
   if (pathname === '/kayseri-emlakci-afis-baski') {
     const schemas = [...initial.querySelectorAll('script[type="application/ld+json"]')].flatMap(el => {

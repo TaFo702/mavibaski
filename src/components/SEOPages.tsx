@@ -399,8 +399,11 @@ export const SEOPages = () => {
 
   const cluster = useMemo(() => {
     if (!activeClusterKey) return null;
-    return CLUSTERS[activeClusterKey];
-  }, [activeClusterKey]);
+    const selected = CLUSTERS[activeClusterKey];
+    return activeKey === 'erzurum-emlakci-katalog-baski'
+      ? { ...selected, name: 'Emlak ve İnşaat Baskıları' }
+      : selected;
+  }, [activeClusterKey, activeKey]);
 
   const breadcrumbParent = useMemo(() => page.breadcrumbParent
     ? { name: page.breadcrumbParent.name, parentPath: page.breadcrumbParent.path }
@@ -574,7 +577,7 @@ export const SEOPages = () => {
             <p className="text-gray-300 max-w-3xl sm:max-w-4xl text-sm sm:text-base leading-relaxed font-normal">
               {page.intro}
             </p>
-            <div className="pt-2">
+            <div className={page.quoteHref ? 'pt-2 flex flex-wrap gap-3' : 'pt-2'}>
               {page.primaryCta ? (
                 <a href={page.primaryCta.href} className="inline-flex min-h-11 items-center gap-2 rounded-2xl bg-primary px-6 py-4 text-sm font-black text-black hover:bg-white">{page.primaryCta.text} →</a>
               ) : activeKey === 'kutu-ambalaj-baski-cozumleri' ? (
@@ -612,6 +615,9 @@ export const SEOPages = () => {
                 >
                   🚀 {activeKey === 'restoran-brosur-baski' ? 'Restoran Broşür Fiyatlarını İncele' : `${page.h1} Fiyatlarını Gör & Sipariş Ver`} →
                 </Link>
+              )}
+              {page.quoteHref && (
+                <a data-sector-custom-quote href={page.quoteHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-2xl bg-emerald-600 px-6 py-4 text-sm font-bold text-white hover:bg-emerald-700">Ölçü ve Adetle Teklif Al →</a>
               )}
             </div>
           </div>
@@ -1333,10 +1339,12 @@ export const SEOPages = () => {
                 ? "Güzellik merkezi formları, lazer epilasyon seans takip formları, hizmet sözleşmesi, tahsilat makbuzu, hasta randevu kartı, kozmetik kutusu ve etiket baskısı için ürün ve adet bilgilerinizi ileterek fiyat teklifi alın."
                 : activeKey === 'e-ticaret-perakende-baski'
                 ? "E-ticaret kargo kutusu, karton çanta, ambalaj kâğıdı, rulo barkod etiketi ve müşteri teşekkür kartı baskısı için ürün ve adet bilgilerinizi ileterek fiyat teklifi alın."
+                : activeKey === 'erzurum-emlakci-katalog-baski'
+                ? "Erzurum emlak kataloğu için bitmiş ölçü, kapak dahil sayfa sayısı, adet, cilt, hazır dosya durumu ve teslimat ilçesini ileterek teklif alın."
                 : "Sektörünüze özel matbaa ve baskı ihtiyaçlarınız için ürün ve adet bilgilerinizi WhatsApp üzerinden ileterek net teklif alın."
               }
             </p>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-1 w-full py-4 bg-primary text-white hover:bg-white hover:text-black transition-colors rounded-2xl font-black text-sm tracking-wide uppercase shadow-lg">
+            <a data-sector-custom-quote={page.quoteHref ? '' : undefined} href={page.quoteHref || WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center gap-1 w-full py-4 bg-primary text-white hover:bg-white hover:text-black transition-colors rounded-2xl font-black text-sm tracking-wide uppercase shadow-lg">
               <span className="flex items-center gap-2 justify-center">
                 <PhoneCall size={18} /> WhatsApp Teklif Hattı
               </span>

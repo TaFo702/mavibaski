@@ -1,5 +1,6 @@
 import { ECONOMIC_PRODUCT_EXAMPLES, example, type CityPriceExample } from './cityPriceExamples';
 import { BROSUR_DATA } from './extraProductData';
+import { ERZURUM_KATALOG_EXAMPLE } from './erzurumKatalog';
 
 // Reviewed selections vary by page, not by timer or random browser state.
 // This keeps the first HTML and the interactive page on the same products.
@@ -32,7 +33,7 @@ export const SECTOR_PRICE_PRODUCTS = {
   '/giresun-fast-food-cips-kutusu-baski': '/karton-canta',
   '/gebze-eczane-etiket-baski': '/etiket',
   '/bitlis-restaurant-siparis-fisi': '/kartvizit',
-  '/erzurum-emlakci-katalog-baski': '/antetli',
+  '/erzurum-emlakci-katalog-baski': '/kataloglar',
   '/kayseri-emlakci-afis-baski': '/afis',
 } as const;
 
@@ -45,7 +46,7 @@ export function getSectorPriceExamples(pathname: string): CityPriceExample[] {
   if (!Object.hasOwn(SECTOR_PRICE_PRODUCTS, path)) return [];
   const thirdPath = SECTOR_PRICE_PRODUCTS[path as keyof typeof SECTOR_PRICE_PRODUCTS];
   const magnet = byPath.get('/magnet');
-  const third = byPath.get(thirdPath);
+  const third = thirdPath === '/kataloglar' ? ERZURUM_KATALOG_EXAMPLE : byPath.get(thirdPath);
   if (!magnet || !third) throw new Error(`Missing sector price product: ${path}`);
   const isFood = /restoran|restaurant|lokanta|doner|fast-food|pastane|kafe/.test(path);
   const brochureImage = /egitim/.test(path) ? '/images/brosur/brosur-baski-fiyatlari.webp'

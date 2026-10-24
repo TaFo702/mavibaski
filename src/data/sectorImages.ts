@@ -177,7 +177,7 @@ export const SECTOR_HERO_IMAGES: Readonly<Record<string, SectorImage>> = {
   },
   "/erzurum-emlakci-katalog-baski": {
     "src": "/images/katalog/amerikan-cilt-katalog.webp",
-    "alt": "İç mekân ve proje görselleri içeren çok sayfalı tanıtım kataloğu",
+    "alt": "İç mekân ve mobilya görselleri içeren katalog baskı ve sayfa yerleşimi örneği",
     "width": 1536,
     "height": 1024
   },

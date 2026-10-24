@@ -1308,7 +1308,7 @@ export const parsePriceString = (priceStr: string | undefined | null): number =>
 
 export const CanonicalLink = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || STATIC_PAGE_ROUTES.some(route => route === pathname.replace(/\/$/, '')) || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/kayseri-emlakci-afis-baski', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
+  return pathname === '/' || STATIC_PAGE_ROUTES.some(route => route === pathname.replace(/\/$/, '')) || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/kayseri-emlakci-afis-baski', '/erzurum-emlakci-katalog-baski', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacyCanonicalLink />;
 };
 
 const LegacyCanonicalLink = () => {
@@ -5131,7 +5131,7 @@ export const AppRoutes = ({ YagKartiComponent = YagKartiPage, MagnetComponent = 
 
 const SEOMetadataManager = () => {
   const { pathname } = useLocation();
-  return pathname === '/' || STATIC_PAGE_ROUTES.some(route => route === pathname.replace(/\/$/, '')) || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/kayseri-emlakci-afis-baski', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
+  return pathname === '/' || STATIC_PAGE_ROUTES.some(route => route === pathname.replace(/\/$/, '')) || ['/magnet', '/brosur', '/el-ilani', '/afis', '/adisyon', '/arac-kiralama', '/siparis-fisi', '/perakende-satis-fisi', '/kayseri-emlakci-afis-baski', '/erzurum-emlakci-katalog-baski', '/blog/zarf-baskisinda-diplomat-ve-torba-zarf', '/blog/antetli-kagit-baskisinda-80gr-1.hamur', '/blog/adisyon-ve-makbuzlarda-otokopili-kagit'].includes(pathname.replace(/\/$/, '')) ? null : <LegacySEOMetadataManager />;
 };
 
 const LegacySEOMetadataManager = () => {

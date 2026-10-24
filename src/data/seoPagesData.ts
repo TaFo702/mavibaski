@@ -1,4 +1,5 @@
 import { KAYSERI_AFIS_PRICE_SUMMARY } from './kayseriAfisPrices';
+import { ERZURUM_KATALOG_PRICE_SUMMARY, ERZURUM_KATALOG_QUOTE_URL } from './erzurumKatalog';
 
 export interface SEOPageData {
   path: string;
@@ -9,6 +10,7 @@ export interface SEOPageData {
   heroImage?: string;
   breadcrumbParent?: { name: string; path: string };
   primaryCta?: { text: string; href: string };
+  quoteHref?: string;
   recommendedProducts?: { path: string; text: string; spec: string; tag?: string; cta?: string }[];
   sections: { title: string; paragraphs: string[] }[];
   faqs: { question: string; answer: string }[];
@@ -1967,29 +1969,73 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
   },
   'erzurum-emlakci-katalog-baski': {
     path: '/erzurum-emlakci-katalog-baski',
-    title: 'Erzurum Emlak Katalog Baskı | Konut Portföy Kitapçığı',
-    metaDesc: 'Erzurum gayrimenkul ofisleri ve inşaat firmaları için lüks metal dikişli, kalın kuşe kapaklı, 170 gr iç sayfa lüks konut ve arsa katalog döküm hizmetleri.',
-    h1: 'Erzurum Emlak Yatırım Firmaları ve İnşaat Ofisleri İçin Katalog Baskısı',
-    tagline: 'Doğu Anadolu\'nun Yatırım Hamlelerine Yakışır Kalın ve Lüks Gayrimenkul Katalogları',
-    intro: 'Erzurum Yakutiye, Palandöken ve Aziziye\'de gelişen inşaat projeleri ve emlak ofisleri için, lüks konut ve ticari arsa portföyünün sunumu ancak elit bir katalog ile mümkündür. Mavi Basım olarak Topkapı fabrikamızdaki Heidelberg makinelerinde, karlı projelerinizi temsil edecek kalitede iplik ya da tel dikişli premium kataloglar döküyoruz.',
+    title: 'Erzurum Emlakçı Katalog Baskı | A4 ve A5 | Mavi Basım',
+    metaDesc: 'Erzurum emlakçı ve inşaat firmaları için A4/A5 katalog baskı. Kapak dahil sayfa sayısı, kâğıt ve adede göre güncel fiyatları inceleyin; dosyanızla teklif alın.',
+    h1: 'Erzurum Emlakçı ve İnşaat Firmaları İçin Katalog Baskı',
+    breadcrumbParent: { name: 'Katalog Baskı', path: '/kataloglar' },
+    primaryCta: { text: 'Katalog Fiyatlarını ve Adetleri Gör', href: '/kataloglar' },
+    quoteHref: ERZURUM_KATALOG_QUOTE_URL,
+    tagline: 'Konut, arsa ve proje portföyleri için ölçü, sayfa ve adede göre katalog baskısı',
+    intro: 'Erzurum’daki emlak ofisleri ve inşaat firmaları için konut, arsa ve proje bilgilerini düzenli sunan basılı kataloglar hazırlıyoruz. Yakutiye, Palandöken ve Aziziye dahil Erzurum’a gönderilecek siparişleri İstanbul Topkapı’daki hizmet ve koordinasyon noktamız üzerinden planlıyoruz. Bitmiş ölçü, kapak dahil sayfa sayısı ve adedi paylaşarak ihtiyacınıza uygun baskı teklifi alabilirsiniz.',
+    recommendedProducts: [
+      { path: '/kataloglar', text: 'Emlak ve Proje Kataloğu', spec: 'A4 tarifesinde 135 gr kuşe iç sayfa, 300 gr selefonlu kapak ve tel dikiş; farklı ölçü ve ciltler için özel teklif', tag: 'Katalog Baskı', cta: 'Katalog Fiyatlarını İncele' },
+      { path: '/brosur', text: 'Konut Projesi Tanıtım Broşürü', spec: 'Kampanya ve proje özeti için tek yaprak veya katlamalı broşür seçenekleri', tag: 'Broşür', cta: 'Broşür Fiyatlarını İncele' },
+      { path: '/dosyalar', text: 'Portföy Sunumu İçin Cepli Dosya', spec: 'Proje föylerini ve teklif evraklarını bir arada sunmak için baskılı cepli dosya', tag: 'Cepli Dosya', cta: 'Dosya Fiyatlarını İncele' },
+      { path: '/kartvizit', text: 'Emlak Danışmanı Kartviziti', spec: 'Danışman adı, iletişim ve portföy bağlantısı için kurumsal kartvizit baskısı', tag: 'Kartvizit', cta: 'Kartvizit Fiyatlarını İncele' },
+    ],
     sections: [
       {
-        title: 'Erzurum İnşaat ve Konut Sektöründe Katalog İncelikleri',
+        title: 'Emlak ve İnşaat Kataloğunda Hangi Bilgiler Olmalı?',
         paragraphs: [
-          'Arsa veya lüks bina görsellerinin çözünürlüğü kataloğun ilk kalite testidir. Tasarımlarınızdaki tüm mimari render çizimlerini ve peyzaj fotoğraflarını 350 DPI ultra net dökümle basıyoruz. Kapak olarak 300 gr parlak kuşe kağıda yırtılmaları önleyen kadife dokulu mat selefon giydiriyoruz.',
-          'Böylece katalog elden ele gezerken parmak izi lekelerini barındırmaz ve kurumsal lüksünü muhafaza eder.'
-        ]
+          'Satılık konut, kiralık iş yeri ve arsa portföylerini ayrı bölümlerde sunun. Her ilan için portföy kodu, konum, net ve brüt alan, oda veya kullanım bilgisi, güncel fotoğraf ve danışman iletişimini aynı sırayla yerleştirmek karşılaştırmayı kolaylaştırır.',
+          'Yeni konut projelerinde vaziyet planı, kat planları ve örnek iç mekân görsellerini açıklamalarıyla eşleştirin. Fiyat ve proje bilgilerinin güncelliğini baskı onayından önce kontrol edin. Değişen ilanlar için web portföyünüze yönlenen bir QR kod kullanabilir; basılı kataloğa hazırlık tarihini ekleyebilirsiniz.'
+        ],
       },
       {
-        title: 'Doğu Anadolu İklimine Uygun Tel ve İplik Dikiş Mukavemeti',
+        title: 'A4 ve A5 Ölçüleri ile Kapak Dahil Sayfa Hesabı',
         paragraphs: [
-          'Sayfaların dökülmesini engelleyen esnek PUR tutkal Amerikan ciltleme veya çift noktalı metal tel dikiş uygulamalarımızla soğuk ve kuru kış aylarında dahi sayfaların kopmasına izin vermiyoruz.'
-        ]
-      }
+          'A4 (21 × 29,7 cm), kat planlarını ve proje detaylarını daha geniş bir alanda göstermek için; A5 (14,8 × 21 cm) ise taşınabilir portföy sunumları için değerlendirilebilir. Teklifte bitmiş, yani kapalı ölçüyü ve dikey/yatay tercihinizi belirtin. A4 fiyatını A5 siparişin doğrudan fiyatı olarak kabul etmeyin; farklı ölçüler için ayrıca teklif alın.',
+          'Bir yaprağın iki yüzü iki sayfadır. Bu sitedeki katalog tarifesinde dört kapak sayfası toplam sayıya dahildir: 8 sayfa katalog, 4 iç sayfa + 4 kapak; 16 sayfa katalog, 12 iç sayfa + 4 kapak anlamına gelir. Tel dikişli işlerde toplam sayfa sayısını dördün katı olacak şekilde planlayın.'
+        ],
+      },
+      {
+        title: 'Kâğıt, Kapak ve Cilt Seçeneklerini Birlikte Belirleyin',
+        paragraphs: [
+          'Standart A4 katalog tarifemizde 135 gr kuşe iç sayfa, 300 gr kuşe kapak, mat veya parlak kapak selefonu ve tel dikiş yer alır. Fotoğraf yoğunluğu, sayfa sayısı ve kullanım amacına göre farklı kâğıt veya kapak uygulamaları için teklif isteyebilirsiniz.',
+          'Tel dikiş ile Amerikan cilt farklı yapılardır; seçim toplam sayfa sayısı ve kâğıt kalınlığına göre değerlendirilir. Kalın portföy kitapçıkları, farklı ciltler ve lokal lak gibi ek uygulamaları standart tarifenin kapsamından ayrı olarak teyit edin. Selefonun dokusu ve yüzey görünümü seçime göre değişir; çizilmezlik veya parmak izi bırakmama garantisi olarak değerlendirilmez.'
+        ],
+      },
+      {
+        title: 'Erzurum Emlak Katalog Baskı Fiyatı ve Adet Örneği',
+        paragraphs: [
+          ERZURUM_KATALOG_PRICE_SUMMARY,
+          'Yukarıdaki ekonomik baskı alanının katalog kartı bu seçeneği gösterir. Katalog fiyat listesinde 50, 100, 250, 500 ve 1.000 adet kademelerini karşılaştırabilirsiniz. Özel ebat, farklı sayfa sayısı, kâğıt, cilt ve tasarım ihtiyacında siparişin özelliklerine göre teklif hazırlanır. Kargo ile grafik tasarımın kapsama dahil olup olmadığını siparişten önce netleştirin.'
+        ],
+      },
+      {
+        title: 'Fotoğraf, Kat Planı ve Baskıya Hazır PDF Kontrolü',
+        paragraphs: [
+          'Fotoğrafları baskıda kullanılacak boyutta kontrol edin; 300 DPI hedefi, düşük çözünürlüklü bir görseli yalnızca büyüterek karşılanmaz. Kat planlarında küçük yazıların, ölçülerin ve açıklamaların okunabildiğini; CMYK renk hazırlığının ve yazı tiplerinin PDF dosyasında uygun olduğunu inceleyin.',
+          'Kesim taşma payı, cilde yakın güvenli alan ve kapak yerleşimi seçilen ölçü ile cilde göre dosya kontrolünde netleştirilir. QR kodu telefonla açarak doğru portföye gittiğini kontrol edin. Baskı öncesi PDF provada ilan bilgilerini, sayfa sırasını, iletişim numaralarını ve görsel yerleşimini onaylayın. Yeni katalog tasarımı ile baskıya hazır dosya kontrolünün kapsamını ve varsa tasarım bedelini ayrıca sorun.'
+        ],
+      },
+      {
+        title: 'Üretim Planı ve Erzurum’a Kargo Gönderimi',
+        paragraphs: [
+          'Üretim planı; dosyanın hazır oluşuna, onay sürecine, baskı adedine, malzemeye ve cilt işlemlerine göre teklif aşamasında paylaşılır. Proje lansmanı veya sunum için belirli bir kullanım tarihiniz varsa teklif talebinizde belirtin; baskıya başlamadan önce planlanan üretim tarihini teyit edin.',
+          'Kargoya veriliş tarihi ile Erzurum adresine teslim tarihi aynı değildir. Üretim sonrası gönderim planı ve kargo bedeli siparişin özelliklerine göre paylaşılır; taşıma süresi teslimat ilçesi ve kargo firmasına göre değişebilir. Teklif için bitmiş ölçü, iç ve kapak sayfası, adet, cilt, hazır PDF durumu ve teslimat ilçesini WhatsApp üzerinden iletin.'
+        ],
+      },
     ],
     faqs: [
-      { question: 'Baskı öncesinde PDF dosyamızda teknik inceleme yapıyor musunuz?', answer: 'Evet, çözünürlük, CMYK renk dönüşümü, kesim taşma payı ve katlama koordinatlarınızı grafik ekibimiz ücretsiz check-up ile kontrolden geçirir.' },
-      { question: 'Erzurum teslimatları ne kadar sürede adrese ulaşır?', answer: 'Katalog döküm ve ciltleme işlemlerimiz ortalama 5-6 iş gününde biterek kargo ile Erzurum ofisinize teslim amacıyla sevk edilir.' }
+      { question: 'Erzurum emlakçı katalog baskı fiyatları ne kadar?', answer: ERZURUM_KATALOG_PRICE_SUMMARY + ' Farklı ölçü, sayfa, adet ve cilt için özel teklif alın. Kargo ve tasarım kapsamı sipariş öncesinde netleştirilir.' },
+      { question: 'Katalogda kapak sayfaları toplam sayıya dahil mi?', answer: 'Bu sitedeki katalog fiyat listesinde dört kapak sayfası toplam sayıya dahildir. Örneğin 8 sayfa katalog, 4 iç + 4 kapak; 16 sayfa katalog, 12 iç + 4 kapak sayfasıdır. Teklifte iç sayfa ve kapak sayılarını ayrı ayrı belirtin.' },
+      { question: 'A5 katalog için A4 fiyatını kullanabilir miyim?', answer: 'Hayır. Bitmiş ebat, yön, sayfa sayısı ve baskı yerleşimi maliyeti etkiler. A5 için kapalı ölçü, toplam sayfa sayısı ve adedi paylaşarak ayrı teklif isteyin.' },
+      { question: 'Kaç adet emlak kataloğu sipariş verebilirim?', answer: 'Standart katalog fiyat listesinde 50, 100, 250, 500 ve 1.000 adet seçenekleri bulunur. Farklı adet veya özelliklerde ihtiyacınızı ileterek teklif alabilirsiniz.' },
+      { question: 'Emlak kataloğu hazırlamak için hangi dosyaları göndermeliyim?', answer: 'Logo ve iletişim bilgileriyle birlikte güncel portföy metinlerini, ilan kodlarını, kullanılacak fotoğrafları ve varsa kat planlarını paylaşın. Baskıya hazır PDF’niz varsa bitmiş ebat ve kapak dahil toplam sayfa sayısını da belirtin.' },
+      { question: 'Baskı öncesi PDF dosyası kontrol ediliyor mu?', answer: 'Baskıya hazır dosyada çözünürlük, renk hazırlığı, kesim payı, yazı tipleri ve sayfa sırası değerlendirilir. Kapak ve iç sayfa yerleşimini PDF provada kontrol edip onaylayın; dosyanıza özel teknik ölçüleri baskıdan önce teyit edin.' },
+      { question: 'Katalog tasarımı fiyatın içinde mi?', answer: 'Baskıya hazır dosya kontrolü ile yeni sayfa tasarımı farklı işlerdir. Tasarım veya mevcut dosyada düzenleme ihtiyacını teklif sırasında belirtin; kapsamı ve varsa tasarım bedelini sipariş öncesinde teyit edin.' },
+      { question: 'Erzurum’a katalog üretimi ve kargo teslimi kaç gün sürer?', answer: 'Üretim planı dosya, onay, adet ve cilt ayrıntılarına göre teklif aşamasında paylaşılır. Kargoya veriliş ile adrese teslim ayrı aşamalardır; kargo süresi ilçeye ve taşıyıcıya göre değişebilir. Kullanım tarihinizi önceden paylaşarak planı teyit edin.' },
     ],
     internalLinks: [
       { text: 'Katalog Baskı', path: '/kataloglar' },
@@ -1997,7 +2043,6 @@ export const SEO_PAGES_DATA: Record<string, SEOPageData> = {
       { text: 'Emlakçı Kartvizit Çözümleri', path: '/sektor/emlakci-kartvizit-baski' },
       { text: 'Kartvizit Baskı', path: '/kartvizit' }
     ],
-    offers: { lowPrice: '2200', highPrice: '28000', count: '18' }
   },
   'kayseri-emlakci-afis-baski': {
     "path": "/kayseri-emlakci-afis-baski",

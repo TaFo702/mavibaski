@@ -42,7 +42,7 @@ async function testNoInfiniteSpinner() {
       // Exercise application assets locally; analytics, fonts and third-party media
       // are outside this regression and must not delay it or send test telemetry.
       await page.route('**/*', route => route.request().url().startsWith(origin + '/') ? route.continue() : route.abort());
-      const routes = [...new Set(['/', '/kartvizit', '/afis', '/brosur', '/istanbul-matbaa', '/sektor/restoran-brosur-baski', '/kayseri-emlakci-afis-baski', ...STATIC_PAGE_ROUTES])];
+      const routes = [...new Set(['/', '/kartvizit', '/afis', '/brosur', '/istanbul-matbaa', '/sektor/restoran-brosur-baski', '/kayseri-emlakci-afis-baski', '/erzurum-emlakci-katalog-baski', ...STATIC_PAGE_ROUTES])];
       for (const route of routes) {
         const response = await page.goto(origin + route, { waitUntil: 'domcontentloaded', timeout: 20000 });
         if (response?.status() !== 200) throw new Error(`${route}: HTTP ${response?.status()}`);
