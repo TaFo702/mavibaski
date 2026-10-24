@@ -15,6 +15,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "validate:routes": "npx tsx validate-all-routes.ts",
+    "validate:sector-prices": "esbuild validate-sector-prices.tsx --bundle --platform=node --format=cjs --packages=external --outfile=node_modules/.cache/validate-sector-prices.cjs && node node_modules/.cache/validate-sector-prices.cjs",
     "validate:cities": "npx tsx validate-content-uniqueness.ts",
     "validate:sitemap": "npx tsx validate-sitemap-quality.ts",
     "validate:schema": "npx tsx validate-jsonld-ownership.ts",

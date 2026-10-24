@@ -20,7 +20,7 @@ export interface CityPriceExample {
   image: string;
 }
 
-function example(name: string, path: string, image: string, rows: readonly PriceRow[]): CityPriceExample {
+export function example(name: string, path: string, image: string, rows: readonly PriceRow[]): CityPriceExample {
   const amount = (row: PriceRow) => Number(row.price.replace(/[^\d,]/g, '').replace(',', '.'));
   // Only complete advertised packs; custom unit rates and quote-only rows are excluded.
   const item = rows.filter(row => !row.isCustom && Number.isFinite(amount(row)) && amount(row) > 0)
@@ -52,6 +52,9 @@ const otherProducts: readonly CityPriceExample[] = [
   example('Küp Bloknot', '/kup-bloknot', LOCAL_ASSETS.kup, KUP_BLOKNOT_DATA.flatMap(group =>
     group.items.map(item => ({ ...item, desc: `${group.cat} küp bloknot · ${item.desc}` })))),
 ];
+
+// Shared read-only catalogue: prices remain owned by the product tariff tables.
+export const ECONOMIC_PRODUCT_EXAMPLES: readonly CityPriceExample[] = [brochure, ...otherProducts];
 
 function buildProductPairs(count: number): readonly (readonly [number, number])[] {
   const ring = Array.from({ length: count }, (_, index) => index);

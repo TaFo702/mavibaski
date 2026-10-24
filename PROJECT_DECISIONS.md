@@ -1,5 +1,11 @@
 # PROJECT_DECISIONS.md - Proje Karar Kayıt Dosyası (Architecture & SEO Decision Log)
 
+### 2026-10-24 — 30 sektörel destek sayfasında ekonomik ürün kartları
+- Kullanıcı seçimiyle üst bölümde toplam üç kart gösterilir: en düşük toplam paket bedelli A5 broşür, magnet ve sayfanın sektörüne uygun üçüncü ürün. Üçüncü ürün sayfalar arasında değişir; zamanlayıcı veya rastgele seçim kullanılmaz.
+- Ordu Matbaa sayfasındaki görsel/fiyat tablosu bileşeni kullanılır. Görsel, özellikler, adet, fiyat ve düğme tek bağlantının içindedir; ilgili ana ürün sayfasını açar. KDV hariç bilgisi görünürdür.
+- Fiyat, adet, ölçü ve özellikler mevcut ürün tarifelerinden salt okunur alınır. Özel ölçü birim fiyatları ve ek işlem bedelleri paket fiyatı olarak gösterilmez. Ana ürün tarifeleri ve şehir sayfalarının seçimi değişmez.
+- Aynı React kartları ilk HTML'de de üretilir. 30 sayfanın kart sayısı, fiyatları, bağlantıları, görselleri ve istemci/ilk HTML eşleşmesi otomatik kontrol edilir.
+
 ### 2026-10-19 — Afiş sayfası teknik denetim ve düzeltmesi
 - /afis mevcut React sayfasıyla prerender edilir; aynı ağaç hydrate edilir. Mevcut fiyat ve teknik tablo, altı galeri kartı, on SSS ve bağlantılar ilk HTML'dedir.
 - Canonical ve JSON-LD üretimi bu rotada getRouteSEO/RouteSEOHead tarafından yönetilir; legacy üreticiler ve sayfa içi Helmet tekrarları kaldırıldı. Breadcrumb görünür üç seviyeli yolla, FAQ görünür ortak kaynakla eşleşir.
